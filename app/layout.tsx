@@ -35,6 +35,13 @@ export default function RootLayout({
       className={`${barlowCondensed.variable} ${inter.variable}`}
     >
       <head>
+        {/* Google Analytics GA4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CF0F42XVH5" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CF0F42XVH5',{page_path:window.location.pathname});`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
