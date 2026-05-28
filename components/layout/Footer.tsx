@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-footer-black pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           {/* Col 1: Brand */}
           <div>
             <Image
@@ -42,25 +42,44 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-white font-semibold text-xs tracking-widest uppercase mb-5">Services</h4>
             <ul className="space-y-3 text-sm text-gray-500">
-              <li><Link href="/services/cpg-marketing" className="hover:text-beast-pink transition-colors">CPG Marketing</Link></li>
+              <li><Link href="/services/web-design" className="hover:text-beast-pink transition-colors">Web Design & Development</Link></li>
               <li><Link href="/services/seo-aeo" className="hover:text-beast-pink transition-colors">SEO + AEO</Link></li>
               <li><Link href="/services/paid-media" className="hover:text-beast-pink transition-colors">Paid Media</Link></li>
+              <li><Link href="/services/branding" className="hover:text-beast-pink transition-colors">Branding & Identity</Link></li>
               <li><Link href="/services/content-production" className="hover:text-beast-pink transition-colors">AI Content Production</Link></li>
-              <li><Link href="/services/branding" className="hover:text-beast-pink transition-colors">Branding</Link></li>
-              <li><Link href="/services/web-design" className="hover:text-beast-pink transition-colors">Web Design & CRO</Link></li>
+              <li><Link href="/services/cpg-marketing" className="hover:text-beast-pink transition-colors">CPG Marketing</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Company */}
+          {/* Col 3: San Antonio */}
+          <div>
+            <h4 className="font-display text-white font-semibold text-xs tracking-widest uppercase mb-5">San Antonio</h4>
+            <ul className="space-y-3 text-sm text-gray-500">
+              <li><Link href="/services/web-design-san-antonio" className="hover:text-beast-pink transition-colors">Web Design San Antonio</Link></li>
+              <li><Link href="/services/seo-san-antonio" className="hover:text-beast-pink transition-colors">SEO Agency San Antonio</Link></li>
+              <li><Link href="/services/logo-design-san-antonio" className="hover:text-beast-pink transition-colors">Logo Design San Antonio</Link></li>
+              <li><Link href="/services/branding" className="hover:text-beast-pink transition-colors">Branding Agency San Antonio</Link></li>
+              <li><Link href="/services/paid-media" className="hover:text-beast-pink transition-colors">Social Media Marketing San Antonio</Link></li>
+              <li><Link href="/cpg" className="hover:text-beast-pink transition-colors">CPG Marketing Agency</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 4: Company */}
           <div>
             <h4 className="font-display text-white font-semibold text-xs tracking-widest uppercase mb-5">Company</h4>
             <ul className="space-y-3 text-sm text-gray-500">
               <li><Link href="/about" className="hover:text-beast-pink transition-colors">About Us</Link></li>
               <li><Link href="/work" className="hover:text-beast-pink transition-colors">Our Work</Link></li>
-              <li><Link href="/cpg" className="hover:text-beast-pink transition-colors">CPG Brands</Link></li>
               <li><Link href="/blog" className="hover:text-beast-pink transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-beast-pink transition-colors">Contact</Link></li>
             </ul>
+            <div className="mt-6 pt-5 border-t border-gray-800">
+              <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold mb-3">Reviews</p>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://clutch.co/profile/beast-creative-agency" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beast-pink transition-colors">Clutch.co ↗</a></li>
+                <li><a href="https://www.google.com/search?q=Beast+Creative+Agency+San+Antonio" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beast-pink transition-colors">Google Reviews ↗</a></li>
+              </ul>
+            </div>
           </div>
 
           {/* Col 4: Get Started */}

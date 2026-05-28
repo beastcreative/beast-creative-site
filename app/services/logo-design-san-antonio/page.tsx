@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
@@ -197,16 +198,39 @@ export default function LogoDesignSanAntonioPage() {
         </div>
       </section>
 
+      {/* RELATED SERVICES */}
+      <section className="bg-section-offwhite py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-20">
+          <AnimatedSection>
+            <p className="text-xs font-bold uppercase tracking-widest text-beast-pink mb-6">Also in San Antonio</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Link href="/services/web-design-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Web Design San Antonio</p>
+                <p className="text-sm text-gray-500">Custom Next.js + Shopify, Lighthouse 90+ →</p>
+              </Link>
+              <Link href="/services/seo-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">SEO Agency San Antonio</p>
+                <p className="text-sm text-gray-500">Rank in Google + AI search results →</p>
+              </Link>
+              <Link href="/services/branding" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Branding Agency San Antonio</p>
+                <p className="text-sm text-gray-500">Full brand identity beyond just the logo →</p>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-near-black py-16 lg:py-20 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Logo Design · San Antonio</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Logo Design &middot; San Antonio</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">
               Ready for a Logo That Actually Works?
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free 15-minute brand call. We'll tell you what your current brand is missing and what a logo redesign would actually get you.
+              Book a free 15-minute brand call. We&apos;ll tell you what your current brand is missing and what a logo redesign would actually get you.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free Brand Call</IconButton>
             <p className="text-gray-600 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

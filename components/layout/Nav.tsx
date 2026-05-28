@@ -16,12 +16,18 @@ const caseStudies = [
 ];
 
 const services = [
-  { name: "CPG Marketing",        href: "/services/cpg-marketing",  badge: "Flagship" },
-  { name: "SEO + AEO",            href: "/services/seo-aeo"                           },
-  { name: "Paid Media",           href: "/services/paid-media"                        },
-  { name: "AI Content Production",href: "/services/content-production"                },
-  { name: "Branding & Identity",  href: "/services/branding"                          },
-  { name: "Web Design & CRO",     href: "/services/web-design"                        },
+  { name: "Web Design & Development", href: "/services/web-design",                      badge: "Most Requested" },
+  { name: "SEO + AEO",               href: "/services/seo-aeo"                                                   },
+  { name: "Paid Media",              href: "/services/paid-media"                                                },
+  { name: "Branding & Identity",     href: "/services/branding"                                                  },
+  { name: "AI Content Production",   href: "/services/content-production"                                        },
+  { name: "CPG Marketing",           href: "/services/cpg-marketing"                                             },
+];
+
+const localServices = [
+  { name: "Web Design San Antonio",        href: "/services/web-design-san-antonio" },
+  { name: "SEO Agency San Antonio",        href: "/services/seo-san-antonio"         },
+  { name: "Logo Design San Antonio",       href: "/services/logo-design-san-antonio" },
 ];
 
 const aboutLinks = [
@@ -143,12 +149,20 @@ export default function Nav() {
                   <span className={`nav-chevron${servicesOpen ? " open" : ""}`} aria-hidden="true"><span /></span>
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
                     <div style={dropdownGlass} className="overflow-hidden">
                       {services.map((s) => (
                         <Link key={s.href} href={s.href} className={`flex items-center justify-between px-5 py-3 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-gray-300"}`}>
                           {s.name}
                           {s.badge && <span className="text-xs bg-beast-pink/20 text-beast-pink border border-beast-pink/25 px-2 py-0.5 rounded-full font-semibold">{s.badge}</span>}
+                        </Link>
+                      ))}
+                      <div className="border-t border-white/8 px-5 py-2">
+                        <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold mb-1">San Antonio</p>
+                      </div>
+                      {localServices.map((s) => (
+                        <Link key={s.href} href={s.href} className={`flex items-center px-5 py-2.5 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-gray-400"}`}>
+                          <span className="text-beast-pink mr-2 text-xs">📍</span>{s.name}
                         </Link>
                       ))}
                     </div>
@@ -270,27 +284,36 @@ export default function Nav() {
               </div>
             </div>
 
-            {/* Services accordion */}
-            <div>
-              <button
-                className="flex items-center justify-between w-full font-display text-4xl font-bold text-white py-2 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 rounded"
-                onClick={() => setServicesOpen(!servicesOpen)}
-                aria-expanded={servicesOpen}
-              >
-                Services
-                <span className={`nav-chevron scale-150 mr-1 transition-transform duration-300${servicesOpen ? " open" : ""}`} aria-hidden="true"><span /></span>
-              </button>
-              <div className={`overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}>
-                <div className="pl-2 pb-3 space-y-0.5 pl-2 ml-1 mt-1">
-                  {services.map((s) => (
-                    <Link key={s.href} href={s.href} className="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
-                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{s.name}</span>
-                      {s.badge && <span className="text-xs bg-beast-pink/20 text-beast-pink border border-beast-pink/25 px-2 py-0.5 rounded-full font-semibold">{s.badge}</span>}
-                    </Link>
-                  ))}
+              {/* Services accordion */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full font-display text-4xl font-bold text-white py-2 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 rounded"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-expanded={servicesOpen}
+                >
+                  Services
+                  <span className={`nav-chevron scale-150 mr-1 transition-transform duration-300${servicesOpen ? " open" : ""}`} aria-hidden="true"><span /></span>
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="pl-2 pb-3 space-y-0.5 ml-1 mt-1">
+                    {services.map((s) => (
+                      <Link key={s.href} href={s.href} className="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
+                        <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{s.name}</span>
+                        {s.badge && <span className="text-xs bg-beast-pink/20 text-beast-pink border border-beast-pink/25 px-2 py-0.5 rounded-full font-semibold">{s.badge}</span>}
+                      </Link>
+                    ))}
+                    <div className="px-3 pt-3 pb-1">
+                      <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold">San Antonio</p>
+                    </div>
+                    {localServices.map((s) => (
+                      <Link key={s.href} href={s.href} className="flex items-center py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
+                        <span className="text-beast-pink mr-2 text-xs">📍</span>
+                        <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{s.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
             {/* CPG plain link */}
             <Link href="/cpg" className="block font-display text-4xl font-bold text-white hover:text-beast-pink transition-colors py-2 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 rounded">

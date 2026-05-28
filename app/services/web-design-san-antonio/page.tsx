@@ -192,6 +192,29 @@ export default function WebDesignSanAntonioPage() {
         </div>
       </section>
 
+      {/* RELATED SERVICES */}
+      <section className="bg-section-offwhite py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-20">
+          <AnimatedSection>
+            <p className="text-xs font-bold uppercase tracking-widest text-beast-pink mb-6">Also in San Antonio</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Link href="/services/seo-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">SEO Agency San Antonio</p>
+                <p className="text-sm text-gray-500">Rank in Google + get cited by AI tools →</p>
+              </Link>
+              <Link href="/services/logo-design-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Logo Design San Antonio</p>
+                <p className="text-sm text-gray-500">Custom logos + full brand identity →</p>
+              </Link>
+              <Link href="/services/branding" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
+                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Branding Agency San Antonio</p>
+                <p className="text-sm text-gray-500">Brand naming, identity systems, voice →</p>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-near-black py-16 lg:py-20 text-center">
         <div className="max-w-2xl mx-auto px-6">
@@ -201,7 +224,7 @@ export default function WebDesignSanAntonioPage() {
               Ready for a Site That Actually Works?
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free 15-minute call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back — no pitch, no commitment.
+              Book a free 15-minute call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back &mdash; no pitch, no commitment.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free Strategy Call</IconButton>
             <p className="text-gray-600 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
