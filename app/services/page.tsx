@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    name: "CPG Marketing",
-    badge: "Flagship",
-    pitch: "Sweepstakes campaigns, first-party data collection, and retail-ready proof for food and beverage brands going national.",
-    href: "/services/cpg-marketing",
-    stats: "36,581 entries on $6K",
+    name: "Web Design & Development",
+    badge: "Most Requested",
+    pitch: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-focused. Built to rank in Google and built to turn visitors into customers.",
+    href: "/services/web-design",
+    stats: "Lighthouse 90+ · Next.js · Shopify",
     featured: true,
   },
   {
     name: "SEO + AEO",
-    pitch: "Traditional search engine optimization plus Answer Engine Optimization — so your brand appears in Google AND AI search tools like ChatGPT, Gemini, and Perplexity.",
+    pitch: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity. Traditional search meets AI search — both in one strategy, from one team.",
     href: "/services/seo-aeo",
     stats: "11.6x email CTR lift",
   },
@@ -31,22 +31,22 @@ const services = [
     stats: "$0.12 CPC achieved",
   },
   {
-    name: "AI Content Production",
-    pitch: "Recipe videos, product demos, and social content at scale — produced with AI at 90%+ lower cost than traditional production.",
-    href: "/services/content-production",
-    stats: "900+ assets processed",
-  },
-  {
     name: "Branding & Identity",
-    pitch: "Brand naming, visual systems, logo design, and identities that create instant recognition and don't require explanation.",
+    pitch: "Brand naming, visual systems, logo design, and identities that create instant recognition. We built Coinline from zero — name, logo, voice, and market position.",
     href: "/services/branding",
     stats: "Coinline — zero explanation needed",
   },
   {
-    name: "Web Design & CRO",
-    pitch: "Conversion-focused builds, mobile-first, performance-optimized to turn traffic into qualified leads and revenue.",
-    href: "/services/web-design",
-    stats: "Lighthouse 90+ scores",
+    name: "AI Content Production",
+    pitch: "Social content, video, and copy at scale — produced with AI at 90%+ lower cost than traditional production. 900+ assets processed for CPG clients.",
+    href: "/services/content-production",
+    stats: "900+ assets processed",
+  },
+  {
+    name: "CPG Marketing",
+    pitch: "Sweepstakes, first-party data, and retail-ready campaigns. Our CPG results — 36,581 entries on $6K, 7.03% CTR — set the standard for every client we take on.",
+    href: "/services/cpg-marketing",
+    stats: "36,581 entries on $6K",
   },
 ];
 
@@ -59,10 +59,10 @@ export default function ServicesPage() {
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-4">What We Do</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mx-auto mb-6">
-              Marketing That&apos;s Built to Perform.
+              Full-Service. No Excuses.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl mx-auto">
-              Six services. One goal — results you can measure, report, and take to the boardroom.
+              Web design, SEO, paid media, branding, and content — one agency, documented results, no runaround.
             </p>
           </AnimatedSection>
         </div>
@@ -71,22 +71,22 @@ export default function ServicesPage() {
       <section className="bg-section-offwhite py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
 
-          {/* CPG Marketing — Flagship featured card */}
+          {/* Web Design — Featured card */}
           <AnimatedSection className="mb-6">
-            <Link href="/services/cpg-marketing" className="group block">
+            <Link href="/services/web-design" className="group block">
               <div className="relative rounded-2xl overflow-hidden bg-beast-pink p-8 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white border border-white/25 mb-5">
-                    Flagship Service
+                    Most Requested
                   </span>
                   <div aria-hidden="true" className="font-display text-8xl lg:text-[10rem] font-black text-white/10 leading-none -mb-2 select-none">01</div>
-                  <h2 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">CPG Marketing</h2>
+                  <h2 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">Web Design &amp; Development</h2>
                 </div>
                 <div className="lg:max-w-sm shrink-0">
                   <p className="text-white/80 leading-relaxed mb-4">
-                    Sweepstakes campaigns, first-party data collection, and retail-ready proof for food and beverage brands going national.
+                    Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, and built to convert. Every page has a purpose and a next step.
                   </p>
-                  <p className="font-mono text-xs font-semibold text-white/60 mb-6">36,581 entries on $6K</p>
+                  <p className="font-mono text-xs font-semibold text-white/60 mb-6">Lighthouse 90+ · Next.js · Shopify</p>
                   <span className="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-[gap] duration-200">
                     Explore Service <span aria-hidden="true">→</span>
                   </span>

@@ -8,12 +8,11 @@ import { organizationSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "CPG Marketing Agency in San Antonio, TX | Beast Creative",
+    default: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
     template: "%s | Beast Creative Agency",
   },
   description:
-    "San Antonio CPG marketing agency helping food, beverage, and consumer brands scale to Walmart and beyond with SEO, paid media, and AI-driven campaigns.",
+    "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results. Serving local businesses and national brands from San Antonio, TX.",
   metadataBase: new URL("https://beastcreativeagency.com"),
   openGraph: {
     siteName: "Beast Creative Agency",

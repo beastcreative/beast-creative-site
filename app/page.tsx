@@ -10,21 +10,21 @@ import ClientListSection from "@/components/ui/ClientListSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Marketing Agency in San Antonio, TX | Beast Creative",
+  title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
   description:
-    "San Antonio CPG marketing agency helping food, beverage, and consumer brands scale to Walmart and beyond with SEO, paid media, and AI-driven campaigns.",
+    "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
   openGraph: {
-    title: "CPG Marketing Agency in San Antonio, TX | Beast Creative",
+    title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
     description:
-      "San Antonio CPG marketing agency helping food, beverage, and consumer brands scale to Walmart and beyond with SEO, paid media, and AI-driven campaigns.",
+      "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
     type: "website",
     url: "https://beastcreativeagency.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CPG Marketing Agency in San Antonio, TX | Beast Creative",
+    title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
     description:
-      "San Antonio CPG marketing agency helping food, beverage, and consumer brands scale to Walmart and beyond with SEO, paid media, and AI-driven campaigns.",
+      "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
   },
   alternates: {
     canonical: "https://beastcreativeagency.com",
@@ -34,28 +34,28 @@ export const metadata: Metadata = {
 
 const homepageFaqs = [
   {
-    q: "What does a CPG marketing agency do?",
-    a: "A CPG marketing agency helps food, beverage, and consumer packaged goods brands grow distribution, build consumer databases, and scale revenue through targeted campaigns. At Beast Creative, we specialize in sweepstakes, paid social, SEO, and AI-driven content that generates the consumer proof retailers like Walmart, H-E-B, and Target require before expanding shelf space.",
+    q: "What services does Beast Creative offer?",
+    a: "Beast Creative is a full-service marketing agency based in San Antonio, TX. We offer web design and development, SEO and Answer Engine Optimization (AEO), paid media management, branding and identity, AI content production, and CPG marketing. Most clients start with web design or SEO and expand from there.",
   },
   {
-    q: "How much does CPG marketing cost?",
-    a: "Our CPG campaigns typically start at $2,500/month in ad spend with agency fees on top. For context, our Sun-Bird Seasonings Walmart rollout campaign generated 36,581 consumer emails on a $6,000 total budget — nearly 8x industry benchmark CTR. We don't take on accounts below that threshold; the math doesn't work for either side.",
+    q: "Do you work with local San Antonio businesses?",
+    a: "Yes — and it's a big part of what we do. We work with local San Antonio restaurants, service companies, startups, and regional businesses alongside national CPG brands. If you're in San Antonio and need a real agency with documented results, not just a freelancer, we're built for that.",
+  },
+  {
+    q: "How much does web design cost in San Antonio?",
+    a: "Our web design projects typically start at $3,500 for marketing sites and $5,000+ for e-commerce. Every site is built on Next.js or Shopify — mobile-first, performance-optimized, and SEO-ready from day one. We don't use templates; every build is custom to your brand and conversion goals.",
   },
   {
     q: "What's the difference between SEO and AEO?",
-    a: "SEO (Search Engine Optimization) helps your brand rank in Google's traditional search results. AEO (Answer Engine Optimization) goes further — structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews cite your brand when consumers ask questions. Both are essential for modern brand visibility.",
+    a: "SEO (Search Engine Optimization) helps your brand rank in Google's traditional search results. AEO (Answer Engine Optimization) goes further — structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews cite your brand when consumers ask questions. Both are essential for modern visibility, and Beast is one of the few San Antonio agencies offering both.",
   },
   {
-    q: "How do I market a Walmart rollout?",
-    a: "A successful Walmart rollout campaign starts with consumer proof: email lists, engagement data, and brand awareness metrics that retail buyers want to see before approving expansion. We run sweepstakes and targeted paid campaigns to build that proof before your pitch. Our Sun-Bird Seasonings campaign collected 36,581 consumer emails specifically for their national Walmart distribution push.",
+    q: "What makes Beast Creative different from other San Antonio agencies?",
+    a: "We publish our results by name. No anonymous case studies, no inflated projections. Every number on our site — 7.03% CTR, 36,581 entries, 500%+ MRR growth — is attributed to a real client. We also run AI-assisted operations through our proprietary agent Segundo, which lets us move faster and cost less than traditional agencies.",
   },
   {
     q: "Do you work outside San Antonio?",
-    a: "Yes. Beast Creative is headquartered in San Antonio, TX and works with brands across the United States. All of our active case study clients are national brands, and we collaborate fully remotely with client teams in any market.",
-  },
-  {
-    q: "What makes Beast Creative different?",
-    a: "We publish our results by name. No anonymous case studies, no inflated projections. Every number on our site — 7.03% CTR, 36,581 entries, 500%+ MRR growth — is attributed to a real client and a real campaign you can ask us about on a free 15-minute strategy call.",
+    a: "Yes. Beast Creative is headquartered in San Antonio, TX and works with brands across the United States. All of our CPG case study clients are national brands. We collaborate fully remotely and are comfortable with any market.",
   },
 ];
 
@@ -91,39 +91,39 @@ const caseStudies = [
 
 const services = [
   {
-    name: "CPG Marketing",
-    desc: "Sweepstakes, first-party data collection, and retail-ready campaigns for food and beverage brands.",
-    href: "/services/cpg-marketing",
+    name: "Web Design & Development",
+    desc: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-optimized. Built to rank and built to sell.",
+    href: "/services/web-design",
     featured: true,
   },
   {
     name: "SEO + AEO",
-    desc: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity — traditional SEO meets AI search.",
+    desc: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity. Traditional SEO meets AI search — both in one strategy.",
     href: "/services/seo-aeo",
   },
   {
     name: "Paid Media",
-    desc: "AI-optimized Facebook, Instagram, TikTok, and Google campaigns with real-time creative testing.",
+    desc: "AI-optimized Facebook, Instagram, TikTok, and Google campaigns. $0.12 CPC vs $0.28 industry average.",
     href: "/services/paid-media",
   },
   {
-    name: "AI Content Production",
-    desc: "Recipe videos, product demos, and social content at scale — produced with AI at 90%+ lower cost.",
-    href: "/services/content-production",
-  },
-  {
     name: "Branding & Identity",
-    desc: "Brand naming, visual systems, and identities that create instant recognition and lasting recall.",
+    desc: "Brand naming, visual systems, and identities built for instant recognition. We created Coinline from zero.",
     href: "/services/branding",
   },
   {
-    name: "Web Design & CRO",
-    desc: "Conversion-focused builds, mobile-first, performance-optimized to turn traffic into revenue.",
-    href: "/services/web-design",
+    name: "AI Content Production",
+    desc: "Social content, video, and copy at scale — produced with AI at 90%+ lower cost than traditional production.",
+    href: "/services/content-production",
   },
-  // TODO: Add Email Marketing service page at /services/email-marketing
-  // TODO: Add Social Media service page at /services/social-media
+  {
+    name: "CPG Marketing",
+    desc: "Sweepstakes, first-party data, and retail-ready campaigns. 36,581 entries on $6K. 7.03% CTR. Real numbers.",
+    href: "/services/cpg-marketing",
+  },
 ];
+// TODO: Add Email Marketing service page at /services/email-marketing
+// TODO: Add Social Media service page at /services/social-media
 
 // TODO: Consider promoting Williams All-Stars (13,660 entries), Williams Bowl ($1,500 budget),
 // Pioneer (ROAS), or Coinline (branding) to homepage grid when 4-column layout is desired
@@ -151,7 +151,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20 pt-28 pb-24 lg:pt-40 lg:pb-32 w-full">
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-6">
-              CPG Marketing Agency · San Antonio, TX · Serving Brands Nationally
+              Full-Service Marketing Agency · San Antonio, TX · Web, SEO, Paid Media & Branding
             </p>
           </AnimatedSection>
 
@@ -165,7 +165,7 @@ export default function HomePage() {
 
           <AnimatedSection delay={0.25}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative Agency is a CPG marketing agency based in San Antonio, TX helping food, beverage, and consumer brands go national. Every result on this site is real, named, and verified — sweepstakes, paid social, SEO, and AI-enhanced content backed by numbers that hold up under scrutiny.
+              Beast Creative is San Antonio's full-service marketing agency — web design, SEO, paid media, and branding for local businesses and national brands. Our results are real, named, and verified. We built a 7x industry-average campaign for a national Walmart rollout. That same horsepower is available for your business.
             </p>
           </AnimatedSection>
 
@@ -213,10 +213,10 @@ export default function HomePage() {
                 Beast Creative.
               </h2>
               <p className="text-body-lead text-gray-600 mb-4">
-                At Beast Creative Agency — San Antonio&apos;s CPG-specialist marketing team, founded in 2020 by Edy (Owner) and John Speer (COO) — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
+                At Beast Creative Agency — San Antonio&apos;s full-service marketing team, founded in 2020 by Edy (Owner) and John Speer (COO) — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators working with food, beverage, and consumer brands nationwide. We specialize in CPG brands scaling from regional to national — and with ambitious businesses who are tired of agencies that talk more than they deliver.
+                Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients — the same rigor, the same standards, regardless of size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
@@ -224,10 +224,10 @@ export default function HomePage() {
                 <p className="font-display font-semibold text-beast-black text-sm uppercase tracking-widest mb-5">Who We Serve:</p>
                 <ul className="space-y-4">
                   {[
-                    "CPG food & beverage brands scaling from regional to national retail distribution",
-                    "Emerging CPG brands breaking into Walmart, Target, Kroger, or regional chains",
-                    "Multi-brand holding companies with fragmented digital presence",
-                    "Ambitious brands ready to grow nationally",
+                    "San Antonio businesses that need a real agency, not a freelancer",
+                    "Restaurants, service companies, and local brands ready to grow",
+                    "Regional brands going national — CPG, retail, e-commerce",
+                    "Any ambitious business tired of agencies that talk more than they deliver",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-beast-pink mt-0.5 font-bold text-lg leading-none" aria-hidden="true">→</span>
@@ -318,20 +318,20 @@ export default function HomePage() {
             </h2>
           </AnimatedSection>
 
-          {/* CPG Marketing — Flagship featured card */}
+          {/* Web Design — Flagship featured card */}
           <AnimatedSection className="mb-4">
-            <Link href="/services/cpg-marketing" className="group block">
+            <Link href="/services/web-design" className="group block">
               <div className="relative rounded-2xl overflow-hidden bg-beast-pink p-8 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white border border-white/25 mb-5">
-                    Flagship Service
+                    Most Requested
                   </span>
                   <div aria-hidden="true" className="font-display text-8xl lg:text-[10rem] font-black text-white/10 leading-none -mb-2 select-none">01</div>
-                  <h3 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">CPG Marketing</h3>
+                  <h3 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">Web Design &amp; Development</h3>
                 </div>
                 <div className="lg:max-w-sm shrink-0">
                   <p className="text-white/80 leading-relaxed mb-6">
-                    Sweepstakes, first-party data collection, and retail-ready campaigns for food and beverage brands going national.
+                    Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, and built to convert. Every site has a purpose and a next step.
                   </p>
                   <span className="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-[gap] duration-200">
                     Explore Service <span aria-hidden="true">→</span>
@@ -368,13 +368,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(46,204,64,0.06)_0%,transparent_70%)]" aria-hidden="true" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20 text-center">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">For CPG Brands</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Our Track Record</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6 max-w-3xl mx-auto">
-              Is Your Brand Ready for Walmart?{" "}
-              <span className="text-beast-pink">Your Marketing Should Be First.</span>
+              Enterprise-Level Proof.{" "}
+              <span className="text-beast-pink">Local Business Availability.</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-              We&apos;ve helped CPG food and beverage brands build the consumer databases, engagement metrics, and retail-readiness proof that retail buyers at Walmart, Target, H-E-B, and Kroger demand. Walk in with data — not hope.
+              We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client — whether you&apos;re a San Antonio restaurant or a regional brand going national.
             </p>
             <IconButton href="/cpg" icon="cpg">See Our CPG Playbook</IconButton>
           </AnimatedSection>
