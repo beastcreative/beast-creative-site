@@ -22,8 +22,8 @@ export default function HeroHeadline() {
     );
   }
 
-  const line1 = ["San", "Antonio's", "Full-Service"];
-  const line2 = ["CPG", "Marketing", "Agency"];
+  const line1 = ["San", "Antonio", "SEO", "&", "AEO"];
+  const line2 = ["for", "the", "AI", "Search", "Era"];
 
   return (
     <motion.h1
