@@ -260,7 +260,7 @@ export default function SweepstakesPlaybookPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast designs sweepstakes campaigns that generate first-party consumer data at scale — built to support your retail pitch.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

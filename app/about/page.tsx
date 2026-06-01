@@ -119,9 +119,9 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
-              Book a free 15-minute call. No pitch deck, no commitments — just an honest conversation about what Beast can do for your brand.
+              See where you stand in AI search. No pitch, no pressure — just an honest conversation about what Beast can do for your brand.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

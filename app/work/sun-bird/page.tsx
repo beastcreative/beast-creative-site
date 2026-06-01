@@ -322,7 +322,7 @@ export default function SunBirdPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Is Your Brand Ready for Walmart? Your Marketing Should Get There First.</h2>
             <p className="text-gray-400 mb-8">Sun-Bird walked into Walmart with 36,000 consumer records and a 7.03% CTR to back up every conversation. Beast builds that proof for CPG brands.</p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="chart" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="chart" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

@@ -64,7 +64,7 @@ export default function WebDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</IconButton>
+              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
               <IconButton href="/work" icon="eye" variant="ghost">See Our Work</IconButton>
             </div>
           </AnimatedSection>
@@ -224,9 +224,9 @@ export default function WebDesignSanAntonioPage() {
               Ready for a Site That Actually Works?
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free 15-minute call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back &mdash; no pitch, no commitment.
+              Book a quick call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back &mdash; no pitch, no commitment.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
             <p className="text-gray-600 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
           </AnimatedSection>
         </div>

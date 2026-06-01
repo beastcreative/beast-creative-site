@@ -344,7 +344,7 @@ export default function CpgBrandStorytellingPost() {
             <p className="text-[#C8C8C8] mb-8">
               The brands that succeed in this space don&apos;t just tell better stories; they become better brands by staying true to their narratives through every business decision. They understand that authenticity isn&apos;t a marketing tactic—it&apos;s a business strategy that influences everything from product development to customer service.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

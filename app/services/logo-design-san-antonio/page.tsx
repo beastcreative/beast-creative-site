@@ -230,7 +230,7 @@ export default function LogoDesignSanAntonioPage() {
               Ready for a Logo That Actually Works?
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free 15-minute brand call. We&apos;ll tell you what your current brand is missing and what a logo redesign would actually get you.
+              Book a quick brand call. We&apos;ll tell you what your current brand is missing and what a logo redesign would actually get you.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free Brand Call</IconButton>
             <p className="text-gray-600 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

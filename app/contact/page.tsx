@@ -4,19 +4,19 @@ import ContactForm from "@/components/forms/ContactForm";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Contact Beast Creative Agency | Free Strategy Call",
+  title: "Contact Beast Creative Agency | San Antonio SEO & AEO",
   description:
-    "Book a free 15-minute strategy call or send a message. No pitch deck, no commitments — just an honest conversation. Working with brands nationwide.",
+    "See where you stand in AI search, or send a message. No pitch deck, no commitments — just an honest conversation. Working with brands nationwide.",
 };
 
 const faqs = [
   {
-    q: "What happens on the free 15-minute call?",
+    q: "What happens when I reach out?",
     a: "We come prepared. Before the call, we look at your brand, your current marketing, and your competitors. On the call, you get an honest read on where you're losing ground and what would move the needle fastest — no pitch deck, no sales script.",
   },
   {
     q: "Do you only work with CPG brands?",
-    a: "CPG food and beverage brands are our flagship and where our deepest playbook lives. We also work with e-commerce brands, retail businesses, and multi-brand holding companies. If you're not sure whether we're a fit, the 15-minute call will tell you.",
+    a: "CPG food and beverage brands are our flagship and where our deepest playbook lives. We also work with e-commerce brands, retail businesses, and multi-brand holding companies. If you're not sure whether we're a fit, a quick call will tell you.",
   },
   {
     q: "What's a typical starting budget to work with Beast?",
@@ -45,7 +45,7 @@ export default function ContactPage() {
               Start the Conversation.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl mx-auto">
-              Book a free 15-minute strategy call or send us a message. No pitch deck. No commitments. Just an honest conversation about what Beast can do for your brand.
+              See where you stand in AI search, or send us a message. No pitch deck. No commitments. Just an honest conversation about what Beast can do for your brand.
             </p>
           </AnimatedSection>
         </div>
@@ -60,12 +60,12 @@ export default function ContactPage() {
             <AnimatedSection>
               <div className="space-y-8">
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-white mb-3">Book Your Free 15-Minute Strategy Call</h2>
+                  <h2 className="font-display text-2xl font-bold text-white mb-3">See Where You Stand in AI Search</h2>
                   <p className="text-gray-400 mb-6">
                     We come prepared with a real read on your brand — what&apos;s working, what isn&apos;t, and where the fastest wins are hiding. No pitch. No obligations.
                   </p>
                   <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">
-                    Book My Free Strategy Call
+                    See Where You Stand in AI Search
                   </IconButton>
                 </div>
 

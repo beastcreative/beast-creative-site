@@ -144,9 +144,9 @@ export default function WorkPage() {
               Ready to Be Our Next Case Study?
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Every one of these campaigns started with a free 15-minute conversation. Let&apos;s have yours.
+              Every one of these campaigns started with a simple conversation. Let&apos;s have yours.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

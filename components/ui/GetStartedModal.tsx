@@ -225,7 +225,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
                   <p className="text-red-500 text-sm text-center" role="alert">{error}</p>
                 )}
                 <IconButton type="submit" icon="calendar" disabled={loading} className="w-full justify-center">
-                  {loading ? "Sending..." : "Book a Strategy Call"}
+                  {loading ? "Sending..." : "See Where You Stand in AI Search"}
                 </IconButton>
               </form>
             </>

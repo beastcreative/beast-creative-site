@@ -438,7 +438,7 @@ export default function PrivateLabelVsBrandedCpgPost() {
             <p className="text-[#C8C8C8] mb-8">
               The most successful CPG companies, regardless of their model, share common traits: they understand their customers deeply, use data to drive decisions, and adapt quickly to market changes.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>

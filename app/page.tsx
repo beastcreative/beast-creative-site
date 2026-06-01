@@ -172,7 +172,7 @@ export default function HomePage() {
           <AnimatedSection delay={0.35}>
             <div className="flex flex-col sm:flex-row gap-4">
               <MagneticButton>
-                <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+                <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
               </MagneticButton>
               <IconButton href="/work" icon="eye" variant="ghost">See Our Work</IconButton>
             </div>
@@ -471,9 +471,9 @@ export default function HomePage() {
                 Ready to Stop Guessing and Start Growing?
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Book a free 15-minute strategy call. No pitch deck. No commitments. Just an honest conversation about what&apos;s working, what isn&apos;t, and what Beast can do for your brand.
+                Tell us about your business and we&apos;ll show you exactly where you stand in AI search: what&apos;s working, what&apos;s missing, and what it&apos;d take to own your San Antonio market. No pitch, no pressure.
               </p>
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
               <p className="text-beast-yellow text-sm mt-4">
                 Or text us directly:{" "}
                 <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a>

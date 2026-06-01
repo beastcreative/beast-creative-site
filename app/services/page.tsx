@@ -123,9 +123,9 @@ export default function ServicesPage() {
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-white tracking-normal mb-4">Not Sure Where to Start?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free 15-minute strategy call. We&apos;ll tell you exactly which service would move the needle most for your brand — no pitch, no commitment.
+              Tell us about your business and we&apos;ll show you exactly which service would move the needle most for your brand — no pitch, no commitment.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Book My Free 15-Minute Strategy Call</IconButton>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>
       </section>
