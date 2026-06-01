@@ -4,58 +4,10 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "About Beast Creative Agency | National Digital Marketing",
+  title: "About Beast Creative Agency | San Antonio SEO & AEO",
   description:
-    "Meet the Beast team: strategists, creatives, and AI-powered operators working with brands nationwide. Built on proven CPG results and the kind of reporting most agencies avoid.",
+    "Beast Creative is a San Antonio SEO, AEO & GEO agency. Built on proven results and the kind of transparent, documented reporting most agencies avoid.",
 };
-
-interface TeamMember {
-  name: string;
-  title: string;
-  bio: string;
-  initials: string;
-  isAI?: boolean;
-}
-
-const team: TeamMember[] = [
-  {
-    name: "Kyle Ossinger",
-    title: "Creative Director",
-    bio: "The creative force behind Beast's campaigns. Kyle translates brand briefs into campaign mechanics that people actually engage with, like the Williams All-Stars trading card system that generated 13,660 entries in 24 days.",
-    initials: "KO",
-  },
-  {
-    name: "John Speer",
-    title: "Co-Owner / COO",
-    bio: "The operational architect of Beast. John ensures every campaign runs on time, on budget, and on brand. He's the one who walks into client meetings with the numbers that close deals.",
-    initials: "JS",
-  },
-  {
-    name: "Rubi Navarro",
-    title: "Social Media Manager",
-    bio: "The strategist behind Beast's social campaigns. Rubi built and executed the content and community approach that drove Sweet Sensi's MRR growth over 500%.",
-    initials: "RN",
-  },
-  {
-    name: "Eric",
-    title: "Web Development",
-    bio: "Beast's web lead. Eric builds and maintains the client-facing digital experiences — from conversion-focused landing pages to full campaign sites, ensuring every build is fast, mobile-first, and on brand.",
-    initials: "ER",
-  },
-  {
-    name: "Edy",
-    title: "Owner & Business Development",
-    bio: "The connective tissue of Beast's client relationships. Edy brings the market intelligence and relationship-building that keeps Beast's roster growing with the right brands.",
-    initials: "ED",
-  },
-  {
-    name: "Segundo",
-    title: "Proprietary AI Agent",
-    bio: "Not a person. Doesn't sleep. Never misses a deadline. Segundo is Beast's in-house AI agent — handling content production, campaign analysis, and workflow automation so the humans can focus on strategy; he's the reason we move faster than agencies twice our size.",
-    initials: "SEG",
-    isAI: true,
-  },
-];
 
 const values = [
   {
@@ -132,32 +84,6 @@ export default function AboutPage() {
                   </div>
                   <h3 className="font-display text-xl font-bold text-white mb-3">{val.name}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{val.desc}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TEAM */}
-      <section className="bg-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          <AnimatedSection className="text-center mb-12">
-            <p className="section-eyebrow text-beast-pink mb-4">The Team</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal">
-              The People Behind the Results.
-            </h2>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <AnimatedSection key={member.name} delay={i * 0.1}>
-                <div className="flex flex-col items-start">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-4 ${member.isAI ? "bg-beast-pink" : "bg-beast-black"}`}>
-                    <span className={`font-display font-bold text-xl ${member.isAI ? "text-white" : "text-beast-pink"}`}>{member.initials}</span>
-                  </div>
-                  <h3 className="font-display text-xl font-bold text-beast-black mb-1">{member.name}</h3>
-                  <p className={`text-xs font-semibold uppercase tracking-widest mb-3 ${member.isAI ? "text-beast-black" : "text-beast-pink"}`}>{member.title}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </AnimatedSection>
             ))}

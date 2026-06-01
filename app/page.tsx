@@ -10,21 +10,21 @@ import ClientListSection from "@/components/ui/ClientListSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
+  title: "San Antonio SEO & AEO Agency | Beast Creative",
   description:
-    "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
+    "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
   openGraph: {
-    title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
+    title: "San Antonio SEO & AEO Agency | Beast Creative",
     description:
-      "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
+      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
     type: "website",
     url: "https://beastcreativeagency.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design & Marketing Agency in San Antonio, TX | Beast Creative",
+    title: "San Antonio SEO & AEO Agency | Beast Creative",
     description:
-      "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results at 7x industry benchmarks, available for your business.",
+      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
   },
   alternates: {
     canonical: "https://beastcreativeagency.com",
@@ -91,15 +91,15 @@ const caseStudies = [
 
 const services = [
   {
-    name: "Web Design & Development",
-    desc: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-optimized. Built to rank and built to sell.",
-    href: "/services/web-design",
+    name: "SEO, AEO & GEO",
+    desc: "Rank in Google and get cited by ChatGPT, Gemini, and Perplexity. As AI answers more searches, we make sure San Antonio businesses are the answer.",
+    href: "/services/seo-aeo",
     featured: true,
   },
   {
-    name: "SEO + AEO",
-    desc: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity. Traditional SEO meets AI search — both in one strategy.",
-    href: "/services/seo-aeo",
+    name: "Web Design & Development",
+    desc: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-optimized. Built to rank and built to sell.",
+    href: "/services/web-design",
   },
   {
     name: "Paid Media",
@@ -151,7 +151,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20 pt-28 pb-24 lg:pt-40 lg:pb-32 w-full">
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-6">
-              Full-Service Marketing Agency · San Antonio, TX · Web, SEO, Paid Media & Branding
+              San Antonio SEO · AEO · GEO Agency
             </p>
           </AnimatedSection>
 
@@ -159,13 +159,13 @@ export default function HomePage() {
 
           <AnimatedSection delay={0.15}>
             <h2 className="font-display text-2xl lg:text-3xl font-bold text-white/60 max-w-3xl mb-6">
-              We Don&apos;t Claim Results. We Document Them.
+              Marketing that shows its work.
             </h2>
           </AnimatedSection>
 
           <AnimatedSection delay={0.25}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative is San Antonio's full-service marketing agency — web design, SEO, paid media, and branding for local businesses and national brands. Our results are real, named, and verified. We built a 7x industry-average campaign for a national Walmart rollout. That same horsepower is available for your business.
+              The way people search is changing fast — more of your customers now get answers straight from AI instead of clicking to websites. We make sure San Antonio businesses show up in that new layer: cited and recommended by ChatGPT, Google&apos;s AI Overviews, and Perplexity, not left behind by it. It&apos;s the same approach that drove 7x results for national brands, pointed at your market.
             </p>
           </AnimatedSection>
 
@@ -213,7 +213,7 @@ export default function HomePage() {
                 Beast Creative.
               </h2>
               <p className="text-body-lead text-gray-600 mb-4">
-                At Beast Creative Agency — San Antonio&apos;s full-service marketing team, founded in 2020 by Edy (Owner) and John Speer (COO) — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
+                At Beast Creative Agency — San Antonio&apos;s SEO, AEO &amp; GEO team — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients — the same rigor, the same standards, regardless of size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
@@ -237,7 +237,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <Link href="/about" className="btn-ghost-pink text-sm">
-                    Meet the Team →
+                    More About Beast →
                   </Link>
                 </div>
               </div>
@@ -318,20 +318,20 @@ export default function HomePage() {
             </h2>
           </AnimatedSection>
 
-          {/* Web Design — Flagship featured card */}
+          {/* SEO, AEO & GEO — Flagship featured card */}
           <AnimatedSection className="mb-4">
-            <Link href="/services/web-design" className="group block">
+            <Link href="/services/seo-aeo" className="group block">
               <div className="relative rounded-2xl overflow-hidden bg-beast-pink p-8 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white border border-white/25 mb-5">
-                    Most Requested
+                    Get Cited by AI
                   </span>
                   <div aria-hidden="true" className="font-display text-8xl lg:text-[10rem] font-black text-white/10 leading-none -mb-2 select-none">01</div>
-                  <h3 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">Web Design &amp; Development</h3>
+                  <h3 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">SEO, AEO &amp; GEO</h3>
                 </div>
                 <div className="lg:max-w-sm shrink-0">
                   <p className="text-white/80 leading-relaxed mb-6">
-                    Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, and built to convert. Every site has a purpose and a next step.
+                    Rank in Google and get cited by ChatGPT, Gemini, and Perplexity. As AI answers more of every search, we make sure San Antonio businesses are the answer — not an afterthought.
                   </p>
                   <span className="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-[gap] duration-200">
                     Explore Service <span aria-hidden="true">→</span>
@@ -360,6 +360,27 @@ export default function HomePage() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* THE SHIFT — GOOGLE ZERO */}
+      <section className="bg-beast-black relative overflow-hidden py-16 lg:py-24 border-t border-white/5">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,17,152,0.06)_0%,transparent_70%)]" aria-hidden="true" />
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-20 text-center">
+          <AnimatedSection>
+            <p className="section-eyebrow text-beast-pink mb-4">Why Now</p>
+            <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6 max-w-3xl mx-auto">
+              Google Is Keeping the Click.{" "}
+              <span className="text-beast-pink">Get Cited Instead.</span>
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              AI now answers your customers before they ever reach a website — Google&apos;s AI Overviews, ChatGPT, Perplexity. The industry calls it &ldquo;Google Zero,&rdquo; and it&apos;s already changing who gets found. Ranking #1 matters a little less every month. Being the source AI cites matters a lot more.
+            </p>
+            <p className="text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+              We get San Antonio businesses into that answer layer — structured, credible, and recommended — so you stay visible as search gets rewritten. The early movers win this, and most of your competitors haven&apos;t started.
+            </p>
+            <IconButton href="/services/seo-aeo" icon="eye">See How AEO Works</IconButton>
+          </AnimatedSection>
         </div>
       </section>
 
