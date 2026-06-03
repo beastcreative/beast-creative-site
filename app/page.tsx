@@ -8,6 +8,7 @@ import MagneticButton from "@/components/ui/MagneticButton";
 import ContactForm from "@/components/forms/ContactForm";
 import ClientListSection from "@/components/ui/ClientListSection";
 import IconButton from "@/components/ui/IconButton";
+import InstantContact from "@/components/ui/InstantContact";
 
 export const metadata: Metadata = {
   title: "San Antonio SEO & AEO Agency | Beast Creative",
@@ -473,11 +474,11 @@ export default function HomePage() {
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
                 Tell us about your business and we&apos;ll show you exactly where you stand in AI search: what&apos;s working, what&apos;s missing, and what it&apos;d take to own your San Antonio market. No pitch, no pressure.
               </p>
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
-              <p className="text-beast-yellow text-sm mt-4">
-                Or text us directly:{" "}
-                <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a>
-              </p>
+              <InstantContact message="Hi Beast — I saw your site and want to talk about my brand's search visibility." />
+              <div className="mt-6">
+                <p className="text-gray-500 text-sm mb-3">Prefer a scheduled call?</p>
+                <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" variant="ghost" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+              </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <ContactForm />

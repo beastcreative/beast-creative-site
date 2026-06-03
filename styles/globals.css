@@ -444,7 +444,8 @@ select.form-input option {
 .btn-primary,
 .btn-light,
 .btn-ghost,
-.btn-yellow {
+.btn-yellow,
+.btn-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -491,6 +492,20 @@ select.form-input option {
 }
 .btn-light:active { transform: translateY(-1px); }
 .btn-light:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* WhatsApp — brand green, recognizable instant-chat action */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 8px 15px rgba(37,211,102,0.20);
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe5b;
+  color: #FFFFFF;
+  box-shadow: 0 15px 30px rgba(37,211,102,0.35);
+  transform: translateY(-5px);
+}
+.btn-whatsapp:active { transform: translateY(-1px); }
 
 
 /* Pink → Yellow — test variant (dark backgrounds) */

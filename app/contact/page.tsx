@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/forms/ContactForm";
 import IconButton from "@/components/ui/IconButton";
+import InstantContact from "@/components/ui/InstantContact";
 
 export const metadata: Metadata = {
   title: "Contact Beast Creative Agency | San Antonio SEO & AEO",
@@ -60,13 +61,17 @@ export default function ContactPage() {
             <AnimatedSection>
               <div className="space-y-8">
                 <div>
-                  <h2 className="font-display text-2xl font-bold text-white mb-3">See Where You Stand in AI Search</h2>
+                  <h2 className="font-display text-2xl font-bold text-white mb-3">Text Us. Talk to a Human.</h2>
                   <p className="text-gray-400 mb-6">
-                    We come prepared with a real read on your brand — what&apos;s working, what isn&apos;t, and where the fastest wins are hiding. No pitch. No obligations.
+                    The fastest way to reach us — send a text or WhatsApp and you&apos;ll hear back from a real person, not a bot or a sales queue. No forms, no phone tag.
                   </p>
-                  <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">
-                    See Where You Stand in AI Search
-                  </IconButton>
+                  <InstantContact message="Hi Beast — I'd like to talk about my brand's search visibility." />
+                  <div className="mt-6">
+                    <p className="text-gray-500 text-sm mb-3">Prefer a scheduled call?</p>
+                    <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" variant="ghost" icon="calendar" target="_blank" rel="noopener noreferrer">
+                      See Where You Stand in AI Search
+                    </IconButton>
+                  </div>
                 </div>
 
                 <div className="border-t border-dark-border pt-8 space-y-5">
