@@ -158,7 +158,7 @@ export default function Nav() {
                         </Link>
                       ))}
                       <div className="border-t border-white/8 px-5 py-2">
-                        <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold mb-1">San Antonio</p>
+                        <p className="text-xs text-beast-pink uppercase tracking-widest font-semibold mb-1">San Antonio</p>
                       </div>
                       {localServices.map((s) => (
                         <Link key={s.href} href={s.href} className={`flex items-center px-5 py-2.5 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-gray-400"}`}>
@@ -303,7 +303,7 @@ export default function Nav() {
                       </Link>
                     ))}
                     <div className="px-3 pt-3 pb-1">
-                      <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold">San Antonio</p>
+                      <p className="text-xs text-beast-pink uppercase tracking-widest font-semibold">San Antonio</p>
                     </div>
                     {localServices.map((s) => (
                       <Link key={s.href} href={s.href} className="flex items-center py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
