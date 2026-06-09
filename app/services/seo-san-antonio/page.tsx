@@ -89,7 +89,7 @@ export default function SEOSanAntonioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm h-full">
+                <div className="bg-white rounded-2xl p-8 border border-gray-200/70 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_-12px_rgba(255,17,152,0.28)] hover:border-beast-pink/40 hover:-translate-y-1 transition-all duration-300 h-full">
                   <h3 className="font-display text-lg font-bold text-beast-black mb-3">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
@@ -127,7 +127,7 @@ export default function SEOSanAntonioPage() {
                   { stat: "11.6x", label: "Industry benchmark", sub: "Email CTR" },
                   { stat: "$0", label: "Paid ad spend", sub: "100% organic" },
                 ].map((item) => (
-                  <div key={item.stat} className="bg-dark-surface rounded-2xl p-6 border border-dark-border">
+                  <div key={item.stat} className="bg-dark-surface rounded-2xl p-6 border border-beast-pink/20 shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
                     <div className="font-display text-3xl font-black text-beast-yellow mb-1">{item.stat}</div>
                     <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-xs text-gray-500">{item.sub}</div>

@@ -96,7 +96,7 @@ export default function WebDesignSanAntonioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deliverables.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm h-full">
+                <div className="bg-white rounded-2xl p-8 border border-gray-200/70 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_-12px_rgba(255,17,152,0.28)] hover:border-beast-pink/40 hover:-translate-y-1 transition-all duration-300 h-full">
                   <h3 className="font-display text-lg font-bold text-beast-black mb-3">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
@@ -130,7 +130,7 @@ export default function WebDesignSanAntonioPage() {
                   { stat: "<2s", label: "Target load time", sub: "Mobile first" },
                   { stat: "100%", label: "Custom code", sub: "No templates ever" },
                 ].map((item) => (
-                  <div key={item.stat} className="bg-dark-surface rounded-2xl p-6 border border-dark-border">
+                  <div key={item.stat} className="bg-dark-surface rounded-2xl p-6 border border-beast-pink/20 shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
                     <div className="font-display text-3xl font-black text-beast-yellow mb-1">{item.stat}</div>
                     <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-xs text-gray-500">{item.sub}</div>
@@ -154,7 +154,7 @@ export default function WebDesignSanAntonioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {process.map((step, i) => (
               <AnimatedSection key={step.step} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-md hover:border-beast-pink hover:shadow-lg transition-all duration-200 h-full flex flex-col">
+                <div className="bg-white rounded-2xl p-8 border border-gray-200/70 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_-12px_rgba(255,17,152,0.28)] hover:border-beast-pink/40 hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                   <span className="font-mono text-xs font-bold text-beast-pink tracking-widest mb-3">{step.step}</span>
                   <h3 className="font-display text-xl font-bold text-beast-black mb-3">{step.name}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed flex-1">{step.desc}</p>
