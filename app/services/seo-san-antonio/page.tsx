@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import { serviceSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "SEO Agency San Antonio | Google Rankings + AI Search | Beast Creative",
@@ -16,6 +18,14 @@ export const metadata: Metadata = {
   },
 };
 
+const proofPoints = [
+  "Google rankings + AI citations",
+  "Local San Antonio SEO specialists",
+  "11.6x email CTR from organic (Sweet Sensi)",
+  "500%+ MRR via SEO alone",
+  "No long-term contracts",
+];
+
 const services = [
   { title: "Technical SEO Audit", desc: "We find every indexing issue, Core Web Vitals failure, and crawl error killing your rankings — then fix them." },
   { title: "Keyword & Topic Strategy", desc: "We identify the exact terms your customers search in San Antonio and build a content strategy around them." },
@@ -25,73 +35,94 @@ const services = [
   { title: "Monthly Reporting", desc: "Real rankings, real traffic, real revenue attribution. No vanity metrics, no pie charts that don't explain anything." },
 ];
 
-const faqItems = [
-  { q: "How long does SEO take to work in San Antonio?", a: "Local SEO results in San Antonio typically start showing within 60–90 days for low-competition terms and 4–6 months for more competitive keywords. We prioritize quick wins first — fixing technical issues and optimizing existing pages — before building new content." },
-  { q: "What is AEO and why does it matter?", a: "AEO (Answer Engine Optimization) is structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews reference your brand in their answers. An estimated 30%+ of searches now go to AI tools first. If you're not showing up there, you're invisible to a growing segment of your market." },
-  { q: "Do you only do SEO for San Antonio businesses?", a: "No — we work with businesses across the US. But San Antonio local SEO is a specific specialty. We understand the market, the competition, and the search behavior in the SA metro." },
-  { q: "How much does SEO cost?", a: "Our SEO retainers start at $1,500/month for local San Antonio businesses and scale from there depending on competition, content needs, and scope. We don't lock you in long-term — we earn your business month to month." },
-  { q: "Can you help with both Google and AI search?", a: "Yes — that's what makes Beast different from most San Antonio SEO agencies. We offer both traditional SEO and AEO in one integrated strategy. You don't need two agencies or two strategies." },
+const stats = [
+  { stat: "566%", label: "MRR Growth", sub: "Sweet Sensi, via SEO" },
+  { stat: "9.5%", label: "Email click rate", sub: "vs 0.82% industry avg" },
+  { stat: "11.6x", label: "Industry benchmark", sub: "Email CTR" },
+  { stat: "$0", label: "Paid ad spend", sub: "100% organic" },
 ];
+
+const faqItems = [
+  { question: "How long does SEO take to work in San Antonio?", answer: "Local SEO results in San Antonio typically start showing within 60–90 days for low-competition terms and 4–6 months for more competitive keywords. We prioritize quick wins first — fixing technical issues and optimizing existing pages — before building new content." },
+  { question: "What is AEO and why does it matter?", answer: "AEO (Answer Engine Optimization) is structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews reference your brand in their answers. An estimated 30%+ of searches now go to AI tools first. If you're not showing up there, you're invisible to a growing segment of your market." },
+  { question: "Do you only do SEO for San Antonio businesses?", answer: "No — we work with businesses across the US. But San Antonio local SEO is a specific specialty. We understand the market, the competition, and the search behavior in the SA metro." },
+  { question: "How much does SEO cost?", answer: "Our SEO retainers start at $1,500/month for local San Antonio businesses and scale from there depending on competition, content needs, and scope. We don't lock you in long-term — we earn your business month to month." },
+  { question: "Can you help with both Google and AI search?", answer: "Yes — that's what makes Beast different from most San Antonio SEO agencies. We offer both traditional SEO and AEO in one integrated strategy. You don't need two agencies or two strategies." },
+];
+
+const relatedServices = [
+  { href: "/services/web-design-san-antonio", title: "Web Design San Antonio", desc: "Custom Next.js + Shopify builds, Lighthouse 90+ →" },
+  { href: "/services/logo-design-san-antonio", title: "Logo Design San Antonio", desc: "Custom logos + full brand identity →" },
+  { href: "/services/branding", title: "Branding Agency San Antonio", desc: "Brand naming, identity systems, voice →" },
+];
+
+const Check = () => (
+  <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+);
 
 export default function SEOSanAntonioPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema({ name: "SEO Agency San Antonio", description: metadata.description as string, url: "https://beastcreativeagency.com/services/seo-san-antonio" })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqItems)) }} />
+
       {/* HERO */}
-      <section className="relative min-h-[70vh] flex items-center bg-beast-black overflow-hidden">
-        <div className="absolute inset-0 bg-beast-black" />
+      <section className="relative bg-beast-black pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden">
         <div className="hero-ambient-glow" aria-hidden="true" />
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-20 pt-28 pb-20 lg:pt-40 lg:pb-28 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-6">SEO Agency · San Antonio, TX</p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <h1 className="font-display text-5xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-none">
+            <h1 className="text-display-hero text-white max-w-4xl mb-6">
               Rank in Google.<br />
-              <span className="text-beast-yellow">Get Found by AI.</span>
+              <span className="text-beast-pink">Get Found by AI.</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
+            <p className="text-body-lead text-[#C8C8C8] max-w-2xl mb-10">
               Beast Creative is San Antonio&apos;s only agency offering both traditional SEO and Answer Engine Optimization (AEO) — so you show up in Google search results and in AI tools like ChatGPT, Perplexity, and Gemini.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Get a Free SEO Audit</IconButton>
-              <IconButton href="/services/seo-aeo" icon="eye" variant="ghost">See Our SEO + AEO Service</IconButton>
+              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">Get a Free SEO Audit</IconButton>
+              <IconButton href="/services/seo-aeo" variant="ghost">See Our SEO + AEO Service</IconButton>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* PROOF BAR */}
-      <section className="bg-beast-yellow py-8">
+      <section className="bg-beast-yellow py-7">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-beast-black text-sm font-bold">
-            <span>✓ Google rankings + AI citations</span>
-            <span>✓ Local San Antonio SEO specialists</span>
-            <span>✓ 11.6x email CTR from organic (Sweet Sensi)</span>
-            <span>✓ 500%+ MRR via SEO alone</span>
-            <span>✓ No long-term contracts</span>
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 text-beast-black text-sm font-bold">
+            {proofPoints.map((p) => (
+              <span key={p} className="flex items-center gap-2">
+                <Check />
+                {p}
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
       {/* SERVICES GRID */}
-      <section className="bg-section-offwhite py-16 lg:py-24">
+      <section className="bg-section-offwhite py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          <AnimatedSection className="text-center mb-12">
+          <AnimatedSection className="mb-14 max-w-3xl">
             <p className="section-eyebrow text-beast-pink mb-4">What We Do</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal">
-              SEO That Covers Every Channel.
-            </h2>
+            <h2 className="text-display-section text-beast-black">SEO That Covers Every Channel.</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-light-border">
             {services.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 border border-gray-200/70 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_-12px_rgba(255,17,152,0.28)] hover:border-beast-pink/40 hover:-translate-y-1 transition-all duration-300 h-full">
-                  <h3 className="font-display text-lg font-bold text-beast-black mb-3">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              <AnimatedSection key={item.title} className="h-full" delay={(i % 3) * 0.08}>
+                <div className="group h-full bg-white p-8 lg:p-10 border-b border-r border-light-border transition-colors duration-300 hover:bg-section-offwhite">
+                  <span className="block font-display text-sm text-beast-pink mb-5 tracking-[0.25em]">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="font-display uppercase text-xl font-bold tracking-[0.02em] text-beast-black mb-3">{item.title}</h3>
+                  <p className="text-[15px] leading-relaxed text-[#4A4A4A]">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -100,37 +131,30 @@ export default function SEOSanAntonioPage() {
       </section>
 
       {/* PROOF — Sweet Sensi */}
-      <section className="bg-beast-black py-16 lg:py-20">
+      <section className="bg-beast-black py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
             <AnimatedSection>
               <p className="section-eyebrow text-beast-pink mb-4">Real Results</p>
-              <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">
-                500%+ MRR Growth. Zero Paid Ads.
-              </h2>
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <h2 className="text-display-section text-white mb-6">500%+ MRR Growth. Zero Paid Ads.</h2>
+              <p className="text-[#C8C8C8] leading-relaxed mb-6">
                 Sweet Sensi sells CBD products. Google won&apos;t run their ads. Facebook bans most CBD promotion. They came to us with a product people wanted and zero digital presence.
               </p>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-[#888888] leading-relaxed mb-8">
                 We built a full SEO foundation, created organic social content around wellness topics, and structured everything for AI search. The result: 566% MRR growth, 9.5% email click rate (11.6x industry average), and zero dependency on paid advertising.
               </p>
-              <blockquote className="border-l-2 border-beast-pink pl-4">
-                <p className="text-gray-300 italic text-sm leading-relaxed">&ldquo;Beast improved our monthly recurring revenue — it jumped by 566%, thanks to their SEO and social media strategy. It&apos;s the most impactful marketing investment we&apos;ve made.&rdquo;</p>
-                <cite className="text-beast-pink text-xs font-semibold mt-2 block">— Sweet Sensi</cite>
+              <blockquote className="rounded-xl border border-beast-pink/20 bg-beast-pink/5 p-5">
+                <p className="text-[#C8C8C8] italic text-sm leading-relaxed">&ldquo;Beast improved our monthly recurring revenue — it jumped by 566%, thanks to their SEO and social media strategy. It&apos;s the most impactful marketing investment we&apos;ve made.&rdquo;</p>
+                <cite className="text-beast-pink text-xs font-semibold mt-3 block not-italic">— Sweet Sensi</cite>
               </blockquote>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { stat: "566%", label: "MRR Growth", sub: "Sweet Sensi, via SEO" },
-                  { stat: "9.5%", label: "Email click rate", sub: "vs 0.82% industry avg" },
-                  { stat: "11.6x", label: "Industry benchmark", sub: "Email CTR" },
-                  { stat: "$0", label: "Paid ad spend", sub: "100% organic" },
-                ].map((item) => (
-                  <div key={item.stat} className="bg-dark-surface rounded-2xl p-6 border border-beast-pink/20 shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                    <div className="font-display text-3xl font-black text-beast-yellow mb-1">{item.stat}</div>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-12 lg:border-l lg:border-dark-border lg:pl-12">
+                {stats.map((item) => (
+                  <div key={item.stat}>
+                    <div className="text-stat-hero text-beast-yellow leading-none mb-3">{item.stat}</div>
                     <div className="text-sm font-semibold text-white mb-1">{item.label}</div>
-                    <div className="text-xs text-gray-500">{item.sub}</div>
+                    <div className="text-xs text-[#888888] leading-relaxed">{item.sub}</div>
                   </div>
                 ))}
               </div>
@@ -140,68 +164,48 @@ export default function SEOSanAntonioPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-section-offwhite py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-6 lg:px-20">
-          <AnimatedSection className="text-center mb-12">
+      <section className="bg-section-offwhite py-20 lg:py-28">
+        <div className="max-w-3xl mx-auto px-6 lg:px-20">
+          <AnimatedSection className="mb-10">
             <p className="section-eyebrow text-beast-pink mb-4">FAQ</p>
-            <h2 className="font-display text-4xl font-bold text-beast-black tracking-normal">
-              SEO Questions, Answered.
-            </h2>
+            <h2 className="text-display-section text-beast-black">SEO Questions, Answered.</h2>
           </AnimatedSection>
-          <div className="space-y-3">
-            {faqItems.map((faq, i) => (
-              <AnimatedSection key={faq.q} delay={i * 0.06}>
-                <details className="group bg-white rounded-2xl border border-gray-100 overflow-hidden">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-display font-semibold text-beast-black text-base select-none">
-                    {faq.q}
-                    <svg className="w-5 h-5 text-beast-pink shrink-0 ml-4 transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
-                    </svg>
-                  </summary>
-                  <p className="px-6 pb-6 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-                </details>
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl border border-light-border px-6">
+              <FaqAccordion faqs={faqItems} />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* RELATED SERVICES */}
-      <section className="bg-section-offwhite py-12">
+      <section className="bg-section-offwhite pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="text-xs font-bold uppercase tracking-widest text-beast-pink mb-6">Also in San Antonio</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Link href="/services/web-design-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
-                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Web Design San Antonio</p>
-                <p className="text-sm text-gray-500">Custom Next.js + Shopify builds, Lighthouse 90+ →</p>
-              </Link>
-              <Link href="/services/logo-design-san-antonio" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
-                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Logo Design San Antonio</p>
-                <p className="text-sm text-gray-500">Custom logos + full brand identity →</p>
-              </Link>
-              <Link href="/services/branding" className="group block bg-white rounded-2xl p-6 border border-gray-100 hover:border-beast-pink/40 hover:shadow-lg transition-all duration-200">
-                <p className="font-display font-bold text-beast-black mb-1 group-hover:text-beast-pink transition-colors">Branding Agency San Antonio</p>
-                <p className="text-sm text-gray-500">Brand naming, identity systems, voice →</p>
-              </Link>
+            <p className="section-eyebrow text-beast-pink mb-6">Also in San Antonio</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-light-border">
+              {relatedServices.map((s) => (
+                <Link key={s.href} href={s.href} className="group bg-white p-7 border-b border-r border-light-border transition-colors duration-300 hover:bg-section-offwhite">
+                  <p className="font-display uppercase text-lg font-bold tracking-[0.02em] text-beast-black mb-2 group-hover:text-beast-pink transition-colors">{s.title}</p>
+                  <p className="text-sm text-[#717171]">{s.desc}</p>
+                </Link>
+              ))}
             </div>
           </AnimatedSection>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-near-black py-16 lg:py-20 text-center">
+      <section className="bg-near-black py-20 lg:py-28 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-4">San Antonio SEO Agency</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">
-              Ready to Rank in Google and AI Search?
-            </h2>
-            <p className="text-gray-400 text-lg mb-8">
+            <h2 className="text-display-section text-white mb-6">Ready to Rank in Google and AI Search?</h2>
+            <p className="text-[#C8C8C8] text-lg mb-8">
               Book a free SEO audit. We&apos;ll show you exactly where you&apos;re leaving organic traffic on the table &mdash; no pitch, no commitment.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">Get My Free SEO Audit</IconButton>
-            <p className="text-gray-600 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
+            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">Get My Free SEO Audit</IconButton>
+            <p className="text-[#888888] text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
           </AnimatedSection>
         </div>
       </section>
