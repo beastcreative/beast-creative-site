@@ -118,11 +118,11 @@ export default function Nav() {
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
                     <div style={dropdownGlass} className="overflow-hidden">
                       <Link href="/work" className="flex items-center justify-between px-5 py-3 text-sm font-semibold text-white hover:bg-white/8 transition-colors border-b border-white/8 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px]">
-                        All Case Studies <span className="text-xs bg-white/10 text-gray-400 px-2 py-0.5 rounded-full">7</span>
+                        All Case Studies <span className="text-xs bg-white/10 text-white px-2 py-0.5 rounded-full">7</span>
                       </Link>
                       {caseStudies.map((cs) => (
                         <Link key={cs.href} href={cs.href} className={`flex items-center justify-between px-5 py-2.5 hover:bg-white/8 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === cs.href ? "bg-white/8" : ""}`}>
-                          <span className={`text-sm transition-colors truncate pr-3 ${pathname === cs.href ? "text-white font-semibold" : "text-gray-300 group-hover:text-white"}`}>{cs.name}</span>
+                          <span className={`text-sm transition-colors truncate pr-3 ${pathname === cs.href ? "text-white font-semibold" : "text-white group-hover:text-white"}`}>{cs.name}</span>
                           <span className="text-xs text-beast-yellow font-bold shrink-0">{cs.stat}</span>
                         </Link>
                       ))}
@@ -152,7 +152,7 @@ export default function Nav() {
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
                     <div style={dropdownGlass} className="overflow-hidden">
                       {services.map((s) => (
-                        <Link key={s.href} href={s.href} className={`flex items-center justify-between px-5 py-3 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-gray-300"}`}>
+                        <Link key={s.href} href={s.href} className={`flex items-center justify-between px-5 py-3 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-white"}`}>
                           {s.name}
                           {s.badge && <span className="text-xs bg-beast-pink/20 text-beast-pink border border-beast-pink/25 px-2 py-0.5 rounded-full font-semibold">{s.badge}</span>}
                         </Link>
@@ -161,7 +161,7 @@ export default function Nav() {
                         <p className="text-xs text-beast-pink uppercase tracking-widest font-semibold mb-1">San Antonio</p>
                       </div>
                       {localServices.map((s) => (
-                        <Link key={s.href} href={s.href} className={`flex items-center px-5 py-2.5 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-gray-400"}`}>
+                        <Link key={s.href} href={s.href} className={`flex items-center px-5 py-2.5 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "text-white bg-white/8 font-semibold" : "text-white"}`}>
                           {s.name}
                         </Link>
                       ))}
@@ -201,7 +201,7 @@ export default function Nav() {
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-44">
                     <div style={dropdownGlass} className="overflow-hidden">
                       {aboutLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className={`flex items-center px-5 py-3 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === link.href ? "text-white bg-white/8 font-semibold" : "text-gray-300"}`}>
+                        <Link key={link.href} href={link.href} className={`flex items-center px-5 py-3 text-sm hover:text-beast-yellow hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === link.href ? "text-white bg-white/8 font-semibold" : "text-white"}`}>
                           {link.name}
                         </Link>
                       ))}
@@ -271,12 +271,12 @@ export default function Nav() {
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${workOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
                 <div className="pl-2 pb-3 space-y-0.5 pl-2 ml-1 mt-1">
-                  <Link href="/work" className="block text-sm font-semibold text-gray-400 hover:text-white py-3 px-3 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">
+                  <Link href="/work" className="block text-sm font-semibold text-white hover:text-white py-3 px-3 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">
                     All Case Studies
                   </Link>
                   {caseStudies.map((cs) => (
                     <Link key={cs.href} href={cs.href} className="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
-                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{cs.name}</span>
+                      <span className="text-sm text-white group-hover:text-white transition-colors">{cs.name}</span>
                       <span className="text-xs text-beast-yellow font-bold ml-3">{cs.stat}</span>
                     </Link>
                   ))}
@@ -298,7 +298,7 @@ export default function Nav() {
                   <div className="pl-2 pb-3 space-y-0.5 ml-1 mt-1">
                     {services.map((s) => (
                       <Link key={s.href} href={s.href} className="flex items-center justify-between py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
-                        <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{s.name}</span>
+                        <span className="text-sm text-white group-hover:text-white transition-colors">{s.name}</span>
                         {s.badge && <span className="text-xs bg-beast-pink/20 text-beast-pink border border-beast-pink/25 px-2 py-0.5 rounded-full font-semibold">{s.badge}</span>}
                       </Link>
                     ))}
@@ -307,7 +307,7 @@ export default function Nav() {
                     </div>
                     {localServices.map((s) => (
                       <Link key={s.href} href={s.href} className="flex items-center py-3 px-3 rounded-lg hover:bg-white/5 transition-colors group focus-visible:outline-2 focus-visible:outline-beast-pink">
-                        <span className="text-sm text-gray-400 group-hover:text-white transition-colors">{s.name}</span>
+                        <span className="text-sm text-white group-hover:text-white transition-colors">{s.name}</span>
                       </Link>
                     ))}
                   </div>
@@ -333,7 +333,7 @@ export default function Nav() {
                 <div className="pl-2 pb-3 space-y-0.5 ml-1 mt-1">
                   {aboutLinks.map((link) => (
                     <Link key={link.href} href={link.href} className="block py-3 px-3 rounded-lg hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink">
-                      <span className="text-sm text-gray-400 hover:text-white transition-colors">{link.name}</span>
+                      <span className="text-sm text-white hover:text-white transition-colors">{link.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -350,7 +350,7 @@ export default function Nav() {
             <Link href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" className="btn-yellow w-full justify-center !py-4 !px-6 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
               See Where You Stand in AI Search
             </Link>
-            <a href="sms:+12103320567" className="block text-center text-sm text-gray-500 hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">(210) 332-0567 — text or call</a>
+            <a href="sms:+12103320567" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">(210) 332-0567 — text or call</a>
           </div>
         </div>
       </div>
