@@ -161,9 +161,13 @@ A four-role palette built for maximum contrast on dark surfaces. Two electric ac
 - **Label** (weight 600, 11px, tracking 0.12em, uppercase): Section eyebrows, overlines, metadata labels, form field labels. CSS class: `.section-eyebrow`.
 
 ### Named Rules
-**The Uppercase Mandate.** All display-level type (Display, Headline, Title) is uppercase. This is a system-level rule enforced via CSS `text-transform: uppercase` on `.text-display-*` classes. Never render a hero or section heading in sentence case or title case.
+**The Uppercase Rule — hero only.** Only the HERO headline is uppercase, via the `.text-display-hero` class (which applies `text-transform: uppercase`). Section headings and card titles render in **sentence case** as actually built across the live pages (see `/cpg`, `app/work/*`). Match the shipped pages, not an idealized mandate:
+- **Hero h1:** `text-display-hero font-display font-extrabold text-white max-w-4xl leading-tight` (uppercase), with the emphasis phrase in `text-beast-pink` (never yellow).
+- **Section h2:** `font-display text-4xl lg:text-5xl font-bold tracking-normal` — sentence case. `text-beast-black` on light, `text-white` on dark. Emphasis phrase in `text-beast-pink`.
+- **Card h3:** `font-display text-xl font-bold` (light cards, `text-beast-black`) or `text-lg font-bold text-white` (dark cards) — sentence case.
+- Do NOT use the `.text-display-section` / `.text-display-card` uppercase utility classes for section/card headings; the live pages do not. They are legacy.
 
-**The Stat Exception.** Stat Jumbo is the only display-level role that renders in Voltage Yellow (#FFFF00) on dark backgrounds. All other display-level type renders in white on dark, or Obsidian Stage on light.
+**The Stat Exception.** Stat Jumbo is the only display-level role that renders in Voltage Yellow (#FFFF00) on dark backgrounds. All other display-level type renders in white on dark, or Obsidian Stage on light. NOTE: the primary yellow stats bar uses **black** numbers on yellow (`StatCounter` with `valueClassName="text-beast-black"`), not yellow.
 
 ## 4. Elevation
 
@@ -250,7 +254,7 @@ The `.rc-wrap` hover interaction is a signature moment: a 1px gradient border th
 - **Do** use Electric Magenta (#FF1198) for interactive affordances exclusively: CTAs, hover states, focus rings, active nav, and data callouts. Reserve it — its rarity is the point.
 - **Do** express statistics with large Stat Jumbo type in Voltage Yellow, animated via StatCounter on scroll. Real numbers, prominent placement, early in the page.
 - **Do** apply the standard card shadow (`0px 5px 15px 0px rgba(0,0,0,0.3)`) to all image and video card wrappers on light sections. One shadow rule for the entire system.
-- **Do** force all display-level headings uppercase via `text-transform: uppercase`. The Uppercase Mandate is non-negotiable.
+- **Do** uppercase the HERO headline only (`.text-display-hero`). Render section h2s and card titles in sentence case (`font-display ... font-bold tracking-normal`), matching the live pages. See the Canonical Page Recipe at the bottom of this doc.
 - **Do** use the button hover color-swap: Magenta to Yellow on dark backgrounds, White to Magenta on light. The physical color change is a system rule.
 - **Do** put shadow wrappers on inner child elements when the outer element has a CSS float or pulse animation. Never `filter: drop-shadow()` on an animated parent.
 - **Do** add `prefers-reduced-motion` guards around GSAP animations. The globals.css already has a catch-all `@media (prefers-reduced-motion: reduce)` block — keep all new animations covered by it.
@@ -262,8 +266,67 @@ The `.rc-wrap` hover interaction is a signature moment: a 1px gradient border th
 - **Don't** use Voltage Yellow as body text, heading text, or decorative color. It is a data and hover-state color only.
 - **Don't** use glassmorphism — blurred, frosted, or translucent cards used decoratively. One specific instance exists (nav backdrop-blur); it should not be extended.
 - **Don't** build anything that looks like a generic agency template, a pastel soft-sell site, a WordPress layout with stock imagery, or a SaaS marketing page. These are the primary anti-references from PRODUCT.md and the hardest prohibition in the system.
-- **Don't** use the hero-metric template (big number, small label, supporting stats, gradient accent in a card). Stats appear in dedicated yellow bars and as full-bleed text moments — never in SaaS-style metric cards.
+- **Don't** invent new stat treatments. The hero's primary stats go in the **yellow `StatCounter` bar** (black numbers, 2/4-col grid — see recipe). Secondary stats inside a case-study section use small **white stat cards** (`bg-white rounded-2xl p-6 border border-gray-100 text-center`, `font-display text-3xl font-extrabold text-beast-black` value + pink uppercase label + `text-gray-400` sub), exactly as on `/cpg`. Don't use gradient-accent SaaS metric dashboards.
 - **Don't** add an em dash (—) in any copy, headings, or UI text. Use commas, colons, semicolons, or periods.
 - **Don't** render a Unicode checkmark (✓) as text or a span. Use the inline SVG path `M5 13l4 4L19 7` with `strokeWidth={2.5}` and `aria-hidden="true"`.
 - **Don't** add new top-level color accents without strong justification. The four-color palette (Magenta, Yellow, Green, Neutrals) is the complete system. Signal Green is logo and success only.
 - **Don't** use cookie-cutter SaaS landing page patterns — identical card grids with icon + heading + text repeated endlessly, hero-metric dashboards, or floating blob shapes.
+
+## 7. Canonical Page Recipe (match these exactly)
+
+**Reference implementation: `app/cpg/page.tsx`.** It is the ground-truth template for every marketing/service page. When building a new page, copy these patterns verbatim — do not reinterpret. The case-study pages live in `app/work/*`. Build from the shipped pages, never from an idealized reading of the prose above.
+
+Section spacing is `py-16 lg:py-24`. Container is `max-w-7xl mx-auto px-6 lg:px-20` (`max-w-3xl` for FAQ / narrative). Alternate dark and light sections for rhythm. Wrap every section's content in `<AnimatedSection>`.
+
+**Hero (dark):**
+```jsx
+<section className="relative min-h-[90vh] flex items-center bg-beast-black overflow-hidden">
+  <div className="relative max-w-7xl mx-auto px-6 lg:px-20 pt-28 pb-24 lg:pt-40 lg:pb-32 w-full">
+    <p className="section-eyebrow text-beast-pink mb-6">Eyebrow · Context</p>
+    <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
+      Plain Statement. <span className="text-beast-pink">Emphasis Phrase.</span>
+    </h1>
+    <p className="text-body-lead text-gray-300 max-w-2xl mb-10">Lead paragraph.</p>
+    <IconButton href="...">Primary CTA</IconButton>
+  </div>
+</section>
+```
+
+**Yellow stats bar (right after hero):** big BLACK animated numbers, never checkmark proof rows.
+```jsx
+<section className="bg-beast-yellow py-12 lg:py-16">
+  <div className="max-w-7xl mx-auto px-6 lg:px-20">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <StatCounter value={36581} label="Label" sublabel="Sub" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
+      {/* prefix / suffix / decimals props for "$0", "90+", "9.5%", "11.6x" */}
+    </div>
+  </div>
+</section>
+```
+
+**Light feature section** (`bg-[#F5F5F5]` or `bg-section-offwhite`): centered header + standard white cards. NOT bordered "ledger" grids.
+```jsx
+<AnimatedSection className="text-center mb-12">
+  <p className="section-eyebrow text-beast-pink mb-4">Eyebrow</p>
+  <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal">Sentence Case Heading.</h2>
+</AnimatedSection>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="bg-white rounded-2xl p-8 border border-gray-100 flex gap-5 h-full">
+    <span className="font-mono text-beast-pink font-bold text-sm shrink-0 mt-1">01</span>
+    <div>
+      <h3 className="font-display text-xl font-bold text-beast-black mb-2">Card Title</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">Body.</p>
+    </div>
+  </div>
+</div>
+```
+
+**Dark feature/services section** (`bg-beast-black`): white h2; dark cards `bg-dark-surface border border-dark-border hover:border-beast-pink/30 transition-colors`, `h3 font-display text-lg font-bold text-white`, `p text-sm text-gray-400`. Narrative blocks: `max-w-3xl`, lead `text-gray-300 text-lg`, secondary `text-gray-400`.
+
+**FAQ:** `max-w-3xl`, centered header, then `<div className="bg-white rounded-2xl border border-gray-100 px-6"><FaqAccordion faqs={faqs} /></div>`. Always include `faqSchema`.
+
+**CTA (dark):** `bg-near-black py-16 lg:py-24 text-center`, eyebrow + white sentence-case h2 + `text-gray-400` lead + IconButton.
+
+**Bottom:** `<Marquee items={[...]} />` of short credibility phrases.
+
+**Text-color tokens in practice:** dark-bg lead `text-gray-300`, dark-bg muted `text-gray-400`; light-bg body `text-gray-600`, light-bg muted `text-gray-500`. Blockquotes: `rounded-xl border border-beast-pink/20 bg-beast-pink/5 p-6` (full border, never a side stripe).
