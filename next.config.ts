@@ -259,6 +259,51 @@ const redirects = [
   { source: "/marketing-agency-quality-control-maintaining-standards-across-all-clients/",           destination: "/blog", permanent: true },
   { source: "/marketing-agency-communication-systems-managing-client-expectations",                  destination: "/blog", permanent: true },
   { source: "/marketing-agency-communication-systems-managing-client-expectations/",                 destination: "/blog", permanent: true },
+
+  // ── GSC crawl cleanup (Jun 2026) — old WP posts still being crawled ───────────
+  // Posts that exist on the new site → map to the real /blog post
+  { source: "/cpg-manufacturing-excellence-ensuring-quality-and-consistency-at-scale",   destination: "/blog/cpg-manufacturing-excellence-ensuring-quality-and-consistency-at-scale", permanent: true },
+  { source: "/cpg-manufacturing-excellence-ensuring-quality-and-consistency-at-scale/",  destination: "/blog/cpg-manufacturing-excellence-ensuring-quality-and-consistency-at-scale", permanent: true },
+  { source: "/cpg-test-marketing-validating-products-before-national-rollout",           destination: "/blog/cpg-test-marketing-validating-products-before-national-rollout", permanent: true },
+  { source: "/cpg-test-marketing-validating-products-before-national-rollout/",          destination: "/blog/cpg-test-marketing-validating-products-before-national-rollout", permanent: true },
+
+  // Old landing page → CPG hub
+  { source: "/strategic-cpg-consumer-packaged-goods-marketing",                          destination: "/cpg", permanent: true },
+  { source: "/strategic-cpg-consumer-packaged-goods-marketing/",                         destination: "/cpg", permanent: true },
+
+  // Dead WP blog posts (never migrated) → blog index
+  { source: "/pet-care-cpg-products-capturing-growth-in-the-expanding-pet-industry",     destination: "/blog", permanent: true },
+  { source: "/pet-care-cpg-products-capturing-growth-in-the-expanding-pet-industry/",    destination: "/blog", permanent: true },
+  { source: "/cpg-consumer-behavior-analysis-understanding-purchase-decision-drivers",   destination: "/blog", permanent: true },
+  { source: "/cpg-consumer-behavior-analysis-understanding-purchase-decision-drivers/",  destination: "/blog", permanent: true },
+  { source: "/over-the-counter-pharmaceuticals-navigating-the-cpg-healthcare-market",    destination: "/blog", permanent: true },
+  { source: "/over-the-counter-pharmaceuticals-navigating-the-cpg-healthcare-market/",   destination: "/blog", permanent: true },
+  { source: "/cpg-brand-positioning-how-to-differentiate-in-crowded-markets",            destination: "/blog", permanent: true },
+  { source: "/cpg-brand-positioning-how-to-differentiate-in-crowded-markets/",           destination: "/blog", permanent: true },
+  { source: "/consumer-packaged-goods-guide-complete-industry-overview-for-brands-retailers-and-investors",  destination: "/blog", permanent: true },
+  { source: "/consumer-packaged-goods-guide-complete-industry-overview-for-brands-retailers-and-investors/", destination: "/blog", permanent: true },
+  { source: "/cpg-distribution-channels-choosing-between-retail-dtc-and-hybrid-models",  destination: "/blog", permanent: true },
+  { source: "/cpg-distribution-channels-choosing-between-retail-dtc-and-hybrid-models/", destination: "/blog", permanent: true },
+  { source: "/household-cleaning-products-cpg-strategies-for-essential-home-goods",      destination: "/blog", permanent: true },
+  { source: "/household-cleaning-products-cpg-strategies-for-essential-home-goods/",     destination: "/blog", permanent: true },
+  { source: "/cpg-quality-control-maintaining-standards-and-consumer-safety",            destination: "/blog", permanent: true },
+  { source: "/cpg-quality-control-maintaining-standards-and-consumer-safety/",           destination: "/blog", permanent: true },
+  { source: "/cpg-co-packing-vs-in-house-production-making-the-right-choice",            destination: "/blog", permanent: true },
+  { source: "/cpg-co-packing-vs-in-house-production-making-the-right-choice/",           destination: "/blog", permanent: true },
+  { source: "/health-and-wellness-cpg-trends-capitalizing-on-clean-label-movement",     destination: "/blog", permanent: true },
+  { source: "/health-and-wellness-cpg-trends-capitalizing-on-clean-label-movement/",    destination: "/blog", permanent: true },
+  { source: "/cpg-regulatory-compliance-navigating-fda-epa-and-industry-requirements",  destination: "/blog", permanent: true },
+  { source: "/cpg-regulatory-compliance-navigating-fda-epa-and-industry-requirements/", destination: "/blog", permanent: true },
+  { source: "/cpg-ingredient-sourcing-building-reliable-supply-networks",               destination: "/blog", permanent: true },
+  { source: "/cpg-ingredient-sourcing-building-reliable-supply-networks/",              destination: "/blog", permanent: true },
+  { source: "/cpg-sales-forecasting-predicting-demand-and-managing-inventory",          destination: "/blog", permanent: true },
+  { source: "/cpg-sales-forecasting-predicting-demand-and-managing-inventory/",         destination: "/blog", permanent: true },
+  { source: "/cpg-product-launch-strategy-ensuring-successful-market-introductions",    destination: "/blog", permanent: true },
+  { source: "/cpg-product-launch-strategy-ensuring-successful-market-introductions/",   destination: "/blog", permanent: true },
+  { source: "/cpg-market-research-methods-understanding-your-target-consumer",          destination: "/blog", permanent: true },
+  { source: "/cpg-market-research-methods-understanding-your-target-consumer/",         destination: "/blog", permanent: true },
+  { source: "/cpg-data-analytics-using-insights-to-drive-business-decisions",           destination: "/blog", permanent: true },
+  { source: "/cpg-data-analytics-using-insights-to-drive-business-decisions/",          destination: "/blog", permanent: true },
 ];
 
 const nextConfig: NextConfig = {
