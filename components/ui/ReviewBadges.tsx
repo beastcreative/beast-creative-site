@@ -31,7 +31,7 @@ interface ReviewBadge {
 
 interface ReviewBadgesProps {
   variant?: Variant;
-  eyebrow?: string;
+  heading?: string;
   badges?: ReviewBadge[];
 }
 
@@ -197,7 +197,7 @@ function Badge({ badge }: { badge: ReviewBadge }) {
 
 export default function ReviewBadges({
   variant = "light",
-  eyebrow = "Reviewed & Recognized",
+  heading = "Reviewed & Recognized.",
   badges = DEFAULT_BADGES,
 }: ReviewBadgesProps) {
   const isDark = variant === "dark";
@@ -206,9 +206,25 @@ export default function ReviewBadges({
     <section className={`${isDark ? "bg-beast-black" : "bg-section-offwhite"} py-14 lg:py-16`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <AnimatedSection>
-          <p className="section-eyebrow mb-8 text-center text-beast-pink">
-            {eyebrow}
-          </p>
+          <div className="mb-10 text-center lg:mb-12">
+            <span
+              className="mb-3 inline-flex items-center justify-center gap-1"
+              aria-hidden="true"
+            >
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg key={i} viewBox="0 0 20 20" className="h-4 w-4 fill-[#FFB400]">
+                  <path d="M10 1.5l2.47 5.36 5.88.62-4.4 3.95 1.23 5.78L10 14.9l-5.18 2.81 1.23-5.78-4.4-3.95 5.88-.62L10 1.5z" />
+                </svg>
+              ))}
+            </span>
+            <h2
+              className={`font-display text-4xl font-bold tracking-normal lg:text-5xl ${
+                isDark ? "text-white" : "text-beast-black"
+              }`}
+            >
+              {heading}
+            </h2>
+          </div>
         </AnimatedSection>
 
         <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-5">
