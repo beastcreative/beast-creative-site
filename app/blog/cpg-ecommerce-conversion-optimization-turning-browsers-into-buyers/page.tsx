@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Ecommerce Conversion Optimization: Turning Browsers Into Buyers | Beast Creative Agency",
+  title: "CPG Ecommerce Conversion Optimization: Turning Browsers Into Buyers",
   description:
     "A staggering 97% of CPG ecommerce visitors leave without making a purchase, yet the most successful brands consistently convert 3-5x more browsers than their",
 };

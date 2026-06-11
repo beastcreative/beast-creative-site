@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Shipping and Fulfillment Marketing for CPG Brands: Making Logistics a Competitive Advantage | Beast Creative Agency",
+  title: "Shipping and Fulfillment Marketing for CPG Brands: Making Logistics a Competitive Advantage",
   description:
     "While most CPG brands obsess over product development and advertising spend, the smartest companies are discovering their secret weapon hiding in plain sight:",
 };

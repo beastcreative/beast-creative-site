@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "AI Content Production for CPG Brands | Beast Creative Agency",
+  title: "AI Content Production for CPG Brands",
   description:
     "How CPG brands can create 30x more content without 30x the budget using AI-powered content pipelines. Includes Beast&apos;s approach to AI-native content production.",
 };

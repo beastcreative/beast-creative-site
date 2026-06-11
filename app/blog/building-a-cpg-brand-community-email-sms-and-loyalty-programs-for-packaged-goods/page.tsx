@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Building a CPG Brand Community: Email, SMS, and Loyalty Programs for Packaged Goods | Beast Creative Agency",
+  title: "Building a CPG Brand Community: Email, SMS, and Loyalty Programs for Packaged Goods",
   description:
     "CPG brands that rely solely on retail partnerships are missing 73% of potential customer lifetime value, according to recent industry data. The key difference? Direct-to-consumer relationship building through strategic email, SMS, and loyalty programs.",
 };

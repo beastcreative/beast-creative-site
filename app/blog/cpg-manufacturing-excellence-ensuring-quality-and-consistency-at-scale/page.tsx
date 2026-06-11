@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Manufacturing Excellence: Ensuring Quality and Consistency at Scale | Beast Creative Agency",
+  title: "CPG Manufacturing Excellence: Ensuring Quality and Consistency at Scale",
   description:
     "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls – a staggering figure that underscores why excellence in manufacturing",
 };

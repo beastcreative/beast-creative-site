@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Social Media Marketing for CPG Brands: Platform Strategies That Drive Sales | Beast Creative Agency",
+  title: "Social Media Marketing for CPG Brands: Platform Strategies That Drive Sales",
   description:
     "CPG brands face a unique challenge: selling products that consumers often buy on autopilot through platforms designed for engagement and discovery. While a",
 };

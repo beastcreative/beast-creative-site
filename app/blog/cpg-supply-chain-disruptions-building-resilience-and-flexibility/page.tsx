@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Supply Chain Disruptions: Building Resilience and Flexibility | Beast Creative Agency",
+  title: "CPG Supply Chain Disruptions: Building Resilience and Flexibility",
   description:
     "Recent data reveals that 73% of CPG companies experienced at least one major supply chain disruption in the past two years, with recovery times averaging 3-6",
 };

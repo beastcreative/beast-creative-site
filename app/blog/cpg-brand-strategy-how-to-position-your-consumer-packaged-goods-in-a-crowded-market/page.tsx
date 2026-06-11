@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Brand Strategy: How to Position Your Consumer Packaged Goods in a Crowded Market | Beast Creative Agency",
+  title: "CPG Brand Strategy: How to Position Your Consumer Packaged Goods in a Crowded Market",
   description:
     "Over 30,000 new consumer packaged goods hit store shelves every year, yet 95% fail within their first 12 months. The difference between brands that break through and those that blend into the background isn&apos;t luck—it&apos;s strategic positioning.",
 };

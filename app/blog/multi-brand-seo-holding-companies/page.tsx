@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Multi-Brand SEO for Holding Companies | Beast Creative Agency",
+  title: "Multi-Brand SEO for Holding Companies",
   description:
     "If you manage 3+ consumer brands on separate domains, you&apos;re likely cannibalizing your own search rankings. Here&apos;s the domain architecture that fixes it.",
 };

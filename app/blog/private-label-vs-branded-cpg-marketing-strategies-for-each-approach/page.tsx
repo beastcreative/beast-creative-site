@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Private Label vs. Branded CPG: Marketing Strategies for Each Approach | Beast Creative Agency",
+  title: "Private Label vs. Branded CPG: Marketing Strategies for Each Approach",
   description:
     "Consumer packaged goods revenue reached $2.2 trillion globally in 2023, yet most CPG companies struggle with one fundamental decision: should they build their own brand or create private label products?",
 };

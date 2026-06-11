@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Valuation Methods: Understanding What Drives Company Worth | Beast Creative Agency",
+  title: "CPG Valuation Methods: Understanding What Drives Company Worth",
   description:
     "Consumer packaged goods companies command valuations ranging from 1x to 15x revenue, yet most business owners can&apos;t explain why this massive gap exists. The",
 };

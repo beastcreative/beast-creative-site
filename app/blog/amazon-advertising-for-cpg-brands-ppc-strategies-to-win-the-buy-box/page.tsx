@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Amazon Advertising for CPG Brands: PPC Strategies to Win the Buy Box | Beast Creative Agency",
+  title: "Amazon Advertising for CPG Brands: PPC Strategies to Win the Buy Box",
   description:
     "The Buy Box drives 82% of Amazon sales. Learn how CPG brands can use Sponsored Products, Sponsored Brands, and strategic PPC to win and maintain it.",
 };

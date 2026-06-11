@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "What Is AEO (Answer Engine Optimization)? | Beast Creative Agency",
+  title: "What Is AEO (Answer Engine Optimization)?",
   description:
     "AEO is the practice of structuring content to be cited by AI answer engines like ChatGPT, Gemini, and Perplexity. Learn what it is, how it works, and how to do it.",
 };

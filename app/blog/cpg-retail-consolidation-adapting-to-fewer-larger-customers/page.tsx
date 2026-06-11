@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Retail Consolidation: Adapting to Fewer, Larger Customers | Beast Creative Agency",
+  title: "CPG Retail Consolidation: Adapting to Fewer, Larger Customers",
   description:
     "The retail landscape has shifted dramatically: Walmart now controls 24% of US grocery sales, while the top ten retailers command over 60% of total market",
 };

@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Retail Media Networks for CPG: Walmart Connect, Target Roundel, and Instacart Ads | Beast Creative Agency",
+  title: "Retail Media Networks for CPG: Walmart Connect, Target Roundel, and Instacart Ads",
   description:
     "A practical guide to advertising on Walmart Connect, Target Roundel, and Instacart Ads — including platform comparisons, budget allocation, and ROAS benchmarks for CPG brands.",
 };

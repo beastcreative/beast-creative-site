@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "User-Generated Content for CPG: Turning Customers Into Brand Advocates | Beast Creative Agency",
+  title: "User-Generated Content for CPG: Turning Customers Into Brand Advocates",
   description:
     "92% of consumers trust UGC over traditional advertising. Learn how CPG brands build proactive UGC programs — from campaign types and incentive structures to platform strategy and legal compliance.",
 };

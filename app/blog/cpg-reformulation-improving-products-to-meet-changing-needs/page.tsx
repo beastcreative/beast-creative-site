@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Reformulation: Improving Products to Meet Changing Needs | Beast Creative Agency",
+  title: "CPG Reformulation: Improving Products to Meet Changing Needs",
   description:
     "Over 85% of CPG brands will reformulate at least one product in the next 18 months, driven by everything from supply chain disruptions to evolving consumer",
 };

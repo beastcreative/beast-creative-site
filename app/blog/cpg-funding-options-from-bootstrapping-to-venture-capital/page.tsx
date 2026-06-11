@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Funding Options: From Bootstrapping to Venture Capital | Beast Creative Agency",
+  title: "CPG Funding Options: From Bootstrapping to Venture Capital",
   description:
     "Nearly 90% of consumer packaged goods startups exhaust their initial capital within the first two years, yet the survivors who master funding diversification",
 };

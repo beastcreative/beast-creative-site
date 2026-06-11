@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "CPG Working Capital Management: Optimizing Cash Flow | Beast Creative Agency",
+  title: "CPG Working Capital Management: Optimizing Cash Flow",
   description:
     "Consumer packaged goods companies burn through $1.2 trillion in working capital annually, yet most don&apos;t realize they&apos;re sitting on a goldmine of untapped",
 };

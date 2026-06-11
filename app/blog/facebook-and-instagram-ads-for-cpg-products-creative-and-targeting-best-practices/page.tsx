@@ -6,7 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "Facebook and Instagram Ads for CPG Products: Creative and Targeting Best Practices | Beast Creative Agency",
+  title: "Facebook and Instagram Ads for CPG Products: Creative and Targeting Best Practices",
   description:
     "Learn how to build Facebook and Instagram campaigns that convert CPG consumers — from video hooks and UGC strategies to advanced targeting and seasonal campaign optimization.",
 };
