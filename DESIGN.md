@@ -244,6 +244,25 @@ Floating pill nav, fixed position, dark background with backdrop blur.
 ### Section Eyebrow
 A recurring micro-pattern: uppercase label in Electric Magenta, 11px, weight 600, tracking 0.12em. Used as a `<p class="section-eyebrow">` above every major section heading. Not a heading element — a signpost.
 
+### Section Header (canonical section intro)
+The reusable way to introduce any section: a small **accent** above a bold `font-display` **title**. Component: `components/ui/SectionHeader.tsx`. Use it instead of hand-rolling eyebrow + `<h2>` per section, so intros stay consistent site-wide.
+
+- **Accent (above the title) — pick one:**
+  - `eyebrow="..."` → the classic Section Eyebrow (uppercase Electric Magenta signpost).
+  - `accent="stars"` → a row of five small Voltage-gold stars (`#FFB400`, `h-4`), the trust/social-proof variant. Introduced 2026-06-11 on the homepage "Reviewed & Recognized." review strip.
+- **Title:** `font-display`, `text-4xl lg:text-5xl` (override via `titleClassName`), `font-bold tracking-normal`. Sentence case — never uppercase (hero is the only uppercase headline). Dark text on light sections, white on dark (`variant="dark"`).
+- **`highlight="word"`** renders that substring of the title in Electric Magenta — the same single-accent-word move as the hero. Use at most one highlight per title.
+- **`subtitle`** optional supporting line (`text-body-lead`, Ash on dark / gray-600 on light).
+- **`align`** `"left"` (default, matches existing section intros) or `"center"` (used by the review strip).
+- Wrap in `<AnimatedSection>` like every other section intro; pass outer spacing via `className` (e.g. `mb-10 lg:mb-12`).
+
+Examples:
+```tsx
+<SectionHeader eyebrow="Who We Are" title="Beast Creative." />
+<SectionHeader accent="stars" title="Reviewed & Recognized." align="center" />
+```
+Retrofit existing section intros onto this component gradually — match the rendered output, don't restyle in place.
+
 ### Signature: Related Case Study Cards
 The `.rc-wrap` hover interaction is a signature moment: a 1px gradient border that rotates around the card via a conic-gradient centered on the mouse cursor's current position (`--x`, `--y` CSS variables updated by JS `mousemove`). The inner card lifts with a drop shadow. A glow appears at the top of the card. The title shifts 3px to the right and turns Magenta. A badge animates in from scale(0.8). The arrow button grows and gains a Magenta focus ring. All transitions use `cubic-bezier(0.16, 1, 0.3, 1)` — fast in, slow out.
 
