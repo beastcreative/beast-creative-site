@@ -9,6 +9,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import ClientListSection from "@/components/ui/ClientListSection";
 import IconButton from "@/components/ui/IconButton";
 import InstantContact from "@/components/ui/InstantContact";
+import ReviewBadges from "@/components/ui/ReviewBadges";
 
 export const metadata: Metadata = {
   title: "San Antonio SEO & AEO Agency | Beast Creative",
@@ -203,6 +204,8 @@ export default function HomePage() {
       </section>
 
       <ClientListSection />
+
+      <ReviewBadges />
 
       {/* INTRO COPY */}
       <section className="bg-section-offwhite py-16 lg:py-24">
