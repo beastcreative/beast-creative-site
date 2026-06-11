@@ -10,6 +10,38 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "consumer-packaged-goods-guide-complete-industry-overview-for-brands-retailers-and-investors",
+    title: "Consumer Packaged Goods (CPG): A Complete Industry Overview for Brands, Retailers & Investors",
+    excerpt: "CPG is a $2T+ industry with its own rules. This complete guide breaks down the categories, channels, economics, and growth levers for brands, retailers, and investors.",
+    category: "CPG Marketing",
+    date: "June 10, 2026",
+    readTime: "12 min read",
+  },
+  {
+    slug: "cpg-brand-positioning-how-to-differentiate-in-crowded-markets",
+    title: "CPG Brand Positioning: How to Differentiate in Crowded Markets",
+    excerpt: "On a crowded shelf, a me-too product is invisible. Here's the framework for finding a defensible point of difference — and turning it into packaging, copy, and retail story.",
+    category: "CPG Marketing",
+    date: "June 8, 2026",
+    readTime: "9 min read",
+  },
+  {
+    slug: "cpg-distribution-channels-choosing-between-retail-dtc-and-hybrid-models",
+    title: "CPG Distribution Channels: Choosing Between Retail, DTC, and Hybrid Models",
+    excerpt: "Retail, DTC, or both? Your channel mix decides your margins, your data, and your growth ceiling. Here's how to choose the right model for your brand's stage.",
+    category: "CPG Marketing",
+    date: "June 5, 2026",
+    readTime: "10 min read",
+  },
+  {
+    slug: "cpg-market-research-methods-understanding-your-target-consumer",
+    title: "CPG Market Research Methods: Understanding Your Target Consumer",
+    excerpt: "Every CPG decision rests on understanding your buyer. Here are the qualitative and quantitative research methods that actually predict what shoppers will do.",
+    category: "CPG Marketing",
+    date: "June 3, 2026",
+    readTime: "9 min read",
+  },
+  {
     slug: "what-is-aeo-answer-engine-optimization",
     title: "What Is AEO? How to Make Your Brand Appear in ChatGPT, Gemini, and Perplexity",
     excerpt: "AI search tools are answering 30%+ of queries that used to go to Google. Here's how to structure your content to get cited — not just ranked.",
