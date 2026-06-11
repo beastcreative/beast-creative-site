@@ -8,11 +8,11 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
  * `DEFAULT_BADGES` (or pass a `badges` prop) to add / remove / reorder.
  *
  * Logos (2026-06-11):
- *  - Google + Trustpilot use the real official marks (inline SVG).
- *  - DesignRush + Clutch use clean wordmark renditions because their official
- *    logo files aren't on public CDNs. To use the exact official logo, drop the
- *    file in public/assets/badges/<name>.(svg|png) and set `image` on that
- *    badge below — the chip auto-renders the image instead of the wordmark.
+ *  - Google + Trustpilot: real official marks (inline SVG).
+ *  - DesignRush: official flame mark (public/assets/badges/designrush.png) + wordmark.
+ *  - Clutch: clean wordmark rendition — no public logo file yet. To use the
+ *    official logo, drop it in public/assets/badges/clutch.(svg|png) and set
+ *    `image` on the Clutch badge below (overrides the inline wordmark).
  */
 
 type Variant = "light" | "dark";
@@ -97,8 +97,17 @@ function TrustpilotLogo() {
 
 function DesignRushLogo() {
   return (
-    <span className="font-display text-[17px] font-bold tracking-tight text-beast-black">
-      DesignRush
+    <span className="flex items-center gap-1.5">
+      {/* Official DesignRush flame mark (their app icon). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/badges/designrush.png"
+        alt=""
+        className="h-[22px] w-[22px] rounded-[5px]"
+      />
+      <span className="font-display text-[17px] font-bold tracking-tight text-beast-black">
+        DesignRush
+      </span>
     </span>
   );
 }
