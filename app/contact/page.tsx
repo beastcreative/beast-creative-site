@@ -3,6 +3,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/forms/ContactForm";
 import IconButton from "@/components/ui/IconButton";
 import InstantContact from "@/components/ui/InstantContact";
+import ReviewBadges from "@/components/ui/ReviewBadges";
 
 export const metadata: Metadata = {
   title: "Contact Beast Creative Agency | San Antonio SEO & AEO",
@@ -51,6 +52,8 @@ export default function ContactPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      <ReviewBadges variant="dark" />
 
       {/* CONTACT GRID */}
       <section className="bg-beast-black py-12 lg:py-20">

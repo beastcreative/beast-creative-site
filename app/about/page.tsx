@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
+import ReviewBadges from "@/components/ui/ReviewBadges";
 
 export const metadata: Metadata = {
   title: "About Beast Creative Agency | San Antonio SEO & AEO",
@@ -42,6 +43,8 @@ export default function AboutPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      <ReviewBadges />
 
       {/* OUR STORY */}
       <section className="bg-section-offwhite py-16 lg:py-24">
