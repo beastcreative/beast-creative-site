@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import CpgLeadForm from "@/components/forms/CpgLeadForm";
 import IconButton from "@/components/ui/IconButton";
 import Marquee from "@/components/ui/Marquee";
+import ReviewBadges from "@/components/ui/ReviewBadges";
 import { faqSchema } from "@/lib/schema";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
@@ -137,6 +138,8 @@ export default function CpgPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      <ReviewBadges />
 
       {/* CPG STATS BAR */}
       <section className="bg-beast-yellow py-12 lg:py-16">
