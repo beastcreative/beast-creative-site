@@ -198,11 +198,14 @@
   .spec-grid{display:grid; grid-template-columns:340px 1fr; gap:18px; margin:24px 0; align-items:stretch;}
   .spec-grid .media{width:100%; max-width:360px;}
   @media(max-width:660px){.spec-grid{grid-template-columns:1fr; justify-items:center;}}
-  /* scrollable site-mockup window (keeps page short) */
-  .mockup-wrap{max-width:480px; margin:24px auto 0;}
-  .mockup-scroll{height:520px; overflow-y:auto; border-radius:14px; border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow-img); -webkit-overflow-scrolling:touch; background:#000;}
+  /* spec card + scrollable site-mockup, side by side */
+  .spec-layout{display:grid; grid-template-columns:1fr 400px; gap:22px; align-items:stretch; margin:24px 0;}
+  .spec-layout .spec{margin:0; height:100%;}
+  .mockup-wrap{display:flex; flex-direction:column; min-width:0;}
+  .mockup-scroll{flex:1; min-height:460px; overflow-y:auto; border-radius:14px; border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow-img); -webkit-overflow-scrolling:touch; background:#000;}
   .mockup-scroll img{display:block; width:100%;}
   .mockup-cap{font-family:var(--disp); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:12px; color:#cfcfcf; text-align:center; margin-top:10px;}
+  @media(max-width:820px){.spec-layout{grid-template-columns:1fr;} .mockup-scroll{height:520px; flex:none;} .mockup-wrap{max-width:480px; margin:0 auto;}}
 
   /* PRICING */
   .tiers{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:26px 0;}
@@ -565,6 +568,7 @@
   <div class="inner">
     <span class="num">07 · Spec Concept</span>
     <h3 class="section-title">A taste of the creative: "Lime, Anytime"</h3>
+    <div class="spec-layout">
     <div class="spec">
       <div class="pn">Flagship Launch · Limón Listo</div>
       <h4>Limón Listo: real lime flavor, ready anytime</h4>
@@ -577,6 +581,7 @@
         <img src="/proposals/megafoods/assets/site-mockup.jpg" alt="Structural mockup of the mega-foods.com landing experience">
       </div>
       <p class="mockup-cap">Structural mockup · mega-foods.com — scroll to explore the full page</p>
+    </div>
     </div>
   </div>
 </section>
