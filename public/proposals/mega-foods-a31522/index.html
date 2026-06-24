@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<!--
+  Beast Creative · Mega Foods Growth Proposal — confidential, unlisted.
+  Media slots awaiting assets are marked with a "swap-in: assets/<file>" comment.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Proposal · Mega Foods × Beast Creative</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A; --surface:#141414; --surface2:#1A1A1A; --line:#2A2A2A;
+    --magenta:#FF1198; --magenta-deep:#C70E78; --magenta-soft:rgba(255,17,152,.12);
+    --yellow:#FFE500; --yellow-soft:rgba(255,229,0,.12);
+    --white:#FFFFFF; --muted:#B3B3B3; --muted2:#7A7A7A;
+    --green:#34D17F; --red:#FF4D4D; --orange:#FF8A3D; --amber:#FFC247;
+    --disp:'Barlow Condensed',Impact,sans-serif; --body:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--white); font-family:var(--body);
+    line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px 90px;}
+  a{color:var(--magenta);}
+  p{margin:0 0 16px; color:var(--muted);}
+  strong{color:var(--white); font-weight:600;}
+  em{color:var(--white); font-style:italic;}
+
+  /* DISPLAY TYPE */
+  h1,h2,h3,h4{font-family:var(--disp); font-weight:700; letter-spacing:.01em; line-height:1.04; margin:0; color:#fff; text-transform:uppercase;}
+  .num{font-family:var(--disp); color:var(--magenta); font-weight:700; font-size:15px; letter-spacing:.14em; text-transform:uppercase;}
+  h3.section-title{font-size:40px; margin:6px 0 18px;}
+  h4.sub{font-size:22px; margin:26px 0 8px; color:#fff;}
+  .lead{font-size:20px; color:#e6e6e6; line-height:1.6;}
+  section{margin-top:64px;}
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; padding:80px 24px 64px; border-bottom:1px solid var(--line);
+    background:radial-gradient(1100px 520px at 78% -8%, rgba(255,17,152,.30), transparent 60%),
+               radial-gradient(760px 420px at 8% 120%, rgba(255,229,0,.10), transparent 60%),
+               #0A0A0A;}
+  .hero-inner{max-width:920px; margin:0 auto; position:relative; z-index:1;}
+  .brandbar{display:flex; align-items:center; gap:12px; margin-bottom:30px;}
+  .brandbar .logo{font-family:var(--disp); font-weight:800; font-size:22px; letter-spacing:.04em; color:#fff;}
+  .brandbar .logo b{color:var(--magenta);}
+  .brandbar .logo-img{height:34px; width:auto; display:block;}
+  .brandbar .x{color:var(--muted2); font-size:13px; letter-spacing:.2em; text-transform:uppercase;}
+  .kicker{display:inline-block; font-family:var(--body); font-size:11.5px; letter-spacing:.2em; text-transform:uppercase;
+    font-weight:700; color:var(--magenta); border:1px solid rgba(255,17,152,.45); padding:7px 15px; border-radius:999px; margin-bottom:24px;}
+  .hero h1{font-size:64px; font-weight:800; margin:0 0 16px; max-width:14ch;}
+  .hero h1 .hl{color:var(--magenta);}
+  .hero .sub{font-family:var(--body); font-weight:400; font-size:19px; color:#cfcfcf; max-width:60ch; margin:0 0 34px; line-height:1.6;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:30px; font-size:14px; color:var(--muted);
+    border-top:1px solid var(--line); padding-top:22px;}
+  .meta-row span{display:block; color:var(--magenta); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:5px; font-weight:700;}
+  .meta-row strong{display:block; color:#fff; font-weight:600;}
+
+  /* CALLOUTS */
+  .callout{border-radius:14px; padding:22px 26px; margin:24px 0; font-size:15.5px; border:1px solid var(--line); background:var(--surface);}
+  .callout .tag{font-family:var(--disp); font-weight:700; font-size:15px; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:8px;}
+  .callout.crit{background:rgba(255,77,77,.07); border-color:rgba(255,77,77,.4);}
+  .callout.crit .tag{color:var(--red);}
+  .callout.good{background:var(--magenta-soft); border-color:rgba(255,17,152,.4);}
+  .callout.good .tag{color:var(--magenta);}
+  .callout p:last-child{margin-bottom:0;}
+  .callout.crit p, .callout.good p{color:#dcdcdc;}
+
+  ul.clean{list-style:none; padding:0; margin:0 0 16px;}
+  ul.clean li{position:relative; padding:10px 0 10px 28px; border-bottom:1px solid var(--line); color:var(--muted);}
+  ul.clean li:last-child{border-bottom:none;}
+  ul.clean li::before{content:""; position:absolute; left:2px; top:18px; width:10px; height:10px; border-radius:2px; background:var(--magenta);}
+  ul.clean li strong{color:#fff;}
+
+  blockquote{margin:26px 0; padding:24px 28px; background:linear-gradient(120deg,var(--magenta-deep),var(--magenta)); color:#fff; border-radius:14px; font-size:19px; font-weight:500; font-family:var(--body); line-height:1.5;}
+  blockquote strong{color:#fff; text-decoration:underline; text-decoration-color:rgba(255,255,255,.5); text-underline-offset:3px;}
+
+  /* ASK VS NEED */
+  .compare{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0;}
+  .compare .col{border-radius:14px; padding:24px; border:1px solid var(--line);}
+  .compare .ask{background:var(--surface);}
+  .compare .need{background:linear-gradient(135deg,#1c0413,#2a0a1d); border-color:rgba(255,17,152,.5);}
+  .compare h5{font-family:var(--disp); margin:0 0 14px; font-size:17px; letter-spacing:.08em; text-transform:uppercase;}
+  .compare .ask h5{color:var(--muted2);}
+  .compare .need h5{color:var(--magenta);}
+  .compare ul{list-style:none; padding:0; margin:0; font-size:14.5px;}
+  .compare li{padding:7px 0 7px 24px; position:relative; color:var(--muted);}
+  .compare .ask li::before{content:"–"; position:absolute; left:4px; color:var(--muted2);}
+  .compare .need li{color:#eee;}
+  .compare .need li::before{content:"→"; position:absolute; left:0; color:var(--magenta); font-weight:700;}
+  @media(max-width:660px){.compare{grid-template-columns:1fr;}}
+
+  /* PILLARS */
+  .pillar{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px 26px; margin-bottom:14px;}
+  .pillar .pn{font-family:var(--disp); font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--magenta);}
+  .pillar h4{margin:4px 0 10px; font-size:24px; color:#fff;}
+  .pillar p{margin:0; font-size:15px; color:var(--muted);}
+  .pillar.flagship{border-color:rgba(255,17,152,.55); background:linear-gradient(135deg,#150310,#1c0714);}
+  .pillar.flagship .pn{color:var(--yellow);}
+
+  /* CREATOR ENGINE / FLOW */
+  .flow{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:22px 0;}
+  .flow .node{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px;}
+  .flow .node .step{font-family:var(--disp); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--magenta); font-weight:700;}
+  .flow .node h4{font-size:21px; margin:4px 0 8px;}
+  .flow .node p{font-size:13.5px; margin:0;}
+  @media(max-width:720px){.flow{grid-template-columns:1fr;}}
+
+  /* MEDIA PREVIEW FRAMES (swap for real assets when ready) */
+  .ph{position:relative; overflow:hidden; border:1px solid var(--line); border-radius:14px;
+    background:radial-gradient(120% 100% at 50% 0%, rgba(255,17,152,.10), transparent 60%), var(--surface);
+    padding:26px 22px; text-align:center; color:var(--muted); min-height:150px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  .ph::before{content:"Preview"; position:absolute; top:12px; left:50%; transform:translateX(-50%);
+    font-family:var(--disp); font-weight:700; font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--magenta); border:1px solid rgba(255,17,152,.45); padding:3px 11px; border-radius:999px;}
+  .ph .lbl{font-family:var(--disp); font-weight:700; font-size:17px; letter-spacing:.04em; text-transform:uppercase; color:#fff; display:block; margin:14px 0 8px;}
+  .ph .hint{font-size:12.5px; color:var(--muted); max-width:34ch; margin:0 auto; line-height:1.5;}
+  .ph .dim{font-size:11px; color:var(--muted2); margin-top:10px; letter-spacing:.04em;}
+  .ph.yellow{background:radial-gradient(120% 100% at 50% 0%, rgba(255,229,0,.08), transparent 60%), var(--surface);}
+  .ph.yellow::before{content:"Remixed"; color:var(--yellow); border-color:rgba(255,229,0,.45);}
+  .ph img, .ph video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:14px;}
+  .ph-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0;}
+  .ph-grid.two{grid-template-columns:repeat(2,1fr);}
+  .ph-grid .ph{min-height:230px;}
+  @media(max-width:720px){.ph-grid,.ph-grid.two{grid-template-columns:1fr;}}
+  .ph-cap{font-size:12.5px; color:var(--muted2); font-style:italic; margin:6px 0 0; text-align:center;}
+
+  /* DIFFERENTIATORS / PROOF */
+  .proof{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:24px 0;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 16px;}
+  .stat .v{font-family:var(--disp); font-size:38px; font-weight:800; color:var(--magenta); line-height:1;}
+  .stat .l{font-size:12px; color:var(--muted); margin-top:8px; line-height:1.4;}
+  @media(max-width:720px){.proof{grid-template-columns:repeat(2,1fr);}}
+
+  /* ROADMAP */
+  .phase{position:relative; padding:20px 24px 20px 70px; background:var(--surface); border:1px solid var(--line); border-radius:12px; margin-bottom:13px;}
+  .phase .pp{position:absolute; left:18px; top:20px; width:38px; height:38px; background:var(--magenta); color:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:800; font-size:18px;}
+  .phase h4{margin:0 0 4px; font-size:20px; color:#fff;}
+  .phase .when{font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--yellow); font-weight:700; font-family:var(--disp);}
+  .phase p{margin:6px 0 0; font-size:14.5px; color:var(--muted);}
+
+  /* SPEC */
+  .spec{background:linear-gradient(135deg,#150310,#23061a); border:1px solid rgba(255,17,152,.4); border-radius:18px; padding:32px 34px; margin:24px 0;}
+  .spec .pn{font-family:var(--disp); font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--yellow); font-weight:700;}
+  .spec h4{font-size:30px; color:#fff; margin:6px 0 10px;}
+  .spec p{color:#dcdcdc; font-size:15.5px;}
+  .spec .big{font-family:var(--disp); font-size:34px; font-weight:800; color:var(--magenta); margin:14px 0; line-height:1.1; text-transform:uppercase;}
+
+  /* PRICING */
+  .tiers{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:26px 0;}
+  .tier{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column;}
+  .tier.featured{border:2px solid var(--magenta); background:linear-gradient(135deg,#150310,#1b0714); position:relative; box-shadow:0 0 40px rgba(255,17,152,.18);}
+  .tier.featured::before{content:"RECOMMENDED"; position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--magenta); color:#fff; font-family:var(--disp); font-size:12px; font-weight:700; letter-spacing:.14em; padding:5px 16px; border-radius:999px;}
+  .tier h4{font-size:24px; color:#fff; margin:0 0 6px;}
+  .tier .desc{font-size:13px; color:var(--muted); min-height:62px; margin-bottom:14px; line-height:1.5;}
+  .tier .price{font-family:var(--disp); font-size:46px; font-weight:800; color:#fff; line-height:1;}
+  .tier.featured .price{color:var(--magenta);}
+  .tier .price small{display:block; font-family:var(--body); font-size:12px; font-weight:500; color:var(--muted2); letter-spacing:.02em; margin-top:6px;}
+  .tier ul{list-style:none; padding:18px 0 0; margin:16px 0 0; border-top:1px solid var(--line); font-size:13.5px; flex:1;}
+  .tier li{padding:6px 0 6px 24px; position:relative; color:#e2e2e2;}
+  .tier li::before{content:"✓"; position:absolute; left:0; color:var(--green); font-weight:700;}
+  .tier li.no{color:var(--muted2);}
+  .tier li.no::before{content:"—"; color:var(--muted2);}
+  @media(max-width:720px){.tiers{grid-template-columns:1fr;}}
+
+  /* DIVIDER */
+  .divider-label{display:flex; align-items:center; gap:16px; margin:72px 0 6px; font-family:var(--disp); font-weight:700; font-size:15px; letter-spacing:.18em; text-transform:uppercase; color:var(--yellow);}
+  .divider-label::before,.divider-label::after{content:""; flex:1; height:1px; background:var(--line);}
+
+  /* AUDIT */
+  .audit-intro{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--magenta); border-radius:12px; padding:22px 26px; margin:22px 0; font-size:15.5px; color:#dcdcdc;}
+  .audit-intro strong{color:var(--magenta);}
+  .site-block{margin:34px 0;}
+  .site-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:2px solid var(--magenta); padding-bottom:10px; margin-bottom:12px;}
+  .site-head h4{font-family:var(--disp); font-size:26px; color:#fff; margin:0; text-transform:none;}
+  .site-head .stack{font-size:12.5px; color:var(--muted2); font-weight:600;}
+  .scorecard{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px 0;}
+  .metric{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 12px; text-align:center;}
+  .metric .v{font-family:var(--disp); font-size:26px; font-weight:800; line-height:1.05;}
+  .metric .l{font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted2); margin-top:5px;}
+  .metric .g{font-size:10px; margin-top:4px; font-weight:700;}
+  .v.bad{color:var(--red);} .v.warn{color:var(--amber);} .v.ok{color:var(--green);}
+  .g.bad{color:var(--red);} .g.ok{color:var(--green);}
+  @media(max-width:640px){.scorecard{grid-template-columns:repeat(2,1fr);}}
+  /* lighthouse rings */
+  .psi-real{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;}
+  .psi-card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px;}
+  .psi-card .ff{font-family:var(--disp); font-weight:700; font-size:13px; color:#fff; margin:0 0 12px; text-transform:uppercase; letter-spacing:.07em;}
+  .rings{display:flex; gap:6px; justify-content:space-between; margin-bottom:12px;}
+  .ring{text-align:center; flex:1;}
+  .ring .circ{width:52px; height:52px; border-radius:50%; border:4px solid; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:800; font-size:18px; margin:0 auto 5px;}
+  .ring .lbl{font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted2); line-height:1.2;}
+  .sc-red{color:var(--red); border-color:var(--red);} .sc-orange{color:var(--orange); border-color:var(--orange);} .sc-green{color:var(--green); border-color:var(--green);}
+  .cwv{display:flex; gap:6px 12px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:9px; font-size:11px; color:var(--muted2);}
+  .cwv b{color:#fff; font-weight:600;}
+  .cwv .crit{color:var(--red); font-weight:700;}
+  .psi-cap{font-size:12px; color:var(--muted2); font-style:italic; margin:6px 0 0;}
+  @media(max-width:640px){.psi-real{grid-template-columns:1fr;}}
+  /* findings table */
+  .findings{width:100%; border-collapse:collapse; margin:14px 0; font-size:14px; background:var(--surface); border-radius:10px; overflow:hidden; border:1px solid var(--line);}
+  .findings th{background:#000; color:#fff; text-align:left; padding:11px 13px; font-family:var(--disp); font-size:12px; letter-spacing:.06em; text-transform:uppercase; font-weight:700;}
+  .findings td{padding:11px 13px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--muted);}
+  .findings tr:last-child td{border-bottom:none;}
+  .findings td.f{font-weight:600; color:#fff; white-space:nowrap; font-size:13px;}
+  .findings td.ev{color:#fff;}
+  .ev,code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; background:#000; color:var(--yellow); padding:1px 6px; border-radius:4px;}
+  .sev{display:inline-block; font-family:var(--disp); font-size:11px; font-weight:700; letter-spacing:.05em; padding:2px 9px; border-radius:999px; color:#fff; white-space:nowrap;}
+  .sev.crit{background:var(--red);} .sev.high{background:var(--orange);} .sev.med{background:var(--amber); color:#1a1a1a;} .sev.low{background:var(--magenta);}
+
+  /* DEV PUNCH LIST */
+  .legend{display:flex; gap:14px; flex-wrap:wrap; margin:14px 0 6px; font-size:12px; color:var(--muted);}
+  .pill{display:inline-block; font-family:var(--disp); font-size:11px; font-weight:700; letter-spacing:.05em; padding:2px 10px; border-radius:999px; color:#fff;}
+  .p0{background:var(--red);} .p1{background:var(--orange);} .p2{background:var(--magenta);}
+  .item{background:var(--surface); border:1px solid var(--line); border-left-width:5px; border-radius:10px; padding:16px 18px; margin:12px 0;}
+  .item.lp0{border-left-color:var(--red);} .item.lp1{border-left-color:var(--orange);} .item.lp2{border-left-color:var(--magenta);}
+  .item h4{font-family:var(--disp); font-size:18px; margin:0 0 6px; color:#fff; display:flex; align-items:center; gap:10px; flex-wrap:wrap; text-transform:none;}
+  .item .what{margin:0 0 8px; font-size:13.5px; color:var(--muted);}
+  .item .fix{margin:0; font-size:13.5px; color:var(--muted);}
+  .item .fix b{color:var(--magenta);}
+  pre{background:#000; color:#f3e9ff; padding:12px 14px; border-radius:8px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; line-height:1.5; margin:8px 0 0; border:1px solid var(--line);}
+  pre .c{color:var(--muted2);}
+  .summary{background:var(--magenta-soft); border:1px solid rgba(255,17,152,.4); border-radius:12px; padding:20px 24px; margin:20px 0;}
+  .summary h4{font-family:var(--disp); margin:0 0 10px; color:var(--magenta); font-size:19px; text-transform:uppercase;}
+  .summary ol{margin:0; padding-left:20px; font-size:14px; color:var(--muted);}
+  .summary li{margin:5px 0;}
+  .summary li b{color:#fff;}
+
+  /* SOURCES */
+  ol.sources{list-style:none; padding:0; margin:0; counter-reset:src;}
+  ol.sources li{position:relative; padding:13px 0 13px 42px; border-bottom:1px solid var(--line); font-size:13px; line-height:1.5; color:var(--muted);}
+  ol.sources li:last-child{border-bottom:none;}
+  ol.sources li::before{counter-increment:src; content:counter(src); position:absolute; left:0; top:12px; width:26px; height:26px; background:#000; color:var(--magenta); border:1.5px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:700; font-size:12px;}
+  ol.sources li .src-pub{font-weight:600; color:#fff;}
+  ol.sources li a{color:var(--magenta); word-break:break-all; font-size:12px;}
+
+  /* FOOTER / CTA */
+  .cta{background:linear-gradient(135deg,var(--magenta-deep),var(--magenta)); border-radius:20px; padding:44px 40px; margin-top:30px; text-align:center;}
+  .cta h3{font-size:44px; color:#fff; margin:0 0 12px;}
+  .cta p{color:rgba(255,255,255,.92); font-size:17px; max-width:54ch; margin:0 auto 26px;}
+  .btn{display:inline-block; background:#fff; color:var(--magenta-deep); font-family:var(--disp); font-weight:700; font-size:18px; letter-spacing:.04em; text-transform:uppercase; padding:14px 30px; border-radius:999px; text-decoration:none;}
+  .btn.alt{background:transparent; color:#fff; border:2px solid rgba(255,255,255,.6); margin-left:10px;}
+  .footer{margin-top:50px; padding-top:24px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted2);}
+  .footer .brand{font-family:var(--disp); font-weight:800; color:#fff; font-size:18px; letter-spacing:.04em;}
+  .footer .brand b{color:var(--magenta);}
+  .note{font-size:12.5px; color:var(--muted2); font-style:italic;}
+
+  @media(max-width:600px){.hero h1{font-size:42px;} h3.section-title{font-size:30px;} .wrap{padding:0 18px 60px;} .cta h3{font-size:32px;}}
+</style>
+</head>
+<body>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brandbar">
+      <img class="logo-img" src="/assets/beast-logo.svg" alt="Beast Creative" width="120" height="53">
+      <span class="x">× Mega Foods</span>
+    </div>
+    <span class="kicker">Growth Proposal · Confidential</span>
+    <h1>From Social Posts to a <span class="hl">Discoverable</span> CPG Brand</h1>
+    <p class="sub">An integrated growth plan for Mega Foods in the U.S. market — built to drive recognition, wholesale demand, and real sales across La Botanera, Chamoy Mega, Chamoy Picosito, Mega Chili Powder, and the new <strong>Limón Listo</strong> line.</p>
+    <div class="meta-row">
+      <div><span>Prepared for</span><strong>Mega Foods (Mega Alimentos)<br>Attn: Elisa Campos</strong></div>
+      <div><span>Prepared by</span><strong>Beast Creative<br>San Antonio, TX</strong></div>
+      <div><span>Date</span><strong>June 2026</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===================== SHORT VERSION ===================== -->
+  <section id="summary">
+    <span class="num">The Short Version</span>
+    <h3 class="section-title">What we heard, and what we recommend</h3>
+    <p class="lead">You asked for help turning your U.S. social media into video-first content that grows followers and engagement across La Botanera, Chamoy Mega, Chamoy Picosito, and Mega Chili Powder — with a new lime line on the way.</p>
+    <p>We can absolutely do that. But after auditing your digital footprint, we have to be straight with you: <strong>social media alone will not move the needle on your real goals — brand discovery and sales.</strong> The reason is technical and fixable, and it's costing you customers right now. This page shows you the full picture, what to prioritize, and two ways to work together.</p>
+    <blockquote>Your goal isn't followers. It's <strong>people discovering Mega and buying it</strong> — on shelves, through distributors, and online. Followers are people who already found you. We want to go get the ones who haven't.</blockquote>
+  </section>
+
+  <!-- ===================== URGENT FINDING ===================== -->
+  <section id="finding">
+    <span class="num">01 · The Urgent Finding</span>
+    <h3 class="section-title">Right now, Google can't see either of your websites</h3>
+    <p>Both of your sites are effectively absent from Google today — for two <em>different</em>, fixable reasons:</p>
+    <ul class="clean">
+      <li><strong>megaalimentos.com (Mexico):</strong> built on WordPress with a single "discourage search engines" setting left switched on after development. It's actively telling Google to stay away. A one-click fix.</li>
+      <li><strong>mega-foods.com (U.S., newly launched):</strong> isn't blocking anything, but because of how it was rebuilt last month, its pages arrive <em>empty</em> to search engines (content only loads inside a visitor's browser), and it's missing the basic files engines look for. Google arrives and finds nothing to list.</li>
+    </ul>
+    <div class="callout crit">
+      <span class="tag">Why this matters more than followers</span>
+      <p>When a shopper — or a wholesale buyer — asks Google or ChatGPT "best chamoy brand" or "chamoy distributor near me," the answer is assembled from content the engines can actually read. Today, none of yours qualifies. Competitors like Tajín fill that space by default.</p>
+    </div>
+    <div class="callout good">
+      <span class="tag">The good news</span>
+      <p>The Mexico site is a one-click fix we're happy to hand you, because it's the right thing to do. The U.S. site needs a bit more (its content has to be made visible to search engines), but it's well-defined work — not a rebuild from scratch. Fixing discovery only opens the door. The opportunity is in what you build behind it.</p>
+    </div>
+  </section>
+
+  <!-- ===================== REFRAME ===================== -->
+  <section id="reframe">
+    <span class="num">02 · The Reframe</span>
+    <h3 class="section-title">What you asked for vs. what will actually grow the business</h3>
+    <p>These aren't in conflict. Social is part of the answer — but it's the amplification layer on top of a foundation that doesn't exist yet. Here's the honest mapping:</p>
+    <div class="compare">
+      <div class="col ask">
+        <h5>What you asked for</h5>
+        <ul>
+          <li>More TikTok &amp; Instagram video</li>
+          <li>Grow follower counts</li>
+          <li>Monthly competitor analysis</li>
+          <li>Influencer partnerships</li>
+          <li>TikTok Shop presence</li>
+        </ul>
+      </div>
+      <div class="col need">
+        <h5>What delivers the goal</h5>
+        <ul>
+          <li>A site search engines &amp; AI can read &amp; cite</li>
+          <li>Discovery by new buyers, not just existing fans</li>
+          <li>Wholesale &amp; distributor demand generation</li>
+          <li>A creator engine that scales without ad-heavy spend</li>
+          <li>Bundles &amp; commerce built for real margins</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STRATEGY ===================== -->
+  <section id="strategy">
+    <span class="num">03 · The Strategy</span>
+    <h3 class="section-title">One connected growth engine: five pillars</h3>
+    <p>Each pillar feeds the next. Social content creates signals that train AI and search; search and AI drive discovery; discovery feeds retail pull-through and wholesale interest; commerce captures the margin.</p>
+
+    <div class="pillar flagship">
+      <div class="pn">Pillar 1 · The Differentiator</div>
+      <h4>Wholesale &amp; Distributor Discoverability</h4>
+      <p>At a $1.99–$2.50 retail price, a single distributor or retail-chain contract is worth thousands of individual sales. We position mega-foods.com as a salesperson that <em>wins those contracts</em> — structured so a buyer searching "wholesale chamoy distributor, U.S." (on Google or ChatGPT) finds Mega first. The highest-ROI play in the plan, and the one your competitors are ignoring.</p>
+    </div>
+    <div class="pillar">
+      <div class="pn">Pillar 2 · The Foundation</div>
+      <h4>Technical SEO &amp; Site Structure</h4>
+      <p>Fix indexability, rebuild titles/structure/metadata, add recipe and product schema, and resolve the bilingual (ES/EN) setup so the Mexico and U.S. sites reinforce each other instead of competing. Built on top of your existing visual design — no wasted redesign spend.</p>
+    </div>
+    <div class="pillar">
+      <div class="pn">Pillar 3 · The Frontier</div>
+      <h4>AEO: Answer Engine Optimization</h4>
+      <p>Make Mega the brand that AI assistants and Google's AI Overviews <em>cite</em> when people ask about chamoy and Mexican condiments. Recipe content, structured data, and presence on the sources AI pulls from (including Reddit and YouTube). This is where the category is heading — and where there's open ground to lead.</p>
+    </div>
+    <div class="pillar">
+      <div class="pn">Pillar 4 · The Amplifier</div>
+      <h4>Social Content Engine (UGC + Influencer-Led)</h4>
+      <p>We provide the creative direction, campaign frameworks, and brand look; creators and fans produce the volume of video. We then repurpose that content — accelerated with our AI pipeline — into channel-ready posts. Lean into Chamoy and the new lime line, where the category is wide open, rather than fighting Tajín on powder. Authentic creator partnerships, on the books and with their cooperation. <em>(See it in action below.)</em></p>
+    </div>
+    <div class="pillar">
+      <div class="pn">Pillar 5 · The Margin</div>
+      <h4>Commerce &amp; Bundles</h4>
+      <p>Where DTC margins are thin on single units, occasion-based bundles (Super Bowl, World Cup, birthday/fiesta kits) lift average order value and show shoppers how to <em>use</em> the products — on margarita rims, fruit cups, nachos. Email/Klaviyo capture turns campaign traffic into a reusable audience.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CREATOR ENGINE (the social ask, in action) ===================== -->
+  <div class="divider-label">The Social Engine, In Action</div>
+  <section id="engine">
+    <span class="num">04 · How The Content Engine Works</span>
+    <h3 class="section-title">One creator shoot becomes a month of content</h3>
+    <p>This is the part you asked for — done the way that actually scales. We don't pay for one post at a time. We hire a creator to capture a <strong>library</strong> in a single shoot, then our AI pipeline multiplies it into dozens of channel-ready assets: ads, posts, carousels, stories, and Spanish versions. Below is the exact flow, shown on the new <strong>Limón Listo</strong> line.</p>
+
+    <div class="flow">
+      <div class="node">
+        <div class="step">Step 1 · Capture</div>
+        <h4>The Original</h4>
+        <p>A hired creator films authentic, phone-native video to our brief — hooks, the recipe, real reactions, plus clean raw files.</p>
+      </div>
+      <div class="node">
+        <div class="step">Step 2 · Atomize</div>
+        <h4>The Multiply</h4>
+        <p>We cut, caption, reframe and translate that one shoot into 40–60 platform-native pieces — no reshoot needed.</p>
+      </div>
+      <div class="node">
+        <div class="step">Step 3 · Amplify</div>
+        <h4>The Ads</h4>
+        <p>Winners become paid social ads, retargeting creative, email graphics, and web visuals — pointed at discovery and sales.</p>
+      </div>
+    </div>
+
+    <h4 class="sub" style="color:var(--magenta);">The "originals" — what our hired creator posts</h4>
+    <p>Three posts from a single Limón Listo creator session (TikTok &amp; Instagram Reels) — one shoot, three native pieces.</p>
+    <div class="ph-grid">
+      <div class="ph"><!-- swap-in: assets/original-1.jpg (or .mp4) -->
+        <span class="lbl">Original Post #1</span>
+        <span class="hint">"The Hook" — creator tries the lime-anytime hack. Vertical 9:16 video/still.</span>
+        <span class="dim">TikTok / Reels · 9:16</span>
+      </div>
+      <div class="ph"><!-- swap-in: assets/original-2.jpg (or .mp4) -->
+        <span class="lbl">Original Post #2</span>
+        <span class="hint">"The Make" — 30-sec recipe build (mangonada / micheladas / fruit cup) with Limón Listo.</span>
+        <span class="dim">TikTok / Reels · 9:16</span>
+      </div>
+      <div class="ph"><!-- swap-in: assets/original-3.jpg (or .mp4) -->
+        <span class="lbl">Original Post #3</span>
+        <span class="hint">"The Proof" — friends/family taste-test reaction. Vertical 9:16.</span>
+        <span class="dim">TikTok / Reels · 9:16</span>
+      </div>
+    </div>
+    <p class="ph-cap">↑ The "real" source posts — authentic, creator-made, phone-native.</p>
+
+    <h4 class="sub" style="color:var(--yellow);">What we make from them — same shoot, new assets</h4>
+    <p>Each original is remixed into the paid and owned content that actually drives sales. Same creator, zero reshoots.</p>
+    <div class="ph-grid">
+      <div class="ph yellow"><!-- swap-in: assets/remix-paid-ad.jpg -->
+        <span class="lbl">Paid Social Ad</span>
+        <span class="hint">Original #1 recut as a Spark/Partnership ad with brand end-card &amp; CTA.</span>
+        <span class="dim">Paid · 9:16</span>
+      </div>
+      <div class="ph yellow"><!-- swap-in: assets/remix-carousel.jpg -->
+        <span class="lbl">Static / Carousel</span>
+        <span class="hint">Stills from #2 → IG carousel, recipe graphic, retailer "where to buy" tile.</span>
+        <span class="dim">Feed · 4:5</span>
+      </div>
+      <div class="ph yellow"><!-- swap-in: assets/remix-es-variant.jpg -->
+        <span class="lbl">ES Dub / Variant</span>
+        <span class="hint">#3 dubbed to Spanish + a 6-sec hook cut for retargeting.</span>
+        <span class="dim">Localized · 9:16</span>
+      </div>
+    </div>
+    <p class="ph-cap">↑ Same shoot, remixed — how one creator session fills a month's calendar.</p>
+
+    <div class="callout good">
+      <span class="tag">Why this wins</span>
+      <p>UGC drives roughly <strong>6.9× the engagement</strong> of brand-made content, creator-style ads cut acquisition cost <strong>25–50%</strong>, and AI repurposing cuts production time <strong>~80%</strong>. You get authenticity <em>and</em> volume <em>and</em> margin — and every clip also becomes search/AEO fuel.</p>
+    </div>
+  </section>
+
+  <!-- ===================== HOW WE'RE DIFFERENT ===================== -->
+  <section id="different">
+    <span class="num">05 · How We're Different</span>
+    <h3 class="section-title">AI-forward, in-house, bilingual — and we publish our numbers</h3>
+    <ul class="clean">
+      <li><strong>Proven on CPG, by name.</strong> Our campaigns average <em>7× industry-average performance</em>. We don't hide behind anonymous case studies — every number below is a real client.</li>
+      <li><strong>AI-forward, transparently.</strong> A proven pipeline (recipe → product photography → video → page deployment) lets us produce more, faster, at lower cost — without sacrificing quality. Volume <em>and</em> margin.</li>
+      <li><strong>In-house team.</strong> Design, social, SEO, web, and strategy under one roof across the U.S., Canada, and Mexico. We rarely outsource.</li>
+      <li><strong>Genuinely bilingual &amp; bicultural.</strong> Native Spanish, English, and French speakers who understand the cultural nuance between the Mexico and U.S. markets — the exact gap you're feeling with your current agency.</li>
+    </ul>
+    <div class="proof">
+      <div class="stat"><div class="v">7.03%</div><div class="l">CTR on a national Walmart rollout (vs 0.89% avg) — Sun-Bird</div></div>
+      <div class="stat"><div class="v">36,581</div><div class="l">Consumer emails collected on $6K in 38 days</div></div>
+      <div class="stat"><div class="v">22,043</div><div class="l">Sweepstakes entries on a $4K budget — Williams Foods</div></div>
+      <div class="stat"><div class="v">500%+</div><div class="l">MRR growth, SEO + social — Sweet Sensi</div></div>
+    </div>
+    <p class="note">Real campaigns, real clients (Williams Foods, Sun-Bird Seasonings, Sweet Sensi). Full case studies at beastcreativeagency.com/work.</p>
+  </section>
+
+  <div class="divider-label">The Plan In Motion</div>
+
+  <!-- ===================== ROADMAP ===================== -->
+  <section id="roadmap">
+    <span class="num">06 · Roadmap</span>
+    <h3 class="section-title">Sequenced for fast wins, then compounding growth</h3>
+    <div class="phase"><div class="pp">1</div><div class="when">Week 1 · No cost</div><h4>Unblock Discovery</h4><p>Switch off the indexing block on the Mexico (WordPress) site so Google can finally see it — a one-click fix we hand you immediately. The U.S. site's visibility is addressed in Phase 2.</p></div>
+    <div class="phase"><div class="pp">2</div><div class="when">Weeks 2–6</div><h4>Build the Foundation</h4><p>Technical SEO, site structure, schema, bilingual fix, and a wholesale-buyer landing experience — on your existing design.</p></div>
+    <div class="phase"><div class="pp">3</div><div class="when">Weeks 4–8</div><h4>Turn On Discovery (SEO + AEO)</h4><p>Recipe &amp; product content engineered to rank and to be cited by AI. Begin appearing in answers, not just links.</p></div>
+    <div class="phase"><div class="pp">4</div><div class="when">Ongoing</div><h4>Run the Content Engine</h4><p>Chamoy- and lime-led social campaigns, creator partnerships, UGC repurposing, monthly competitor tracking, community engagement.</p></div>
+    <div class="phase"><div class="pp">5</div><div class="when">Quarterly</div><h4>Signature Campaigns</h4><p>Tent-pole creative moments — like the <em>Limón Listo</em> launch concept below — to spike reach and capture audience.</p></div>
+  </section>
+
+  <!-- ===================== SPEC CONCEPT (Limón Listo, replaces 40th-anniversary) ===================== -->
+  <section id="spec">
+    <span class="num">07 · Spec Concept</span>
+    <h3 class="section-title">A taste of the creative: "Lime, Anytime"</h3>
+    <div class="spec">
+      <div class="pn">Flagship Launch · Limón Listo</div>
+      <h4>Limón Listo: real lime flavor, ready anytime</h4>
+      <p>Limes spike in price and disappear from shelves every year. <strong>Limón Listo</strong> is the shelf-stable answer — the bright, fresh-lime kick on fruit, tacos, micheladas and snacks, without ever cutting a lime. We turn that simple truth into a movement.</p>
+      <p class="big">"Never run out of lime" · one creator challenge · a month of content</p>
+      <p>A creator-led <em>"Lime, Anytime" Challenge</em> (this week: cucumber, mango, chamoy, and a shake of Limón Listo — make it, post it), a build-to-launch giveaway, and on-pack QR that drops shoppers onto a recipe landing page. Fans make the content, the brand makes the moment, and every entry is a discovery signal feeding search and AI. We'll bring full spec mockups — including a structural mockup of mega-foods.com that keeps your look but fixes what's underneath — to our working session.</p>
+    </div>
+    <div class="ph-grid two">
+      <div class="ph"><!-- swap-in: assets/campaign-key-visual.jpg --><span class="lbl">Campaign Key Visual</span><span class="hint">Limón Listo "Lime, Anytime" hero image / packaging mockup.</span></div>
+      <div class="ph"><!-- swap-in: assets/site-mockup.jpg --><span class="lbl">Site Mockup</span><span class="hint">Structural mockup of mega-foods.com landing experience.</span></div>
+    </div>
+  </section>
+
+  <div class="divider-label">Investment</div>
+
+  <!-- ===================== PRICING ===================== -->
+  <section id="pricing">
+    <span class="num">08 · Two Ways To Work Together</span>
+    <h3 class="section-title">Social alone, or a true CPG growth partner</h3>
+    <p>Here's the honest part. Your goal is <strong>sales</strong> — and social media, on its own, won't get you there. Sales come from being <em>discovered</em>: on Google, in AI answers, by wholesale buyers, and yes, on social. Those work as one connected engine (<strong>web, SEO, AEO, social, and commerce together</strong>), where social is one important piece — not the whole machine.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h4>Social Management</h4>
+        <div class="desc">Exactly what you asked for: your social channels, managed well. The honest caveat — on its own, it grows followers, not sales.</div>
+        <div class="price">$5,000<small>/ month + ad spend</small></div>
+        <ul>
+          <li>Social management across your brands</li>
+          <li>Video-first content &amp; campaigns</li>
+          <li>Influencer / creator coordination</li>
+          <li>Monthly competitor analysis</li>
+          <li class="no">Website, SEO &amp; AEO</li>
+          <li class="no">Wholesale discoverability</li>
+          <li class="no">Commerce &amp; bundles</li>
+        </ul>
+      </div>
+      <div class="tier featured">
+        <h4>True CPG Growth Partner</h4>
+        <div class="desc">The full engine, built to drive sales — not just followers. Web, SEO, AEO, commerce, and social working as one. <strong>Social is one piece; this is the whole machine.</strong></div>
+        <div class="price">$8,000<small>/ month + ad spend</small></div>
+        <ul>
+          <li>Website fixes, technical SEO &amp; structure</li>
+          <li>AEO: get cited by AI &amp; Google answers</li>
+          <li>Wholesale &amp; distributor discoverability</li>
+          <li>Commerce, bundles &amp; Klaviyo email</li>
+          <li>Creator-led social content engine <em>(included)</em></li>
+          <li>Quarterly signature campaigns</li>
+          <li>Monthly competitor analysis</li>
+        </ul>
+      </div>
+    </div>
+    <blockquote>If the goal is to <strong>make sales</strong>, the partner path is the one we'd stake our name on. Social-only is available — but we'd be doing you a disservice if we let you believe it alone moves the needle.</blockquote>
+    <p class="note">Both options include the no-cost indexing fix and onboarding, and lead with your hero Chamoy brands. Month-to-month after an initial 3-month commitment, so you can see the work before committing long-term. Pricing is illustrative pending scope confirmation.</p>
+  </section>
+
+  <!-- ===================== NEXT STEPS ===================== -->
+  <section id="next">
+    <span class="num">09 · Next Steps</span>
+    <h3 class="section-title">Let's walk you through it</h3>
+    <p>We'd like a short working session to present the full strategy and spec work to you and your brand &amp; marketing managers — so the <em>why</em> behind each recommendation comes through clearly, not just the line items. In the meantime, we'll send the indexing fix so you can resolve that right away.</p>
+    <ul class="clean">
+      <li><strong>This week:</strong> we send the one-click indexing fix for the Mexico (WordPress) site, plus the short technical punch-list for the U.S. site.</li>
+      <li><strong>Next:</strong> a 30-minute working session — full strategy + live spec mockups.</li>
+      <li><strong>Then:</strong> you share with your team in Mexico; we refine scope and finalize pricing to your budget.</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h3>Let's go get the customers who haven't found you yet.</h3>
+    <p>Book the working session and we'll show you exactly where Mega stands in search and AI today — and what it takes to own the chamoy and lime category.</p>
+    <a class="btn" href="https://calendar.app.google/9q1mcYgEdXNyjK8G6">Book the Session</a>
+    <a class="btn alt" href="sms:+12103320567">Text Beast</a>
+  </div>
+
+  <!-- ============================ APPENDIX ============================ -->
+  <div class="divider-label">Appendix · The Evidence</div>
+
+  <section id="audit">
+    <span class="num">A · Website Technical Audit</span>
+    <h3 class="section-title">Everything that's wrong, in black and white</h3>
+    <div class="audit-intro">
+      We crawled both sites directly. This isn't a sales exaggeration — it's a list of measured, verifiable failures, each one currently working against your discovery and your sales. <strong>Two different sites, two different sets of problems, one shared result: neither can be found.</strong>
+    </div>
+
+    <!-- mega-foods.com -->
+    <div class="site-block">
+      <div class="site-head">
+        <h4>mega-foods.com</h4>
+        <span class="stack">U.S. site · React + Firebase · rebuilt ~last month</span>
+      </div>
+      <p>The new U.S. site looks fine to a human in a browser, but to Google, Bing, and every AI engine it is effectively a <strong>blank page that also forgot to bring a map</strong>. It was migrated off a server-rendered WordPress/Astra site onto a client-side React app, and the rebuild stripped out the entire SEO foundation the old site had by default.</p>
+      <div class="scorecard">
+        <div class="metric"><div class="v bad">~2.3s</div><div class="l">Server Response (TTFB)</div><div class="g bad">Target &lt;0.8s</div></div>
+        <div class="metric"><div class="v bad">731 KB</div><div class="l">JS Bundle (1 file)</div><div class="g bad">No code-splitting</div></div>
+        <div class="metric"><div class="v bad">0</div><div class="l">Readable Content in HTML</div><div class="g bad">Blank shell</div></div>
+        <div class="metric"><div class="v bad">CSR</div><div class="l">Render Method</div><div class="g bad">Needs SSG</div></div>
+      </div>
+      <div class="psi-real">
+        <div class="psi-card">
+          <p class="ff">Google Lighthouse · Mobile</p>
+          <div class="rings">
+            <div class="ring"><div class="circ sc-orange">50</div><div class="lbl">Perf</div></div>
+            <div class="ring"><div class="circ sc-green">96</div><div class="lbl">Access</div></div>
+            <div class="ring"><div class="circ sc-green">100</div><div class="lbl">Best Pr.</div></div>
+            <div class="ring"><div class="circ sc-green">92</div><div class="lbl">SEO</div></div>
+          </div>
+          <div class="cwv"><span class="crit">LCP 23.1s</span><span>FCP <b>5.2s</b></span><span>TBT <b>280ms</b></span><span>CLS <b>0.001</b></span></div>
+        </div>
+        <div class="psi-card">
+          <p class="ff">Google Lighthouse · Desktop</p>
+          <div class="rings">
+            <div class="ring"><div class="circ sc-orange">60</div><div class="lbl">Perf</div></div>
+            <div class="ring"><div class="circ sc-green">96</div><div class="lbl">Access</div></div>
+            <div class="ring"><div class="circ sc-green">100</div><div class="lbl">Best Pr.</div></div>
+            <div class="ring"><div class="circ sc-green">92</div><div class="lbl">SEO</div></div>
+          </div>
+          <div class="cwv"><span class="crit">LCP 4.5s</span><span>FCP <b>2.4s</b></span><span>TBT <b>0ms</b></span><span>CLS <b>0</b></span></div>
+        </div>
+      </div>
+      <p class="psi-cap">Real Lighthouse runs, June 2026. Lighthouse loads the page in a full browser that runs JavaScript, so its SEO sub-score sees rendered content real crawlers do not. The 23.1s mobile LCP is the headline failure; the deeper issues below sit outside Lighthouse's scope.</p>
+      <table class="findings">
+        <tr><th>Issue</th><th>Sev.</th><th>What we found / why it kills you</th></tr>
+        <tr><td class="f">Client-side rendering</td><td><span class="sev crit">CRITICAL</span></td><td>The server sends an empty <span class="ev">&lt;div id="root"&gt;&lt;/div&gt;</span>; all content is drawn later by JavaScript. Crawlers that don't run JS (Bing, social, GPTBot, Perplexity) see <em>nothing</em>. Root cause of almost everything below.</td></tr>
+        <tr><td class="f">No sitemap</td><td><span class="sev crit">CRITICAL</span></td><td><span class="ev">/sitemap.xml</span> doesn't exist; it returns the blank app shell. Search engines have no map of your pages.</td></tr>
+        <tr><td class="f">No robots.txt</td><td><span class="sev high">HIGH</span></td><td><span class="ev">/robots.txt</span> doesn't exist either; it also returns the app shell. Zero crawl guidance.</td></tr>
+        <tr><td class="f">Soft 404s</td><td><span class="sev high">HIGH</span></td><td>Every non-existent URL returns <span class="ev">200 OK</span> with the app shell (<span class="ev">/xyz123 → 200</span>). Google can't tell a real page from a typo.</td></tr>
+        <tr><td class="f">No canonical tag</td><td><span class="sev high">HIGH</span></td><td>Not a single page declares its official URL. With a duplicate copy live, Google is left guessing which to rank.</td></tr>
+        <tr><td class="f">Wrong identity domain</td><td><span class="sev high">HIGH</span></td><td><span class="ev">og:url</span> &amp; <span class="ev">og:image</span> point to the Firebase staging domain <span class="ev">mega-foodsusa.web.app</span>, not mega-foods.com.</td></tr>
+        <tr><td class="f">Duplicate titles &amp; descriptions</td><td><span class="sev high">HIGH</span></td><td>Every page serves the identical <span class="ev">&lt;title&gt;Mega Foods&lt;/title&gt;</span> and one generic Spanish description. No keyword targeting anywhere.</td></tr>
+        <tr><td class="f">No structured data</td><td><span class="sev high">HIGH</span></td><td>Zero schema: no Organization, Product, or Recipe. Forfeits rich results and the #1 way AI cites food brands.</td></tr>
+        <tr><td class="f">Monolithic JS bundle</td><td><span class="sev med">MEDIUM</span></td><td>731 KB of JavaScript in a single un-split file (+112 KB CSS) must download &amp; run before the homepage paints.</td></tr>
+        <tr><td class="f">Uncrawlable navigation</td><td><span class="sev med">MEDIUM</span></td><td>Nav links don't exist in the served HTML (JS-injected), so crawlers can't follow them to inner pages.</td></tr>
+        <tr><td class="f">No hreflang / bilingual setup</td><td><span class="sev med">MEDIUM</span></td><td>EN &amp; ES toggle in JS on the same URL, so engines only ever see one language.</td></tr>
+        <tr><td class="f">No functional social links</td><td><span class="sev med">MEDIUM</span></td><td>No real Instagram/TikTok/Facebook URLs wired into the site. A brand chasing social growth that doesn't link its own channels.</td></tr>
+      </table>
+      <div class="psi-real" style="grid-template-columns:1fr 1fr;">
+        <div class="ph"><!-- swap-in: assets/psi-mobile.png --><span class="lbl">PSI Screenshot · Mobile</span><span class="hint">Official Google PageSpeed Insights screenshot — mega-foods.com mobile.</span></div>
+        <div class="ph"><!-- swap-in: assets/psi-desktop.png --><span class="lbl">PSI Screenshot · Desktop</span><span class="hint">Official Google PageSpeed Insights screenshot — mega-foods.com desktop.</span></div>
+      </div>
+    </div>
+
+    <!-- megaalimentos.com -->
+    <div class="site-block">
+      <div class="site-head">
+        <h4>megaalimentos.com</h4>
+        <span class="stack">Mexico / corporate site · WordPress 7.0</span>
+      </div>
+      <p>The Mexico site <em>can</em> be read by Google — but it flatly tells Google to stay away, and even if you flip that switch it's missing nearly every on-page fundamental underneath.</p>
+      <div class="scorecard">
+        <div class="metric"><div class="v bad">noindex</div><div class="l">Indexing Status</div><div class="g bad">Blocked from Google</div></div>
+        <div class="metric"><div class="v bad">~1.7s</div><div class="l">Server Response (TTFB)</div><div class="g bad">+ caching disabled</div></div>
+        <div class="metric"><div class="v bad">0</div><div class="l">H1 / Schema / Meta Desc</div><div class="g bad">All missing</div></div>
+        <div class="metric"><div class="v warn">15/34</div><div class="l">Images Missing Alt</div><div class="g bad">Accessibility + SEO</div></div>
+      </div>
+      <div class="psi-real">
+        <div class="psi-card">
+          <p class="ff">Google Lighthouse · Mobile</p>
+          <div class="rings">
+            <div class="ring"><div class="circ sc-red">48</div><div class="lbl">Perf</div></div>
+            <div class="ring"><div class="circ sc-orange">82</div><div class="lbl">Access</div></div>
+            <div class="ring"><div class="circ sc-green">96</div><div class="lbl">Best Pr.</div></div>
+            <div class="ring"><div class="circ sc-red">46</div><div class="lbl">SEO</div></div>
+          </div>
+          <div class="cwv"><span class="crit">LCP 21.5s</span><span>FCP <b>4.0s</b></span><span>TBT <b>200ms</b></span><span class="crit">CLS 0.149</span></div>
+        </div>
+        <div class="psi-card">
+          <p class="ff">Google Lighthouse · Desktop</p>
+          <div class="rings">
+            <div class="ring"><div class="circ sc-orange">56</div><div class="lbl">Perf</div></div>
+            <div class="ring"><div class="circ sc-orange">82</div><div class="lbl">Access</div></div>
+            <div class="ring"><div class="circ sc-green">100</div><div class="lbl">Best Pr.</div></div>
+            <div class="ring"><div class="circ sc-red">46</div><div class="lbl">SEO</div></div>
+          </div>
+          <div class="cwv"><span class="crit">LCP 7.1s</span><span>FCP <b>2.7s</b></span><span>TBT <b>0ms</b></span><span>CLS <b>0.002</b></span></div>
+        </div>
+      </div>
+      <p class="psi-cap">Real Lighthouse runs, June 2026. The SEO score of 46 reflects the active noindex block and missing on-page basics. Mobile content takes 21.5s to appear (LCP), with visible layout shifting.</p>
+      <table class="findings">
+        <tr><th>Issue</th><th>Sev.</th><th>What we found / why it kills you</th></tr>
+        <tr><td class="f">Site-wide noindex</td><td><span class="sev crit">CRITICAL</span></td><td>Every page carries <span class="ev">&lt;meta robots="noindex,nofollow"&gt;</span>, present even to Googlebot. The site is actively asking to be removed from search. One-click fix, highest priority.</td></tr>
+        <tr><td class="f">No valid sitemap</td><td><span class="sev high">HIGH</span></td><td><span class="ev">/sitemap.xml</span> doesn't resolve (WordPress suppresses it because of the noindex flag).</td></tr>
+        <tr><td class="f">No meta descriptions</td><td><span class="sev high">HIGH</span></td><td>Pages have no descriptions, so search snippets are auto-guessed and unpersuasive.</td></tr>
+        <tr><td class="f">Weak / generic title</td><td><span class="sev high">HIGH</span></td><td>Homepage title is just <span class="ev">Mega Alimentos</span> — no products or keywords (salsa, chamoy, botanera).</td></tr>
+        <tr><td class="f">No H1 on homepage</td><td><span class="sev high">HIGH</span></td><td>Zero H1 headings: the single most important on-page signal is absent.</td></tr>
+        <tr><td class="f">No structured data</td><td><span class="sev high">HIGH</span></td><td>0 schema blocks. No Organization, Product, or Recipe markup despite a recipes section.</td></tr>
+        <tr><td class="f">Dead / placeholder links</td><td><span class="sev high">HIGH</span></td><td>The main "Ir a formulario" CTA points to <span class="ev">href="#"</span>, and the phone <span class="ev">+52 81 8048 2600</span> is wrapped in <span class="ev">href="#"</span> instead of <span class="ev">tel:</span>. Broken conversion paths.</td></tr>
+        <tr><td class="f">Caching disabled</td><td><span class="sev med">MEDIUM</span></td><td>Server sends <span class="ev">cache-control: no-store</span> with ~1.7s TTFB — nothing is cached, every visit is slow.</td></tr>
+        <tr><td class="f">Code bloat &amp; legacy</td><td><span class="sev med">MEDIUM</span></td><td>17 stylesheets, 34 scripts, 6 Google Fonts requests; still ships IE8 shims from ~2014.</td></tr>
+        <tr><td class="f">No OG tags / no hreflang</td><td><span class="sev low">LOW</span></td><td>Shares render blank; a separate <span class="ev">/en/</span> version competes with the U.S. site instead of coordinating.</td></tr>
+      </table>
+    </div>
+    <p class="note">Performance figures are from direct measurement (June 2026). The panels above show the official Google PageSpeed Insights results for each site.</p>
+  </section>
+
+  <!-- DEV PUNCH LIST -->
+  <section id="devlist">
+    <span class="num">B · Developer Punch-List</span>
+    <h3 class="section-title">The exact fixes, by priority</h3>
+    <div class="legend">Priority: <span class="pill p0">P0</span> do first / blocking &nbsp; <span class="pill p1">P1</span> high impact &nbsp; <span class="pill p2">P2</span> cleanup</div>
+
+    <h4 class="sub">mega-foods.com <span style="font-family:var(--body);font-size:13px;color:var(--muted2);font-weight:400;">· React (Vite) SPA on Firebase → goal: static rendering (SSG) from CDN</span></h4>
+    <div class="item lp0"><h4>Switch from client-side rendering to SSG <span class="pill p0">P0</span></h4><p class="what">Served HTML body is just <code>&lt;div id="root"&gt;&lt;/div&gt;</code>; crawlers that don't run JS see an empty page.</p><p class="fix"><b>Fix:</b> Pre-build static HTML for every route at build time and deploy to Firebase Hosting. Add an SSG step to the Vite build (<code>vite-react-ssg</code>) or migrate to <b>Next.js static export</b>. Foundation for everything below.</p></div>
+    <div class="item lp0"><h4>Add a real robots.txt &amp; XML sitemap <span class="pill p0">P0</span></h4><p class="what">Both <code>/robots.txt</code> and <code>/sitemap.xml</code> return the app shell.</p><p class="fix"><b>Fix:</b> Generate a static <code>sitemap.xml</code> listing every route and a <code>robots.txt</code> that allows crawling and references it.</p></div>
+    <div class="item lp0"><h4>Fix canonical &amp; identity domain <span class="pill p0">P0</span></h4><p class="what">No canonical exists; <code>og:url</code>/<code>og:image</code> point to <code>mega-foodsusa.web.app</code>.</p><p class="fix"><b>Fix:</b> Add a self-referencing canonical on <code>https://mega-foods.com/</code>, update OG/Twitter tags to production, and 301-redirect the <code>.web.app</code> domain.</p>
+      <pre><span class="c">&lt;!-- on every page --&gt;</span>
+&lt;link rel="canonical" href="https://mega-foods.com/products/" /&gt;
+&lt;meta property="og:url" content="https://mega-foods.com/products/" /&gt;</pre></div>
+    <div class="item lp1"><h4>Unique title &amp; meta description per page <span class="pill p1">P1</span></h4><p class="what">Every page serves the identical title and one generic description.</p><p class="fix"><b>Fix:</b> Set unique, keyword-relevant head tags per route, emitted into static HTML at build time.</p></div>
+    <div class="item lp1"><h4>Return real 404 status codes <span class="pill p1">P1</span></h4><p class="what">Unknown URLs return <code>200 OK</code> with the app shell.</p><p class="fix"><b>Fix:</b> Configure hosting/SSG so unknown routes return a proper <code>404</code> with a real not-found page.</p></div>
+    <div class="item lp1"><h4>Add structured data (schema) <span class="pill p1">P1</span></h4><p class="what">No Schema.org markup anywhere.</p><p class="fix"><b>Fix:</b> JSON-LD for <b>Organization</b>, <b>Product</b>, and <b>Recipe</b>. Recipe schema is the biggest win for rich results and AI citation.</p></div>
+    <div class="item lp1"><h4>Wire up social links <span class="pill p1">P1</span></h4><p class="what">No real social URLs in the site code.</p><p class="fix"><b>Fix:</b> Add live profile URLs to the footer/header and to the Organization schema <code>sameAs</code> array.</p></div>
+    <div class="item lp2"><h4>Internationalization (ES / EN) + performance <span class="pill p2">P2</span></h4><p class="what">Languages toggle in JS on one URL; single 731 KB bundle; ~2.3s TTFB.</p><p class="fix"><b>Fix:</b> Serve each language on its own path (<code>/en/</code>, <code>/es/</code>) with reciprocal <code>hreflang</code>; SSG + CDN + route-based code-splitting solves the speed.</p></div>
+
+    <h4 class="sub">megaalimentos.com <span style="font-family:var(--body);font-size:13px;color:var(--muted2);font-weight:400;">· WordPress — settings + SEO plugin (Yoast/RankMath)</span></h4>
+    <div class="item lp0"><h4>Turn off "Discourage search engines" <span class="pill p0">P0</span></h4><p class="what">Every page carries <code>noindex,nofollow</code>.</p><p class="fix"><b>Fix:</b> WordPress admin → <b>Settings → Reading</b> → uncheck <b>"Discourage search engines…"</b> → Save. One click. Then request re-indexing in Search Console.</p></div>
+    <div class="item lp1"><h4>Fix dead placeholder links <span class="pill p1">P1</span></h4><p class="what">The "Ir a formulario" CTA and the phone number both point to <code>href="#"</code>.</p><p class="fix"><b>Fix:</b> Point the CTA at the real form, and make the phone a <code>tel:</code> link.</p>
+      <pre><span class="c">&lt;!-- after --&gt;</span> &lt;a href="tel:+528180482600"&gt;+52 81 8048 2600&lt;/a&gt;</pre></div>
+    <div class="item lp1"><h4>Titles, meta descriptions &amp; H1 <span class="pill p1">P1</span></h4><p class="what">Generic title, no descriptions, zero H1s.</p><p class="fix"><b>Fix:</b> With an SEO plugin, set unique keyword titles/descriptions per page and add one descriptive <code>&lt;h1&gt;</code> each.</p></div>
+    <div class="item lp1"><h4>Sitemap + structured data <span class="pill p1">P1</span></h4><p class="what"><code>/sitemap.xml</code> doesn't resolve; 0 schema blocks.</p><p class="fix"><b>Fix:</b> Once indexing is on, Yoast/RankMath generates the sitemap; add Organization, Product &amp; Recipe JSON-LD.</p></div>
+    <div class="item lp2"><h4>Caching, bloat, alt text &amp; legacy <span class="pill p2">P2</span></h4><p class="what">Caching disabled; 17 CSS + 34 JS + 6 font requests; 15/34 images missing alt; IE8 shims.</p><p class="fix"><b>Fix:</b> Enable caching, combine/minify assets, consolidate fonts, add alt text, remove dead IE8 scripts.</p></div>
+
+    <div class="summary">
+      <h4>Do-first shortlist (the P0s)</h4>
+      <ol>
+        <li><b>megaalimentos.com:</b> uncheck "Discourage search engines" (1 click).</li>
+        <li><b>mega-foods.com:</b> switch to static rendering (SSG).</li>
+        <li><b>mega-foods.com:</b> add robots.txt + sitemap.xml.</li>
+        <li><b>mega-foods.com:</b> add canonicals and fix the staging-domain identity tags.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MARKET CONTEXT + SOURCES -->
+  <section id="market">
+    <span class="num">C · Market Context</span>
+    <h3 class="section-title">A strong brand in a growing market</h3>
+    <table class="findings">
+      <tr><th>Dimension</th><th>Detail</th></tr>
+      <tr><td class="f">Category size (Mexico)</td><td>US$5.7B in 2024 → forecast US$7.2B by 2029 (growing ~5–9% / yr)</td></tr>
+      <tr><td class="f">Mega's position</td><td>Roughly 2% category value share — a focused regional player with authentic heritage brands</td></tr>
+      <tr><td class="f">Category leaders</td><td>McCormick, Grupo Herdez, La Costeña — multinationals many times larger</td></tr>
+      <tr><td class="f">Recent move</td><td>In 2025 the category's largest player moved to consolidate its Mexican operations (~US$750M) — intensifying pressure on smaller players</td></tr>
+    </table>
+    <div class="callout good">
+      <span class="tag">The strategic read</span>
+      <p>Mega cannot out-spend the multinationals — and it doesn't need to. The larger competitors are themselves under-invested in modern search and AI-citation strategy. With authentic heritage brands and strong recipe content, Mega is positioned to win disproportionate organic and AI visibility <em>if</em> the technical foundation is corrected and the content is made discoverable.</p>
+    </div>
+    <h4 class="sub">Sources &amp; methodology</h4>
+    <ol class="sources">
+      <li><span class="src-pub">Agriculture &amp; Agri-Food Canada — "Sector Trend Analysis: Sauces, Dips and Condiment Trends in Mexico"</span> (Euromonitor International, 2024–2025). Market size, growth forecast, category shares. <a href="https://agriculture.canada.ca/en/international-trade/reports-and-guides/sector-trend-analysis-sauces-dips-and-condiment-trends-mexico">agriculture.canada.ca</a></li>
+      <li><span class="src-pub">McCormick &amp; Company — SEC Form 8-K, Aug 21, 2025.</span> Agreement to acquire additional ownership in Mexican operations (~US$750M). <a href="https://www.sec.gov/Archives/edgar/data/0000063754/000006375425000046/mkc-20250821.htm">sec.gov</a></li>
+      <li><span class="src-pub">Mega Alimentos — corporate website</span> (history, HQ, brand portfolio). <a href="https://www.megaalimentos.com/nosotros">megaalimentos.com/nosotros</a></li>
+      <li><span class="src-pub">Mega Foods (U.S.) — mega-foods.com.</span> Structure and indexability assessed directly. <a href="https://mega-foods.com/about-us/">mega-foods.com</a></li>
+      <li><span class="src-pub">Mexico Business News — "The Impact of Mexico's School Junk Food Ban"</span> (NOM-051 labelling, in-school sales, excise/tax). <a href="https://mexicobusiness.news/talent/news/impact-mexicos-school-junk-food-ban">mexicobusiness.news</a></li>
+      <li><span class="src-pub">Beast Creative — live technical crawl of megaalimentos.com and mega-foods.com,</span> June 2026 <span class="src-note">(primary observation; full crawl data available on request)</span>.</li>
+    </ol>
+  </section>
+
+  <div class="footer">
+    <p class="brand">BEAST<b>.</b> CREATIVE</p>
+    <p>AI-powered SEO, AEO &amp; CPG marketing · San Antonio, TX · beastcreativeagency.com · (210) 332-0567</p>
+    <p>Market context draws on published industry data (Euromonitor via Agriculture &amp; Agri-Food Canada, 2024–2025) and Beast Creative's June 2026 technical audit. Pricing is illustrative pending scope confirmation.</p>
+    <p><strong>Confidential</strong> · prepared for Mega Foods / Mega Alimentos.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
