@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--
   Beast Creative · Mega Foods Growth Proposal — confidential, unlisted.
+  Sections alternate light/dark "bands" (theme via CSS vars on each band).
   Media slots awaiting assets are marked with a "swap-in: assets/<file>" comment.
 -->
 <html lang="en">
@@ -14,67 +15,85 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0A0A0A; --surface:#141414; --surface2:#1A1A1A; --line:#2A2A2A;
+    /* brand + status — constant across themes */
     --magenta:#FF1198; --magenta-deep:#C70E78; --magenta-soft:rgba(255,17,152,.12);
     --yellow:#FFE500; --yellow-soft:rgba(255,229,0,.12);
-    --white:#FFFFFF; --muted:#B3B3B3; --muted2:#7A7A7A;
     --green:#34D17F; --red:#FF4D4D; --orange:#FF8A3D; --amber:#FFC247;
     --disp:'Barlow Condensed',Impact,sans-serif; --body:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;
+    --shadow-img:0 10px 30px rgba(0,0,0,.30);
+  }
+  /* DARK theme (default) */
+  .theme-dark{
+    --bg:#0A0A0A; --surface:#141414; --surface2:#1A1A1A; --line:#2A2A2A;
+    --ink:#FFFFFF; --ink-soft:#E6E6E6; --muted:#B3B3B3; --muted2:#7A7A7A;
+    --divider:var(--yellow); --shadow-img:0 10px 30px rgba(0,0,0,.45);
+  }
+  /* LIGHT theme */
+  .theme-light{
+    --bg:#F6F5F2; --surface:#FFFFFF; --surface2:#FAFAF8; --line:#E6E2DA;
+    --ink:#101010; --ink-soft:#2B2B2B; --muted:#56524C; --muted2:#938D83;
+    --divider:var(--magenta-deep); --shadow-img:0 12px 28px rgba(20,15,10,.12);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0; background:var(--bg); color:var(--white); font-family:var(--body);
+  body{margin:0; background:#0A0A0A; color:var(--ink); font-family:var(--body);
     line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased;}
-  .wrap{max-width:920px; margin:0 auto; padding:0 24px 90px;}
   a{color:var(--magenta);}
   p{margin:0 0 16px; color:var(--muted);}
-  strong{color:var(--white); font-weight:600;}
-  em{color:var(--white); font-style:italic;}
+  strong{color:var(--ink); font-weight:600;}
+  em{color:var(--ink); font-style:italic;}
 
   /* DISPLAY TYPE */
-  h1,h2,h3,h4{font-family:var(--disp); font-weight:700; letter-spacing:.01em; line-height:1.04; margin:0; color:#fff; text-transform:uppercase;}
+  h1,h2,h3,h4{font-family:var(--disp); font-weight:700; letter-spacing:.01em; line-height:1.04; margin:0; color:var(--ink); text-transform:uppercase;}
   .num{font-family:var(--disp); color:var(--magenta); font-weight:700; font-size:15px; letter-spacing:.14em; text-transform:uppercase;}
-  h3.section-title{font-size:40px; margin:6px 0 18px;}
-  h4.sub{font-size:22px; margin:26px 0 8px; color:#fff;}
-  .lead{font-size:20px; color:#e6e6e6; line-height:1.6;}
-  section{margin-top:64px;}
+  h3.section-title{font-size:40px; margin:6px 0 18px; color:var(--ink);}
+  h4.sub{font-size:22px; margin:26px 0 8px; color:var(--ink);}
+  h4.sub.accent-pink{color:var(--magenta);}
+  h4.sub.accent-yellow{color:var(--magenta-deep);}
+  .theme-dark h4.sub.accent-yellow{color:var(--yellow);}
+  .lead{font-size:20px; color:var(--ink-soft); line-height:1.6;}
 
-  /* HERO */
-  .hero{position:relative; overflow:hidden; padding:80px 24px 64px; border-bottom:1px solid var(--line);
+  /* BANDS — full-bleed alternating sections */
+  .band{width:100%; padding:72px 24px; background:var(--bg); color:var(--ink);}
+  .band .inner{max-width:920px; margin:0 auto;}
+  .band + .band{padding-top:72px;}
+  section.sub-block{margin-top:56px;}
+
+  /* HERO (always dark) */
+  .hero{position:relative; overflow:hidden; padding:84px 24px 64px;
     background:radial-gradient(1100px 520px at 78% -8%, rgba(255,17,152,.30), transparent 60%),
                radial-gradient(760px 420px at 8% 120%, rgba(255,229,0,.10), transparent 60%),
                #0A0A0A;}
   .hero-inner{max-width:920px; margin:0 auto; position:relative; z-index:1;}
   .brandbar{display:flex; align-items:center; gap:12px; margin-bottom:30px;}
-  .brandbar .logo{font-family:var(--disp); font-weight:800; font-size:22px; letter-spacing:.04em; color:#fff;}
-  .brandbar .logo b{color:var(--magenta);}
   .brandbar .logo-img{height:34px; width:auto; display:block;}
-  .brandbar .x{color:var(--muted2); font-size:13px; letter-spacing:.2em; text-transform:uppercase;}
+  .brandbar .x{color:#9a9a9a; font-size:13px; letter-spacing:.2em; text-transform:uppercase;}
   .kicker{display:inline-block; font-family:var(--body); font-size:11.5px; letter-spacing:.2em; text-transform:uppercase;
     font-weight:700; color:var(--magenta); border:1px solid rgba(255,17,152,.45); padding:7px 15px; border-radius:999px; margin-bottom:24px;}
-  .hero h1{font-size:64px; font-weight:800; margin:0 0 16px; max-width:14ch;}
+  .hero h1{font-size:64px; font-weight:800; margin:0 0 16px; max-width:14ch; color:#fff;}
   .hero h1 .hl{color:var(--magenta);}
   .hero .sub{font-family:var(--body); font-weight:400; font-size:19px; color:#cfcfcf; max-width:60ch; margin:0 0 34px; line-height:1.6;}
-  .meta-row{display:flex; flex-wrap:wrap; gap:30px; font-size:14px; color:var(--muted);
-    border-top:1px solid var(--line); padding-top:22px;}
+  .hero strong{color:#fff;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:30px; font-size:14px; color:#cfcfcf;
+    border-top:1px solid #2A2A2A; padding-top:22px;}
   .meta-row span{display:block; color:var(--magenta); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:5px; font-weight:700;}
   .meta-row strong{display:block; color:#fff; font-weight:600;}
 
   /* CALLOUTS */
   .callout{border-radius:14px; padding:22px 26px; margin:24px 0; font-size:15.5px; border:1px solid var(--line); background:var(--surface);}
   .callout .tag{font-family:var(--disp); font-weight:700; font-size:15px; letter-spacing:.08em; text-transform:uppercase; display:block; margin-bottom:8px;}
-  .callout.crit{background:rgba(255,77,77,.07); border-color:rgba(255,77,77,.4);}
+  .callout.crit{background:rgba(255,77,77,.08); border-color:rgba(255,77,77,.4);}
   .callout.crit .tag{color:var(--red);}
   .callout.good{background:var(--magenta-soft); border-color:rgba(255,17,152,.4);}
   .callout.good .tag{color:var(--magenta);}
+  .callout p{color:var(--ink-soft);}
   .callout p:last-child{margin-bottom:0;}
-  .callout.crit p, .callout.good p{color:#dcdcdc;}
 
   ul.clean{list-style:none; padding:0; margin:0 0 16px;}
   ul.clean li{position:relative; padding:10px 0 10px 28px; border-bottom:1px solid var(--line); color:var(--muted);}
   ul.clean li:last-child{border-bottom:none;}
   ul.clean li::before{content:""; position:absolute; left:2px; top:18px; width:10px; height:10px; border-radius:2px; background:var(--magenta);}
-  ul.clean li strong{color:#fff;}
+  ul.clean li strong{color:var(--ink);}
 
   blockquote{margin:26px 0; padding:24px 28px; background:linear-gradient(120deg,var(--magenta-deep),var(--magenta)); color:#fff; border-radius:14px; font-size:19px; font-weight:500; font-family:var(--body); line-height:1.5;}
   blockquote strong{color:#fff; text-decoration:underline; text-decoration-color:rgba(255,255,255,.5); text-underline-offset:3px;}
@@ -88,7 +107,8 @@
   .compare .ask h5{color:var(--muted2);}
   .compare .need h5{color:var(--magenta);}
   .compare ul{list-style:none; padding:0; margin:0; font-size:14.5px;}
-  .compare li{padding:7px 0 7px 24px; position:relative; color:var(--muted);}
+  .compare li{padding:7px 0 7px 24px; position:relative;}
+  .compare .ask li{color:var(--muted);}
   .compare .ask li::before{content:"–"; position:absolute; left:4px; color:var(--muted2);}
   .compare .need li{color:#eee;}
   .compare .need li::before{content:"→"; position:absolute; left:0; color:var(--magenta); font-weight:700;}
@@ -97,38 +117,51 @@
   /* PILLARS */
   .pillar{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px 26px; margin-bottom:14px;}
   .pillar .pn{font-family:var(--disp); font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--magenta);}
-  .pillar h4{margin:4px 0 10px; font-size:24px; color:#fff;}
+  .pillar h4{margin:4px 0 10px; font-size:24px; color:var(--ink);}
   .pillar p{margin:0; font-size:15px; color:var(--muted);}
   .pillar.flagship{border-color:rgba(255,17,152,.55); background:linear-gradient(135deg,#150310,#1c0714);}
   .pillar.flagship .pn{color:var(--yellow);}
+  .pillar.flagship h4{color:#fff;}
+  .pillar.flagship p{color:#dcdcdc;}
+  .pillar.flagship em{color:#fff;}
 
   /* CREATOR ENGINE / FLOW */
   .flow{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:22px 0;}
   .flow .node{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px;}
   .flow .node .step{font-family:var(--disp); font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--magenta); font-weight:700;}
-  .flow .node h4{font-size:21px; margin:4px 0 8px;}
-  .flow .node p{font-size:13.5px; margin:0;}
+  .flow .node h4{font-size:21px; margin:4px 0 8px; color:var(--ink);}
+  .flow .node p{font-size:13.5px; margin:0; color:var(--muted);}
   @media(max-width:720px){.flow{grid-template-columns:1fr;}}
 
-  /* MEDIA PREVIEW FRAMES (swap for real assets when ready) */
-  .ph{position:relative; overflow:hidden; border:1px solid var(--line); border-radius:14px;
-    background:radial-gradient(120% 100% at 50% 0%, rgba(255,17,152,.10), transparent 60%), var(--surface);
-    padding:26px 22px; text-align:center; color:var(--muted); min-height:150px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  /* MEDIA — real creator assets */
+  .media{display:block; width:100%; border-radius:14px; box-shadow:var(--shadow-img);}
+  .vframe{aspect-ratio:9/16; object-fit:cover;}
+  .orig-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:18px 0;}
+  .shot{margin:0;}
+  .shot figcaption{font-family:var(--disp); font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+    font-size:13px; color:var(--ink); margin-top:10px; text-align:center;}
+  .shot figcaption .sm{display:block; font-family:var(--body); font-weight:500; text-transform:none; letter-spacing:0; font-size:12px; color:var(--muted2); margin-top:2px;}
+  @media(max-width:600px){.orig-grid{grid-template-columns:1fr; max-width:340px; margin-left:auto; margin-right:auto;}}
+  /* remix masonry — mixed aspect ratios flow cleanly */
+  .remix-masonry{columns:3; column-gap:16px; margin:18px 0;}
+  .remix-masonry .shot{break-inside:avoid; margin-bottom:16px;}
+  .remix-masonry .media{box-shadow:var(--shadow-img);}
+  .remix-masonry figcaption{display:flex; align-items:center; justify-content:center; gap:7px; text-align:center;}
+  .tag-dot{width:9px; height:9px; border-radius:50%; display:inline-block;}
+  .tag-dot.paid{background:var(--magenta);} .tag-dot.static{background:var(--amber);} .tag-dot.es{background:var(--green);}
+  @media(max-width:820px){.remix-masonry{columns:2;}}
+  @media(max-width:520px){.remix-masonry{columns:1; max-width:340px; margin-left:auto; margin-right:auto;}}
+
+  /* PREVIEW FRAMES (slots still awaiting assets) */
+  .ph{position:relative; overflow:hidden; border:1px dashed var(--line); border-radius:14px;
+    background:var(--surface2); padding:26px 22px; text-align:center; color:var(--muted);
+    min-height:150px; display:flex; flex-direction:column; align-items:center; justify-content:center;}
   .ph::before{content:"Preview"; position:absolute; top:12px; left:50%; transform:translateX(-50%);
     font-family:var(--disp); font-weight:700; font-size:10px; letter-spacing:.16em; text-transform:uppercase;
     color:var(--magenta); border:1px solid rgba(255,17,152,.45); padding:3px 11px; border-radius:999px;}
-  .ph .lbl{font-family:var(--disp); font-weight:700; font-size:17px; letter-spacing:.04em; text-transform:uppercase; color:#fff; display:block; margin:14px 0 8px;}
+  .ph .lbl{font-family:var(--disp); font-weight:700; font-size:17px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); display:block; margin:14px 0 8px;}
   .ph .hint{font-size:12.5px; color:var(--muted); max-width:34ch; margin:0 auto; line-height:1.5;}
-  .ph .dim{font-size:11px; color:var(--muted2); margin-top:10px; letter-spacing:.04em;}
-  .ph.yellow{background:radial-gradient(120% 100% at 50% 0%, rgba(255,229,0,.08), transparent 60%), var(--surface);}
-  .ph.yellow::before{content:"Remixed"; color:var(--yellow); border-color:rgba(255,229,0,.45);}
-  .ph img, .ph video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:14px;}
-  .ph-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0;}
-  .ph-grid.two{grid-template-columns:repeat(2,1fr);}
-  .ph-grid .ph{min-height:230px;}
-  @media(max-width:720px){.ph-grid,.ph-grid.two{grid-template-columns:1fr;}}
-  .ph-cap{font-size:12.5px; color:var(--muted2); font-style:italic; margin:6px 0 0; text-align:center;}
+  .ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:14px;}
 
   /* DIFFERENTIATORS / PROOF */
   .proof{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:24px 0;}
@@ -136,12 +169,19 @@
   .stat .v{font-family:var(--disp); font-size:38px; font-weight:800; color:var(--magenta); line-height:1;}
   .stat .l{font-size:12px; color:var(--muted); margin-top:8px; line-height:1.4;}
   @media(max-width:720px){.proof{grid-template-columns:repeat(2,1fr);}}
+  .note{font-size:12.5px; color:var(--muted2); font-style:italic;}
+
+  /* DIVIDER */
+  .divider-label{display:flex; align-items:center; gap:16px; margin:0 0 28px; font-family:var(--disp); font-weight:700; font-size:15px; letter-spacing:.18em; text-transform:uppercase; color:var(--divider);}
+  .divider-label::before,.divider-label::after{content:""; flex:1; height:1px; background:var(--line);}
+  .divider-label.center{justify-content:center;}
 
   /* ROADMAP */
   .phase{position:relative; padding:20px 24px 20px 70px; background:var(--surface); border:1px solid var(--line); border-radius:12px; margin-bottom:13px;}
   .phase .pp{position:absolute; left:18px; top:20px; width:38px; height:38px; background:var(--magenta); color:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:800; font-size:18px;}
-  .phase h4{margin:0 0 4px; font-size:20px; color:#fff;}
-  .phase .when{font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--yellow); font-weight:700; font-family:var(--disp);}
+  .phase h4{margin:0 0 4px; font-size:20px; color:var(--ink);}
+  .phase .when{font-size:11.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--magenta-deep); font-weight:700; font-family:var(--disp);}
+  .theme-dark .phase .when{color:var(--yellow);}
   .phase p{margin:6px 0 0; font-size:14.5px; color:var(--muted);}
 
   /* SPEC */
@@ -149,35 +189,39 @@
   .spec .pn{font-family:var(--disp); font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--yellow); font-weight:700;}
   .spec h4{font-size:30px; color:#fff; margin:6px 0 10px;}
   .spec p{color:#dcdcdc; font-size:15.5px;}
+  .spec em{color:#fff;}
   .spec .big{font-family:var(--disp); font-size:34px; font-weight:800; color:var(--magenta); margin:14px 0; line-height:1.1; text-transform:uppercase;}
+  .spec-grid{display:grid; grid-template-columns:340px 1fr; gap:18px; margin:24px 0; align-items:stretch;}
+  .spec-grid .media{width:100%; max-width:360px;}
+  @media(max-width:660px){.spec-grid{grid-template-columns:1fr; justify-items:center;}}
 
   /* PRICING */
   .tiers{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:26px 0;}
   .tier{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:28px 24px; display:flex; flex-direction:column;}
   .tier.featured{border:2px solid var(--magenta); background:linear-gradient(135deg,#150310,#1b0714); position:relative; box-shadow:0 0 40px rgba(255,17,152,.18);}
   .tier.featured::before{content:"RECOMMENDED"; position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--magenta); color:#fff; font-family:var(--disp); font-size:12px; font-weight:700; letter-spacing:.14em; padding:5px 16px; border-radius:999px;}
-  .tier h4{font-size:24px; color:#fff; margin:0 0 6px;}
+  .tier h4{font-size:24px; color:var(--ink); margin:0 0 6px;}
+  .tier.featured h4{color:#fff;}
   .tier .desc{font-size:13px; color:var(--muted); min-height:62px; margin-bottom:14px; line-height:1.5;}
-  .tier .price{font-family:var(--disp); font-size:46px; font-weight:800; color:#fff; line-height:1;}
+  .tier.featured .desc{color:#dcdcdc;}
+  .tier.featured .desc strong{color:#fff;}
+  .tier .price{font-family:var(--disp); font-size:46px; font-weight:800; color:var(--ink); line-height:1;}
   .tier.featured .price{color:var(--magenta);}
   .tier .price small{display:block; font-family:var(--body); font-size:12px; font-weight:500; color:var(--muted2); letter-spacing:.02em; margin-top:6px;}
   .tier ul{list-style:none; padding:18px 0 0; margin:16px 0 0; border-top:1px solid var(--line); font-size:13.5px; flex:1;}
-  .tier li{padding:6px 0 6px 24px; position:relative; color:#e2e2e2;}
+  .tier li{padding:6px 0 6px 24px; position:relative; color:var(--ink-soft);}
+  .tier.featured li{color:#e2e2e2;}
   .tier li::before{content:"✓"; position:absolute; left:0; color:var(--green); font-weight:700;}
   .tier li.no{color:var(--muted2);}
   .tier li.no::before{content:"—"; color:var(--muted2);}
   @media(max-width:720px){.tiers{grid-template-columns:1fr;}}
 
-  /* DIVIDER */
-  .divider-label{display:flex; align-items:center; gap:16px; margin:72px 0 6px; font-family:var(--disp); font-weight:700; font-size:15px; letter-spacing:.18em; text-transform:uppercase; color:var(--yellow);}
-  .divider-label::before,.divider-label::after{content:""; flex:1; height:1px; background:var(--line);}
-
   /* AUDIT */
-  .audit-intro{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--magenta); border-radius:12px; padding:22px 26px; margin:22px 0; font-size:15.5px; color:#dcdcdc;}
+  .audit-intro{background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--magenta); border-radius:12px; padding:22px 26px; margin:0 0 22px; font-size:15.5px; color:var(--ink-soft);}
   .audit-intro strong{color:var(--magenta);}
   .site-block{margin:34px 0;}
   .site-head{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:2px solid var(--magenta); padding-bottom:10px; margin-bottom:12px;}
-  .site-head h4{font-family:var(--disp); font-size:26px; color:#fff; margin:0; text-transform:none;}
+  .site-head h4{font-family:var(--disp); font-size:26px; color:var(--ink); margin:0; text-transform:none;}
   .site-head .stack{font-size:12.5px; color:var(--muted2); font-weight:600;}
   .scorecard{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px 0;}
   .metric{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px 12px; text-align:center;}
@@ -187,27 +231,25 @@
   .v.bad{color:var(--red);} .v.warn{color:var(--amber);} .v.ok{color:var(--green);}
   .g.bad{color:var(--red);} .g.ok{color:var(--green);}
   @media(max-width:640px){.scorecard{grid-template-columns:repeat(2,1fr);}}
-  /* lighthouse rings */
   .psi-real{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;}
   .psi-card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px;}
-  .psi-card .ff{font-family:var(--disp); font-weight:700; font-size:13px; color:#fff; margin:0 0 12px; text-transform:uppercase; letter-spacing:.07em;}
+  .psi-card .ff{font-family:var(--disp); font-weight:700; font-size:13px; color:var(--ink); margin:0 0 12px; text-transform:uppercase; letter-spacing:.07em;}
   .rings{display:flex; gap:6px; justify-content:space-between; margin-bottom:12px;}
   .ring{text-align:center; flex:1;}
   .ring .circ{width:52px; height:52px; border-radius:50%; border:4px solid; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:800; font-size:18px; margin:0 auto 5px;}
   .ring .lbl{font-size:9.5px; text-transform:uppercase; letter-spacing:.03em; color:var(--muted2); line-height:1.2;}
   .sc-red{color:var(--red); border-color:var(--red);} .sc-orange{color:var(--orange); border-color:var(--orange);} .sc-green{color:var(--green); border-color:var(--green);}
   .cwv{display:flex; gap:6px 12px; flex-wrap:wrap; border-top:1px solid var(--line); padding-top:9px; font-size:11px; color:var(--muted2);}
-  .cwv b{color:#fff; font-weight:600;}
+  .cwv b{color:var(--ink); font-weight:600;}
   .cwv .crit{color:var(--red); font-weight:700;}
   .psi-cap{font-size:12px; color:var(--muted2); font-style:italic; margin:6px 0 0;}
   @media(max-width:640px){.psi-real{grid-template-columns:1fr;}}
-  /* findings table */
   .findings{width:100%; border-collapse:collapse; margin:14px 0; font-size:14px; background:var(--surface); border-radius:10px; overflow:hidden; border:1px solid var(--line);}
   .findings th{background:#000; color:#fff; text-align:left; padding:11px 13px; font-family:var(--disp); font-size:12px; letter-spacing:.06em; text-transform:uppercase; font-weight:700;}
   .findings td{padding:11px 13px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--muted);}
   .findings tr:last-child td{border-bottom:none;}
-  .findings td.f{font-weight:600; color:#fff; white-space:nowrap; font-size:13px;}
-  .findings td.ev{color:#fff;}
+  .findings td.f{font-weight:600; color:var(--ink); white-space:nowrap; font-size:13px;}
+  .findings td.ev{color:var(--ink);}
   .ev,code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; background:#000; color:var(--yellow); padding:1px 6px; border-radius:4px;}
   .sev{display:inline-block; font-family:var(--disp); font-size:11px; font-weight:700; letter-spacing:.05em; padding:2px 9px; border-radius:999px; color:#fff; white-space:nowrap;}
   .sev.crit{background:var(--red);} .sev.high{background:var(--orange);} .sev.med{background:var(--amber); color:#1a1a1a;} .sev.low{background:var(--magenta);}
@@ -218,38 +260,42 @@
   .p0{background:var(--red);} .p1{background:var(--orange);} .p2{background:var(--magenta);}
   .item{background:var(--surface); border:1px solid var(--line); border-left-width:5px; border-radius:10px; padding:16px 18px; margin:12px 0;}
   .item.lp0{border-left-color:var(--red);} .item.lp1{border-left-color:var(--orange);} .item.lp2{border-left-color:var(--magenta);}
-  .item h4{font-family:var(--disp); font-size:18px; margin:0 0 6px; color:#fff; display:flex; align-items:center; gap:10px; flex-wrap:wrap; text-transform:none;}
+  .item h4{font-family:var(--disp); font-size:18px; margin:0 0 6px; color:var(--ink); display:flex; align-items:center; gap:10px; flex-wrap:wrap; text-transform:none;}
   .item .what{margin:0 0 8px; font-size:13.5px; color:var(--muted);}
   .item .fix{margin:0; font-size:13.5px; color:var(--muted);}
   .item .fix b{color:var(--magenta);}
-  pre{background:#000; color:#f3e9ff; padding:12px 14px; border-radius:8px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; line-height:1.5; margin:8px 0 0; border:1px solid var(--line);}
-  pre .c{color:var(--muted2);}
+  pre{background:#000; color:#f3e9ff; padding:12px 14px; border-radius:8px; overflow-x:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12px; line-height:1.5; margin:8px 0 0; border:1px solid #2A2A2A;}
+  pre .c{color:#7A7A7A;}
   .summary{background:var(--magenta-soft); border:1px solid rgba(255,17,152,.4); border-radius:12px; padding:20px 24px; margin:20px 0;}
   .summary h4{font-family:var(--disp); margin:0 0 10px; color:var(--magenta); font-size:19px; text-transform:uppercase;}
   .summary ol{margin:0; padding-left:20px; font-size:14px; color:var(--muted);}
   .summary li{margin:5px 0;}
-  .summary li b{color:#fff;}
+  .summary li b{color:var(--ink);}
 
   /* SOURCES */
   ol.sources{list-style:none; padding:0; margin:0; counter-reset:src;}
   ol.sources li{position:relative; padding:13px 0 13px 42px; border-bottom:1px solid var(--line); font-size:13px; line-height:1.5; color:var(--muted);}
   ol.sources li:last-child{border-bottom:none;}
-  ol.sources li::before{counter-increment:src; content:counter(src); position:absolute; left:0; top:12px; width:26px; height:26px; background:#000; color:var(--magenta); border:1.5px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:700; font-size:12px;}
-  ol.sources li .src-pub{font-weight:600; color:#fff;}
+  ol.sources li::before{counter-increment:src; content:counter(src); position:absolute; left:0; top:12px; width:26px; height:26px; background:var(--surface); color:var(--magenta); border:1.5px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-weight:700; font-size:12px;}
+  ol.sources li .src-pub{font-weight:600; color:var(--ink);}
   ol.sources li a{color:var(--magenta); word-break:break-all; font-size:12px;}
 
-  /* FOOTER / CTA */
-  .cta{background:linear-gradient(135deg,var(--magenta-deep),var(--magenta)); border-radius:20px; padding:44px 40px; margin-top:30px; text-align:center;}
+  /* CTA (always magenta) */
+  .cta-band{background:linear-gradient(135deg,var(--magenta-deep),var(--magenta)); padding:64px 24px;}
+  .cta{max-width:920px; margin:0 auto; text-align:center;}
   .cta h3{font-size:44px; color:#fff; margin:0 0 12px;}
   .cta p{color:rgba(255,255,255,.92); font-size:17px; max-width:54ch; margin:0 auto 26px;}
   .btn{display:inline-block; background:#fff; color:var(--magenta-deep); font-family:var(--disp); font-weight:700; font-size:18px; letter-spacing:.04em; text-transform:uppercase; padding:14px 30px; border-radius:999px; text-decoration:none;}
   .btn.alt{background:transparent; color:#fff; border:2px solid rgba(255,255,255,.6); margin-left:10px;}
-  .footer{margin-top:50px; padding-top:24px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted2);}
+
+  /* FOOTER (always dark) */
+  .footer-band{background:#0A0A0A; padding:44px 24px;}
+  .footer{max-width:920px; margin:0 auto; font-size:12.5px; color:#7A7A7A;}
+  .footer p{color:#7A7A7A;}
   .footer .brand{font-family:var(--disp); font-weight:800; color:#fff; font-size:18px; letter-spacing:.04em;}
   .footer .brand b{color:var(--magenta);}
-  .note{font-size:12.5px; color:var(--muted2); font-style:italic;}
 
-  @media(max-width:600px){.hero h1{font-size:42px;} h3.section-title{font-size:30px;} .wrap{padding:0 18px 60px;} .cta h3{font-size:32px;}}
+  @media(max-width:600px){.hero h1{font-size:42px;} h3.section-title{font-size:30px;} .band{padding:52px 18px;} .cta h3{font-size:32px;}}
 </style>
 </head>
 <body>
@@ -272,19 +318,20 @@
   </div>
 </header>
 
-<div class="wrap">
-
-  <!-- ===================== SHORT VERSION ===================== -->
-  <section id="summary">
+<!-- ===================== SHORT VERSION (light) ===================== -->
+<section class="band theme-light" id="summary">
+  <div class="inner">
     <span class="num">The Short Version</span>
     <h3 class="section-title">What we heard, and what we recommend</h3>
     <p class="lead">You asked for help turning your U.S. social media into video-first content that grows followers and engagement across La Botanera, Chamoy Mega, Chamoy Picosito, and Mega Chili Powder — with a new lime line on the way.</p>
     <p>We can absolutely do that. But after auditing your digital footprint, we have to be straight with you: <strong>social media alone will not move the needle on your real goals — brand discovery and sales.</strong> The reason is technical and fixable, and it's costing you customers right now. This page shows you the full picture, what to prioritize, and two ways to work together.</p>
     <blockquote>Your goal isn't followers. It's <strong>people discovering Mega and buying it</strong> — on shelves, through distributors, and online. Followers are people who already found you. We want to go get the ones who haven't.</blockquote>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== URGENT FINDING ===================== -->
-  <section id="finding">
+<!-- ===================== URGENT FINDING (dark) ===================== -->
+<section class="band theme-dark" id="finding">
+  <div class="inner">
     <span class="num">01 · The Urgent Finding</span>
     <h3 class="section-title">Right now, Google can't see either of your websites</h3>
     <p>Both of your sites are effectively absent from Google today — for two <em>different</em>, fixable reasons:</p>
@@ -300,10 +347,12 @@
       <span class="tag">The good news</span>
       <p>The Mexico site is a one-click fix we're happy to hand you, because it's the right thing to do. The U.S. site needs a bit more (its content has to be made visible to search engines), but it's well-defined work — not a rebuild from scratch. Fixing discovery only opens the door. The opportunity is in what you build behind it.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== REFRAME ===================== -->
-  <section id="reframe">
+<!-- ===================== REFRAME (light) ===================== -->
+<section class="band theme-light" id="reframe">
+  <div class="inner">
     <span class="num">02 · The Reframe</span>
     <h3 class="section-title">What you asked for vs. what will actually grow the business</h3>
     <p>These aren't in conflict. Social is part of the answer — but it's the amplification layer on top of a foundation that doesn't exist yet. Here's the honest mapping:</p>
@@ -329,10 +378,12 @@
         </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== STRATEGY ===================== -->
-  <section id="strategy">
+<!-- ===================== STRATEGY (dark) ===================== -->
+<section class="band theme-dark" id="strategy">
+  <div class="inner">
     <span class="num">03 · The Strategy</span>
     <h3 class="section-title">One connected growth engine: five pillars</h3>
     <p>Each pillar feeds the next. Social content creates signals that train AI and search; search and AI drive discovery; discovery feeds retail pull-through and wholesale interest; commerce captures the margin.</p>
@@ -362,11 +413,13 @@
       <h4>Commerce &amp; Bundles</h4>
       <p>Where DTC margins are thin on single units, occasion-based bundles (Super Bowl, World Cup, birthday/fiesta kits) lift average order value and show shoppers how to <em>use</em> the products — on margarita rims, fruit cups, nachos. Email/Klaviyo capture turns campaign traffic into a reusable audience.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== CREATOR ENGINE (the social ask, in action) ===================== -->
-  <div class="divider-label">The Social Engine, In Action</div>
-  <section id="engine">
+<!-- ===================== CREATOR ENGINE (light) ===================== -->
+<section class="band theme-light" id="engine">
+  <div class="inner">
+    <div class="divider-label center">The Social Engine, In Action</div>
     <span class="num">04 · How The Content Engine Works</span>
     <h3 class="section-title">One creator shoot becomes a month of content</h3>
     <p>This is the part you asked for — done the way that actually scales. We don't pay for one post at a time. We hire a creator to capture a <strong>library</strong> in a single shoot, then our AI pipeline multiplies it into dozens of channel-ready assets: ads, posts, carousels, stories, and Spanish versions. Below is the exact flow, shown on the new <strong>Limón Listo</strong> line.</p>
@@ -389,56 +442,76 @@
       </div>
     </div>
 
-    <h4 class="sub" style="color:var(--magenta);">The "originals" — what our hired creator posts</h4>
+    <h4 class="sub accent-pink">The "originals" — what our hired creator posts</h4>
     <p>Three posts from a single Limón Listo creator session (TikTok &amp; Instagram Reels) — one shoot, three native pieces.</p>
-    <div class="ph-grid">
-      <div class="ph"><!-- swap-in: assets/original-1.jpg (or .mp4) -->
-        <span class="lbl">Original Post #1</span>
-        <span class="hint">"The Hook" — creator tries the lime-anytime hack. Vertical 9:16 video/still.</span>
-        <span class="dim">TikTok / Reels · 9:16</span>
-      </div>
-      <div class="ph"><!-- swap-in: assets/original-2.jpg (or .mp4) -->
-        <span class="lbl">Original Post #2</span>
-        <span class="hint">"The Make" — 30-sec recipe build (mangonada / micheladas / fruit cup) with Limón Listo.</span>
-        <span class="dim">TikTok / Reels · 9:16</span>
-      </div>
-      <div class="ph"><!-- swap-in: assets/original-3.jpg (or .mp4) -->
-        <span class="lbl">Original Post #3</span>
-        <span class="hint">"The Proof" — friends/family taste-test reaction. Vertical 9:16.</span>
-        <span class="dim">TikTok / Reels · 9:16</span>
-      </div>
+    <div class="orig-grid">
+      <figure class="shot"><!-- swap-in: assets/original-1-hook.jpg -->
+        <img class="media vframe" src="/proposals/megafoods/assets/original-1-hook.jpg" alt="Creator holding Limón Listo: POV you ran out of limes again">
+        <figcaption>The Hook<span class="sm">"You ran out of limes again."</span></figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/original-2-make.jpg -->
+        <img class="media vframe" src="/proposals/megafoods/assets/original-2-make.jpg" alt="Creator pouring Limón Listo over a mangonada">
+        <figcaption>The Make<span class="sm">30-sec mangonada build</span></figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/original-3-proof.jpg -->
+        <img class="media vframe" src="/proposals/megafoods/assets/original-3-proof.jpg" alt="Friends taste-testing, couldn't tell it wasn't fresh lime">
+        <figcaption>The Proof<span class="sm">"Couldn't tell it wasn't fresh lime."</span></figcaption>
+      </figure>
     </div>
-    <p class="ph-cap">↑ The "real" source posts — authentic, creator-made, phone-native.</p>
+    <p class="note" style="text-align:center;">↑ The "real" source posts — authentic, creator-made, phone-native.</p>
 
-    <h4 class="sub" style="color:var(--yellow);">What we make from them — same shoot, new assets</h4>
-    <p>Each original is remixed into the paid and owned content that actually drives sales. Same creator, zero reshoots.</p>
-    <div class="ph-grid">
-      <div class="ph yellow"><!-- swap-in: assets/remix-paid-ad.jpg -->
-        <span class="lbl">Paid Social Ad</span>
-        <span class="hint">Original #1 recut as a Spark/Partnership ad with brand end-card &amp; CTA.</span>
-        <span class="dim">Paid · 9:16</span>
-      </div>
-      <div class="ph yellow"><!-- swap-in: assets/remix-carousel.jpg -->
-        <span class="lbl">Static / Carousel</span>
-        <span class="hint">Stills from #2 → IG carousel, recipe graphic, retailer "where to buy" tile.</span>
-        <span class="dim">Feed · 4:5</span>
-      </div>
-      <div class="ph yellow"><!-- swap-in: assets/remix-es-variant.jpg -->
-        <span class="lbl">ES Dub / Variant</span>
-        <span class="hint">#3 dubbed to Spanish + a 6-sec hook cut for retargeting.</span>
-        <span class="dim">Localized · 9:16</span>
-      </div>
+    <h4 class="sub accent-yellow">What we make from them — same shoot, new assets</h4>
+    <p>Each original is remixed into the paid and owned content that actually drives sales. Same creator, zero reshoots. Below: <strong>nine</strong> channel-ready assets generated from the three originals above.</p>
+    <div class="remix-masonry">
+      <figure class="shot"><!-- swap-in: assets/remix-paid-1.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-paid-1.jpg" alt="Paid social ad: Lime, anytime — find it at Walmart">
+        <figcaption><span class="tag-dot paid"></span>Paid social ad</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-static-1.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-static-1.jpg" alt="Dani's Mangonada made with Limón Listo — hero static">
+        <figcaption><span class="tag-dot static"></span>Static / hero</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-es-1.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-es-1.jpg" alt="Spanish retargeting cut: no notaron que no era limón fresco">
+        <figcaption><span class="tag-dot es"></span>ES / retargeting</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-static-5.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-static-5.jpg" alt="Recipe card: Mangonada in 30 seconds">
+        <figcaption><span class="tag-dot static"></span>Recipe carousel</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-paid-2.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-paid-2.jpg" alt="Paid social ad: Stop buying limes — find it at Walmart">
+        <figcaption><span class="tag-dot paid"></span>Paid social ad</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-static-2.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-static-2.jpg" alt="Recipe ingredients: mango, chamoy, Limón Listo">
+        <figcaption><span class="tag-dot static"></span>Recipe graphic</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-es-2.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-es-2.jpg" alt="Spanish variant taste-test still">
+        <figcaption><span class="tag-dot es"></span>ES / retargeting</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-static-4.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-static-4.jpg" alt="Where to buy: find Limón Listo at Walmart">
+        <figcaption><span class="tag-dot static"></span>Where-to-buy tile</figcaption>
+      </figure>
+      <figure class="shot"><!-- swap-in: assets/remix-static-3.jpg -->
+        <img class="media" src="/proposals/megafoods/assets/remix-static-3.jpg" alt="Close-up pour of Limón Listo over mango cup">
+        <figcaption><span class="tag-dot static"></span>Carousel still</figcaption>
+      </figure>
     </div>
-    <p class="ph-cap">↑ Same shoot, remixed — how one creator session fills a month's calendar.</p>
+    <p class="note" style="text-align:center;">↑ Same shoot, remixed — how one creator session fills a month's calendar. <span style="color:var(--magenta);">●</span> Paid &nbsp; <span style="color:var(--amber);">●</span> Static / carousel &nbsp; <span style="color:var(--green);">●</span> Spanish / retargeting</p>
 
     <div class="callout good">
       <span class="tag">Why this wins</span>
       <p>UGC drives roughly <strong>6.9× the engagement</strong> of brand-made content, creator-style ads cut acquisition cost <strong>25–50%</strong>, and AI repurposing cuts production time <strong>~80%</strong>. You get authenticity <em>and</em> volume <em>and</em> margin — and every clip also becomes search/AEO fuel.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== HOW WE'RE DIFFERENT ===================== -->
-  <section id="different">
+<!-- ===================== HOW WE'RE DIFFERENT (dark) ===================== -->
+<section class="band theme-dark" id="different">
+  <div class="inner">
     <span class="num">05 · How We're Different</span>
     <h3 class="section-title">AI-forward, in-house, bilingual — and we publish our numbers</h3>
     <ul class="clean">
@@ -454,12 +527,13 @@
       <div class="stat"><div class="v">500%+</div><div class="l">MRR growth, SEO + social — Sweet Sensi</div></div>
     </div>
     <p class="note">Real campaigns, real clients (Williams Foods, Sun-Bird Seasonings, Sweet Sensi). Full case studies at beastcreativeagency.com/work.</p>
-  </section>
+  </div>
+</section>
 
-  <div class="divider-label">The Plan In Motion</div>
-
-  <!-- ===================== ROADMAP ===================== -->
-  <section id="roadmap">
+<!-- ===================== ROADMAP (light) ===================== -->
+<section class="band theme-light" id="roadmap">
+  <div class="inner">
+    <div class="divider-label center">The Plan In Motion</div>
     <span class="num">06 · Roadmap</span>
     <h3 class="section-title">Sequenced for fast wins, then compounding growth</h3>
     <div class="phase"><div class="pp">1</div><div class="when">Week 1 · No cost</div><h4>Unblock Discovery</h4><p>Switch off the indexing block on the Mexico (WordPress) site so Google can finally see it — a one-click fix we hand you immediately. The U.S. site's visibility is addressed in Phase 2.</p></div>
@@ -467,10 +541,12 @@
     <div class="phase"><div class="pp">3</div><div class="when">Weeks 4–8</div><h4>Turn On Discovery (SEO + AEO)</h4><p>Recipe &amp; product content engineered to rank and to be cited by AI. Begin appearing in answers, not just links.</p></div>
     <div class="phase"><div class="pp">4</div><div class="when">Ongoing</div><h4>Run the Content Engine</h4><p>Chamoy- and lime-led social campaigns, creator partnerships, UGC repurposing, monthly competitor tracking, community engagement.</p></div>
     <div class="phase"><div class="pp">5</div><div class="when">Quarterly</div><h4>Signature Campaigns</h4><p>Tent-pole creative moments — like the <em>Limón Listo</em> launch concept below — to spike reach and capture audience.</p></div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== SPEC CONCEPT (Limón Listo, replaces 40th-anniversary) ===================== -->
-  <section id="spec">
+<!-- ===================== SPEC CONCEPT (dark) ===================== -->
+<section class="band theme-dark" id="spec">
+  <div class="inner">
     <span class="num">07 · Spec Concept</span>
     <h3 class="section-title">A taste of the creative: "Lime, Anytime"</h3>
     <div class="spec">
@@ -480,16 +556,20 @@
       <p class="big">"Never run out of lime" · one creator challenge · a month of content</p>
       <p>A creator-led <em>"Lime, Anytime" Challenge</em> (this week: cucumber, mango, chamoy, and a shake of Limón Listo — make it, post it), a build-to-launch giveaway, and on-pack QR that drops shoppers onto a recipe landing page. Fans make the content, the brand makes the moment, and every entry is a discovery signal feeding search and AI. We'll bring full spec mockups — including a structural mockup of mega-foods.com that keeps your look but fixes what's underneath — to our working session.</p>
     </div>
-    <div class="ph-grid two">
-      <div class="ph"><!-- swap-in: assets/campaign-key-visual.jpg --><span class="lbl">Campaign Key Visual</span><span class="hint">Limón Listo "Lime, Anytime" hero image / packaging mockup.</span></div>
-      <div class="ph"><!-- swap-in: assets/site-mockup.jpg --><span class="lbl">Site Mockup</span><span class="hint">Structural mockup of mega-foods.com landing experience.</span></div>
+    <div class="spec-grid">
+      <figure class="shot"><!-- swap-in: assets/campaign-key-visual.jpg -->
+        <img class="media vframe" src="/proposals/megafoods/assets/campaign-key-visual.jpg" alt="Limón Listo campaign key visual">
+        <figcaption>Campaign Key Visual<span class="sm">"Lime, Anytime" — Limón Listo</span></figcaption>
+      </figure>
+      <div class="ph"><!-- swap-in: assets/site-mockup.jpg --><span class="lbl">Site Mockup</span><span class="hint">Structural mockup of the mega-foods.com landing experience — your look, fixed underneath. Brought live to the working session.</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="divider-label">Investment</div>
-
-  <!-- ===================== PRICING ===================== -->
-  <section id="pricing">
+<!-- ===================== PRICING (light) ===================== -->
+<section class="band theme-light" id="pricing">
+  <div class="inner">
+    <div class="divider-label center">Investment</div>
     <span class="num">08 · Two Ways To Work Together</span>
     <h3 class="section-title">Social alone, or a true CPG growth partner</h3>
     <p>Here's the honest part. Your goal is <strong>sales</strong> — and social media, on its own, won't get you there. Sales come from being <em>discovered</em>: on Google, in AI answers, by wholesale buyers, and yes, on social. Those work as one connected engine (<strong>web, SEO, AEO, social, and commerce together</strong>), where social is one important piece — not the whole machine.</p>
@@ -525,10 +605,12 @@
     </div>
     <blockquote>If the goal is to <strong>make sales</strong>, the partner path is the one we'd stake our name on. Social-only is available — but we'd be doing you a disservice if we let you believe it alone moves the needle.</blockquote>
     <p class="note">Both options include the no-cost indexing fix and onboarding, and lead with your hero Chamoy brands. Month-to-month after an initial 3-month commitment, so you can see the work before committing long-term. Pricing is illustrative pending scope confirmation.</p>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== NEXT STEPS ===================== -->
-  <section id="next">
+<!-- ===================== NEXT STEPS (dark) ===================== -->
+<section class="band theme-dark" id="next">
+  <div class="inner">
     <span class="num">09 · Next Steps</span>
     <h3 class="section-title">Let's walk you through it</h3>
     <p>We'd like a short working session to present the full strategy and spec work to you and your brand &amp; marketing managers — so the <em>why</em> behind each recommendation comes through clearly, not just the line items. In the meantime, we'll send the indexing fix so you can resolve that right away.</p>
@@ -537,19 +619,23 @@
       <li><strong>Next:</strong> a 30-minute working session — full strategy + live spec mockups.</li>
       <li><strong>Then:</strong> you share with your team in Mexico; we refine scope and finalize pricing to your budget.</li>
     </ul>
-  </section>
+  </div>
+</section>
 
+<!-- ===================== CTA ===================== -->
+<section class="cta-band">
   <div class="cta">
     <h3>Let's go get the customers who haven't found you yet.</h3>
     <p>Book the working session and we'll show you exactly where Mega stands in search and AI today — and what it takes to own the chamoy and lime category.</p>
     <a class="btn" href="https://calendar.app.google/9q1mcYgEdXNyjK8G6">Book the Session</a>
     <a class="btn alt" href="sms:+12103320567">Text Beast</a>
   </div>
+</section>
 
-  <!-- ============================ APPENDIX ============================ -->
-  <div class="divider-label">Appendix · The Evidence</div>
-
-  <section id="audit">
+<!-- ===================== APPENDIX · AUDIT (light) ===================== -->
+<section class="band theme-light" id="audit">
+  <div class="inner">
+    <div class="divider-label center">Appendix · The Evidence</div>
     <span class="num">A · Website Technical Audit</span>
     <h3 class="section-title">Everything that's wrong, in black and white</h3>
     <div class="audit-intro">
@@ -664,10 +750,12 @@
       </table>
     </div>
     <p class="note">Performance figures are from direct measurement (June 2026). The panels above show the official Google PageSpeed Insights results for each site.</p>
-  </section>
+  </div>
+</section>
 
-  <!-- DEV PUNCH LIST -->
-  <section id="devlist">
+<!-- ===================== APPENDIX · DEV PUNCH LIST (dark) ===================== -->
+<section class="band theme-dark" id="devlist">
+  <div class="inner">
     <span class="num">B · Developer Punch-List</span>
     <h3 class="section-title">The exact fixes, by priority</h3>
     <div class="legend">Priority: <span class="pill p0">P0</span> do first / blocking &nbsp; <span class="pill p1">P1</span> high impact &nbsp; <span class="pill p2">P2</span> cleanup</div>
@@ -702,10 +790,12 @@
         <li><b>mega-foods.com:</b> add canonicals and fix the staging-domain identity tags.</li>
       </ol>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MARKET CONTEXT + SOURCES -->
-  <section id="market">
+<!-- ===================== APPENDIX · MARKET (light) ===================== -->
+<section class="band theme-light" id="market">
+  <div class="inner">
     <span class="num">C · Market Context</span>
     <h3 class="section-title">A strong brand in a growing market</h3>
     <table class="findings">
@@ -728,16 +818,18 @@
       <li><span class="src-pub">Mexico Business News — "The Impact of Mexico's School Junk Food Ban"</span> (NOM-051 labelling, in-school sales, excise/tax). <a href="https://mexicobusiness.news/talent/news/impact-mexicos-school-junk-food-ban">mexicobusiness.news</a></li>
       <li><span class="src-pub">Beast Creative — live technical crawl of megaalimentos.com and mega-foods.com,</span> June 2026 <span class="src-note">(primary observation; full crawl data available on request)</span>.</li>
     </ol>
-  </section>
+  </div>
+</section>
 
+<!-- ===================== FOOTER ===================== -->
+<section class="footer-band">
   <div class="footer">
     <p class="brand">BEAST<b>.</b> CREATIVE</p>
     <p>AI-powered SEO, AEO &amp; CPG marketing · San Antonio, TX · beastcreativeagency.com · (210) 332-0567</p>
     <p>Market context draws on published industry data (Euromonitor via Agriculture &amp; Agri-Food Canada, 2024–2025) and Beast Creative's June 2026 technical audit. Pricing is illustrative pending scope confirmation.</p>
-    <p><strong>Confidential</strong> · prepared for Mega Foods / Mega Alimentos.</p>
+    <p><strong style="color:#fff;">Confidential</strong> · prepared for Mega Foods / Mega Alimentos.</p>
   </div>
-
-</div>
+</section>
 
 </body>
 </html>
