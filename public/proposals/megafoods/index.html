@@ -65,6 +65,10 @@
                radial-gradient(760px 420px at 8% 120%, rgba(255,229,0,.10), transparent 60%),
                #0A0A0A;}
   .hero-inner{max-width:920px; margin:0 auto; position:relative; z-index:1;}
+  .hero-grid{display:grid; grid-template-columns:290px 1fr; gap:42px; align-items:center;}
+  .hero-img{margin:0;}
+  .hero-img img{display:block; width:100%; aspect-ratio:9/16; max-height:500px; object-fit:cover; border-radius:16px; box-shadow:0 24px 60px rgba(0,0,0,.55);}
+  @media(max-width:760px){.hero-grid{grid-template-columns:1fr; gap:26px;} .hero-img img{max-height:400px;}}
   .brandbar{display:flex; align-items:center; gap:12px; margin-bottom:30px;}
   .brandbar .logo-img{height:34px; width:auto; display:block;}
   .brandbar .x{color:#9a9a9a; font-size:13px; letter-spacing:.2em; text-transform:uppercase;}
@@ -194,6 +198,11 @@
   .spec-grid{display:grid; grid-template-columns:340px 1fr; gap:18px; margin:24px 0; align-items:stretch;}
   .spec-grid .media{width:100%; max-width:360px;}
   @media(max-width:660px){.spec-grid{grid-template-columns:1fr; justify-items:center;}}
+  /* scrollable site-mockup window (keeps page short) */
+  .mockup-wrap{max-width:480px; margin:24px auto 0;}
+  .mockup-scroll{height:520px; overflow-y:auto; border-radius:14px; border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow-img); -webkit-overflow-scrolling:touch; background:#000;}
+  .mockup-scroll img{display:block; width:100%;}
+  .mockup-cap{font-family:var(--disp); font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:12px; color:#cfcfcf; text-align:center; margin-top:10px;}
 
   /* PRICING */
   .tiers{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:26px 0;}
@@ -307,13 +316,20 @@
       <img class="logo-img" src="/assets/beast-logo.svg" alt="Beast Creative" width="120" height="53">
       <span class="x">× Mega Foods</span>
     </div>
-    <span class="kicker">Growth Proposal · Confidential</span>
-    <h1>From Social Posts to a <span class="hl">Discoverable</span> CPG Brand</h1>
-    <p class="sub">An integrated growth plan for Mega Foods in the U.S. market — built to drive recognition, wholesale demand, and real sales across La Botanera, Chamoy Mega, Chamoy Picosito, Mega Chili Powder, and the new <strong>Limón Listo</strong> line.</p>
-    <div class="meta-row">
-      <div><span>Prepared for</span><strong>Mega Foods (Mega Alimentos)<br>Attn: Elisa Campos</strong></div>
-      <div><span>Prepared by</span><strong>Beast Creative<br>San Antonio, TX</strong></div>
-      <div><span>Date</span><strong>June 2026</strong></div>
+    <div class="hero-grid">
+      <figure class="hero-img">
+        <img src="/proposals/megafoods/assets/hero.jpg" alt="Creator with Limón Listo — Lime, anytime">
+      </figure>
+      <div class="hero-content">
+        <span class="kicker">Growth Proposal · Confidential</span>
+        <h1>From Social Posts to a <span class="hl">Discoverable</span> CPG Brand</h1>
+        <p class="sub">An integrated growth plan for Mega Foods in the U.S. market — built to drive recognition, wholesale demand, and real sales across La Botanera, Chamoy Mega, Chamoy Picosito, Mega Chili Powder, and the new <strong>Limón Listo</strong> line.</p>
+        <div class="meta-row">
+          <div><span>Prepared for</span><strong>Mega Foods (Mega Alimentos)<br>Attn: Elisa Campos</strong></div>
+          <div><span>Prepared by</span><strong>Beast Creative<br>San Antonio, TX</strong></div>
+          <div><span>Date</span><strong>June 2026</strong></div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -556,12 +572,11 @@
       <p class="big">"Never run out of lime" · one creator challenge · a month of content</p>
       <p>A creator-led <em>"Lime, Anytime" Challenge</em> (this week: cucumber, mango, chamoy, and a shake of Limón Listo — make it, post it), a build-to-launch giveaway, and on-pack QR that drops shoppers onto a recipe landing page. Fans make the content, the brand makes the moment, and every entry is a discovery signal feeding search and AI. We'll bring full spec mockups — including a structural mockup of mega-foods.com that keeps your look but fixes what's underneath — to our working session.</p>
     </div>
-    <div class="spec-grid">
-      <figure class="shot"><!-- swap-in: assets/campaign-key-visual.jpg -->
-        <img class="media vframe" src="/proposals/megafoods/assets/campaign-key-visual.jpg" alt="Limón Listo campaign key visual">
-        <figcaption>Campaign Key Visual<span class="sm">"Lime, Anytime" — Limón Listo</span></figcaption>
-      </figure>
-      <div class="ph"><!-- swap-in: assets/site-mockup.jpg --><span class="lbl">Site Mockup</span><span class="hint">Structural mockup of the mega-foods.com landing experience — your look, fixed underneath. Brought live to the working session.</span></div>
+    <div class="mockup-wrap">
+      <div class="mockup-scroll">
+        <img src="/proposals/megafoods/assets/site-mockup.jpg" alt="Structural mockup of the mega-foods.com landing experience">
+      </div>
+      <p class="mockup-cap">Structural mockup · mega-foods.com — scroll to explore the full page</p>
     </div>
   </div>
 </section>

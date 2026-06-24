@@ -14,10 +14,10 @@ WIRED IN (already on the page):
   Spec concept:
     campaign-key-visual.jpg ... "Lime, Anytime" key visual
 
-STILL PENDING (currently shown as a "Preview" frame):
-  site-mockup.jpg ... structural mockup of mega-foods.com (Spec Concept section)
+  hero.jpg .............. hero image (top of page, left of the headline)
+  site-mockup.jpg ....... mega-foods.com structural mockup (Spec Concept, scrollable window)
 
-(PSI screenshot slots were removed — no screenshots available.)
+ALL SLOTS FILLED. (PSI screenshot slots were removed — no screenshots available.)
 
 To fill a pending slot: drop the file here with the exact name above, then tell
 Claude "wire up the remaining Mega Foods assets" and the preview frame is swapped
