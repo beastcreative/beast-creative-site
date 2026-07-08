@@ -339,7 +339,7 @@ export default function HomePage() {
           {/* SEO, AEO & GEO — Flagship featured card */}
           <AnimatedSection className="mb-4">
             <Link href="/services/seo-aeo" className="group block">
-              <div className="relative rounded-2xl overflow-hidden bg-beast-pink p-8 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:brightness-110 group-hover:shadow-[0_24px_60px_rgba(255,17,152,0.4)]">
+              <div className="relative rounded-2xl overflow-hidden bg-beast-pink p-8 lg:p-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-2 border-transparent transition-all duration-300 group-hover:-translate-y-1 group-hover:border-beast-yellow">
                 <div>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white border border-white/25 mb-5">
                     Get Cited by AI
