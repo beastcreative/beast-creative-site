@@ -8,6 +8,7 @@ import MagneticButton from "@/components/ui/MagneticButton";
 import ContactForm from "@/components/forms/ContactForm";
 import ClientListSection from "@/components/ui/ClientListSection";
 import IconButton from "@/components/ui/IconButton";
+import FaqAccordion from "@/components/ui/FaqAccordion";
 import InstantContact from "@/components/ui/InstantContact";
 import ReviewBadges from "@/components/ui/ReviewBadges";
 
@@ -454,28 +455,11 @@ export default function HomePage() {
               Everything You Want to Know.
             </h2>
           </AnimatedSection>
-          <div className="space-y-3">
-            {homepageFaqs.map((faq, i) => (
-              <AnimatedSection key={faq.q} delay={i * 0.06}>
-                <details className="group bg-white rounded-2xl border border-gray-100 overflow-hidden">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-display font-semibold text-beast-black text-base select-none">
-                    {faq.q}
-                    <svg
-                      className="w-5 h-5 text-beast-pink shrink-0 ml-4 transition-transform duration-200 group-open:rotate-45"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
-                    </svg>
-                  </summary>
-                  <p className="px-6 pb-6 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
-                </details>
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="bg-white rounded-2xl border border-gray-100 px-6">
+              <FaqAccordion faqs={homepageFaqs.map((f) => ({ question: f.q, answer: f.a }))} />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

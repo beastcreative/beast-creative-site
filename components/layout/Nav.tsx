@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const caseStudies = [
-  { name: "TEKSBuilder",             href: "/work/teksbuilder",      stat: "1 Week"  },
+  { name: "TEKSBuilder",             href: "/work/teksbuilder",      stat: "50+ sites" },
   { name: "Sun-Bird Seasonings",     href: "/work/sun-bird",         stat: "36,581"  },
   { name: "Williams — BTS",          href: "/work/williams-bts",     stat: "22,043"  },
   { name: "Williams — All-Stars",    href: "/work/williams-allstars",stat: "13,660"  },
