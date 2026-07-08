@@ -144,6 +144,7 @@ export default function ContactForm({
           <option>AI Content Production</option>
           <option>Branding &amp; Identity</option>
           <option>Web Design &amp; Development</option>
+          <option>App / SaaS Development</option>
           <option>Not sure — let&apos;s talk</option>
         </select>
         {errors.service && (

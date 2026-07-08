@@ -43,6 +43,7 @@ export default function Footer() {
             <h4 className="font-display text-white font-semibold text-xs tracking-widest uppercase mb-5">Services</h4>
             <ul className="space-y-3 text-sm text-gray-500">
               <li><Link href="/services/web-design" className="hover:text-beast-pink transition-colors">Web Design & Development</Link></li>
+              <li><Link href="/services/app-development" className="hover:text-beast-pink transition-colors">AI App & SaaS Development</Link></li>
               <li><Link href="/services/seo-aeo" className="hover:text-beast-pink transition-colors">SEO + AEO</Link></li>
               <li><Link href="/services/paid-media" className="hover:text-beast-pink transition-colors">Paid Media</Link></li>
               <li><Link href="/services/branding" className="hover:text-beast-pink transition-colors">Branding & Identity</Link></li>

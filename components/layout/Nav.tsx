@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const caseStudies = [
+  { name: "TEKSBuilder",             href: "/work/teksbuilder",      stat: "1 Week"  },
   { name: "Sun-Bird Seasonings",     href: "/work/sun-bird",         stat: "36,581"  },
   { name: "Williams — BTS",          href: "/work/williams-bts",     stat: "22,043"  },
   { name: "Williams — All-Stars",    href: "/work/williams-allstars",stat: "13,660"  },
@@ -17,6 +18,7 @@ const caseStudies = [
 
 const services = [
   { name: "Web Design & Development", href: "/services/web-design",                      badge: "Most Requested" },
+  { name: "AI App & SaaS Development", href: "/services/app-development",                 badge: "New" },
   { name: "SEO + AEO",               href: "/services/seo-aeo"                                                   },
   { name: "Paid Media",              href: "/services/paid-media"                                                },
   { name: "Branding & Identity",     href: "/services/branding"                                                  },

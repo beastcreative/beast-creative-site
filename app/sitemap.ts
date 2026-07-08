@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services/content-production`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/services/branding`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/services/web-design`, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/services/app-development`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/work/teksbuilder`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/work/sun-bird`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/work/williams-bts`, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/work/williams-allstars`, changeFrequency: "monthly", priority: 0.85 },

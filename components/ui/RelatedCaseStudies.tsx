@@ -89,6 +89,18 @@ const ALL_STUDIES = {
     glow: "rgba(99,102,241,0.25)",
     image: "", // add: "/assets/pioneer-hero.jpg"
   },
+  "teksbuilder": {
+    client: "TEKSBuilder",
+    campaign: "Idea to Launched SaaS in One Week",
+    stat: "1 Week",
+    statLabel: "idea to launch",
+    category: "App & SaaS Dev",
+    href: "/work/teksbuilder",
+    gradientFrom: "#0a1a18",
+    gradientTo: "#06110f",
+    glow: "rgba(0,247,99,0.22)",
+    image: "/assets/teksbuilder-og.jpg",
+  },
 };
 
 type StudyKey = keyof typeof ALL_STUDIES;

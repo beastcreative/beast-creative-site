@@ -63,6 +63,15 @@ const homepageFaqs = [
 
 const caseStudies = [
   {
+    client: "TEKSBuilder",
+    campaign: "Idea to Launched SaaS in One Week",
+    heroStat: "1 Week",
+    heroStatLabel: "idea to launched SaaS",
+    description: "We built and launched our own AI SaaS for teachers — full product, billing, and funnel — in one week, then scaled it state by state.",
+    category: "App & SaaS Dev",
+    href: "/work/teksbuilder",
+  },
+  {
     client: "Williams Foods",
     campaign: "Back-to-School Sweepstakes",
     heroStat: "22,043",
@@ -102,6 +111,11 @@ const services = [
     name: "Web Design & Development",
     desc: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-optimized. Built to rank and built to sell.",
     href: "/services/web-design",
+  },
+  {
+    name: "AI App & SaaS Development",
+    desc: "SaaS products, AI apps, and MVPs — from idea to launched product in weeks. We built TEKSBuilder, our own live SaaS, in one.",
+    href: "/services/app-development",
   },
   {
     name: "Paid Media",

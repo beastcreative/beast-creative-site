@@ -11,6 +11,22 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    client: "TEKSBuilder",
+    campaign: "Idea to Launched SaaS in One Week",
+    heroStat: "1 Week",
+    heroStatLabel: "idea to launched, revenue-ready SaaS",
+    year: "2026",
+    categories: ["App & SaaS Development", "AI Product", "Branding"],
+    href: "/work/teksbuilder",
+    image: "/assets/teksbuilder-og.jpg",
+    highlight: true,
+    stats: [
+      { label: "Build", value: "7 days", sub: "idea → live" },
+      { label: "Types", value: "6", sub: "× 4 reading levels" },
+      { label: "Standards", value: "K–12", sub: "every subject" },
+    ],
+  },
+  {
     client: "Sun-Bird Seasonings",
     campaign: "Bird Herd — National Walmart Rollout Campaign",
     heroStat: "36,581",
