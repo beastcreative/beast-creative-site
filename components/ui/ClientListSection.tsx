@@ -18,7 +18,7 @@ const clients: Client[] = [
   { name: "Sweet Sensi", logo: { src: "/assets/logos/sweetsensi.png", width: 757, height: 150 }, href: "/work/sweet-sensi" },
   { name: "Coinline", logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 }, href: "/work/coinline" },
   { name: "Pioneer", logo: { src: "/assets/logos/pioneer.png", width: 182, height: 117 }, href: "/work/pioneer" },
-  { name: "RFSA", logo: { src: "/assets/logos/rfsa.png", width: 495, height: 150 } },
+  { name: "TEKSBuilder", logo: { src: "/assets/logos/teksbuilder.png", width: 1000, height: 135 }, href: "/work/teksbuilder" },
 ];
 
 const services = [
