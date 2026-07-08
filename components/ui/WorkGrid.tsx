@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 interface Stat {
@@ -20,6 +21,10 @@ interface CaseStudy {
   href: string;
   highlight: boolean;
   stats: Stat[];
+  image?: string;
+  gradientFrom?: string;
+  gradientTo?: string;
+  logo?: { src: string; width: number; height: number };
 }
 
 const FILTERS = ["All", "CPG Marketing", "Branding", "SEO", "Paid Media"];
@@ -64,13 +69,43 @@ export default function WorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
               <AnimatedSection key={cs.href} delay={i * 0.08}>
                 <Link href={cs.href} className="group block h-full">
                   <article className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+                    {/* Visual banner */}
+                    <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                      {cs.image ? (
+                        <Image
+                          src={cs.image}
+                          alt={`${cs.client} — ${cs.campaign}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div
+                          className="absolute inset-0 flex items-center justify-center"
+                          style={{
+                            background: `linear-gradient(135deg, ${cs.gradientFrom ?? "#171717"} 0%, ${cs.gradientTo ?? "#0a0a0a"} 100%)`,
+                          }}
+                        >
+                          {cs.logo && (
+                            <Image
+                              src={cs.logo.src}
+                              alt={`${cs.client} logo`}
+                              width={cs.logo.width}
+                              height={cs.logo.height}
+                              className="h-auto w-auto max-h-11 max-w-[55%] object-contain opacity-90 transition-transform duration-500 group-hover:scale-105"
+                            />
+                          )}
+                        </div>
+                      )}
+                      {/* Year badge */}
+                      <span className="absolute top-3 right-3 text-[11px] font-bold uppercase tracking-widest text-white bg-black/45 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/10">
+                        {cs.year}
+                      </span>
+                    </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <div className="flex items-start justify-between mb-3">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-beast-pink">
-                          {cs.client}
-                        </p>
-                        <span className="text-xs text-gray-400">{cs.year}</span>
-                      </div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-beast-pink mb-3">
+                        {cs.client}
+                      </p>
                       <h3 className="font-display text-lg font-bold text-beast-black mb-4 leading-tight">
                         {cs.campaign}
                       </h3>

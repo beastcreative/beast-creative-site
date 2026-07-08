@@ -18,6 +18,7 @@ const caseStudies = [
     year: "2021",
     categories: ["CPG Marketing", "Paid Social", "Sweepstakes"],
     href: "/work/sun-bird",
+    image: "/assets/sunbird-ad-green.jpg",
     highlight: true,
     stats: [
       { label: "CTR", value: "7.03%", sub: "vs 0.89% avg" },
@@ -33,6 +34,7 @@ const caseStudies = [
     year: "2021",
     categories: ["CPG Marketing", "Paid Social", "Sweepstakes"],
     href: "/work/williams-bts",
+    image: "/assets/williams-bts-hero.jpg",
     highlight: false,
     stats: [
       { label: "CTR", value: "3.89%", sub: "vs 0.89% avg" },
@@ -48,6 +50,7 @@ const caseStudies = [
     year: "2022",
     categories: ["CPG Marketing", "Campaign Design", "Paid Social"],
     href: "/work/williams-allstars",
+    image: "/assets/allstars-ad-announcement.png",
     highlight: false,
     stats: [
       { label: "Reach", value: "200K", sub: "total" },
@@ -63,6 +66,7 @@ const caseStudies = [
     year: "2023–2024",
     categories: ["SEO", "Social Media", "E-Commerce"],
     href: "/work/sweet-sensi",
+    image: "/assets/sweet-sensi-gummies.jpg",
     highlight: false,
     stats: [
       { label: "Strategy", value: "SEO", sub: "+ Social" },
@@ -78,6 +82,10 @@ const caseStudies = [
     year: "2022",
     categories: ["Branding", "Naming", "Identity Design"],
     href: "/work/coinline",
+    image: "",
+    gradientFrom: "#1a0a14",
+    gradientTo: "#10060d",
+    logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 },
     highlight: false,
     stats: [
       { label: "Name", value: "1", sub: "perfect" },
@@ -93,6 +101,7 @@ const caseStudies = [
     year: "2021",
     categories: ["CPG Marketing", "Paid Social"],
     href: "/work/williams-bowl",
+    image: "/assets/williams-bowl-banner.jpg",
     highlight: false,
     stats: [
       { label: "Budget", value: "$1.5K", sub: "ad spend" },
@@ -108,6 +117,10 @@ const caseStudies = [
     year: "Ongoing",
     categories: ["Paid Media", "Performance Marketing", "Facebook Ads"],
     href: "/work/pioneer",
+    image: "",
+    gradientFrom: "#0a0a1a",
+    gradientTo: "#060612",
+    logo: { src: "/assets/logos/pioneer.png", width: 182, height: 117 },
     highlight: false,
     stats: [
       { label: "CTR", value: "7.03%", sub: "benchmark" },
