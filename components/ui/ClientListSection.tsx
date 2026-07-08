@@ -15,8 +15,8 @@ const clients: Client[] = [
   { name: "Sun-Bird Seasonings", logo: { src: "/assets/logos/sunbird.png", width: 274, height: 150 } },
   { name: "Sweet Sensi", logo: { src: "/assets/logos/sweetsensi.png", width: 757, height: 150 } },
   { name: "Coinline", logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 } },
-  { name: "Pioneer" },
-  { name: "RFSA" },
+  { name: "Pioneer", logo: { src: "/assets/logos/pioneer.png", width: 182, height: 117 } },
+  { name: "RFSA", logo: { src: "/assets/logos/rfsa.png", width: 495, height: 150 } },
 ];
 
 const services = [
