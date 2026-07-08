@@ -289,14 +289,14 @@ export default function TeksbuilderPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
             <AnimatedSection>
-              <div className="rounded-2xl overflow-hidden border border-light-border" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
-                <Image src="/assets/teksbuilder-resources.jpg" alt="TEKSBuilder — six resource types, all mapped to the standard" width={2000} height={1111} className="w-full h-auto" />
+              <div className="rounded-2xl overflow-hidden border border-light-border aspect-[16/10]" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+                <Image src="/assets/teksbuilder-resources.jpg" alt="TEKSBuilder — six resource types, all mapped to the standard" width={2000} height={1111} className="w-full h-full object-cover" />
               </div>
               <p className="text-sm text-gray-500 mt-3">Six resource types — worksheets to stations — every one mapped to the standard.</p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <div className="rounded-2xl overflow-hidden border border-light-border" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
-                <Image src="/assets/teksbuilder-differentiation.jpg" alt="TEKSBuilder — every resource in four reading levels" width={2000} height={958} className="w-full h-auto" />
+              <div className="rounded-2xl overflow-hidden border border-light-border aspect-[16/10]" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+                <Image src="/assets/teksbuilder-differentiation.jpg" alt="TEKSBuilder — every resource in four reading levels" width={2000} height={958} className="w-full h-full object-cover" />
               </div>
               <p className="text-sm text-gray-500 mt-3">The killer feature — every resource ships in four reading levels, one click.</p>
             </AnimatedSection>
