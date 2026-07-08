@@ -29,7 +29,7 @@ const services = [
   "Branding & Identity",
   "Web Design & CRO",
   "Social Media",
-  "Email Marketing",
+  "App & SaaS Development",
   "Other",
 ];
 
