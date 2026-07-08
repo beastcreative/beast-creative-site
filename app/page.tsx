@@ -344,7 +344,7 @@ export default function HomePage() {
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white border border-white/25 mb-5">
                     Get Cited by AI
                   </span>
-                  <div aria-hidden="true" className="font-display text-8xl lg:text-[10rem] font-black text-white/10 leading-none -mb-2 select-none">01</div>
+                  <div aria-hidden="true" className="font-display text-8xl lg:text-[10rem] font-black text-beast-black leading-none -mb-2 select-none">01</div>
                   <h3 className="font-display text-3xl lg:text-5xl font-black text-white leading-tight">SEO, AEO &amp; GEO</h3>
                 </div>
                 <div className="lg:max-w-sm shrink-0">
