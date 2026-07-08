@@ -198,7 +198,7 @@ export default function AppDevelopmentPage() {
                 <ul className="space-y-4">
                   {oldWay.map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                      <span className="text-gray-400 font-bold shrink-0" aria-hidden="true">✕</span>
+                      <span className="text-beast-black font-bold shrink-0" aria-hidden="true">✕</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -211,7 +211,7 @@ export default function AppDevelopmentPage() {
                 <ul className="space-y-4">
                   {beastWay.map((item) => (
                     <li key={item} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
-                      <svg className="w-4 h-4 text-beast-green shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                      <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                       <span>{item}</span>
                     </li>
                   ))}
