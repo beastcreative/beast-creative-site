@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GetStartedModal from "@/components/ui/GetStartedModal";
 import IconButton from "@/components/ui/IconButton";
 
 type Client = {
   name: string;
   logo?: { src: string; width: number; height: number };
+  href?: string;
 };
 
 const clients: Client[] = [
-  { name: "Williams Foods", logo: { src: "/assets/logos/williams.png", width: 669, height: 150 } },
-  { name: "Sun-Bird Seasonings", logo: { src: "/assets/logos/sunbird.png", width: 274, height: 150 } },
-  { name: "Sweet Sensi", logo: { src: "/assets/logos/sweetsensi.png", width: 757, height: 150 } },
-  { name: "Coinline", logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 } },
-  { name: "Pioneer", logo: { src: "/assets/logos/pioneer.png", width: 182, height: 117 } },
+  { name: "Williams Foods", logo: { src: "/assets/logos/williams.png", width: 669, height: 150 }, href: "/work/williams-bts" },
+  { name: "Sun-Bird Seasonings", logo: { src: "/assets/logos/sunbird.png", width: 274, height: 150 }, href: "/work/sun-bird" },
+  { name: "Sweet Sensi", logo: { src: "/assets/logos/sweetsensi.png", width: 757, height: 150 }, href: "/work/sweet-sensi" },
+  { name: "Coinline", logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 }, href: "/work/coinline" },
+  { name: "Pioneer", logo: { src: "/assets/logos/pioneer.png", width: 182, height: 117 }, href: "/work/pioneer" },
   { name: "RFSA", logo: { src: "/assets/logos/rfsa.png", width: 495, height: 150 } },
 ];
 
@@ -51,27 +53,37 @@ export default function ClientListSection() {
               <p className="section-eyebrow text-gray-600 mb-3">Client List</p>
               <h2 className="font-display text-3xl font-bold text-white mb-6">Proven. Not Promised.</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
-                {clients.map((client) => (
-                  <div
-                    key={client.name}
-                    className="group bg-beast-black flex flex-col items-center justify-center gap-3 px-4 py-7 hover:bg-white/5 transition-colors"
-                  >
-                    {client.logo && (
-                      <div className="flex items-center justify-center h-8 sm:h-9">
-                        <Image
-                          src={client.logo.src}
-                          alt={`${client.name} logo`}
-                          width={client.logo.width}
-                          height={client.logo.height}
-                          className="h-auto w-auto max-h-8 max-w-[110px] sm:max-h-9 sm:max-w-[140px] object-contain opacity-55 group-hover:opacity-85 transition-opacity"
-                        />
-                      </div>
-                    )}
-                    <span className="font-display font-bold text-sm text-white/40 group-hover:text-white/70 transition-colors text-center leading-tight">
-                      {client.name}
-                    </span>
-                  </div>
-                ))}
+                {clients.map((client) => {
+                  const tileClass =
+                    "group bg-beast-black flex flex-col items-center justify-center gap-3 px-4 py-7 hover:bg-white/5 transition-colors";
+                  const inner = (
+                    <>
+                      {client.logo && (
+                        <div className="flex items-center justify-center h-8 sm:h-9">
+                          <Image
+                            src={client.logo.src}
+                            alt={`${client.name} logo`}
+                            width={client.logo.width}
+                            height={client.logo.height}
+                            className="h-auto w-auto max-h-8 max-w-[110px] sm:max-h-9 sm:max-w-[140px] object-contain opacity-55 group-hover:opacity-85 transition-opacity"
+                          />
+                        </div>
+                      )}
+                      <span className="font-display font-bold text-sm text-white/40 group-hover:text-white/70 transition-colors text-center leading-tight">
+                        {client.name}
+                      </span>
+                    </>
+                  );
+                  return client.href ? (
+                    <Link key={client.name} href={client.href} aria-label={`View ${client.name} case study`} className={tileClass}>
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div key={client.name} className={tileClass}>
+                      {inner}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
