@@ -50,7 +50,7 @@ export default function ClientListSection() {
 
             {/* Left — client grid */}
             <div>
-              <p className="section-eyebrow text-gray-600 mb-3">Client List</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">Client List</p>
               <h2 className="font-display text-3xl font-bold text-white mb-6">Proven. Not Promised.</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {clients.map((client) => {
@@ -99,7 +99,7 @@ export default function ClientListSection() {
 
             {/* Right — service selector */}
             <div>
-              <p className="section-eyebrow text-gray-600 mb-3">What can we help with?</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">What can we help with?</p>
               <h2 className="font-display text-3xl font-bold text-white mb-6">
                 Select Your Services.
               </h2>
