@@ -364,7 +364,7 @@ export default function HomePage() {
             {services.slice(1).map((svc, i) => (
               <AnimatedSection key={svc.href} delay={(i + 1) * 0.07}>
                 <Link href={svc.href} className="group block h-full">
-                  <div className="h-full p-6 rounded-2xl bg-dark-surface border border-dark-border hover:border-beast-pink/40 hover:bg-near-black transition-all duration-300 flex flex-col">
+                  <div className="h-full p-6 rounded-2xl bg-dark-surface border border-dark-border hover:border-beast-pink/40 hover:bg-near-black hover:-translate-y-1 transition-all duration-300 flex flex-col">
                     <div aria-hidden="true" className="font-display text-5xl font-black text-beast-yellow leading-none mb-4 select-none">
                       0{i + 2}
                     </div>
