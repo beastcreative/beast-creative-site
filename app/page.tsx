@@ -277,7 +277,7 @@ export default function HomePage() {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
             {caseStudies.map((cs, i) => (
               <AnimatedSection key={cs.href} delay={i * 0.1} className="h-full">
                 <Link href={cs.href} className="group block h-full">
