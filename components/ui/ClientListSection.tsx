@@ -52,34 +52,44 @@ export default function ClientListSection() {
             <div>
               <p className="section-eyebrow text-gray-600 mb-3">Client List</p>
               <h2 className="font-display text-3xl font-bold text-white mb-6">Proven. Not Promised.</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {clients.map((client) => {
-                  const tileClass =
-                    "group bg-beast-black flex flex-col items-center justify-center gap-3 px-4 py-7 hover:bg-white/5 transition-colors";
                   const inner = (
-                    <>
-                      {client.logo && (
-                        <div className="flex items-center justify-center h-8 sm:h-9">
-                          <Image
-                            src={client.logo.src}
-                            alt={`${client.name} logo`}
-                            width={client.logo.width}
-                            height={client.logo.height}
-                            className="h-auto w-auto max-h-8 max-w-[110px] sm:max-h-9 sm:max-w-[140px] object-contain opacity-55 group-hover:opacity-85 transition-opacity"
-                          />
+                    <div
+                      className="rc-wrap group block h-full"
+                      onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        e.currentTarget.style.setProperty("--x", `${e.clientX - rect.left}px`);
+                        e.currentTarget.style.setProperty("--y", `${e.clientY - rect.top}px`);
+                      }}
+                    >
+                      <div className="rc-card flex flex-col items-center justify-center gap-3 px-4 py-8 min-h-[128px]">
+                        <div className="rc-glow" />
+                        <div className="relative z-10 flex flex-col items-center gap-3">
+                          {client.logo && (
+                            <div className="flex items-center justify-center h-8 sm:h-9">
+                              <Image
+                                src={client.logo.src}
+                                alt={`${client.name} logo`}
+                                width={client.logo.width}
+                                height={client.logo.height}
+                                className="h-auto w-auto max-h-8 max-w-[110px] sm:max-h-9 sm:max-w-[140px] object-contain opacity-55 group-hover:opacity-85 transition-opacity"
+                              />
+                            </div>
+                          )}
+                          <span className="font-display font-bold text-sm text-white/40 group-hover:text-white/70 transition-colors text-center leading-tight">
+                            {client.name}
+                          </span>
                         </div>
-                      )}
-                      <span className="font-display font-bold text-sm text-white/40 group-hover:text-white/70 transition-colors text-center leading-tight">
-                        {client.name}
-                      </span>
-                    </>
+                      </div>
+                    </div>
                   );
                   return client.href ? (
-                    <Link key={client.name} href={client.href} aria-label={`View ${client.name} case study`} className={tileClass}>
+                    <Link key={client.name} href={client.href} aria-label={`View ${client.name} case study`} className="block h-full">
                       {inner}
                     </Link>
                   ) : (
-                    <div key={client.name} className={tileClass}>
+                    <div key={client.name} className="h-full">
                       {inner}
                     </div>
                   );
