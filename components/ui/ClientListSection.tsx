@@ -1,16 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import GetStartedModal from "@/components/ui/GetStartedModal";
 import IconButton from "@/components/ui/IconButton";
 
-const clients = [
-  "Williams Foods",
-  "Sun-Bird Seasonings",
-  "Sweet Sensi",
-  "Coinline",
-  "Pioneer",
-  "RFSA",
+type Client = {
+  name: string;
+  logo?: { src: string; width: number; height: number };
+};
+
+const clients: Client[] = [
+  { name: "Williams Foods", logo: { src: "/assets/logos/williams.png", width: 669, height: 150 } },
+  { name: "Sun-Bird Seasonings", logo: { src: "/assets/logos/sunbird.png", width: 274, height: 150 } },
+  { name: "Sweet Sensi", logo: { src: "/assets/logos/sweetsensi.png", width: 757, height: 150 } },
+  { name: "Coinline", logo: { src: "/assets/logos/coinline.png", width: 524, height: 90 } },
+  { name: "Pioneer" },
+  { name: "RFSA" },
 ];
 
 const services = [
@@ -47,11 +53,22 @@ export default function ClientListSection() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-xl overflow-hidden">
                 {clients.map((client) => (
                   <div
-                    key={client}
-                    className="bg-beast-black flex items-center justify-center px-4 py-7 hover:bg-white/5 transition-colors"
+                    key={client.name}
+                    className="group bg-beast-black flex flex-col items-center justify-center gap-3 px-4 py-7 hover:bg-white/5 transition-colors"
                   >
-                    <span className="font-display font-bold text-lg text-white/50 hover:text-white/80 transition-colors text-center leading-tight">
-                      {client}
+                    {client.logo && (
+                      <div className="flex items-center justify-center h-8 sm:h-9">
+                        <Image
+                          src={client.logo.src}
+                          alt={`${client.name} logo`}
+                          width={client.logo.width}
+                          height={client.logo.height}
+                          className="h-auto w-auto max-h-8 max-w-[110px] sm:max-h-9 sm:max-w-[140px] object-contain opacity-55 group-hover:opacity-85 transition-opacity"
+                        />
+                      </div>
+                    )}
+                    <span className="font-display font-bold text-sm text-white/40 group-hover:text-white/70 transition-colors text-center leading-tight">
+                      {client.name}
                     </span>
                   </div>
                 ))}
