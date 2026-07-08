@@ -226,7 +226,7 @@ export default function Nav() {
             <div className="w-px h-4 bg-white/15 mx-1 shrink-0" />
 
             <Link href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0 ml-1 !py-2.5 !px-5 !text-[10px] !tracking-[2px] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
-              See Where You Stand
+              Free 15min Strategy Call
             </Link>
         </nav>
       </div>
@@ -350,7 +350,7 @@ export default function Nav() {
 
           <div className="mt-10 space-y-4">
             <Link href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" className="btn-yellow w-full justify-center !py-4 !px-6 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
-              See Where You Stand in AI Search
+              Free 15min Strategy Call
             </Link>
             <a href="sms:+12103320567" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">(210) 332-0567 — text or call</a>
           </div>
