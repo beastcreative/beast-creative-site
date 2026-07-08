@@ -18,7 +18,7 @@ const caseStudies = [
 
 const services = [
   { name: "Web Design & Development", href: "/services/web-design",                      badge: "Most Requested" },
-  { name: "AI App & SaaS Development", href: "/services/app-development",                 badge: "New" },
+  { name: "AI App & SaaS Development", href: "/services/app-development" },
   { name: "SEO + AEO",               href: "/services/seo-aeo"                                                   },
   { name: "Paid Media",              href: "/services/paid-media"                                                },
   { name: "Branding & Identity",     href: "/services/branding"                                                  },
