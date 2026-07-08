@@ -99,7 +99,7 @@ const ALL_STUDIES = {
     gradientFrom: "#0a1a18",
     gradientTo: "#06110f",
     glow: "rgba(0,247,99,0.22)",
-    image: "/assets/teksbuilder-og.jpg",
+    image: "/assets/teksbuilder-hero.jpg",
   },
 };
 

@@ -18,7 +18,7 @@ const caseStudies = [
     year: "2026",
     categories: ["App & SaaS Development", "AI Product", "Branding"],
     href: "/work/teksbuilder",
-    image: "/assets/teksbuilder-og.jpg",
+    image: "/assets/teksbuilder-hero.jpg",
     highlight: true,
     stats: [
       { label: "Build", value: "7 days", sub: "idea → live" },

@@ -260,10 +260,10 @@ export default function AppDevelopmentPage() {
             <AnimatedSection>
               <div className="rounded-2xl overflow-hidden border border-gray-100" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
                 <Image
-                  src="/assets/teksbuilder-og.jpg"
+                  src="/assets/teksbuilder-hero.jpg"
                   alt="TEKSBuilder — AI resource generator for teachers, built and launched by Beast Creative"
-                  width={1200}
-                  height={630}
+                  width={2000}
+                  height={937}
                   className="w-full h-auto"
                 />
               </div>

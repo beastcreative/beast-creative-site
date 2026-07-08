@@ -17,7 +17,7 @@ const articleSchema = {
   headline: "TEKSBuilder — Idea to Launched SaaS in One Week",
   description:
     "How Beast Creative Agency built and launched TEKSBuilder, an AI resource generator for teachers, from idea to live SaaS in one week — then scaled it into a network of state-specific platforms.",
-  image: "https://beastcreativeagency.com/assets/teksbuilder-og.jpg",
+  image: "https://beastcreativeagency.com/assets/teksbuilder-hero.jpg",
   author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
   publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
   about: {
@@ -104,12 +104,12 @@ export default function TeksbuilderPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.15} className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-lg rounded-2xl overflow-hidden border border-white/10" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+              <div className="w-full max-w-xl rounded-2xl overflow-hidden border border-white/10" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
                 <Image
-                  src="/assets/teksbuilder-og.jpg"
-                  alt="TEKSBuilder — AI resource generator for teachers"
-                  width={1200}
-                  height={630}
+                  src="/assets/teksbuilder-hero.jpg"
+                  alt="TEKSBuilder homepage — turn any standard into a print-ready, differentiated worksheet in seconds"
+                  width={2000}
+                  height={937}
                   className="w-full h-auto"
                   priority
                 />
@@ -266,6 +266,48 @@ export default function TeksbuilderPage() {
               </AnimatedSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PRODUCT SHOWCASE */}
+      <section className="bg-white py-16 lg:py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-20">
+          <AnimatedSection>
+            <p className="section-eyebrow text-beast-pink mb-2">Inside the Product</p>
+            <h2 className="font-display text-3xl lg:text-4xl font-bold text-beast-black mb-4">See It Live.</h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl mb-12">
+              Not a mockup — this is the shipped product, live now at teksbuilder.com. Standard to printout in four clicks, six resource types, four reading levels, and a full pricing funnel.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden border border-light-border" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+              <Image src="/assets/teksbuilder-flow.jpg" alt="TEKSBuilder — from standard to printout in four clicks" width={2000} height={1139} className="w-full h-auto" />
+            </div>
+            <p className="text-sm text-gray-500 mt-3">From standard to printout in four clicks — no prompt-writing, no blank page at 9pm.</p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+            <AnimatedSection>
+              <div className="rounded-2xl overflow-hidden border border-light-border h-full" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+                <Image src="/assets/teksbuilder-resources.jpg" alt="TEKSBuilder — six resource types, all mapped to the standard" width={2000} height={1111} className="w-full h-auto" />
+              </div>
+              <p className="text-sm text-gray-500 mt-3">Six resource types — worksheets to stations — every one mapped to the standard.</p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div className="rounded-2xl overflow-hidden border border-light-border h-full" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+                <Image src="/assets/teksbuilder-differentiation.jpg" alt="TEKSBuilder — every resource in four reading levels" width={2000} height={958} className="w-full h-auto" />
+              </div>
+              <p className="text-sm text-gray-500 mt-3">The killer feature — every resource ships in four reading levels, one click.</p>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection>
+            <div className="rounded-2xl overflow-hidden border border-light-border mt-8" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
+              <Image src="/assets/teksbuilder-pricing.jpg" alt="TEKSBuilder pricing — free tier, teacher and school plans" width={2000} height={1229} className="w-full h-auto" />
+            </div>
+            <p className="text-sm text-gray-500 mt-3">Launched with its funnel built in — free tier, teacher and school pricing on day one.</p>
+          </AnimatedSection>
         </div>
       </section>
 
