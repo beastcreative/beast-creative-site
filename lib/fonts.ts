@@ -1,4 +1,4 @@
-import { Barlow_Condensed, Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Barlow_Condensed, Inter, JetBrains_Mono } from "next/font/google";
 
 export const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -21,15 +21,5 @@ export const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-mono-brand",
-  display: "swap",
-});
-
-// Scoped serif accent for the /redesign-2 "Screening Room" route only.
-// The variable class is applied on that page's root div — layout.tsx untouched.
-export const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-serif-accent",
   display: "swap",
 });
