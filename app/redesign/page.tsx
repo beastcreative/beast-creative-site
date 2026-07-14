@@ -10,6 +10,7 @@ import ReviewBadges from "@/components/ui/ReviewBadges";
 import IconButton from "@/components/ui/IconButton";
 import Reveal from "@/components/redesign/Reveal";
 import SystemBar from "@/components/redesign/SystemBar";
+import HeroProof from "@/components/redesign/HeroProof";
 
 export const metadata: Metadata = {
   title: "Redesign Preview — Beast Creative",
@@ -187,10 +188,10 @@ export default function RedesignPage() {
         <span className="led-cross text-black/30" style={{ top: 96, left: 24 }} aria-hidden="true" />
         <span className="led-cross text-black/30" style={{ top: 96, right: 24 }} aria-hidden="true" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-20 lg:pt-36 lg:pb-24">
+        <div className="relative mx-auto w-full max-w-7xl px-6 pt-28 pb-12 lg:px-20 lg:pt-32 lg:pb-16">
           <SystemBar />
 
-          <div className="mt-10 grid grid-cols-1 items-center gap-12 lg:mt-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="mt-8 grid grid-cols-1 items-center gap-12 lg:mt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             {/* Left — copy (rendered static: above the fold, best LCP) */}
             <div>
               <Label>San Antonio SEO · AEO · GEO Agency</Label>
@@ -223,31 +224,9 @@ export default function RedesignPage() {
               </div>
             </div>
 
-            {/* Right — floating proof-card stack (the signature visual) */}
+            {/* Right — floating proof-card stack with pointer parallax (signature visual) */}
             <div className="hidden lg:block">
-              <div className="relative mx-auto aspect-square w-full max-w-md">
-                <span className="led-cross text-black/25" style={{ top: 0, right: 0 }} aria-hidden="true" />
-                <span className="led-cross text-black/25" style={{ bottom: 0, left: 0 }} aria-hidden="true" />
-
-                {/* big ghost number */}
-                <div className="led-ghost absolute -right-2 top-2 text-[9rem] text-black/[0.05]">7x</div>
-
-                {/* dark receipt card */}
-                <div className="led-float-a absolute left-2 top-10 w-60 rounded-2xl border border-white/10 bg-beast-black p-6 shadow-[0_24px_60px_rgba(0,0,0,0.28)]">
-                  <p className="led-label text-white/45">Receipt · Sun-Bird</p>
-                  <p className="mt-4 font-display text-6xl font-black leading-none text-beast-yellow">7.03%</p>
-                  <p className="mt-2 text-xs text-white/55">CTR vs 0.89% industry avg</p>
-                  <div className="mt-4 h-px w-full bg-white/10" />
-                  <p className="led-label mt-3 text-beast-green">● verified client</p>
-                </div>
-
-                {/* pink accent card */}
-                <div className="led-float-b absolute bottom-8 right-0 w-52 rounded-2xl bg-beast-pink p-6 shadow-[0_24px_60px_rgba(255,17,152,0.30)]">
-                  <p className="led-label text-white/70">Emails collected</p>
-                  <p className="mt-3 font-display text-5xl font-black leading-none text-white">36,581</p>
-                  <p className="mt-2 text-xs font-medium text-white/85">on a $6,000 budget</p>
-                </div>
-              </div>
+              <HeroProof />
             </div>
 
             {/* Mobile proof row (compact) */}
@@ -264,32 +243,33 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 2 · THE RECEIPTS (dark stats) ═══ */}
-      <section className="relative overflow-hidden bg-beast-black py-16 text-white lg:py-24">
+      <section className="relative overflow-hidden bg-beast-black py-14 text-white lg:py-20">
         <div
           className="pointer-events-none absolute inset-0"
           aria-hidden="true"
-          style={{ background: "radial-gradient(60% 60% at 50% 0%, rgba(255,17,152,0.10) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(65% 70% at 50% 0%, rgba(255,17,152,0.12) 0%, transparent 65%)" }}
         />
         <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-20">
-          <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4 border-b led-rule-dark pb-6">
+          <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b led-rule-dark pb-6">
             <div>
               <Label dark>The Receipts</Label>
-              <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-none tracking-tight lg:text-5xl">
-                Real Numbers. Named Clients.
+              <h2 className="mt-4 font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight lg:text-6xl">
+                Real Numbers.{" "}
+                <span className="text-beast-yellow">Named Clients.</span>
               </h2>
             </div>
             <p className="led-label text-white/40">No projections · No anonymous case studies</p>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border led-rule-dark bg-white/5 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border led-rule-dark bg-white/[0.07] lg:grid-cols-4">
             {[
-              { node: <StatCounter value={36581} label="Contest Entries" sublabel="vs 10K goal — 3.6x" valueClassName="text-beast-yellow" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "01" },
-              { node: <StatCounter value={7.03} suffix="%" decimals={2} label="CTR Achieved" sublabel="vs 0.89% industry avg" valueClassName="text-beast-yellow" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "02" },
-              { node: <StatCounter value={0.12} prefix="$" decimals={2} label="Cost Per Click" sublabel="vs $0.28 industry avg" valueClassName="text-beast-yellow" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "03" },
-              { node: <StatCounter value={500} suffix="%+" label="MRR Growth" sublabel="Sweet Sensi" valueClassName="text-beast-yellow" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "04" },
+              { node: <StatCounter value={36581} label="Contest Entries" sublabel="vs 10K goal — 3.6x" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "01" },
+              { node: <StatCounter value={7.03} suffix="%" decimals={2} label="CTR Achieved" sublabel="vs 0.89% industry avg" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "02" },
+              { node: <StatCounter value={0.12} prefix="$" decimals={2} label="Cost Per Click" sublabel="vs $0.28 industry avg" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "03" },
+              { node: <StatCounter value={500} suffix="%+" label="MRR Growth" sublabel="Sweet Sensi" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "04" },
             ].map((s, i) => (
-              <Reveal key={s.idx} delay={i * 80} className="relative bg-beast-black p-7 lg:p-9">
-                <span className="led-label absolute right-4 top-4 text-white/25">[{s.idx}]</span>
+              <Reveal key={s.idx} delay={i * 70} className="group relative bg-beast-black px-6 py-9 transition-colors duration-300 hover:bg-white/[0.03] lg:py-11">
+                <span className="led-label absolute right-4 top-4 text-white/25 transition-colors duration-300 group-hover:text-beast-pink">[{s.idx}]</span>
                 {s.node}
               </Reveal>
             ))}
@@ -322,7 +302,7 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 4 · WHO WE ARE (light, ghost type) ═══ */}
-      <section className="relative overflow-hidden bg-white py-16 lg:py-28">
+      <section className="relative overflow-hidden bg-white py-14 lg:py-20">
         <div className="led-ghost pointer-events-none absolute -top-4 left-0 w-full select-none text-center text-[22vw] leading-none text-black/[0.035] lg:text-[16rem]" aria-hidden="true">
           BEAST
         </div>
@@ -372,9 +352,9 @@ export default function RedesignPage() {
       <ReviewBadges />
 
       {/* ═══ 6 · WORK (dark, numbered image cards) ═══ */}
-      <section className="bg-beast-black py-16 text-white lg:py-24">
+      <section className="bg-beast-black py-14 text-white lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-20">
-          <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6 border-b led-rule-dark pb-6">
+          <Reveal className="mb-8 flex flex-wrap items-end justify-between gap-6 border-b led-rule-dark pb-6">
             <div>
               <Label dark>Proven Results</Label>
               <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-none tracking-tight lg:text-6xl">
@@ -437,7 +417,7 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 7 · SERVICES (light, big ghost numbers) ═══ */}
-      <section className="bg-off-white py-16 lg:py-28">
+      <section className="bg-off-white py-14 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-20">
           <Reveal className="mb-10">
             <Label>What We Do</Label>
@@ -494,7 +474,7 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 8 · THE SHIFT / GOOGLE ZERO (dark editorial) ═══ */}
-      <section className="relative overflow-hidden bg-beast-black py-20 text-white lg:py-32">
+      <section className="relative overflow-hidden bg-beast-black py-16 text-white lg:py-24">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(ellipse 55% 55% at 50% 45%, rgba(255,17,152,0.10) 0%, transparent 70%)" }} />
         <span className="led-cross text-white/20" style={{ top: 40, left: 40 }} aria-hidden="true" />
         <span className="led-cross text-white/20" style={{ bottom: 40, right: 40 }} aria-hidden="true" />
@@ -519,7 +499,7 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 9 · CPG CALLOUT (light, green accent) ═══ */}
-      <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+      <section className="relative overflow-hidden bg-white py-14 lg:py-20">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(50% 60% at 80% 20%, rgba(0,247,99,0.08) 0%, transparent 60%)" }} />
         <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-20">
           <Reveal>
@@ -539,9 +519,9 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 10 · PROCESS (light, numbered) ═══ */}
-      <section className="bg-off-white py-16 lg:py-28">
+      <section className="bg-off-white py-14 lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-20">
-          <Reveal className="mb-12 border-b led-rule pb-6">
+          <Reveal className="mb-8 border-b led-rule pb-6">
             <Label>How We Work</Label>
             <h2 className="mt-4 font-display text-4xl font-bold uppercase tracking-tight text-beast-black lg:text-6xl">
               Four Steps to Data-Driven Results.
@@ -561,9 +541,9 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 11 · FAQ (light accordion) ═══ */}
-      <section className="border-t led-rule bg-white py-16 lg:py-24">
+      <section className="border-t led-rule bg-white py-14 lg:py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-20">
-          <Reveal className="mb-12 text-center">
+          <Reveal className="mb-8 text-center">
             <div className="flex justify-center"><Label>Common Questions</Label></div>
             <h2 className="mt-4 font-display text-4xl font-bold uppercase tracking-tight text-beast-black lg:text-5xl">
               Everything You Want to Know.
@@ -578,7 +558,7 @@ export default function RedesignPage() {
       </section>
 
       {/* ═══ 12 · FINAL CTA + CONTACT (dark) ═══ */}
-      <section className="bg-near-black py-16 text-white lg:py-24">
+      <section className="bg-near-black py-14 text-white lg:py-20">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-20">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
             <Reveal>

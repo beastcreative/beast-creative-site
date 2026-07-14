@@ -34,9 +34,9 @@ export default function Reveal({ children, delay = 0, className = "", as: Tag = 
           io.disconnect();
         }
       },
-      // Pre-trigger ~20% below the viewport so sections finish revealing
+      // Pre-trigger ~28% below the viewport so sections finish revealing
       // before they scroll into view — no blank-on-arrival, even on fast scroll.
-      { threshold: 0, rootMargin: "0px 0px 20% 0px" },
+      { threshold: 0, rootMargin: "0px 0px 28% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
