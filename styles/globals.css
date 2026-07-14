@@ -752,3 +752,167 @@ select.form-input option {
   animation: led-marquee 38s linear infinite;
 }
 .led-marquee-track:hover { animation-play-state: paused; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   REDESIGN 2 — "The Screening Room" (scoped to /redesign-2, additive)
+   Every selector is namespaced (.screening / .scr-*). Existing pages
+   and the /redesign "Ledger" block are untouched.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Serif accent voice (Instrument Serif, 400 only) */
+.scr-serif {
+  font-family: var(--font-serif-accent), Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.96em;           /* optical match inside Barlow headlines */
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Section eyebrow — serif italic (this route's replacement for
+   .section-eyebrow; the frozen eyebrow TEXT is unchanged) */
+.scr-eyebrow {
+  font-family: var(--font-serif-accent), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Display scale — sentence case, cinematic */
+.scr-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.25rem, 6.5vw + 1.25rem, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.scr-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 3.5vw + 1rem, 4.75rem);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  text-transform: none;
+}
+.scr-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.5vw + 0.75rem, 2.25rem);
+  line-height: 1.05;
+  text-transform: none;
+}
+
+/* Shared keynote reveal (Rise toggles .is-in) */
+.scr-rise {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+.scr-rise.is-in { opacity: 1; transform: none; }
+
+/* Ghost button recolor for light sections (IconButton className pass-through) */
+.screening .scr-ghost-onlight {
+  color: var(--color-beast-black);
+  border-color: color-mix(in srgb, var(--color-beast-black) 35%, transparent);
+}
+.screening .scr-ghost-onlight:hover {
+  background: var(--color-beast-black);
+  color: var(--color-beast-white);
+  border-color: var(--color-beast-black);
+  box-shadow: 0 15px 30px color-mix(in srgb, var(--color-beast-black) 18%, transparent);
+}
+
+/* Logo strip */
+.scr-logo { filter: brightness(0); opacity: 0.4; transition: opacity 0.3s ease; }
+.scr-logo:hover { opacity: 0.8; }
+
+/* Stats-band citation links (whole stat cell is the tap target) */
+.scr-statlink { display: block; text-decoration: none; border-radius: 12px; }
+.scr-statlink .scr-cite {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-serif-accent), Georgia, serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--color-beast-black) 55%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-beast-black) 35%, transparent);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.scr-statlink:hover .scr-cite {
+  color: var(--color-beast-black);
+  border-color: var(--color-beast-black);
+}
+
+/* ── The Theater ─────────────────────────────────────────────────── */
+.scr-stack { isolation: isolate; }
+.scr-frame { position: relative; background: var(--color-beast-black); }
+@media (min-width: 1024px) {
+  .scr-frame {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    overflow: hidden;
+  }
+}
+
+/* Ken Burns drift — desktop + motion-safe only */
+@keyframes scr-kenburns { from { transform: scale(1); } to { transform: scale(1.08); } }
+@media (min-width: 1024px) {
+  .scr-kb { animation: scr-kenburns 14s ease-in-out infinite alternate; will-change: transform; }
+}
+
+/* Title-card resolve (LiveFrame toggles .is-live) */
+.scr-settle {
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--d, 0ms);
+}
+.scr-frame.is-live .scr-settle { opacity: 1; transform: scale(1); }
+.scr-risein {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition-delay: var(--d, 0ms);
+}
+.scr-frame.is-live .scr-risein { opacity: 1; transform: none; }
+
+/* Citation flash — arriving on a reel from a yellow-band stat link */
+@keyframes scr-flash {
+  0%, 100% { opacity: 1; text-shadow: none; }
+  50% {
+    opacity: 0.55;
+    text-shadow: 0 0 32px color-mix(in srgb, var(--color-beast-yellow) 80%, transparent);
+  }
+}
+.scr-frame:target .scr-frame-stat { animation: scr-flash 0.9s ease-in-out 0.45s 2; }
+
+/* Reduced motion: fully painted, fully static */
+@media (prefers-reduced-motion: reduce) {
+  .scr-rise, .scr-settle, .scr-risein { opacity: 1; transform: none; transition: none; }
+  .scr-kb { animation: none; }
+  .scr-frame:target .scr-frame-stat { animation: none; }
+}
+
+/* ── Signature: the letterbox reveal ─────────────────────────────────
+   The hero media panel opens like a projector aperture — from a thin
+   horizontal slit to the full 16:9 screen — once Rise flips .is-in.
+   Pure CSS clip-path transition; the 24px rounding matches the panel's
+   rounded-3xl so corners stay true mid-animation. */
+.scr-screen {
+  clip-path: inset(43% 5% 43% 5% round 24px);
+  transition: clip-path 1.1s cubic-bezier(0.77, 0, 0.18, 1) 0.15s;
+  will-change: clip-path;
+}
+.scr-rise.is-in .scr-screen {
+  clip-path: inset(0 0 0 0 round 24px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scr-screen { clip-path: inset(0 0 0 0 round 24px); transition: none; }
+}
