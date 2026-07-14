@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { barlowCondensed, inter } from "@/lib/fonts";
+import { barlowCondensed, inter, jetbrainsMono } from "@/lib/fonts";
 import "@/styles/globals.css";
 import Nav from "@/components/layout/Nav";
 import ConsoleBranding from "@/components/ui/ConsoleBranding";
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html style={{overflowX:"hidden"}}
       lang="en"
-      className={`${barlowCondensed.variable} ${inter.variable}`}
+      className={`${barlowCondensed.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* Google Analytics GA4 */}

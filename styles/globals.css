@@ -649,3 +649,106 @@ select.form-input option {
     scroll-behavior: auto !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   REDESIGN — "The Ledger" (scoped to /redesign, additive & isolated)
+   All selectors below are namespaced under .ledger or unique classes so
+   existing pages are untouched.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Scoped mono — system-readout labels */
+.font-mono-brand {
+  font-family: var(--font-mono-brand), ui-monospace, "SFMono-Regular", monospace;
+}
+
+.ledger {
+  /* section rhythm helper */
+  --hairline: rgba(10, 10, 10, 0.12);
+  --hairline-dark: rgba(255, 255, 255, 0.14);
+}
+
+/* Mono micro-label: [ eyebrow-style ] uppercase tracked */
+.led-label {
+  font-family: var(--font-mono-brand), ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Giant ghost index number sitting behind headings */
+.led-ghost {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.01em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Crosshair corner marker (+) */
+.led-cross {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.led-cross::before,
+.led-cross::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+.led-cross::before { left: 50%; top: 0; width: 1px; height: 100%; transform: translateX(-0.5px); }
+.led-cross::after  { top: 50%; left: 0; height: 1px; width: 100%; transform: translateY(-0.5px); }
+
+/* Blinking status dot */
+@keyframes led-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+.led-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #00F763;
+  box-shadow: 0 0 8px rgba(0, 247, 99, 0.7);
+  animation: led-blink 1.8s ease-in-out infinite;
+}
+
+/* Scroll-reveal (IntersectionObserver toggles .is-in) */
+.led-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.led-reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .led-reveal { opacity: 1; transform: none; }
+}
+
+/* Floating tilt for the hero proof cards */
+@keyframes led-float-a { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(-4deg); } }
+@keyframes led-float-b { 0%, 100% { transform: translateY(0) rotate(5deg); } 50% { transform: translateY(-16px) rotate(5deg); } }
+.led-float-a { animation: led-float-a 6s ease-in-out infinite; }
+.led-float-b { animation: led-float-b 7s ease-in-out infinite; }
+
+/* Hairline grid rule utilities (light + dark) */
+.led-rule       { border-color: rgba(10, 10, 10, 0.12); }
+.led-rule-dark  { border-color: rgba(255, 255, 255, 0.14); }
+
+/* Marquee for the trusted-by logo row (paused = slow drift only) */
+@keyframes led-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.led-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: led-marquee 38s linear infinite;
+}
+.led-marquee-track:hover { animation-play-state: paused; }
