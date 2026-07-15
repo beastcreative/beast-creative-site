@@ -13,6 +13,7 @@ import SystemBar from "@/components/redesign/SystemBar";
 import HeroProof from "@/components/redesign/HeroProof";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import ProofReel from "@/components/redesign/ProofReel";
+import LogoMarquee from "@/components/redesign/LogoMarquee";
 
 export const metadata: Metadata = {
   title: "Redesign Preview — Beast Creative",
@@ -135,15 +136,6 @@ const process = [
   { step: "02", name: "Strategize", desc: "A campaign plan built around your specific goals, audience, and budget — not a template pulled from a drawer." },
   { step: "03", name: "Execute", desc: "Creative launches. Media runs. Content goes live. We move fast and optimize faster — daily monitoring, real-time pivots." },
   { step: "04", name: "Optimize", desc: "Monthly reporting, A/B testing, and continuous refinement. We don't set it and forget it." },
-];
-
-const trustedLogos = [
-  { src: "/assets/logos/williams.png", alt: "Williams Foods" },
-  { src: "/assets/logos/sunbird.png", alt: "Sun-Bird Seasonings" },
-  { src: "/assets/logos/sweetsensi.png", alt: "Sweet Sensi" },
-  { src: "/assets/logos/coinline.png", alt: "Coinline" },
-  { src: "/assets/logos/pioneer.png", alt: "Pioneer" },
-  { src: "/assets/logos/teksbuilder.png", alt: "TEKSBuilder" },
 ];
 
 const heroStats = [
@@ -286,20 +278,8 @@ export default function RedesignPage() {
             <p className="led-label text-center text-black/40">Trusted by national brands &amp; local businesses</p>
           </Reveal>
         </div>
-        <Reveal delay={100} className="mt-8 overflow-hidden">
-          <div className="led-marquee-track gap-16 px-8">
-            {[...trustedLogos, ...trustedLogos].map((logo, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={i}
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-                className="h-6 w-auto shrink-0 opacity-45 transition-opacity duration-300 hover:opacity-80 lg:h-7"
-                style={{ filter: "brightness(0)" }}
-              />
-            ))}
-          </div>
+        <Reveal delay={100} className="mt-8">
+          <LogoMarquee />
         </Reveal>
       </section>
 
