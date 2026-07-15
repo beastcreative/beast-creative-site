@@ -22,8 +22,20 @@ export default function LogoMarquee() {
   const onMove = (e: MouseEvent<HTMLAnchorElement>) => {
     const el = e.currentTarget;
     const r = el.getBoundingClientRect();
-    el.style.setProperty("--x", `${e.clientX - r.left}px`);
-    el.style.setProperty("--y", `${e.clientY - r.top}px`);
+    const lx = e.clientX - r.left;
+    const ly = e.clientY - r.top;
+    // glow position (px)
+    el.style.setProperty("--x", `${lx}px`);
+    el.style.setProperty("--y", `${ly}px`);
+    // subtle cursor-following tilt (normalized -0.5..0.5 → small degrees)
+    el.style.setProperty("--roty", `${((lx / r.width - 0.5) * 10).toFixed(2)}deg`);
+    el.style.setProperty("--rotx", `${((0.5 - ly / r.height) * 8).toFixed(2)}deg`);
+  };
+
+  const onLeave = (e: MouseEvent<HTMLAnchorElement>) => {
+    const el = e.currentTarget;
+    el.style.setProperty("--roty", "0deg");
+    el.style.setProperty("--rotx", "0deg");
   };
 
   return (
@@ -36,6 +48,7 @@ export default function LogoMarquee() {
             key={i}
             href={l.href}
             onMouseMove={onMove}
+            onMouseLeave={onLeave}
             aria-label={`View ${l.alt} case study`}
             className="led-logo-wrap group block h-28 w-56 shrink-0"
           >
