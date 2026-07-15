@@ -773,35 +773,37 @@ select.form-input option {
   .led-depth-2 { transform: none; transition: none; }
 }
 
-/* Light logo cards with pink cursor-spotlight (marquee) — the /redesign light
-   take on the old homepage client-wall glow. JS sets --x/--y per card. */
-.led-logo-card {
+/* Light logo cards — border-glow-follows-cursor (same mechanism as .rc-wrap:
+   a 1.5px padding wrapper whose background is a radial gradient at the cursor,
+   so only the EDGE near the pointer lights pink; a solid white inner card covers
+   the middle). Adapted from the old homepage client wall to a light theme. */
+.led-logo-wrap {
   position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid rgba(10, 10, 10, 0.09);
-  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.5px;
+  background: rgba(10, 10, 10, 0.10);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease;
+              background 0.3s ease;
 }
-.led-logo-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(140px circle at var(--x, 50%) var(--y, 50%), rgba(255, 17, 152, 0.18) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-.led-logo-card:hover {
+.led-logo-wrap:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-  border-color: rgba(255, 17, 152, 0.45);
+  background: radial-gradient(170px circle at var(--x, 50%) var(--y, 50%),
+              rgba(255, 17, 152, 0.90) 0%,
+              rgba(255, 17, 152, 0.25) 42%,
+              rgba(10, 10, 10, 0.10) 72%);
 }
-.led-logo-card:hover::before { opacity: 1; }
+.led-logo-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 13.5px;
+  background: #ffffff;
+}
 @media (prefers-reduced-motion: reduce) {
-  .led-logo-card { transition: none; }
-  .led-logo-card:hover { transform: none; }
+  .led-logo-wrap { transition: none; }
+  .led-logo-wrap:hover { transform: none; }
 }

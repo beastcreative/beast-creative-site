@@ -27,7 +27,9 @@ export default function LogoMarquee() {
   };
 
   return (
-    <div className="overflow-hidden">
+    // overflow-x-clip clips the horizontal marquee while leaving vertical
+    // visible, so the hover lift + shadow are never cut off top/bottom.
+    <div className="overflow-x-clip py-4">
       <div className="led-marquee-track gap-4 px-4">
         {[...logos, ...logos].map((l, i) => (
           <Link
@@ -35,16 +37,18 @@ export default function LogoMarquee() {
             href={l.href}
             onMouseMove={onMove}
             aria-label={`View ${l.alt} case study`}
-            className="led-logo-card group flex h-28 w-56 shrink-0 items-center justify-center px-8"
+            className="led-logo-wrap group block h-28 w-56 shrink-0"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={l.src}
-              alt={l.alt}
-              loading="lazy"
-              className="relative z-10 max-h-9 w-auto max-w-[75%] object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-90"
-              style={{ filter: "brightness(0)" }}
-            />
+            <div className="led-logo-inner flex items-center justify-center px-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={l.src}
+                alt={l.alt}
+                loading="lazy"
+                className="max-h-9 w-auto max-w-[75%] object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-90"
+                style={{ filter: "brightness(0)" }}
+              />
+            </div>
           </Link>
         ))}
       </div>
