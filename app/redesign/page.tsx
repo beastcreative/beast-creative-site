@@ -11,6 +11,8 @@ import IconButton from "@/components/ui/IconButton";
 import Reveal from "@/components/redesign/Reveal";
 import SystemBar from "@/components/redesign/SystemBar";
 import HeroProof from "@/components/redesign/HeroProof";
+import WorkIndex from "@/components/redesign/WorkIndex";
+import ProofReel from "@/components/redesign/ProofReel";
 
 export const metadata: Metadata = {
   title: "Redesign Preview — Beast Creative",
@@ -307,41 +309,54 @@ export default function RedesignPage() {
           BEAST
         </div>
         <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-20">
-          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 lg:gap-20">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            {/* LEFT — image panel. TODO: swap for a real team/office photo when John sends one. */}
             <Reveal>
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.10)]">
+                <Image
+                  src="/assets/williams-bts-hero.jpg"
+                  alt="Beast Creative campaign work — Williams Foods back-to-school"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+                <span className="led-cross absolute right-3 top-3 text-white/60" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                <p className="led-label absolute bottom-4 left-4 text-white/85">Selected work · Williams Foods</p>
+              </div>
+            </Reveal>
+
+            {/* RIGHT — copy + who we serve */}
+            <Reveal delay={120}>
               <Label>Who We Are</Label>
-              <h2 className="mt-5 font-display text-4xl font-bold uppercase tracking-tight text-beast-black lg:text-6xl">
+              <h2 className="mt-4 font-display text-4xl font-bold uppercase tracking-tight text-beast-black lg:text-5xl">
                 Beast Creative.
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-black/70">
+              <p className="mt-5 text-lg leading-relaxed text-black/70">
                 At Beast Creative Agency — San Antonio&apos;s SEO, AEO &amp; GEO team — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
               </p>
               <p className="mt-4 leading-relaxed text-black/60">
                 Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients — the same rigor, the same standards, regardless of size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
               </p>
-            </Reveal>
 
-            <Reveal delay={120}>
-              <div className="rounded-2xl border border-black/10 bg-off-white p-8 shadow-[0_5px_15px_rgba(0,0,0,0.04)]">
-                <p className="led-label text-beast-black">Who We Serve</p>
-                <ul className="mt-6 space-y-4">
-                  {[
-                    "San Antonio businesses that need a real agency, not a freelancer",
-                    "Restaurants, service companies, and local brands ready to grow",
-                    "Regional brands going national — CPG, retail, e-commerce",
-                    "Any ambitious business tired of agencies that talk more than they deliver",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 border-b led-rule pb-4 last:border-0 last:pb-0">
-                      <span className="led-label mt-1 text-beast-pink">[{String(i + 1).padStart(2, "0")}]</span>
-                      <span className="text-sm leading-relaxed text-black/75">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-7">
-                  <Link href="/about" className="btn-ghost-pink text-sm">
-                    More About Beast →
-                  </Link>
-                </div>
+              <p className="led-label mt-8 text-beast-black">Who We Serve</p>
+              <ul className="mt-4 border-t led-rule">
+                {[
+                  "San Antonio businesses that need a real agency, not a freelancer",
+                  "Restaurants, service companies, and local brands ready to grow",
+                  "Regional brands going national — CPG, retail, e-commerce",
+                  "Any ambitious business tired of agencies that talk more than they deliver",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 border-b led-rule py-3">
+                    <span className="led-label mt-0.5 text-beast-pink">[{String(i + 1).padStart(2, "0")}]</span>
+                    <span className="text-sm leading-relaxed text-black/75">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <Link href="/about" className="btn-ghost-pink text-sm">
+                  More About Beast →
+                </Link>
               </div>
             </Reveal>
           </div>
@@ -367,48 +382,9 @@ export default function RedesignPage() {
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {caseStudies.map((cs, i) => (
-              <Reveal key={cs.href} delay={i * 90}>
-                <Link href={cs.href} className="group block">
-                  <article className="overflow-hidden rounded-2xl border border-white/10 bg-near-black transition-all duration-300 hover:border-beast-pink/50 hover:shadow-[0_0_50px_rgba(255,17,152,0.16)]">
-                    {/* image banner */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image
-                        src={cs.image}
-                        alt={`${cs.client} — ${cs.campaign}`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-                      <span className="led-label absolute left-4 top-4 rounded-full bg-black/50 px-3 py-1.5 text-white/80 backdrop-blur-sm">
-                        {cs.category}
-                      </span>
-                      <span className="led-label absolute right-4 top-4 text-white/50">[0{i + 1}]</span>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <p className="led-label text-beast-pink">{cs.client}</p>
-                        <p className="mt-1.5 font-display text-2xl font-bold leading-tight text-white">{cs.campaign}</p>
-                      </div>
-                    </div>
-                    {/* body */}
-                    <div className="p-6">
-                      <div className="flex items-end justify-between gap-4 border-b led-rule-dark pb-5">
-                        <div>
-                          <p className="font-display text-4xl font-black leading-none text-beast-yellow">{cs.heroStat}</p>
-                          <p className="led-label mt-2 text-white/50">{cs.heroStatLabel}</p>
-                        </div>
-                      </div>
-                      <p className="mt-5 text-sm leading-relaxed text-white/60">{cs.description}</p>
-                      <span className="led-label mt-5 inline-flex items-center gap-2 text-beast-pink transition-all group-hover:gap-3.5 group-hover:text-white">
-                        View Case Study →
-                      </span>
-                    </div>
-                  </article>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <WorkIndex items={caseStudies} />
+          </Reveal>
 
           <div className="mt-12 text-center">
             <IconButton href="/work" variant="pink">View All Case Studies</IconButton>
@@ -473,6 +449,19 @@ export default function RedesignPage() {
         </div>
       </section>
 
+      {/* ═══ 7.5 · PROOF REEL (kinetic visual break) ═══ */}
+      <section className="overflow-hidden border-y led-rule bg-off-white py-12 lg:py-16">
+        <div className="mx-auto mb-8 w-full max-w-7xl px-6 lg:px-20">
+          <Reveal className="flex flex-wrap items-end justify-between gap-3">
+            <Label>In the Wild</Label>
+            <p className="led-label text-black/40">Real campaigns · Real brands</p>
+          </Reveal>
+        </div>
+        <Reveal>
+          <ProofReel />
+        </Reveal>
+      </section>
+
       {/* ═══ 8 · THE SHIFT / GOOGLE ZERO (dark editorial) ═══ */}
       <section className="relative overflow-hidden bg-beast-black py-16 text-white lg:py-24">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(ellipse 55% 55% at 50% 45%, rgba(255,17,152,0.10) 0%, transparent 70%)" }} />
@@ -501,20 +490,39 @@ export default function RedesignPage() {
       {/* ═══ 9 · CPG CALLOUT (light, green accent) ═══ */}
       <section className="relative overflow-hidden bg-white py-14 lg:py-20">
         <div className="pointer-events-none absolute inset-0" aria-hidden="true" style={{ background: "radial-gradient(50% 60% at 80% 20%, rgba(0,247,99,0.08) 0%, transparent 60%)" }} />
-        <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-20">
-          <Reveal>
-            <div className="flex justify-center"><Label>Our Track Record</Label></div>
-            <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-beast-black lg:text-6xl">
-              Enterprise-Level Proof.{" "}
-              <span className="text-beast-pink">Local Business Availability.</span>
-            </h2>
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-black/65">
-              We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client — whether you&apos;re a San Antonio restaurant or a regional brand going national.
-            </p>
-            <div className="mt-10">
-              <IconButton href="/cpg" variant="white">See Our CPG Playbook</IconButton>
-            </div>
-          </Reveal>
+        <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-20">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            {/* LEFT — copy */}
+            <Reveal>
+              <Label>Our Track Record</Label>
+              <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight text-beast-black lg:text-5xl">
+                Enterprise-Level Proof.{" "}
+                <span className="text-beast-pink">Local Business Availability.</span>
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-black/65">
+                We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client — whether you&apos;re a San Antonio restaurant or a regional brand going national.
+              </p>
+              <div className="mt-8">
+                <IconButton href="/cpg" variant="white">See Our CPG Playbook</IconButton>
+              </div>
+            </Reveal>
+
+            {/* RIGHT — campaign image */}
+            <Reveal delay={120} className="lg:order-last">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.10)]">
+                <Image
+                  src="/assets/sunbird-ad-yellow.jpg"
+                  alt="Sun-Bird Seasonings national Walmart rollout campaign"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+                <span className="led-cross absolute right-3 top-3 text-white/60" aria-hidden="true" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <p className="led-label absolute bottom-4 left-4 text-white/85">Sun-Bird · Walmart Rollout</p>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
