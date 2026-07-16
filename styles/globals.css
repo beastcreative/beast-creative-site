@@ -753,19 +753,6 @@ select.form-input option {
 }
 .led-marquee-track:hover { animation-play-state: paused; }
 
-/* Draggable / scrollable strip (auto-scroll + click-drag + trackpad).
-   overflow-x: clip keeps horizontal clipped while vertical stays visible, so
-   hover lift/tilt/shadow are never cut off. */
-.led-dragscroll {
-  overflow-x: clip;
-  cursor: grab;
-  touch-action: pan-y;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.led-dragscroll.is-dragging { cursor: grabbing; }
-.led-dragscroll > .flex { will-change: transform; }
-
 /* Hero proof-card 3D parallax — pointer-driven, reduced-motion safe */
 .led-parallax { perspective: 1200px; }
 .led-parallax-stage {

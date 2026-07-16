@@ -1,5 +1,4 @@
 import Image from "next/image";
-import DragScroll from "@/components/redesign/DragScroll";
 
 /**
  * Full-bleed auto-scrolling "reel" of real campaign visuals — a kinetic visual
@@ -19,24 +18,25 @@ const reel = [
 
 export default function ProofReel() {
   return (
-    <DragScroll speed={0.55} gapClass="gap-5" className="px-3 py-1" ariaLabel="Campaign reel — drag to explore">
-      {[...reel, ...reel].map((it, i) => (
-        <figure
-          key={i}
-          className="group relative h-52 w-[19rem] shrink-0 overflow-hidden rounded-xl border border-black/10 bg-near-black lg:h-64 lg:w-[24rem]"
-        >
-          <Image
-            src={it.src}
-            alt={it.cap}
-            fill
-            sizes="24rem"
-            draggable={false}
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-          <figcaption className="led-label absolute bottom-3 left-4 text-white/85">{it.cap}</figcaption>
-        </figure>
-      ))}
-    </DragScroll>
+    <div className="overflow-hidden">
+      <div className="led-marquee-track gap-5 px-3">
+        {[...reel, ...reel].map((it, i) => (
+          <figure
+            key={i}
+            className="group relative h-52 w-[19rem] shrink-0 overflow-hidden rounded-xl border border-black/10 bg-near-black lg:h-64 lg:w-[24rem]"
+          >
+            <Image
+              src={it.src}
+              alt={it.cap}
+              fill
+              sizes="24rem"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <figcaption className="led-label absolute bottom-3 left-4 text-white/85">{it.cap}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
   );
 }
