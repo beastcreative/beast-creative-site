@@ -12,7 +12,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "CPG Marketing Agency | Beast Creative Agency San Antonio",
   description:
-    "Beast Creative Agency helps CPG food and beverage brands grow from regional to national with AI-powered campaigns. 36,581 entries, 7.03% CTR, $0.12 CPC — real results for real brands.",
+    "Beast Creative Agency helps CPG food and beverage brands grow from regional to national with AI-powered campaigns. 36,581 entries, 7.03% CTR, $0.12 CPC: real results for real brands.",
   openGraph: {
     title: "The CPG Agency That Turns Ad Spend Into Retail Proof",
     description:
@@ -29,27 +29,27 @@ const faqs = [
   {
     question: "How do you build first-party consumer data?",
     answer:
-      "We primarily use contest and sweepstakes mechanics designed to maximize entry volume at the lowest cost. Every entry captures consumer name, email, and zip code. We've collected 36,581+ emails on a $6,000 budget for Sun-Bird Seasonings. This data becomes your retail readiness proof — geographic maps of where your consumers are, demographic profiles, and engagement metrics.",
+      "We primarily use contest and sweepstakes mechanics designed to maximize entry volume at the lowest cost. Every entry captures consumer name, email, and zip code. We've collected 36,581+ emails on a $6,000 budget for Sun-Bird Seasonings. This data becomes your retail readiness proof: geographic maps of where your consumers are, demographic profiles, and engagement metrics.",
   },
   {
     question: "How much does a sweepstakes campaign cost?",
     answer:
-      "Campaign production (strategy, landing page, creative, management) starts at $2,500–$5,000 one-time. Ad spend is client-direct to platforms — we recommend $3,000–$10,000 for meaningful data volume. Total investment for a first campaign: $6,000–$15,000 typically. This generates a consumer database worth multiples of that cost.",
+      "Campaign production (strategy, landing page, creative, management) starts at $2,500 to $5,000 one-time. Ad spend is client-direct to platforms. We recommend $3,000 to $10,000 for meaningful data volume. Total investment for a first campaign: $6,000 to $15,000 typically. This generates a consumer database worth multiples of that cost.",
   },
   {
     question: "How long before we see results?",
     answer:
-      "Sweepstakes campaigns deliver data in real-time — you can see entries within hours of launch. Our Williams BTS campaign hit 22,043 entries in the campaign window on $4,000. SEO and AEO results build over 3–6 months. Paid media results typically stabilize within 60–90 days as we optimize targeting.",
+      "Sweepstakes campaigns deliver data in real-time: you can see entries within hours of launch. Our Williams BTS campaign hit 22,043 entries in the campaign window on $4,000. SEO and AEO results build over 3 to 6 months. Paid media results typically stabilize within 60 to 90 days as we optimize targeting.",
   },
   {
     question: "Do you work with brands across the country?",
     answer:
-      "Absolutely. We work with brands nationally. Sun-Bird's campaign was a national Walmart rollout announcement. All our digital services are fully location-agnostic — we've run campaigns for brands across the US.",
+      "Absolutely. We work with brands nationally. Sun-Bird's campaign was a national Walmart rollout announcement. All our digital services are fully location-agnostic, and we've run campaigns for brands across the US.",
   },
   {
     question: "What makes Beast different from other CPG marketing agencies?",
     answer:
-      "Three things: real numbers from named brands (not 'a CPG client'), AI-native operations that cut costs and improve performance, and radical transparency — you see everything in real time. We've also built a proprietary AI agent (Segundo) that gives Scale-tier clients automated content, analysis, and campaign intelligence.",
+      "Three things: real numbers from named brands (not 'a CPG client'), AI-native operations that cut costs and improve performance, and radical transparency, meaning you see everything in real time. We've also built a proprietary AI agent (Segundo) that gives Scale-tier clients automated content, analysis, and campaign intelligence.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function CpgPage() {
               {
                 n: "02",
                 title: "Benchmarks You Can't Hit",
-                desc: "Industry average CTR is 0.89%. If you're paying that, you're overpaying. Our campaigns regularly hit 7x that benchmark — and we can show you exactly how.",
+                desc: "Industry average CTR is 0.89%. If you're paying that, you're overpaying. Our campaigns regularly hit 7x that benchmark, and we can show you exactly how.",
               },
               {
                 n: "03",
@@ -223,11 +223,11 @@ export default function CpgPage() {
               },
               {
                 title: "SEO + Answer Engine Optimization",
-                desc: "Your brand needs to appear in Google results AND in AI search answers. We optimize for both — and for multi-brand portfolios, our unified domain strategy multiplies SEO power.",
+                desc: "Your brand needs to appear in Google results AND in AI search answers. We optimize for both, and for multi-brand portfolios, our unified domain strategy multiplies SEO power.",
               },
               {
                 title: "AI Content Production Pipeline",
-                desc: "Recipe videos, product demos, social content at scale — produced with AI at 90%+ lower cost than traditional production. We've processed 900+ recipe assets for CPG clients.",
+                desc: "Recipe videos, product demos, and social content at scale, produced with AI at 90%+ lower cost than traditional production. We've processed 900+ recipe assets for CPG clients.",
               },
               {
                 title: "First-Party Data Strategy",
@@ -235,7 +235,7 @@ export default function CpgPage() {
               },
               {
                 title: "Retail Readiness Deck",
-                desc: "A data-backed consumer demand report your team can take into Walmart, Target, or Kroger meetings — built from real campaign data and geographic purchase intent mapping.",
+                desc: "A data-backed consumer demand report your team can take into Walmart, Target, or Kroger meetings, built from real campaign data and geographic purchase intent mapping.",
               },
             ].map((svc, i) => (
               <AnimatedSection key={svc.title} delay={i * 0.07}>
@@ -253,7 +253,7 @@ export default function CpgPage() {
       <section className="bg-section-offwhite py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Case Study — CPG Marketing</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Case Study: CPG Marketing</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal mb-6">
@@ -261,10 +261,10 @@ export default function CpgPage() {
                   <span className="text-beast-pink">March Madness. One Seasoning Brand.</span>
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Williams Foods came to Beast with a seasonal window and a creative challenge: make March Madness feel authentic for a CPG seasoning brand — and build a first-party consumer database while doing it.
+                  Williams Foods came to Beast with a seasonal window and a creative challenge: make March Madness feel authentic for a CPG seasoning brand, and build a first-party consumer database while doing it.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Beast designed a digital trading card collectible campaign — 8 unique sneaker-themed cards dropped over 24 days, each tied to a Williams flavor. The mechanic drove repeat engagement and a <strong className="text-beast-black">9.5% email click rate</strong> — 11x the industry average — with <strong className="text-beast-black">200,475 total reach</strong> across Facebook and Instagram.
+                  Beast designed a digital trading card collectible campaign: 8 unique sneaker-themed cards dropped over 24 days, each tied to a Williams flavor. The mechanic drove repeat engagement and a <strong className="text-beast-black">9.5% email click rate</strong> (11x the industry average) with <strong className="text-beast-black">200,475 total reach</strong> across Facebook and Instagram.
                 </p>
                 <IconButton href="/work/williams-allstars" icon="eye">Read the Full Case Study</IconButton>
               </div>
@@ -303,21 +303,21 @@ export default function CpgPage() {
             {[
               {
                 stage: "Stage 1",
-                period: "Months 1–3",
+                period: "Months 1 to 3",
                 title: "Foundation",
                 desc: "Brand infrastructure, first sweepstakes campaign, baseline SEO, performance marketing foundation.",
                 deliverable: "A consumer database, functioning email system, and first campaign data.",
               },
               {
                 stage: "Stage 2",
-                period: "Months 4–9",
+                period: "Months 4 to 9",
                 title: "Growth",
                 desc: "Scale proven audiences, second campaign mechanic, email automation, AEO content strategy, AI content at volume.",
                 deliverable: "Multiple consumer touchpoints and a retail-ready data story.",
               },
               {
                 stage: "Stage 3",
-                period: "Months 10–18",
+                period: "Months 10 to 18",
                 title: "Scale",
                 desc: "Quarterly campaigns, national SEO, influencer/UGC programs, Segundo AI integration, national launch assets.",
                 deliverable: "A brand that markets like a national player.",
@@ -399,7 +399,7 @@ export default function CpgPage() {
             <div className="max-w-3xl">
               <p className="section-eyebrow text-beast-pink mb-4">Our Proprietary AI</p>
               <h2 className="font-display text-4xl font-bold text-white tracking-normal mb-6">
-                Meet Segundo — Beast&apos;s In-House AI Agent.
+                Meet Segundo: Beast&apos;s In-House AI Agent.
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
                 Segundo isn&apos;t a chatbot. It&apos;s an internally-deployed AI agent that handles content updates, campaign analysis, meeting intelligence, and workflow automation for Beast and our Scale-tier clients. It&apos;s what makes our team faster, our content cheaper, and our campaigns smarter than agencies twice our size.
@@ -421,7 +421,7 @@ export default function CpgPage() {
               Let&apos;s Talk About Your Brand.
             </h2>
             <p className="text-gray-400 text-lg">
-              Tell us where you are and where you want to go. We&apos;ll come back with a clear picture of what we&apos;d do for you — no charge, no commitment.
+              Tell us where you are and where you want to go. We&apos;ll come back with a clear picture of what we&apos;d do for you, no charge, no commitment.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>

@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What are the most common regulatory compliance failures for CPG brands?",
-    answer: "Label claim violations — nutrient content claims, health claims, and structure/function claims that do not meet FDA or USDA standards — are the most frequent issue and can result in warning letters, retailer delisting, and costly reformulations. The second most common is allergen labeling errors, which create product liability exposure.",
+    answer: "Label claim violations (nutrient content claims, health claims, and structure/function claims that do not meet FDA or USDA standards) are the most frequent issue and can result in warning letters, retailer delisting, and costly reformulations. The second most common is allergen labeling errors, which create product liability exposure.",
   },
   {
     question: "How should a CPG brand monitor regulatory changes across multiple states?",
-    answer: "California (Prop 65, Prop 12, CCPA), New York, and Colorado consistently lead state-level CPG regulation — tracking these three states catches most regulatory changes before they spread nationally. A regulatory counsel retainer of $500–$2,000 per month is usually more cost-effective than reactive crisis management.",
+    answer: "California (Prop 65, Prop 12, CCPA), New York, and Colorado consistently lead state-level CPG regulation: tracking these three states catches most regulatory changes before they spread nationally. A regulatory counsel retainer of $500 to $2,000 per month is usually more cost-effective than reactive crisis management.",
   },
   {
-    question: "What new federal CPG regulations are most likely to affect brands in 2025–2026?",
+    question: "What new federal CPG regulations are most likely to affect brands in 2025 to 2026?",
     answer: "Front-of-package nutrition labeling rules proposed by FDA are moving toward finalization and will require major packaging updates for food and beverage brands. FTC green claims guidance is also tightening, specifically targeting \"compostable,\" \"biodegradable,\" and \"sustainable\" packaging claims.",
   },
   {
     question: "How do you prepare a CPG brand for entry into international markets from a compliance standpoint?",
-    answer: "EU and UK markets require different ingredient labeling, allergen formats, and nutritional panels than US FDA standards — treat them as separate SKU projects, not a simple label swap. Canada (SFCA), Australia (FSANZ), and EU all have distinct approval timelines; budget 12–18 months for a full international compliance build-out.",
+    answer: "EU and UK markets require different ingredient labeling, allergen formats, and nutritional panels than US FDA standards: treat them as separate SKU projects, not a simple label swap. Canada (SFCA), Australia (FSANZ), and EU all have distinct approval timelines; budget 12 to 18 months for a full international compliance build-out.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <span className="text-beast-pink">Staying Compliant in Evolving Markets</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Federal regulatory shifts in the CPG industry have accelerated by 400% over the past three years, leaving many brands scrambling to keep pace with compliance requirements. What separates thriving companies from those facing costly penalties isn’t just awareness of new regulations—it’s building systems that adapt quickly to regulatory evolution.
+              Federal regulatory shifts in the CPG industry have accelerated by 400% over the past three years, leaving many brands scrambling to keep pace with compliance requirements. What separates thriving companies from those facing costly penalties isn’t just awareness of new regulations. It’s building systems that adapt quickly to regulatory evolution.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumer packaged goods companies face an unprecedented wave of regulatory changes across multiple jurisdictions. From stricter labeling requirements to enhanced product safety standards, the regulatory framework governing CPG products continues to expand and evolve at a rapid pace.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing—regulatory compliance isn’t just about avoiding fines anymore. It’s become a competitive advantage for brands that get it right. Companies that stay ahead of regulatory changes can enter new markets faster, build stronger consumer trust, and avoid the costly product recalls that plague reactive competitors.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing: regulatory compliance isn’t just about avoiding fines anymore. It’s become a competitive advantage for brands that get it right. Companies that stay ahead of regulatory changes can enter new markets faster, build stronger consumer trust, and avoid the costly product recalls that plague reactive competitors.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Key Regulatory Areas Under Scrutiny</h3>
 
@@ -93,23 +93,23 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Product labeling and claims substantiation:</strong> – New requirements for transparency in ingredient listings and marketing claims</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Product labeling and claims substantiation:</strong> New requirements for transparency in ingredient listings and marketing claims</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Packaging and sustainability mandates:</strong> – Extended producer responsibility programs and recycling requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Packaging and sustainability mandates:</strong> Extended producer responsibility programs and recycling requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Data privacy and consumer information:</strong> – Enhanced protections for customer data collection and usage</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Data privacy and consumer information:</strong> Enhanced protections for customer data collection and usage</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Supply chain transparency:</strong> – Increased scrutiny on sourcing, manufacturing, and distribution practices</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Supply chain transparency:</strong> Increased scrutiny on sourcing, manufacturing, and distribution practices</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Safety and testing protocols:</strong> – More rigorous product testing and quality assurance standards</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Safety and testing protocols:</strong> More rigorous product testing and quality assurance standards</span>
                 </li>
               </ul>
 
@@ -179,23 +179,23 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Product development:</strong> – Ensuring new formulations meet anticipated regulatory requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Product development:</strong> Ensuring new formulations meet anticipated regulatory requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Marketing and communications:</strong> – Aligning claims with substantiation requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Marketing and communications:</strong> Aligning claims with substantiation requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Supply chain management:</strong> – Verifying supplier compliance and traceability</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Supply chain management:</strong> Verifying supplier compliance and traceability</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Quality assurance:</strong> – Implementing testing protocols that exceed minimum requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Quality assurance:</strong> Implementing testing protocols that exceed minimum requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Data management:</strong> – Maintaining compliance documentation and audit trails</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Data management:</strong> Maintaining compliance documentation and audit trails</span>
                 </li>
               </ul>
 
@@ -244,19 +244,19 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Standardizing processes:</strong> – Creating scalable compliance workflows that work across multiple jurisdictions</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Standardizing processes:</strong> Creating scalable compliance workflows that work across multiple jurisdictions</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Investing in prevention:</strong> – Spending more on upfront compliance to avoid costly corrections later</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Investing in prevention:</strong> Spending more on upfront compliance to avoid costly corrections later</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Sharing resources:</strong> – Participating in industry groups and consortiums to share compliance costs</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Sharing resources:</strong> Participating in industry groups and consortiums to share compliance costs</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Outsourcing strategically:</strong> – Using specialized compliance services for complex or low-volume requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Outsourcing strategically:</strong> Using specialized compliance services for complex or low-volume requirements</span>
                 </li>
               </ul>
 
@@ -288,25 +288,25 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Enhanced sustainability requirements:</strong> – More comprehensive lifecycle assessments and carbon footprint reporting</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Enhanced sustainability requirements:</strong> More comprehensive lifecycle assessments and carbon footprint reporting</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Stricter chemical safety standards:</strong> – Expanded restricted substance lists and alternative assessment requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Stricter chemical safety standards:</strong> Expanded restricted substance lists and alternative assessment requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Digital product passport requirements:</strong> – QR codes and digital tracking for product transparency</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Digital product passport requirements:</strong> QR codes and digital tracking for product transparency</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">AI and automation regulations:</strong> – New rules governing automated decision-making in marketing and product development</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">AI and automation regulations:</strong> New rules governing automated decision-making in marketing and product development</span>
                 </li>
               </ul>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Building Adaptive Capacity</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most resilient CPG companies are building what we call “adaptive compliance capacity”—the ability to quickly understand, evaluate, and implement new regulatory requirements without disrupting core business operations.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most resilient CPG companies are building what we call “adaptive compliance capacity”: the ability to quickly understand, evaluate, and implement new regulatory requirements without disrupting core business operations.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This requires investment in:</p>
 
@@ -358,23 +358,23 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Regulatory response time:</strong> – How quickly you adapt to new requirements</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Regulatory response time:</strong> How quickly you adapt to new requirements</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Compliance coverage:</strong> – Percentage of products meeting all applicable regulations</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Compliance coverage:</strong> Percentage of products meeting all applicable regulations</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Incident frequency:</strong> – Rate of compliance violations or regulatory actions</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Incident frequency:</strong> Rate of compliance violations or regulatory actions</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Market access speed:</strong> – Time required to achieve compliance in new markets</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Market access speed:</strong> Time required to achieve compliance in new markets</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Cost per compliance unit:</strong> – Efficiency metrics for compliance processes</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Cost per compliance unit:</strong> Efficiency metrics for compliance processes</span>
                 </li>
               </ul>
 
@@ -392,7 +392,7 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion: Turning Compliance into Competitive Advantage</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG regulatory compliance isn’t just about avoiding penalties—it’s about building systems that enable faster market entry, stronger consumer trust, and more efficient operations. Companies that view compliance as a strategic capability rather than a cost center consistently outperform those that treat it as an afterthought.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG regulatory compliance isn’t just about avoiding penalties. It’s about building systems that enable faster market entry, stronger consumer trust, and more efficient operations. Companies that view compliance as a strategic capability rather than a cost center consistently outperform those that treat it as an afterthought.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The key is building proactive, technology-enabled compliance systems that can adapt quickly to regulatory changes while maintaining operational efficiency. This requires investment in the right people, processes, and technology platforms, but the return on that investment comes through reduced risk, faster market access, and enhanced brand reputation.</p>
 

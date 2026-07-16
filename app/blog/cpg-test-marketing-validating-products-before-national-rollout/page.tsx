@@ -8,25 +8,25 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "CPG Test Marketing: Validating Products Before National Rollout",
   description:
-    "Nearly 95% of new consumer packaged goods fail within their first year—yet most of these failures could be prevented with proper test marketing. Smart CPG",
+    "Nearly 95% of new consumer packaged goods fail within their first year, yet most of these failures could be prevented with proper test marketing. Smart CPG",
 };
 
 const faqs = [
   {
     question: "What is the most cost-effective way for a CPG brand to test market a new product?",
-    answer: "A regional retail test in 50–150 doors of a single chain, combined with DTC sales through your own site, gives you both retailer velocity data and direct consumer feedback at a fraction of the cost of a national launch. Choose a region that over-indexes for your target consumer rather than defaulting to your home geography.",
+    answer: "A regional retail test in 50-150 doors of a single chain, combined with DTC sales through your own site, gives you both retailer velocity data and direct consumer feedback at a fraction of the cost of a national launch. Choose a region that over-indexes for your target consumer rather than defaulting to your home geography.",
   },
   {
     question: "How long should a CPG test market run before making a national rollout decision?",
-    answer: "Minimum 16 weeks of in-market data is needed to see through promotional sell-in effects and get a read on true repeat purchase — initial velocity is almost always higher than sustainable velocity because of novelty and introductory promotion. Brands that pull the trigger on national rollout at 8 weeks frequently get delisted when the promotional period ends and reorder rates disappoint.",
+    answer: "Minimum 16 weeks of in-market data is needed to see through promotional sell-in effects and get a read on true repeat purchase: initial velocity is almost always higher than sustainable velocity because of novelty and introductory promotion. Brands that pull the trigger on national rollout at 8 weeks frequently get delisted when the promotional period ends and reorder rates disappoint.",
   },
   {
     question: "What metrics determine whether a CPG test market result justifies national expansion?",
-    answer: "The primary metric is velocity (units sold per store per week) benchmarked against category averages — if your product is in the top quartile of its category, it earns national distribution. Secondary metrics are repeat purchase rate (are first-time buyers coming back?), margin at full promotional depth, and category incrementality (are you bringing new buyers rather than stealing share).",
+    answer: "The primary metric is velocity (units sold per store per week) benchmarked against category averages: if your product is in the top quartile of its category, it earns national distribution. Secondary metrics are repeat purchase rate (are first-time buyers coming back?), margin at full promotional depth, and category incrementality (are you bringing new buyers rather than stealing share).",
   },
   {
     question: "How do you use DTC as a test market vehicle for new CPG products?",
-    answer: "A DTC soft launch lets you iterate on product, packaging, and messaging based on real consumer feedback before committing to retail minimums and co-man production runs. Brands that run 3–6 months of DTC before retail pitches show up to buyer meetings with actual velocity data, review sentiment, and consumer insights that win placements faster.",
+    answer: "A DTC soft launch lets you iterate on product, packaging, and messaging based on real consumer feedback before committing to retail minimums and co-man production runs. Brands that run 3-6 months of DTC before retail pitches show up to buyer meetings with actual velocity data, review sentiment, and consumer insights that win placements faster.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "CPG Test Marketing: Validating Products Before National Rollout",
-            description: "Nearly 95% of new consumer packaged goods fail within their first year—yet most of these failures could be prevented with proper test marketing. Smart CPG",
+            description: "Nearly 95% of new consumer packaged goods fail within their first year, yet most of these failures could be prevented with proper test marketing. Smart CPG",
             datePublished: "2026-01-07",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -68,7 +68,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
               <span className="text-beast-pink">Validating Products Before National Rollout</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Nearly 95% of new consumer packaged goods fail within their first year—yet most of these failures could be prevented with proper test marketing. Smart CPG brands don’t gamble with national launches; they validate their products systematically in controlled markets first, saving millions in potential losses.
+              Nearly 95% of new consumer packaged goods fail within their first year, yet most of these failures could be prevented with proper test marketing. Smart CPG brands don’t gamble with national launches; they validate their products systematically in controlled markets first, saving millions in potential losses.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG landscape has become increasingly competitive and expensive. With retail shelf space at a premium and marketing costs rising, brands can’t afford to launch products based on gut feelings alone. Test marketing provides the data-driven insights needed to make informed decisions about product viability, pricing strategies, and marketing effectiveness.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing: test marketing isn’t just about reducing risk—it’s about optimizing for success. When done correctly, it reveals critical insights that can transform a mediocre product launch into a market winner.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing: test marketing isn’t just about reducing risk. It’s about optimizing for success. When done correctly, it reveals critical insights that can transform a mediocre product launch into a market winner.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Real Cost of Skipping Test Marketing</h3>
 
@@ -97,7 +97,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Internal resource drain and team morale impact</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: a failed national launch doesn’t just cost money—it can set your brand back years in terms of retailer confidence and market positioning.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: a failed national launch doesn’t just cost money. It can set your brand back years in terms of retailer confidence and market positioning.</p>
 
             </div>
           </AnimatedSection>
@@ -158,7 +158,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumer Research and Insights:</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Conduct focus groups and surveys to validate product concept, packaging appeal, and pricing acceptance. Don’t skip this step—it’s much cheaper to pivot during this phase than after production begins.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Conduct focus groups and surveys to validate product concept, packaging appeal, and pricing acceptance. Don’t skip this step: it’s much cheaper to pivot during this phase than after production begins.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Retailer Partnership Development:</p>
 
@@ -186,7 +186,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Phase 3: Data Analysis and Decision Making</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This is where many brands stumble. Raw data doesn’t make decisions—thoughtful analysis does. Here’s how to extract actionable insights from your test marketing results.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This is where many brands stumble. Raw data doesn’t make decisions. Thoughtful analysis does. Here’s how to extract actionable insights from your test marketing results.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Statistical Significance Assessment:</p>
 
@@ -360,7 +360,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Making Test Marketing Work for Your Brand</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective test marketing isn’t just about following a checklist—it’s about building a culture of data-driven decision making and continuous optimization. The most successful CPG brands treat test marketing as an essential capability, not just a project phase.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective test marketing isn’t just about following a checklist. It’s about building a culture of data-driven decision making and continuous optimization. The most successful CPG brands treat test marketing as an essential capability, not just a project phase.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Your test marketing success depends on having the right strategy, tools, and expertise to design meaningful tests and extract actionable insights. With proper planning and execution, test marketing transforms from a cost center into a competitive advantage that drives long-term growth.</p>
 

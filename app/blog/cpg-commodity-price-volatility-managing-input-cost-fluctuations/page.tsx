@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the most practical hedging strategy for a mid-size CPG brand facing commodity price swings?",
-    answer: "Forward contracts with your primary ingredient suppliers — locking in price and volume 6–12 months out — are the most accessible hedging tool for brands without treasury departments. Formal commodity futures markets are typically too complex and capital-intensive for brands under $50M in revenue.",
+    answer: "Forward contracts with your primary ingredient suppliers, locking in price and volume 6 to 12 months out, are the most accessible hedging tool for brands without treasury departments. Formal commodity futures markets are typically too complex and capital-intensive for brands under $50M in revenue.",
   },
   {
     question: "How do you pass commodity cost increases to retail customers without losing shelf space?",
-    answer: "Lead with data — present cost-build analysis showing the specific input cost increase and its direct margin impact before asking for a price increase. Timing price increases to coincide with category resets or new packaging introductions reduces buyer resistance because there is a visual rationale for the change.",
+    answer: "Lead with data: present cost-build analysis showing the specific input cost increase and its direct margin impact before asking for a price increase. Timing price increases to coincide with category resets or new packaging introductions reduces buyer resistance because there is a visual rationale for the change.",
   },
   {
     question: "What reformulation strategies help CPG brands manage input cost volatility?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How should CPG brands structure supplier contracts to protect against unexpected cost spikes?",
-    answer: "Include a price escalation clause with a defined cap (e.g., no more than 5% increase per quarter without 60-day notice) and a corresponding de-escalation clause for when commodity prices fall — the latter is often skipped and costs brands significantly in down cycles. Index-linked pricing tied to a published commodity index is the most transparent and defensible structure.",
+    answer: "Include a price escalation clause with a defined cap (e.g., no more than 5% increase per quarter without 60-day notice) and a corresponding de-escalation clause for when commodity prices fall (the latter is often skipped and costs brands significantly in down cycles). Index-linked pricing tied to a published commodity index is the most transparent and defensible structure.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function CpgCommodityPriceVolatilityInputCostPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Ripple Effect on Brand Strategy</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Smart CPG leaders recognize that commodity price management isn’t just a procurement issue—it’s a marketing challenge. When input costs fluctuate dramatically, brands face tough decisions about pricing, positioning, and product formulation that directly impact consumer perception and market share.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Smart CPG leaders recognize that commodity price management isn’t just a procurement issue. It’s a marketing challenge. When input costs fluctuate dramatically, brands face tough decisions about pricing, positioning, and product formulation that directly impact consumer perception and market share.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this connection between commodity management and brand equity. They treat cost fluctuations as purely financial problems, missing opportunities to strengthen customer relationships through transparent communication and innovative solutions.</p>
 
@@ -115,7 +115,7 @@ export default function CpgCommodityPriceVolatilityInputCostPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Portfolio Diversification Strategies</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Smart CPG companies don’t just diversify their product lines—they diversify their commodity exposure. This means:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Smart CPG companies don’t just diversify their product lines. They diversify their commodity exposure. This means:</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Geographic Sourcing Spread: Working with suppliers across different regions reduces exposure to localized price shocks. When drought affects one region, alternative sources can maintain supply stability.</p>
 
@@ -277,9 +277,9 @@ export default function CpgCommodityPriceVolatilityInputCostPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Commodity price volatility isn’t going away—if anything, it’s becoming the new normal for CPG companies. The winners will be those who build systematic approaches to managing input cost fluctuations while maintaining strong brands and customer relationships.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Commodity price volatility isn’t going away. If anything, it’s becoming the new normal for CPG companies. The winners will be those who build systematic approaches to managing input cost fluctuations while maintaining strong brands and customer relationships.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Success requires more than just financial hedging or supplier negotiations. It demands integrated strategies that span operations, innovation, marketing, and organizational development. Companies that master this integration don’t just survive volatile markets—they use volatility as a competitive advantage.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Success requires more than just financial hedging or supplier negotiations. It demands integrated strategies that span operations, innovation, marketing, and organizational development. Companies that master this integration don’t just survive volatile markets. They use volatility as a competitive advantage.</p>
 
             </div>
           </AnimatedSection>

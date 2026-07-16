@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What's the difference between brand positioning and branding?",
-    answer: "Positioning is the strategic decision about what space your brand owns in the customer's mind — who it's for, what it competes against, and why it's the better choice. Branding is the expression of that decision: the name, logo, colors, voice, and packaging. Positioning comes first and drives everything else, because no amount of beautiful design can rescue a brand that hasn't decided what it stands for.",
+    answer: "Positioning is the strategic decision about what space your brand owns in the customer's mind: who it's for, what it competes against, and why it's the better choice. Branding is the expression of that decision: the name, logo, colors, voice, and packaging. Positioning comes first and drives everything else, because no amount of beautiful design can rescue a brand that hasn't decided what it stands for.",
   },
   {
     question: "How do I find a point of difference that competitors can't just copy?",
-    answer: "Start by mapping the category's entry points — the situations and motivations that bring people to the shelf — and look for the ones competitors under-serve. The most defensible differences combine a functional benefit with an emotional or identity payoff, because features get copied but a brand's accumulated meaning does not. A claim anchored in a real product truth, a proprietary process, or an authentic origin story is far harder to replicate than a tagline.",
+    answer: "Start by mapping the category's entry points (the situations and motivations that bring people to the shelf) and look for the ones competitors under-serve. The most defensible differences combine a functional benefit with an emotional or identity payoff, because features get copied but a brand's accumulated meaning does not. A claim anchored in a real product truth, a proprietary process, or an authentic origin story is far harder to replicate than a tagline.",
   },
   {
     question: "How is positioning for a marketplace like Amazon different from positioning for retail?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "How do I know if my positioning is actually working?",
-    answer: "Look at velocity per point of distribution and repeat purchase rate, because strong positioning shows up as people choosing you again and recommending you, not just trying you once. Qualitatively, test whether customers describe your brand back to you using the words you intended — if they can't articulate why you're different, neither can the algorithm or the buyer. Rising unaided awareness and a shrinking reliance on price promotion are the clearest signals that positioning is doing its job.",
+    answer: "Look at velocity per point of distribution and repeat purchase rate, because strong positioning shows up as people choosing you again and recommending you, not just trying you once. Qualitatively, test whether customers describe your brand back to you using the words you intended: if they can't articulate why you're different, neither can the algorithm or the buyer. Rising unaided awareness and a shrinking reliance on price promotion are the clearest signals that positioning is doing its job.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function CpgBrandPositioningPost() {
               <span className="text-beast-pink">How to Differentiate in Crowded Markets</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              A shopper spends roughly two seconds deciding whether your product is worth a second look. In that moment, the only thing working in your favor is positioning — the answer to “why this one, and not the eleven others next to it?” Most CPG brands lose not because the product is bad, but because they never gave the shopper a reason to choose. Positioning is the lever that fixes that.
+              A shopper spends roughly two seconds deciding whether your product is worth a second look. In that moment, the only thing working in your favor is positioning: the answer to “why this one, and not the eleven others next to it?” Most CPG brands lose not because the product is bad, but because they never gave the shopper a reason to choose. Positioning is the lever that fixes that.
             </p>
           </AnimatedSection>
         </div>
@@ -81,19 +81,19 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">What Positioning Actually Is (and Isn’t)</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Positioning is a strategic choice about the space your brand owns in the customer’s mind — who it’s for, what it competes against, and the single reason it deserves to be chosen. It’s a decision, not a deliverable. Everything else your brand produces is downstream of that decision.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Positioning is a strategic choice about the space your brand owns in the customer’s mind: who it’s for, what it competes against, and the single reason it deserves to be chosen. It’s a decision, not a deliverable. Everything else your brand produces is downstream of that decision.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The confusion happens because positioning, branding, and messaging get used interchangeably. They’re not the same thing, and conflating them is how brands end up with gorgeous packaging that still doesn’t sell.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Positioning vs. Branding vs. Messaging</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Positioning is the strategy — the territory you choose to own and the competitive frame you fight in</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Branding is the expression — name, logo, color, voice, and the design system that signals your positioning</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Messaging is the articulation — the specific words and claims that carry your positioning into ads, packaging, and listings</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Positioning is the strategy: the territory you choose to own and the competitive frame you fight in</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Branding is the expression: name, logo, color, voice, and the design system that signals your positioning</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Messaging is the articulation: the specific words and claims that carry your positioning into ads, packaging, and listings</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the practical test: if you handed your positioning to two different designers, they should both arrive at recognizably similar brands. If they’d produce wildly different things, you don’t have a positioning yet — you have a mood board. Positioning is the constraint that makes every other decision easier.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the practical test: if you handed your positioning to two different designers, they should both arrive at recognizably similar brands. If they’d produce wildly different things, you don’t have a positioning yet. You have a mood board. Positioning is the constraint that makes every other decision easier.</p>
 
             </div>
           </AnimatedSection>
@@ -101,17 +101,17 @@ export default function CpgBrandPositioningPost() {
           <AnimatedSection>
             <div className="prose prose-lg max-w-none">
 
-              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Why the Shelf — and the Algorithm — Punish Me-Too Products</h2>
+              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Why the Shelf and the Algorithm Punish Me-Too Products</h2>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">A “me-too” product is one that copies the category leader’s benefits, packaging cues, and price band, hoping to ride the wave. It almost never works, and the reason is structural: when a shopper can’t tell why you’re different, the safe choice is the brand they already trust or the one that’s cheapest. You’ve handed the decision to your competitor.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">On the Physical Shelf</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Retail buyers don’t want a second version of a product they already stock — they want incrementality. A me-too item cannibalizes existing sales rather than growing the category, which makes it a delisting candidate the moment velocity dips. If your pitch is “like the leader but a little cheaper,” you’ve positioned yourself as the first SKU to cut.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Retail buyers don’t want a second version of a product they already stock. They want incrementality. A me-too item cannibalizes existing sales rather than growing the category, which makes it a delisting candidate the moment velocity dips. If your pitch is “like the leader but a little cheaper,” you’ve positioned yourself as the first SKU to cut.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">In the Marketplace Algorithm</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">On Amazon and other marketplaces, undifferentiated products compete almost entirely on price and review volume — the two things an incumbent already wins. Search algorithms reward conversion and relevance, and a product with no distinct reason to exist converts poorly, which buries it further. The algorithm doesn’t hate you; it just has no signal that you’re worth surfacing.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">On Amazon and other marketplaces, undifferentiated products compete almost entirely on price and review volume: the two things an incumbent already wins. Search algorithms reward conversion and relevance, and a product with no distinct reason to exist converts poorly, which buries it further. The algorithm doesn’t hate you; it just has no signal that you’re worth surfacing.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The lesson is the same in both worlds: sameness is expensive. The brands that win are the ones that give the shopper, the buyer, and the algorithm an unmistakable reason to pick them.</p>
 
@@ -123,22 +123,22 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Finding a Defensible Point of Difference</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Differentiation isn’t about being different for its own sake — it’s about being different in a way the customer cares about and a competitor can’t easily copy. There are several proven angles, and the strongest brands stack two or three of them.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Differentiation isn’t about being different for its own sake. It’s about being different in a way the customer cares about and a competitor can’t easily copy. There are several proven angles, and the strongest brands stack two or three of them.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Main Angles to Differentiate On</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Functional — a genuine performance or formulation advantage (cleaner ingredients, faster, longer-lasting, better texture)</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Emotional — an identity or feeling the product delivers that goes beyond what it does</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Category creation — defining a new subcategory you can own as the default reference</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Price/value — owning a clear value tier, whether that’s accessible premium or unapologetic affordability</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Occasion — anchoring to a specific moment or use case (post-workout, the 3pm slump, weeknight dinners)</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Audience — serving a defined group better than anyone else, even a deliberately narrow one</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Functional: a genuine performance or formulation advantage (cleaner ingredients, faster, longer-lasting, better texture)</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Emotional: an identity or feeling the product delivers that goes beyond what it does</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Category creation: defining a new subcategory you can own as the default reference</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Price/value: owning a clear value tier, whether that’s accessible premium or unapologetic affordability</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Occasion: anchoring to a specific moment or use case (post-workout, the 3pm slump, weeknight dinners)</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Audience: serving a defined group better than anyone else, even a deliberately narrow one</li>
               </ul>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">What Makes a Difference Defensible</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A functional claim alone is fragile — competitors can reformulate and match it within a quarter. What’s hard to copy is the combination of a real product truth with accumulated meaning: a proprietary process, an authentic origin, a community you built, or an emotional association you’ve earned over time. Patagonia’s positioning isn’t “durable jackets”; it’s a worldview that a knockoff can’t manufacture.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A functional claim alone is fragile: competitors can reformulate and match it within a quarter. What’s hard to copy is the combination of a real product truth with accumulated meaning: a proprietary process, an authentic origin, a community you built, or an emotional association you’ve earned over time. Patagonia’s positioning isn’t “durable jackets”; it’s a worldview that a knockoff can’t manufacture.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The most durable positioning pairs something true about the product with something the customer feels about themselves when they buy it. That pairing is what survives a price war.</p>
 
@@ -150,18 +150,18 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Positioning Framework</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A useful positioning statement isn’t a tagline — it’s an internal strategy tool with four moving parts. Get these right and the marketing writes itself; get them wrong and no amount of creative will fix it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A useful positioning statement isn’t a tagline. It’s an internal strategy tool with four moving parts. Get these right and the marketing writes itself; get them wrong and no amount of creative will fix it.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Four Components</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Target — the specific customer you’re for, defined by need and mindset, not just demographics</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Frame of reference — the category or competitive set you want to be compared against</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Point of difference — the one benefit you own that the frame of reference doesn’t</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Reason to believe — the concrete proof that makes the point of difference credible</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Target: the specific customer you’re for, defined by need and mindset, not just demographics</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Frame of reference: the category or competitive set you want to be compared against</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Point of difference: the one benefit you own that the frame of reference doesn’t</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Reason to believe: the concrete proof that makes the point of difference credible</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The frame of reference is the part most brands underthink. Choosing your competitive set is a strategic move — a plant-based snack can position against “other plant-based snacks” (a small fight) or against “the candy aisle” (a much bigger prize). The frame you pick determines how big you can grow and how shoppers mentally file you.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The frame of reference is the part most brands underthink. Choosing your competitive set is a strategic move: a plant-based snack can position against “other plant-based snacks” (a small fight) or against “the candy aisle” (a much bigger prize). The frame you pick determines how big you can grow and how shoppers mentally file you.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">And the reason to believe is non-negotiable. A point of difference without proof is just a claim, and shoppers have learned to discount claims. Whether it’s a clinical result, a visible product cue, a named ingredient, or a founder story, the proof is what converts skepticism into trial.</p>
 
@@ -173,7 +173,7 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Doing the Research That Reveals White Space</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Positioning shouldn’t be invented in a conference room — it should be discovered in how people actually shop and what the category leaves unserved. Three research lenses do most of the heavy lifting.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Positioning shouldn’t be invented in a conference room. It should be discovered in how people actually shop and what the category leaves unserved. Three research lenses do most of the heavy lifting.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Jobs to Be Done</h3>
 
@@ -181,11 +181,11 @@ export default function CpgBrandPositioningPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Category Entry Points</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Category entry points are the cues and contexts that trigger a purchase — the time of day, the need state, the location, the emotion. Cataloguing them shows you which entry points are crowded and which are wide open. Owning an under-served entry point is often easier than out-spending the leader on the obvious one.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Category entry points are the cues and contexts that trigger a purchase: the time of day, the need state, the location, the emotion. Cataloguing them shows you which entry points are crowded and which are wide open. Owning an under-served entry point is often easier than out-spending the leader on the obvious one.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">White Space Mapping</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Plot your competitors on the two attributes shoppers actually trade off — say, indulgence versus health, or convenience versus craft — and the gaps become visible. White space isn’t just an empty quadrant, though; it has to be empty for a reason that customers value. The discipline is finding territory that’s both unclaimed and worth claiming.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Plot your competitors on the two attributes shoppers actually trade off (say, indulgence versus health, or convenience versus craft) and the gaps become visible. White space isn’t just an empty quadrant, though; it has to be empty for a reason that customers value. The discipline is finding territory that’s both unclaimed and worth claiming.</p>
 
             </div>
           </AnimatedSection>
@@ -199,11 +199,11 @@ export default function CpgBrandPositioningPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Packaging</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">On shelf, packaging is your positioning in physical form. The front panel has one job — communicate your point of difference inside a two-second glance, through a dominant visual cue and a short benefit line, not a paragraph. If your differentiation requires the back panel to explain it, it won’t survive the shelf.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">On shelf, packaging is your positioning in physical form. The front panel has one job: communicate your point of difference inside a two-second glance, through a dominant visual cue and a short benefit line, not a paragraph. If your differentiation requires the back panel to explain it, it won’t survive the shelf.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Copy and Messaging Hierarchy</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Lead with the point of difference, support it immediately with the reason to believe, and only then layer in secondary benefits. A common failure is treating every benefit as equally important — when everything is emphasized, nothing is. Your messaging hierarchy should mirror your positioning hierarchy.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Lead with the point of difference, support it immediately with the reason to believe, and only then layer in secondary benefits. A common failure is treating every benefit as equally important: when everything is emphasized, nothing is. Your messaging hierarchy should mirror your positioning hierarchy.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Retail Story</h3>
 
@@ -217,11 +217,11 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Positioning Across DTC, Retail, and Marketplace</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your core positioning stays constant across channels — that consistency is the point. What changes is how you sequence the proof, because shoppers behave differently depending on where they meet you.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your core positioning stays constant across channels: that consistency is the point. What changes is how you sequence the proof, because shoppers behave differently depending on where they meet you.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Direct-to-Consumer</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">DTC gives you room to tell the full story — founder narrative, education, social proof, and the emotional payoff. You control the entire journey, so you can lead with the worldview and let the product details follow. It’s also your best laboratory for testing positioning language before it’s locked into retail packaging.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">DTC gives you room to tell the full story: founder narrative, education, social proof, and the emotional payoff. You control the entire journey, so you can lead with the worldview and let the product details follow. It’s also your best laboratory for testing positioning language before it’s locked into retail packaging.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Retail</h3>
 
@@ -239,7 +239,7 @@ export default function CpgBrandPositioningPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Common Positioning Mistakes</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most positioning failures aren’t exotic — they’re the same handful of mistakes repeated across categories. Naming them makes them easier to avoid.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most positioning failures aren’t exotic. They’re the same handful of mistakes repeated across categories. Naming them makes them easier to avoid.</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Trying to be for everyone, which means being compelling to no one</li>
@@ -250,7 +250,7 @@ export default function CpgBrandPositioningPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Picking a frame of reference that caps your growth before you start</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most common of these is the fear of narrowing. Founders worry that a sharp position excludes potential buyers — but a position that excludes the wrong people is exactly how you become the obvious choice for the right ones. Breadth is earned by first owning something specific, not by starting broad.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most common of these is the fear of narrowing. Founders worry that a sharp position excludes potential buyers, but a position that excludes the wrong people is exactly how you become the obvious choice for the right ones. Breadth is earned by first owning something specific, not by starting broad.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The second most common is impatience. Positioning compounds; it needs consistent repetition to take root in memory. Brands that reinvent themselves every season never give any single idea long enough to stick.</p>
 
@@ -275,9 +275,9 @@ export default function CpgBrandPositioningPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Perceptual Signals</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The fastest qualitative test is whether customers describe you back using the words you intended. Ask buyers, in their language, why they chose you — if the answer matches your point of difference, the positioning has landed. If they can only say “it was on sale,” you have a price relationship, not a position.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The fastest qualitative test is whether customers describe you back using the words you intended. Ask buyers, in their language, why they chose you: if the answer matches your point of difference, the positioning has landed. If they can only say “it was on sale,” you have a price relationship, not a position.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Rising unaided awareness and a growing share of brand-name search are slower but powerful indicators. When people seek you out by name rather than stumbling on you in a category search, your positioning has earned a place in memory — which is the entire point.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Rising unaided awareness and a growing share of brand-name search are slower but powerful indicators. When people seek you out by name rather than stumbling on you in a category search, your positioning has earned a place in memory, which is the entire point.</p>
 
             </div>
           </AnimatedSection>
@@ -289,7 +289,7 @@ export default function CpgBrandPositioningPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The hardest part of positioning is objectivity. Founders are too close to their own product to see which difference actually matters to a shopper, and internal teams tend to fall in love with features the market shrugs at. An outside partner brings category research, competitive maps, and the discipline to choose a single position and hold it.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Just as important is translation — turning a strategic position into packaging, copy, retail decks, and marketplace listings that all say the same thing in the right language for each channel. Positioning isn’t a one-time workshop; it’s a decision you defend in every asset you ship. Sharpen it, prove it, and repeat it until the shelf — and the algorithm — have no choice but to notice.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Just as important is translation: turning a strategic position into packaging, copy, retail decks, and marketplace listings that all say the same thing in the right language for each channel. Positioning isn’t a one-time workshop; it’s a decision you defend in every asset you ship. Sharpen it, prove it, and repeat it until the shelf and the algorithm have no choice but to notice.</p>
 
             </div>
           </AnimatedSection>
@@ -319,7 +319,7 @@ export default function CpgBrandPositioningPost() {
                   <span className="text-xs text-[#717171]">9 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Brand Strategy: How to Position Your Consumer Packaged Goods in a Crowded Market</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">The strategic foundation behind a CPG brand that earns shelf space and stays there — from audience to architecture.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">The strategic foundation behind a CPG brand that earns shelf space and stays there, from audience to architecture.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">January 23, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

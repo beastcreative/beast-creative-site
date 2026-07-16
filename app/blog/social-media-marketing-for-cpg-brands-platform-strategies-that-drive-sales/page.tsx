@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "How often should a CPG brand post on social media to stay relevant without burning out?",
-    answer: "Three to five posts per week on your primary platform is a sustainable baseline that maintains algorithmic presence without sacrificing quality. Consistency matters more than frequency — a regular cadence of good content outperforms a burst-and-ghost strategy.",
+    answer: "Three to five posts per week on your primary platform is a sustainable baseline that maintains algorithmic presence without sacrificing quality. Consistency matters more than frequency: a regular cadence of good content outperforms a burst-and-ghost strategy.",
   },
   {
     question: "What content types perform best for CPG brands on social media?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Should CPG brands run paid ads on social, or focus on organic first?",
-    answer: "Organic content validates your creative before you pay to amplify it — if a post performs well organically, it is almost always a winner as a paid ad too. For CPG brands with retail distribution, paid social is most effective when used to drive trial via a specific offer rather than pure awareness.",
+    answer: "Organic content validates your creative before you pay to amplify it: if a post performs well organically, it is almost always a winner as a paid ad too. For CPG brands with retail distribution, paid social is most effective when used to drive trial via a specific offer rather than pure awareness.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function CpgSocialMediaMarketingPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The consumer packaged goods industry operates differently from other sectors when it comes to social media marketing. You’re not selling a once-in-a-lifetime purchase or a high-consideration service. Instead, you’re building brand awareness and loyalty for products that people buy repeatedly, often without much thought.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This creates both opportunities and challenges. The opportunity lies in the frequency of purchase – get it right, and customers will return again and again. The challenge is breaking through the noise to make your brand the one they reach for on the shelf or add to their online cart.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This creates both opportunities and challenges. The opportunity lies in the frequency of purchase: get it right, and customers will return again and again. The challenge is breaking through the noise to make your brand the one they reach for on the shelf or add to their online cart.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what makes CPG social media marketing unique:</p>
 
@@ -115,7 +115,7 @@ export default function CpgSocialMediaMarketingPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Recipe videos and tutorials: Especially powerful for food and beverage brands</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The key to Instagram success is consistency in both posting and visual branding. Your feed should tell a cohesive story about your brand values and product benefits. Don’t just post product shots – create lifestyle content that shows how your products fit into your customers’ daily routines.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The key to Instagram success is consistency in both posting and visual branding. Your feed should tell a cohesive story about your brand values and product benefits. Don’t just post product shots. Create lifestyle content that shows how your products fit into your customers’ daily routines.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Stories and Reels deserve special attention. Stories offer a more casual way to connect with your audience and showcase limited-time offers or new products. Reels, meanwhile, can dramatically expand your reach when they tap into trending sounds or challenges.</p>
 
@@ -149,7 +149,7 @@ export default function CpgSocialMediaMarketingPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Live shopping events: Host live sessions to showcase products and answer questions</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t overlook Facebook’s organic reach for community building. While it’s limited compared to the past, engaged communities still see good organic performance. Focus on creating content that encourages comments and shares – Facebook’s algorithm favors posts that generate meaningful interactions.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t overlook Facebook’s organic reach for community building. While it’s limited compared to the past, engaged communities still see good organic performance. Focus on creating content that encourages comments and shares, since Facebook’s algorithm favors posts that generate meaningful interactions.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Pinterest: The Purchase Planner</h3>
 
@@ -182,7 +182,7 @@ export default function CpgSocialMediaMarketingPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Social Proof Integration</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">User-generated content isn’t just nice to have – it’s essential for CPG brands. People trust other customers more than they trust your marketing messages. Encourage customers to share photos and videos of themselves using your products, and repost the best content.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">User-generated content isn’t just nice to have. It’s essential for CPG brands. People trust other customers more than they trust your marketing messages. Encourage customers to share photos and videos of themselves using your products, and repost the best content.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This might surprise you: negative reviews and honest feedback can actually help sales when handled properly. Responding professionally to criticism shows potential customers that you stand behind your products and care about customer satisfaction.</p>
 
@@ -322,7 +322,7 @@ export default function CpgSocialMediaMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -346,7 +346,7 @@ export default function CpgSocialMediaMarketingPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

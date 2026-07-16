@@ -6,7 +6,7 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "AI Content Marketing Agency San Antonio | Beast Creative Agency",
   description:
-    "AI-powered content production: recipe videos, product demos, social content at scale — 90%+ lower cost than traditional production. Beast Creative Agency.",
+    "AI-powered content production: recipe videos, product demos, and social content at scale, at 90%+ lower cost than traditional production. Beast Creative Agency.",
 };
 
 export default function ContentProductionPage() {
@@ -16,13 +16,13 @@ export default function ContentProductionPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — AI Content Production</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: AI Content Production</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Content at Scale.{" "}
               <span className="text-beast-pink">Not at a Premium.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Recipe videos, product demos, and social content at scale — produced with AI at 90%+ lower cost than traditional production. We&apos;ve processed 900+ recipe assets for CPG clients.
+              Recipe videos, product demos, and social content at scale, produced with AI at 90%+ lower cost than traditional production. We&apos;ve processed 900+ recipe assets for CPG clients.
             </p>
           </AnimatedSection>
         </div>
@@ -34,10 +34,10 @@ export default function ContentProductionPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">The Content Problem</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                You have 50 SKUs. 900 recipes. A TikTok account that posts twice a week. The math doesn&apos;t work with traditional production — a single recipe video costs $800–$2,500. To post daily, you&apos;d need $200K+ per year just in production.
+                You have 50 SKUs. 900 recipes. A TikTok account that posts twice a week. The math doesn&apos;t work with traditional production: a single recipe video costs $800 to $2,500. To post daily, you&apos;d need $200K+ per year just in production.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Beast&apos;s AI content pipeline changes the math. We batch-produce assets from your existing content library — turning one photoshoot into 30 social posts, one recipe PDF into 12 short-form videos.
+                Beast&apos;s AI content pipeline changes the math. We batch-produce assets from your existing content library, turning one photoshoot into 30 social posts and one recipe PDF into 12 short-form videos.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

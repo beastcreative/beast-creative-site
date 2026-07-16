@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "How does first-party data collection fit into a CPG digital strategy?",
-    answer: "CPG brands that rely solely on retail partners have no customer data — building a DTC channel, loyalty program, or recipe site lets you collect emails and purchase history directly. This data makes your ad targeting sharper and reduces dependence on third-party cookies and retail algorithms.",
+    answer: "CPG brands that rely solely on retail partners have no customer data, so building a DTC channel, loyalty program, or recipe site lets you collect emails and purchase history directly. This data makes your ad targeting sharper and reduces dependence on third-party cookies and retail algorithms.",
   },
   {
     question: "What is retail media and why does it matter for CPG digital marketing?",
@@ -67,7 +67,7 @@ export default function CpgDigitalMarketingStrategyPost() {
               Digital Marketing Strategies for CPG Brands: A Complete 2025 Guide
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Consumer packaged goods brands face a unique challenge that most other industries don’t: convincing shoppers to choose their product in the three seconds it takes to scan a grocery shelf. But here’s what’s changed—that critical moment of decision now happens long before customers step foot in a store, and it’s happening on digital platforms where 73% of CPG purchase decisions are influenced.
+              Consumer packaged goods brands face a unique challenge that most other industries don’t: convincing shoppers to choose their product in the three seconds it takes to scan a grocery shelf. But here’s what’s changed: that critical moment of decision now happens long before customers step foot in a store, and it’s happening on digital platforms where 73% of CPG purchase decisions are influenced.
             </p>
           </AnimatedSection>
         </div>
@@ -83,7 +83,7 @@ export default function CpgDigitalMarketingStrategyPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG industry has undergone a massive transformation. Traditional marketing approaches that relied heavily on in-store displays and broad demographic targeting are no longer enough. Today’s consumers research products online, read reviews, compare prices, and make purchase decisions based on digital touchpoints.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">What makes CPG marketing particularly challenging is the low involvement, high-frequency nature of most purchases. You’re not selling a car or a house—you’re selling products that people buy regularly without much deliberation. This means your digital strategy needs to work differently than other industries.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">What makes CPG marketing particularly challenging is the low involvement, high-frequency nature of most purchases. You’re not selling a car or a house. You’re selling products that people buy regularly without much deliberation. This means your digital strategy needs to work differently than other industries.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Key Market Shifts Driving Change</h3>
 
@@ -102,13 +102,13 @@ export default function CpgDigitalMarketingStrategyPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Your CPG Brand’s Digital Foundation</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before diving into specific tactics, you need a solid digital foundation. This isn’t about having a pretty website—it’s about creating a system that can handle the unique demands of CPG marketing.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before diving into specific tactics, you need a solid digital foundation. This isn’t about having a pretty website. It’s about creating a system that can handle the unique demands of CPG marketing.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Essential Digital Infrastructure</h3>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Customer Data Platform Integration CPG brands collect data from multiple sources: retail partners, direct sales, social media, and customer service interactions. You need a centralized system that can merge this data into actionable insights. Look for platforms that can track customer behavior across channels and provide real-time analytics.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Multi-Channel Inventory Management Your digital marketing efforts will drive demand across various channels—your website, Amazon, retail partners, and potentially subscription services. Your systems need to handle inventory visibility and fulfillment across all these touchpoints seamlessly.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Multi-Channel Inventory Management Your digital marketing efforts will drive demand across various channels: your website, Amazon, retail partners, and potentially subscription services. Your systems need to handle inventory visibility and fulfillment across all these touchpoints seamlessly.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Brand Asset Management CPG brands typically have extensive product lines with multiple SKUs. You’ll need a digital asset management system that allows quick access to product images, descriptions, and marketing materials for different platforms and partners.</p>
 
@@ -137,7 +137,7 @@ export default function CpgDigitalMarketingStrategyPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">User-Generated Content Programs</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brands have a unique advantage in user-generated content—people use your products regularly and often share their experiences naturally. The trick is systematizing this:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brands have a unique advantage in user-generated content: people use your products regularly and often share their experiences naturally. The trick is systematizing this:</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Hashtag Campaigns: Create branded hashtags that encourage sharing. #MyMorningRitual or #CleaningHacks work better than #YourBrandName.</p>
 
@@ -203,13 +203,13 @@ export default function CpgDigitalMarketingStrategyPost() {
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Purchase frequency: Heavy users, moderate users, light users, and lapsed customers need different messaging</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Product preferences: Customers who buy premium vs. value products respond to different appeals</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Channel preferences: Some customers prefer shopping online, others in-store—tailor your approach accordingly</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Channel preferences: Some customers prefer shopping online, others in-store, so tailor your approach accordingly</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Seasonal patterns: Identify customers who stock up during sales vs. those who buy as needed</li>
               </ul>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Subscription and Loyalty Programs</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Subscription models work particularly well for CPG brands because they solve a real customer problem—running out of products they use regularly. But the key is making it genuinely convenient, not just a way to lock in customers.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Subscription models work particularly well for CPG brands because they solve a real customer problem: running out of products they use regularly. But the key is making it genuinely convenient, not just a way to lock in customers.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Your subscription program should offer:</p>
 
@@ -316,7 +316,7 @@ export default function CpgDigitalMarketingStrategyPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Artificial Intelligence Applications</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">AI isn’t just a buzzword—it’s already providing real value for CPG marketing:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">AI isn’t just a buzzword. It’s already providing real value for CPG marketing:</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Demand forecasting: Predict inventory needs based on marketing campaigns and external factors</li>
@@ -390,7 +390,7 @@ export default function CpgDigitalMarketingStrategyPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion: Your Next Steps</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG marketing landscape in 2025 rewards brands that can combine data-driven decision making with genuine customer value. Success isn’t just about having the biggest advertising budget—it’s about understanding your customers deeply and meeting them with the right message at the right time across all digital touchpoints.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG marketing landscape in 2025 rewards brands that can combine data-driven decision making with genuine customer value. Success isn’t just about having the biggest advertising budget. It’s about understanding your customers deeply and meeting them with the right message at the right time across all digital touchpoints.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The brands that will thrive are those that can move quickly, test constantly, and adapt their strategies based on real performance data. This requires both the right technology infrastructure and the expertise to use it effectively.</p>
 
@@ -424,7 +424,7 @@ export default function CpgDigitalMarketingStrategyPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -448,7 +448,7 @@ export default function CpgDigitalMarketingStrategyPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

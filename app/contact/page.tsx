@@ -8,13 +8,13 @@ import ReviewBadges from "@/components/ui/ReviewBadges";
 export const metadata: Metadata = {
   title: "Contact Beast Creative Agency | San Antonio SEO & AEO",
   description:
-    "See where you stand in AI search, or send a message. No pitch deck, no commitments — just an honest conversation. Working with brands nationwide.",
+    "See where you stand in AI search, or send a message. No pitch deck, no commitments, just an honest conversation. Working with brands nationwide.",
 };
 
 const faqs = [
   {
     q: "What happens when I reach out?",
-    a: "We come prepared. Before the call, we look at your brand, your current marketing, and your competitors. On the call, you get an honest read on where you're losing ground and what would move the needle fastest — no pitch deck, no sales script.",
+    a: "We come prepared. Before the call, we look at your brand, your current marketing, and your competitors. On the call, you get an honest read on where you're losing ground and what would move the needle fastest, with no pitch deck and no sales script.",
   },
   {
     q: "Do you only work with CPG brands?",
@@ -22,15 +22,15 @@ const faqs = [
   },
   {
     q: "What's a typical starting budget to work with Beast?",
-    a: "Our campaigns start at $2,500/month in ad spend, with management fees on top. We don't take on accounts below that threshold — the math doesn't work for either side. If you're not there yet, we'll tell you what to build toward.",
+    a: "Our campaigns start at $2,500/month in ad spend, with management fees on top. We don't take on accounts below that threshold because the math doesn't work for either side. If you're not there yet, we'll tell you what to build toward.",
   },
   {
     q: "How fast do you move?",
-    a: "First campaigns typically launch within 2–3 weeks of signing. No six-week onboarding cycles. You'll have Slack access, Looker dashboards, and weekly Loom updates from day one.",
+    a: "First campaigns typically launch within 2 to 3 weeks of signing. No six-week onboarding cycles. You'll have Slack access, Looker dashboards, and weekly Loom updates from day one.",
   },
   {
     q: "Do you work with brands outside of San Antonio?",
-    a: "Yes — all of our active clients are national brands. We're headquartered in San Antonio and work remotely with brands across the U.S.",
+    a: "Yes, all of our active clients are national brands. We're headquartered in San Antonio and work remotely with brands across the U.S.",
   },
 ];
 
@@ -66,9 +66,9 @@ export default function ContactPage() {
                 <div>
                   <h2 className="font-display text-2xl font-bold text-white mb-3">Text Us. Talk to a Human.</h2>
                   <p className="text-gray-400 mb-6">
-                    The fastest way to reach us — send a text or WhatsApp and you&apos;ll hear back from a real person, not a bot or a sales queue. No forms, no phone tag.
+                    The fastest way to reach us: send a text or WhatsApp and you&apos;ll hear back from a real person, not a bot or a sales queue. No forms, no phone tag.
                   </p>
-                  <InstantContact message="Hi Beast — I'd like to talk about my brand's search visibility." />
+                  <InstantContact message="Hi Beast, I'd like to talk about my brand's search visibility." />
                   <div className="mt-6">
                     <p className="text-gray-500 text-sm mb-3">Prefer a scheduled call?</p>
                     <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" variant="ghost" icon="calendar" target="_blank" rel="noopener noreferrer">
@@ -83,7 +83,7 @@ export default function ContactPage() {
                     <a href="sms:+12103320567" className="text-white hover:text-beast-pink transition-colors font-medium text-lg">
                       (210) 332-0567
                     </a>
-                    <p className="text-gray-500 text-sm mt-1">Text or call — we respond fast</p>
+                    <p className="text-gray-500 text-sm mt-1">Text or call and we respond fast</p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-1">Location</p>
@@ -101,10 +101,10 @@ export default function ContactPage() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-4">Why Talk to Beast</p>
                   <ul className="space-y-3">
                     {[
-                      "7.03% CTR — vs 0.89% industry average",
+                      "7.03% CTR (vs. 0.89% industry average)",
                       "36,581 consumer emails on a $6,000 budget",
                       "500%+ MRR growth for e-commerce CPG clients",
-                      "No pitch deck — just honest numbers",
+                      "No pitch deck, just honest numbers",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-3 text-sm">
                         <svg className="w-4 h-4 text-beast-pink shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

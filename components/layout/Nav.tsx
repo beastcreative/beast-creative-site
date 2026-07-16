@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 const caseStudies = [
   { name: "TEKSBuilder",             href: "/work/teksbuilder",      stat: "50+ sites" },
   { name: "Sun-Bird Seasonings",     href: "/work/sun-bird",         stat: "36,581"  },
-  { name: "Williams — BTS",          href: "/work/williams-bts",     stat: "22,043"  },
-  { name: "Williams — All-Stars",    href: "/work/williams-allstars",stat: "13,660"  },
+  { name: "Williams: BTS",           href: "/work/williams-bts",     stat: "22,043"  },
+  { name: "Williams: All-Stars",     href: "/work/williams-allstars",stat: "13,660"  },
   { name: "Williams Bowl",           href: "/work/williams-bowl",    stat: "6,020"   },
   { name: "Sweet Sensi",             href: "/work/sweet-sensi",      stat: "500%+"   },
   { name: "Coinline",                href: "/work/coinline",         stat: "Branding"},
@@ -352,7 +352,7 @@ export default function Nav() {
             <Link href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" className="btn-yellow w-full justify-center !py-4 !px-6 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
               Free 15min Strategy Call
             </Link>
-            <a href="sms:+12103320567" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">(210) 332-0567 — text or call</a>
+            <a href="sms:+12103320567" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">Text or call (210) 332-0567</a>
           </div>
         </div>
       </div>

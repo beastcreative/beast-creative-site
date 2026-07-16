@@ -18,7 +18,7 @@ export default function FlipCard({ front, back, alt, tilt = 3 }: FlipCardProps) 
       role="button"
       tabIndex={0}
       aria-pressed={flipped}
-      aria-label={`${alt} — press to flip`}
+      aria-label={`${alt}, press to flip`}
       className="relative w-full cursor-pointer"
       style={{ perspective: "1000px" }}
       onPointerEnter={(e) => { if (e.pointerType === "mouse") setFlipped(true); }}
@@ -56,7 +56,7 @@ export default function FlipCard({ front, back, alt, tilt = 3 }: FlipCardProps) 
           }}
           className="rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
         >
-          <Image src={back} alt={alt + " — back"} width={440} height={440} className="w-full h-auto block" />
+          <Image src={back} alt={alt + " (back)"} width={440} height={440} className="w-full h-auto block" />
         </div>
       </div>
       {/* Hint: mobile only */}

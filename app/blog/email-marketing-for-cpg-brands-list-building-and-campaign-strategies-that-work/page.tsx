@@ -14,23 +14,23 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What ROI can CPG brands expect from email marketing?",
-    answer: "Email marketing delivers an average 42x ROI — $42 returned for every $1 spent — making it the highest-ROI channel available to CPG brands. The key is list quality and campaign relevance. A highly segmented list of engaged subscribers dramatically outperforms a large list of disengaged contacts.",
+    answer: "Email marketing delivers an average 42x ROI ($42 returned for every $1 spent), making it the highest-ROI channel available to CPG brands. The key is list quality and campaign relevance. A highly segmented list of engaged subscribers dramatically outperforms a large list of disengaged contacts.",
   },
   {
     question: "What are the most effective list building tactics for CPG brands?",
-    answer: "Product sampling in exchange for email addresses works exceptionally well — consumers who try the product are already qualified leads. Content-based lead magnets (recipe collections, usage guides) build high-quality lists. Social media integrations promoting email-only offers convert existing followers. In-store QR codes on displays or receipts capture purchase-intent subscribers.",
+    answer: "Product sampling in exchange for email addresses works exceptionally well, since consumers who try the product are already qualified leads. Content-based lead magnets (recipe collections, usage guides) build high-quality lists. Social media integrations promoting email-only offers convert existing followers. In-store QR codes on displays or receipts capture purchase-intent subscribers.",
   },
   {
     question: "What should be in a CPG email welcome series?",
-    answer: "A four-email sequence works best: Email 1 delivers the promised incentive and shares the brand story. Email 2 provides product education — usage tips, storage, serving suggestions. Email 3 builds social proof through reviews and UGC. Email 4 introduces cross-sell opportunities with personalized recommendations based on the initial product purchased.",
+    answer: "A four-email sequence works best: Email 1 delivers the promised incentive and shares the brand story. Email 2 provides product education: usage tips, storage, serving suggestions. Email 3 builds social proof through reviews and UGC. Email 4 introduces cross-sell opportunities with personalized recommendations based on the initial product purchased.",
   },
   {
     question: "How should CPG brands segment their email list?",
-    answer: "Start with purchase-based segmentation — it's the strongest predictor of future buying behavior. Group by product category preference, purchase frequency (heavy users vs. occasional buyers vs. lapsed customers), and spending level. Layer in lifestyle segmentation (dietary preferences, life stage) and engagement-based segmentation for re-engagement campaigns.",
+    answer: "Start with purchase-based segmentation, since it's the strongest predictor of future buying behavior. Group by product category preference, purchase frequency (heavy users vs. occasional buyers vs. lapsed customers), and spending level. Layer in lifestyle segmentation (dietary preferences, life stage) and engagement-based segmentation for re-engagement campaigns.",
   },
   {
     question: "How do CPG brands handle email attribution given offline purchases?",
-    answer: "Use multi-touch attribution modeling that credits email across the full customer journey. Track assisted conversions — where email contributed to a purchase even if it wasn't the last touch. Measure customer lifetime value of email-acquired subscribers versus other channels. Post-purchase surveys asking 'How did you first hear about us?' supplement click-based attribution.",
+    answer: "Use multi-touch attribution modeling that credits email across the full customer journey. Track assisted conversions, where email contributed to a purchase even if it wasn't the last touch. Measure customer lifetime value of email-acquired subscribers versus other channels. Post-purchase surveys asking 'How did you first hear about us?' supplement click-based attribution.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function EmailMarketingPost() {
               <span className="text-beast-pink">List Building and Campaign Strategies That Work</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Email delivers 42x ROI for CPG brands — but only with quality lists and campaigns built around consumer behavior. Here&amp;apos;s the complete playbook.
+              Email delivers 42x ROI for CPG brands, but only with quality lists and campaigns built around consumer behavior. Here&apos;s the complete playbook.
             </p>
           </AnimatedSection>
         </div>
@@ -114,7 +114,7 @@ export default function EmailMarketingPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">List Building Strategies That Actually Work</h2>
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Product Sampling and Trial Offers</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Firsthand product experience drives the most effective list building. Free sample campaigns exchange samples for email addresses — particularly effective for food, beauty, and household products where immediate quality feedback drives conversion. Money-back guarantees reduce purchase risk while collecting emails during registration. Trial-size variety packs let customers test multiple products while joining your list.
+                Firsthand product experience drives the most effective list building. Free sample campaigns exchange samples for email addresses, particularly effective for food, beauty, and household products where immediate quality feedback drives conversion. Money-back guarantees reduce purchase risk while collecting emails during registration. Trial-size variety packs let customers test multiple products while joining your list.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Content-Based Lead Magnets</h3>
@@ -136,10 +136,10 @@ export default function EmailMarketingPost() {
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">The Four-Email Welcome Series</h3>
               <ul className="space-y-3 mb-8">
                 {[
-                  { label: "Email 1 – Immediate value", detail: "Deliver the promised incentive, share your brand story, set expectations for future emails." },
-                  { label: "Email 2 – Product education", detail: "Usage tips, storage recommendations, serving suggestions that maximize the product experience." },
-                  { label: "Email 3 – Social proof", detail: "Customer reviews, user-generated content, testimonials that reinforce the purchase decision." },
-                  { label: "Email 4 – Cross-sell opportunity", detail: "Introduce the full product line with personalized recommendations based on initial purchase." },
+                  { label: "Email 1 (Immediate value)", detail: "Deliver the promised incentive, share your brand story, set expectations for future emails." },
+                  { label: "Email 2 (Product education)", detail: "Usage tips, storage recommendations, serving suggestions that maximize the product experience." },
+                  { label: "Email 3 (Social proof)", detail: "Customer reviews, user-generated content, testimonials that reinforce the purchase decision." },
+                  { label: "Email 4 (Cross-sell opportunity)", detail: "Introduce the full product line with personalized recommendations based on initial purchase." },
                 ].map((item) => (
                   <li key={item.label} className="flex gap-3">
                     <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -207,7 +207,7 @@ export default function EmailMarketingPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Common Pitfalls to Avoid</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Over-promotion: constant sales pitches turn subscribers off — balance with educational content",
+                  "Over-promotion: constant sales pitches turn subscribers off, so balance with educational content",
                   "Ignoring mobile: over 60% of emails open on mobile devices",
                   "Generic messaging: personalization is essential in a crowded inbox",
                   "Inconsistent sending: irregular frequency damages deliverability and subscriber expectations",
@@ -278,7 +278,7 @@ export default function EmailMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

@@ -16,13 +16,13 @@ export default function PaidMediaPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — Paid Media</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: Paid Media</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Paid Media That Pays{" "}
               <span className="text-beast-pink">You Back.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              AI-optimized campaigns on Facebook, Instagram, TikTok, and Google — with real-time creative testing and daily optimization. Our CPG campaigns average $0.12 CPC vs $0.28 industry standard.
+              AI-optimized campaigns on Facebook, Instagram, TikTok, and Google, with real-time creative testing and daily optimization. Our CPG campaigns average $0.12 CPC vs $0.28 industry standard.
             </p>
           </AnimatedSection>
         </div>
@@ -34,7 +34,7 @@ export default function PaidMediaPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Our Approach</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We don&apos;t set up campaigns and check in monthly. We monitor daily, test creative continuously, and optimize based on real-time data — not gut feelings.
+                We don&apos;t set up campaigns and check in monthly. We monitor daily, test creative continuously, and optimize based on real-time data, not gut feelings.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 AI-assisted audience segmentation finds the pockets of your market that convert at the lowest cost. Dynamic creative testing lets us run 10 variations simultaneously and double down on what works within 48 hours.

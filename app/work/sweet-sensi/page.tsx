@@ -11,7 +11,7 @@ import TradingCard from "@/components/ui/TradingCard";
 export const metadata: Metadata = {
   title: "Sweet Sensi CBD E-Commerce | 500%+ MRR Growth | Beast Creative Agency",
   description:
-    "Beast Creative Agency grew Sweet Sensi's monthly recurring revenue by over 500% through a precision SEO and social media strategy in the highly regulated CBD industry — without relying on traditional paid advertising.",
+    "Beast Creative Agency grew Sweet Sensi's monthly recurring revenue by over 500% through a precision SEO and social media strategy in the highly regulated CBD industry, without relying on traditional paid advertising.",
 };
 
 export default function SweetSensiPage() {
@@ -39,14 +39,14 @@ export default function SweetSensiPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Brief</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Grow Sales in an Industry Where Most Marketing Roads Are Closed.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Sweet Sensi came to Beast with a real problem — one that most CBD brands face and most agencies don&apos;t know how to solve. Their products were good. Their brand was compelling. But the CBD industry operates under some of the most restrictive advertising conditions in digital marketing.
+                  Sweet Sensi came to Beast with a real problem: one that most CBD brands face and most agencies don&apos;t know how to solve. Their products were good. Their brand was compelling. But the CBD industry operates under some of the most restrictive advertising conditions in digital marketing.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Google won&apos;t run CBD ads. Facebook and Instagram ban most direct CBD product promotion. Traditional paid acquisition channels — the backbone of e-commerce growth for almost every other product category — were largely off the table.
+                  Google won&apos;t run CBD ads. Facebook and Instagram ban most direct CBD product promotion. Traditional paid acquisition channels, the backbone of e-commerce growth for almost every other product category, were largely off the table.
                 </p>
                 <div className="bg-white rounded-xl p-5 border border-gray-100">
                   <p className="font-display font-bold text-beast-black text-sm mb-2">The Real Opportunity</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">The CBD market is one of the fastest-growing wellness categories in the US — but the brands that win aren&apos;t the ones with the biggest ad budgets. They&apos;re the ones that show up where consumers are looking, build genuine community, and earn trust in a category where consumers are understandably cautious. Beast had to build a marketing engine that worked without the most common tools. That constraint produced a strategy more durable, more cost-efficient, and more compounding than a standard paid approach would have been.</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">The CBD market is one of the fastest-growing wellness categories in the US, but the brands that win aren&apos;t the ones with the biggest ad budgets. They&apos;re the ones that show up where consumers are looking, build genuine community, and earn trust in a category where consumers are understandably cautious. Beast had to build a marketing engine that worked without the most common tools. That constraint produced a strategy more durable, more cost-efficient, and more compounding than a standard paid approach would have been.</p>
                 </div>
               </AnimatedSection>
 
@@ -54,7 +54,7 @@ export default function SweetSensiPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Product Line</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Elevated Edibles. Built to Stand Out.</h2>
                 <p className="text-gray-600 leading-relaxed mb-10">
-                  Sweet Sensi&apos;s Elevated Edibles line — premium THC and CBD drinks crafted with full-spectrum rosin — gave Beast&apos;s content strategy something genuinely worth talking about. Products this distinct make every piece of organic content more credible. When the product is legitimately elevated, the marketing compounds faster.
+                  Sweet Sensi&apos;s Elevated Edibles line, premium THC and CBD drinks crafted with full-spectrum rosin, gave Beast&apos;s content strategy something genuinely worth talking about. Products this distinct make every piece of organic content more credible. When the product is legitimately elevated, the marketing compounds faster.
                 </p>
                 <div className="flex flex-row items-start justify-center gap-8">
                   <div className="w-56 lg:w-64">
@@ -86,10 +86,10 @@ export default function SweetSensiPage() {
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-6">When You Can&apos;t Buy Attention, You Have to Earn It.</h2>
                 <div className="space-y-6">
                   {[
-                    { step: "1", label: "The Diagnosis", detail: "Beast started with a full audit of Sweet Sensi's digital presence: website technical health, content depth, keyword positioning, social media performance, and conversion funnel from traffic to purchase. The audit revealed the pattern Beast sees across most small e-commerce brands: significant organic search traffic being left on the table, social media presence without a clear content strategy, no tested messaging framework, and two channels that could work — SEO and organic social — being used without coordination." },
-                    { step: "2", label: "The SEO Foundation", detail: "Beast built Sweet Sensi's SEO strategy around one core insight: CBD consumers are searchers, not browsers. When someone wants to try CBD for sleep, anxiety, pain, or wellness, they search. They research. They read. Beast delivered: technical optimization (speed, mobile, structured data), a keyword strategy around high-purchase-intent queries, content development building trust and depth, and domain authority signals that told search engines Sweet Sensi was legitimate — not a fly-by-night operation in a category full of low-quality players." },
-                    { step: "3", label: "The Social Media Strategy", detail: "Social media for a CBD brand requires a completely different playbook. Direct product promotion is restricted on most platforms. Beast developed a content strategy built around wellness content that genuinely served Sweet Sensi's audience — sleep, stress, recovery — without hitting CBD advertising policy tripwires. Brand storytelling that built the trust CBD consumers need before they buy. User-generated content amplification within platform guidelines. Community building that converts, not just vanity follower counts." },
-                    { step: "4", label: "The A/B Testing Engine", detail: "Beast ran continuous A/B tests across both channels — identifying the combinations of message, creative, and audience that drove actual purchases rather than just traffic. Which SEO content drove the highest purchase-intent traffic. Which social content formats drove website clicks. Which product page variations converted best. Which email follow-up sequences turned site visitors into buyers. This rigorous, iterative approach is what separated Beast's results from what most agencies deliver." },
+                    { step: "1", label: "The Diagnosis", detail: "Beast started with a full audit of Sweet Sensi's digital presence: website technical health, content depth, keyword positioning, social media performance, and conversion funnel from traffic to purchase. The audit revealed the pattern Beast sees across most small e-commerce brands: significant organic search traffic being left on the table, social media presence without a clear content strategy, no tested messaging framework, and two channels that could work, SEO and organic social, being used without coordination." },
+                    { step: "2", label: "The SEO Foundation", detail: "Beast built Sweet Sensi's SEO strategy around one core insight: CBD consumers are searchers, not browsers. When someone wants to try CBD for sleep, anxiety, pain, or wellness, they search. They research. They read. Beast delivered: technical optimization (speed, mobile, structured data), a keyword strategy around high-purchase-intent queries, content development building trust and depth, and domain authority signals that told search engines Sweet Sensi was legitimate, not a fly-by-night operation in a category full of low-quality players." },
+                    { step: "3", label: "The Social Media Strategy", detail: "Social media for a CBD brand requires a completely different playbook. Direct product promotion is restricted on most platforms. Beast developed a content strategy built around wellness content that genuinely served Sweet Sensi's audience (sleep, stress, recovery) without hitting CBD advertising policy tripwires. Brand storytelling that built the trust CBD consumers need before they buy. User-generated content amplification within platform guidelines. Community building that converts, not just vanity follower counts." },
+                    { step: "4", label: "The A/B Testing Engine", detail: "Beast ran continuous A/B tests across both channels, identifying the combinations of message, creative, and audience that drove actual purchases rather than just traffic. Which SEO content drove the highest purchase-intent traffic. Which social content formats drove website clicks. Which product page variations converted best. Which email follow-up sequences turned site visitors into buyers. This rigorous, iterative approach is what separated Beast's results from what most agencies deliver." },
                     { step: "5", label: "The Compounding Effect", detail: "The most important discovery was what Beast came to call the SEO + Social combo effect. SEO content that ranks and drives traffic also gets shared on social. Social content builds brand awareness that increases branded search volume, which improves SEO signals. Email capture from SEO-driven traffic gets nurtured through social retargeting. Brand trust built through social content increases the conversion rate of organic search visitors. Each channel amplified the other. The longer the system ran, the more efficient it got." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
@@ -107,10 +107,10 @@ export default function SweetSensiPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Brand</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">A Premium Product That Deserved a Premium Presence.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Sweet Sensi wasn&apos;t just a CBD brand — they were a premium wellness company with a distinct aesthetic and a genuine product story to tell. Beast&apos;s strategy leaned into that. Rather than defaulting to the generic wellness tropes that flood the CBD space, the work centered on what made Sweet Sensi different: carefully crafted formulations, boutique retail placement, and a brand identity that communicated quality at every touchpoint.
+                  Sweet Sensi wasn&apos;t just a CBD brand. They were a premium wellness company with a distinct aesthetic and a genuine product story to tell. Beast&apos;s strategy leaned into that. Rather than defaulting to the generic wellness tropes that flood the CBD space, the work centered on what made Sweet Sensi different: carefully crafted formulations, boutique retail placement, and a brand identity that communicated quality at every touchpoint.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  That foundation made every piece of content more credible. Consumers researching CBD don&apos;t just buy products — they buy brands they trust. When the brand signals quality at the shelf and on the screen, SEO traffic converts. Social content resonates. Email gets opened. The visuals below are a reflection of what Beast was working to amplify — a brand already worth discovering. The job was making sure people found it.
+                  That foundation made every piece of content more credible. Consumers researching CBD don&apos;t just buy products, they buy brands they trust. When the brand signals quality at the shelf and on the screen, SEO traffic converts. Social content resonates. Email gets opened. The visuals below are a reflection of what Beast was working to amplify: a brand already worth discovering. The job was making sure people found it.
                 </p>
               </AnimatedSection>
 
@@ -218,12 +218,12 @@ export default function SweetSensiPage() {
 
                 <div className="bg-near-black rounded-xl p-5 mb-6">
                   <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-2">The Durability Advantage</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">Paid advertising stops working the moment you stop paying. A well-executed SEO strategy keeps generating organic traffic and revenue for years after the initial investment. Sweet Sensi&apos;s content rankings, domain authority, and social community are assets that continue to compound — making each future dollar of marketing investment more efficient than the last. Beast built Sweet Sensi an engine, not a campaign. That&apos;s the difference.</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">Paid advertising stops working the moment you stop paying. A well-executed SEO strategy keeps generating organic traffic and revenue for years after the initial investment. Sweet Sensi&apos;s content rankings, domain authority, and social community are assets that continue to compound, making each future dollar of marketing investment more efficient than the last. Beast built Sweet Sensi an engine, not a campaign. That&apos;s the difference.</p>
                 </div>
 
                 <blockquote className="border border-beast-pink/20 bg-beast-pink/5 rounded-xl px-6 py-4">
                   <p className="text-beast-black font-medium italic text-lg leading-relaxed">
-                    &quot;Beast improved our monthly recurring revenue — it jumped by 566%, thanks to their SEO and social media strategy. They didn&apos;t just drive traffic — they brought the right people to us consistently. It&apos;s the most impactful marketing investment we&apos;ve made.&quot;
+                    &quot;Beast improved our monthly recurring revenue. It jumped by 566%, thanks to their SEO and social media strategy. They didn&apos;t just drive traffic. They brought the right people to us consistently. It&apos;s the most impactful marketing investment we&apos;ve made.&quot;
                   </p>
                   <footer className="mt-3 text-sm text-gray-500">Sweet Sensi</footer>
                 </blockquote>
@@ -238,7 +238,7 @@ export default function SweetSensiPage() {
                   {[
                     { label: "Client", value: "Sweet Sensi" },
                     { label: "Industry", value: "CBD / Wellness / E-Commerce" },
-                    { label: "Years", value: "2023–2024" },
+                    { label: "Years", value: "2023 to 2024" },
                     { label: "Challenge", value: "Growth without paid ads (CBD restrictions)" },
                     { label: "Services", value: "SEO, Technical SEO, Content, Social Media, A/B Testing, CRO" },
                     { label: "Result", value: "500%+ MRR growth" },
@@ -281,7 +281,7 @@ export default function SweetSensiPage() {
         <div className="lg:hidden bg-[#F4F4F4] py-10 px-6 text-center">
           <p className="section-eyebrow text-beast-pink mb-2">The Creative</p>
           <h2 className="font-display text-3xl font-bold text-beast-black mb-3">Product Photography That Sold the Brand.</h2>
-          <p className="text-beast-black/60 max-w-xl mx-auto text-sm leading-relaxed">Premium visuals built to communicate quality at a glance — the kind of creative that earns consumer trust before a single word is read.</p>
+          <p className="text-beast-black/60 max-w-xl mx-auto text-sm leading-relaxed">Premium visuals built to communicate quality at a glance: the kind of creative that earns consumer trust before a single word is read.</p>
         </div>
 
         <Image
@@ -299,7 +299,7 @@ export default function SweetSensiPage() {
           <AnimatedSection>
             <p className="section-eyebrow text-beast-pink mb-2">The Creative</p>
             <h2 className="font-display text-3xl font-bold text-beast-black mb-3">Product Photography That Sold the Brand.</h2>
-            <p className="text-beast-black/60 max-w-xl mx-auto text-sm leading-relaxed">Premium visuals built to communicate quality at a glance — the kind of creative that earns consumer trust before a single word is read.</p>
+            <p className="text-beast-black/60 max-w-xl mx-auto text-sm leading-relaxed">Premium visuals built to communicate quality at a glance: the kind of creative that earns consumer trust before a single word is read.</p>
           </AnimatedSection>
         </div>
       </section>
@@ -310,7 +310,7 @@ export default function SweetSensiPage() {
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to Build Revenue That Doesn&apos;t Stop When the Budget Does?</h2>
-            <p className="text-gray-400 mb-8">Whether you&apos;re in a restricted industry or just tired of paying for traffic you don&apos;t own — Beast builds marketing assets that compound over time.</p>
+            <p className="text-gray-400 mb-8">Whether you&apos;re in a restricted industry or just tired of paying for traffic you don&apos;t own, Beast builds marketing assets that compound over time.</p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>

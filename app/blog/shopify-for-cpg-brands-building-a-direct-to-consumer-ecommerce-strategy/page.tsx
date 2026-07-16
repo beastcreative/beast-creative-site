@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "How do you optimize a Shopify CPG store for subscription conversion vs. one-time purchase?",
-    answer: "Present the subscription option as the default on the product page with the one-time purchase as a secondary option — this simple default switch increases subscription attach rates by 30–50% for most CPG brands. Reinforce the value with a clear savings callout and a flexible cancel-anytime message to reduce perceived risk.",
+    answer: "Present the subscription option as the default on the product page, with the one-time purchase as a secondary option. This simple default switch increases subscription attach rates by 30% to 50% for most CPG brands. Reinforce the value with a clear savings callout and a flexible cancel-anytime message to reduce perceived risk.",
   },
   {
     question: "What Shopify analytics should CPG DTC operators review weekly?",
@@ -68,7 +68,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
               <span className="text-beast-pink">Building a Direct-to-Consumer Ecommerce Strategy</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Consumer Packaged Goods brands are abandoning traditional retail gatekeepers at record speed, with 73% planning to increase their direct-to-consumer investments this year. The shift isn’t just about higher margins—it’s about owning customer relationships and building brands that can adapt quickly to changing consumer demands.
+              Consumer Packaged Goods brands are abandoning traditional retail gatekeepers at record speed, with 73% planning to increase their direct-to-consumer investments this year. The shift isn’t just about higher margins. It’s about owning customer relationships and building brands that can adapt quickly to changing consumer demands.
             </p>
           </AnimatedSection>
         </div>
@@ -88,7 +88,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Scalability That Grows With Your Brand</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most CPG brands don’t start small and stay small. You’re planning for growth, and Shopify’s infrastructure can handle everything from your first hundred orders to millions of transactions. The platform automatically scales server capacity during traffic spikes—think product launches or viral social media moments—without requiring technical intervention.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most CPG brands don’t start small and stay small. You’re planning for growth, and Shopify’s infrastructure can handle everything from your first hundred orders to millions of transactions. The platform automatically scales server capacity during traffic spikes, such as product launches or viral social media moments, without requiring technical intervention.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This scalability extends beyond just handling traffic. Shopify’s app ecosystem includes specialized tools for CPG brands, from advanced inventory forecasting to subscription management systems that can handle complex product rotations and customer preferences.</p>
 
@@ -130,7 +130,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Subscription Strategy Best Practices</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just offer subscriptions—actively optimize them. Use customer data to suggest ideal delivery frequencies. If someone consistently pushes back their delivery date, automatically adjust their schedule. If they frequently add extra items to subscription orders, suggest upgrading their recurring quantity.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just offer subscriptions. Actively optimize them. Use customer data to suggest ideal delivery frequencies. If someone consistently pushes back their delivery date, automatically adjust their schedule. If they frequently add extra items to subscription orders, suggest upgrading their recurring quantity.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Provide clear value for subscription customers through exclusive products, early access to new releases, or subscriber-only pricing. This creates a premium tier of customers who are more engaged and less likely to churn.</p>
 
@@ -152,7 +152,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Personalization at Scale</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brands have access to rich customer data—purchase history, frequency patterns, seasonal preferences, and more. Use this data to create personalized shopping experiences that feel tailored rather than generic.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brands have access to rich customer data: purchase history, frequency patterns, seasonal preferences, and more. Use this data to create personalized shopping experiences that feel tailored rather than generic.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Shopify’s personalization tools can display different homepage content based on customer segments, recommend products based on purchase history, and send targeted email campaigns based on buying patterns.</p>
 
@@ -170,7 +170,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brands face unique shipping challenges. Products might be fragile, temperature-sensitive, or heavy. Customers expect fast delivery but are sensitive to shipping costs, especially for routine purchases.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Use Shopify’s shipping rate calculator to offer accurate, real-time shipping costs. Consider offering free shipping thresholds that encourage larger order values—this is particularly effective for CPG brands where customers often purchase multiple items.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Use Shopify’s shipping rate calculator to offer accurate, real-time shipping costs. Consider offering free shipping thresholds that encourage larger order values. This is particularly effective for CPG brands where customers often purchase multiple items.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">For temperature-sensitive products, integrate with specialized fulfillment partners who can handle cold chain logistics. Shopify’s fulfillment network includes partners experienced with food, beverage, and cosmetic shipping requirements.</p>
 
@@ -198,7 +198,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Social Commerce Integration</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG products are inherently social—people share food experiences, recommend beauty products, and discuss household items. Shopify’s social commerce features let you sell directly through Instagram, Facebook, and TikTok where these conversations happen.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG products are inherently social: people share food experiences, recommend beauty products, and discuss household items. Shopify’s social commerce features let you sell directly through Instagram, Facebook, and TikTok where these conversations happen.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Enable user-generated content by encouraging customers to share photos and reviews. CPG products often photograph well in use, creating authentic marketing content that resonates with potential customers.</p>
 
@@ -248,7 +248,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Start with a clear understanding of your customer’s purchase journey, from initial discovery through repeat purchases. Use Shopify’s tools to create experiences that support this journey while building the operational infrastructure to deliver consistently great service.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Remember, the brands winning in the DTC CPG space aren’t just selling products—they’re building relationships with customers who choose them over countless alternatives available in traditional retail channels. Success comes from combining Shopify’s technical capabilities with deep customer insight and relentless focus on experience optimization.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Remember, the brands winning in the DTC CPG space aren’t just selling products. They’re building relationships with customers who choose them over countless alternatives available in traditional retail channels. Success comes from combining Shopify’s technical capabilities with deep customer insight and relentless focus on experience optimization.</p>
 
             </div>
           </AnimatedSection>
@@ -278,7 +278,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -302,7 +302,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

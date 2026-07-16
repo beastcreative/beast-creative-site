@@ -72,7 +72,7 @@ export default function SweetSensiHero() {
             ))}
           </div>
           <p className="hero-text-item section-eyebrow text-beast-yellow mb-3">
-            Case Study — Sweet Sensi · 2023–2024
+            Case Study: Sweet Sensi · 2023 to 2024
           </p>
           <h1 className="hero-text-item text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
             500% MRR Growth.{" "}
@@ -82,7 +82,7 @@ export default function SweetSensiHero() {
           </h1>
           <p className="hero-text-item text-body-lead text-gray-300">
             CBD brands couldn&apos;t run Google or Facebook ads. So Beast built an
-            organic engine instead — and grew Sweet Sensi&apos;s monthly
+            organic engine instead, and grew Sweet Sensi&apos;s monthly
             recurring revenue by over 500%.
           </p>
         </div>

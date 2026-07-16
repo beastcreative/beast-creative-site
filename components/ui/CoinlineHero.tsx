@@ -478,7 +478,7 @@ export default function CoinlineHero() {
                   ))}
                 </div>
                 <p className="section-eyebrow text-beast-yellow mb-3">
-                  Case Study — Coinline Barcade · 2022
+                  Case Study: Coinline Barcade · 2022
                 </p>
                 <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl leading-tight">
                   From a Concept to a{" "}
@@ -490,7 +490,7 @@ export default function CoinlineHero() {
             {/* Bottom: description */}
             <div className="relative max-w-7xl mx-auto w-full px-6 lg:px-20 pb-24 lg:pb-16">
               <p className="text-body-lead text-gray-300 max-w-2xl">
-                Named, designed, and launched from scratch — Beast built the full brand
+                Named, designed, and launched from scratch, Beast built the full brand
                 identity for Coinline Barcade, a retro-modern arcade concept built to own
                 every surface it touches.
               </p>

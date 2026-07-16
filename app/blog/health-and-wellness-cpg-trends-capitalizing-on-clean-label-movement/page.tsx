@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Is there a legal definition of “clean label” in the United States?",
-    answer: "No—there is no FDA or USDA definition of “clean label,” and the term is not regulated. It’s a consumer-driven, marketing-driven concept that generally signals short ingredient lists, recognizable ingredients, and the absence of synthetic additives. Because it’s undefined, the burden is on the brand to make its specific claims defensible: a “no artificial preservatives” claim still has to be literally true even though “clean label” itself never has to be proven.",
+    answer: "No, there is no FDA or USDA definition of “clean label,” and the term is not regulated. It’s a consumer-driven, marketing-driven concept that generally signals short ingredient lists, recognizable ingredients, and the absence of synthetic additives. Because it’s undefined, the burden is on the brand to make its specific claims defensible: a “no artificial preservatives” claim still has to be literally true even though “clean label” itself never has to be proven.",
   },
   {
     question: "Will reformulating to a cleaner ingredient deck hurt shelf life or taste?",
-    answer: "Often, yes—at least initially. Removing synthetic preservatives, stabilizers, or artificial flavors frequently shortens shelf life, changes texture, or alters the flavor profile, which is exactly why these ingredients were used in the first place. The work is finding clean-label functional replacements (cultured dextrose, rosemary extract, acerola for vitamin C) and validating them through real stability and sensory testing before you ever change a label. Treat reformulation as an R&D project with a budget, not a quick swap.",
+    answer: "Often, yes, at least initially. Removing synthetic preservatives, stabilizers, or artificial flavors frequently shortens shelf life, changes texture, or alters the flavor profile, which is exactly why these ingredients were used in the first place. The work is finding clean-label functional replacements (cultured dextrose, rosemary extract, acerola for vitamin C) and validating them through real stability and sensory testing before you ever change a label. Treat reformulation as an R&D project with a budget, not a quick swap.",
   },
   {
     question: "What’s the difference between a structure/function claim and a disease claim on a wellness product?",
-    answer: "A structure/function claim describes how a nutrient or ingredient affects the body’s normal structure or function—“supports immune health,” “helps maintain healthy digestion”—and is permitted with substantiation. A disease claim states or implies that a product treats, cures, or prevents a disease, which turns a food or supplement into an unapproved drug in the FDA’s eyes. The line is easy to cross with imagery, testimonials, and even product names, so wellness messaging needs to be reviewed claim by claim against what you can actually substantiate.",
+    answer: "A structure/function claim describes how a nutrient or ingredient affects the body’s normal structure or function (think “supports immune health,” “helps maintain healthy digestion”) and is permitted with substantiation. A disease claim states or implies that a product treats, cures, or prevents a disease, which turns a food or supplement into an unapproved drug in the FDA’s eyes. The line is easy to cross with imagery, testimonials, and even product names, so wellness messaging needs to be reviewed claim by claim against what you can actually substantiate.",
   },
   {
     question: "Do third-party certifications actually move the needle, or are they just badges?",
-    answer: "Credible third-party marks—USDA Organic, Non-GMO Project Verified, Certified Gluten-Free, B Corp—do real work because they offload trust from your brand to an independent verifier the shopper already recognizes. They’re most valuable when the certification maps directly to the claim your buyer cares about and you don’t over-stack them into visual noise. The mistake is treating badges as a substitute for a coherent story; they’re evidence for the story, not the story itself.",
+    answer: "Credible third-party marks, like USDA Organic, Non-GMO Project Verified, Certified Gluten-Free, and B Corp, do real work because they offload trust from your brand to an independent verifier the shopper already recognizes. They’re most valuable when the certification maps directly to the claim your buyer cares about and you don’t over-stack them into visual noise. The mistake is treating badges as a substitute for a coherent story; they’re evidence for the story, not the story itself.",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
               <span className="text-beast-pink">Capitalizing on the Clean-Label Movement</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Health and wellness used to be a niche aisle—a few brands selling to a few shoppers who read every label. That era is over. Across nearly every CPG category, “better for you” has quietly become the baseline expectation rather than the premium upsell. Shoppers now turn the package over and scan the ingredient deck the way they used to check the price, and a product that can’t survive that flip is at a disadvantage before it ever reaches the cart.
+              Health and wellness used to be a niche aisle: a few brands selling to a few shoppers who read every label. That era is over. Across nearly every CPG category, “better for you” has quietly become the baseline expectation rather than the premium upsell. Shoppers now turn the package over and scan the ingredient deck the way they used to check the price, and a product that can’t survive that flip is at a disadvantage before it ever reaches the cart.
             </p>
           </AnimatedSection>
         </div>
@@ -81,7 +81,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">What “Clean Label” Actually Means</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing most brands learn the hard way: “clean label” has no legal definition. There is no FDA standard, no USDA seal, no regulatory checklist that lets you stamp the words on a box and walk away. It’s a consumer concept that the industry adopted because shoppers kept voting for it with their dollars. That makes it powerful and slippery at the same time—you can lean into it, but you can’t hide behind it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing most brands learn the hard way: “clean label” has no legal definition. There is no FDA standard, no USDA seal, no regulatory checklist that lets you stamp the words on a box and walk away. It’s a consumer concept that the industry adopted because shoppers kept voting for it with their dollars. That makes it powerful and slippery at the same time: you can lean into it, but you can’t hide behind it.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">In practice, when consumers say a product is “clean,” they’re usually pointing at a cluster of related ideas rather than one rule. The closer your product sits to all of them, the more naturally the positioning fits.</p>
 
@@ -94,7 +94,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why the Ambiguity Cuts Both Ways</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Because “clean label” is undefined, no regulator will ever ask you to prove it. But the specific claims you make in its name—“no artificial preservatives,” “no added sugar,” “made with real fruit”—absolutely have to be literally true and substantiated. The umbrella term is soft; the claims under it are not. The brands that get burned treat the whole package as marketing copy, when half of it is a legal document.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Because “clean label” is undefined, no regulator will ever ask you to prove it. But the specific claims you make in its name (think “no artificial preservatives,” “no added sugar,” “made with real fruit”) absolutely have to be literally true and substantiated. The umbrella term is soft; the claims under it are not. The brands that get burned treat the whole package as marketing copy, when half of it is a legal document.</p>
 
             </div>
           </AnimatedSection>
@@ -104,11 +104,11 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Macro Forces Driving the Movement</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This isn’t a single trend—it’s several currents pushing in the same direction at once. Understanding which ones apply to your category tells you where the demand is actually coming from and how durable it’s likely to be.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This isn’t a single trend. It’s several currents pushing in the same direction at once. Understanding which ones apply to your category tells you where the demand is actually coming from and how durable it’s likely to be.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Health Awareness and Ingredient Literacy</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Shoppers are simply better informed than they were a decade ago. Ingredient lookups, label-scanning apps, and a steady drumbeat of coverage about additives have made the average consumer fluent in a vocabulary that used to belong to nutritionists. They may not be right about every ingredient—plenty of fear is misplaced—but they are paying attention, and perception drives purchase.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Shoppers are simply better informed than they were a decade ago. Ingredient lookups, label-scanning apps, and a steady drumbeat of coverage about additives have made the average consumer fluent in a vocabulary that used to belong to nutritionists. They may not be right about every ingredient (plenty of fear is misplaced), but they are paying attention, and perception drives purchase.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The GLP-1 Era and How People Eat</h3>
 
@@ -116,13 +116,13 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Functional Foods, Protein, and Gut Health</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">“Free-from” framing—what a product doesn’t contain—dominated the early clean-label years. The momentum now is increasingly “added-benefit”: what a product does for you. Protein has become a near-universal claim across snacks, beverages, and even baked goods. Gut health, fiber, and functional ingredients have moved from the supplement aisle into mainstream food and drink.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">“Free-from” framing, meaning what a product doesn’t contain, dominated the early clean-label years. The momentum now is increasingly “added-benefit”: what a product does for you. Protein has become a near-universal claim across snacks, beverages, and even baked goods. Gut health, fiber, and functional ingredients have moved from the supplement aisle into mainstream food and drink.</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Protein as a headline claim, not a footnote, across formerly indulgent categories</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Gut health, prebiotics, and fiber moving into everyday food and beverage</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> “Free-from” claims (gluten, seed oils, artificial dyes) as a baseline filter</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Transparency itself as a benefit—shoppers reward brands that show their work</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Transparency itself as a benefit: shoppers reward brands that show their work</li>
               </ul>
 
             </div>
@@ -133,19 +133,19 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">How the Trend Shows Up by Category</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Clean label looks different depending on the aisle. A messaging strategy that wins in beverages can feel hollow in household cleaning. The smart move is to translate the same underlying value—transparency and “better for you”—into the language each category’s shopper actually uses.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Clean label looks different depending on the aisle. A messaging strategy that wins in beverages can feel hollow in household cleaning. The smart move is to translate the same underlying value, transparency and “better for you,” into the language each category’s shopper actually uses.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Food and Beverage</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This is the front line. Here clean label means recognizable ingredients, no artificial colors or flavors, reduced or alternative sweeteners, and increasingly a functional hook—protein, fiber, or a real-food benefit. Front-of-pack is doing heavy lifting, and the back panel had better back it up.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This is the front line. Here clean label means recognizable ingredients, no artificial colors or flavors, reduced or alternative sweeteners, and increasingly a functional hook: protein, fiber, or a real-food benefit. Front-of-pack is doing heavy lifting, and the back panel had better back it up.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Personal Care</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">In skincare, haircare, and cosmetics, the wellness conversation centers on “free-from” lists—parabens, sulfates, phthalates—plus dermatologist credibility and ingredient sourcing. Shoppers extend their food logic to what they put on their bodies, and they expect the same legibility on the label.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">In skincare, haircare, and cosmetics, the wellness conversation centers on “free-from” lists (parabens, sulfates, phthalates) plus dermatologist credibility and ingredient sourcing. Shoppers extend their food logic to what they put on their bodies, and they expect the same legibility on the label.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Household and Home Care</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Cleaning and laundry products now compete on “what’s not in here” too—fragrance-free options, plant-derived surfactants, and disclosure of full ingredient lists that used to be hidden. Safety around kids and pets is the emotional driver, and transparency is table stakes.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Cleaning and laundry products now compete on “what’s not in here” too: fragrance-free options, plant-derived surfactants, and disclosure of full ingredient lists that used to be hidden. Safety around kids and pets is the emotional driver, and transparency is table stakes.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Supplements</h3>
 
@@ -159,7 +159,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Reformulation Tradeoffs Nobody Advertises</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: those “bad” ingredients were usually doing a job. Synthetic preservatives extend shelf life. Stabilizers hold texture. Artificial flavors deliver a consistent taste at a low cost. Pulling them out without a plan doesn’t make a product clean—it makes it inconsistent, short-lived, or worse-tasting. Reformulation is an R&D project, not a marketing decision.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: those “bad” ingredients were usually doing a job. Synthetic preservatives extend shelf life. Stabilizers hold texture. Artificial flavors deliver a consistent taste at a low cost. Pulling them out without a plan doesn’t make a product clean. It makes it inconsistent, short-lived, or worse-tasting. Reformulation is an R&D project, not a marketing decision.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Three Tensions to Manage</h3>
 
@@ -169,7 +169,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Taste and texture: the eating experience has to hold up or repeat purchase collapses</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The brands that do this well find clean replacements that preserve function—cultured dextrose or vinegar for preservation, rosemary extract as an antioxidant, acerola cherry for vitamin C—and they validate every swap with real stability and sensory testing before a single label changes. The reality is that a “clean” product that goes rancid early or tastes off does far more brand damage than the additive ever would have.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The brands that do this well find clean replacements that preserve function (cultured dextrose or vinegar for preservation, rosemary extract as an antioxidant, acerola cherry for vitamin C) and they validate every swap with real stability and sensory testing before a single label changes. The reality is that a “clean” product that goes rancid early or tastes off does far more brand damage than the additive ever would have.</p>
 
             </div>
           </AnimatedSection>
@@ -187,7 +187,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Health-Washing and Greenwashing</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Health-washing is the wellness cousin of greenwashing—dressing a product in halo language it hasn’t earned. A box covered in leaves, earth tones, and vague words like “wholesome” while the ingredient deck tells a different story is the fastest way to trigger consumer backlash and regulatory attention. The defense is simple to say and hard to fake: every visual and verbal cue on the package should be backed by something true on the panel.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Health-washing is the wellness cousin of greenwashing: dressing a product in halo language it hasn’t earned. A box covered in leaves, earth tones, and vague words like “wholesome” while the ingredient deck tells a different story is the fastest way to trigger consumer backlash and regulatory attention. The defense is simple to say and hard to fake: every visual and verbal cue on the package should be backed by something true on the panel.</p>
 
             </div>
           </AnimatedSection>
@@ -204,7 +204,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A short, scannable ingredient list positioned as a feature, not fine print</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> One or two hero claims that are true, specific, and easy to verify on the back</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Restraint—resisting the urge to stack every possible badge into visual clutter</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Restraint: resisting the urge to stack every possible badge into visual clutter</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Design language that signals the category benefit without veering into health-washing</li>
               </ul>
 
@@ -216,7 +216,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
           <AnimatedSection>
             <div className="prose prose-lg max-w-none">
 
-              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Marketing Wellness Credibly—Without Overclaiming</h2>
+              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Marketing Wellness Credibly Without Overclaiming</h2>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The temptation in wellness marketing is to reach for the biggest possible promise. That’s exactly backwards. In a category where shoppers are primed to detect exaggeration, credibility is the conversion lever. Specific, modest, true claims outperform broad, impressive, fuzzy ones.</p>
 
@@ -249,7 +249,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why Challenger Brands Win Here</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Wellness positioning is one of the few arenas where small brands routinely beat incumbents. They can build a clean formulation from scratch instead of unwinding a legacy recipe, they can tell a sharper origin story, and they can move faster than a portfolio of established SKUs. Legacy brands carry reformulation costs, cannibalization risk, and the credibility gap of pivoting to values they didn’t start with. The challenger’s edge isn’t budget—it’s coherence.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Wellness positioning is one of the few arenas where small brands routinely beat incumbents. They can build a clean formulation from scratch instead of unwinding a legacy recipe, they can tell a sharper origin story, and they can move faster than a portfolio of established SKUs. Legacy brands carry reformulation costs, cannibalization risk, and the credibility gap of pivoting to values they didn’t start with. The challenger’s edge isn’t budget. It’s coherence.</p>
 
             </div>
           </AnimatedSection>
@@ -257,7 +257,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
           <AnimatedSection>
             <div className="prose prose-lg max-w-none">
 
-              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Common Mistakes—and How a Marketing Partner Builds the Story</h2>
+              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Common Mistakes, and How a Marketing Partner Builds the Story</h2>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Most clean-label missteps fall into a few familiar patterns. They’re avoidable, but only if you catch them before the product ships rather than after the backlash.</p>
 
@@ -269,9 +269,9 @@ export default function HealthAndWellnessCpgTrendsPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Chasing every wellness trend instead of owning the one that fits the brand</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A credible wellness story isn’t invented in a tagline—it’s assembled from what’s already true about the product and then communicated with discipline. That’s the work a marketing partner does: pressure-testing claims against substantiation, translating the formulation into front-of-pack language a shopper grasps in a glance, mapping certifications to the claims that matter, and keeping the brand from overreaching into territory the FDA or FTC would object to.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A credible wellness story isn’t invented in a tagline. It’s assembled from what’s already true about the product and then communicated with discipline. That’s the work a marketing partner does: pressure-testing claims against substantiation, translating the formulation into front-of-pack language a shopper grasps in a glance, mapping certifications to the claims that matter, and keeping the brand from overreaching into territory the FDA or FTC would object to.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The clean-label movement isn’t a trend to ride and abandon—it’s the new baseline of consumer expectation. The brands that win treat wellness not as a coat of paint but as a promise they can defend, line by line, on the back of the box. Build the story on what’s genuinely true, communicate it with restraint, and let credibility do the selling.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The clean-label movement isn’t a trend to ride and abandon. It’s the new baseline of consumer expectation. The brands that win treat wellness not as a coat of paint but as a promise they can defend, line by line, on the back of the box. Build the story on what’s genuinely true, communicate it with restraint, and let credibility do the selling.</p>
 
             </div>
           </AnimatedSection>
@@ -301,7 +301,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
                   <span className="text-xs text-[#717171]">9 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Sustainable CPG Marketing: How Eco-Friendly Positioning Drives Sales</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Eco-friendly positioning has moved from nice-to-have to purchase driver—here’s how to make sustainability sell.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Eco-friendly positioning has moved from nice-to-have to purchase driver. Here’s how to make sustainability sell.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 4, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -313,7 +313,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
                   <span className="text-xs text-[#717171]">9 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Brand Positioning: How to Differentiate in Crowded Markets</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">In a sea of similar products, positioning is what makes a shopper choose you—here’s how to carve out real space.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">In a sea of similar products, positioning is what makes a shopper choose you. Here’s how to carve out real space.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">June 8, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -325,7 +325,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
                   <span className="text-xs text-[#717171]">9 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Packaging Design and Marketing: How Your Package Sells Your Product</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">The package is your last and best salesperson at the shelf—here’s how design and marketing close the deal.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">The package is your last and best salesperson at the shelf. Here’s how design and marketing close the deal.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">January 26, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

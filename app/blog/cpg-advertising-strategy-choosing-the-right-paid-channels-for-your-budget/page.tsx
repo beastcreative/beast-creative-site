@@ -8,13 +8,13 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "CPG Advertising Strategy: Choosing the Right Paid Channels for Your Budget",
   description:
-    "Stop burning budget on the wrong channels. Learn how CPG brands should allocate paid media across Google, Meta, Amazon, and emerging platforms — with a proven 70-20-10 framework.",
+    "Stop burning budget on the wrong channels. Learn how CPG brands should allocate paid media across Google, Meta, Amazon, and emerging platforms, using a proven 70-20-10 framework.",
 };
 
 const faqs = [
   {
     question: "What paid advertising channels are most important for CPG brands?",
-    answer: "Google Ads (Search, Shopping, Display, YouTube) should anchor most CPG paid strategies at 40–50% of budget. Facebook and Instagram are essential for awareness and conversion. Amazon Advertising is critical for brands selling on the platform. Retail media networks (Walmart Connect, Target Roundel, Instacart) are increasingly valuable as the highest-intent advertising environment available.",
+    answer: "Google Ads (Search, Shopping, Display, YouTube) should anchor most CPG paid strategies at 40 to 50% of budget. Facebook and Instagram are essential for awareness and conversion. Amazon Advertising is critical for brands selling on the platform. Retail media networks (Walmart Connect, Target Roundel, Instacart) are increasingly valuable as the highest-intent advertising environment available.",
   },
   {
     question: "How should CPG brands split their paid media budget?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Should CPG brands advertise on TikTok?",
-    answer: "TikTok is worth testing for CPG brands targeting 18–34 demographics, especially in food, beauty, and lifestyle categories. Start with 5–10% of budget. TikTok's algorithm rewards organic-styled content — Spark Ads promoting existing organic posts often outperform traditional ad formats. If your brand can produce authentic short-form content, the platform can deliver strong results.",
+    answer: "TikTok is worth testing for CPG brands targeting 18 to 34 demographics, especially in food, beauty, and lifestyle categories. Start with 5 to 10% of budget. TikTok's algorithm rewards organic-styled content, so Spark Ads promoting existing organic posts often outperform traditional ad formats. If your brand can produce authentic short-form content, the platform can deliver strong results.",
   },
   {
     question: "What is the biggest CPG paid media budget mistake?",
@@ -48,7 +48,7 @@ export default function CpgAdvertisingStrategyPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "CPG Advertising Strategy: Choosing the Right Paid Channels for Your Budget",
-            description: "Stop burning budget on the wrong channels. Learn how CPG brands should allocate paid media across Google, Meta, Amazon, and emerging platforms — with a proven 70-20-10 framework.",
+            description: "Stop burning budget on the wrong channels. Learn how CPG brands should allocate paid media across Google, Meta, Amazon, and emerging platforms, using a proven 70-20-10 framework.",
             datePublished: "2025-06-09",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -72,7 +72,7 @@ export default function CpgAdvertisingStrategyPost() {
               <span className="text-beast-pink">Choosing the Right Paid Channels for Your Budget</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              CPG brands burn through 73% of their advertising budget on channels that deliver minimal returns. The problem isn&amp;apos;t the creative — it&amp;apos;s the allocation. Here&amp;apos;s how to fix it.
+              CPG brands burn through 73% of their advertising budget on channels that deliver minimal returns. The problem isn&apos;t the creative. It&apos;s the allocation. Here&apos;s how to fix it.
             </p>
           </AnimatedSection>
         </div>
@@ -115,9 +115,9 @@ export default function CpgAdvertisingStrategyPost() {
               <div className="bg-section-offwhite rounded-2xl p-6 mb-8 border border-light-border">
                 <div className="space-y-4">
                   {[
-                    { pct: "70%", label: "Proven Performance Channels", detail: "Majority budget to consistently performing channels — primarily search advertising and active social platforms with documented ROAS history." },
+                    { pct: "70%", label: "Proven Performance Channels", detail: "Majority budget to consistently performing channels, primarily search advertising and active social platforms with documented ROAS history." },
                     { pct: "20%", label: "Growth and Expansion", detail: "Testing new audience segments within established channels, or expanding to comparable platforms based on initial performance data." },
-                    { pct: "10%", label: "Innovation and Testing", detail: "Emerging channels, new creative formats, or experimental campaigns — TikTok ads, podcast sponsorships, new retail media platforms." },
+                    { pct: "10%", label: "Innovation and Testing", detail: "Emerging channels, new creative formats, or experimental campaigns: TikTok ads, podcast sponsorships, new retail media platforms." },
                   ].map((row) => (
                     <div key={row.pct} className="flex gap-4">
                       <p className="font-display font-extrabold text-beast-pink text-2xl w-12 shrink-0">{row.pct}</p>
@@ -143,11 +143,11 @@ export default function CpgAdvertisingStrategyPost() {
               </div>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Google Ads: The Foundation</h3>
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Allocate 40–50% of total paid budget to Google Ads, distributed across:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Allocate 40 to 50% of total paid budget to Google Ads, distributed across:</p>
               <ul className="space-y-2 mb-6">
                 {[
                   "Search (60%): high-intent keywords including product categories, brand names, competitor terms",
-                  "Shopping (25%): visual product ads showing pricing, ratings, availability — higher CTR on product queries",
+                  "Shopping (25%): visual product ads showing pricing, ratings, and availability, driving higher CTR on product queries",
                   "Display/Video (15%): brand awareness and retargeting; YouTube effective for demonstrating product benefits",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
@@ -158,20 +158,20 @@ export default function CpgAdvertisingStrategyPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Facebook and Instagram</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Meta platforms excel at reaching CPG audiences through detailed targeting and visual storytelling. Instagram Shopping posts and Stories ads often outperform traditional Facebook feed ads for food, beauty, and lifestyle CPG categories. Allocate 25–35% here.
+                Meta platforms excel at reaching CPG audiences through detailed targeting and visual storytelling. Instagram Shopping posts and Stories ads often outperform traditional Facebook feed ads for food, beauty, and lifestyle CPG categories. Allocate 25 to 35% here.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Amazon Advertising</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Essential for brands selling on Amazon. Begin with Sponsored Products targeting most profitable items, then expand to Sponsored Brands. Allocate 15–25% of total advertising budget for on-platform sellers.
+                Essential for brands selling on Amazon. Begin with Sponsored Products targeting most profitable items, then expand to Sponsored Brands. Allocate 15 to 25% of total advertising budget for on-platform sellers.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Emerging Channels Worth Testing</h2>
               <ul className="space-y-3 mb-8">
                 {[
-                  { label: "TikTok", detail: "Valuable for brands targeting 18–34 demographics. Algorithm rewards authentic content — Spark Ads on organic posts often outperform traditional formats." },
-                  { label: "Pinterest", detail: "Discovery and planning mindset — ideal for food, beauty, home goods, and lifestyle CPG. Strong seasonality aligns with high-intent planning periods." },
-                  { label: "Retail Media Networks", detail: "Walmart Connect, Target Roundel, Instacart — highest purchase intent available. Test with 5–10% before scaling." },
+                  { label: "TikTok", detail: "Valuable for brands targeting 18 to 34 demographics. Algorithm rewards authentic content, so Spark Ads on organic posts often outperform traditional formats." },
+                  { label: "Pinterest", detail: "Discovery and planning mindset, ideal for food, beauty, home goods, and lifestyle CPG. Strong seasonality aligns with high-intent planning periods." },
+                  { label: "Retail Media Networks", detail: "Walmart Connect, Target Roundel, Instacart: highest purchase intent available. Test with 5 to 10% before scaling." },
                 ].map((item) => (
                   <li key={item.label} className="flex gap-3">
                     <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -196,7 +196,7 @@ export default function CpgAdvertisingStrategyPost() {
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Seasonal Budget Planning</h3>
               <ul className="space-y-2 mb-6">
                 {[
-                  "Peak seasons: increase budget 30–50% during high-demand periods",
+                  "Peak seasons: increase budget 30 to 50% during high-demand periods",
                   "Competitive periods: boost spending during major sale events (Black Friday, back-to-school)",
                   "Low seasons: maintain presence while shifting toward testing and brand-building",
                 ].map((item) => (
@@ -209,9 +209,9 @@ export default function CpgAdvertisingStrategyPost() {
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">The Biggest Mistakes to Avoid</h3>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Over-investing in last-click attribution — it undervalues awareness channels that drive long-term growth",
-                  "Ignoring platform seasonality — Pinterest, TikTok, and Google all have distinct usage patterns",
-                  "Spreading budget too thin — dominate 2–3 channels rather than achieving weak presence across 6",
+                  "Over-investing in last-click attribution, which undervalues awareness channels that drive long-term growth",
+                  "Ignoring platform seasonality: Pinterest, TikTok, and Google all have distinct usage patterns",
+                  "Spreading budget too thin: dominate 2 to 3 channels rather than achieving weak presence across 6",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
                     <span className="text-beast-pink font-bold shrink-0">→</span> {item}
@@ -222,7 +222,7 @@ export default function CpgAdvertisingStrategyPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We specialize in CPG advertising strategy — helping food, beverage, and consumer brands choose the right channels, build the right creative, and scale what works. We&apos;ve done it for national brands and regional challengers alike.
+                  We specialize in CPG advertising strategy, helping food, beverage, and consumer brands choose the right channels, build the right creative, and scale what works. We&apos;ve done it for national brands and regional challengers alike.
                 </p>
                 <IconButton href="/cpg" icon="arrow">Learn About Our CPG Marketing</IconButton>
               </div>
@@ -279,7 +279,7 @@ export default function CpgAdvertisingStrategyPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -297,7 +297,7 @@ export default function CpgAdvertisingStrategyPost() {
               Ready to Stop Wasting Budget and Start Scaling?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast helps CPG brands build channel strategies that match where their customers actually are — and their budget to what actually converts.
+              Beast helps CPG brands build channel strategies that match where their customers actually are, and their budget to what actually converts.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

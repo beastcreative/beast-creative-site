@@ -10,38 +10,38 @@ import { serviceSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Logo Design San Antonio | Custom Brand Identity | Beast Creative",
   description:
-    "Professional logo design in San Antonio, TX. Custom logos built for real brands — not templates. Part of a full brand identity system. (210) 332-0567",
+    "Professional logo design in San Antonio, TX. Custom logos built for real brands, not templates, as part of a full brand identity system. (210) 332-0567",
   alternates: { canonical: "https://beastcreativeagency.com/services/logo-design-san-antonio" },
   openGraph: {
     title: "Logo Design San Antonio | Beast Creative Agency",
-    description: "Custom logo design for San Antonio businesses. Built as part of a complete brand identity — not just a logo in isolation.",
+    description: "Custom logo design for San Antonio businesses. Built as part of a complete brand identity, not just a logo in isolation.",
     url: "https://beastcreativeagency.com/services/logo-design-san-antonio",
     type: "website",
   },
 };
 
 const deliverables = [
-  { title: "Primary Logo", desc: "Your main mark — designed for use across digital, print, signage, and merchandise. Multiple orientations included." },
+  { title: "Primary Logo", desc: "Your main mark, designed for use across digital, print, signage, and merchandise. Multiple orientations included." },
   { title: "Logo Variations", desc: "Horizontal, stacked, icon-only, and one-color versions. Every context your brand will appear in, covered." },
   { title: "Color Palette", desc: "Primary and secondary colors with hex, RGB, and CMYK values. Usage rules so the palette stays consistent." },
   { title: "Typography System", desc: "Headline and body fonts that complement your logo and reinforce your brand personality." },
   { title: "Brand Standards Doc", desc: "A one-stop reference for how to use your logo, colors, and fonts correctly. Essential for any growing team." },
-  { title: "File Package", desc: "SVG, PNG (transparent), PDF, and EPS — every format you'll ever need, organized and labeled." },
+  { title: "File Package", desc: "SVG, PNG (transparent), PDF, and EPS: every format you'll ever need, organized and labeled." },
 ];
 
 const process = [
   { step: "01", name: "Discovery", desc: "We learn your business, your audience, and your competitors. We find the visual gaps your brand can own." },
-  { step: "02", name: "Concepts", desc: "We present 3 distinct logo directions — different aesthetics, different approaches. You pick a direction and we refine." },
-  { step: "03", name: "Refinement", desc: "Two rounds of revisions included. We adjust until the mark is exactly right — then we build the full system around it." },
+  { step: "02", name: "Concepts", desc: "We present 3 distinct logo directions, each with a different aesthetic and approach. You pick a direction and we refine." },
+  { step: "03", name: "Refinement", desc: "Two rounds of revisions included. We adjust until the mark is exactly right, then we build the full system around it." },
   { step: "04", name: "Delivery", desc: "Final files, brand standards doc, and all variations delivered in a single organized package. Ready to use everywhere." },
 ];
 
 const faqItems = [
   { question: "How much does logo design cost in San Antonio?", answer: "Our logo design projects start at $1,500 for a standalone logo with basic variations and file package. Full brand identity systems (logo + color + typography + standards doc) start at $3,000. Every project is quoted based on scope." },
-  { question: "Do you do logo-only projects or is it always a full brand package?", answer: "Both. We do logo-only projects for businesses that have an existing identity system and just need a new mark. For new businesses or rebrands, we recommend the full system — a logo without a color palette and typography system creates inconsistency." },
-  { question: "How many concepts do you present?", answer: "Three distinct logo directions. Each one is a different approach — not variations of the same idea. After you choose a direction, we refine it through up to two revision rounds." },
-  { question: "What file formats do I get?", answer: "SVG, PNG (with transparent background), PDF, and EPS. That covers every use case — web, print, embroidery, signage, and merchandise." },
-  { question: "Can you redesign my existing logo?", answer: "Yes. Redesigns are common — either because the business has grown, the market has shifted, or the original logo was never quite right. We start with an audit of what's working and what isn't before we touch anything." },
+  { question: "Do you do logo-only projects or is it always a full brand package?", answer: "Both. We do logo-only projects for businesses that have an existing identity system and just need a new mark. For new businesses or rebrands, we recommend the full system: a logo without a color palette and typography system creates inconsistency." },
+  { question: "How many concepts do you present?", answer: "Three distinct logo directions. Each one is a different approach, not a variation of the same idea. After you choose a direction, we refine it through up to two revision rounds." },
+  { question: "What file formats do I get?", answer: "SVG, PNG (with transparent background), PDF, and EPS. That covers every use case: web, print, embroidery, signage, and merchandise." },
+  { question: "Can you redesign my existing logo?", answer: "Yes. Redesigns are common, usually because the business has grown, the market has shifted, or the original logo was never quite right. We start with an audit of what's working and what isn't before we touch anything." },
   { question: "Do you work with businesses outside San Antonio?", answer: "Yes. We're based in San Antonio and work with clients across the US. Everything can be handled remotely." },
 ];
 
@@ -52,7 +52,7 @@ const relatedServices = [
 ];
 
 const marqueeItems = [
-  "100% custom — no templates",
+  "100% custom, no templates",
   "3 logo concepts presented",
   "All file formats included",
   "Brand standards doc included",
@@ -80,7 +80,7 @@ export default function LogoDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative designs custom logos for San Antonio businesses — built as part of a complete brand identity system, not isolated marks that fall apart in the real world.
+              Beast Creative designs custom logos for San Antonio businesses, built as part of a complete brand identity system, not isolated marks that fall apart in the real world.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -112,14 +112,14 @@ export default function LogoDesignSanAntonioPage() {
               <p className="section-eyebrow text-beast-pink mb-4">Case Study</p>
               <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Coinline. Zero Explanation Needed.</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                A barcade came to us with nothing — no name, no identity, no direction. We built everything: the name, the logo, the color system, the voice, the merch strategy, and the go-to-market plan.
+                A barcade came to us with nothing: no name, no identity, no direction. We built everything: the name, the logo, the color system, the voice, the merch strategy, and the go-to-market plan.
               </p>
               <p className="text-gray-400 leading-relaxed mb-8">
-                &ldquo;Coinline&rdquo; — named after the arcade practice of placing quarters on a cabinet to reserve your spot — is authentic, ownable, and works across neon signs, apparel, digital, and physical environments without explanation.
+                &ldquo;Coinline&rdquo; (named after the arcade practice of placing quarters on a cabinet to reserve your spot) is authentic, ownable, and works across neon signs, apparel, digital, and physical environments without explanation.
               </p>
               <blockquote className="rounded-xl border border-beast-pink/20 bg-beast-pink/5 p-6 mb-8">
-                <p className="text-gray-300 italic leading-relaxed">&ldquo;I came to Beast Creative with just an idea. They helped turn it into a full brand — logo, voice, website strategy, everything. What I have now isn&apos;t just a product, it&apos;s a brand people connect with.&rdquo;</p>
-                <cite className="text-beast-pink text-sm font-semibold mt-3 block not-italic">— Coinline Barcade Founder</cite>
+                <p className="text-gray-300 italic leading-relaxed">&ldquo;I came to Beast Creative with just an idea. They helped turn it into a full brand: logo, voice, website strategy, everything. What I have now isn&apos;t just a product, it&apos;s a brand people connect with.&rdquo;</p>
+                <cite className="text-beast-pink text-sm font-semibold mt-3 block not-italic">Coinline Barcade Founder</cite>
               </blockquote>
               <IconButton href="/work/coinline" variant="ghost">See the Full Case Study</IconButton>
             </div>

@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is multi-brand SEO?",
-    answer: "Multi-brand SEO is the practice of managing search optimization across a portfolio of brands under a single parent company — ensuring each brand builds independent authority while the holding company benefits from a unified domain strategy.",
+    answer: "Multi-brand SEO is the practice of managing search optimization across a portfolio of brands under a single parent company, ensuring each brand builds independent authority while the holding company benefits from a unified domain strategy.",
   },
   {
     question: "Why do holding companies cannibalize their own SEO?",
-    answer: "When multiple brands under the same parent company compete for identical or similar keywords on separate domains, they split the domain authority that would otherwise compound on a single site. Google sees fragmented authority rather than a dominant entity — and ranks competitors who have consolidated that authority instead.",
+    answer: "When multiple brands under the same parent company compete for identical or similar keywords on separate domains, they split the domain authority that would otherwise compound on a single site. Google sees fragmented authority rather than a dominant entity, and ranks competitors who have consolidated that authority instead.",
   },
   {
     question: "Should all brands be on one domain or separate domains?",
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     question: "How long does multi-brand SEO take to show results?",
-    answer: "Domain architecture changes show results in 3–6 months as domain authority consolidates. Keyword ranking improvements typically follow 2–4 weeks after technical implementation. The long-term compounding effect of unified authority builds over 12–24 months.",
+    answer: "Domain architecture changes show results in 3 to 6 months as domain authority consolidates. Keyword ranking improvements typically follow 2 to 4 weeks after technical implementation. The long-term compounding effect of unified authority builds over 12 to 24 months.",
   },
   {
     question: "What is an entity relationship map in SEO?",
-    answer: "An entity relationship map is a structured document that defines how each brand, product, and content asset in your portfolio relates to the others in Google's Knowledge Graph. It's used to implement structured data (schema.org) that tells search engines — and AI tools — exactly how your brands are connected.",
+    answer: "An entity relationship map is a structured document that defines how each brand, product, and content asset in your portfolio relates to the others in Google's Knowledge Graph. It's used to implement structured data (schema.org) that tells both search engines and AI tools exactly how your brands are connected.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function MultiBrandSeoPost() {
               <span className="text-beast-pink">Why Holding Companies Are Hurting Their Own Rankings</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              If you manage 3+ consumer brands on separate domains, you&amp;apos;re probably cannibalizing your own search authority. Here&amp;apos;s the architecture that fixes it.
+              If you manage 3+ consumer brands on separate domains, you&apos;re probably cannibalizing your own search authority. Here&apos;s the architecture that fixes it.
             </p>
           </AnimatedSection>
         </div>
@@ -89,7 +89,7 @@ export default function MultiBrandSeoPost() {
                 Multi-brand holding companies in CPG, food and beverage, and consumer goods face a structural SEO problem that their individual brand managers typically don&apos;t see: they&apos;re competing against themselves.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                When three brands under the same parent company each maintain separate domains targeting similar keywords — say, "hot sauce recipe," "seasoning mix recipes," "easy weeknight dinner ideas" — they split the domain authority that would otherwise consolidate into a dominant ranking entity.
+                When three brands under the same parent company each maintain separate domains targeting similar keywords, say, "hot sauce recipe," "seasoning mix recipes," "easy weeknight dinner ideas," they split the domain authority that would otherwise consolidate into a dominant ranking entity.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
                 Google doesn&apos;t give extra credit because you own all three. It sees three medium-authority domains competing for the same query and ranks whichever competitor has consolidated that authority on a single domain.
@@ -100,7 +100,7 @@ export default function MultiBrandSeoPost() {
                 Domain authority is accumulated through inbound links, topical depth, content volume, engagement signals, and technical performance. Every piece of that authority is domain-specific.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                A holding company with three brands — each building domain authority independently — is spending three times the budget and producing one-third of the SEO result compared to a unified architecture. This effect compounds over time as competitors consolidate.
+                A holding company with three brands, each building domain authority independently, is spending three times the budget and producing one-third of the SEO result compared to a unified architecture. This effect compounds over time as competitors consolidate.
               </p>
 
               <div className="bg-section-offwhite rounded-2xl p-6 mb-8 border border-light-border">
@@ -109,16 +109,16 @@ export default function MultiBrandSeoPost() {
                   <div>
                     <p className="text-xs font-semibold text-red-500 uppercase tracking-wide mb-2">Fragmented (common)</p>
                     <ul className="space-y-1 text-sm text-[#717171]">
-                      <li>brand-a.com — DA 28</li>
-                      <li>brand-b.com — DA 24</li>
-                      <li>brand-c.com — DA 19</li>
+                      <li>brand-a.com: DA 28</li>
+                      <li>brand-b.com: DA 24</li>
+                      <li>brand-c.com: DA 19</li>
                       <li className="pt-2 text-xs text-[#717171]">Three competing entities, none dominant</li>
                     </ul>
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-beast-pink uppercase tracking-wide mb-2">Unified (correct)</p>
                     <ul className="space-y-1 text-sm text-[#717171]">
-                      <li>holdingco.com — DA 52+</li>
+                      <li>holdingco.com (DA 52+)</li>
                       <li>/brands/brand-a</li>
                       <li>/brands/brand-b</li>
                       <li className="pt-2 text-xs text-[#717171]">One entity with compounding authority</li>
@@ -134,7 +134,7 @@ export default function MultiBrandSeoPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Scenario 1: Overlapping audiences, similar keywords</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Sub-brand architecture on a shared domain. Each brand gets its own section (/brands/brand-name), its own landing pages, and its own content cluster — but all authority accumulates to the parent domain. Internal linking between brands compounds authority across the portfolio.
+                Sub-brand architecture on a shared domain. Each brand gets its own section (/brands/brand-name), its own landing pages, and its own content cluster, but all authority accumulates to the parent domain. Internal linking between brands compounds authority across the portfolio.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Scenario 2: Distinct audiences, separate keyword universes</h3>
@@ -144,7 +144,7 @@ export default function MultiBrandSeoPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Scenario 3: Mixed portfolio</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Some brands consolidate under the parent; others maintain separate domains. This requires an entity relationship map that defines exactly how each brand relates to the others in Google&apos;s Knowledge Graph — implemented through schema.org structured data.
+                Some brands consolidate under the parent; others maintain separate domains. This requires an entity relationship map that defines exactly how each brand relates to the others in Google&apos;s Knowledge Graph, implemented through schema.org structured data.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Entity Mapping for AI Search</h2>
@@ -161,7 +161,7 @@ export default function MultiBrandSeoPost() {
                   { step: "1", label: "Keyword universe mapping", detail: "Identify where brand keyword clusters overlap and where they diverge." },
                   { step: "2", label: "Domain authority comparison", detail: "Benchmark current DA for each domain and model what unified architecture would produce." },
                   { step: "3", label: "Cannibalization analysis", detail: "Identify specific queries where your own brands are competing against each other in search results." },
-                  { step: "4", label: "Architecture recommendation", detail: "Sub-brand, separate domains, or hybrid — with implementation roadmap and redirect strategy." },
+                  { step: "4", label: "Architecture recommendation", detail: "Sub-brand, separate domains, or hybrid, along with an implementation roadmap and redirect strategy." },
                   { step: "5", label: "Entity relationship map", detail: "Schema.org markup that defines the full brand portfolio for both Google and AI search engines." },
                 ].map((item) => (
                   <li key={item.step} className="flex gap-4">
@@ -179,7 +179,7 @@ export default function MultiBrandSeoPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast SEO + AEO</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  Beast&apos;s SEO + AEO service includes multi-brand architecture audits, entity relationship mapping, and structured data implementation — designed specifically for holding companies managing portfolios of consumer brands.
+                  Beast&apos;s SEO + AEO service includes multi-brand architecture audits, entity relationship mapping, and structured data implementation, designed specifically for holding companies managing portfolios of consumer brands.
                 </p>
                 <IconButton href="/services/seo-aeo" icon="arrow">
                   See Our SEO + AEO Service </IconButton>

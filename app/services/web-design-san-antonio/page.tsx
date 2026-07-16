@@ -10,11 +10,11 @@ import { serviceSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Web Design San Antonio | Custom Websites That Convert | Beast Creative",
   description:
-    "San Antonio web design agency building custom Next.js and Shopify sites — mobile-first, Lighthouse 90+, conversion-optimized. No templates. Real results. (210) 332-0567",
+    "San Antonio web design agency building custom Next.js and Shopify sites: mobile-first, Lighthouse 90+, conversion-optimized. No templates. Real results. (210) 332-0567",
   alternates: { canonical: "https://beastcreativeagency.com/services/web-design-san-antonio" },
   openGraph: {
     title: "Web Design San Antonio | Beast Creative Agency",
-    description: "Custom websites built for San Antonio businesses — Next.js, Shopify, mobile-first, SEO-ready from day one.",
+    description: "Custom websites built for San Antonio businesses: Next.js, Shopify, mobile-first, SEO-ready from day one.",
     url: "https://beastcreativeagency.com/services/web-design-san-antonio",
     type: "website",
   },
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 const deliverables = [
   { title: "Custom Design", desc: "No templates. Every site designed from scratch around your brand, your customers, and your conversion goals." },
-  { title: "Next.js & Shopify", desc: "We build on the best platforms — Next.js for marketing sites and web apps, Shopify for e-commerce. Both blazing fast." },
+  { title: "Next.js & Shopify", desc: "We build on the best platforms: Next.js for marketing sites and web apps, Shopify for e-commerce. Both blazing fast." },
   { title: "Mobile-First", desc: "Over 70% of your visitors are on mobile. Every Beast site is designed mobile-first, then scaled up." },
   { title: "Lighthouse 90+", desc: "Performance, accessibility, best practices, and SEO scores all 90+. Fast sites rank better and convert better." },
-  { title: "SEO-Ready at Launch", desc: "Schema markup, meta structure, Core Web Vitals, and on-page SEO baked in from day one — not bolted on after." },
-  { title: "Conversion Architecture", desc: "Every page has a purpose and a next step. We design for leads, calls, and purchases — not design awards." },
+  { title: "SEO-Ready at Launch", desc: "Schema markup, meta structure, Core Web Vitals, and on-page SEO baked in from day one, not bolted on after." },
+  { title: "Conversion Architecture", desc: "Every page has a purpose and a next step. We design for leads, calls, and purchases, not design awards." },
 ];
 
 const process = [
@@ -37,11 +37,11 @@ const process = [
 ];
 
 const faqItems = [
-  { question: "How much does web design cost in San Antonio?", answer: "Our custom web design projects start at $3,500 for marketing sites and $5,000+ for e-commerce. Pricing depends on scope, number of pages, and integrations. Every quote is itemized — no surprise fees." },
-  { question: "How long does a website take to build?", answer: "Most marketing sites take 3–5 weeks from kickoff to launch. E-commerce projects with large catalogs typically run 6–10 weeks. We set a timeline at kickoff and stick to it." },
-  { question: "Do you work with businesses outside San Antonio?", answer: "Yes — we work with clients across the US. Our San Antonio roots keep us grounded in local business realities, but distance has never been a barrier." },
-  { question: "Will my site rank on Google?", answer: "Every site we build is SEO-ready at launch — proper schema, meta structure, Core Web Vitals optimized, and fast load times. We also offer ongoing SEO if you want to actively grow organic traffic." },
-  { question: "Can you redesign my existing site?", answer: "Yes. Redesigns are a big part of what we do. We audit your current site for performance, SEO, and conversion issues before we start — so the new site solves real problems, not just aesthetic ones." },
+  { question: "How much does web design cost in San Antonio?", answer: "Our custom web design projects start at $3,500 for marketing sites and $5,000+ for e-commerce. Pricing depends on scope, number of pages, and integrations. Every quote is itemized, with no surprise fees." },
+  { question: "How long does a website take to build?", answer: "Most marketing sites take 3 to 5 weeks from kickoff to launch. E-commerce projects with large catalogs typically run 6 to 10 weeks. We set a timeline at kickoff and stick to it." },
+  { question: "Do you work with businesses outside San Antonio?", answer: "Yes, we work with clients across the US. Our San Antonio roots keep us grounded in local business realities, but distance has never been a barrier." },
+  { question: "Will my site rank on Google?", answer: "Every site we build is SEO-ready at launch: proper schema, meta structure, Core Web Vitals optimized, and fast load times. We also offer ongoing SEO if you want to actively grow organic traffic." },
+  { question: "Can you redesign my existing site?", answer: "Yes. Redesigns are a big part of what we do. We audit your current site for performance, SEO, and conversion issues before we start, so the new site solves real problems, not just aesthetic ones." },
 ];
 
 const relatedServices = [
@@ -54,7 +54,7 @@ const marqueeItems = [
   "Lighthouse 90+ on every build",
   "Mobile-first architecture",
   "SEO-ready at launch",
-  "No templates — 100% custom",
+  "No templates, 100% custom",
   "San Antonio-based team",
 ];
 
@@ -79,7 +79,7 @@ export default function WebDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative builds custom websites for San Antonio businesses — Next.js, Shopify, mobile-first, Lighthouse 90+. Every site is designed to rank in Google and turn visitors into customers.
+              Beast Creative builds custom websites for San Antonio businesses: Next.js, Shopify, mobile-first, Lighthouse 90+. Every site is designed to rank in Google and turn visitors into customers.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -134,7 +134,7 @@ export default function WebDesignSanAntonioPage() {
               <p className="section-eyebrow text-beast-pink mb-4">Why Beast</p>
               <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">We Build Sites That Have to Perform.</h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                Our CPG clients run campaigns to hundreds of thousands of people. Those campaigns land on pages we build. When 36,581 people click an ad, the landing page cannot fail. That standard — built to handle real traffic, real pressure, real stakes — is what we bring to every project.
+                Our CPG clients run campaigns to hundreds of thousands of people. Those campaigns land on pages we build. When 36,581 people click an ad, the landing page cannot fail. That standard is what we bring to every project: built to handle real traffic, real pressure, real stakes.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 Whether you&apos;re a local San Antonio restaurant, a regional service company, or a national brand, you get the same performance-obsessed build process.
@@ -202,7 +202,7 @@ export default function WebDesignSanAntonioPage() {
             <p className="section-eyebrow text-beast-pink mb-4">San Antonio Web Design</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Ready for a Site That Actually Works?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a quick call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back &mdash; no pitch, no commitment.
+              Book a quick call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back. No pitch, no commitment.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What signals indicate a CPG brand needs a refresh rather than just a packaging update?",
-    answer: "If your brand positioning, target consumer, or core value proposition has shifted, that is a refresh — a packaging update alone will not fix a strategic misalignment. If only the visual system feels dated but the brand story still resonates, a design evolution (not a rebrand) is usually sufficient.",
+    answer: "If your brand positioning, target consumer, or core value proposition has shifted, that is a refresh. A packaging update alone will not fix a strategic misalignment. If only the visual system feels dated but the brand story still resonates, a design evolution (not a rebrand) is usually sufficient.",
   },
   {
     question: "How do you rebrand a CPG product without losing existing loyal customers?",
-    answer: "Maintain enough visual continuity — color, shape, or key brand equities — that loyal buyers recognize the product on shelf even if everything else changes. A phased rollout and proactive communication through email and social can prepare existing customers before the new packaging hits stores.",
+    answer: "Maintain enough visual continuity (color, shape, or key brand equities) that loyal buyers recognize the product on shelf even if everything else changes. A phased rollout and proactive communication through email and social can prepare existing customers before the new packaging hits stores.",
   },
   {
     question: "What does a CPG brand refresh typically cost and how long does it take?",
-    answer: "A packaging redesign with a brand strategy component typically runs $50K–$250K for mid-size brands depending on the scope of the agency and number of SKUs. Timeline from strategy to shelf-ready artwork is usually six to twelve months, accounting for retailer resets and inventory burn-off.",
+    answer: "A packaging redesign with a brand strategy component typically runs $50K to $250K for mid-size brands depending on the scope of the agency and number of SKUs. Timeline from strategy to shelf-ready artwork is usually six to twelve months, accounting for retailer resets and inventory burn-off.",
   },
   {
     question: "Can a CPG brand refresh hurt sales, and how do you minimize that risk?",
-    answer: "Yes — shoppers who cannot find their familiar product will switch to a competitor rather than search. Running new and old packaging in parallel during transition, flagging the change on-pack with \"new look, same great product,\" and timing the switch to a category reset minimizes the risk.",
+    answer: "Yes, shoppers who cannot find their familiar product will switch to a competitor rather than search. Running new and old packaging in parallel during transition, flagging the change on-pack with \"new look, same great product,\" and timing the switch to a category reset minimizes the risk.",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function CpgBrandRefreshPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Understanding CPG Brand Refresh vs. Complete Rebranding</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before diving into when and how to refresh your CPG brand, it’s essential to understand the spectrum of brand changes available to you. A brand refresh isn’t the same as a complete rebrand—and knowing the difference can save you time, money, and customer confusion.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before diving into when and how to refresh your CPG brand, it’s essential to understand the spectrum of brand changes available to you. A brand refresh isn’t the same as a complete rebrand, and knowing the difference can save you time, money, and customer confusion.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Brand Refresh: The Strategic Update</h3>
 
@@ -97,7 +97,7 @@ export default function CpgBrandRefreshPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Complete Rebranding: The Total Transformation</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Complete rebranding means starting from scratch—new name, new identity, new everything. This approach is riskier but sometimes necessary when your current brand has fundamental issues or when you’re pivoting to an entirely new market.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Complete rebranding means starting from scratch: new name, new identity, new everything. This approach is riskier but sometimes necessary when your current brand has fundamental issues or when you’re pivoting to an entirely new market.</p>
 
             </div>
           </AnimatedSection>
@@ -210,7 +210,7 @@ export default function CpgBrandRefreshPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Phase 3: Creative Development</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Now comes the fun part—bringing your new brand strategy to life through creative execution.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Now comes the fun part: bringing your new brand strategy to life through creative execution.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Visual Identity Evolution</h3>
 
@@ -220,7 +220,7 @@ export default function CpgBrandRefreshPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Packaging Redesign Strategy</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Package design in CPG serves multiple functions—protection, information communication, brand expression, and shelf appeal. Your refresh needs to optimize for all of these while staying true to your new brand strategy.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Package design in CPG serves multiple functions: protection, information communication, brand expression, and shelf appeal. Your refresh needs to optimize for all of these while staying true to your new brand strategy.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Test packaging concepts with consumers early and often. What looks great in presentations might not perform in actual shopping situations.</p>
 
@@ -328,7 +328,7 @@ export default function CpgBrandRefreshPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Making Your Brand Refresh Decision</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A successful CPG brand refresh requires more than good creative work—it demands strategic thinking, consumer insights, and flawless execution. The brands that thrive are those that refresh proactively rather than reactively, staying ahead of market changes while preserving the equity they’ve built over time.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A successful CPG brand refresh requires more than good creative work. It demands strategic thinking, consumer insights, and flawless execution. The brands that thrive are those that refresh proactively rather than reactively, staying ahead of market changes while preserving the equity they’ve built over time.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The question isn’t whether your brand will need to evolve, but whether you’ll manage that evolution strategically or let market forces make the decision for you. With proper planning and execution, a brand refresh can reinvigorate your business and set you up for sustained growth in competitive CPG markets.</p>
 
@@ -362,7 +362,7 @@ export default function CpgBrandRefreshPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -386,7 +386,7 @@ export default function CpgBrandRefreshPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

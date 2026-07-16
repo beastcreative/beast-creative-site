@@ -9,7 +9,7 @@ export const PHONE_DISPLAY = "(210) 332-0567";
 
 /** Default pre-filled message used by the Text Us / WhatsApp buttons. */
 export const DEFAULT_MESSAGE =
-  "Hi Beast — I'd like to talk about my brand's search visibility.";
+  "Hi Beast, I'd like to talk about my brand's search visibility.";
 
 /**
  * Click-to-text link. The "?&body=" form is the cross-platform spelling

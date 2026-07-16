@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is CPG content marketing?",
-    answer: "CPG content marketing is the practice of creating educational, entertaining, or useful content — blog posts, videos, recipes, guides, and social content — that attracts, engages, and converts target consumers without directly advertising. Rather than interrupting consumers with ads, content marketing earns their attention by genuinely helping them.",
+    answer: "CPG content marketing is the practice of creating educational, entertaining, or useful content (blog posts, videos, recipes, guides, and social content) that attracts, engages, and converts target consumers without directly advertising. Rather than interrupting consumers with ads, content marketing earns their attention by genuinely helping them.",
   },
   {
     question: "What content formats work best for CPG brands?",
-    answer: "Video content dominates — quick tips on social (15–30 seconds), how-to videos showing real product use (1–3 minutes), and behind-the-scenes content building brand transparency. Recipe and usage content drives SEO traffic and product integration simultaneously. Comparison guides and ingredient education build category authority. Interactive quizzes help consumers identify the right product for their needs.",
+    answer: "Video content dominates: quick tips on social (15 to 30 seconds), how-to videos showing real product use (1 to 3 minutes), and behind-the-scenes content building brand transparency. Recipe and usage content drives SEO traffic and product integration simultaneously. Comparison guides and ingredient education build category authority. Interactive quizzes help consumers identify the right product for their needs.",
   },
   {
     question: "How should CPG brands balance promotional and educational content?",
-    answer: "The 80/20 rule works well: 80% genuinely helpful content, 20% product promotion. Constant sales pitches drive unsubscribes and unfollows. The brands that win in content marketing are the ones consumers want to hear from — because the content consistently makes their lives better or their product experience richer.",
+    answer: "The 80/20 rule works well: 80% genuinely helpful content, 20% product promotion. Constant sales pitches drive unsubscribes and unfollows. The brands that win in content marketing are the ones consumers want to hear from, because the content consistently makes their lives better or their product experience richer.",
   },
   {
     question: "How do CPG brands distribute content effectively?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "How do you measure whether CPG content marketing is working?",
-    answer: "Beyond likes and shares, measure engagement depth: comments, saves, and time spent consuming content. Track brand lift indicators — branded search volume increases, social mention sentiment, and return visitor rates. Correlate content consumption with customer lifetime value. The clearest signal: do consumers who engage with your content buy more often and spend more per order than those who don't?",
+    answer: "Beyond likes and shares, measure engagement depth: comments, saves, and time spent consuming content. Track brand lift indicators: branded search volume increases, social mention sentiment, and return visitor rates. Correlate content consumption with customer lifetime value. The clearest signal: do consumers who engage with your content buy more often and spend more per order than those who don't?",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function CpgContentMarketingPost() {
               <span className="text-beast-pink">Creating Content That Educates and Converts Consumers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Educated customers become loyal customers — and loyal customers drive sustainable growth. Here&amp;apos;s how to build a content strategy that earns attention and converts it into revenue.
+              Educated customers become loyal customers, and loyal customers drive sustainable growth. Here&apos;s how to build a content strategy that earns attention and converts it into revenue.
             </p>
           </AnimatedSection>
         </div>
@@ -112,18 +112,18 @@ export default function CpgContentMarketingPost() {
                 ))}
               </ul>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Effective CPG content targets each stage — not just the purchase moment. Brands that only create promotional content miss every stage except the final one.
+                Effective CPG content targets each stage, not just the purchase moment. Brands that only create promotional content miss every stage except the final one.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">The Educational Content Framework</h2>
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Problem-Solution Content</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Rather than directly promoting products, create content addressing real consumer problems. &quot;5-Minute Breakfast Ideas for Busy Parents&quot; outperforms &quot;Our Energy Bars Are Great&quot; — the former earns search traffic, social shares, and product integration simultaneously. The product becomes the solution, not the subject.
+                Rather than directly promoting products, create content addressing real consumer problems. &quot;5-Minute Breakfast Ideas for Busy Parents&quot; outperforms &quot;Our Energy Bars Are Great&quot;: the former earns search traffic, social shares, and product integration simultaneously. The product becomes the solution, not the subject.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Comparison and Selection Guides</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Some of the most effective CPG content marketing includes honest mentions of alternatives — demonstrating confidence in your product while respecting audience intelligence. A brand confident enough to compare itself to competitors signals quality and earns trust that promotional content never achieves.
+                Some of the most effective CPG content marketing includes honest mentions of alternatives, demonstrating confidence in your product while respecting audience intelligence. A brand confident enough to compare itself to competitors signals quality and earns trust that promotional content never achieves.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Usage and Application Content</h3>
@@ -144,8 +144,8 @@ export default function CpgContentMarketingPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Content Formats That Drive CPG Conversions</h2>
               <ul className="space-y-3 mb-8">
                 {[
-                  { label: "Video (15s–3 min)", detail: "Quick social tips, how-to demonstrations, behind-the-scenes transparency. Video dominates CPG content marketing across every platform." },
-                  { label: "Interactive Quizzes", detail: "Help consumers identify the right product variant for their needs — reduces decision overwhelm and personalizes the purchase path." },
+                  { label: "Video (15s to 3 min)", detail: "Quick social tips, how-to demonstrations, behind-the-scenes transparency. Video dominates CPG content marketing across every platform." },
+                  { label: "Interactive Quizzes", detail: "Help consumers identify the right product variant for their needs, reducing decision overwhelm and personalizing the purchase path." },
                   { label: "Visual Guides and Infographics", detail: "Serve audiences seeking rapid information. Addresses common questions while capturing search traffic and earning social shares." },
                   { label: "Recipe and Usage Content", detail: "Drives SEO traffic for product-relevant queries while naturally demonstrating the product in real-world use contexts." },
                 ].map((item) => (
@@ -165,7 +165,7 @@ export default function CpgContentMarketingPost() {
                   "Instagram: visual demonstrations and lifestyle integration",
                   "TikTok: quick tips and authentic real-world product use",
                   "Facebook: longer-form educational content and community building",
-                  "Pinterest: recipes, organization tips, and seasonal inspiration — high purchase intent",
+                  "Pinterest: recipes, organization tips, and seasonal inspiration, with high purchase intent",
                   "YouTube: tutorials, comparisons, and brand storytelling",
                   "Email: personalized educational content based on purchase history and preferences",
                 ].map((item) => (
@@ -190,9 +190,9 @@ export default function CpgContentMarketingPost() {
               <ul className="space-y-2 mb-6">
                 {[
                   "Engagement depth: comments, saves, and time spent (not just likes and views)",
-                  "Branded search volume increases — consumers actively seeking your brand",
+                  "Branded search volume increases (consumers actively seeking your brand)",
                   "Social mention sentiment improving over time",
-                  "Return visitor rates to content — audiences coming back for more",
+                  "Return visitor rates to content (audiences coming back for more)",
                   "Conversion correlation: do content consumers buy more and spend more?",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
@@ -204,10 +204,10 @@ export default function CpgContentMarketingPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Common CPG Content Mistakes</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Too much product focus — apply the 80/20 rule: 80% helpful content, 20% promotion",
-                  "Ignoring seasonal relevance — content should align with purchase cycles and consumer moments",
-                  "Inconsistent publishing — readers and algorithms both reward consistency over viral moments",
-                  "No distribution plan — great content with no amplification strategy reaches no one",
+                  "Too much product focus instead of following the 80/20 rule: 80% helpful content, 20% promotion",
+                  "Ignoring seasonal relevance: content should align with purchase cycles and consumer moments",
+                  "Inconsistent publishing: readers and algorithms both reward consistency over viral moments",
+                  "No distribution plan: great content with no amplification strategy reaches no one",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
                     <span className="text-beast-pink font-bold shrink-0">→</span> {item}
@@ -218,7 +218,7 @@ export default function CpgContentMarketingPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We build content marketing strategies for CPG brands that compound over time — organic discovery, social authority, and email engagement working together to build the kind of brand that consumers seek out, not just encounter.
+                  We build content marketing strategies for CPG brands that compound over time: organic discovery, social authority, and email engagement working together to build the kind of brand that consumers seek out, not just encounter.
                 </p>
                 <IconButton href="/services/content-production" icon="arrow">See Our Content Production</IconButton>
               </div>
@@ -275,7 +275,7 @@ export default function CpgContentMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

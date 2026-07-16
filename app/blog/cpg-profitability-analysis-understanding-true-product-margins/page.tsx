@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What costs do CPG brands commonly miss when calculating true product margins?",
-    answer: "Trade spend (slotting fees, promotional allowances, co-op advertising) is the most frequently underestimated cost — it routinely runs 15–25% of gross revenue for brands in major retail channels. When trade spend is excluded from margin calculations, brands believe they are profitable at price points where they are actually losing money.",
+    answer: "Trade spend (slotting fees, promotional allowances, co-op advertising) is the most frequently underestimated cost. It routinely runs 15 to 25% of gross revenue for brands in major retail channels. When trade spend is excluded from margin calculations, brands believe they are profitable at price points where they are actually losing money.",
   },
   {
     question: "What is contribution margin and why is it more useful for CPG decisions than gross margin?",
-    answer: "Contribution margin is gross margin minus variable selling costs (trade spend, broker commissions, shipping) — it tells you how much each unit actually contributes to covering fixed overhead. Gross margin looks at production cost only; contribution margin tells you whether a channel or SKU is actually making you money.",
+    answer: "Contribution margin is gross margin minus variable selling costs (trade spend, broker commissions, shipping), and it tells you how much each unit actually contributes to covering fixed overhead. Gross margin looks at production cost only; contribution margin tells you whether a channel or SKU is actually making you money.",
   },
   {
     question: "How do you calculate the true cost of a promotional price reduction in retail?",
-    answer: "A 20% promotional price reduction on a product with 50% gross margin does not reduce your profit by 20% — it reduces it by 40% because you are giving up margin on full revenue while still incurring full COGS. The formula: impact = (promo discount %) / (gross margin %) gives you the real profit hit.",
+    answer: "A 20% promotional price reduction on a product with 50% gross margin does not reduce your profit by 20%. It reduces it by 40%, because you are giving up margin on full revenue while still incurring full COGS. The formula: impact = (promo discount %) / (gross margin %) gives you the real profit hit.",
   },
   {
     question: "At what gross margin threshold should a CPG brand be concerned about long-term viability?",
-    answer: "Below 40% gross margin, most CPG brands cannot cover trade spend, broker fees, and brand marketing costs while remaining profitable — it becomes a race to scale that many never win. Food and beverage brands below 45% gross margin should prioritize cost reduction or price increase before investing in distribution expansion.",
+    answer: "Below 40% gross margin, most CPG brands cannot cover trade spend, broker fees, and brand marketing costs while remaining profitable, and it becomes a race to scale that many never win. Food and beverage brands below 45% gross margin should prioritize cost reduction or price increase before investing in distribution expansion.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function CpgProfitabilityAnalysisProductMarginsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why Traditional Margin Calculations Fall Short</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses calculate gross margin using this simple formula: (Revenue – Cost of Goods Sold) / Revenue. But this approach misses critical elements that can dramatically impact your true profitability:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses calculate gross margin using this simple formula: (Revenue minus Cost of Goods Sold) / Revenue. But this approach misses critical elements that can dramatically impact your true profitability:</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Trade promotion costs and retailer allowances</li>
@@ -186,7 +186,7 @@ export default function CpgProfitabilityAnalysisProductMarginsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Product Portfolio Optimization</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Once you have accurate margin data, you can make strategic decisions about your product portfolio. This doesn’t always mean cutting low-margin products – sometimes they serve as traffic drivers or complement high-margin items.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Once you have accurate margin data, you can make strategic decisions about your product portfolio. This doesn’t always mean cutting low-margin products. Sometimes they serve as traffic drivers or complement high-margin items.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consider these portfolio strategies:</p>
 
@@ -306,7 +306,7 @@ export default function CpgProfitabilityAnalysisProductMarginsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Understanding true CPG profitability requires looking beyond simple cost accounting to capture the complete picture of what drives margins in your business. The brands that invest in sophisticated profitability analysis gain a significant competitive advantage – they know which products, channels, and strategies actually generate profits.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Understanding true CPG profitability requires looking beyond simple cost accounting to capture the complete picture of what drives margins in your business. The brands that invest in sophisticated profitability analysis gain a significant competitive advantage: they know which products, channels, and strategies actually generate profits.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The complexity of modern CPG operations means this analysis requires both analytical rigor and strategic thinking. You need systems that can handle large volumes of data from multiple sources, but you also need the business insight to interpret that data and act on it effectively.</p>
 

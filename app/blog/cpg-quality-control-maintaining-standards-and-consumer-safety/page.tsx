@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the difference between quality assurance and quality control in CPG?",
-    answer: "Quality assurance is the system — the documented processes, standards, and training designed to prevent defects before they happen. Quality control is the set of checks — the inspections, tests, and measurements that confirm a given batch actually meets spec. A brand needs both: QA builds the guardrails, QC catches what slips through. Treating them as interchangeable is one of the most common reasons quality programs fail to scale.",
+    answer: "Quality assurance is the system: the documented processes, standards, and training designed to prevent defects before they happen. Quality control is the set of checks: the inspections, tests, and measurements that confirm a given batch actually meets spec. A brand needs both: QA builds the guardrails, QC catches what slips through. Treating them as interchangeable is one of the most common reasons quality programs fail to scale.",
   },
   {
     question: "What certifications should a growing CPG brand pursue first?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "How do you maintain quality when using a co-manufacturer?",
-    answer: "You maintain quality through a documented quality agreement that spells out specifications, testing requirements, hold-and-release procedures, and who owns each decision. You should audit the facility before signing, review their certifications and recall history, and require lot-level documentation with every production run. Outsourcing production never outsources accountability — if a co-man’s mistake reaches a shelf, it’s still your brand on the recall notice.",
+    answer: "You maintain quality through a documented quality agreement that spells out specifications, testing requirements, hold-and-release procedures, and who owns each decision. You should audit the facility before signing, review their certifications and recall history, and require lot-level documentation with every production run. Outsourcing production never outsources accountability: if a co-man’s mistake reaches a shelf, it’s still your brand on the recall notice.",
   },
   {
     question: "What is a mock recall and why does it matter?",
@@ -67,7 +67,7 @@ export default function CpgQualityControlPost() {
               <span className="text-beast-pink">Maintaining Standards and Consumer Safety</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              You can spend a decade building a brand consumers trust — and lose it in a single afternoon when one bad lot reaches a shelf. Quality control isn’t a back-office cost center; it’s the discipline that protects the people who buy your product and the equity you’ve worked years to build. This is how the brands that last actually keep their standards.
+              You can spend a decade building a brand consumers trust, and lose it in a single afternoon when one bad lot reaches a shelf. Quality control isn’t a back-office cost center; it’s the discipline that protects the people who buy your product and the equity you’ve worked years to build. This is how the brands that last actually keep their standards.
             </p>
           </AnimatedSection>
         </div>
@@ -81,7 +81,7 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Quality Assurance vs. Quality Control: Why the Distinction Matters</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The terms get used interchangeably, and that’s the first mistake most scaling brands make. Quality assurance and quality control are two different jobs that depend on each other — and confusing them leaves dangerous gaps.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The terms get used interchangeably, and that’s the first mistake most scaling brands make. Quality assurance and quality control are two different jobs that depend on each other, and confusing them leaves dangerous gaps.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Quality assurance is the system. It’s the documented processes, written specifications, employee training, sanitation schedules, and supplier requirements you put in place to prevent defects before they ever occur. QA asks a forward-looking question: how do we make sure problems don’t happen in the first place?</p>
 
@@ -89,11 +89,11 @@ export default function CpgQualityControlPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why You Need Both</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A brand running only QC is constantly inspecting for failures it never designed out — expensive, reactive, and exhausting. A brand running only QA has good intentions on paper but no proof that any given run conforms. Mature quality programs treat the two as a loop:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A brand running only QC is constantly inspecting for failures it never designed out: expensive, reactive, and exhausting. A brand running only QA has good intentions on paper but no proof that any given run conforms. Mature quality programs treat the two as a loop:</p>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> QA builds the guardrails — standards, procedures, and training</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> QC verifies the output — testing and inspection against spec</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> QA builds the guardrails: standards, procedures, and training</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> QC verifies the output: testing and inspection against spec</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> QC findings feed back into QA so recurring problems get designed out</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Documentation ties it together so you can prove conformance to retailers and regulators</li>
               </ul>
@@ -108,7 +108,7 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building a Quality Management System That Scales</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A quality management system is the backbone that makes everything else possible. Without it, quality lives in the heads of a few experienced employees — and walks out the door when they do. The frameworks below are the building blocks most CPG brands assemble as they grow.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A quality management system is the backbone that makes everything else possible. Without it, quality lives in the heads of a few experienced employees, and walks out the door when they do. The frameworks below are the building blocks most CPG brands assemble as they grow.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">GMP: The Foundation</h3>
 
@@ -124,7 +124,7 @@ export default function CpgQualityControlPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">FSMA: The Regulatory Layer</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The Food Safety Modernization Act shifted U.S. food safety from reacting to contamination toward preventing it. For most food brands that means a written food safety plan, a preventive controls approach, supplier verification requirements, and rules around traceability. FSMA compliance isn’t optional — it’s the legal floor your QMS has to clear before any certification is even relevant.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The Food Safety Modernization Act shifted U.S. food safety from reacting to contamination toward preventing it. For most food brands that means a written food safety plan, a preventive controls approach, supplier verification requirements, and rules around traceability. FSMA compliance isn’t optional: it’s the legal floor your QMS has to clear before any certification is even relevant.</p>
 
             </div>
           </AnimatedSection>
@@ -134,11 +134,11 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Inspection at Every Stage: Incoming, In-Process, and Finished Goods</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quality isn’t a single checkpoint at the end of the line. The most reliable programs inspect at three distinct stages, because a defect caught early is dramatically cheaper than one caught late — and far cheaper than one caught by a consumer.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quality isn’t a single checkpoint at the end of the line. The most reliable programs inspect at three distinct stages, because a defect caught early is dramatically cheaper than one caught late, and far cheaper than one caught by a consumer.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Incoming Inspection</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Everything that enters your facility — raw ingredients, packaging components, labels — gets checked against spec before it’s released to production. This is where you catch the wrong material, the out-of-spec moisture content, or the packaging that doesn’t meet your dimensions before it becomes a finished-goods problem.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Everything that enters your facility (raw ingredients, packaging components, labels) gets checked against spec before it’s released to production. This is where you catch the wrong material, the out-of-spec moisture content, or the packaging that doesn’t meet your dimensions before it becomes a finished-goods problem.</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Verify certificates of analysis against your own specifications</li>
@@ -148,7 +148,7 @@ export default function CpgQualityControlPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">In-Process Inspection</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">During production, you monitor the variables that drive quality and safety in real time — fill weights, cook temperatures, pH, seal integrity, metal detection. Catching drift mid-run lets you correct a process before it produces a full batch of nonconforming product.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">During production, you monitor the variables that drive quality and safety in real time: fill weights, cook temperatures, pH, seal integrity, metal detection. Catching drift mid-run lets you correct a process before it produces a full batch of nonconforming product.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Finished-Goods Inspection</h3>
 
@@ -177,7 +177,7 @@ export default function CpgQualityControlPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Ongoing Verification</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Approval isn’t a one-time event. Under a supplier verification program, you periodically test incoming materials yourself, re-audit higher-risk suppliers, and track each one’s performance over time. A supplier that was solid two years ago may have changed facilities, owners, or processes — verification is how you find out before it costs you.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Approval isn’t a one-time event. Under a supplier verification program, you periodically test incoming materials yourself, re-audit higher-risk suppliers, and track each one’s performance over time. A supplier that was solid two years ago may have changed facilities, owners, or processes. Verification is how you find out before it costs you.</p>
 
             </div>
           </AnimatedSection>
@@ -187,11 +187,11 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Managing Quality Across Co-Manufacturers</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most growing CPG brands don’t own their factories — they work with co-manufacturers and co-packers. That model is efficient, but it introduces a hard truth: you can outsource production, but you can never outsource accountability. When a co-man’s mistake reaches a shelf, your brand is on the recall notice, not theirs.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most growing CPG brands don’t own their factories: they work with co-manufacturers and co-packers. That model is efficient, but it introduces a hard truth: you can outsource production, but you can never outsource accountability. When a co-man’s mistake reaches a shelf, your brand is on the recall notice, not theirs.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Quality Agreement</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A formal quality agreement is non-negotiable. It documents specifications, testing responsibilities, allergen and sanitation requirements, hold-and-release procedures, change-notification rules, and exactly who has the authority to release or reject product. The point is to remove ambiguity — when something goes wrong at 2 a.m., everyone already knows the rules.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A formal quality agreement is non-negotiable. It documents specifications, testing responsibilities, allergen and sanitation requirements, hold-and-release procedures, change-notification rules, and exactly who has the authority to release or reject product. The point is to remove ambiguity: when something goes wrong at 2 a.m., everyone already knows the rules.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Audit Before You Sign, Then Keep Watching</h3>
 
@@ -212,19 +212,19 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Testing That Proves Your Product Is Safe</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Testing is where claims meet evidence. The right battery of tests depends on your category, but most CPG brands rely on some combination of the following — and the smart ones decide in advance what a passing result looks like.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Testing is where claims meet evidence. The right battery of tests depends on your category, but most CPG brands rely on some combination of the following, and the smart ones decide in advance what a passing result looks like.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Microbiological Testing</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Micro testing screens for pathogens and spoilage organisms — the contamination that can make people sick. For higher-risk products this is the difference between a safe shelf and a public-health event, and it’s often the test a positive-release program waits on before shipping.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Micro testing screens for pathogens and spoilage organisms: the contamination that can make people sick. For higher-risk products this is the difference between a safe shelf and a public-health event, and it’s often the test a positive-release program waits on before shipping.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Sensory Evaluation</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Numbers don’t taste the product — people do. Structured sensory panels catch off-flavors, texture drift, and aroma changes that lab tests miss. Consistency of experience is part of your quality promise; a consumer who gets a different product twice in a row stops trusting the brand.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Numbers don’t taste the product. People do. Structured sensory panels catch off-flavors, texture drift, and aroma changes that lab tests miss. Consistency of experience is part of your quality promise; a consumer who gets a different product twice in a row stops trusting the brand.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Shelf-Life and Stability Testing</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Stability studies tell you whether the product is still safe and on-spec at the end of its stated date — not just on day one. This is how you set an honest expiration date and defend the claims on your label, and skipping it is how brands end up with bloated packaging or rancid product on shelves.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Stability studies tell you whether the product is still safe and on-spec at the end of its stated date, not just on day one. This is how you set an honest expiration date and defend the claims on your label, and skipping it is how brands end up with bloated packaging or rancid product on shelves.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Package-Integrity Testing</h3>
 
@@ -238,7 +238,7 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Traceability, Lot Control, and Recall Readiness</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">When something goes wrong — and over a long enough timeline, something will — your ability to respond fast and surgically is what separates a contained issue from a brand-defining disaster. That ability rests on traceability and lot control.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">When something goes wrong (and over a long enough timeline, something will), your ability to respond fast and surgically is what separates a contained issue from a brand-defining disaster. That ability rests on traceability and lot control.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Lot Control and Traceability</h3>
 
@@ -246,8 +246,8 @@ export default function CpgQualityControlPost() {
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Assign and record a lot code on every production run</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Link each lot to its incoming ingredient lots — one step back</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Track where each lot shipped — one step forward</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Link each lot to its incoming ingredient lots, one step back</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Track where each lot shipped, one step forward</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Keep records retrievable in minutes, not days</li>
               </ul>
 
@@ -255,7 +255,7 @@ export default function CpgQualityControlPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">A written recall plan that’s never been tested is a document, not a capability. A mock recall is a practice drill: you pick a lot code and reconstruct its full path on the clock, with no real problem in play. It’s the only honest way to find out whether your records, contact lists, and response roles actually hold up.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Many retailers require proof of a passed mock recall before they’ll stock you. More importantly, the exercise routinely surfaces broken records and slow handoffs — the exact failures that turn a manageable issue into a catastrophe — while the stakes are still zero.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Many retailers require proof of a passed mock recall before they’ll stock you. More importantly, the exercise routinely surfaces broken records and slow handoffs (the exact failures that turn a manageable issue into a catastrophe) while the stakes are still zero.</p>
 
             </div>
           </AnimatedSection>
@@ -265,7 +265,7 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Certifications and Quality as a Brand Promise</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quality work that stays invisible to the consumer is half-finished. The certifications you earn and the standards you hold are not just operational facts — they’re trust signals that belong in your messaging, on your pack, and in the story your brand tells.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quality work that stays invisible to the consumer is half-finished. The certifications you earn and the standards you hold are not just operational facts: they’re trust signals that belong in your messaging, on your pack, and in the story your brand tells.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Certifications as Trust and Marketing Assets</h3>
 
@@ -273,7 +273,7 @@ export default function CpgQualityControlPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Quality as a Promise on Pack and in Messaging</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The strongest CPG brands treat quality as part of their identity, not a compliance afterthought. When your packaging, your site, and your social presence speak honestly about how the product is made and held to standard, quality stops being a cost and becomes a reason to choose you. The catch is that the promise has to be real — claims your QC can’t back up are a recall and a credibility loss waiting to happen.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The strongest CPG brands treat quality as part of their identity, not a compliance afterthought. When your packaging, your site, and your social presence speak honestly about how the product is made and held to standard, quality stops being a cost and becomes a reason to choose you. The catch is that the promise has to be real: claims your QC can’t back up are a recall and a credibility loss waiting to happen.</p>
 
             </div>
           </AnimatedSection>
@@ -294,7 +294,7 @@ export default function CpgQualityControlPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Making label and quality claims the QC program can’t actually prove</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The pattern underneath all of these is the same: a brand outgrowing the systems that got it here. Scaling safely means formalizing what used to be intuition — before a problem forces the lesson.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The pattern underneath all of these is the same: a brand outgrowing the systems that got it here. Scaling safely means formalizing what used to be intuition, before a problem forces the lesson.</p>
 
             </div>
           </AnimatedSection>
@@ -304,9 +304,9 @@ export default function CpgQualityControlPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Turning Quality Credentials Into Consumer Trust</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">All of this discipline — the QMS, the testing, the certifications, the traceability — produces something most brands underuse: genuine, defensible proof that the product is made well and made safely. That proof is one of the most persuasive marketing assets you have, and it usually never makes it past the operations team.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">All of this discipline (the QMS, the testing, the certifications, the traceability) produces something most brands underuse: genuine, defensible proof that the product is made well and made safely. That proof is one of the most persuasive marketing assets you have, and it usually never makes it past the operations team.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">That’s where a marketing partner earns its keep. The job is to translate hard-won quality credentials into language and visuals that build consumer trust — surfacing the right certifications on pack, telling the made-with-care story honestly across channels, and making sure that when a shopper or an AI search engine asks “is this brand trustworthy?” the answer is already obvious. Quality is the substance. Marketing is how the people you’re trying to protect actually come to believe it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">That’s where a marketing partner earns its keep. The job is to translate hard-won quality credentials into language and visuals that build consumer trust: surfacing the right certifications on pack, telling the made-with-care story honestly across channels, and making sure that when a shopper or an AI search engine asks “is this brand trustworthy?” the answer is already obvious. Quality is the substance. Marketing is how the people you’re trying to protect actually come to believe it.</p>
 
             </div>
           </AnimatedSection>
@@ -336,7 +336,7 @@ export default function CpgQualityControlPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Regulatory Compliance: Navigating FDA, EPA, and Industry Requirements</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">The regulatory rules behind every CPG product — FDA, EPA, and industry mandates — and how to stay compliant as you scale.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">The regulatory rules behind every CPG product (FDA, EPA, and industry mandates) and how to stay compliant as you scale.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">May 18, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -360,7 +360,7 @@ export default function CpgQualityControlPost() {
                   <span className="text-xs text-[#717171]">9 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Packaging Design and Marketing: How Your Package Sells Your Product</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Your package is your loudest salesperson — how design and messaging turn shelf presence into purchases.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Your package is your loudest salesperson: how design and messaging turn shelf presence into purchases.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">January 26, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

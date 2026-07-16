@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How does retail consolidation affect CPG brand leverage in buyer negotiations?",
-    answer: "As the number of major retail buyers shrinks, each individual buyer relationship becomes higher stakes — losing one account can mean losing 20–30% of revenue overnight. This shifts negotiating power toward retailers and makes diversification across channels (DTC, foodservice, international) a strategic necessity, not a nice-to-have.",
+    answer: "As the number of major retail buyers shrinks, each individual buyer relationship becomes higher stakes: losing one account can mean losing 20% to 30% of revenue overnight. This shifts negotiating power toward retailers and makes diversification across channels (DTC, foodservice, international) a strategic necessity, not a nice-to-have.",
   },
   {
     question: "What strategies help CPG brands stay relevant to mega-retailers who are de-listing smaller brands?",
-    answer: "Velocity data is your best defense — if your brand drives disproportionate sales per linear foot relative to your shelf space, you are harder to delist than a slow-moving brand regardless of your size. Investing in retail media spend within the retailer's own platform also signals commitment and buys goodwill with category managers.",
+    answer: "Velocity data is your best defense: if your brand drives disproportionate sales per linear foot relative to your shelf space, you are harder to delist than a slow-moving brand regardless of your size. Investing in retail media spend within the retailer's own platform also signals commitment and buys goodwill with category managers.",
   },
   {
     question: "How should a small CPG brand approach a large national retailer in a consolidating environment?",
-    answer: "Lead with a regional test pitch rather than asking for national distribution — buyers at Walmart and Target have more authority and appetite for regional rollouts, and strong regional performance data is the most persuasive path to national expansion. Going in asking for all 4,700 stores with no performance history is a non-starter.",
+    answer: "Lead with a regional test pitch rather than asking for national distribution. Buyers at Walmart and Target have more authority and appetite for regional rollouts, and strong regional performance data is the most persuasive path to national expansion. Going in asking for all 4,700 stores with no performance history is a non-starter.",
   },
   {
     question: "What is the risk of being overly dependent on one retail partner, and how do you measure it?",
@@ -131,7 +131,7 @@ export default function CpgRetailConsolidationCustomersPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Data and Analytics Take Center Stage</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Large retailers don’t just want your products – they want your insights. They expect CPG partners to provide sophisticated market analysis, consumer behavior data, and category optimization recommendations.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Large retailers don’t just want your products. They want your insights. They expect CPG partners to provide sophisticated market analysis, consumer behavior data, and category optimization recommendations.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This means investing in robust data collection and analysis capabilities. You need to understand not just how your products perform, but how they influence overall category performance and customer shopping patterns.</p>
 
@@ -322,7 +322,7 @@ export default function CpgRetailConsolidationCustomersPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Making the Transition</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Adapting to retail consolidation isn’t just about strategy – it’s about execution. This transformation requires changes across your organization, from sales and marketing to supply chain and finance.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Adapting to retail consolidation isn’t just about strategy. It’s about execution. This transformation requires changes across your organization, from sales and marketing to supply chain and finance.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful transformations we’ve seen share common characteristics:</p>
 

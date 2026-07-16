@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Beast Creative Agency",
   },
   description:
-    "San Antonio's full-service marketing agency — web design, SEO, paid media & branding. CPG-proven results. Serving local businesses and national brands from San Antonio, TX.",
+    "San Antonio's full-service marketing agency for web design, SEO, paid media & branding. CPG-proven results. Serving local businesses and national brands from San Antonio, TX.",
   metadataBase: new URL("https://beastcreativeagency.com"),
   openGraph: {
     siteName: "Beast Creative Agency",

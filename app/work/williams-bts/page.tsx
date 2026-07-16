@@ -10,7 +10,7 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "Williams Foods Back-to-School Campaign | 22,043 Entries on $4,000 | Beast Creative",
   description:
-    "Beast Creative Agency helped Williams Foods generate 22,043 sweepstakes entries — 2.2x their goal — on a $4,000 ad budget with 3.89% CTR and $0.18 CPC for the 'Williamize Your Food' back-to-school campaign.",
+    "Beast Creative Agency helped Williams Foods generate 22,043 sweepstakes entries, 2.2x their goal, on a $4,000 ad budget with 3.89% CTR and $0.18 CPC for the 'Williamize Your Food' back-to-school campaign.",
 };
 
 export default function WilliamsBtsPage() {
@@ -26,7 +26,7 @@ export default function WilliamsBtsPage() {
                   <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-beast-pink/15 text-beast-pink border border-beast-pink/20">{tag}</span>
                 ))}
               </div>
-              <p className="section-eyebrow text-beast-yellow mb-3">Case Study — Williams Foods · 2021</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 They Asked for 10,000 Entries.{" "}
                 <span className="text-beast-pink">We Delivered 22,043.</span>
@@ -53,7 +53,7 @@ export default function WilliamsBtsPage() {
       <section className="bg-beast-yellow py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
-            <StatCounter value={22043} label="Total Entries" sublabel="vs 10,000 goal — 2.2x" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
+            <StatCounter value={22043} label="Total Entries" sublabel="vs 10,000 goal (2.2x)" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={3.89} suffix="%" decimals={2} label="Click-Through Rate" sublabel="vs 0.89% industry avg" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={0.18} prefix="$" decimals={2} label="Cost Per Click" sublabel="vs $0.28 industry avg" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={287896} label="Paid Reach" sublabel="on $4,000 budget" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
@@ -70,14 +70,14 @@ export default function WilliamsBtsPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Brief</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Back to School, Back to Williams.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Williams Foods had a dual mission heading into Fall 2021: drive consumer engagement through a back-to-school themed campaign, and announce that Williams Chili Seasoning had landed in Walmart stores nationwide. The back-to-school season is a natural fit for Williams — families are back at the dinner table, school lunches need to be packed, and weeknight meals become a routine again.
+                  Williams Foods had a dual mission heading into Fall 2021: drive consumer engagement through a back-to-school themed campaign, and announce that Williams Chili Seasoning had landed in Walmart stores nationwide. The back-to-school season is a natural fit for Williams: families are back at the dinner table, school lunches need to be packed, and weeknight meals become a routine again.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   The entry goal coming in was 10,000 total submissions. Beast took that number as the floor, not the ceiling.
                 </p>
                 <div className="bg-white rounded-xl p-5 border border-gray-100">
                   <p className="font-display font-bold text-beast-black text-sm mb-2">The Opportunity</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">Most CPG back-to-school campaigns follow the same playbook: feature a kid, push a coupon. Beast saw an opening to do something more engaging — ask consumers which food they wanted Williams to &quot;Williamize.&quot; That question transformed a passive sweepstakes into an interactive brand conversation and gave Williams valuable product insight simultaneously.</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">Most CPG back-to-school campaigns follow the same playbook: feature a kid, push a coupon. Beast saw an opening to do something more engaging: ask consumers which food they wanted Williams to &quot;Williamize.&quot; That question transformed a passive sweepstakes into an interactive brand conversation and gave Williams valuable product insight simultaneously.</p>
                 </div>
               </AnimatedSection>
 
@@ -86,7 +86,7 @@ export default function WilliamsBtsPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">Campaign Creative</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Spin to Win. Williamize Your Food.</h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  The creative leaned into the back-to-school energy with a bold, playful aesthetic — a Spin to Win mechanic paired with the "Williamize Your Food" sweepstakes concept. Eye-catching color and a clear prize hook made these impossible to scroll past.
+                  The creative leaned into the back-to-school energy with a bold, playful aesthetic: a Spin to Win mechanic paired with the "Williamize Your Food" sweepstakes concept. Eye-catching color and a clear prize hook made these impossible to scroll past.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <div className="flex-1 max-w-[280px] mx-auto sm:mx-0 [transform:rotate(-2deg)_translateY(0px)] hover:[transform:rotate(0deg)_translateY(-8px)] transition-all duration-300 cursor-default"
@@ -119,10 +119,10 @@ export default function WilliamsBtsPage() {
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Williamize Your Food. And Tell Us What That Means to You.</h2>
                 <div className="space-y-6">
                   {[
-                    { step: "1", label: "The Concept", detail: "\"Williamize Your Food!\" — participants submitted their favorite homemade back-to-school food or snack for a chance to have Williams create and name a recipe after them, permanently featured on the Williams website. This mechanic was inherently personal, shareable, and promised something meaningful beyond gift cards: your recipe, your name, on a nationally distributed brand's website forever." },
-                    { step: "2", label: "The Prize Structure", detail: "Tiered prizes made the sweepstakes feel premium on a lean budget. 1st: $500 Walmart gift card + back-to-school kit + Williams gift box. 2nd: $200 Walmart gift card + kit + gift box. 3rd: $100 Walmart gift card + kit + gift box. Plus: the top 3 winners' submitted food ideas were developed into real \"Williamized\" recipes — named after the winners and featured on Williams' website and social media." },
-                    { step: "3", label: "Entry Mechanic & Data Capture", detail: "Landing page at bringhomethew.com captured name, email, ZIP code, and their favorite food to \"Williamize.\" Every entry built the first-party database. ZIP code data mapped consumer density geographically — intelligence Williams could use for retail expansion planning, targeted email follow-up by region, and future campaign geo-targeting." },
-                    { step: "4", label: "Paid Social Strategy", detail: "Beast ran Facebook as the primary channel with Instagram secondary, targeting Williams' core demographic (women 35–65). The $4,000 budget was deployed across the full 31-day campaign with real-time optimization. Mobile delivery drove the bulk of performance: 93.6% of paid reach and 94.2% of paid link clicks came from mobile users." },
+                    { step: "1", label: "The Concept", detail: "\"Williamize Your Food!\" invited participants to submit their favorite homemade back-to-school food or snack for a chance to have Williams create and name a recipe after them, permanently featured on the Williams website. This mechanic was inherently personal, shareable, and promised something meaningful beyond gift cards: your recipe, your name, on a nationally distributed brand's website forever." },
+                    { step: "2", label: "The Prize Structure", detail: "Tiered prizes made the sweepstakes feel premium on a lean budget. 1st: $500 Walmart gift card + back-to-school kit + Williams gift box. 2nd: $200 Walmart gift card + kit + gift box. 3rd: $100 Walmart gift card + kit + gift box. Plus: the top 3 winners' submitted food ideas were developed into real \"Williamized\" recipes, named after the winners and featured on Williams' website and social media." },
+                    { step: "3", label: "Entry Mechanic & Data Capture", detail: "Landing page at bringhomethew.com captured name, email, ZIP code, and their favorite food to \"Williamize.\" Every entry built the first-party database. ZIP code data mapped consumer density geographically: intelligence Williams could use for retail expansion planning, targeted email follow-up by region, and future campaign geo-targeting." },
+                    { step: "4", label: "Paid Social Strategy", detail: "Beast ran Facebook as the primary channel with Instagram secondary, targeting Williams' core demographic (women 35 to 65). The $4,000 budget was deployed across the full 31-day campaign with real-time optimization. Mobile delivery drove the bulk of performance: 93.6% of paid reach and 94.2% of paid link clicks came from mobile users." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
                       <span className="w-8 h-8 rounded-full bg-beast-pink/10 border border-beast-pink/20 text-beast-pink font-display font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">{item.step}</span>
@@ -144,7 +144,7 @@ export default function WilliamsBtsPage() {
                       <div key={w.place} className="flex items-center gap-3 text-sm">
                         <span className="font-display font-bold text-beast-pink w-8">{w.place}</span>
                         <span className="text-gray-700 font-medium">{w.name}</span>
-                        <span className="text-gray-400 mx-1">—</span>
+                        <span className="text-gray-400 mx-1">·</span>
                         <span className="text-gray-500 italic">{w.item}</span>
                       </div>
                     ))}
@@ -162,17 +162,17 @@ export default function WilliamsBtsPage() {
                 <div className="flex gap-10 justify-center">
                   <div className="w-[30%] max-w-[180px] [transform:rotate(-3deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/williams-bts-story1.jpg" alt="Williams BTS mobile story — Williamize Your Food notebook" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/williams-bts-story1.jpg" alt="Williams BTS mobile story: Williamize Your Food notebook" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                   <div className="w-[30%] max-w-[180px] [transform:rotate(1deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/williams-bts-story2.jpg" alt="Williams BTS mobile story — Blue school supplies" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/williams-bts-story2.jpg" alt="Williams BTS mobile story: Blue school supplies" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                   <div className="w-[30%] max-w-[180px] [transform:rotate(3deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/williams-bts-story3.jpg" alt="Williams BTS mobile story — Chalkboard lunchbox" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/williams-bts-story3.jpg" alt="Williams BTS mobile story: Chalkboard lunchbox" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export default function WilliamsBtsPage() {
                 </div>
                 <div className="bg-near-black rounded-xl p-5">
                   <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-2">What Happened Next</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">The data captured in this campaign — geographic distribution, demographic profile, engagement behavior — fed directly into the strategy for the <strong className="text-white">Williams All-Stars March Madness 2022</strong> campaign, which generated another 13,660 entries. Each campaign built on the last. Each database grew.</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">The data captured in this campaign (geographic distribution, demographic profile, engagement behavior) fed directly into the strategy for the <strong className="text-white">Williams All-Stars March Madness 2022</strong> campaign, which generated another 13,660 entries. Each campaign built on the last. Each database grew.</p>
                 </div>
               </AnimatedSection>
 
@@ -224,8 +224,8 @@ export default function WilliamsBtsPage() {
                   <h3 className="font-display font-bold text-sm uppercase tracking-widest text-beast-pink mb-5">Campaign Overview</h3>
                   {[
                     { label: "Client", value: "Williams Foods" },
-                    { label: "Campaign", value: "Williamize Your Food — BTS" },
-                    { label: "Dates", value: "Aug 30 – Sep 30, 2021" },
+                    { label: "Campaign", value: "Williamize Your Food (BTS)" },
+                    { label: "Dates", value: "Aug 30 to Sep 30, 2021" },
                     { label: "Duration", value: "31 days" },
                     { label: "Ad Budget", value: "$4,000" },
                     { label: "Platforms", value: "Facebook, Instagram" },

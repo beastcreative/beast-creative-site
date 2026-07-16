@@ -7,25 +7,25 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "CPG Market Research Methods: Understanding Your Target Consumer",
   description:
-    "A practical guide to CPG market research methods—qualitative and quantitative tools, first-party data, personas, and turning consumer insight into decisions.",
+    "A practical guide to CPG market research methods: qualitative and quantitative tools, first-party data, personas, and turning consumer insight into decisions.",
 };
 
 const faqs = [
   {
     question: "What's the difference between qualitative and quantitative research in CPG, and when do I use each?",
-    answer: "Qualitative research—interviews, focus groups, shop-alongs—tells you why consumers behave the way they do and surfaces language, motivations, and unmet needs you didn't know to ask about. Quantitative research—surveys, conjoint, sales data—tells you how many people feel a certain way and whether a pattern holds at scale. The right sequence is usually qualitative first to generate hypotheses, then quantitative to validate them. Skipping the qualitative phase is how brands end up running statistically rigorous studies that measure the wrong things.",
+    answer: "Qualitative research (interviews, focus groups, shop-alongs) tells you why consumers behave the way they do and surfaces language, motivations, and unmet needs you didn't know to ask about. Quantitative research (surveys, conjoint, sales data) tells you how many people feel a certain way and whether a pattern holds at scale. The right sequence is usually qualitative first to generate hypotheses, then quantitative to validate them. Skipping the qualitative phase is how brands end up running statistically rigorous studies that measure the wrong things.",
   },
   {
     question: "How much should an emerging CPG brand spend on market research before launch?",
-    answer: "Far less than most founders assume—the highest-leverage research is often nearly free. Five to ten in-depth interviews with target buyers, a careful read of competitor reviews on Amazon and retailer sites, and a 100-respondent survey through a low-cost panel will tell you most of what you need before a first production run. The point isn't to buy a Nielsen subscription on day one; it's to replace guesses with evidence on the decisions that are expensive to reverse, like positioning, pricing, and pack format.",
+    answer: "Far less than most founders assume: the highest-leverage research is often nearly free. Five to ten in-depth interviews with target buyers, a careful read of competitor reviews on Amazon and retailer sites, and a 100-respondent survey through a low-cost panel will tell you most of what you need before a first production run. The point isn't to buy a Nielsen subscription on day one; it's to replace guesses with evidence on the decisions that are expensive to reverse, like positioning, pricing, and pack format.",
   },
   {
     question: "What sample size do I need for survey research to be trustworthy?",
-    answer: "For directional reads on a single segment, 100–150 respondents is usually enough to spot strong patterns, though your margin of error will be wide. For confident go/no-go decisions or comparisons between segments, plan for 300–400 per segment so each subgroup is large enough to analyze on its own. More important than raw count is sample quality: a smaller sample of genuine category buyers beats a larger sample of people who'll never purchase. Watch for screener fraud and speeders, which quietly corrupt cheap online panels.",
+    answer: "For directional reads on a single segment, 100 to 150 respondents is usually enough to spot strong patterns, though your margin of error will be wide. For confident go/no-go decisions or comparisons between segments, plan for 300 to 400 per segment so each subgroup is large enough to analyze on its own. More important than raw count is sample quality: a smaller sample of genuine category buyers beats a larger sample of people who'll never purchase. Watch for screener fraud and speeders, which quietly corrupt cheap online panels.",
   },
   {
     question: "How do I turn research findings into actual product and marketing decisions?",
-    answer: "Translate every insight into a decision it changes—if a finding doesn't move a product, pack, price, or message choice, it's trivia. The most reliable bridge is a jobs-to-be-done framing: define the functional, emotional, and social job the consumer is hiring your product to do, then audit your formula, packaging, and copy against that job. A good research partner doesn't just hand you a deck; they sit in the room when you're choosing claims and tradeoffs and hold the consumer's reality against each option.",
+    answer: "Translate every insight into a decision it changes: if a finding doesn't move a product, pack, price, or message choice, it's trivia. The most reliable bridge is a jobs-to-be-done framing: define the functional, emotional, and social job the consumer is hiring your product to do, then audit your formula, packaging, and copy against that job. A good research partner doesn't just hand you a deck; they sit in the room when you're choosing claims and tradeoffs and hold the consumer's reality against each option.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function CpgMarketResearchMethodsPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "CPG Market Research Methods: Understanding Your Target Consumer",
-            description: "A practical guide to CPG market research methods—qualitative and quantitative tools, first-party data, personas, and turning consumer insight into decisions.",
+            description: "A practical guide to CPG market research methods: qualitative and quantitative tools, first-party data, personas, and turning consumer insight into decisions.",
             datePublished: "2026-06-03",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -67,7 +67,7 @@ export default function CpgMarketResearchMethodsPost() {
               <span className="text-beast-pink">Understanding Your Target Consumer</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Every other decision in your business—the formula, the price, the pack, the claim on the front of the box, the channel you fight for—rests on one thing: how well you actually understand the person you expect to buy it. Most brands skip that work or fake it with assumptions. The ones that win treat consumer understanding as a discipline, not a hunch.
+              Every other decision in your business (the formula, the price, the pack, the claim on the front of the box, the channel you fight for) rests on one thing: how well you actually understand the person you expect to buy it. Most brands skip that work or fake it with assumptions. The ones that win treat consumer understanding as a discipline, not a hunch.
             </p>
           </AnimatedSection>
         </div>
@@ -111,11 +111,11 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Qualitative: The “Why” Behind Behavior</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Qualitative work is exploratory. It surfaces motivations, the exact words consumers use, the frustrations they've stopped articulating, and the needs nobody has named yet. You can't count it, and you shouldn't try. Its value is in generating hypotheses and giving you language—the raw material for positioning and copy you couldn't have invented at your desk.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Qualitative work is exploratory. It surfaces motivations, the exact words consumers use, the frustrations they've stopped articulating, and the needs nobody has named yet. You can't count it, and you shouldn't try. Its value is in generating hypotheses and giving you language: the raw material for positioning and copy you couldn't have invented at your desk.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Quantitative: The “How Many” That Confirms It</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quantitative research tells you whether a pattern holds across a population and how large it is. It's how you size an opportunity, validate a hypothesis, and defend a recommendation to a retail buyer or your own board. It answers “how much,” “how many,” and “which one wins”—but only if you already know the right question to ask, which is usually what the qualitative phase gave you.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Quantitative research tells you whether a pattern holds across a population and how large it is. It's how you size an opportunity, validate a hypothesis, and defend a recommendation to a retail buyer or your own board. It answers “how much,” “how many,” and “which one wins,” but only if you already know the right question to ask, which is usually what the qualitative phase gave you.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The healthy sequence is almost always qualitative to explore, then quantitative to validate. Run them out of order and you get rigor pointed at the wrong target.</p>
 
@@ -135,15 +135,15 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Focus Groups and In-Depth Interviews</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Focus groups are good for reactions to packaging, concepts, and naming—watching a room respond reveals things a survey can't. But they carry a real risk: groupthink, where one loud participant steers the consensus. One-on-one in-depth interviews avoid that distortion and go deeper. For most emerging brands, five to ten focused interviews beat one focus group.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Focus groups are good for reactions to packaging, concepts, and naming: watching a room respond reveals things a survey can't. But they carry a real risk: groupthink, where one loud participant steers the consensus. One-on-one in-depth interviews avoid that distortion and go deeper. For most emerging brands, five to ten focused interviews beat one focus group.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Ethnographic Research and Shop-Alongs</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">There is a gap between what consumers say they do and what they actually do, and ethnography lives in that gap. Watching someone use your product in their own kitchen—or following them through the aisle on a shop-along—exposes the real friction. People can't always tell you why they reached past your product, but you can see it happen.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">There is a gap between what consumers say they do and what they actually do, and ethnography lives in that gap. Watching someone use your product in their own kitchen, or following them through the aisle on a shop-along, exposes the real friction. People can't always tell you why they reached past your product, but you can see it happen.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Diary Studies</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">For products tied to routines or consumption over time, diary studies—where participants log usage over days or weeks—catch patterns no single interview can. They reveal occasion, frequency, and the moments when intent forms, which is exactly where the next purchase is decided.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">For products tied to routines or consumption over time, diary studies, where participants log usage over days or weeks, catch patterns no single interview can. They reveal occasion, frequency, and the moments when intent forms, which is exactly where the next purchase is decided.</p>
 
             </div>
           </AnimatedSection>
@@ -153,23 +153,23 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Behavioral and Quantitative Methods</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Once you have hypotheses, quantitative and behavioral methods test whether they hold at scale—and increasingly, they let you measure what people do rather than what they claim they'll do.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Once you have hypotheses, quantitative and behavioral methods test whether they hold at scale, and increasingly, they let you measure what people do rather than what they claim they'll do.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Concept and Package Testing</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before you commit to a SKU, test the concept and the pack. Show target buyers the concept statement and measure purchase intent, uniqueness, and believability against category norms. Package testing—often using eye-tracking or simulated-shelf exercises—answers a separate, brutal question: does your design get noticed in a crowded set, and does it communicate the right thing in the two seconds you actually get?</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before you commit to a SKU, test the concept and the pack. Show target buyers the concept statement and measure purchase intent, uniqueness, and believability against category norms. Package testing (often using eye-tracking or simulated-shelf exercises) answers a separate, brutal question: does your design get noticed in a crowded set, and does it communicate the right thing in the two seconds you actually get?</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Conjoint Analysis and Price Sensitivity</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Conjoint analysis forces consumers to make tradeoffs—choosing between bundles of features, sizes, and prices—and from those choices you can model what each attribute is actually worth to them. Paired with price-sensitivity techniques like Van Westendorp, it gives you a defensible read on the price ceiling and the point where demand collapses, rather than a number someone picked because it felt right.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Conjoint analysis forces consumers to make tradeoffs (choosing between bundles of features, sizes, and prices), and from those choices you can model what each attribute is actually worth to them. Paired with price-sensitivity techniques like Van Westendorp, it gives you a defensible read on the price ceiling and the point where demand collapses, rather than a number someone picked because it felt right.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">A/B Tests and Live Experiments</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">DTC and digital ad platforms let you test messaging, imagery, and price with real money on the line. An A/B test on a landing page or ad set is research with the bias removed—nobody is telling you what they'd do, they're showing you. It's one of the most honest tools available, and it's cheap.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">DTC and digital ad platforms let you test messaging, imagery, and price with real money on the line. An A/B test on a landing page or ad set is research with the bias removed: nobody is telling you what they'd do, they're showing you. It's one of the most honest tools available, and it's cheap.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Sales, Syndicated, and Panel Data</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">At scale, the truth lives in the numbers. Syndicated data from sources like Nielsen and IRI shows category dynamics, share, and velocity across retailers. Retailer point-of-sale data shows how your specific items move, store by store. Consumer panel data—tracking the same households over time—reveals repeat rates, buyer demographics, and whether you're stealing share or growing the category.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">At scale, the truth lives in the numbers. Syndicated data from sources like Nielsen and IRI shows category dynamics, share, and velocity across retailers. Retailer point-of-sale data shows how your specific items move, store by store. Consumer panel data (tracking the same households over time) reveals repeat rates, buyer demographics, and whether you're stealing share or growing the category.</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Syndicated data answers “how is the category and my share trending?”</li>
@@ -187,19 +187,19 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">First-Party Data, Social Listening, and Search Intent</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The research landscape has shifted. Some of the richest consumer signal now comes from sources that didn't exist as “research” a decade ago—and that you increasingly own outright.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The research landscape has shifted. Some of the richest consumer signal now comes from sources that didn't exist as “research” a decade ago, and that you increasingly own outright.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">First-Party Data Is the New Moat</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">As third-party tracking erodes, the data you collect directly—through your site, email list, loyalty program, sweepstakes, and DTC orders—becomes both a research asset and a competitive advantage. It tells you who your real buyers are, what they purchase together, and how they respond to offers. It also happens to be exactly the kind of consumer database that earns attention from retail buyers.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">As third-party tracking erodes, the data you collect directly (through your site, email list, loyalty program, sweepstakes, and DTC orders) becomes both a research asset and a competitive advantage. It tells you who your real buyers are, what they purchase together, and how they respond to offers. It also happens to be exactly the kind of consumer database that earns attention from retail buyers.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Social Listening</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumers describe their problems and praise your competitors in public every day. Monitoring brand mentions, category conversations, and review sentiment across social platforms and retailer review sections gives you unsolicited, unbiased feedback at volume. Reviews on Amazon and retailer pages are an under-used qualitative dataset—they tell you, in the buyer's words, what's working and what isn't.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumers describe their problems and praise your competitors in public every day. Monitoring brand mentions, category conversations, and review sentiment across social platforms and retailer review sections gives you unsolicited, unbiased feedback at volume. Reviews on Amazon and retailer pages are an under-used qualitative dataset: they tell you, in the buyer's words, what's working and what isn't.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Search and AI-Query Intent</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">What people type into search engines—and increasingly into AI assistants—is a direct expression of intent and unmet need. Keyword and query analysis reveals the questions your category is actually asked, the problems consumers are trying to solve, and the language they use to solve them. As shopping discovery moves into AI answer engines, understanding how consumers phrase those queries is becoming its own research discipline, and a source of demand signal you can act on quickly.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">What people type into search engines, and increasingly into AI assistants, is a direct expression of intent and unmet need. Keyword and query analysis reveals the questions your category is actually asked, the problems consumers are trying to solve, and the language they use to solve them. As shopping discovery moves into AI answer engines, understanding how consumers phrase those queries is becoming its own research discipline, and a source of demand signal you can act on quickly.</p>
 
             </div>
           </AnimatedSection>
@@ -213,7 +213,7 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Personas Built From Evidence, Not Imagination</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">A useful buyer persona is a synthesis of real research—demographics, yes, but more importantly motivations, occasions, purchase triggers, and barriers grounded in what you actually observed. The failure mode is the invented persona: a stock photo and a list of hobbies that nobody on the team believes. If a persona doesn't change how you write a headline or choose a pack size, it's decoration.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">A useful buyer persona is a synthesis of real research: demographics, yes, but more importantly motivations, occasions, purchase triggers, and barriers grounded in what you actually observed. The failure mode is the invented persona: a stock photo and a list of hobbies that nobody on the team believes. If a persona doesn't change how you write a headline or choose a pack size, it's decoration.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Jobs-to-Be-Done</h3>
 
@@ -237,7 +237,7 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Getting Sample Size Right</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">For directional reads, 100–150 respondents per segment can reveal strong patterns. For go/no-go decisions or comparing segments against each other, plan for 300–400 per segment so each subgroup can stand on its own. But raw count matters less than sample quality—a small panel of genuine category buyers beats a large panel of people who'll never purchase.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">For directional reads, 100 to 150 respondents per segment can reveal strong patterns. For go/no-go decisions or comparing segments against each other, plan for 300 to 400 per segment so each subgroup can stand on its own. But raw count matters less than sample quality: a small panel of genuine category buyers beats a large panel of people who'll never purchase.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Biases Worth Watching For</h3>
 
@@ -251,7 +251,7 @@ export default function CpgMarketResearchMethodsPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Panel fraud: speeders and bots quietly poison cheap online samples</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most dangerous bias is the last one in spirit: hearing what you hoped to hear. The discipline of stating your hypothesis—and what result would disprove it—before you collect data is the cheapest insurance against fooling yourself.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most dangerous bias is the last one in spirit: hearing what you hoped to hear. The discipline of stating your hypothesis, and what result would disprove it, before you collect data is the cheapest insurance against fooling yourself.</p>
 
             </div>
           </AnimatedSection>
@@ -269,11 +269,11 @@ export default function CpgMarketResearchMethodsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Packaging</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Use shelf and concept testing to decide which single message earns the front of the pack. The shelf is a two-second test, and research tells you which claim or visual cue actually gets noticed and understood—not which one the design team liked best in a quiet conference room.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Use shelf and concept testing to decide which single message earns the front of the pack. The shelf is a two-second test, and research tells you which claim or visual cue actually gets noticed and understood, not which one the design team liked best in a quiet conference room.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Messaging</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The verbatims from interviews, reviews, and open-ended surveys are your copy deck. The closer your language tracks the words consumers actually use about their problem, the less your marketing has to work to be believed. This is where qualitative research pays off most directly—and where invented messaging most reliably falls flat.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The verbatims from interviews, reviews, and open-ended surveys are your copy deck. The closer your language tracks the words consumers actually use about their problem, the less your marketing has to work to be believed. This is where qualitative research pays off most directly, and where invented messaging most reliably falls flat.</p>
 
             </div>
           </AnimatedSection>
@@ -281,7 +281,7 @@ export default function CpgMarketResearchMethodsPost() {
           <AnimatedSection>
             <div className="prose prose-lg max-w-none">
 
-              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Lean Research for Emerging Brands—and the Mistakes to Avoid</h2>
+              <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Lean Research for Emerging Brands (and the Mistakes to Avoid)</h2>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">You don't need an enterprise research budget to make evidence-based decisions. The highest-leverage work is often the cheapest, and the most damaging mistakes are usually free to avoid.</p>
 
@@ -292,14 +292,14 @@ export default function CpgMarketResearchMethodsPost() {
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Five to ten in-depth interviews with real target buyers</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A close read of competitor reviews on Amazon and retailer sites</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A 100–200 respondent survey via a low-cost online panel</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A 100 to 200 respondent survey via a low-cost online panel</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A live A/B test on ads or a landing page before the production run</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> First-party data captured from day one through your own channels</li>
               </ul>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Common Mistakes</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that most research failures aren't about budget—they're about discipline. Watch for these:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that most research failures aren't about budget. They're about discipline. Watch for these:</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Researching to confirm a decision you've already made</li>
@@ -309,7 +309,7 @@ export default function CpgMarketResearchMethodsPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Letting insights die in a deck nobody opens again</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">That last one is the quiet killer. Research only creates value when it's wired into the rooms where decisions get made—which is exactly where a marketing partner earns its place. The work of translating consumer reality into the product, pack, price, and message is continuous, and it's where the strongest CPG brands separate from the rest. The methods are knowable; the discipline of acting on them, week after week, is what compounds into a brand consumers actually choose.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">That last one is the quiet killer. Research only creates value when it's wired into the rooms where decisions get made, which is exactly where a marketing partner earns its place. The work of translating consumer reality into the product, pack, price, and message is continuous, and it's where the strongest CPG brands separate from the rest. The methods are knowable; the discipline of acting on them, week after week, is what compounds into a brand consumers actually choose.</p>
 
             </div>
           </AnimatedSection>
@@ -339,7 +339,7 @@ export default function CpgMarketResearchMethodsPost() {
                   <span className="text-xs text-[#717171]">7 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Test Marketing: Validating Products Before National Rollout</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">How smart CPG brands validate products in controlled markets first—saving millions before a national launch.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">How smart CPG brands validate products in controlled markets first, saving millions before a national launch.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">January 7, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

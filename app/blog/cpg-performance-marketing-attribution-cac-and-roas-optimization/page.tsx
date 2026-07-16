@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What attribution model works best for CPG brands?",
-    answer: "Multi-touch attribution with extended windows works best for CPG — typically 90–180 days for awareness campaigns and 7–30 days for promotional campaigns. Single-touch last-click attribution dramatically undervalues upper-funnel activity and leads to budget cuts in exactly the channels that build long-term growth.",
+    answer: "Multi-touch attribution with extended windows works best for CPG: typically 90–180 days for awareness campaigns and 7–30 days for promotional campaigns. Single-touch last-click attribution dramatically undervalues upper-funnel activity and leads to budget cuts in exactly the channels that build long-term growth.",
   },
   {
     question: "How do I calculate true CAC for a CPG brand?",
-    answer: "True CPG CAC includes all paid media spend, content creation costs, retail partnership investments, and measurement technology — divided by new customers acquired. Critically, it should account for the repeat purchase behavior of the cohort, since a customer who buys 6 times per year has a very different LTV than one who buys once.",
+    answer: "True CPG CAC includes all paid media spend, content creation costs, retail partnership investments, and measurement technology, divided by new customers acquired. Critically, it should account for the repeat purchase behavior of the cohort, since a customer who buys 6 times per year has a very different LTV than one who buys once.",
   },
   {
     question: "What ROAS should CPG brands target?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "What is incrementality testing and should CPG brands do it?",
-    answer: "Incrementality testing uses holdout groups — audiences that don't see your ads — to measure the true lift your campaigns generate versus organic sales. It's the most accurate way to understand if your ads are driving new purchases or just claiming credit for purchases that would have happened anyway. Yes, CPG brands should do it at least quarterly.",
+    answer: "Incrementality testing uses holdout groups (audiences that don't see your ads) to measure the true lift your campaigns generate versus organic sales. It's the most accurate way to understand if your ads are driving new purchases or just claiming credit for purchases that would have happened anyway. Yes, CPG brands should do it at least quarterly.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function CpgPerformanceMarketingPost() {
               <span className="text-beast-pink">Attribution, CAC, and ROAS Optimization</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              The CPG attribution gap is real — digital ads drive in-store purchases that never show up in your dashboard. Here&amp;apos;s how to measure and optimize across that gap.
+              The CPG attribution gap is real: digital ads drive in-store purchases that never show up in your dashboard. Here&apos;s how to measure and optimize across that gap.
             </p>
           </AnimatedSection>
         </div>
@@ -157,7 +157,7 @@ export default function CpgPerformanceMarketingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Calculating True CAC for CPG Brands</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                True CPG CAC requires accounting for repeat purchases across customer households — not just single transactions. The formula must encompass paid media, content creation, retail partnership investments, and measurement technology costs.
+                True CPG CAC requires accounting for repeat purchases across customer households, not just single transactions. The formula must encompass paid media, content creation, retail partnership investments, and measurement technology costs.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Segment CAC analysis by cohort:</p>
               <ul className="space-y-2 mb-8">
@@ -224,7 +224,7 @@ export default function CpgPerformanceMarketingPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We&apos;ve run performance marketing for CPG brands at every stage — from $4K sweepstakes campaigns to national Walmart rollouts. Our attribution frameworks account for the full CPG customer journey, not just what&apos;s easy to track.
+                  We&apos;ve run performance marketing for CPG brands at every stage, from $4K sweepstakes campaigns to national Walmart rollouts. Our attribution frameworks account for the full CPG customer journey, not just what&apos;s easy to track.
                 </p>
                 <IconButton href="/work" icon="arrow">See Our CPG Results</IconButton>
               </div>
@@ -281,7 +281,7 @@ export default function CpgPerformanceMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -299,7 +299,7 @@ export default function CpgPerformanceMarketingPost() {
               Ready to Measure What Actually Drives CPG Growth?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast builds performance marketing systems that account for the full CPG customer journey — online and off.
+              Beast builds performance marketing systems that account for the full CPG customer journey, online and off.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

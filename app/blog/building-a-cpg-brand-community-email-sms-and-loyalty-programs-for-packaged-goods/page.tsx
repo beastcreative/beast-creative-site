@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Why should a CPG brand bother building an email list if most sales happen in retail stores?",
-    answer: "Your email list is the only customer asset you own outright — retailer relationships, social followings, and Amazon rankings can disappear overnight. An email list gives you a direct line to activate for new product launches, promotion pushes, and DTC sales without paying a third-party platform.",
+    answer: "Your email list is the only customer asset you own outright: retailer relationships, social followings, and Amazon rankings can disappear overnight. An email list gives you a direct line to activate for new product launches, promotion pushes, and DTC sales without paying a third-party platform.",
   },
   {
     question: "What conversion rates should CPG brands expect from loyalty programs?",
-    answer: "Loyalty program enrollment rates of 15–25% of active purchasers are typical for CPG brands with a strong community angle; repeat purchase rate lifts of 20–35% among enrolled members are commonly reported. Programs tied to experiential rewards (events, early access) outperform pure points-for-discounts structures.",
+    answer: "Loyalty program enrollment rates of 15% to 25% of active purchasers are typical for CPG brands with a strong community angle; repeat purchase rate lifts of 20% to 35% among enrolled members are commonly reported. Programs tied to experiential rewards (events, early access) outperform pure points-for-discounts structures.",
   },
   {
     question: "When does SMS marketing make sense for a CPG brand vs. email alone?",
-    answer: "SMS is most effective for time-sensitive offers (flash sales, limited drops) and post-purchase engagement (reorder reminders, shipping updates) because open rates are 90%+ vs. 20–30% for email. Use SMS sparingly — more than 2–4 messages per month drives unsubscribes at a rate that erodes list value quickly.",
+    answer: "SMS is most effective for time-sensitive offers (flash sales, limited drops) and post-purchase engagement (reorder reminders, shipping updates) because open rates are 90%+ vs. 20% to 30% for email. Use SMS sparingly, since more than 2 to 4 messages per month drives unsubscribes at a rate that erodes list value quickly.",
   },
   {
     question: "What is the simplest loyalty mechanic a small CPG brand can implement without a major tech investment?",
@@ -98,7 +98,7 @@ export default function CpgBrandCommunityPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Why CPG Brands Need Direct Customer Relationships Traditional CPG marketing meant putting products on shelves and hoping for the best. You&apos;d run some ads, maybe sponsor an event, and cross your fingers that customers would remember your brand next time they&apos;re shopping.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">That approach doesn&apos;t work anymore. Here&apos;s the thing – when customers buy your product through a retailer, you&apos;re essentially invisible in that transaction. You don&apos;t know who bought it, why they chose your brand, or whether they&apos;ll buy again.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">That approach doesn&apos;t work anymore. Here&apos;s the thing: when customers buy your product through a retailer, you&apos;re essentially invisible in that transaction. You don&apos;t know who bought it, why they chose your brand, or whether they&apos;ll buy again.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Building a direct community changes everything. You gain:</p>
 
@@ -122,7 +122,7 @@ export default function CpgBrandCommunityPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Starting Your Email Strategy</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Email remains the backbone of CPG community building. Unlike social media, where algorithms control reach, email lands directly in your customer&apos;s inbox. You&apos;re not competing with a cluttered feed – you have their attention.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Email remains the backbone of CPG community building. Unlike social media, where algorithms control reach, email lands directly in your customer&apos;s inbox. You&apos;re not competing with a cluttered feed, so you have their attention.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: successful CPG email marketing isn&apos;t about selling products in every message. It&apos;s about providing value that makes customers excited to hear from you.</p>
 
@@ -162,7 +162,7 @@ export default function CpgBrandCommunityPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why SMS Works for CPG Brands</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">SMS has a 98% open rate compared to email&apos;s 22%. That&apos;s powerful, but it comes with responsibility. Customers give you permission to text them – don&apos;t abuse it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">SMS has a 98% open rate compared to email&apos;s 22%. That&apos;s powerful, but it comes with responsibility. Customers give you permission to text them, so don&apos;t abuse it.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">SMS works best for:</p>
 
@@ -347,7 +347,7 @@ export default function CpgBrandCommunityPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Your CPG Community Strategy</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Creating a thriving CPG brand community through email, SMS, and loyalty programs isn&apos;t just about technology – it&apos;s about building genuine relationships with customers who love your products. The brands that succeed focus on providing value, maintaining consistency, and treating each channel as part of a connected customer experience.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Creating a thriving CPG brand community through email, SMS, and loyalty programs isn&apos;t just about technology. It&apos;s about building genuine relationships with customers who love your products. The brands that succeed focus on providing value, maintaining consistency, and treating each channel as part of a connected customer experience.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Start with email marketing to build your foundation, add SMS for direct engagement, and create a loyalty program that rewards your best customers. Most importantly, remember that community building is a long-term strategy. The relationships you build today will drive sales and advocacy for years to come.</p>
 
@@ -379,7 +379,7 @@ export default function CpgBrandCommunityPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -403,7 +403,7 @@ export default function CpgBrandCommunityPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -421,7 +421,7 @@ export default function CpgBrandCommunityPost() {
               Building Your CPG Community Strategy
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Creating a thriving CPG brand community through email, SMS, and loyalty programs isn&apos;t just about technology – it&apos;s about building genuine relationships with customers who love your products. The brands that succeed focus on providing value, maintaining consistency, and treating each channel as part of a connected customer experience.
+              Creating a thriving CPG brand community through email, SMS, and loyalty programs isn&apos;t just about technology. It&apos;s about building genuine relationships with customers who love your products. The brands that succeed focus on providing value, maintaining consistency, and treating each channel as part of a connected customer experience.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

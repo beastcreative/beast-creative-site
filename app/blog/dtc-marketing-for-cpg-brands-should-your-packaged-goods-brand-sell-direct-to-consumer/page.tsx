@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the main reason CPG brands should consider a DTC channel even if retail is the primary revenue driver?",
-    answer: "DTC gives you owned customer data — email, purchase history, preferences — that retail channels never share with you, and this data makes every other marketing investment more effective. Brands with even a small DTC channel acquire customers 30–50% more efficiently on paid social than pure-retail brands because they can target lookalikes from their own buyer list.",
+    answer: "DTC gives you owned customer data (email, purchase history, preferences) that retail channels never share with you, and this data makes every other marketing investment more effective. Brands with even a small DTC channel acquire customers 30 to 50% more efficiently on paid social than pure-retail brands because they can target lookalikes from their own buyer list.",
   },
   {
     question: "What CPG categories are best suited for DTC, and which categories struggle?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     question: "What customer acquisition cost is sustainable for a CPG DTC brand?",
-    answer: "A CAC-to-LTV ratio of 1:3 or better is the standard benchmark — if it costs you $30 to acquire a customer, that customer should generate at least $90 in lifetime gross profit. For subscription CPG with predictable churn, this is achievable; for one-time-purchase CPG, achieving a 1:3 ratio is extremely difficult and most brands subsidize DTC as a data and brand-building investment rather than a profit center.",
+    answer: "A CAC-to-LTV ratio of 1:3 or better is the standard benchmark: if it costs you $30 to acquire a customer, that customer should generate at least $90 in lifetime gross profit. For subscription CPG with predictable churn, this is achievable; for one-time-purchase CPG, achieving a 1:3 ratio is extremely difficult, and most brands subsidize DTC as a data and brand-building investment rather than a profit center.",
   },
   {
     question: "How do you decide whether to invest in DTC or put that budget into retail trade spend?",
-    answer: "If your retail velocity is below category average, fix it with trade spend and sampling before opening a DTC channel — a DTC site requires consistent traffic investment and will not generate meaningful data if it is under-resourced. If your retail velocity is strong and you want to own the customer relationship and build a higher-value business, DTC investment is the right next step.",
+    answer: "If your retail velocity is below category average, fix it with trade spend and sampling before opening a DTC channel, since a DTC site requires consistent traffic investment and will not generate meaningful data if it is under-resourced. If your retail velocity is strong and you want to own the customer relationship and build a higher-value business, DTC investment is the right next step.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
               <span className="text-beast-pink">Should Your Packaged Goods Brand Sell Direct-to-Consumer?</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              CPG brands are facing an unprecedented shift: traditional retail partnerships that once guaranteed shelf space and sales are no longer enough. Today’s packaged goods companies are discovering that direct-to-consumer (DTC) channels offer something retail can’t—complete control over customer relationships, brand narrative, and profit margins.
+              CPG brands are facing an unprecedented shift: traditional retail partnerships that once guaranteed shelf space and sales are no longer enough. Today’s packaged goods companies are discovering that direct-to-consumer (DTC) channels offer something retail can’t: complete control over customer relationships, brand narrative, and profit margins.
             </p>
           </AnimatedSection>
         </div>
@@ -86,7 +86,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what’s driving this shift: consumers want authentic brand experiences, personalized products, and direct relationships with the companies behind their favorite items. Meanwhile, retail margins continue to squeeze profitability, and brands find themselves competing for limited shelf space in an oversaturated market.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that DTC marketing for CPG brands requires a fundamentally different approach than traditional retail marketing. You’re not just promoting products—you’re building an entire customer experience from discovery to delivery.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that DTC marketing for CPG brands requires a fundamentally different approach than traditional retail marketing. You’re not just promoting products: you’re building an entire customer experience from discovery to delivery.</p>
 
             </div>
           </AnimatedSection>
@@ -499,7 +499,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion: Taking the Next Step</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The question isn’t whether CPG brands should consider DTC marketing—it’s whether they can afford not to explore this growing opportunity. While DTC isn’t right for every CPG brand or every product line, the potential benefits of customer data ownership, margin improvement, and brand control make it worth serious consideration.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The question isn’t whether CPG brands should consider DTC marketing. It’s whether they can afford not to explore this growing opportunity. While DTC isn’t right for every CPG brand or every product line, the potential benefits of customer data ownership, margin improvement, and brand control make it worth serious consideration.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Success in CPG DTC marketing requires a different mindset than traditional retail marketing. It demands focus on customer lifetime value, investment in content and education, and commitment to delivering exceptional experiences at every touchpoint.</p>
 
@@ -533,7 +533,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -557,7 +557,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

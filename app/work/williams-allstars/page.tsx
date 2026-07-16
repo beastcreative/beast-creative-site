@@ -28,13 +28,13 @@ export default function WilliamsAllstarsPage() {
                   <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-beast-pink/15 text-beast-pink border border-beast-pink/20">{tag}</span>
                 ))}
               </div>
-              <p className="section-eyebrow text-beast-yellow mb-3">Case Study — Williams Foods · 2022</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2022</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 Digital Trading Cards.{" "}
                 <span className="text-beast-pink">Real Fan Frenzy.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
-                13,660 entries across 8 card drops in 24 days. 9.5% email click rate — 11x the industry average.
+                13,660 entries across 8 card drops in 24 days. 9.5% email click rate, 11x the industry average.
               </p>
             </AnimatedSection>
 
@@ -78,11 +78,11 @@ export default function WilliamsAllstarsPage() {
                   Williams Foods came to Beast with a clear seasonal opportunity and a creative challenge: March Madness is one of the biggest cultural moments of the year in American households. How do you tap into that energy authentically for a seasoning brand, drive meaningful consumer engagement, and build a first-party database at the same time?
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  The previous Williams campaigns had proven the model — Beast&apos;s sweepstakes architecture reliably outperformed industry benchmarks. But this time the brief pushed further. The client wanted something collectible, something that rewarded loyal fans across the full tournament window, and something that made Williams feel like a cultural participant in March Madness.
+                  The previous Williams campaigns had already proven the model: Beast&apos;s sweepstakes architecture reliably outperformed industry benchmarks. But this time the brief pushed further. The client wanted something collectible, something that rewarded loyal fans across the full tournament window, and something that made Williams feel like a cultural participant in March Madness.
                 </p>
                 <div className="bg-white rounded-xl p-5 border border-gray-100">
                   <p className="font-display font-bold text-beast-black text-sm mb-2">The Challenge</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">Standard sweepstakes create a single touchpoint and then go cold. Williams needed a mechanism that brought fans back multiple times across the 24-day window, rewarded participation, and made the brand feel genuinely fun to interact with — not just transactional.</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">Standard sweepstakes create a single touchpoint and then go cold. Williams needed a mechanism that brought fans back multiple times across the 24-day window, rewarded participation, and made the brand feel genuinely fun to interact with, not just transactional.</p>
                 </div>
               </AnimatedSection>
 
@@ -91,10 +91,10 @@ export default function WilliamsAllstarsPage() {
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Take It Back to Where Sneakers and Trading Cards Were the Culture.</h2>
                 <div className="space-y-6">
                   {[
-                    { step: "1", label: "The Creative Concept", detail: "Beast's answer was rooted in nostalgia — the same cultural territory that makes March Madness resonate. Digital sneaker trading cards: custom Williams-branded Chuck Taylor-style sneakers, each featuring a different Williams seasoning flavor, designed as collectible digital trading cards that fans could unlock over the course of the campaign. Basketball and sneaker culture are deeply intertwined — it's authentic to the March Madness moment." },
-                    { step: "2", label: "The Mechanic — 8 Card Drops", detail: "Every entry earned a digital trading card — a unique, downloadable collectible. One new card dropped every three days across 8 windows: Chili, Spicy Wings, Sloppy Joe, Spaghetti, Gravy, Taco, Meatloaf, and Tex-Mex Chili. Each card window was a new entry opportunity. The more cards a fan collected, the more times they entered — driving repeat engagement and a sense of genuine progression through the campaign." },
-                    { step: "3", label: "The Prize Architecture", detail: "Grand Prize (1 winner): $500 gift card, custom Williams sneakers (winner's choice from 8 designs), physical pack of all 8 Williams trading cards printed like real cards, winner's favorite basketball team's jersey, and Williams Seasonings product bundle. Superfan Prizes (25 winners): selected based on social media engagement throughout the campaign — a deliberate mechanic that incentivized shares, comments, and organic social amplification beyond the entry form." },
-                    { step: "4", label: "Email Strategy", detail: "Using Constant Contact, Beast deployed email campaigns to the growing Williams subscriber list to announce each new card release and drive repeat traffic. Total sends: 26,413. Open rate: 29.1% (vs. 24% industry avg). Click rate: 9.5% (vs. 0.82% industry avg — 11.6x the benchmark). When Beast sent an email announcing a new card drop, nearly 1 in 10 recipients clicked through immediately." },
+                    { step: "1", label: "The Creative Concept", detail: "Beast's answer was rooted in nostalgia, the same cultural territory that makes March Madness resonate. Digital sneaker trading cards: custom Williams-branded Chuck Taylor-style sneakers, each featuring a different Williams seasoning flavor, designed as collectible digital trading cards that fans could unlock over the course of the campaign. Basketball and sneaker culture are deeply intertwined, so it's authentic to the March Madness moment." },
+                    { step: "2", label: "The Mechanic: 8 Card Drops", detail: "Every entry earned a digital trading card: a unique, downloadable collectible. One new card dropped every three days across 8 windows: Chili, Spicy Wings, Sloppy Joe, Spaghetti, Gravy, Taco, Meatloaf, and Tex-Mex Chili. Each card window was a new entry opportunity. The more cards a fan collected, the more times they entered, driving repeat engagement and a sense of genuine progression through the campaign." },
+                    { step: "3", label: "The Prize Architecture", detail: "Grand Prize (1 winner): $500 gift card, custom Williams sneakers (winner's choice from 8 designs), physical pack of all 8 Williams trading cards printed like real cards, winner's favorite basketball team's jersey, and Williams Seasonings product bundle. Superfan Prizes (25 winners): selected based on social media engagement throughout the campaign, a deliberate mechanic that incentivized shares, comments, and organic social amplification beyond the entry form." },
+                    { step: "4", label: "Email Strategy", detail: "Using Constant Contact, Beast deployed email campaigns to the growing Williams subscriber list to announce each new card release and drive repeat traffic. Total sends: 26,413. Open rate: 29.1% (vs. 24% industry avg). Click rate: 9.5% (vs. 0.82% industry avg, 11.6x the benchmark). When Beast sent an email announcing a new card drop, nearly 1 in 10 recipients clicked through immediately." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
                       <span className="w-8 h-8 rounded-full bg-beast-pink/10 border border-beast-pink/20 text-beast-pink font-display font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">{item.step}</span>
@@ -112,20 +112,20 @@ export default function WilliamsAllstarsPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Cards</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Collectible. Digital. Theirs to Keep.</h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Each entry earned fans a digital trading card — a custom Williams-branded sneaker design they could download and share. Here are three from the 8-card set. Hover to flip.
+                  Each entry earned fans a digital trading card: a custom Williams-branded sneaker design they could download and share. Here are three from the 8-card set. Hover to flip.
                 </p>
                 <div className="grid grid-cols-3 gap-8 py-4 overflow-visible">
                   <TradingCard
                     front="/assets/card-chili-front.png"
                     back="/assets/card-chili-back.png"
-                    alt="Williams All-Stars Chili trading card — Beast Creative Agency"
+                    alt="Williams All-Stars Chili trading card from Beast Creative Agency"
                     rotation={-4}
                     floatDelay="0s"
                   />
                   <TradingCard
                     front="/assets/card-taco-front.png"
                     back="/assets/card-taco-back.png"
-                    alt="Williams All-Stars Taco trading card — Beast Creative Agency"
+                    alt="Williams All-Stars Taco trading card from Beast Creative Agency"
                     defaultFlipped={true}
                     rotation={2}
                     floatDelay="0.4s"
@@ -133,7 +133,7 @@ export default function WilliamsAllstarsPage() {
                   <TradingCard
                     front="/assets/card-sloppyjoe-front.png"
                     back="/assets/card-sloppyjoe-back.png"
-                    alt="Williams All-Stars Sloppy Joe trading card — Beast Creative Agency"
+                    alt="Williams All-Stars Sloppy Joe trading card from Beast Creative Agency"
                     rotation={-2}
                     floatDelay="0.8s"
                   />
@@ -178,16 +178,16 @@ export default function WilliamsAllstarsPage() {
 
                 <blockquote className="border border-beast-pink/20 bg-beast-pink/5 rounded-xl px-6 py-4">
                   <p className="text-beast-black font-medium italic text-lg leading-relaxed">
-                    &quot;Working with Beast was a game changer. Their custom social media campaign didn&apos;t just build awareness — it delivered over 13,000 real email subscribers.&quot;
+                    &quot;Working with Beast was a game changer. Their custom social media campaign didn&apos;t just build awareness. It delivered over 13,000 real email subscribers.&quot;
                   </p>
-                  <footer className="mt-3 text-sm text-gray-500">— Williams Foods / C.H. Guenther &amp; Son</footer>
+                  <footer className="mt-3 text-sm text-gray-500">Williams Foods / C.H. Guenther &amp; Son</footer>
                 </blockquote>
               </AnimatedSection>
 
               <AnimatedSection>
                 <p className="section-eyebrow text-beast-pink mb-2">Live In The Feed</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">What Fans Actually Saw.</h2>
-                <p className="text-gray-600 leading-relaxed mb-6">Each card drop was announced via Facebook and Instagram — showing off the new design, reminding fans they had another chance to enter, and keeping the campaign alive for the full 24-day March Madness window. This is what it looked like in the feed.</p>
+                <p className="text-gray-600 leading-relaxed mb-6">Each card drop was announced via Facebook and Instagram, showing off the new design, reminding fans they had another chance to enter, and keeping the campaign alive for the full 24-day March Madness window. This is what it looked like in the feed.</p>
                 <PhoneTilt />
               </AnimatedSection>
 
@@ -199,8 +199,8 @@ export default function WilliamsAllstarsPage() {
                   <h3 className="font-display font-bold text-sm uppercase tracking-widest text-beast-pink mb-5">Campaign Overview</h3>
                   {[
                     { label: "Client", value: "Williams Foods" },
-                    { label: "Campaign", value: "All-Stars — March Madness" },
-                    { label: "Dates", value: "Mar 14 – Apr 6, 2022" },
+                    { label: "Campaign", value: "All-Stars: March Madness" },
+                    { label: "Dates", value: "Mar 14 to Apr 6, 2022" },
                     { label: "Duration", value: "24 days" },
                     { label: "Card Drops", value: "8 unique designs" },
                     { label: "Platforms", value: "Facebook, Instagram" },
@@ -290,7 +290,7 @@ export default function WilliamsAllstarsPage() {
               <div className="flex items-center justify-center mt-6">
                 <span className="inline-flex items-center gap-2 bg-beast-pink rounded-full px-4 py-1.5 text-sm font-bold text-white font-display">
                   <span className="w-2 h-2 rounded-full bg-beast-green animate-pulse shrink-0" />
-                  Chili Shoe — Motion Ad
+                  Chili Shoe: Motion Ad
                 </span>
               </div>
             </AnimatedSection>
@@ -302,7 +302,7 @@ export default function WilliamsAllstarsPage() {
               >
                 <Image
                   src="/assets/allstars-ad-prizes.png"
-                  alt="Williams All-Stars prizes ad — Become an All-Star"
+                  alt="Williams All-Stars prizes ad: Become an All-Star"
                   width={680}
                   height={680}
                   className="w-full h-auto block"

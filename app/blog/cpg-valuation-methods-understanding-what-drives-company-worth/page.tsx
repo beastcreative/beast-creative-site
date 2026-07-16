@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What EBITDA multiple range should a CPG brand expect in an acquisition?",
-    answer: "High-growth CPG brands with strong retail velocity and DTC traction typically transact at 6–14x EBITDA; commodity-driven or private-label manufacturers with low growth are valued at 3–6x. The multiple premium comes from brand equity, repeat purchase rates, and channel diversification — not revenue size alone.",
+    answer: "High-growth CPG brands with strong retail velocity and DTC traction typically transact at 6 to 14x EBITDA, while commodity-driven or private-label manufacturers with low growth are valued at 3 to 6x. The multiple premium comes from brand equity, repeat purchase rates, and channel diversification, not revenue size alone.",
   },
   {
     question: "What non-financial factors most affect CPG brand acquisition valuations?",
-    answer: "Retail distribution breadth and velocity (sales per point of distribution), customer retention and repeat purchase rates, and proprietary formulas or IP are the top value drivers beyond the financials. Concentration risk — one retailer, one product, one geography — consistently discounts valuations regardless of profitability.",
+    answer: "Retail distribution breadth and velocity (sales per point of distribution), customer retention and repeat purchase rates, and proprietary formulas or IP are the top value drivers beyond the financials. Concentration risk, such as relying on one retailer, one product, or one geography, consistently discounts valuations regardless of profitability.",
   },
   {
     question: "How does DTC revenue affect a CPG brand's valuation relative to pure retail revenue?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "When should a CPG brand owner start thinking about valuation and exit planning?",
-    answer: "Ideally three to five years before a planned exit — that is when operational and financial decisions made today will show up in the trailing twelve-month numbers that buyers use to set valuation. Waiting until six months before a desired sale gives you almost no time to address the margin, concentration, or documentation issues that compress valuations.",
+    answer: "Ideally three to five years before a planned exit: that is when operational and financial decisions made today will show up in the trailing twelve-month numbers that buyers use to set valuation. Waiting until six months before a desired sale gives you almost no time to address the margin, concentration, or documentation issues that compress valuations.",
   },
 ];
 
@@ -307,7 +307,7 @@ export default function CpgValuationMethodsDrivesCompanyWorthPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Operational Efficiency and Scalability</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG companies that demonstrate operational leverage – the ability to grow revenue faster than costs – earn higher valuations. This includes:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG companies that demonstrate operational leverage, meaning the ability to grow revenue faster than costs, earn higher valuations. This includes:</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing efficiency: Companies with optimized production processes and flexible capacity command premiums.</p>
 
@@ -412,7 +412,7 @@ export default function CpgValuationMethodsDrivesCompanyWorthPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Establish strong management teams and organizational capabilities</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies understand that valuation isn’t just about current performance – it’s about demonstrating sustainable competitive advantages and growth potential that buyers will pay premium multiples to access.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies understand that valuation isn’t just about current performance, but about demonstrating sustainable competitive advantages and growth potential that buyers will pay premium multiples to access.</p>
 
             </div>
           </AnimatedSection>

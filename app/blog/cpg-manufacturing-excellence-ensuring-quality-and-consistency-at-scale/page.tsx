@@ -8,7 +8,7 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "CPG Manufacturing Excellence: Ensuring Quality and Consistency at Scale",
   description:
-    "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls – a staggering figure that underscores why excellence in manufacturing",
+    "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls, a staggering figure that underscores why excellence in manufacturing",
 };
 
 const faqs = [
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "How do you maintain product consistency when scaling production across multiple co-manufacturing facilities?",
-    answer: "A master formulation document with precise specifications for every ingredient (source, grade, particle size where relevant), processing parameters, and finished product attributes is the foundation — without it, each facility will drift. Third-party sensory panel testing comparing batches across facilities is the most reliable early-warning system.",
+    answer: "A master formulation document with precise specifications for every ingredient (source, grade, particle size where relevant), processing parameters, and finished product attributes is the foundation. Without it, each facility will drift. Third-party sensory panel testing comparing batches across facilities is the most reliable early-warning system.",
   },
   {
     question: "What are the most common quality failures when a CPG brand transitions from small batch to scale manufacturing?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How many co-manufacturing facilities should a CPG brand qualify before it needs them?",
-    answer: "Qualifying a backup co-manufacturer before you need one is the most important supply chain resilience step a brand can take — most brands learn this lesson after their primary co-man has a fire, audit failure, or capacity problem at the worst possible time. Two qualified facilities for your top three SKUs is a reasonable minimum standard.",
+    answer: "Qualifying a backup co-manufacturer before you need one is the most important supply chain resilience step a brand can take: most brands learn this lesson after their primary co-man has a fire, audit failure, or capacity problem at the worst possible time. Two qualified facilities for your top three SKUs is a reasonable minimum standard.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "CPG Manufacturing Excellence: Ensuring Quality and Consistency at Scale",
-            description: "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls – a staggering figure that underscores why excellence in manufacturing",
+            description: "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls, a staggering figure that underscores why excellence in manufacturing",
             datePublished: "2026-01-09",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -68,7 +68,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
               <span className="text-beast-pink">Ensuring Quality and Consistency at Scale</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Global CPG manufacturers lose over $50 billion annually to quality failures and recalls – a staggering figure that underscores why excellence in manufacturing isn’t just about meeting standards, it’s about survival. In an industry where a single contaminated batch can destroy decades of brand equity, achieving quality and consistency at scale becomes the ultimate competitive advantage.
+              Global CPG manufacturers lose over $50 billion annually to quality failures and recalls, a staggering figure that underscores why excellence in manufacturing isn’t just about meeting standards, it’s about survival. In an industry where a single contaminated batch can destroy decades of brand equity, achieving quality and consistency at scale becomes the ultimate competitive advantage.
             </p>
           </AnimatedSection>
         </div>
@@ -84,11 +84,11 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing excellence in the consumer packaged goods industry goes far beyond basic quality control. It’s a holistic approach that weaves together people, processes, and technology to create products that consistently meet consumer expectations while maximizing operational efficiency.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what separates truly excellent CPG manufacturers from the rest: they don’t just react to quality issues – they prevent them. This proactive mindset requires building quality into every step of the manufacturing process, from raw material sourcing to final packaging.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what separates truly excellent CPG manufacturers from the rest: they don’t just react to quality issues. They prevent them. This proactive mindset requires building quality into every step of the manufacturing process, from raw material sourcing to final packaging.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Quality Management Systems That Actually Work</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The backbone of any successful CPG operation is a robust quality management system (QMS). But here’s the thing – not all QMS implementations deliver the same results. The most effective systems share several key characteristics:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The backbone of any successful CPG operation is a robust quality management system (QMS). But here’s the thing: not all QMS implementations deliver the same results. The most effective systems share several key characteristics:</p>
 
               <ul className="space-y-3 mb-6">
                 <li className="flex gap-3">
@@ -101,7 +101,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Predictive analytics:</strong> Advanced systems don’t just report what happened – they predict what’s likely to happen based on historical patterns and current conditions</span>
+                  <span className="text-[#4A4A4A] text-sm leading-relaxed"><strong className="text-beast-black">Predictive analytics:</strong> Advanced systems don’t just report what happened. They predict what’s likely to happen based on historical patterns and current conditions</span>
                 </li>
                 <li className="flex gap-3">
                   <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -125,7 +125,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this critical point: what works at small scale often breaks down when you try to scale up. A process that produces perfect results for 1,000 units per day might fail catastrophically at 100,000 units per day.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The challenge isn’t just about volume – it’s about maintaining consistency across multiple production lines, shifts, facilities, and even countries. Each variable introduces potential points of failure that can compromise quality.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The challenge isn’t just about volume. It’s about maintaining consistency across multiple production lines, shifts, facilities, and even countries. Each variable introduces potential points of failure that can compromise quality.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Process Standardization Across Multiple Facilities</h3>
 
@@ -154,7 +154,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Supply Chain Quality Management</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your product quality is only as good as your weakest supplier. This reality makes supplier quality management a critical component of manufacturing excellence. Leading CPG companies don’t just audit their suppliers annually – they integrate supplier quality data into their real-time monitoring systems.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your product quality is only as good as your weakest supplier. This reality makes supplier quality management a critical component of manufacturing excellence. Leading CPG companies don’t just audit their suppliers annually. They integrate supplier quality data into their real-time monitoring systems.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The most effective approach involves creating supplier scorecards that track multiple metrics: quality performance, delivery reliability, responsiveness to issues, and continuous improvement efforts. Suppliers who consistently underperform get additional support or replacement.</p>
 
@@ -184,7 +184,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">AI and machine learning take quality management to the next level by identifying patterns that humans and traditional statistical methods can’t detect. These systems learn from historical data to predict quality outcomes based on current process conditions.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">For example, an AI system might discover that products manufactured on Tuesday afternoons have slightly higher defect rates – not because of any obvious process change, but due to subtle factors like operator fatigue, ambient temperature, or raw material age.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">For example, an AI system might discover that products manufactured on Tuesday afternoons have slightly higher defect rates, not because of any obvious process change, but due to subtle factors like operator fatigue, ambient temperature, or raw material age.</p>
 
             </div>
           </AnimatedSection>
@@ -216,7 +216,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Continuous Improvement Culture</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing excellence isn’t a destination – it’s an ongoing journey. The best CPG companies create cultures where continuous improvement is embedded in daily operations, not just special projects.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing excellence isn’t a destination. It’s an ongoing journey. The best CPG companies create cultures where continuous improvement is embedded in daily operations, not just special projects.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Employee Engagement in Quality Initiatives</h3>
 
@@ -260,11 +260,11 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Traceability Systems</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Complete traceability – knowing exactly which raw materials went into which products and where those products went – is essential for managing quality issues when they occur. Modern traceability systems can track individual units or batches throughout the entire supply chain.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Complete traceability (knowing exactly which raw materials went into which products and where those products went) is essential for managing quality issues when they occur. Modern traceability systems can track individual units or batches throughout the entire supply chain.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Recall Preparedness</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Having a detailed recall plan isn’t just about regulatory compliance – it’s about protecting your brand and customers when problems occur. The best recall plans include pre-written communications, clear role assignments, and regular drills to ensure everyone knows what to do.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Having a detailed recall plan isn’t just about regulatory compliance. It’s about protecting your brand and customers when problems occur. The best recall plans include pre-written communications, clear role assignments, and regular drills to ensure everyone knows what to do.</p>
 
             </div>
           </AnimatedSection>
@@ -335,9 +335,9 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing excellence in the CPG industry requires a complete commitment to quality at every level of the organization. It’s not enough to have good intentions or even good processes – you need integrated systems, engaged people, and the right technology working together toward common goals.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Manufacturing excellence in the CPG industry requires a complete commitment to quality at every level of the organization. It’s not enough to have good intentions or even good processes. You need integrated systems, engaged people, and the right technology working together toward common goals.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The companies that master this balance don’t just avoid the $50 billion in losses we mentioned at the start – they build competitive advantages that translate directly to market share, customer loyalty, and profitable growth.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The companies that master this balance don’t just avoid the $50 billion in losses we mentioned at the start. They build competitive advantages that translate directly to market share, customer loyalty, and profitable growth.</p>
 
             </div>
           </AnimatedSection>

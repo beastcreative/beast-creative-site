@@ -10,7 +10,7 @@ import TiltCard from "@/components/ui/TiltCard";
 export const metadata: Metadata = {
   title: "Williams Bowl 2021 NFL Campaign | 6,020 Entries, $1,500 Budget | Beast Creative",
   description:
-    "How Beast Creative Agency launched the Williams Bowl — a 4-week NFL-style bracket sweepstakes for Williams Foods that generated 6,020 entries, 872 new Facebook followers, and proved the CPG sweepstakes model on a $1,500 budget.",
+    "How Beast Creative Agency launched the Williams Bowl, a 4-week NFL-style bracket sweepstakes for Williams Foods that generated 6,020 entries, 872 new Facebook followers, and proved the CPG sweepstakes model on a $1,500 budget.",
 };
 
 export default function WilliamsBowlPage() {
@@ -26,7 +26,7 @@ export default function WilliamsBowlPage() {
                   <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-beast-pink/15 text-beast-pink border border-beast-pink/20">{tag}</span>
                 ))}
               </div>
-              <p className="section-eyebrow text-beast-yellow mb-3">Case Study — Williams Foods · 2021</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
                 The Campaign That Made{" "}
                 <span className="text-beast-pink">CPG Growth Inevitable.</span>
@@ -76,14 +76,14 @@ export default function WilliamsBowlPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Brief</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">NFL Season. Williams Seasonings. Let&apos;s Make It a Thing.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  This was the origin. Before the 22,000-entry back-to-school campaign. Before the 13,000-entry March Madness trading card collection. Before Beast had a thick CPG case study to point at — this was the campaign that started it all.
+                  This was the origin. Before the 22,000-entry back-to-school campaign. Before the 13,000-entry March Madness trading card collection. Before Beast had a thick CPG case study to point at, this was the campaign that started it all.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Williams Foods came to Beast with a modest budget and a clear opportunity: NFL season is the biggest food moment of the year. Tailgating, game day spreads, chili cook-offs, wing nights — Williams seasonings belong in every single one of those moments. The question was how to connect the brand to the cultural energy of the NFL in a way that felt authentic and drove real consumer engagement.
+                  Williams Foods came to Beast with a modest budget and a clear opportunity: NFL season is the biggest food moment of the year. Tailgating, game day spreads, chili cook-offs, wing nights: Williams seasonings belong in every single one of those moments. The question was how to connect the brand to the cultural energy of the NFL in a way that felt authentic and drove real consumer engagement.
                 </p>
                 <div className="bg-white rounded-xl p-5 border border-gray-100">
                   <p className="font-display font-bold text-beast-black text-sm mb-2">The Constraint</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">A $1,500 total ad budget. For the Beast team, this wasn&apos;t a limitation — it was a challenge to prove that creative mechanics could do what raw ad spend alone couldn&apos;t. The Williams Bowl would live or die on the strength of the concept, not the size of the media buy.</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">A $1,500 total ad budget. For the Beast team, this wasn&apos;t a limitation. It was a challenge to prove that creative mechanics could do what raw ad spend alone couldn&apos;t. The Williams Bowl would live or die on the strength of the concept, not the size of the media buy.</p>
                 </div>
               </AnimatedSection>
 
@@ -91,11 +91,11 @@ export default function WilliamsBowlPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">Campaign Creative</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Built for the Bracket. Designed to Drive Votes.</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Every round of the Williams Bowl needed creative that made fans feel the stakes. Beast designed the campaign around the NFL playoff energy — stadium atmosphere, bold typography, and a prize stack that escalated week over week. The creative made it easy to understand, impossible to ignore, and worth sharing.
+                  Every round of the Williams Bowl needed creative that made fans feel the stakes. Beast designed the campaign around the NFL playoff energy: stadium atmosphere, bold typography, and a prize stack that escalated week over week. The creative made it easy to understand, impossible to ignore, and worth sharing.
                 </p>
                 <TiltCard
                   src="/assets/williams-bowl-banner.jpg"
-                  alt="Williams Bowl — Vote and Win Big campaign banner"
+                  alt="Williams Bowl: Vote and Win Big campaign banner"
                   width={1500}
                   height={788}
                 />
@@ -106,10 +106,10 @@ export default function WilliamsBowlPage() {
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-6">16 Seasonings Enter. One Champion Emerges.</h2>
                 <div className="space-y-6">
                   {[
-                    { step: "1", label: "The Concept: Williams Bowl", detail: "Beast designed the Williams Bowl as a four-round bracket tournament modeled directly on the NFL playoff structure. The 16 Williams seasoning products were seeded as \"teams\" and fans voted on head-to-head matchups each week — advancing their favorites through the bracket toward the Williams Bowl championship. Unlike a standard sweepstakes where you enter once and wait, the Williams Bowl gave fans a reason to come back four times." },
+                    { step: "1", label: "The Concept: Williams Bowl", detail: "Beast designed the Williams Bowl as a four-round bracket tournament modeled directly on the NFL playoff structure. The 16 Williams seasoning products were seeded as \"teams\" and fans voted on head-to-head matchups each week, advancing their favorites through the bracket toward the Williams Bowl championship. Unlike a standard sweepstakes where you enter once and wait, the Williams Bowl gave fans a reason to come back four times." },
                     { step: "2", label: "The Bracket", detail: "Wildcard Round: OG Chili vs. OG Taco, Tex Mex Chili vs. Brown Gravy, Spaghetti vs. Spicy Wing, Chipotle Chili vs. Sloppy Joe, Meatloaf vs. Country Gravy, Tex Mex Taco vs. White Chicken Chili. Divisional → Championship → Williams Bowl Grand Prize. Final matchup: OG Chili vs. Tex Mex Taco. The people spoke." },
                     { step: "3", label: "The Prize Structure", detail: "Round-specific prizes escalated with the stakes. Wildcard: $25 Amazon gift card + Williams football + Williams gift pack. Divisional: $50 gift card + football + NFL hat. Championship: $75 gift card + hat & t-shirt. Williams Bowl Grand Prize: $100 gift card + football + hat, t-shirt, tumbler & jersey from favorite NFL team + Williams gift pack." },
-                    { step: "4", label: "Distribution Innovation", detail: "One of Beast's key strategic decisions was partnering with an external sweepstakes aggregator website — a distribution channel that extended reach beyond Williams' existing social audience and the paid media footprint. This partnership channel became a repeatable playbook element that Beast refined and used again in future Williams and Sun-Bird campaigns." },
+                    { step: "4", label: "Distribution Innovation", detail: "One of Beast's key strategic decisions was partnering with an external sweepstakes aggregator website, a distribution channel that extended reach beyond Williams' existing social audience and the paid media footprint. This partnership channel became a repeatable playbook element that Beast refined and used again in future Williams and Sun-Bird campaigns." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
                       <span className="w-8 h-8 rounded-full bg-beast-pink/10 border border-beast-pink/20 text-beast-pink font-display font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">{item.step}</span>
@@ -126,19 +126,19 @@ export default function WilliamsBowlPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Bracket</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">16 Seasonings Enter. Fans Decide Who Wins.</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Every week, Williams fans voted head-to-head matchups — pitting seasonings against each other like playoff seeds. OG Chili vs. Sloppy Joe. Tex Mex Taco vs. Spaghetti. Each vote entered fans to win that round&apos;s prize, and advanced their favorite deeper into the bracket. Four rounds. Four chances to win. One Williams Bowl champion.
+                  Every week, Williams fans voted head-to-head matchups, pitting seasonings against each other like playoff seeds. OG Chili vs. Sloppy Joe. Tex Mex Taco vs. Spaghetti. Each vote entered fans to win that round&apos;s prize, and advanced their favorite deeper into the bracket. Four rounds. Four chances to win. One Williams Bowl champion.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <div className="flex-1 max-w-[320px] mx-auto sm:mx-0 [transform:rotate(-2deg)_translateY(0px)] hover:[transform:rotate(0deg)_translateY(-8px)] transition-all duration-300 cursor-default"
                     style={{animation: "bracketFloat1 4s ease-in-out infinite"}}>
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/williams-bowl-bracket.jpg" alt="Williams Bowl championship bracket — seasoning matchups" width={1080} height={1080} className="w-full h-auto block" />
+                      <Image src="/assets/williams-bowl-bracket.jpg" alt="Williams Bowl championship bracket: seasoning matchups" width={1080} height={1080} className="w-full h-auto block" />
                     </div>
                   </div>
                   <div className="flex-1 max-w-[320px] mx-auto sm:mx-0 [transform:rotate(2deg)_translateY(0px)] hover:[transform:rotate(0deg)_translateY(-8px)] transition-all duration-300 cursor-default"
                     style={{animation: "bracketFloat2 4s ease-in-out infinite"}}>
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/williams-bowl-bracket-final.jpg" alt="Williams Bowl finals — OG Chili vs Tex Mex Taco" width={1080} height={1080} className="w-full h-auto block" />
+                      <Image src="/assets/williams-bowl-bracket-final.jpg" alt="Williams Bowl finals: OG Chili vs Tex Mex Taco" width={1080} height={1080} className="w-full h-auto block" />
                     </div>
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export default function WilliamsBowlPage() {
 
                 <div className="bg-near-black rounded-xl p-5">
                   <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-2">Why This Campaign Matters</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">At $1,500, the Williams Bowl proved that Beast&apos;s creative mechanic approach could generate thousands of consumer records efficiently. The $0.16 CPC — 43% below industry average — showed that the concept itself was doing the work, not just the ad budget. Three months later, the BTS campaign ran on $4,000 and generated 22,043 entries. One year later, Williams All-Stars added 13,660 more with an email click rate 11x the industry average. The Williams Bowl is where that story started.</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">At $1,500, the Williams Bowl proved that Beast&apos;s creative mechanic approach could generate thousands of consumer records efficiently. The $0.16 CPC, 43% below industry average, showed that the concept itself was doing the work, not just the ad budget. Three months later, the BTS campaign ran on $4,000 and generated 22,043 entries. One year later, Williams All-Stars added 13,660 more with an email click rate 11x the industry average. The Williams Bowl is where that story started.</p>
                 </div>
               </AnimatedSection>
 
@@ -221,7 +221,7 @@ export default function WilliamsBowlPage() {
                   <h3 className="font-display font-bold text-sm uppercase tracking-widest text-beast-pink mb-5">Campaign Overview</h3>
                   {[
                     { label: "Client", value: "Williams Foods" },
-                    { label: "Campaign", value: "Williams Bowl — NFL Bracket" },
+                    { label: "Campaign", value: "Williams Bowl: NFL Bracket" },
                     { label: "Year", value: "Fall / Winter 2021" },
                     { label: "Duration", value: "4 weeks" },
                     { label: "Ad Budget", value: "$1,500" },
@@ -264,7 +264,7 @@ export default function WilliamsBowlPage() {
           <AnimatedSection className="text-center mb-14">
             <p className="section-eyebrow text-beast-pink mb-3">The Winners</p>
             <h2 className="font-display text-4xl font-extrabold text-beast-black mb-4">Real Fans. Real Prizes. Announced Every Round.</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Every round, Beast designed and posted custom winner announcement graphics tagging the real fans who voted their way to victory — keeping the community engaged and the next entry feeling urgent.</p>
+            <p className="text-gray-500 max-w-xl mx-auto">Every round, Beast designed and posted custom winner announcement graphics tagging the real fans who voted their way to victory, keeping the community engaged and the next entry feeling urgent.</p>
           </AnimatedSection>
           <div className="flex flex-col items-center lg:flex-row lg:items-end justify-center gap-8 lg:gap-6">
             {[
@@ -304,7 +304,7 @@ export default function WilliamsBowlPage() {
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Every Great Campaign Series Starts With the First One.</h2>
-            <p className="text-gray-400 mb-8">Beast&apos;s CPG sweepstakes playbook is proven across multiple campaigns, multiple clients, and multiple years. Ready to run your first — or your best yet?</p>
+            <p className="text-gray-400 mb-8">Beast&apos;s CPG sweepstakes playbook is proven across multiple campaigns, multiple clients, and multiple years. Ready to run your first, or your best yet?</p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="rocket" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>

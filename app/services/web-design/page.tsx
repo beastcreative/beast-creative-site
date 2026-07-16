@@ -16,7 +16,7 @@ export default function WebDesignPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — Web Design & CRO</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: Web Design & CRO</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Websites That{" "}
               <span className="text-beast-pink">Convert, Not Just Look Good.</span>
@@ -34,7 +34,7 @@ export default function WebDesignPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Built for Business, Not Awards</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Most web agencies optimize for design awards. We optimize for conversions — calls booked, leads submitted, products purchased. Beautiful design is a tool for achieving that goal, not the goal itself.
+                Most web agencies optimize for design awards. We optimize for conversions: calls booked, leads submitted, products purchased. Beautiful design is a tool for achieving that goal, not the goal itself.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Every site we build starts with a question: &quot;What action do we want the visitor to take?&quot; Then we architect every section, headline, and CTA to move them toward it.

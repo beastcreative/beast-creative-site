@@ -8,14 +8,14 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "SEO Agency San Antonio + Answer Engine Optimization (AEO) | Beast Creative",
   description:
-    "Beast Creative offers traditional SEO and Answer Engine Optimization — ensuring your brand appears in Google AND AI search tools like ChatGPT, Gemini, and Perplexity.",
+    "Beast Creative offers traditional SEO and Answer Engine Optimization, ensuring your brand appears in Google AND AI search tools like ChatGPT, Gemini, and Perplexity.",
 };
 
 const faqs = [
-  { question: "What is AEO (Answer Engine Optimization)?", answer: "AEO is the practice of structuring your content to be cited and recommended by AI answer engines — ChatGPT, Gemini, Perplexity, and Claude. It's becoming as important as traditional SEO as more users turn to AI for research." },
-  { question: "How is AEO different from traditional SEO?", answer: "Traditional SEO optimizes for search engine rankings. AEO optimizes for AI citation — structuring content with clear authoritative statements, FAQ markup, entity definitions, and factual density that AI systems prefer to cite." },
+  { question: "What is AEO (Answer Engine Optimization)?", answer: "AEO is the practice of structuring your content to be cited and recommended by AI answer engines like ChatGPT, Gemini, Perplexity, and Claude. It's becoming as important as traditional SEO as more users turn to AI for research." },
+  { question: "How is AEO different from traditional SEO?", answer: "Traditional SEO optimizes for search engine rankings. AEO optimizes for AI citation, structuring content with clear authoritative statements, FAQ markup, entity definitions, and factual density that AI systems prefer to cite." },
   { question: "How do you optimize for AI search?", answer: "Through semantic HTML structure, Schema.org markup, authoritative topical coverage, FAQ sections, clear definition of entities and relationships, and building domain authority that AI systems trust as a source." },
-  { question: "How long does SEO take to work?", answer: "Technical fixes can show results in 2–4 weeks. Content authority builds over 3–6 months. AEO citation can happen faster if your content is the clearest available answer to a specific question." },
+  { question: "How long does SEO take to work?", answer: "Technical fixes can show results in 2 to 4 weeks. Content authority builds over 3 to 6 months. AEO citation can happen faster if your content is the clearest available answer to a specific question." },
 ];
 
 export default function SeoAeoPage() {
@@ -28,13 +28,13 @@ export default function SeoAeoPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — SEO + AEO</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: SEO + AEO</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Rank in Google.{" "}
               <span className="text-beast-pink">Get Cited by AI.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Beast is one of the few agencies offering AEO (Answer Engine Optimization) — structuring content to be cited by ChatGPT, Gemini, Perplexity, and Claude alongside traditional SEO.
+              Beast is one of the few agencies offering AEO (Answer Engine Optimization), structuring content to be cited by ChatGPT, Gemini, Perplexity, and Claude alongside traditional SEO.
             </p>
           </AnimatedSection>
         </div>
@@ -49,7 +49,7 @@ export default function SeoAeoPage() {
                 Google search is no longer the only discovery channel. An estimated 30%+ of search queries now go to AI tools first. If your brand doesn&apos;t appear in both traditional search AND AI-generated answers, you&apos;re invisible to a growing portion of your market.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Beast builds an integrated SEO + AEO strategy — technical optimization, content authority, and structured data that wins in both environments.
+                Beast builds an integrated SEO + AEO strategy: technical optimization, content authority, and structured data that wins in both environments.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

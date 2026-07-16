@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What triggers should prompt a CPG brand to consider reformulating an existing product?",
-    answer: "Sustained negative review themes around taste, texture, or efficacy, a regulatory change affecting a current ingredient, or a competitor innovation that makes your formula feel dated are the three most common valid triggers. Cost-reduction reformulations driven purely by margin pressure — without consumer validation — are the highest-risk category and most often result in sales decline.",
+    answer: "Sustained negative review themes around taste, texture, or efficacy, a regulatory change affecting a current ingredient, or a competitor innovation that makes your formula feel dated are the three most common valid triggers. Cost-reduction reformulations driven purely by margin pressure, without consumer validation, are the highest-risk category and most often result in sales decline.",
   },
   {
     question: "How do you test a reformulated CPG product before committing to a full production run?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     question: "Should a CPG brand disclose a reformulation to consumers and retail buyers?",
-    answer: "Proactively disclosing to retail buyers is always the right call — they will find out through ingredient panel changes on new packaging and feel blindsided if not told. Consumer disclosure depends on the magnitude of change: a significant recipe improvement is worth announcing as a feature, while a minor process adjustment does not require communication.",
+    answer: "Proactively disclosing to retail buyers is always the right call: they will find out through ingredient panel changes on new packaging and feel blindsided if not told. Consumer disclosure depends on the magnitude of change: a significant recipe improvement is worth announcing as a feature, while a minor process adjustment does not require communication.",
   },
   {
     question: "How long does a CPG reformulation project typically take from concept to shelf?",
-    answer: "A meaningful formula change with full consumer testing, regulatory review of any new label claims, packaging artwork updates, and co-manufacturer qualification typically takes 9–18 months. Brands that rush this process to hit a cost-reduction target frequently launch a reformulation that hurts velocity more than the cost savings benefit.",
+    answer: "A meaningful formula change with full consumer testing, regulatory review of any new label claims, packaging artwork updates, and co-manufacturer qualification typically takes 9 to 18 months. Brands that rush this process to hit a cost-reduction target frequently launch a reformulation that hurts velocity more than the cost savings benefit.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
               <span className="text-beast-pink">Improving Products to Meet Changing Needs</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Over 85% of CPG brands will reformulate at least one product in the next 18 months, driven by everything from supply chain disruptions to evolving consumer values. This isn’t just product development—it’s strategic survival. Smart reformulation can revitalize declining brands, capture new market segments, and future-proof your product portfolio against shifting consumer demands.
+              Over 85% of CPG brands will reformulate at least one product in the next 18 months, driven by everything from supply chain disruptions to evolving consumer values. This isn’t just product development. It’s strategic survival. Smart reformulation can revitalize declining brands, capture new market segments, and future-proof your product portfolio against shifting consumer demands.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumer packaged goods reformulation has evolved far beyond simple recipe tweaks or cost-cutting measures. Today’s reformulation efforts represent a strategic response to rapidly changing market dynamics, consumer preferences, and regulatory requirements.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The modern CPG landscape demands agility. Consumer preferences shift faster than ever, influenced by social media trends, health discoveries, and cultural movements. What worked five years ago—or even last year—might not resonate with today’s buyers.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The modern CPG landscape demands agility. Consumer preferences shift faster than ever, influenced by social media trends, health discoveries, and cultural movements. What worked five years ago, or even last year, might not resonate with today’s buyers.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Key Drivers Behind Modern Reformulation</h3>
 
@@ -133,7 +133,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Ingredient Innovation and Sourcing</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Modern reformulation often centers on ingredient innovation. Consumers want products that deliver superior performance while aligning with their values—whether that’s organic sourcing, minimal processing, or environmental sustainability.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Modern reformulation often centers on ingredient innovation. Consumers want products that deliver superior performance while aligning with their values, whether that’s organic sourcing, minimal processing, or environmental sustainability.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consider these ingredient strategies:</p>
 
@@ -164,7 +164,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Market Research and Consumer Testing</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective reformulation requires robust testing throughout the development process. This isn’t just about taste tests—it’s about understanding how reformulated products perform across all consumer touchpoints.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective reformulation requires robust testing throughout the development process. This isn’t just about taste tests. It’s about understanding how reformulated products perform across all consumer touchpoints.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Multi-Phase Testing Strategy</h3>
 
@@ -237,7 +237,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Building strong supplier relationships becomes critical when reformulating products. New ingredients might come from unfamiliar suppliers, requiring careful vetting and relationship building.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: Supplier relationships aren’t just about cost and quality—they’re about innovation partnership. The best suppliers can suggest ingredient alternatives, provide technical support, and help solve formulation challenges.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: Supplier relationships aren’t just about cost and quality. They’re about innovation partnership. The best suppliers can suggest ingredient alternatives, provide technical support, and help solve formulation challenges.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Consider supplier diversification to reduce risk. Having multiple sources for key ingredients protects against supply disruptions that could derail reformulation efforts.</p>
 
@@ -378,7 +378,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Your reformulation strategy should be data-driven but consumer-focused, innovative but practical, ambitious but achievable. Most importantly, it should be authentic to your brand and meaningful to your consumers.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG landscape will continue evolving, driven by changing demographics, emerging technologies, and shifting cultural values. Brands that embrace reformulation as a strategic tool—rather than a necessary evil—will be best positioned to meet these changing needs and capture new growth opportunities.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The CPG landscape will continue evolving, driven by changing demographics, emerging technologies, and shifting cultural values. Brands that embrace reformulation as a strategic tool, rather than a necessary evil, will be best positioned to meet these changing needs and capture new growth opportunities.</p>
 
             </div>
           </AnimatedSection>

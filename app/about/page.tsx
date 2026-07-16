@@ -21,7 +21,7 @@ const values = [
   },
   {
     name: "Data Driven Strategy",
-    desc: "Every creative decision is informed by data. Every budget allocation is justified by results. Gut feelings are tested, not trusted. The campaigns that have generated 36,000+ entries at 7x industry CTR aren't lucky — they're built on this principle.",
+    desc: "Every creative decision is informed by data. Every budget allocation is justified by results. Gut feelings are tested, not trusted. The campaigns that have generated 36,000+ entries at 7x industry CTR aren't lucky. They're built on this principle.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
               Built on Proof, Not Promises.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Beast Creative Agency was founded on a simple belief: marketing should be measurable, transparent, and powerful enough to actually change the trajectory of a business. We built the agency we wished existed — where creative energy and data-driven strategy aren&apos;t in tension, they&apos;re the same thing.
+              Beast Creative Agency was founded on a simple belief: marketing should be measurable, transparent, and powerful enough to actually change the trajectory of a business. We built the agency we wished existed: one where creative energy and data-driven strategy aren&apos;t in tension, they&apos;re the same thing.
             </p>
           </AnimatedSection>
         </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 Founded in San Antonio, TX and serving brands nationwide. Our specialty is CPG marketing, but our expertise spans everything a modern brand needs to compete and win.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We believe the best agencies are the ones that treat every campaign like it&apos;s their own money on the line — because the transparency we demand of ourselves is the same transparency we deliver to clients. You&apos;ll always know exactly where your budget went and what it returned.
+                We believe the best agencies are the ones that treat every campaign like it&apos;s their own money on the line, because the transparency we demand of ourselves is the same transparency we deliver to clients. You&apos;ll always know exactly where your budget went and what it returned.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 From a $1,500 Williams Bowl campaign that proved a model, to a $6,000 Sun-Bird sweepstakes that generated 36,581 consumer emails for a national Walmart pitch. Everything we do is built on proof, not promises.
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 Segundo is an internally-deployed AI agent that handles content updates, campaign analysis, meeting intelligence, and workflow automation. It&apos;s what makes our team faster, our content cheaper, and our campaigns smarter than agencies twice our size.
               </p>
               <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-beast-pink/10 text-beast-pink border border-beast-pink/25">
-                In active development — available to Scale-tier clients
+                In active development and available to Scale-tier clients
               </span>
             </AnimatedSection>
           </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
-              See where you stand in AI search. No pitch, no pressure — just an honest conversation about what Beast can do for your brand.
+              See where you stand in AI search. No pitch, no pressure. Just an honest conversation about what Beast can do for your brand.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

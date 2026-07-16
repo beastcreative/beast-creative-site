@@ -21,20 +21,20 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Technical SEO Audit", desc: "We find every indexing issue, Core Web Vitals failure, and crawl error killing your rankings — then fix them." },
+  { title: "Technical SEO Audit", desc: "We find every indexing issue, Core Web Vitals failure, and crawl error killing your rankings, then fix them." },
   { title: "Keyword & Topic Strategy", desc: "We identify the exact terms your customers search in San Antonio and build a content strategy around them." },
-  { title: "On-Page Optimization", desc: "Title tags, meta descriptions, header structure, schema markup, internal linking — every page optimized." },
+  { title: "On-Page Optimization", desc: "Title tags, meta descriptions, header structure, schema markup, internal linking: every page optimized." },
   { title: "Local SEO", desc: "Google Business Profile, local citations, and geo-targeted content to dominate San Antonio search results." },
-  { title: "Answer Engine Optimization (AEO)", desc: "Structure your content to be cited by ChatGPT, Perplexity, and Google AI Overviews — the new search frontier." },
+  { title: "Answer Engine Optimization (AEO)", desc: "Structure your content to be cited by ChatGPT, Perplexity, and Google AI Overviews: the new search frontier." },
   { title: "Monthly Reporting", desc: "Real rankings, real traffic, real revenue attribution. No vanity metrics, no pie charts that don't explain anything." },
 ];
 
 const faqItems = [
-  { question: "How long does SEO take to work in San Antonio?", answer: "Local SEO results in San Antonio typically start showing within 60–90 days for low-competition terms and 4–6 months for more competitive keywords. We prioritize quick wins first — fixing technical issues and optimizing existing pages — before building new content." },
+  { question: "How long does SEO take to work in San Antonio?", answer: "Local SEO results in San Antonio typically start showing within 60 to 90 days for low-competition terms and 4 to 6 months for more competitive keywords. We prioritize quick wins first, fixing technical issues and optimizing existing pages, before building new content." },
   { question: "What is AEO and why does it matter?", answer: "AEO (Answer Engine Optimization) is structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews reference your brand in their answers. An estimated 30%+ of searches now go to AI tools first. If you're not showing up there, you're invisible to a growing segment of your market." },
-  { question: "Do you only do SEO for San Antonio businesses?", answer: "No — we work with businesses across the US. But San Antonio local SEO is a specific specialty. We understand the market, the competition, and the search behavior in the SA metro." },
-  { question: "How much does SEO cost?", answer: "Our SEO retainers start at $1,500/month for local San Antonio businesses and scale from there depending on competition, content needs, and scope. We don't lock you in long-term — we earn your business month to month." },
-  { question: "Can you help with both Google and AI search?", answer: "Yes — that's what makes Beast different from most San Antonio SEO agencies. We offer both traditional SEO and AEO in one integrated strategy. You don't need two agencies or two strategies." },
+  { question: "Do you only do SEO for San Antonio businesses?", answer: "No, we work with businesses across the US. But San Antonio local SEO is a specific specialty. We understand the market, the competition, and the search behavior in the SA metro." },
+  { question: "How much does SEO cost?", answer: "Our SEO retainers start at $1,500/month for local San Antonio businesses and scale from there depending on competition, content needs, and scope. We don't lock you in long-term. We earn your business month to month." },
+  { question: "Can you help with both Google and AI search?", answer: "Yes, that's what makes Beast different from most San Antonio SEO agencies. We offer both traditional SEO and AEO in one integrated strategy. You don't need two agencies or two strategies." },
 ];
 
 const relatedServices = [
@@ -72,7 +72,7 @@ export default function SEOSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative is San Antonio&apos;s only agency offering both traditional SEO and Answer Engine Optimization (AEO) — so you show up in Google search results and in AI tools like ChatGPT, Perplexity, and Gemini.
+              Beast Creative is San Antonio&apos;s only agency offering both traditional SEO and Answer Engine Optimization (AEO), so you show up in Google search results and in AI tools like ChatGPT, Perplexity, and Gemini.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -133,8 +133,8 @@ export default function SEOSanAntonioPage() {
                 We built a full SEO foundation, created organic social content around wellness topics, and structured everything for AI search. The result: 566% MRR growth, 9.5% email click rate (11.6x industry average), and zero dependency on paid advertising.
               </p>
               <blockquote className="rounded-xl border border-beast-pink/20 bg-beast-pink/5 p-6">
-                <p className="text-gray-300 italic leading-relaxed">&ldquo;Beast improved our monthly recurring revenue — it jumped by 566%, thanks to their SEO and social media strategy. It&apos;s the most impactful marketing investment we&apos;ve made.&rdquo;</p>
-                <cite className="text-beast-pink text-sm font-semibold mt-3 block not-italic">— Sweet Sensi</cite>
+                <p className="text-gray-300 italic leading-relaxed">&ldquo;Beast improved our monthly recurring revenue: it jumped by 566%, thanks to their SEO and social media strategy. It&apos;s the most impactful marketing investment we&apos;ve made.&rdquo;</p>
+                <cite className="text-beast-pink text-sm font-semibold mt-3 block not-italic">Sweet Sensi</cite>
               </blockquote>
             </div>
           </AnimatedSection>
@@ -178,7 +178,7 @@ export default function SEOSanAntonioPage() {
             <p className="section-eyebrow text-beast-pink mb-4">San Antonio SEO Agency</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Ready to Rank in Google and AI Search?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free SEO audit. We&apos;ll show you exactly where you&apos;re leaving organic traffic on the table &mdash; no pitch, no commitment.
+              Book a free SEO audit. We&apos;ll show you exactly where you&apos;re leaving organic traffic on the table. No pitch, no commitment.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">Get My Free SEO Audit</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

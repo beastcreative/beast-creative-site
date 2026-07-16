@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How can a CPG brand use its shipping experience as a marketing moment?",
-    answer: "The unboxing experience — custom tissue, a handwritten note, a sample of a new SKU — is your highest-engagement brand touchpoint because the customer is already excited and paying attention. Brands that invest $0.50–$1.50 per order in packaging inserts consistently see higher review rates and repeat purchase than those shipping plain brown boxes.",
+    answer: "The unboxing experience (custom tissue, a handwritten note, a sample of a new SKU) is your highest-engagement brand touchpoint because the customer is already excited and paying attention. Brands that invest $0.50 to $1.50 per order in packaging inserts consistently see higher review rates and repeat purchase than those shipping plain brown boxes.",
   },
   {
     question: "What shipping speed do DTC CPG customers expect in 2025?",
-    answer: "Two to three day delivery is the baseline expectation set by Amazon Prime — DTC CPG brands that cannot hit this threshold for most of the US should be transparent about lead times at checkout to avoid cart abandonment and negative reviews. Regional 3PLs placed strategically can close the speed gap without Amazon fulfillment fees.",
+    answer: "Two to three day delivery is the baseline expectation set by Amazon Prime. DTC CPG brands that cannot hit this threshold for most of the US should be transparent about lead times at checkout to avoid cart abandonment and negative reviews. Regional 3PLs placed strategically can close the speed gap without Amazon fulfillment fees.",
   },
   {
     question: "How do you turn fulfillment reliability into a marketing message?",
-    answer: "Highlight your shipping guarantees, average delivery time, and order accuracy rate on product pages and in email sequences — these are purchase-decision factors that most CPG brands leave unaddressed. A \"ships in 24 hours\" badge or \"99.8% order accuracy\" stat is more persuasive than most promotional copy.",
+    answer: "Highlight your shipping guarantees, average delivery time, and order accuracy rate on product pages and in email sequences, since these are purchase-decision factors that most CPG brands leave unaddressed. A \"ships in 24 hours\" badge or \"99.8% order accuracy\" stat is more persuasive than most promotional copy.",
   },
   {
     question: "At what DTC order volume should a CPG brand move from self-fulfillment to a 3PL?",
-    answer: "Most brands find that 200–500 orders per month is where self-fulfillment labor costs exceed 3PL fees and where errors begin to hurt review scores. The right trigger is not just volume — it is when fulfillment is consuming founder or key employee time that should be spent on growth.",
+    answer: "Most brands find that 200 to 500 orders per month is where self-fulfillment labor costs exceed 3PL fees and where errors begin to hurt review scores. The right trigger is not just volume: it is when fulfillment is consuming founder or key employee time that should be spent on growth.",
   },
 ];
 
@@ -82,9 +82,9 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Hidden Marketing Goldmine in Your Supply Chain</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your shipping and fulfillment process touches every single customer who buys your product. Think about it – while your ads might reach thousands, your fulfillment experience reaches everyone who actually converts. Yet most CPG brands treat this touchpoint like an afterthought instead of the marketing channel it really is.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your shipping and fulfillment process touches every single customer who buys your product. Think about it: while your ads might reach thousands, your fulfillment experience reaches everyone who actually converts. Yet most CPG brands treat this touchpoint like an afterthought instead of the marketing channel it really is.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what’s changed: consumers now expect Amazon-level service from every brand they buy from. A delayed shipment isn’t just a logistics problem – it’s a brand reputation issue that shows up in reviews, social media complaints, and lost lifetime value.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what’s changed: consumers now expect Amazon-level service from every brand they buy from. A delayed shipment isn’t just a logistics problem. It’s a brand reputation issue that shows up in reviews, social media complaints, and lost lifetime value.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Smart CPG brands are flipping this challenge into an opportunity. They’re turning their logistics operations into marketing machines that create positive experiences, generate user-generated content, and build the kind of customer relationships that drive long-term growth.</p>
 
@@ -278,7 +278,7 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Measuring Success: Fulfillment Marketing Metrics</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Traditional fulfillment metrics focus on operational efficiency – cost per shipment, delivery times, and accuracy rates. Marketing-focused fulfillment requires additional metrics that connect logistics performance to business outcomes.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Traditional fulfillment metrics focus on operational efficiency: cost per shipment, delivery times, and accuracy rates. Marketing-focused fulfillment requires additional metrics that connect logistics performance to business outcomes.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Customer Experience Metrics</h3>
 
@@ -384,7 +384,7 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The lines between logistics and marketing will continue to blur as customer expectations rise and technology improves. CPG brands that recognize this early will build sustainable competitive advantages that are difficult for competitors to copy.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Emerging trends to watch include predictive fulfillment (shipping before customers order), hyper-local delivery networks, and AI-powered personalization of the entire fulfillment experience. The brands winning in these areas aren’t just optimizing for cost and speed – they’re designing fulfillment experiences that customers love to talk about.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Emerging trends to watch include predictive fulfillment (shipping before customers order), hyper-local delivery networks, and AI-powered personalization of the entire fulfillment experience. The brands winning in these areas aren’t just optimizing for cost and speed. They’re designing fulfillment experiences that customers love to talk about.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Your fulfillment operations touch every customer who converts. Make sure those touchpoints are working as hard as your advertising to build your brand and drive long-term growth. The investment in turning logistics into a competitive advantage pays dividends in customer loyalty, social proof, and sustainable business growth that compounds over time.</p>
 
@@ -416,7 +416,7 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -440,7 +440,7 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

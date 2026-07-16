@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the biggest conversion killer on CPG product pages?",
-    answer: "Insufficient social proof — shoppers need to see reviews, ratings, and real-use photography before they will buy a consumable product they cannot physically inspect. A product page with fewer than 25 reviews and no lifestyle imagery will underperform regardless of how good the product copy is.",
+    answer: "Insufficient social proof: shoppers need to see reviews, ratings, and real-use photography before they will buy a consumable product they cannot physically inspect. A product page with fewer than 25 reviews and no lifestyle imagery will underperform regardless of how good the product copy is.",
   },
   {
     question: "How should CPG brands structure their product page to maximize add-to-cart rates?",
-    answer: "Lead with the hero image (product in use, not just on white background), follow with the key benefit statement, then size/flavor selector, then the add-to-cart button — all above the fold on mobile. Push ingredients, nutrition facts, and long-form copy below the fold where interested buyers will find them.",
+    answer: "Lead with the hero image (product in use, not just on white background), follow with the key benefit statement, then size/flavor selector, then the add-to-cart button, all above the fold on mobile. Push ingredients, nutrition facts, and long-form copy below the fold where interested buyers will find them.",
   },
   {
     question: "What checkout optimizations have the biggest impact on CPG DTC conversion?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How do you use A/B testing effectively for CPG product pages without huge traffic?",
-    answer: "With low traffic volumes, focus tests on the highest-impact single element — usually the hero image or primary benefit headline — and run tests for at least four weeks to reach statistical significance. Do not test multiple elements simultaneously; you need clean data to know what actually moved the needle.",
+    answer: "With low traffic volumes, focus tests on the highest-impact single element (usually the hero image or primary benefit headline) and run tests for at least four weeks to reach statistical significance. Do not test multiple elements simultaneously; you need clean data to know what actually moved the needle.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
               <span className="text-beast-pink">Turning Browsers Into Buyers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              A staggering 97% of CPG ecommerce visitors leave without making a purchase, yet the most successful brands consistently convert 3-5x more browsers than their competitors. The difference isn’t luck or larger budgets—it’s strategic conversion optimization that transforms casual browsing into profitable buying decisions.
+              A staggering 97% of CPG ecommerce visitors leave without making a purchase, yet the most successful brands consistently convert 3-5x more browsers than their competitors. The difference isn’t luck or larger budgets. It’s strategic conversion optimization that transforms casual browsing into profitable buying decisions.
             </p>
           </AnimatedSection>
         </div>
@@ -127,7 +127,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Compelling Product Descriptions</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just list features—explain benefits and solve problems. Effective CPG product descriptions:</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just list features. Explain benefits and solve problems. Effective CPG product descriptions:</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Lead with the primary benefit customers care about</li>
@@ -391,7 +391,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG ecommerce conversion optimization combines art and science. While data guides decisions, understanding customer psychology and behavior patterns drives breakthrough results. The most successful brands focus on removing friction, building trust, and creating seamless shopping experiences that make buying feel natural and rewarding.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Start with your biggest conversion barriers and systematically address each one. Test everything, measure results, and refine your approach based on actual customer behavior rather than assumptions. Remember that small improvements compound over time—a 0.5% conversion rate increase can translate to significant revenue growth at scale.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Start with your biggest conversion barriers and systematically address each one. Test everything, measure results, and refine your approach based on actual customer behavior rather than assumptions. Remember that small improvements compound over time: a 0.5% conversion rate increase can translate to significant revenue growth at scale.</p>
 
             </div>
           </AnimatedSection>
@@ -421,7 +421,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -445,7 +445,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

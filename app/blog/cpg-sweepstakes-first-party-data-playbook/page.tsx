@@ -18,11 +18,11 @@ const faqs = [
   },
   {
     question: "How much does a CPG sweepstakes campaign cost?",
-    answer: "Campaign production at Beast typically starts at $2,500–$5,000. Ad spend is client-direct to platforms — we recommend $3,000–$10,000 for meaningful data volume. Sun-Bird's 36,581-entry campaign ran on $6,000 total including production.",
+    answer: "Campaign production at Beast typically starts at $2,500 to $5,000. Ad spend is client-direct to platforms, and we recommend $3,000 to $10,000 for meaningful data volume. Sun-Bird's 36,581-entry campaign ran on $6,000 total including production.",
   },
   {
     question: "How do retail buyers use sweepstakes data?",
-    answer: "Retail buyers — at Walmart, Target, Kroger, and other national chains — use sweepstakes data as proof of consumer demand. A brand showing up with 36,000 verified consumer email addresses in key DMAs is showing a buyer that real people already want the product on shelves.",
+    answer: "Retail buyers at Walmart, Target, Kroger, and other national chains use sweepstakes data as proof of consumer demand. A brand showing up with 36,000 verified consumer email addresses in key DMAs is showing a buyer that real people already want the product on shelves.",
   },
   {
     question: "What makes a sweepstakes entry rate high?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "Can sweepstakes campaigns work on a small budget?",
-    answer: "Yes. Beast's Williams Bowl NFL sweepstakes generated 6,020 entries on $1,500 in ad spend — at $0.16 CPC against a $0.28 industry average. The key is precise audience targeting and a compelling creative hook, not budget size.",
+    answer: "Yes. Beast's Williams Bowl NFL sweepstakes generated 6,020 entries on $1,500 in ad spend, at $0.16 CPC against a $0.28 industry average. The key is precise audience targeting and a compelling creative hook, not budget size.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function SweepstakesPlaybookPost() {
               <span className="text-beast-pink">36,581 Entries on $6,000</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              We&amp;apos;ve run sweepstakes campaigns that generated 36,581 entries on $6,000. Here&amp;apos;s the exact framework — from mechanic design to retail pitch.
+              We&apos;ve run sweepstakes campaigns that generated 36,581 entries on $6,000. Here&apos;s the exact framework, from mechanic design to retail pitch.
             </p>
           </AnimatedSection>
         </div>
@@ -86,10 +86,10 @@ export default function SweepstakesPlaybookPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Why CPG Brands Run Sweepstakes</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                The retail pitch problem is a real one: a buyer at Walmart or Target wants proof that consumers actually want your product before they give you shelf space. Most emerging CPG brands can&apos;t provide that proof — they have social followers, maybe some Amazon reviews, but nothing that translates to retail demand signals.
+                The retail pitch problem is a real one: a buyer at Walmart or Target wants proof that consumers actually want your product before they give you shelf space. Most emerging CPG brands can&apos;t provide that proof. They have social followers, maybe some Amazon reviews, but nothing that translates to retail demand signals.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                A well-executed sweepstakes campaign solves this directly. You walk into the buyer meeting with 36,000 verified consumer email addresses, broken down by DMA, with open rates and engagement data attached. That&apos;s not a pitch — that&apos;s proof.
+                A well-executed sweepstakes campaign solves this directly. You walk into the buyer meeting with 36,000 verified consumer email addresses, broken down by DMA, with open rates and engagement data attached. That&apos;s not a pitch. That&apos;s proof.
               </p>
 
               {/* Stats callout */}
@@ -111,20 +111,20 @@ export default function SweepstakesPlaybookPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">1. Prize Selection: Relevant, Not Just Expensive</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                The most common sweepstakes mistake is picking a generic prize — cash, a TV, an Amazon gift card. These attract entrants who have zero interest in your brand, polluting your consumer database with noise.
+                The most common sweepstakes mistake is picking a generic prize like cash, a TV, or an Amazon gift card. These attract entrants who have zero interest in your brand, polluting your consumer database with noise.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Beast&apos;s Sun-Bird &quot;Bird Herd&quot; campaign prize was designed around Sun-Bird&apos;s Asian-inspired seasoning products: a fully stocked kitchen bundle. Every entrant was someone who cared about cooking Asian food at home. Every email address went into a database of verified, interested consumers — exactly what the Walmart pitch required.
+                Beast&apos;s Sun-Bird &quot;Bird Herd&quot; campaign prize was designed around Sun-Bird&apos;s Asian-inspired seasoning products: a fully stocked kitchen bundle. Every entrant was someone who cared about cooking Asian food at home. Every email address went into a database of verified, interested consumers, exactly what the Walmart pitch required.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">2. Entry Mechanic: Friction Is Your Enemy</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                The entry form should capture name, email, and zip code — and nothing else. Each additional field reduces your entry rate by 10–20%. Zip code is worth keeping because it allows you to segment your consumer database by DMA, which is directly relevant to retail pitch conversations about regional distribution.
+                The entry form should capture name, email, and zip code, and nothing else. Each additional field reduces your entry rate by 10 to 20%. Zip code is worth keeping because it allows you to segment your consumer database by DMA, which is directly relevant to retail pitch conversations about regional distribution.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">3. Paid Social Strategy: Precision Over Volume</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Beast runs sweepstakes campaigns primarily on Meta (Facebook/Instagram) with tight audience targeting — interest-based audiences layered with behavioral signals relevant to the product category. The goal is not impressions. The goal is qualified entry cost.
+                Beast runs sweepstakes campaigns primarily on Meta (Facebook/Instagram) with tight audience targeting: interest-based audiences layered with behavioral signals relevant to the product category. The goal is not impressions. The goal is qualified entry cost.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
                 On Sun-Bird&apos;s campaign, we achieved a $0.12 CPC against a $0.28 industry average by optimizing creative for scroll-stop performance and targeting audiences with demonstrated cooking interest. On a $3,000 ad spend, that difference generates roughly 15,000 additional clicks.
@@ -182,7 +182,7 @@ export default function SweepstakesPlaybookPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">See the Full Case Study</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  The Sun-Bird Bird Herd campaign was Beast&apos;s flagship CPG sweepstakes — built to support Sun-Bird&apos;s national Walmart rollout announcement. 36,581 consumer emails on $6,000. 7.03% CTR. $0.12 CPC.
+                  The Sun-Bird Bird Herd campaign was Beast&apos;s flagship CPG sweepstakes, built to support Sun-Bird&apos;s national Walmart rollout announcement. 36,581 consumer emails on $6,000. 7.03% CTR. $0.12 CPC.
                 </p>
                 <IconButton href="/work/sun-bird" icon="eye">
                   Read the Sun-Bird Case Study </IconButton>
@@ -216,7 +216,7 @@ export default function SweepstakesPlaybookPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -228,7 +228,7 @@ export default function SweepstakesPlaybookPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -258,7 +258,7 @@ export default function SweepstakesPlaybookPost() {
               Ready to Build Your Consumer Database?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast designs sweepstakes campaigns that generate first-party consumer data at scale — built to support your retail pitch.
+              Beast designs sweepstakes campaigns that generate first-party consumer data at scale, built to support your retail pitch.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

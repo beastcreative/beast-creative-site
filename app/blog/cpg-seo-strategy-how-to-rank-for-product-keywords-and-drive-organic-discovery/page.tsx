@@ -8,13 +8,13 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "CPG SEO Strategy: How to Rank for Product Keywords and Drive Organic Discovery",
   description:
-    "87% of product searches start online. Learn the CPG SEO strategy that drives organic discovery — from problem-solution keywords and product page optimization to local SEO and content authority.",
+    "87% of product searches start online. Learn the CPG SEO strategy that drives organic discovery: from problem-solution keywords and product page optimization to local SEO and content authority.",
 };
 
 const faqs = [
   {
     question: "What makes SEO for CPG brands different from other industries?",
-    answer: "CPG brands compete against retail giants (Amazon, Walmart, Target) for basic product terms — often a losing battle. Effective CPG SEO shifts focus toward problem-solution keywords, ingredient and benefit queries, and educational content where brand sites can establish authority that retail platforms can't match. Local SEO through store locator optimization is also uniquely powerful for distributed CPG brands.",
+    answer: "CPG brands compete against retail giants (Amazon, Walmart, Target) for basic product terms, often a losing battle. Effective CPG SEO shifts focus toward problem-solution keywords, ingredient and benefit queries, and educational content where brand sites can establish authority that retail platforms can't match. Local SEO through store locator optimization is also uniquely powerful for distributed CPG brands.",
   },
   {
     question: "What types of keywords should CPG brands target?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Can recipe and usage content really drive CPG sales?",
-    answer: "Yes — it's one of the most effective CPG content strategies. Recipe content targets informational queries that naturally showcase your product, generates backlinks from food blogs and media, and attracts social shares. A hot sauce brand targeting 'easy spicy dinner recipes' reaches highly relevant consumers who need exactly that product, without competing directly with retail giant product listings.",
+    answer: "Yes, it's one of the most effective CPG content strategies. Recipe content targets informational queries that naturally showcase your product, generates backlinks from food blogs and media, and attracts social shares. A hot sauce brand targeting 'easy spicy dinner recipes' reaches highly relevant consumers who need exactly that product, without competing directly with retail giant product listings.",
   },
   {
     question: "How do CPG brands measure SEO success given offline purchase attribution challenges?",
@@ -48,7 +48,7 @@ export default function CpgSeoPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "CPG SEO Strategy: How to Rank for Product Keywords and Drive Organic Discovery",
-            description: "87% of product searches start online. Learn the CPG SEO strategy that drives organic discovery — from problem-solution keywords and product page optimization to local SEO and content authority.",
+            description: "87% of product searches start online. Learn the CPG SEO strategy that drives organic discovery: from problem-solution keywords and product page optimization to local SEO and content authority.",
             datePublished: "2025-05-13",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -72,7 +72,7 @@ export default function CpgSeoPost() {
               <span className="text-beast-pink">How to Rank for Product Keywords and Drive Organic Discovery</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              87% of product searches start online, yet most CPG companies still treat SEO as an afterthought. Here&amp;apos;s how to build organic discovery that compounds over time.
+              87% of product searches start online, yet most CPG companies still treat SEO as an afterthought. Here&apos;s how to build organic discovery that compounds over time.
             </p>
           </AnimatedSection>
         </div>
@@ -96,10 +96,10 @@ export default function CpgSeoPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The CPG SEO Landscape</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Consumer packaged goods brands compete against retail giants — Amazon, Walmart, Target — for basic product search terms. This is often a losing battle. Effective CPG SEO requires a different approach: dominate the search queries that retail platforms can&apos;t or won&apos;t answer.
+                Consumer packaged goods brands compete against retail giants like Amazon, Walmart, and Target for basic product search terms. This is often a losing battle. Effective CPG SEO requires a different approach: dominate the search queries that retail platforms can&apos;t or won&apos;t answer.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Customers research through various channels before purchasing — discovering brands through search queries, comparing on product pages, reading reviews, then completing purchases online or in stores. Your content must influence those discovery moments, even when the sale happens off your site.
+                Customers research through various channels before purchasing: discovering brands through search queries, comparing on product pages, reading reviews, then completing purchases online or in stores. Your content must influence those discovery moments, even when the sale happens off your site.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Keyword Research for CPG Brands</h2>
@@ -189,10 +189,10 @@ export default function CpgSeoPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Common CPG SEO Mistakes to Avoid</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Competing against Amazon and Walmart for basic product terms — redirect budget to educational content instead",
-                  "Treating all products equally — prioritize high-margin items and bestsellers for SEO investment",
-                  "Ignoring seasonal opportunities — plan content 8–12 weeks ahead of peak seasons",
-                  "Underestimating voice search — target conversational question-based queries ('What&apos;s the healthiest energy drink?')",
+                  "Competing against Amazon and Walmart for basic product terms: redirect budget to educational content instead",
+                  "Treating all products equally: prioritize high-margin items and bestsellers for SEO investment",
+                  "Ignoring seasonal opportunities: plan content 8 to 12 weeks ahead of peak seasons",
+                  "Underestimating voice search: target conversational question-based queries ('What&apos;s the healthiest energy drink?')",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
                     <span className="text-beast-pink font-bold shrink-0">→</span> {item}
@@ -203,7 +203,7 @@ export default function CpgSeoPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  Our SEO and AEO practice helps CPG brands build the kind of organic presence that compounds over time — ranking on Google and getting cited in AI tools like ChatGPT, Perplexity, and Gemini.
+                  Our SEO and AEO practice helps CPG brands build the kind of organic presence that compounds over time: ranking on Google and getting cited in AI tools like ChatGPT, Perplexity, and Gemini.
                 </p>
                 <IconButton href="/services/seo-aeo" icon="arrow">See Our SEO + AEO Service</IconButton>
               </div>
@@ -260,7 +260,7 @@ export default function CpgSeoPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -278,7 +278,7 @@ export default function CpgSeoPost() {
               Ready to Build Organic Discovery for Your CPG Brand?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast builds SEO and AEO strategies that position CPG brands as the authoritative answer — in Google and in AI search tools.
+              Beast builds SEO and AEO strategies that position CPG brands as the authoritative answer, both in Google and in AI search tools.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

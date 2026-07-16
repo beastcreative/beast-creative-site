@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "What are the most realistic funding sources for a CPG brand doing $500K–$5M in revenue?",
-    answer: "At this stage, the most accessible capital comes from SBA loans, specialty CPG lenders (AccelFoods, Assembled Brands), and revenue-based financing — not venture capital, which typically requires faster growth trajectories than CPG allows. Strategic angel investors with CPG operator experience are also valuable at this stage because they bring distribution relationships alongside capital.",
+    question: "What are the most realistic funding sources for a CPG brand doing $500K to $5M in revenue?",
+    answer: "At this stage, the most accessible capital comes from SBA loans, specialty CPG lenders (AccelFoods, Assembled Brands), and revenue-based financing rather than venture capital, which typically requires faster growth trajectories than CPG allows. Strategic angel investors with CPG operator experience are also valuable at this stage because they bring distribution relationships alongside capital.",
   },
   {
     question: "Is venture capital a good fit for CPG brands?",
-    answer: "VC is a poor fit for most CPG brands because the category's growth curves and exit multiples rarely deliver the 10x returns VCs require — even a $50M exit is a failure for a fund that invested at a $10M valuation. The exception is CPG brands with a genuinely disruptive platform (novel ingredients, direct-to-professional distribution, strong IP) that can support a software-like growth narrative.",
+    answer: "VC is a poor fit for most CPG brands because the category's growth curves and exit multiples rarely deliver the 10x returns VCs require: even a $50M exit is a failure for a fund that invested at a $10M valuation. The exception is CPG brands with a genuinely disruptive platform (novel ingredients, direct-to-professional distribution, strong IP) that can support a software-like growth narrative.",
   },
   {
     question: "What do CPG lenders look for that traditional bank lenders miss?",
-    answer: "Specialty CPG lenders underwrite against purchase orders, retailer relationships, and velocity data — assets that traditional bank credit officers do not know how to value. They also understand that CPG brands have naturally lumpy cash flow due to retail payment terms and do not penalize for it the way a conventional line of credit would.",
+    answer: "Specialty CPG lenders underwrite against purchase orders, retailer relationships, and velocity data: assets that traditional bank credit officers do not know how to value. They also understand that CPG brands have naturally lumpy cash flow due to retail payment terms and do not penalize for it the way a conventional line of credit would.",
   },
   {
     question: "How much equity should a CPG founder expect to give up in a Series A round?",
-    answer: "A CPG-focused institutional round (typically $3M–$10M) usually results in 20–30% equity dilution for the founder, depending on valuation and competitive tension in the deal. Founders who approach investors with strong velocity data, multiple term sheets, and a clear use of proceeds retain better terms than those who approach from a position of need.",
+    answer: "A CPG-focused institutional round (typically $3M to $10M) usually results in 20% to 30% equity dilution for the founder, depending on valuation and competitive tension in the deal. Founders who approach investors with strong velocity data, multiple term sheets, and a clear use of proceeds retain better terms than those who approach from a position of need.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing: most CPG entrepreneurs approach funding backwards. They chase the biggest check instead of matching funding sources to their specific business stage and needs. This misalignment kills more promising brands than poor product-market fit.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies build what we call a “funding ladder” – strategically moving from one funding source to the next as they hit specific milestones and growth requirements.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies build what we call a “funding ladder,” strategically moving from one funding source to the next as they hit specific milestones and growth requirements.</p>
 
             </div>
           </AnimatedSection>
@@ -102,7 +102,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Self-funding makes sense when you’re testing product concepts, building initial prototypes, or serving local markets. Many successful CPG brands started in founders’ kitchens or garages, perfecting recipes and building loyal customer bases through farmers markets and direct sales.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is bootstrapping forces discipline. You can’t afford vanity metrics or elaborate marketing campaigns – every dollar must generate measurable returns. This constraint often leads to more creative, cost-effective solutions that become competitive advantages later.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is bootstrapping forces discipline. You can’t afford vanity metrics or elaborate marketing campaigns: every dollar must generate measurable returns. This constraint often leads to more creative, cost-effective solutions that become competitive advantages later.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Bootstrapping Strategies That Work</h3>
 
@@ -129,7 +129,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
                 </li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: successful bootstrapping isn’t about being cheap – it’s about being strategic with limited resources. Focus on high-impact activities that directly drive sales and customer acquisition.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: successful bootstrapping isn’t about being cheap. It’s about being strategic with limited resources. Focus on high-impact activities that directly drive sales and customer acquisition.</p>
 
             </div>
           </AnimatedSection>
@@ -145,7 +145,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Keep these arrangements professional despite personal relationships. Use simple agreements like convertible notes or SAFE (Simple Agreement for Future Equity) instruments that convert to equity in later funding rounds.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what works: be transparent about risks, provide regular updates, and set clear expectations about timeline to liquidity. Treat family investors like professional investors – they deserve the same level of communication and respect.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what works: be transparent about risks, provide regular updates, and set clear expectations about timeline to liquidity. Treat family investors like professional investors: they deserve the same level of communication and respect.</p>
 
             </div>
           </AnimatedSection>
@@ -208,7 +208,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">VC Expectations and Requirements</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Venture capitalists typically expect 10x returns on their investments, which means your company needs the potential to reach $100 million+ in revenue. They also expect rapid growth – often 100%+ year-over-year revenue increases.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Venture capitalists typically expect 10x returns on their investments, which means your company needs the potential to reach $100 million+ in revenue. They also expect rapid growth, often 100%+ year-over-year revenue increases.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the reality: VC funding accelerates everything. You’ll need to scale operations, hire quickly, and expand distribution aggressively. Make sure your systems, team, and market opportunity can handle this acceleration before taking VC money.</p>
 
@@ -342,7 +342,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Different funding sources have different exit expectations. Understand whether your investors expect an IPO, acquisition, or dividend returns, and ensure these align with your own objectives.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your funding strategy isn’t just about raising capital – it’s about building a sustainable business that creates value for all stakeholders. The most successful CPG companies view funding as a strategic tool rather than just a financial necessity.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your funding strategy isn’t just about raising capital. It’s about building a sustainable business that creates value for all stakeholders. The most successful CPG companies view funding as a strategic tool rather than just a financial necessity.</p>
 
             </div>
           </AnimatedSection>

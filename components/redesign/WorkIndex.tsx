@@ -33,7 +33,7 @@ export default function WorkIndex({ items }: { items: WorkItem[] }) {
             <Image
               key={it.href}
               src={it.image}
-              alt={`${it.client} — ${it.campaign}`}
+              alt={`${it.client}: ${it.campaign}`}
               fill
               sizes="40vw"
               className={`object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${

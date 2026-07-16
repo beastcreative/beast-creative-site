@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const ALL_STUDIES = {
   "sun-bird": {
     client: "Sun-Bird Seasonings",
-    campaign: "Bird Herd — Walmart Rollout",
+    campaign: "Bird Herd: Walmart Rollout",
     stat: "36,581",
     statLabel: "consumer emails",
     category: "CPG Marketing",
@@ -31,7 +31,7 @@ const ALL_STUDIES = {
   },
   "williams-allstars": {
     client: "Williams Foods",
-    campaign: "All-Stars — March Madness",
+    campaign: "All-Stars: March Madness",
     stat: "13,660",
     statLabel: "entries in 24 days",
     category: "Campaign Design",
@@ -43,7 +43,7 @@ const ALL_STUDIES = {
   },
   "williams-bowl": {
     client: "Williams Foods",
-    campaign: "Williams Bowl — NFL Sweepstakes",
+    campaign: "Williams Bowl: NFL Sweepstakes",
     stat: "6,020",
     statLabel: "entries on $1.5K",
     category: "CPG Marketing",
@@ -143,7 +143,7 @@ export default function RelatedCaseStudies({ related }: { related: StudyKey[] })
                     {cs.image ? (
                       <Image
                         src={cs.image}
-                        alt={`${cs.client} — ${cs.campaign} | Beast Creative Agency`}
+                        alt={`${cs.client}: ${cs.campaign} | Beast Creative Agency`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"

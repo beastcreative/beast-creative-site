@@ -10,7 +10,7 @@ import FlipCard from "@/components/ui/FlipCard";
 export const metadata: Metadata = {
   title: "Sun-Bird Seasonings Bird Herd Campaign | 36,581 Entries, 7.03% CTR | Beast Creative",
   description:
-    "Beast Creative Agency helped Sun-Bird Seasonings announce their national Walmart rollout with a sweepstakes generating 36,581 entries — 3.6x their goal — at 7.03% CTR and $0.12 CPC. Nearly 8x the industry benchmark.",
+    "Beast Creative Agency helped Sun-Bird Seasonings announce their national Walmart rollout with a sweepstakes that generated 36,581 entries, 3.6x their goal, at 7.03% CTR and $0.12 CPC: nearly 8x the industry benchmark.",
 };
 
 export default function SunBirdPage() {
@@ -28,13 +28,13 @@ export default function SunBirdPage() {
                   <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-beast-pink/15 text-beast-pink border border-beast-pink/20">{tag}</span>
                 ))}
               </div>
-              <p className="section-eyebrow text-beast-yellow mb-3">Case Study — Sun-Bird Seasonings · 2021</p>
+              <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Sun-Bird Seasonings · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 Delivering CPG Brand Awareness{" "}
                 <span className="text-beast-pink">at Scale.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
-                Sun-Bird expanded into Walmart nationwide — and drove 36,581 contest entries, 3.6x the goal, on a $6,000 budget. 7.03% CTR. $0.12 CPC. Nearly 8x the industry benchmark.
+                Sun-Bird expanded into Walmart nationwide and drove 36,581 contest entries, 3.6x the goal, on a $6,000 budget. 7.03% CTR. $0.12 CPC. Nearly 8x the industry benchmark.
               </p>
             </AnimatedSection>
 
@@ -57,7 +57,7 @@ export default function SunBirdPage() {
       <section className="bg-beast-yellow py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 ">
-            <StatCounter value={36581} label="Total Entries" sublabel="vs 10,000 goal — 3.6x" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
+            <StatCounter value={36581} label="Total Entries" sublabel="vs 10,000 goal, 3.6x" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={7.03} suffix="%" decimals={2} label="Click-Through Rate" sublabel="vs 0.89% industry avg" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={0.12} prefix="$" decimals={2} label="Cost Per Click" sublabel="vs $0.28 industry avg" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={208431} label="Paid Reach" sublabel="national" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
@@ -78,14 +78,14 @@ export default function SunBirdPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Brief</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Sun-Bird Just Landed in Every Walmart in America. Let&apos;s Make Some Noise.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Sun-Bird Seasonings had earned a major milestone: their full line of Asian-inspired seasoning mixes — Fried Rice, Stir-Fry, Beef &amp; Broccoli, General Tso&apos;s Chicken, and Mongolian Beef — was landing in Walmart stores nationwide. For a regional brand, getting into Walmart nationally is the moment everything changes. The shelves are set. The products are shipping. Now the brand needed to build consumer demand fast enough to keep those shelves moving.
+                  Sun-Bird Seasonings had earned a major milestone: their full line of Asian-inspired seasoning mixes (Fried Rice, Stir-Fry, Beef &amp; Broccoli, General Tso&apos;s Chicken, and Mongolian Beef) was landing in Walmart stores nationwide. For a regional brand, getting into Walmart nationally is the moment everything changes. The shelves are set. The products are shipping. Now the brand needed to build consumer demand fast enough to keep those shelves moving.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   The brief was deceptively straightforward: announce the national Walmart rollout, build consumer excitement, and collect first-party data that would give Sun-Bird&apos;s retail team proof of consumer demand across Walmart&apos;s distribution footprint.
                 </p>
                 <div className="bg-white rounded-xl p-5 border border-gray-100 mt-4">
                   <p className="font-display font-bold text-beast-black text-sm mb-2">The Stakes</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-3">Getting into Walmart is a massive opportunity — and a massive test. Retailers watch sell-through rates closely in the first weeks and months. A national rollout that doesn&apos;t move product risks getting delisted. Sun-Bird needed consumers to know it was there, find it on the shelf, and buy it.</p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">Getting into Walmart is a massive opportunity and a massive test. Retailers watch sell-through rates closely in the first weeks and months. A national rollout that doesn&apos;t move product risks getting delisted. Sun-Bird needed consumers to know it was there, find it on the shelf, and buy it.</p>
                   <p className="font-display font-bold text-beast-black text-sm mb-1">The Goal</p>
                   <p className="text-gray-600 text-sm">10,000 sweepstakes entries, based on performance benchmarks from other C.H. Guenther brand campaigns. Beast took that as the starting point.</p>
                 </div>
@@ -100,27 +100,27 @@ export default function SunBirdPage() {
                     {
                       step: "1",
                       label: "The Campaign Concept: Bird Herd",
-                      detail: "\"Bird Herd\" was both a play on Sun-Bird's brand identity and an instant community signal — \"the Bird Herd\" is what Sun-Bird fans are called. The concept: Sun-Bird is now at a Walmart near you nationwide. To celebrate, we're giving away a $1,000 Walmart gift card and a gift pack filled with Sun-Bird products and branded swag. Enter to win and join the Bird Herd.",
+                      detail: "\"Bird Herd\" was both a play on Sun-Bird's brand identity and an instant community signal: \"the Bird Herd\" is what Sun-Bird fans are called. The concept: Sun-Bird is now at a Walmart near you nationwide. To celebrate, we're giving away a $1,000 Walmart gift card and a gift pack filled with Sun-Bird products and branded swag. Enter to win and join the Bird Herd.",
                     },
                     {
                       step: "2",
                       label: "The Creative Strategy",
-                      detail: "The ad creative leaned directly into the national Walmart rollout as the news hook. \"Now at a store near you nationwide\" is a legitimately exciting announcement for fans of the brand. Beast built multiple creative variations testing different headlines, visual treatments, and CTAs — identifying winners within the first days and shifting budget toward them.",
+                      detail: "The ad creative leaned directly into the national Walmart rollout as the news hook. \"Now at a store near you nationwide\" is a legitimately exciting announcement for fans of the brand. Beast built multiple creative variations testing different headlines, visual treatments, and CTAs, identifying winners within the first days and shifting budget toward them.",
                     },
                     {
                       step: "3",
                       label: "The Prize Architecture",
-                      detail: "One grand prize. One winner. Maximum perceived value. Grand Prize: $1,000 Walmart gift card, wok, chopsticks, branded kitchen towels, branded Sun-Bird apron, and Sun-Bird products. The Walmart gift card was a strategic choice — it reinforced the retail channel and incentivized consumers to think of Walmart as the place to find Sun-Bird.",
+                      detail: "One grand prize. One winner. Maximum perceived value. Grand Prize: $1,000 Walmart gift card, wok, chopsticks, branded kitchen towels, branded Sun-Bird apron, and Sun-Bird products. The Walmart gift card was a strategic choice: it reinforced the retail channel and incentivized consumers to think of Walmart as the place to find Sun-Bird.",
                     },
                     {
                       step: "4",
                       label: "Mobile-First Execution",
-                      detail: "Beast's media strategy prioritized mobile placements, reflecting where the target audience (women 35–65) spends time. The results validated the approach decisively: mobile reach hit 164,800 (80% of total paid reach) and mobile link clicks hit 28,059 (94% of total link clicks).",
+                      detail: "Beast's media strategy prioritized mobile placements, reflecting where the target audience (women 35 to 65) spends time. The results validated the approach decisively: mobile reach hit 164,800 (80% of total paid reach) and mobile link clicks hit 28,059 (94% of total link clicks).",
                     },
                     {
                       step: "5",
                       label: "The Data That Mattered Beyond the Numbers",
-                      detail: "36,581 first-party consumer records — each with a name, verified email, and ZIP code. When Sun-Bird's retail team mapped the geographic distribution of entries against Walmart's national store footprint, the result was a consumer demand heat map — geographic proof that real people in specific markets were aware of and engaged with the brand. That's what you bring into a Walmart buyer meeting.",
+                      detail: "36,581 first-party consumer records, each with a name, verified email, and ZIP code. When Sun-Bird's retail team mapped the geographic distribution of entries against Walmart's national store footprint, the result was a consumer demand heat map: geographic proof that real people in specific markets were aware of and engaged with the brand. That's what you bring into a Walmart buyer meeting.",
                     },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
@@ -141,22 +141,22 @@ export default function SunBirdPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">Mobile Creative</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Built for the Scroll. Made for Mobile.</h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  80% of total paid reach came from mobile placements. Beast built story-format ads specifically for the mobile feed — full-screen, thumb-stopping creative that met Sun-Bird fans exactly where they were scrolling.
+                  80% of total paid reach came from mobile placements. Beast built story-format ads specifically for the mobile feed: full-screen, thumb-stopping creative that met Sun-Bird fans exactly where they were scrolling.
                 </p>
                 <div className="flex gap-10 justify-center">
                   <div className="w-[30%] max-w-[180px] [transform:rotate(-3deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/sunbird-mobile-flocking.jpg" alt="Sun-Bird mobile story — Flocking to a Store Near You" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/sunbird-mobile-flocking.jpg" alt="Sun-Bird mobile story: Flocking to a Store Near You" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                   <div className="w-[30%] max-w-[180px] [transform:rotate(1deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/sunbird-mobile-giftcard.jpg" alt="Sun-Bird mobile story — Flocking to a Store Near You sweepstakes" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/sunbird-mobile-giftcard.jpg" alt="Sun-Bird mobile story: Flocking to a Store Near You sweepstakes" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                   <div className="w-[30%] max-w-[180px] [transform:rotate(3deg)] hover:[transform:rotate(0deg)_scale(1.03)] transition-transform duration-300">
                     <div className="rounded-2xl overflow-hidden shadow-[0px_5px_15px_0px_rgba(0,0,0,0.3)]">
-                      <Image src="/assets/sunbird-mobile-product.jpg" alt="Sun-Bird mobile story — Our Product Your Creation" width={540} height={960} className="w-full h-auto block" />
+                      <Image src="/assets/sunbird-mobile-product.jpg" alt="Sun-Bird mobile story: Our Product Your Creation" width={540} height={960} className="w-full h-auto block" />
                     </div>
                   </div>
                 </div>
@@ -200,14 +200,14 @@ export default function SunBirdPage() {
 
                 <div className="bg-near-black rounded-xl p-6 mb-8">
                   <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">The First-Party Data Story</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">36,581 email addresses. 36,581 ZIP codes. 36,581 people who raised their hand and said &quot;I&apos;m interested in Sun-Bird.&quot; That database is a direct email channel to over 36,000 consumers — no platform algorithm in the way. Geographic demand data mapped to specific US markets. Proof of consumer awareness to present to retail buyers.</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">36,581 email addresses. 36,581 ZIP codes. 36,581 people who raised their hand and said &quot;I&apos;m interested in Sun-Bird.&quot; That database is a direct email channel to over 36,000 consumers, no platform algorithm in the way. Geographic demand data mapped to specific US markets. Proof of consumer awareness to present to retail buyers.</p>
                 </div>
 
                 <blockquote className="border border-beast-pink/20 bg-beast-pink/5 rounded-xl px-6 py-4">
                   <p className="text-beast-black font-medium italic text-lg leading-relaxed">
                     &quot;No competitor can walk into a pitch meeting with a 7.03% CTR and $0.12 CPC on a $6,000 budget. That&apos;s our proof of concept.&quot;
                   </p>
-                  <footer className="mt-3 text-sm text-gray-500">— John Speer, Co-Owner/COO, Beast Creative Agency</footer>
+                  <footer className="mt-3 text-sm text-gray-500">John Speer, Co-Owner/COO, Beast Creative Agency</footer>
                 </blockquote>
               </AnimatedSection>
 
@@ -220,8 +220,8 @@ export default function SunBirdPage() {
                   <h3 className="font-display font-bold text-sm uppercase tracking-widest text-beast-pink mb-5">Campaign Overview</h3>
                   {[
                     { label: "Client", value: "Sun-Bird Seasonings" },
-                    { label: "Campaign", value: "Bird Herd — Walmart Rollout" },
-                    { label: "Dates", value: "Aug 23 – Sep 30, 2021" },
+                    { label: "Campaign", value: "Bird Herd: Walmart Rollout" },
+                    { label: "Dates", value: "Aug 23 to Sep 30, 2021" },
                     { label: "Duration", value: "38 days" },
                     { label: "Ad Budget", value: "$6,000" },
                     { label: "Platforms", value: "Facebook, Instagram" },

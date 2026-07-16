@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is AI content production for CPG brands?",
-    answer: "AI content production for CPG brands is the use of AI-powered pipelines to generate product descriptions, social media content, recipe variations, email sequences, and ad copy at scale — dramatically faster and cheaper than traditional human-only production.",
+    answer: "AI content production for CPG brands is the use of AI-powered pipelines to generate product descriptions, social media content, recipe variations, email sequences, and ad copy at scale, dramatically faster and cheaper than traditional human-only production.",
   },
   {
     question: "Can AI-generated content rank in SEO and get cited by AI tools?",
-    answer: "Yes, when properly structured and human-reviewed for accuracy. AI-generated content that is factually dense, entity-rich, and structured with proper schema markup performs as well as human-written content for both Google rankings and AI citation. The key is editorial oversight — not removing AI from the process.",
+    answer: "Yes, when properly structured and human-reviewed for accuracy. AI-generated content that is factually dense, entity-rich, and structured with proper schema markup performs as well as human-written content for both Google rankings and AI citation. The key is editorial oversight, not removing AI from the process.",
   },
   {
     question: "What types of content can AI produce for CPG brands?",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "How much cheaper is AI content production than traditional production?",
-    answer: "Depending on content type, AI-powered pipelines reduce content production costs by 60–80% while increasing volume 10–30x. A brand that previously produced 20 social posts per month can produce 200+ with AI-assisted workflows at a fraction of the cost.",
+    answer: "Depending on content type, AI-powered pipelines reduce content production costs by 60 to 80% while increasing volume 10 to 30x. A brand that previously produced 20 social posts per month can produce 200+ with AI-assisted workflows at a fraction of the cost.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function AiContentProductionPost() {
               <span className="text-beast-pink">30x More Content</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              900 recipes. 50 SKUs. AI-powered content pipelines. Here&amp;apos;s how Beast processes a client&amp;apos;s entire content library into months of social assets.
+              900 recipes. 50 SKUs. AI-powered content pipelines. Here&apos;s how Beast processes a client&apos;s entire content library into months of social assets.
             </p>
           </AnimatedSection>
         </div>
@@ -86,10 +86,10 @@ export default function AiContentProductionPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The CPG Content Problem</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                CPG brands have a structural content disadvantage. A food brand with 50 SKUs and a recipe database needs constant content output across Instagram, TikTok, email, and their website — but traditional content production at that volume is expensive, slow, and impossible to maintain on a CPG marketing budget.
+                CPG brands have a structural content disadvantage. A food brand with 50 SKUs and a recipe database needs constant content output across Instagram, TikTok, email, and their website, but traditional content production at that volume is expensive, slow, and impossible to maintain on a CPG marketing budget.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                The brands that win on social and in search aren&apos;t outspending the competition. They&apos;re out-producing them — using AI-powered workflows that turn existing product and recipe data into a perpetual content engine.
+                The brands that win on social and in search aren&apos;t outspending the competition. They&apos;re out-producing them, using AI-powered workflows that turn existing product and recipe data into a perpetual content engine.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">What AI Content Production Actually Means</h2>
@@ -103,7 +103,7 @@ export default function AiContentProductionPost() {
                 {[
                   { step: "1", label: "Brand voice training", detail: "We build a brand voice document and prompt library that keeps all AI output on-brand and on-tone." },
                   { step: "2", label: "Content library ingestion", detail: "Product specs, existing recipe content, past campaign assets, and brand guidelines are structured into a knowledge base." },
-                  { step: "3", label: "Pipeline design", detail: "Automated workflows generate content variations — captions, hooks, email subject lines, ad copy — from the ingested content library." },
+                  { step: "3", label: "Pipeline design", detail: "Automated workflows generate content variations (captions, hooks, email subject lines, ad copy) from the ingested content library." },
                   { step: "4", label: "Human editorial review", detail: "A Beast strategist reviews and approves output before publishing. AI generates volume; humans maintain quality." },
                   { step: "5", label: "Performance feedback loop", detail: "Engagement data feeds back into the pipeline, training future output to favor what actually performs." },
                 ].map((item) => (
@@ -121,14 +121,14 @@ export default function AiContentProductionPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">What This Looks Like in Practice</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                A CPG food brand with 50 SKUs and a 900-recipe archive is sitting on months of content. The problem isn&apos;t raw material — it&apos;s production capacity.
+                A CPG food brand with 50 SKUs and a 900-recipe archive is sitting on months of content. The problem isn&apos;t raw material. It&apos;s production capacity.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
                 With Beast&apos;s AI pipeline, that same archive generates:
               </p>
               <ul className="space-y-2 mb-8">
                 {[
-                  "3–5 social caption variations per recipe (Instagram, TikTok, Facebook formats)",
+                  "3 to 5 social caption variations per recipe (Instagram, TikTok, Facebook formats)",
                   "Email subject line variants for recipe-focused newsletters",
                   "SEO-optimized recipe page copy for the website",
                   "Ad headline and body copy variations for paid social campaigns",
@@ -141,12 +141,12 @@ export default function AiContentProductionPost() {
                 ))}
               </ul>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                That&apos;s not 900 pieces of content. That&apos;s 4,500+ pieces from what already exists — produced in weeks, not months, at a fraction of traditional production cost.
+                That&apos;s not 900 pieces of content. That&apos;s 4,500+ pieces from what already exists, produced in weeks, not months, at a fraction of traditional production cost.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Why This Matters for SEO and AEO</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Content volume is a direct SEO signal. A brand with 50 pages of indexed recipe and product content ranks for more long-tail keywords than a brand with 5 pages. But quality matters too — thin, repetitive AI content gets filtered.
+                Content volume is a direct SEO signal. A brand with 50 pages of indexed recipe and product content ranks for more long-tail keywords than a brand with 5 pages. But quality matters too: thin, repetitive AI content gets filtered.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
                 Beast&apos;s pipeline produces content that is both high-volume <em>and</em> high-quality because each piece is structured with proper entity references, internal links, schema markup, and editorial review. The result is content that ranks in Google, gets cited by AI tools, and actually converts.
@@ -154,16 +154,16 @@ export default function AiContentProductionPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">The Sweet Sensi Result</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Sweet Sensi, a CBD e-commerce brand, engaged Beast for an integrated SEO + social media strategy that included an AI-assisted content pipeline. The result was 500%+ MRR growth and a 9.5% email CTR — against a 0.82% industry average.
+                Sweet Sensi, a CBD e-commerce brand, engaged Beast for an integrated SEO + social media strategy that included an AI-assisted content pipeline. The result was 500%+ MRR growth and a 9.5% email CTR, against a 0.82% industry average.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                The compounding effect of consistent, high-quality content output across two channels simultaneously is what drove that number — not a single campaign or a single tactic.
+                The compounding effect of consistent, high-quality content output across two channels simultaneously is what drove that number, not a single campaign or a single tactic.
               </p>
 
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast AI Content Production</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  Beast&apos;s AI Content Production service includes brand voice training, content pipeline setup, and ongoing production management — giving CPG brands the output of a full content team at a fraction of the cost.
+                  Beast&apos;s AI Content Production service includes brand voice training, content pipeline setup, and ongoing production management, giving CPG brands the output of a full content team at a fraction of the cost.
                 </p>
                 <IconButton href="/services/content-production" icon="arrow">
                   See the Service </IconButton>
@@ -209,7 +209,7 @@ export default function AiContentProductionPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

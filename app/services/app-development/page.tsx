@@ -9,24 +9,24 @@ import { faqSchema, serviceSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "AI App & SaaS Development | Idea to Launched Product | Beast Creative Agency",
   description:
-    "Beast Creative builds real software — SaaS products, web apps, and AI tools — in weeks, not months. We built and launched our own SaaS, TEKSBuilder, in one week. Now we build for you.",
+    "Beast Creative builds real software (SaaS products, web apps, and AI tools) in weeks, not months. We built and launched our own SaaS, TEKSBuilder, in one week. Now we build for you.",
 };
 
 const faqs = [
   {
     question: "How can you build an app in weeks when other agencies quote months?",
     answer:
-      "AI-assisted development. Our team uses AI agents for the heavy lifting — code generation, testing, iteration — with senior human oversight on architecture, quality, and product decisions. It's the same approach we used to build TEKSBuilder, our own SaaS, in one week. The tooling changed; most agencies' processes didn't.",
+      "AI-assisted development. Our team uses AI agents for the heavy lifting (code generation, testing, iteration) with senior human oversight on architecture, quality, and product decisions. It's the same approach we used to build TEKSBuilder, our own SaaS, in one week. The tooling changed; most agencies' processes didn't.",
   },
   {
     question: "How much does app development cost at Beast Creative?",
     answer:
-      "Every project is scoped fixed-price after a free scoping call — no open-ended hourly billing and no surprises. We define the smallest launchable version, quote it flat, and you know the number before we write a line of code. Book a free scoping call and we'll give you a real figure for your build.",
+      "Every project is scoped fixed-price after a free scoping call, with no open-ended hourly billing and no surprises. We define the smallest launchable version, quote it flat, and you know the number before we write a line of code. Book a free scoping call and we'll give you a real figure for your build.",
   },
   {
     question: "What's different about an app built by a marketing agency?",
     answer:
-      "It launches ready to sell. Most dev shops hand you code and wish you luck. We build the pricing page, conversion funnel, SEO structure, and AEO markup into the product — because we're the same team that gets brands cited by ChatGPT and ranked in Google. TEKSBuilder shipped with its funnel, free tier, and content strategy on day one.",
+      "It launches ready to sell. Most dev shops hand you code and wish you luck. We build the pricing page, conversion funnel, SEO structure, and AEO markup into the product, because we're the same team that gets brands cited by ChatGPT and ranked in Google. TEKSBuilder shipped with its funnel, free tier, and content strategy on day one.",
   },
   {
     question: "Do I own the code?",
@@ -36,27 +36,27 @@ const faqs = [
   {
     question: "Can you take over or fix an existing app?",
     answer:
-      "Yes. We audit the codebase first, then quote a fixed-price plan to stabilize, modernize, or rebuild it — so you know exactly what you're getting before we start.",
+      "Yes. We audit the codebase first, then quote a fixed-price plan to stabilize, modernize, or rebuild it, so you know exactly what you're getting before we start.",
   },
   {
     question: "What if my idea is bigger than an MVP?",
     answer:
-      "That's exactly what the TEKSBuilder rollout proves: we build for scale from the first commit. One codebase became a growing network of platforms — each state mapped to its own teaching standards, branding, and SEO footprint. We scope the MVP so the big version is an expansion, not a rebuild.",
+      "That's exactly what the TEKSBuilder rollout proves: we build for scale from the first commit. One codebase became a growing network of platforms, each state mapped to its own teaching standards, branding, and SEO footprint. We scope the MVP so the big version is an expansion, not a rebuild.",
   },
 ];
 
 const products = [
   {
     name: "SaaS Products",
-    desc: "Subscription software with auth, billing, dashboards, and AI features — launched with a pricing page and a funnel, not just a repo.",
+    desc: "Subscription software with auth, billing, dashboards, and AI features, launched with a pricing page and a funnel, not just a repo.",
   },
   {
     name: "AI-Powered Apps",
-    desc: "Tools that generate, summarize, classify, or automate — built on production AI APIs with real guardrails, not demo-ware.",
+    desc: "Tools that generate, summarize, classify, or automate, built on production AI APIs with real guardrails, not demo-ware.",
   },
   {
     name: "MVPs & Validation Builds",
-    desc: "A real, usable version of your idea in front of real users in weeks — so you validate with revenue, not a slide deck.",
+    desc: "A real, usable version of your idea in front of real users in weeks, so you validate with revenue, not a slide deck.",
   },
   {
     name: "Internal Tools",
@@ -68,7 +68,7 @@ const products = [
   },
   {
     name: "Multi-Market Rollouts",
-    desc: "One codebase, many markets — like the state-by-state platform network we built for TEKSBuilder. Build once, launch everywhere.",
+    desc: "One codebase, many markets, like the state-by-state platform network we built for TEKSBuilder. Build once, launch everywhere.",
   },
 ];
 
@@ -81,7 +81,7 @@ const steps = [
   {
     n: "02",
     title: "Build",
-    desc: "AI-assisted development with senior oversight. Working software in days — you review real screens, not wireframes.",
+    desc: "AI-assisted development with senior oversight. Working software in days: you review real screens, not wireframes.",
   },
   {
     n: "03",
@@ -91,7 +91,7 @@ const steps = [
   {
     n: "04",
     title: "Scale",
-    desc: "New features, new markets, paid traffic, content. The same agency that built it grows it — no handoff, no lost context.",
+    desc: "New features, new markets, paid traffic, content. The same agency that built it grows it: no handoff, no lost context.",
   },
 ];
 
@@ -105,15 +105,15 @@ const stack = [
 ];
 
 const oldWay = [
-  "6–12 month timelines before anything ships",
+  "6-12 month timelines before anything ships",
   "Five- to six-figure quotes before you've validated the idea",
-  "Handoffs between designers, devs, and PMs — and the drift that comes with them",
+  "Handoffs between designers, devs, and PMs, plus the drift that comes with them",
   "Launch day is the finish line; marketing is someone else's problem",
 ];
 
 const beastWay = [
-  "Working product in weeks — TEKSBuilder took one",
-  "AI-assisted build process — a fraction of traditional dev cost",
+  "Working product in weeks (TEKSBuilder took one)",
+  "AI-assisted build process at a fraction of traditional dev cost",
   "One team owns strategy, brand, UX, code, and launch",
   "Built by marketers: SEO, AEO, pricing, and funnel are in the product from day one",
 ];
@@ -132,7 +132,7 @@ export default function AppDevelopmentPage() {
             serviceSchema({
               name: "AI App & SaaS Development",
               description:
-                "Beast Creative Agency builds real software — SaaS products, web apps, AI tools, and MVPs — in weeks, not months, with strategy, brand, code, and launch handled in-house.",
+                "Beast Creative Agency builds real software (SaaS products, web apps, AI tools, and MVPs) in weeks, not months, with strategy, brand, code, and launch handled in-house.",
               url: "https://beastcreativeagency.com/services/app-development",
             })
           ),
@@ -144,7 +144,7 @@ export default function AppDevelopmentPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — AI App &amp; SaaS Development</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: AI App &amp; SaaS Development</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Your App Idea,{" "}
               <span className="text-beast-pink">Live in Weeks.</span>
@@ -153,11 +153,11 @@ export default function AppDevelopmentPage() {
               We don&apos;t just talk about AI-powered development. We ship with it.
             </p>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-8">
-              Traditional dev shops quote six months and six figures. We built and launched our own SaaS — TEKSBuilder, an AI resource generator for Texas teachers — from idea to paying-customer-ready in one week, then replicated it state by state. That&apos;s not a pitch. It&apos;s a product you can use right now.
+              Traditional dev shops quote six months and six figures. We built and launched our own SaaS (TEKSBuilder, an AI resource generator for Texas teachers) from idea to paying-customer-ready in one week, then replicated it state by state. That&apos;s not a pitch. It&apos;s a product you can use right now.
             </p>
             <div className="flex flex-wrap gap-3">
               <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">
-                Scope My App — Free Call
+                Scope My App: Free Call
               </IconButton>
               <IconButton href="/work/teksbuilder" variant="ghost">
                 See the TEKSBuilder Case Study
@@ -171,7 +171,7 @@ export default function AppDevelopmentPage() {
       <section className="bg-beast-yellow py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <StatCounter value={1} suffix=" Week" label="Idea to Launch" sublabel="TEKSBuilder — our own SaaS" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
+            <StatCounter value={1} suffix=" Week" label="Idea to Launch" sublabel="TEKSBuilder, our own SaaS" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={100} suffix="%" label="In-House Build" sublabel="strategy · brand · code · launch" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={4} label="Steps to Revenue" sublabel="scope · build · launch · scale" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
             <StatCounter value={6} label="Product Types We Build" sublabel="SaaS to multi-market rollouts" valueClassName="text-beast-black" labelClassName="text-beast-black/60" sublabelClassName="text-beast-black/40" />
@@ -188,7 +188,7 @@ export default function AppDevelopmentPage() {
               Software Development Just Changed. Most Agencies Didn&apos;t.
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-2xl mb-12">
-              AI-assisted development collapsed the cost and timeline of building real software. Agencies that adapted can ship a production SaaS in the time it used to take to write a proposal. We&apos;re one of them — and we can prove it, because we did it for ourselves first.
+              AI-assisted development collapsed the cost and timeline of building real software. Agencies that adapted can ship a production SaaS in the time it used to take to write a proposal. We&apos;re one of them, and we can prove it, because we did it for ourselves first.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -261,7 +261,7 @@ export default function AppDevelopmentPage() {
               <div className="rounded-2xl overflow-hidden border border-gray-100" style={{ boxShadow: "0px 5px 15px 0px rgba(0,0,0,0.3)" }}>
                 <Image
                   src="/assets/teksbuilder-hero.jpg"
-                  alt="TEKSBuilder — AI resource generator for teachers, built and launched by Beast Creative"
+                  alt="TEKSBuilder, an AI resource generator for teachers, built and launched by Beast Creative"
                   width={2000}
                   height={937}
                   className="w-full h-auto"
@@ -271,13 +271,13 @@ export default function AppDevelopmentPage() {
             <AnimatedSection delay={0.1}>
               <div className="space-y-5 text-gray-600 leading-relaxed">
                 <p>
-                  TEKSBuilder is a full production SaaS: an AI generation engine, a standards database for every K–12 subject, four reading levels of differentiation, Stripe billing, a free-trial funnel, and school licensing tiers.
+                  TEKSBuilder is a full production SaaS: an AI generation engine, a standards database for every K-12 subject, four reading levels of differentiation, Stripe billing, a free-trial funnel, and school licensing tiers.
                 </p>
                 <p>
-                  We took it from idea to launched product in one week. Then we did what agencies pitch but never do — we scaled the same codebase into a network of platforms across the country, each mapped to that state&apos;s own teaching standards.
+                  We took it from idea to launched product in one week. Then we did what agencies pitch but never do: we scaled the same codebase into a network of platforms across the country, each mapped to that state&apos;s own teaching standards.
                 </p>
                 <p>
-                  Every decision you&apos;d pay us to make for your product — naming, pricing, funnel, SEO, AEO, onboarding — we made with our own money on the line.
+                  Naming, pricing, funnel, SEO, AEO, onboarding: every decision you&apos;d pay us to make for your product, we made with our own money on the line.
                 </p>
                 <div className="pt-2">
                   <IconButton href="/work/teksbuilder" variant="dark">
@@ -317,12 +317,12 @@ export default function AppDevelopmentPage() {
               Built On a Modern Stack. Shipped With AI Speed.
             </h2>
             <p className="text-gray-400 leading-relaxed max-w-2xl mb-8">
-              The same stack behind our client sites and our own products — chosen for speed, SEO, and scale.
+              The same stack behind our client sites and our own products, chosen for speed, SEO, and scale.
             </p>
             <div className="flex flex-wrap gap-3">
               {stack.map((s) => (
                 <span key={s.name} className="rounded-full border border-dark-border bg-dark-surface px-5 py-2.5 text-sm text-gray-400">
-                  <span className="text-white font-semibold">{s.name}</span> — {s.note}
+                  <span className="text-white font-semibold">{s.name}</span>: {s.note}
                 </span>
               ))}
             </div>
@@ -357,7 +357,7 @@ export default function AppDevelopmentPage() {
               Bring it to a free scoping call. We&apos;ll tell you what the smallest launchable version looks like, what it costs, and how fast it can be live. No pitch deck. No six-month roadmap.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">
-              Scope My App — Free Call
+              Scope My App: Free Call
             </IconButton>
           </AnimatedSection>
         </div>

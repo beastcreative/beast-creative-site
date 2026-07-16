@@ -13,14 +13,14 @@ const services = [
   {
     name: "Web Design & Development",
     badge: "Most Requested",
-    pitch: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-focused. Built to rank in Google and built to turn visitors into customers.",
+    pitch: "Custom Next.js and Shopify builds that are mobile-first, Lighthouse 90+, and conversion-focused. Built to rank in Google and built to turn visitors into customers.",
     href: "/services/web-design",
     stats: "Lighthouse 90+ · Next.js · Shopify",
     featured: true,
   },
   {
     name: "SEO + AEO",
-    pitch: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity. Traditional search meets AI search — both in one strategy, from one team.",
+    pitch: "Rank in Google AND get cited by ChatGPT, Gemini, and Perplexity. Traditional search meets AI search: both in one strategy, from one team.",
     href: "/services/seo-aeo",
     stats: "11.6x email CTR lift",
   },
@@ -32,19 +32,19 @@ const services = [
   },
   {
     name: "Branding & Identity",
-    pitch: "Brand naming, visual systems, logo design, and identities that create instant recognition. We built Coinline from zero — name, logo, voice, and market position.",
+    pitch: "Brand naming, visual systems, logo design, and identities that create instant recognition. We built Coinline from zero: name, logo, voice, and market position.",
     href: "/services/branding",
-    stats: "Coinline — zero explanation needed",
+    stats: "Coinline: zero explanation needed",
   },
   {
     name: "AI Content Production",
-    pitch: "Social content, video, and copy at scale — produced with AI at 90%+ lower cost than traditional production. 900+ assets processed for CPG clients.",
+    pitch: "Social content, video, and copy at scale, produced with AI at 90%+ lower cost than traditional production. 900+ assets processed for CPG clients.",
     href: "/services/content-production",
     stats: "900+ assets processed",
   },
   {
     name: "CPG Marketing",
-    pitch: "Sweepstakes, first-party data, and retail-ready campaigns. Our CPG results — 36,581 entries on $6K, 7.03% CTR — set the standard for every client we take on.",
+    pitch: "Sweepstakes, first-party data, and retail-ready campaigns. Our CPG results (36,581 entries on $6K, 7.03% CTR) set the standard for every client we take on.",
     href: "/services/cpg-marketing",
     stats: "36,581 entries on $6K",
   },
@@ -62,7 +62,7 @@ export default function ServicesPage() {
               Full-Service. No Excuses.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl mx-auto">
-              Web design, SEO, paid media, branding, and content — one agency, documented results, no runaround.
+              Web design, SEO, paid media, branding, and content: one agency, documented results, no runaround.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="lg:max-w-sm shrink-0">
                   <p className="text-white/80 leading-relaxed mb-4">
-                    Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, and built to convert. Every page has a purpose and a next step.
+                    Custom Next.js and Shopify builds that are mobile-first, Lighthouse 90+, and built to convert. Every page has a purpose and a next step.
                   </p>
                   <p className="font-mono text-xs font-semibold text-white/60 mb-6">Lighthouse 90+ · Next.js · Shopify</p>
                   <span className="inline-flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-[gap] duration-200">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-white tracking-normal mb-4">Not Sure Where to Start?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Tell us about your business and we&apos;ll show you exactly which service would move the needle most for your brand — no pitch, no commitment.
+              Tell us about your business and we&apos;ll show you exactly which service would move the needle most for your brand. No pitch, no commitment.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

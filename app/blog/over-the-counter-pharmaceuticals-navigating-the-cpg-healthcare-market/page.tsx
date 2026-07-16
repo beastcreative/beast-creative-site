@@ -17,11 +17,11 @@ const faqs = [
   },
   {
     question: "Why are OTC marketing claims so much more restricted than food or supplement claims?",
-    answer: "OTC drugs make therapeutic claims — they promise to relieve, reduce, or treat a symptom — and those promises must be substantiated by the science behind the drug's approved use or monograph. Because the consumer is self-diagnosing and self-treating, regulators hold the labeling and advertising to a higher standard to prevent harm. The FDA governs labeling while the FTC governs advertising, and both expect claims to be truthful, non-misleading, and backed by competent and reliable evidence. That dual oversight is why an OTC claim can't be loosened the way a snack or beverage benefit claim sometimes can.",
+    answer: "OTC drugs make therapeutic claims, promising to relieve, reduce, or treat a symptom, and those promises must be substantiated by the science behind the drug's approved use or monograph. Because the consumer is self-diagnosing and self-treating, regulators hold the labeling and advertising to a higher standard to prevent harm. The FDA governs labeling while the FTC governs advertising, and both expect claims to be truthful, non-misleading, and backed by competent and reliable evidence. That dual oversight is why an OTC claim can't be loosened the way a snack or beverage benefit claim sometimes can.",
   },
   {
     question: "How do national brands compete when private label dominates OTC?",
-    answer: "Private label often carries the same active ingredient at the same strength, so brands can't win on the molecule alone — they have to win on trust, recommendation, and experience. That means leaning on doctor and pharmacist endorsement, clinical backing, brand heritage, format innovation, and the confidence a shopper feels reaching for a name they recognize when they feel unwell. The premium is justified by lowering perceived risk, not by claiming the chemistry is different. Brands that articulate that trust story clearly hold their share; brands that argue purely on features tend to lose it to the store-brand equivalent two feet away on the planogram.",
+    answer: "Private label often carries the same active ingredient at the same strength, so brands can't win on the molecule alone. They have to win on trust, recommendation, and experience. That means leaning on doctor and pharmacist endorsement, clinical backing, brand heritage, format innovation, and the confidence a shopper feels reaching for a name they recognize when they feel unwell. The premium is justified by lowering perceived risk, not by claiming the chemistry is different. Brands that articulate that trust story clearly hold their share; brands that argue purely on features tend to lose it to the store-brand equivalent two feet away on the planogram.",
   },
   {
     question: "What is the Rx-to-OTC switch and why does it matter to marketers?",
@@ -67,7 +67,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
               <span className="text-beast-pink">Navigating the CPG Healthcare Market</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Over-the-counter medicine lives in a strange and demanding place — it’s sold like a consumer packaged good, merchandised next to toothpaste and vitamins, yet governed like a pharmaceutical. The trust stakes are higher than almost any other aisle, because a shopper is diagnosing and treating themselves. Get it right and you build a brand people reach for instinctively when they feel unwell. Get it wrong and you draw a warning letter — or worse, lose the trust that took years to earn.
+              Over-the-counter medicine lives in a strange and demanding place: it’s sold like a consumer packaged good, merchandised next to toothpaste and vitamins, yet governed like a pharmaceutical. The trust stakes are higher than almost any other aisle, because a shopper is diagnosing and treating themselves. Get it right and you build a brand people reach for instinctively when they feel unwell. Get it wrong and you draw a warning letter, or worse, lose the trust that took years to earn.
             </p>
           </AnimatedSection>
         </div>
@@ -81,19 +81,19 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">What Counts as OTC and the Consumer-Health Landscape</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Over-the-counter pharmaceuticals are medicines the FDA has determined are safe and effective for people to use without a prescription or a clinician’s supervision. They’re drugs in the regulatory sense — they make therapeutic claims, carry active ingredients, and answer to a higher standard than the food and beverages around them — but they’re bought, browsed, and reached for like any other consumer product. That dual identity is the entire challenge and the entire opportunity.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Over-the-counter pharmaceuticals are medicines the FDA has determined are safe and effective for people to use without a prescription or a clinician’s supervision. They’re drugs in the regulatory sense: they make therapeutic claims, carry active ingredients, and answer to a higher standard than the food and beverages around them. But they’re bought, browsed, and reached for like any other consumer product. That dual identity is the entire challenge and the entire opportunity.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The consumer-health landscape is broad, and each segment behaves differently at the shelf. Understanding where your product sits shapes everything from claim strategy to merchandising.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Major OTC Categories</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Analgesics — pain and fever relief, from acetaminophen to ibuprofen to naproxen and aspirin</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Cough, cold, and flu — multi-symptom formulas, decongestants, expectorants, and suppressants</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Digestive health — antacids, acid reducers, anti-diarrheals, and laxatives</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Allergy — antihistamines and nasal sprays, many of them former prescription products</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Sleep and relaxation — OTC sleep aids alongside a growing supplement adjacency</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Vitamins, minerals, and supplements — adjacent on the shelf, but a different legal category entirely</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Analgesics: pain and fever relief, from acetaminophen to ibuprofen to naproxen and aspirin</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Cough, cold, and flu: multi-symptom formulas, decongestants, expectorants, and suppressants</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Digestive health: antacids, acid reducers, anti-diarrheals, and laxatives</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Allergy: antihistamines and nasal sprays, many of them former prescription products</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Sleep and relaxation: OTC sleep aids alongside a growing supplement adjacency</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Vitamins, minerals, and supplements: adjacent on the shelf, but a different legal category entirely</li>
               </ul>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">That last bullet is the one that trips brands up most often. Vitamins and supplements sit inches from OTC drugs on the planogram and are frequently managed by the same buyer and the same brand team, but they live under a completely different rulebook. A team that blurs the two in its marketing creates compliance exposure without realizing it. We’ll come back to that distinction in depth.</p>
@@ -106,17 +106,17 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Regulatory Backbone: How OTC Drugs Are Authorized</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most OTC drugs don’t go through the individual approval process you might associate with a new prescription medication. Instead, the bulk of the market is governed by the FDA’s OTC Monograph system — essentially a set of pre-approved “recipes” for whole categories. If a product uses recognized active ingredients at recognized strengths, for a recognized use, and follows the prescribed labeling, it can be marketed without product-by-product approval. This is why dozens of brands can sell the same active ingredient: they’re all working from the same monograph.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most OTC drugs don’t go through the individual approval process you might associate with a new prescription medication. Instead, the bulk of the market is governed by the FDA’s OTC Monograph system, essentially a set of pre-approved “recipes” for whole categories. If a product uses recognized active ingredients at recognized strengths, for a recognized use, and follows the prescribed labeling, it can be marketed without product-by-product approval. This is why dozens of brands can sell the same active ingredient: they’re all working from the same monograph.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The system that maintains these monographs is often called the OTC Drug Review. In recent years it was modernized to make updating monographs faster and more responsive, which matters to marketers because the rules of a category can shift, and your labeling and claims have to move with them.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Drug Facts Labeling Is Non-Negotiable</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Every OTC drug carries a standardized Drug Facts panel — the boxed, fixed-format label listing active ingredients, uses, warnings, directions, and inactive ingredients. It exists so any shopper can make a safe self-treatment decision in seconds, and its format is mandated, not optional. From a marketing standpoint, the Drug Facts panel is a constraint and an asset at once: it limits how creative the package can be, but it also signals legitimacy. A consumer scanning the shelf reads that panel as proof this is real medicine.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Every OTC drug carries a standardized Drug Facts panel: the boxed, fixed-format label listing active ingredients, uses, warnings, directions, and inactive ingredients. It exists so any shopper can make a safe self-treatment decision in seconds, and its format is mandated, not optional. From a marketing standpoint, the Drug Facts panel is a constraint and an asset at once: it limits how creative the package can be, but it also signals legitimacy. A consumer scanning the shelf reads that panel as proof this is real medicine.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Rx-to-OTC Switch</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">One of the most consequential moments in this category is the Rx-to-OTC switch — when a drug that previously required a prescription is approved for over-the-counter sale. Many of today’s best-known allergy, heartburn, and pain products began life behind the pharmacy counter. A switch can expand a product’s addressable audience dramatically overnight and reshape an entire category’s economics.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">One of the most consequential moments in this category is the Rx-to-OTC switch, when a drug that previously required a prescription is approved for over-the-counter sale. Many of today’s best-known allergy, heartburn, and pain products began life behind the pharmacy counter. A switch can expand a product’s addressable audience dramatically overnight and reshape an entire category’s economics.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">But a switch also changes the marketing job entirely. The product now has to explain itself on a shelf in a few seconds, the labeling has to carry the full burden of safe self-use, and consumer education becomes central rather than optional. Brands that prepare the trust-building and education work before the switch arrives tend to own the category they helped create.</p>
 
@@ -128,14 +128,14 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Why Claims Are Tightly Constrained</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing that surprises marketers coming from food or beverage: in OTC, you can’t simply say something sounds good. Because OTC products make therapeutic claims — promising to relieve, reduce, or treat a symptom — every claim has to be anchored to the science behind the drug’s approved use or its monograph. The constraint isn’t arbitrary; it exists because the consumer is self-diagnosing and self-treating with no clinician between them and the product.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing that surprises marketers coming from food or beverage: in OTC, you can’t simply say something sounds good. Because OTC products make therapeutic claims, promising to relieve, reduce, or treat a symptom, every claim has to be anchored to the science behind the drug’s approved use or its monograph. The constraint isn’t arbitrary; it exists because the consumer is self-diagnosing and self-treating with no clinician between them and the product.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This is fundamentally different from how a snack brand can talk about “feeling good” or a beverage can imply energy. With OTC, the promise is medical, so the bar is medical. A claim that a product “relieves nasal congestion” has to be true in the way the monograph or approval established, stated the way the label permits, and not stretched beyond it in advertising.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Where Brands Overreach</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Implying a benefit broader than the approved use — “supports immunity” bolted onto a cold remedy</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Implying a benefit broader than the approved use, like “supports immunity” bolted onto a cold remedy</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Speed or superiority claims that aren’t backed by head-to-head evidence</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Borrowing supplement-style language for a drug, or vice versa</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Testimonials that imply a use or outcome the label doesn’t support</li>
@@ -151,23 +151,23 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Trust in a Higher-Stakes Aisle</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">When someone reaches for an OTC product, they’re feeling unwell, often deciding quickly, and trusting a package to help them treat themselves correctly. That makes trust the central asset of the category — more than novelty, more than flavor, more than packaging flair. The brands that win are the ones a shopper feels safe choosing without a doctor in the room.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">When someone reaches for an OTC product, they’re feeling unwell, often deciding quickly, and trusting a package to help them treat themselves correctly. That makes trust the central asset of the category: more than novelty, more than flavor, more than packaging flair. The brands that win are the ones a shopper feels safe choosing without a doctor in the room.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Levers That Build Credibility</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Demonstrated efficacy — the product reliably does what it promises, reinforced by consistent experience</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Professional recommendation — “the brand doctors and pharmacists recommend” carries unusual weight here</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Clinical backing — studies and recognized active ingredients that signal seriousness</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Heritage and familiarity — a name a shopper has used before, or one a parent used</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Clarity — packaging that makes the right choice obvious and reduces the fear of choosing wrong</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Demonstrated efficacy: the product reliably does what it promises, reinforced by consistent experience</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Professional recommendation: “the brand doctors and pharmacists recommend” carries unusual weight here</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Clinical backing: studies and recognized active ingredients that signal seriousness</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Heritage and familiarity: a name a shopper has used before, or one a parent used</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Clarity: packaging that makes the right choice obvious and reduces the fear of choosing wrong</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: the pharmacist is one of the most powerful figures in the entire purchase journey. Many shoppers ask a pharmacist what to buy, and a recommendation at the counter often beats any amount of shelf advertising. Brand programs that earn genuine professional endorsement — not just a tagline, but real standing with the people consumers ask — build something competitors can’t easily copy.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: the pharmacist is one of the most powerful figures in the entire purchase journey. Many shoppers ask a pharmacist what to buy, and a recommendation at the counter often beats any amount of shelf advertising. Brand programs that earn genuine professional endorsement, not just a tagline but real standing with the people consumers ask, build something competitors can’t easily copy.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Trust Is Fragile in This Category</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Because the stakes are health, the downside of breaking trust is steeper than in most CPG. A recall, an overreaching claim, or a confusing label doesn’t just dent a quarter — it can erode the instinctive confidence that made the brand valuable in the first place. Protecting that trust is a marketing responsibility, not just a regulatory one.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Because the stakes are health, the downside of breaking trust is steeper than in most CPG. A recall, an overreaching claim, or a confusing label doesn’t just dent a quarter. It can erode the instinctive confidence that made the brand valuable in the first place. Protecting that trust is a marketing responsibility, not just a regulatory one.</p>
 
             </div>
           </AnimatedSection>
@@ -182,17 +182,17 @@ export default function OverTheCounterPharmaceuticalsPost() {
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The Core Channels</h3>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Pharmacy and drug chains — the heartland of OTC, with the pharmacist nearby as an influence</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Mass retail — high-traffic, price-visible, where private label sits right beside the brand</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Club — larger pack sizes and value-per-unit messaging for stock-up shoppers</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Amazon and e-commerce — search-driven discovery, reviews as trust signals, and subscription buying</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Pharmacy and drug chains: the heartland of OTC, with the pharmacist nearby as an influence</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Mass retail: high-traffic, price-visible, where private label sits right beside the brand</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Club: larger pack sizes and value-per-unit messaging for stock-up shoppers</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Amazon and e-commerce: search-driven discovery, reviews as trust signals, and subscription buying</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">On the planogram, the HBC aisle rewards clarity above cleverness. Shoppers are often navigating by symptom — they want the congestion product, the heartburn product, the kids’ fever product — so the package has to communicate the job-to-be-done at a glance. Color coding, symptom hierarchy, and consistent brand architecture across a line all help a shopper self-select correctly under mild stress.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">On the planogram, the HBC aisle rewards clarity above cleverness. Shoppers are often navigating by symptom: they want the congestion product, the heartburn product, the kids’ fever product, so the package has to communicate the job-to-be-done at a glance. Color coding, symptom hierarchy, and consistent brand architecture across a line all help a shopper self-select correctly under mild stress.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">E-Commerce Changes the Trust Equation</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Online, the pharmacist disappears and reviews take over as the trust signal. Ratings, review volume, and the substance of what shoppers say carry enormous weight when no one can hand you the box and explain it. Search behavior is symptom-led there too, which means the digital shelf rewards brands that map their products to the language real people use when they feel sick — not internal product names.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Online, the pharmacist disappears and reviews take over as the trust signal. Ratings, review volume, and the substance of what shoppers say carry enormous weight when no one can hand you the box and explain it. Search behavior is symptom-led there too, which means the digital shelf rewards brands that map their products to the language real people use when they feel sick, not internal product names.</p>
 
             </div>
           </AnimatedSection>
@@ -202,16 +202,16 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Private Label and Justifying the Premium</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Private label is heavier in OTC than in almost any other consumer category, and the reason is simple: the active ingredient is frequently identical. A store brand can sell the same molecule at the same strength under the same monograph, and the package often says so plainly — “compare to the active ingredient in [national brand].” That comparison is allowed, and it’s effective. It puts the brand in the position of justifying a premium for something that, chemically, looks the same.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Private label is heavier in OTC than in almost any other consumer category, and the reason is simple: the active ingredient is frequently identical. A store brand can sell the same molecule at the same strength under the same monograph, and the package often says so plainly: “compare to the active ingredient in [national brand].” That comparison is allowed, and it’s effective. It puts the brand in the position of justifying a premium for something that, chemically, looks the same.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">How Brands Earn the Premium Anyway</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The mistake is arguing the chemistry is different when it isn’t. The premium isn’t paid for the molecule — it’s paid for lowered risk and earned confidence. When a shopper feels unwell, the brand they recognize reduces the perceived chance of choosing wrong, and that reassurance has real value.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The mistake is arguing the chemistry is different when it isn’t. The premium isn’t paid for the molecule. It’s paid for lowered risk and earned confidence. When a shopper feels unwell, the brand they recognize reduces the perceived chance of choosing wrong, and that reassurance has real value.</p>
 
               <ul className="space-y-2 mb-6">
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Trust and recognition — the instinct to reach for a familiar name when health is on the line</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Trust and recognition: the instinct to reach for a familiar name when health is on the line</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Professional recommendation that the store brand can’t easily claim</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Format and experience — easier dosing, better-tolerated formulations, thoughtful packaging</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Format and experience: easier dosing, better-tolerated formulations, thoughtful packaging</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Innovation that private label follows rather than leads</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> A coherent brand story that makes the choice feel like the responsible one</li>
               </ul>
@@ -226,7 +226,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Marketing Within the Guardrails</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Marketing consumer health well means treating the guardrails as part of the craft, not an obstacle to it. Two authorities matter most: the FDA, which governs the product’s labeling, and the FTC, which governs its advertising. They overlap in spirit — both expect claims to be truthful, not misleading, and supported — but they’re separate jurisdictions, and a claim can be fine on a label yet problematic in an ad if it’s framed loosely.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Marketing consumer health well means treating the guardrails as part of the craft, not an obstacle to it. Two authorities matter most: the FDA, which governs the product’s labeling, and the FTC, which governs its advertising. They overlap in spirit: both expect claims to be truthful, not misleading, and supported. But they’re separate jurisdictions, and a claim can be fine on a label yet problematic in an ad if it’s framed loosely.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Claim Substantiation Is the Foundation</h3>
 
@@ -234,7 +234,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">DTC Advertising Norms</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Direct-to-consumer advertising for OTC products is widespread and powerful, but it operates inside expectations of fair balance — communicating the benefit without burying the directions and warnings that make safe self-use possible. The most trusted brands don’t treat warnings as fine print to minimize; they fold safe use into the message, because in this category, “use as directed” is part of the value proposition, not a disclaimer to hide.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Direct-to-consumer advertising for OTC products is widespread and powerful, but it operates inside expectations of fair balance: communicating the benefit without burying the directions and warnings that make safe self-use possible. The most trusted brands don’t treat warnings as fine print to minimize; they fold safe use into the message, because in this category, “use as directed” is part of the value proposition, not a disclaimer to hide.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">A Note on Scope</h3>
 
@@ -248,24 +248,24 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Supplements vs. OTC Drugs: The Compliance Line</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most important distinction a consumer-health marketer can internalize is the line between an OTC drug and a dietary supplement. They look similar on the shelf, but they live under different laws, and crossing the line — usually by accident — is one of the most common ways brands get into trouble.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most important distinction a consumer-health marketer can internalize is the line between an OTC drug and a dietary supplement. They look similar on the shelf, but they live under different laws, and crossing the line, usually by accident, is one of the most common ways brands get into trouble.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">DSHEA and the Structure/Function Boundary</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Dietary supplements are regulated under DSHEA — the Dietary Supplement Health and Education Act — which treats them as a category of food, not as drugs. The practical consequence is enormous. A supplement may make structure/function claims (how an ingredient affects the normal structure or function of the body) accompanied by the familiar disclaimer that the statement hasn’t been evaluated by the FDA and the product isn’t intended to diagnose, treat, cure, or prevent any disease.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Dietary supplements are regulated under DSHEA (the Dietary Supplement Health and Education Act), which treats them as a category of food, not as drugs. The practical consequence is enormous. A supplement may make structure/function claims (how an ingredient affects the normal structure or function of the body) accompanied by the familiar disclaimer that the statement hasn’t been evaluated by the FDA and the product isn’t intended to diagnose, treat, cure, or prevent any disease.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">An OTC drug is the opposite: it exists precisely to treat, relieve, or prevent something, and it carries a Drug Facts panel and an approved or monographed use to back that up. The moment a supplement starts making disease claims, regulators may treat it as an unapproved drug — and that’s exactly the situation warning letters are built for.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">An OTC drug is the opposite: it exists precisely to treat, relieve, or prevent something, and it carries a Drug Facts panel and an approved or monographed use to back that up. The moment a supplement starts making disease claims, regulators may treat it as an unapproved drug, and that’s exactly the situation warning letters are built for.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Where Teams Get Tripped Up</h3>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Running drug and supplement products under one brand without keeping the claim worlds separate</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Letting a supplement’s marketing drift into disease territory — “fights colds,” “treats anxiety”</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Letting a supplement’s marketing drift into disease territory: “fights colds,” “treats anxiety”</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Using customer testimonials or influencer language that implies a drug claim the label can’t make</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Co-merchandising the two in a way that implies the supplement does what the drug does</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The safe operating principle is to know which legal category each product lives in and to keep its language inside that category’s lane — even when the same team, the same shelf, and the same shopper sit right next to each other.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The safe operating principle is to know which legal category each product lives in and to keep its language inside that category’s lane, even when the same team, the same shelf, and the same shopper sit right next to each other.</p>
 
             </div>
           </AnimatedSection>
@@ -275,7 +275,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Common Mistakes in OTC Marketing</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">After enough campaigns in this category, the failure patterns become familiar. Most aren’t exotic — they’re the predictable result of treating a regulated medicine like an ordinary consumer product.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">After enough campaigns in this category, the failure patterns become familiar. Most aren’t exotic. They’re the predictable result of treating a regulated medicine like an ordinary consumer product.</p>
 
               <ul className="space-y-2 mb-6">
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Stretching a claim past the approved use because it sounds more compelling</li>
@@ -283,11 +283,11 @@ export default function OverTheCounterPharmaceuticalsPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Blurring the supplement and drug claim worlds within a single brand</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Trying to out-feature private label instead of out-trusting it</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Building a campaign first and assembling substantiation afterward</li>
-                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Ignoring the pharmacist and the review section — the two places trust is actually won</li>
+                <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Ignoring the pharmacist and the review section: the two places trust is actually won</li>
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Packaging that confuses symptom-led shoppers instead of guiding them to the right choice</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The throughline is that discipline and trust aren’t in tension with good marketing here — they are the good marketing. A brand that says exactly what it can prove, in language the law allows, packaged so a worried shopper chooses confidently, is doing the hardest and most valuable thing in the category.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The throughline is that discipline and trust aren’t in tension with good marketing here. They are the good marketing. A brand that says exactly what it can prove, in language the law allows, packaged so a worried shopper chooses confidently, is doing the hardest and most valuable thing in the category.</p>
 
             </div>
           </AnimatedSection>
@@ -299,7 +299,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Navigating the OTC market means holding two truths at once: this is a consumer packaged good that has to win at the shelf, and it’s a regulated medicine that has to earn trust and stay inside the lines. The brands that thrive treat those as one job, not two competing ones. They build creative that’s vivid and clear without stretching a claim, packaging that helps a stressed shopper choose right, and a trust story strong enough to justify a premium over an identical store-brand molecule.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">That’s exactly where a marketing partner who understands both sides earns its keep. The right partner knows the difference between a structure/function claim and a drug claim, builds the substantiation before the campaign, designs the planogram presence around how people actually shop when they’re unwell, and protects the trust that makes the brand valuable in the first place. Marketing consumer health credibly and compliantly isn’t a constraint on growth in this category — it’s the engine of it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">That’s exactly where a marketing partner who understands both sides earns its keep. The right partner knows the difference between a structure/function claim and a drug claim, builds the substantiation before the campaign, designs the planogram presence around how people actually shop when they’re unwell, and protects the trust that makes the brand valuable in the first place. Marketing consumer health credibly and compliantly isn’t a constraint on growth in this category. It’s the engine of it.</p>
 
             </div>
           </AnimatedSection>
@@ -329,7 +329,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Regulatory Compliance: Navigating FDA, EPA, and Industry Requirements</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">The regulatory rules behind consumer products — how FDA, EPA, and industry requirements shape what brands can sell and say.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">The regulatory rules behind consumer products: how FDA, EPA, and industry requirements shape what brands can sell and say.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">May 18, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -341,7 +341,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
                   <span className="text-xs text-[#717171]">12 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Consumer Packaged Goods (CPG): A Complete Industry Overview for Brands, Retailers &amp; Investors</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">A complete overview of the CPG industry — how brands, retailers, and investors fit together and where the value is created.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">A complete overview of the CPG industry: how brands, retailers, and investors fit together and where the value is created.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">June 10, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -353,7 +353,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Premium vs. Value CPG Positioning: Pricing Strategy and Marketing Implications</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">When to charge a premium and when to compete on value — pricing strategy and the marketing that has to back it up.</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">When to charge a premium and when to compete on value: pricing strategy and the marketing that has to back it up.</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 7, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

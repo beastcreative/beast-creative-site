@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the biggest working capital challenge unique to CPG brands?",
-    answer: "The cash conversion cycle — the gap between paying for ingredients and manufacturing and receiving payment from retailers — is typically 90–150 days for brands selling through grocery, creating a chronic cash strain as brands scale. Every new retail account you win requires more working capital before it generates cash.",
+    answer: "The cash conversion cycle (the gap between paying for ingredients and manufacturing and receiving payment from retailers) is typically 90 to 150 days for brands selling through grocery, creating a chronic cash strain as brands scale. Every new retail account you win requires more working capital before it generates cash.",
   },
   {
     question: "What financing tools are most appropriate for CPG brands needing working capital?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     question: "How do you negotiate better payment terms with retailers to improve CPG cash flow?",
-    answer: "Offering a 2% early payment discount (net 10 instead of net 60) is often the most practical lever — many retailers will take it, improving your cash position at a cost lower than a line of credit. For larger accounts, factoring your invoices through a specialty CPG factor is an alternative when early payment discounts are not available.",
+    answer: "Offering a 2% early payment discount (net 10 instead of net 60) is often the most practical lever: many retailers will take it, improving your cash position at a cost lower than a line of credit. For larger accounts, factoring your invoices through a specialty CPG factor is an alternative when early payment discounts are not available.",
   },
   {
     question: "What inventory practices most directly improve working capital for CPG brands?",
-    answer: "Rationalizing your SKU count to focus production runs on your top-velocity products reduces the cash tied up in slow-moving finished goods. Minimum order quantities with co-manufacturers should be negotiated down as you gain leverage — lower MOQs mean less cash tied up per production run.",
+    answer: "Rationalizing your SKU count to focus production runs on your top-velocity products reduces the cash tied up in slow-moving finished goods. Minimum order quantities with co-manufacturers should be negotiated down as you gain leverage, since lower MOQs mean less cash tied up per production run.",
   },
 ];
 
@@ -82,7 +82,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Understanding CPG Working Capital Fundamentals</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Working capital management in the CPG industry isn’t just about keeping the lights on—it’s about creating a competitive advantage through smart cash flow optimization. Unlike service businesses, CPG companies deal with complex inventory cycles, seasonal demand fluctuations, and multiple distribution channels that can either boost or drain cash flow.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Working capital management in the CPG industry isn’t just about keeping the lights on. It’s about creating a competitive advantage through smart cash flow optimization. Unlike service businesses, CPG companies deal with complex inventory cycles, seasonal demand fluctuations, and multiple distribution channels that can either boost or drain cash flow.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing: your working capital consists of three main components that directly impact your cash position. Current assets (inventory, accounts receivable, cash) minus current liabilities (accounts payable, short-term debt, accrued expenses) equals your working capital. But in the CPG world, this simple equation becomes complicated fast.</p>
 
@@ -127,7 +127,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what many CPG companies don’t realize: the 80/20 rule often understates the problem. In reality, you might find that 90% of your profit comes from 30% of your SKUs. The remaining 70% are cash flow drains disguised as revenue generators.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Start by analyzing each SKU’s contribution to gross profit, not just revenue. Factor in the true cost of complexity—additional production runs, quality testing, inventory carrying costs, and obsolescence risk. You might discover that eliminating low-performing SKUs frees up working capital while actually improving profitability.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Start by analyzing each SKU’s contribution to gross profit, not just revenue. Factor in the true cost of complexity: additional production runs, quality testing, inventory carrying costs, and obsolescence risk. You might discover that eliminating low-performing SKUs frees up working capital while actually improving profitability.</p>
 
             </div>
           </AnimatedSection>
@@ -154,7 +154,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Credit Management</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just focus on getting paid faster—focus on getting paid, period. CPG companies face unique credit risks, especially when dealing with smaller retailers or entering new markets.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just focus on getting paid faster. Focus on getting paid, period. CPG companies face unique credit risks, especially when dealing with smaller retailers or entering new markets.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Set up credit monitoring systems that track payment patterns and flag potential problems early. A customer who starts paying in 45 days instead of 30 might be showing early signs of financial stress. Catching these trends early gives you options beyond writing off bad debt.</p>
 
@@ -166,7 +166,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Accounts Payable Optimization</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s where many CPG companies leave money on the table. Your payables aren’t just bills to pay—they’re a source of free financing when managed strategically.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s where many CPG companies leave money on the table. Your payables aren’t just bills to pay. They’re a source of free financing when managed strategically.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Supplier Payment Strategy</h3>
 
@@ -176,7 +176,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Early Payment Discounts</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses evaluate early payment discounts incorrectly. A 2% discount for paying in 10 days instead of 30 isn’t just 2%—it’s equivalent to a 36% annual return on your cash. That’s usually better than any other investment you could make.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses evaluate early payment discounts incorrectly. A 2% discount for paying in 10 days instead of 30 isn’t just 2%. It’s equivalent to a 36% annual return on your cash. That’s usually better than any other investment you could make.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">But here’s the catch: only take early payment discounts if you have excess cash or access to cheaper financing. Paying suppliers early while carrying expensive debt defeats the purpose.</p>
 
@@ -234,7 +234,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Inventory Management Systems</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your inventory management system should do more than track quantities—it should optimize working capital deployment across your entire product portfolio.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Your inventory management system should do more than track quantities. It should optimize working capital deployment across your entire product portfolio.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Look for systems that calculate optimal order quantities based on carrying costs, stockout costs, and cash flow impact. The goal is finding the sweet spot between having enough inventory to meet demand while minimizing cash tied up in slow-moving stock.</p>
 
@@ -250,7 +250,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Cash Conversion Cycle</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This measures how long it takes to convert inventory investment into cash from sales. Calculate it as: Days Sales Outstanding + Days Inventory Outstanding – Days Payable Outstanding.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This measures how long it takes to convert inventory investment into cash from sales. Calculate it as: Days Sales Outstanding + Days Inventory Outstanding minus Days Payable Outstanding.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Industry benchmarks vary, but most successful CPG companies target cash conversion cycles of 60-90 days. If yours is significantly longer, you’ve got work to do.</p>
 
@@ -262,7 +262,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Inventory Turnover by Category</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just calculate overall inventory turnover—break it down by product category, channel, and seasonality pattern. This granular view helps you spot opportunities for improvement that overall metrics might hide.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Don’t just calculate overall inventory turnover. Break it down by product category, channel, and seasonality pattern. This granular view helps you spot opportunities for improvement that overall metrics might hide.</p>
 
             </div>
           </AnimatedSection>
@@ -276,7 +276,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Balancing Efficiency and Risk</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The goal isn’t to minimize working capital—it’s to optimize it. Sometimes carrying extra inventory of critical components makes sense if supplier lead times are unreliable. Sometimes offering better payment terms to key suppliers secures priority treatment during shortages.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The goal isn’t to minimize working capital. It’s to optimize it. Sometimes carrying extra inventory of critical components makes sense if supplier lead times are unreliable. Sometimes offering better payment terms to key suppliers secures priority treatment during shortages.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Build buffer stocks for your most profitable products and fastest-growing categories. Cut aggressively on slow-moving, low-margin items. This balanced approach protects revenue while freeing up cash.</p>
 
@@ -294,7 +294,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building a Working Capital Optimization Culture</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Successful working capital management isn’t just about systems and processes—it’s about creating a culture where everyone understands their impact on cash flow.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Successful working capital management isn’t just about systems and processes. It’s about creating a culture where everyone understands their impact on cash flow.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Cross-Functional Collaboration</h3>
 
@@ -318,7 +318,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Working capital optimization in the CPG industry requires a systematic approach that balances cash flow efficiency with operational effectiveness. Companies that excel at this create sustainable competitive advantages through better cash flow, stronger supplier relationships, and more strategic inventory deployment.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The key is starting with accurate data, building robust forecasting capabilities, and creating organizational alignment around cash flow objectives. Remember, working capital optimization isn’t a one-time project—it’s an ongoing process that adapts to changing market conditions and business priorities.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The key is starting with accurate data, building robust forecasting capabilities, and creating organizational alignment around cash flow objectives. Remember, working capital optimization isn’t a one-time project. It’s an ongoing process that adapts to changing market conditions and business priorities.</p>
 
             </div>
           </AnimatedSection>

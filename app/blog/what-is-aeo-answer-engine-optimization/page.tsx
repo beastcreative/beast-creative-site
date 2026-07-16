@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is AEO (Answer Engine Optimization)?",
-    answer: "AEO (Answer Engine Optimization) is the practice of structuring web content to be cited and recommended by AI-powered answer engines — including ChatGPT, Gemini, Perplexity, and Claude. Unlike traditional SEO which optimizes for search engine rankings, AEO optimizes for direct citation in AI-generated answers.",
+    answer: "AEO (Answer Engine Optimization) is the practice of structuring web content to be cited and recommended by AI-powered answer engines, including ChatGPT, Gemini, Perplexity, and Claude. Unlike traditional SEO which optimizes for search engine rankings, AEO optimizes for direct citation in AI-generated answers.",
   },
   {
     question: "How is AEO different from traditional SEO?",
-    answer: "Traditional SEO gets your page ranked in search results. AEO gets your content cited as the answer inside AI tools. SEO drives click-through traffic. AEO drives brand authority — your brand name appears as the source when someone asks an AI a question in your category.",
+    answer: "Traditional SEO gets your page ranked in search results. AEO gets your content cited as the answer inside AI tools. SEO drives click-through traffic. AEO drives brand authority: your brand name appears as the source when someone asks an AI a question in your category.",
   },
   {
     question: "Which AI tools does AEO target?",
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     question: "How long does AEO take to work?",
-    answer: "AEO citation can happen faster than traditional SEO if your content is the clearest, most authoritative answer to a specific question — sometimes within weeks. Building consistent citation across multiple AI platforms typically takes 2–4 months of dedicated content strategy.",
+    answer: "AEO citation can happen faster than traditional SEO if your content is the clearest, most authoritative answer to a specific question, sometimes within weeks. Building consistent citation across multiple AI platforms typically takes 2 to 4 months of dedicated content strategy.",
   },
   {
     question: "Do I need AEO if I already do SEO?",
-    answer: "Yes. Google search and AI search are separate channels. An estimated 30%+ of informational queries now go to AI tools first. Brands that only optimize for Google are invisible to a growing portion of their market. SEO and AEO are complementary — not substitutes.",
+    answer: "Yes. Google search and AI search are separate channels. An estimated 30%+ of informational queries now go to AI tools first. Brands that only optimize for Google are invisible to a growing portion of their market. SEO and AEO are complementary, not substitutes.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function AeoPost() {
               <span className="text-beast-pink">ChatGPT, Gemini, and Perplexity</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              AI search tools are answering 30%+ of queries that used to go to Google. Here&amp;apos;s how to structure your content to get cited — not just ranked.
+              AI search tools are answering 30%+ of queries that used to go to Google. Here&apos;s how to structure your content to get cited, not just ranked.
             </p>
           </AnimatedSection>
         </div>
@@ -86,7 +86,7 @@ export default function AeoPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Short Answer</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                <strong>AEO (Answer Engine Optimization)</strong> is the practice of structuring your content so that AI-powered tools — ChatGPT, Gemini, Perplexity, and Google AI Overviews — cite your brand as the authoritative answer to questions in your category.
+                <strong>AEO (Answer Engine Optimization)</strong> is the practice of structuring your content so that AI-powered tools, including ChatGPT, Gemini, Perplexity, and Google AI Overviews, cite your brand as the authoritative answer to questions in your category.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
                 Traditional SEO gets you ranked. AEO gets you <em>cited</em>. Those are increasingly different things.
@@ -94,10 +94,10 @@ export default function AeoPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Why AEO Is No Longer Optional</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Search behavior has fundamentally shifted. When someone wants to know "what&apos;s the best CPG marketing agency" or "how do I build first-party consumer data," a growing percentage of them type that question directly into ChatGPT or Perplexity — not Google.
+                Search behavior has fundamentally shifted. When someone wants to know "what&apos;s the best CPG marketing agency" or "how do I build first-party consumer data," a growing percentage of them type that question directly into ChatGPT or Perplexity instead of Google.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                The brands that appear in those answers aren&apos;t just getting traffic. They&apos;re being positioned as the authoritative source in their category — by an AI tool that millions of people trust to give them the best answer.
+                The brands that appear in those answers aren&apos;t just getting traffic. They&apos;re being positioned as the authoritative source in their category by an AI tool that millions of people trust to give them the best answer.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
                 Brands that only optimize for Google are now invisible to that entire channel.
@@ -127,7 +127,7 @@ export default function AeoPost() {
                 </div>
               </div>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                These aren&apos;t mutually exclusive — a strong SEO foundation supports AEO. But AEO requires its own content strategy layer on top of traditional optimization.
+                These aren&apos;t mutually exclusive: a strong SEO foundation supports AEO. But AEO requires its own content strategy layer on top of traditional optimization.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">What AI Systems Prefer to Cite</h2>
@@ -171,18 +171,18 @@ export default function AeoPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">4. Consistent Topical Authority</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Publish multiple pieces of content that cover a topic from multiple angles. An agency that has 8 pages covering CPG marketing — a service page, a blog post, a case study, an FAQ page, an about-page mention, a glossary entry — signals stronger topical authority than one with a single service page.
+                Publish multiple pieces of content that cover a topic from multiple angles. An agency that has 8 pages covering CPG marketing (a service page, a blog post, a case study, an FAQ page, an about-page mention, a glossary entry) signals stronger topical authority than one with a single service page.
               </p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">5. Organization and Article Schema</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Organization schema tells Google and AI systems who you are, what you do, where you&apos;re located, and what your authoritative sources are. Article schema on blog posts signals authorship, publication date, and content type — all signals that feed into citation decisions.
+                Organization schema tells Google and AI systems who you are, what you do, where you&apos;re located, and what your authoritative sources are. Article schema on blog posts signals authorship, publication date, and content type, all signals that feed into citation decisions.
               </p>
 
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast&apos;s AEO Practice</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed">
-                  Beast Creative Agency is one of the few agencies offering AEO as a formal service — building integrated SEO + AEO strategies that optimize content for both Google rankings and AI citation. We&apos;ve built this practice because we believe it represents the next major shift in how brands get discovered.
+                  Beast Creative Agency is one of the few agencies offering AEO as a formal service, building integrated SEO + AEO strategies that optimize content for both Google rankings and AI citation. We&apos;ve built this practice because we believe it represents the next major shift in how brands get discovered.
                 </p>
                 <IconButton href="/services/seo-aeo" icon="arrow">
                   See Our SEO + AEO Service </IconButton>

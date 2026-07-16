@@ -32,7 +32,7 @@ const sections: Section[] = [
   {
     heading: "Intellectual Property",
     body: [
-      "The Site and its content — including text, graphics, logos, case studies, images, and design — are owned by Beast Creative or its licensors and are protected by intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any part of the Site without our prior written permission.",
+      "The Site and its content, including text, graphics, logos, case studies, images, and design, are owned by Beast Creative or its licensors and are protected by intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any part of the Site without our prior written permission.",
     ],
   },
   {
@@ -88,7 +88,7 @@ const sections: Section[] = [
     heading: "Contact Us",
     body: [
       "Questions about these Terms? Reach out:",
-      "Beast Creative Agency — San Antonio, TX",
+      "Beast Creative Agency, San Antonio, TX",
       "Email: hello@beastcreativeagency.com",
       "Phone: (210) 332-0567",
     ],

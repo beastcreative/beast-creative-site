@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the core marketing difference between a branded CPG and a private label product?",
-    answer: "Branded CPG marketing builds equity in the brand name itself so consumers seek it out across multiple retail channels. Private label marketing is entirely managed by the retailer — the manufacturer's job is operational excellence and pricing, not consumer brand building.",
+    answer: "Branded CPG marketing builds equity in the brand name itself so consumers seek it out across multiple retail channels. Private label marketing is entirely managed by the retailer: the manufacturer's job is operational excellence and pricing, not consumer brand building.",
   },
   {
     question: "Can a CPG manufacturer successfully sell both branded and private label from the same facility?",
-    answer: "Yes, and many do — private label provides volume and capacity utilization while the branded line builds long-term margin and exit valuation. The risk is that your retail partner learns your formula and replaces your branded product with their private label version, so IP protection and formula differentiation matter.",
+    answer: "Yes, and many do: private label provides volume and capacity utilization while the branded line builds long-term margin and exit valuation. The risk is that your retail partner learns your formula and replaces your branded product with their private label version, so IP protection and formula differentiation matter.",
   },
   {
     question: "How does marketing spend differ between branded and private label CPG businesses?",
-    answer: "Branded CPG companies typically spend 10–20% of revenue on marketing; private label manufacturers spend near zero on consumer marketing but invest heavily in sales and account management to win and retain retailer contracts. Private label is a B2B sales model, not a B2C marketing model.",
+    answer: "Branded CPG companies typically spend 10% to 20% of revenue on marketing; private label manufacturers spend near zero on consumer marketing but invest heavily in sales and account management to win and retain retailer contracts. Private label is a B2B sales model, not a B2C marketing model.",
   },
   {
     question: "What are the margin implications of private label vs. branded CPG?",
-    answer: "Private label contracts are typically won on price, compressing gross margins to 20–35% while branded products in strong categories can achieve 50–70% gross margins. The branded premium is only sustainable if supported by marketing investment that drives consumer pull-through at retail.",
+    answer: "Private label contracts are typically won on price, compressing gross margins to 20% to 35% while branded products in strong categories can achieve 50% to 70% gross margins. The branded premium is only sustainable if supported by marketing investment that drives consumer pull-through at retail.",
   },
 ];
 
@@ -360,11 +360,11 @@ export default function PrivateLabelVsBrandedCpgPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion: Choosing Your Path Forward</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The choice between branded and private label CPG approaches isn&apos;t just about products—it&apos;s about building a business model that aligns with your resources, expertise, and long-term goals. Branded companies invest in consumer relationships and emotional connections, while private label manufacturers focus on operational excellence and retailer partnerships.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The choice between branded and private label CPG approaches isn&apos;t just about products: it&apos;s about building a business model that aligns with your resources, expertise, and long-term goals. Branded companies invest in consumer relationships and emotional connections, while private label manufacturers focus on operational excellence and retailer partnerships.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here&apos;s what works: commit fully to your chosen approach. Half-hearted brand building fails against established competitors, and unreliable private label partners lose retailer trust quickly. Success requires focused execution and continuous optimization based on clear performance metrics.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies, regardless of their model, share common traits: they understand their customers deeply, use data to drive decisions, and adapt quickly to market changes. They also recognize that great marketing isn&apos;t just about creative campaigns—it&apos;s about building sustainable competitive advantages through consistent value delivery.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The most successful CPG companies, regardless of their model, share common traits: they understand their customers deeply, use data to drive decisions, and adapt quickly to market changes. They also recognize that great marketing isn&apos;t just about creative campaigns: it&apos;s about building sustainable competitive advantages through consistent value delivery.</p>
 
             </div>
           </AnimatedSection>
@@ -394,7 +394,7 @@ export default function PrivateLabelVsBrandedCpgPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -418,7 +418,7 @@ export default function PrivateLabelVsBrandedCpgPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

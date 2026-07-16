@@ -145,7 +145,7 @@ export default function ContactForm({
           <option>Branding &amp; Identity</option>
           <option>Web Design &amp; Development</option>
           <option>App / SaaS Development</option>
-          <option>Not sure — let&apos;s talk</option>
+          <option>Not sure, let&apos;s talk</option>
         </select>
         {errors.service && (
           <p id="contact-service-error" className="text-red-400 text-xs mt-1" role="alert">{errors.service.message}</p>

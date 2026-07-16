@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What video content works best for CPG brands on YouTube?",
-    answer: "Problem-solving content performs best — product education addressing specific customer challenges, behind-the-scenes manufacturing and sourcing, and detailed tutorials. YouTube users visit to learn and research, not to be sold to. A protein powder brand that creates 'what to eat before a morning workout' content reaches far more qualified buyers than one that runs product commercials.",
+    answer: "Problem-solving content performs best: product education addressing specific customer challenges, behind-the-scenes manufacturing and sourcing, and detailed tutorials. YouTube users visit to learn and research, not to be sold to. A protein powder brand that creates 'what to eat before a morning workout' content reaches far more qualified buyers than one that runs product commercials.",
   },
   {
     question: "How is TikTok different for CPG than other platforms?",
-    answer: "TikTok inverts traditional marketing: native-looking, authentic, unpolished content dramatically outperforms expensive productions. The algorithm rewards completion and engagement rate over follower count — a brand with 1,000 engaged followers can outperform one with 100,000 disengaged followers. Lead with the result first, then explain how your product achieved it.",
+    answer: "TikTok inverts traditional marketing: native-looking, authentic, unpolished content dramatically outperforms expensive productions. The algorithm rewards completion and engagement rate over follower count, so a brand with 1,000 engaged followers can outperform one with 100,000 disengaged followers. Lead with the result first, then explain how your product achieved it.",
   },
   {
     question: "Should CPG brands focus on organic or paid video?",
@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     question: "How do you repurpose video content across platforms efficiently?",
-    answer: "Batch shooting is key — plan monthly content themes, shoot multiple angles and formats in one session, then create platform-specific versions from the same raw footage. A single product demonstration becomes a TikTok (handheld, authentic), an Instagram Reel (polished aesthetic), and a YouTube Short (educational framing). One shoot, three platforms, consistent brand story.",
+    answer: "Batch shooting is key: plan monthly content themes, shoot multiple angles and formats in one session, then create platform-specific versions from the same raw footage. A single product demonstration becomes a TikTok (handheld, authentic), an Instagram Reel (polished aesthetic), and a YouTube Short (educational framing). One shoot, three platforms, consistent brand story.",
   },
   {
     question: "How much video content do CPG brands actually need to produce?",
-    answer: "Consistency matters more than volume. One high-quality video per week outperforms five rushed pieces. For TikTok specifically, 3–5 posts per week is optimal. For YouTube, 1–2 well-produced videos per month builds authority faster than frequent low-quality content. Start with one platform, hit your publishing cadence consistently, then expand to a second platform.",
+    answer: "Consistency matters more than volume. One high-quality video per week outperforms five rushed pieces. For TikTok specifically, 3 to 5 posts per week is optimal. For YouTube, 1 to 2 well-produced videos per month builds authority faster than frequent low-quality content. Start with one platform, hit your publishing cadence consistently, then expand to a second platform.",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function VideoMarketingPost() {
               <span className="text-beast-pink">YouTube, TikTok, and Short-Form Content Strategies</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Consumers scroll past polished commercials but stop for authentic product demonstrations. Here&amp;apos;s the platform-specific video framework that builds brand authority and drives CPG sales.
+              Consumers scroll past polished commercials but stop for authentic product demonstrations. Here&apos;s the platform-specific video framework that builds brand authority and drives CPG sales.
             </p>
           </AnimatedSection>
         </div>
@@ -96,13 +96,13 @@ export default function VideoMarketingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">YouTube: Building Long-Term Brand Authority</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                YouTube functions as the internet&apos;s second-largest search engine. Users visit specifically to learn, compare products, and explore topics thoroughly. Content strategies should align with these research-oriented intentions — solving problems, not promoting features.
+                YouTube functions as the internet&apos;s second-largest search engine. Users visit specifically to learn, compare products, and explore topics thoroughly. Content strategies should align with these research-oriented intentions: solving problems, not promoting features.
               </p>
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Content Types That Drive CPG Sales on YouTube</h3>
               <ul className="space-y-2 mb-6">
                 {[
                   "Product education videos addressing specific customer problems (not feature lists)",
-                  "Behind-the-scenes manufacturing and ingredient sourcing — builds trust through transparency",
+                  "Behind-the-scenes manufacturing and ingredient sourcing, which builds trust through transparency",
                   "Competitor comparison videos, approached tactfully with genuine value propositions",
                   "User-generated content compilations featuring real customers using your product",
                   "Recipe or usage tutorial demonstrations showing the product in action",
@@ -130,14 +130,14 @@ export default function VideoMarketingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">TikTok: Authenticity Over Production Value</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                TikTok inverts traditional marketing principles. Native-looking content — authentic, unpolished, genuinely entertaining — performs best. Expensive commercials consistently underperform compared to genuine product demonstrations.
+                TikTok inverts traditional marketing principles. Native-looking content (authentic, unpolished, genuinely entertaining) performs best. Expensive commercials consistently underperform compared to genuine product demonstrations.
               </p>
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">TikTok Content That Converts for CPG</h3>
               <ul className="space-y-2 mb-6">
                 {[
                   "Quick recipe or usage hacks solving problems within 60 seconds",
                   "Trend participation incorporating products naturally into popular formats",
-                  "Before/after transformations — especially effective for beauty, cleaning, and food products",
+                  "Before/after transformations, especially effective for beauty, cleaning, and food products",
                   "Employee takeovers showing team personality and behind-the-scenes culture",
                   "Reaction content responding authentically to customer reviews",
                 ].map((item) => (
@@ -149,14 +149,14 @@ export default function VideoMarketingPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Understanding TikTok&apos;s Algorithm</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                TikTok prioritizes completion rate and engagement rate over follower count — a brand with 1,000 engaged followers can outperform one with 100,000 disengaged followers. The key insight: reveal the result first, then explain how your product achieved it. Most brands make the mistake of leading with their logo or product shot.
+                TikTok prioritizes completion rate and engagement rate over follower count, so a brand with 1,000 engaged followers can outperform one with 100,000 disengaged followers. The key insight: reveal the result first, then explain how your product achieved it. Most brands make the mistake of leading with their logo or product shot.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Short-Form Strategy Across Platforms</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Instagram Reels, YouTube Shorts, and TikTok serve different audiences. The same product demonstration adapts differently per platform:</p>
               <ul className="space-y-2 mb-6">
                 {[
-                  "TikTok: handheld, authentic, trend-conscious — use popular sounds and challenge formats",
+                  "TikTok: handheld, authentic, and trend-conscious, using popular sounds and challenge formats",
                   "Instagram Reels: enhanced lighting and composition, more refined aesthetic than TikTok",
                   "YouTube Shorts: educational framing, clear audio, informational positioning",
                 ].map((item) => (
@@ -181,8 +181,8 @@ export default function VideoMarketingPost() {
               <ul className="space-y-2 mb-6">
                 {[
                   "Designate batch shooting days to produce multiple videos at once",
-                  "Develop editing templates for common content types — accelerates post-production",
-                  "Encourage customer UGC with incentives — create a sharing community",
+                  "Develop editing templates for common content types to accelerate post-production",
+                  "Encourage customer UGC with incentives to create a sharing community",
                   "Use cross-platform repurposing: one shoot, multiple platform versions",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
@@ -194,9 +194,9 @@ export default function VideoMarketingPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Your 90-Day Video Marketing Action Plan</h2>
               <ul className="space-y-3 mb-8">
                 {[
-                  { label: "Days 1–30: Foundation", detail: "Select your primary platform based on where your customers spend time. Create initial 10 content pieces. Establish a publishing schedule and stick to it." },
-                  { label: "Days 31–60: Optimization", detail: "Analyze initial content performance. Double down on high-performing formats. Test different posting times. Start engaging your audience actively." },
-                  { label: "Days 61–90: Expansion", detail: "Introduce a second platform applying lessons from the first. Build content repurposing systems. Measure business impact beyond vanity metrics." },
+                  { label: "Days 1 to 30: Foundation", detail: "Select your primary platform based on where your customers spend time. Create initial 10 content pieces. Establish a publishing schedule and stick to it." },
+                  { label: "Days 31 to 60: Optimization", detail: "Analyze initial content performance. Double down on high-performing formats. Test different posting times. Start engaging your audience actively." },
+                  { label: "Days 61 to 90: Expansion", detail: "Introduce a second platform applying lessons from the first. Build content repurposing systems. Measure business impact beyond vanity metrics." },
                 ].map((item) => (
                   <li key={item.label} className="flex gap-3">
                     <svg className="w-4 h-4 text-beast-pink shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -210,7 +210,7 @@ export default function VideoMarketingPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We produce video content and run video advertising campaigns for CPG brands — from short-form social content to full campaign production. We know what drives results on each platform and build creative systems that scale.
+                  We produce video content and run video advertising campaigns for CPG brands, from short-form social content to full campaign production. We know what drives results on each platform and build creative systems that scale.
                 </p>
                 <IconButton href="/services/content-production" icon="arrow">See Our Content Production</IconButton>
               </div>
@@ -267,7 +267,7 @@ export default function VideoMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -285,7 +285,7 @@ export default function VideoMarketingPost() {
               Ready to Build a Video Strategy That Actually Drives CPG Sales?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast creates and distributes video content for CPG brands — platform-native creative built to earn attention and convert viewers into buyers.
+              Beast creates and distributes video content for CPG brands, platform-native creative built to earn attention and convert viewers into buyers.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

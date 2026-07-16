@@ -8,7 +8,7 @@ import StatCounter from "@/components/ui/StatCounter";
 export const metadata: Metadata = {
   title: "Pioneer Brand ROAS Campaign | Paid Media & Digital Marketing | Beast Creative",
   description:
-    "Beast Creative Agency delivered ROAS-driven paid media campaigns for Pioneer — building audience, driving conversions, and generating measurable return on ad spend through strategic Facebook and Instagram advertising.",
+    "Beast Creative Agency delivered ROAS-driven paid media campaigns for Pioneer, building audience, driving conversions, and generating measurable return on ad spend through strategic Facebook and Instagram advertising.",
 };
 
 export default function PioneerPage() {
@@ -24,13 +24,13 @@ export default function PioneerPage() {
                 <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-beast-pink/15 text-beast-pink border border-beast-pink/20">{tag}</span>
               ))}
             </div>
-            <p className="section-eyebrow text-beast-yellow mb-3">Case Study — Pioneer · Ongoing</p>
+            <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Pioneer · Ongoing</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Built to Perform.{" "}
               <span className="text-beast-pink">Optimized to Convert.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Performance marketing for Pioneer — paid social campaigns built around measurable return on ad spend, not vanity metrics.
+              Performance marketing for Pioneer: paid social campaigns built around measurable return on ad spend, not vanity metrics.
             </p>
           </AnimatedSection>
         </div>
@@ -61,10 +61,10 @@ export default function PioneerPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">The Challenge</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Turn Every Dollar Into a Trackable Return.</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Pioneer came to Beast with a performance-first mandate: paid social advertising that could be measured, optimized, and directly connected to business outcomes. Not impressions. Not reach. Not brand awareness in the abstract — but actual, attributable return on ad spend.
+                  Pioneer came to Beast with a performance-first mandate: paid social advertising that could be measured, optimized, and directly connected to business outcomes. Not impressions. Not reach. Not brand awareness in the abstract, but actual, attributable return on ad spend.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Beast&apos;s performance marketing practice is built around exactly this. The team doesn&apos;t run ads and report on clicks — they build full-funnel tracking systems that connect ad impressions to landing page visits, to form completions, to purchases, to revenue. Every optimization decision is made on the basis of what&apos;s actually driving return, not what looks good in a dashboard.
+                  Beast&apos;s performance marketing practice is built around exactly this. The team doesn&apos;t run ads and report on clicks. They build full-funnel tracking systems that connect ad impressions to landing page visits, to form completions, to purchases, to revenue. Every optimization decision is made on the basis of what&apos;s actually driving return, not what looks good in a dashboard.
                 </p>
               </AnimatedSection>
 
@@ -82,7 +82,7 @@ export default function PioneerPage() {
                     {
                       step: "2",
                       label: "Creative Testing",
-                      detail: "Beast runs a minimum of 3–5 creative variations per campaign at launch — different headlines, different visual treatments, different CTAs. The algorithm identifies the winner fast. Budget shifts toward what's converting. Underperforming creative gets cut. This iterative process is what keeps CPC low and CTR high over the life of a campaign.",
+                      detail: "Beast runs a minimum of 3 to 5 creative variations per campaign at launch: different headlines, different visual treatments, different CTAs. The algorithm identifies the winner fast. Budget shifts toward what's converting. Underperforming creative gets cut. This iterative process is what keeps CPC low and CTR high over the life of a campaign.",
                     },
                     {
                       step: "3",
@@ -92,7 +92,7 @@ export default function PioneerPage() {
                     {
                       step: "4",
                       label: "Real-Time Optimization",
-                      detail: "Campaigns are monitored daily. Budget shifts toward performing audiences and creative in real time. Targeting is refined as campaign data accumulates. Beast doesn't set campaigns live and check in weekly — the team is in the accounts every day making the micro-adjustments that compound into dramatically better performance.",
+                      detail: "Campaigns are monitored daily. Budget shifts toward performing audiences and creative in real time. Targeting is refined as campaign data accumulates. Beast doesn't set campaigns live and check in weekly. The team is in the accounts every day making the micro-adjustments that compound into dramatically better performance.",
                     },
                     {
                       step: "5",
@@ -118,7 +118,7 @@ export default function PioneerPage() {
                 <p className="section-eyebrow text-beast-pink mb-2">Proven Performance</p>
                 <h2 className="font-display text-3xl font-bold text-beast-black mb-4">The Benchmarks Behind Beast&apos;s Method.</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Beast&apos;s paid social campaigns across comparable clients have consistently achieved the following — run by the same team using the same methodology deployed for Pioneer.
+                  Beast&apos;s paid social campaigns across comparable clients have consistently achieved the following, run by the same team using the same methodology deployed for Pioneer.
                 </p>
                 <div className="overflow-hidden rounded-xl border border-gray-100">
                   <table className="w-full text-sm">
@@ -132,9 +132,9 @@ export default function PioneerPage() {
                     </thead>
                     <tbody>
                       {[
-                        { metric: "Click-Through Rate (CTR)", beast: "3.5% – 7.03%", industry: "0.89%" },
-                        { metric: "Cost Per Click (CPC)", beast: "$0.12 – $0.18", industry: "$0.28" },
-                        { metric: "Campaign Goal Achievement", beast: "2.2x – 3.6x over goal", industry: "1x (goal)" },
+                        { metric: "Click-Through Rate (CTR)", beast: "3.5% to 7.03%", industry: "0.89%" },
+                        { metric: "Cost Per Click (CPC)", beast: "$0.12 to $0.18", industry: "$0.28" },
+                        { metric: "Campaign Goal Achievement", beast: "2.2x to 3.6x over goal", industry: "1x (goal)" },
                         { metric: "Email Open Rate", beast: "29.1%", industry: "24%" },
                         { metric: "Email Click Rate", beast: "9.5%", industry: "0.82%" },
                       ].map((row, i) => (
@@ -147,7 +147,7 @@ export default function PioneerPage() {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-xs text-gray-400 mt-3 italic">These benchmarks come from real campaigns — Williams Foods and Sun-Bird Seasonings — run by the same team.</p>
+                <p className="text-xs text-gray-400 mt-3 italic">These benchmarks come from real campaigns run by the same team: Williams Foods and Sun-Bird Seasonings.</p>
               </AnimatedSection>
 
             </div>
@@ -216,7 +216,7 @@ export default function PioneerPage() {
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Want Paid Social That Pays Back?</h2>
-            <p className="text-gray-400 mb-8">Beast builds performance campaigns around ROAS — not vanity metrics. Let&apos;s look at your numbers and show you what&apos;s possible.</p>
+            <p className="text-gray-400 mb-8">Beast builds performance campaigns around ROAS, not vanity metrics. Let&apos;s look at your numbers and show you what&apos;s possible.</p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>
         </div>

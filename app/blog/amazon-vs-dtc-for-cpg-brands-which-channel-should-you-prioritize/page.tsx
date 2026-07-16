@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What are the margin differences between selling on Amazon vs. DTC for a CPG brand?",
-    answer: "Amazon typically nets CPG brands 25–40% of retail price after fees, advertising, and fulfillment — comparable to selling through a traditional retailer. DTC gross margins are typically 55–70% but require customer acquisition cost investment that often brings net contribution margins closer to Amazon's in the early years.",
+    answer: "Amazon typically nets CPG brands 25% to 40% of retail price after fees, advertising, and fulfillment, comparable to selling through a traditional retailer. DTC gross margins are typically 55% to 70% but require customer acquisition cost investment that often brings net contribution margins closer to Amazon's in the early years.",
   },
   {
-    question: "Which channel is better for launching a new CPG product — Amazon or DTC?",
+    question: "Which channel is better for launching a new CPG product: Amazon or DTC?",
     answer: "Amazon is better for validating product-market fit quickly because the built-in search intent means you can reach purchase-ready customers without building an audience first. DTC is better for building brand relationship and collecting customer data, but requires significant upfront marketing investment to drive traffic.",
   },
   {
     question: "What is the biggest strategic risk of prioritizing Amazon over DTC for a CPG brand?",
-    answer: "Amazon controls the customer relationship entirely — you have no access to buyer emails, no ability to retarget, and Amazon can suppress your listing or introduce a competing private label at any time. Brands that grow almost exclusively on Amazon find themselves in a weak negotiating position and vulnerable to algorithmic changes.",
+    answer: "Amazon controls the customer relationship entirely: you have no access to buyer emails, no ability to retarget, and Amazon can suppress your listing or introduce a competing private label at any time. Brands that grow almost exclusively on Amazon find themselves in a weak negotiating position and vulnerable to algorithmic changes.",
   },
   {
     question: "Can a CPG brand successfully run both Amazon and DTC without cannibalizing either channel?",
-    answer: "Yes — the most effective approach is using Amazon for trial and discovery while DTC converts one-time buyers into subscribers and loyal customers. Price parity between channels is critical; if your DTC site is priced higher than Amazon, most customers will buy on Amazon even after discovering you elsewhere.",
+    answer: "Yes. The most effective approach is using Amazon for trial and discovery while DTC converts one-time buyers into subscribers and loyal customers. Price parity between channels is critical; if your DTC site is priced higher than Amazon, most customers will buy on Amazon even after discovering you elsewhere.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
               <span className="text-beast-pink">Which Channel Should You Prioritize?</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              The choice between Amazon and direct-to-consumer (DTC) channels can make or break a CPG brand’s growth trajectory. While 73% of CPG brands sell on Amazon, those prioritizing DTC channels report 40% higher profit margins. The question isn’t whether both channels matter—it’s about finding the right balance for your specific brand goals and market position.
+              The choice between Amazon and direct-to-consumer (DTC) channels can make or break a CPG brand’s growth trajectory. While 73% of CPG brands sell on Amazon, those prioritizing DTC channels report 40% higher profit margins. The question isn’t whether both channels matter. It’s about finding the right balance for your specific brand goals and market position.
             </p>
           </AnimatedSection>
         </div>
@@ -82,7 +82,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Understanding the Amazon vs. DTC Landscape for CPG Brands</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumer packaged goods (CPG) brands face a critical decision that affects everything from profit margins to customer relationships. Amazon offers unparalleled reach and established trust, while DTC channels provide control and higher margins. Here’s the thing—most brands treat this as an either-or decision when it should be about strategic prioritization.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Consumer packaged goods (CPG) brands face a critical decision that affects everything from profit margins to customer relationships. Amazon offers unparalleled reach and established trust, while DTC channels provide control and higher margins. Here’s the thing: most brands treat this as an either-or decision when it should be about strategic prioritization.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that each channel serves different purposes in your overall growth strategy. Amazon excels at discovery and volume, while DTC channels build brand loyalty and capture valuable customer data.</p>
 
@@ -130,7 +130,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this crucial advantage: DTC channels provide direct access to customer data. You know who’s buying, when they’re buying, and can track their complete journey. This data enables personalized marketing, better inventory planning, and product development insights.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The relationship control extends to communication. You can email customers directly, create loyalty programs, and build community around your brand—something impossible when Amazon owns the customer relationship.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The relationship control extends to communication. You can email customers directly, create loyalty programs, and build community around your brand, something impossible when Amazon owns the customer relationship.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Brand Experience Control</h3>
 
@@ -350,7 +350,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -374,7 +374,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

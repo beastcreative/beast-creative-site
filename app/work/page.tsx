@@ -23,12 +23,12 @@ const caseStudies = [
     stats: [
       { label: "Build", value: "7 days", sub: "idea → live" },
       { label: "Types", value: "6", sub: "× 4 reading levels" },
-      { label: "Standards", value: "K–12", sub: "every subject" },
+      { label: "Standards", value: "K-12", sub: "every subject" },
     ],
   },
   {
     client: "Sun-Bird Seasonings",
-    campaign: "Bird Herd — National Walmart Rollout Campaign",
+    campaign: "Bird Herd: National Walmart Rollout Campaign",
     heroStat: "36,581",
     heroStatLabel: "consumer emails on $6K budget",
     year: "2021",
@@ -60,7 +60,7 @@ const caseStudies = [
   },
   {
     client: "Williams Foods",
-    campaign: "All-Stars — March Madness Digital Trading Cards",
+    campaign: "All-Stars: March Madness Digital Trading Cards",
     heroStat: "13,660",
     heroStatLabel: "entries in 24 days",
     year: "2022",
@@ -79,7 +79,7 @@ const caseStudies = [
     campaign: "CBD E-Commerce Growth",
     heroStat: "500%+",
     heroStatLabel: "MRR growth",
-    year: "2023–2024",
+    year: "2023-2024",
     categories: ["SEO", "Social Media", "E-Commerce"],
     href: "/work/sweet-sensi",
     image: "/assets/sweet-sensi-gummies.jpg",
@@ -94,7 +94,7 @@ const caseStudies = [
     client: "Coinline",
     campaign: "Brand Naming & Identity",
     heroStat: "0",
-    heroStatLabel: "explanation needed — name speaks itself",
+    heroStatLabel: "explanation needed: the name speaks for itself",
     year: "2022",
     categories: ["Branding", "Naming", "Identity Design"],
     href: "/work/coinline",
@@ -111,7 +111,7 @@ const caseStudies = [
   },
   {
     client: "Williams Foods",
-    campaign: "Williams Bowl — NFL Season Sweepstakes",
+    campaign: "Williams Bowl: NFL Season Sweepstakes",
     heroStat: "6,020",
     heroStatLabel: "entries on $1.5K budget",
     year: "2021",
@@ -158,7 +158,7 @@ export default function WorkPage() {
               Work That Wins.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Real campaigns. Real clients. Real numbers — every one of these is verified, named, and repeatable.
+              Real campaigns. Real clients. Real numbers. Every one of these is verified, named, and repeatable.
             </p>
           </AnimatedSection>
         </div>

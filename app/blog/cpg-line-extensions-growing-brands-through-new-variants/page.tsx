@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "How many SKUs is too many for a growing CPG brand?",
-    answer: "Most CPG operators and investors consider 3–8 active SKUs the optimal range for a brand under $20M in revenue — enough to offer variety without fragmenting production runs and trade spend. Above 12 SKUs at this scale, brands consistently find that the bottom 40% of their line generates less than 5% of revenue while consuming disproportionate operational resources.",
+    answer: "Most CPG operators and investors consider 3 to 8 active SKUs the optimal range for a brand under $20M in revenue: enough to offer variety without fragmenting production runs and trade spend. Above 12 SKUs at this scale, brands consistently find that the bottom 40% of their line generates less than 5% of revenue while consuming disproportionate operational resources.",
   },
   {
     question: "How do you pitch a line extension to a retail buyer who already carries your core product?",
@@ -125,7 +125,7 @@ export default function CpgLineExtensionsGrowingBrandsThroughNewVariantsPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Market Share Expansion</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Line extensions help brands capture more shelf space and consumer mindshare. When P&amp;G introduced Tide Pods alongside traditional liquid and powder Tide, they didn’t just offer convenience – they dominated the detergent aisle. Each variant appeals to different usage occasions and preferences, collectively strengthening the brand’s market position.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Line extensions help brands capture more shelf space and consumer mindshare. When P&amp;G introduced Tide Pods alongside traditional liquid and powder Tide, they didn’t just offer convenience. They dominated the detergent aisle. Each variant appeals to different usage occasions and preferences, collectively strengthening the brand’s market position.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The reality is that modern consumers expect choice. A single product variant rarely satisfies diverse needs, lifestyles, and preferences within your target market. Extensions allow brands to serve multiple consumer segments without diluting the core brand message.</p>
 
@@ -133,7 +133,7 @@ export default function CpgLineExtensionsGrowingBrandsThroughNewVariantsPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Marketing costs drop significantly with line extensions. Established brand recognition means lower awareness-building investments. Distribution channels already know and trust your brand, making shelf placement negotiations more straightforward. Manufacturing often uses existing facilities and processes with minor modifications, reducing capital requirements.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Research and development costs also decrease since extensions build on proven formulations and consumer insights. You’re not starting from scratch – you’re optimizing what already works.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Research and development costs also decrease since extensions build on proven formulations and consumer insights. You’re not starting from scratch. You’re optimizing what already works.</p>
 
             </div>
           </AnimatedSection>
@@ -284,7 +284,7 @@ export default function CpgLineExtensionsGrowingBrandsThroughNewVariantsPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Line extensions offer CPG brands a proven path to sustainable growth when executed strategically. Success requires deep consumer understanding, clear brand architecture, and careful implementation. The brands that master extension strategy don’t just launch new products – they build dominant market positions that competitors struggle to challenge.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Line extensions offer CPG brands a proven path to sustainable growth when executed strategically. Success requires deep consumer understanding, clear brand architecture, and careful implementation. The brands that master extension strategy don’t just launch new products. They build dominant market positions that competitors struggle to challenge.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The key lies in balancing innovation with consistency, meeting diverse consumer needs while strengthening core brand equity. As markets continue fragmenting and consumer expectations evolve, line extensions become even more critical for maintaining relevance and driving growth.</p>
 

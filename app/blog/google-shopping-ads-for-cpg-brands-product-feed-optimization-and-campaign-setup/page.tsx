@@ -8,13 +8,13 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "Google Shopping Ads for CPG Brands: Product Feed Optimization and Campaign Setup",
   description:
-    "Google Shopping drives 60–80% of retail search ad clicks. Learn how to optimize CPG product feeds, structure campaigns by tier, and achieve 150–300% ROAS improvements.",
+    "Google Shopping drives 60 to 80% of retail search ad clicks. Learn how to optimize CPG product feeds, structure campaigns by tier, and achieve 150 to 300% ROAS improvements.",
 };
 
 const faqs = [
   {
     question: "Why are Google Shopping ads important for CPG brands?",
-    answer: "Google Shopping drives 60–80% of retail search ad clicks, and properly optimized product feeds deliver 150–300% ROAS improvements over poorly structured competitors. For CPG brands with retail distribution, Shopping ads are often the highest-intent touchpoint in the digital funnel.",
+    answer: "Google Shopping drives 60 to 80% of retail search ad clicks, and properly optimized product feeds deliver 150 to 300% ROAS improvements over poorly structured competitors. For CPG brands with retail distribution, Shopping ads are often the highest-intent touchpoint in the digital funnel.",
   },
   {
     question: "What makes a good CPG product title for Google Shopping?",
@@ -48,7 +48,7 @@ export default function GoogleShoppingPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Google Shopping Ads for CPG Brands: Product Feed Optimization and Campaign Setup",
-            description: "Google Shopping drives 60–80% of retail search ad clicks. Learn how to optimize CPG product feeds, structure campaigns by tier, and achieve 150–300% ROAS improvements.",
+            description: "Google Shopping drives 60 to 80% of retail search ad clicks. Learn how to optimize CPG product feeds, structure campaigns by tier, and achieve 150 to 300% ROAS improvements.",
             datePublished: "2025-09-12",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -72,7 +72,7 @@ export default function GoogleShoppingPost() {
               <span className="text-beast-pink">Product Feed Optimization and Campaign Setup</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Google Shopping drives 60–80% of retail search ad clicks. Your product feed is your primary advertising strategy — here&amp;apos;s how to build one that wins.
+              Google Shopping drives 60 to 80% of retail search ad clicks. Your product feed is your primary advertising strategy: here&apos;s how to build one that wins.
             </p>
           </AnimatedSection>
         </div>
@@ -96,10 +96,10 @@ export default function GoogleShoppingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Understanding Google Shopping for CPG Brands</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Unlike traditional search campaigns that rely on keyword bidding and custom ad copy, Google Shopping derives all advertising elements — titles, descriptions, pricing, images, availability — directly from your product feed. This makes feed architecture your primary advertising strategy, not campaign settings.
+                Unlike traditional search campaigns that rely on keyword bidding and custom ad copy, Google Shopping derives all advertising elements (titles, descriptions, pricing, images, availability) directly from your product feed. This makes feed architecture your primary advertising strategy, not campaign settings.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                CPG brands face unique challenges: managing expansive catalogs with numerous SKUs, seasonal variations, and intricate product structures. Properly optimized feeds yield 150–300% ROAS improvements over poorly structured competitors.
+                CPG brands face unique challenges: managing expansive catalogs with numerous SKUs, seasonal variations, and intricate product structures. Properly optimized feeds yield 150 to 300% ROAS improvements over poorly structured competitors.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Product Feed Optimization: The Foundation of Success</h2>
@@ -119,7 +119,7 @@ export default function GoogleShoppingPost() {
               </ul>
               <div className="bg-section-offwhite rounded-xl p-5 mb-8 border border-light-border">
                 <p className="text-xs font-bold text-[#717171] uppercase tracking-widest mb-3">Example</p>
-                <p className="text-sm text-[#717171] mb-1"><span className="text-red-500 font-bold">✗ Weak:</span> &quot;Morning Crunch Breakfast Cereal – SKU#12345&quot;</p>
+                <p className="text-sm text-[#717171] mb-1"><span className="text-red-500 font-bold">✗ Weak:</span> &quot;Morning Crunch Breakfast Cereal, SKU#12345&quot;</p>
                 <p className="text-sm text-[#4A4A4A]"><span className="text-green-600 font-bold">✓ Strong:</span> &quot;Kellogg&apos;s Frosted Flakes Original Family Size Cereal 24 oz Box&quot;</p>
               </div>
 
@@ -140,14 +140,14 @@ export default function GoogleShoppingPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2">Image Quality Standards</h3>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Conversion-driving images require minimum 800×800 pixels (1200×1200 preferred), clean white backgrounds, product occupying 75–90% of image space, and usage context where appropriate.
+                Conversion-driving images require minimum 800×800 pixels (1200×1200 preferred), clean white backgrounds, product occupying 75 to 90% of image space, and usage context where appropriate.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Campaign Structure Strategy for CPG Brands</h2>
               <ul className="space-y-3 mb-8">
                 {[
                   { label: "Campaign Level 1: Brand Protection", detail: "Dedicated campaigns for branded search terms with elevated bids to maintain visibility on your own brand." },
-                  { label: "Campaign Level 2: Product Category", detail: "Separate campaigns by major product lines — breakfast, snacks, beverages — enabling category-specific budget allocation and seasonal adjustments." },
+                  { label: "Campaign Level 2: Product Category", detail: "Separate campaigns by major product lines, such as breakfast, snacks, and beverages, enabling category-specific budget allocation and seasonal adjustments." },
                   { label: "Campaign Level 3: Performance Tiers", detail: "Distinct campaigns for high-performers, new products, and clearance items with differentiated bidding approaches." },
                 ].map((item) => (
                   <li key={item.label} className="flex gap-3">
@@ -185,16 +185,16 @@ export default function GoogleShoppingPost() {
                 ))}
               </ul>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                Establish automated alerts for feed complications — single processing errors can disable hundreds of products simultaneously.
+                Establish automated alerts for feed complications, since a single processing error can disable hundreds of products simultaneously.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Common CPG Shopping Mistakes to Avoid</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Making bid adjustments more than weekly — allow 2–3 weeks for feed changes to show impact",
-                  "Ignoring mobile performance — optimize image clarity and concise titles for smaller screens",
-                  "Neglecting local inventory ads — \"Available nearby\" messaging increases CTR and conversion for distributed brands",
-                  "Launching with your full catalog — start with core products, perfect them, then expand",
+                  "Making bid adjustments more than weekly, when feed changes need 2 to 3 weeks to show impact",
+                  "Ignoring mobile performance: optimize image clarity and concise titles for smaller screens",
+                  "Neglecting local inventory ads: \"Available nearby\" messaging increases CTR and conversion for distributed brands",
+                  "Launching with your full catalog instead of starting with core products, perfecting them, then expanding",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
                     <span className="text-beast-pink font-bold shrink-0">→</span> {item}
@@ -205,7 +205,7 @@ export default function GoogleShoppingPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We manage Google Shopping campaigns for CPG brands at every stage of national distribution — from initial feed builds to multi-SKU catalog optimization. We know how to win on the shelf and in search results.
+                  We manage Google Shopping campaigns for CPG brands at every stage of national distribution, from initial feed builds to multi-SKU catalog optimization. We know how to win on the shelf and in search results.
                 </p>
                 <IconButton href="/cpg" icon="arrow">Learn About Our CPG Marketing</IconButton>
               </div>
@@ -262,7 +262,7 @@ export default function GoogleShoppingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -280,7 +280,7 @@ export default function GoogleShoppingPost() {
               Ready to Win Google Shopping for Your CPG Brand?
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              Beast builds and optimizes Google Shopping campaigns that scale with your distribution — from regional to national.
+              Beast builds and optimizes Google Shopping campaigns that scale with your distribution, from regional to national.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

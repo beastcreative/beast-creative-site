@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What makes a CPG brand story feel authentic vs. manufactured?",
-    answer: "Authentic stories are specific and verifiable — a founder's actual problem, a real sourcing relationship, a documented community impact. Generic narratives about \"passion\" or \"quality\" without specifics read as marketing copy and consumers tune them out.",
+    answer: "Authentic stories are specific and verifiable: a founder's actual problem, a real sourcing relationship, a documented community impact. Generic narratives about \"passion\" or \"quality\" without specifics read as marketing copy and consumers tune them out.",
   },
   {
     question: "How do you tell a brand story across packaging, social, and retail when space is limited?",
-    answer: "Identify the one-sentence core story (your brand's reason for existing) and express it differently at each touchpoint — a QR code on pack that links to the full origin story, a three-word tagline on shelf, and a 60-second video on social. Each layer should add depth, not repeat the same content.",
+    answer: "Identify the one-sentence core story (your brand's reason for existing) and express it differently at each touchpoint: a QR code on pack that links to the full origin story, a three-word tagline on shelf, and a 60-second video on social. Each layer should add depth, not repeat the same content.",
   },
   {
     question: "Should CPG founders be the face of the brand story?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "What role does customer storytelling play in CPG brand narrative?",
-    answer: "Customer stories — reviews, testimonials, user-generated content — are the most credible form of brand storytelling because they are not filtered through marketing. Actively soliciting and featuring real customer outcomes (weight loss, energy, convenience) is more persuasive than any copy your team can write.",
+    answer: "Customer stories (reviews, testimonials, user-generated content) are the most credible form of brand storytelling because they are not filtered through marketing. Actively soliciting and featuring real customer outcomes (weight loss, energy, convenience) is more persuasive than any copy your team can write.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CpgBrandStorytellingPost() {
               <span className="text-beast-pink">Connecting With Consumers Through Authentic Narratives</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Ninety-one percent of consumers say they&apos;re more likely to buy from brands with authentic stories, yet most CPG companies still rely on product features and price points to drive sales. The brands that break through aren&apos;t just selling products—they&apos;re building emotional connections through narratives that resonate with their audience&apos;s values and experiences.
+              Ninety-one percent of consumers say they&apos;re more likely to buy from brands with authentic stories, yet most CPG companies still rely on product features and price points to drive sales. The brands that break through aren&apos;t just selling products. They&apos;re building emotional connections through narratives that resonate with their audience&apos;s values and experiences.
             </p>
           </AnimatedSection>
         </div>
@@ -80,11 +80,11 @@ export default function CpgBrandStorytellingPost() {
           <AnimatedSection>
             <div className="prose prose-lg max-w-none">
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Why CPG Brand Storytelling Matters More Than Ever The consumer packaged goods landscape has changed dramatically. Gone are the days when a catchy jingle and prime shelf space guaranteed success. Today&apos;s consumers want to know what your brand stands for before they&apos;ll commit their loyalty—and their wallets.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Why CPG Brand Storytelling Matters More Than Ever The consumer packaged goods landscape has changed dramatically. Gone are the days when a catchy jingle and prime shelf space guaranteed success. Today&apos;s consumers want to know what your brand stands for before they&apos;ll commit their loyalty, and their wallets.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Here&apos;s what makes storytelling particularly powerful for CPG brands: it transforms commoditized products into meaningful choices. When you&apos;re competing with dozens of similar products on crowded shelves, your story becomes the differentiator that helps consumers choose you over generic alternatives.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The numbers back this up. Brands with strong storytelling see 20% higher customer lifetime value and 33% better brand recall. More importantly, storytelling creates what marketers call &quot;mental availability&quot;—when consumers think of your category, your brand comes to mind first.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The numbers back this up. Brands with strong storytelling see 20% higher customer lifetime value and 33% better brand recall. More importantly, storytelling creates what marketers call &quot;mental availability&quot;: when consumers think of your category, your brand comes to mind first.</p>
 
             </div>
           </AnimatedSection>
@@ -94,13 +94,13 @@ export default function CpgBrandStorytellingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Elements of Authentic CPG Brand Narratives</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Authenticity isn&apos;t just a buzzword—it&apos;s the foundation that makes your story believable and shareable. But what does authentic storytelling actually look like for CPG brands?</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Authenticity isn&apos;t just a buzzword. It&apos;s the foundation that makes your story believable and shareable. But what does authentic storytelling actually look like for CPG brands?</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Origin Stories That Connect</h3>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Your brand&apos;s origin story shouldn&apos;t read like a corporate timeline. Instead, focus on the human motivation behind your product. What problem were you trying to solve? What moment sparked the idea?</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Take Kind bars, for example. They don&apos;t just talk about creating healthy snacks—they tell the story of founder Daniel Lubetzky&apos;s childhood experiences with his Holocaust survivor father, connecting kindness and nutrition in a way that resonates emotionally with consumers.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Take Kind bars, for example. They don&apos;t just talk about creating healthy snacks. They tell the story of founder Daniel Lubetzky&apos;s childhood experiences with his Holocaust survivor father, connecting kindness and nutrition in a way that resonates emotionally with consumers.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Values in Action</h3>
 
@@ -112,13 +112,13 @@ export default function CpgBrandStorytellingPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The most powerful CPG stories make customers the hero, not your product. Your brand becomes the guide that helps them achieve their goals or solve their problems.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">This approach works because it mirrors how consumers actually experience your brand. They&apos;re not interested in your product&apos;s journey—they care about their own journey and how your product fits into their life story.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">This approach works because it mirrors how consumers actually experience your brand. They&apos;re not interested in your product&apos;s journey. They care about their own journey and how your product fits into their life story.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Crafting Your CPG Brand Story Framework Building an authentic narrative requires a structured approach. Here&apos;s how successful CPG brands develop stories that stick:</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Start With Your Why</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before you craft any narrative, you need clarity on your brand&apos;s fundamental purpose. This isn&apos;t your mission statement from your website—it&apos;s the deeper reason your brand exists beyond making money.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Before you craft any narrative, you need clarity on your brand&apos;s fundamental purpose. This isn&apos;t your mission statement from your website. It&apos;s the deeper reason your brand exists beyond making money.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Ask yourself these questions:</p>
 
@@ -268,9 +268,9 @@ export default function CpgBrandStorytellingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Authentic Connections That Drive Growth</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brand storytelling isn&apos;t about manipulating emotions—it&apos;s about creating genuine connections between your brand values and your customers&apos; lives. When done authentically, storytelling transforms transactional relationships into emotional bonds that drive long-term loyalty and growth.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">CPG brand storytelling isn&apos;t about manipulating emotions. It&apos;s about creating genuine connections between your brand values and your customers&apos; lives. When done authentically, storytelling transforms transactional relationships into emotional bonds that drive long-term loyalty and growth.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The brands that succeed in this space don&apos;t just tell better stories; they become better brands by staying true to their narratives through every business decision. They understand that authenticity isn&apos;t a marketing tactic—it&apos;s a business strategy that influences everything from product development to customer service.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The brands that succeed in this space don&apos;t just tell better stories; they become better brands by staying true to their narratives through every business decision. They understand that authenticity isn&apos;t a marketing tactic. It&apos;s a business strategy that influences everything from product development to customer service.</p>
 
             </div>
           </AnimatedSection>
@@ -300,7 +300,7 @@ export default function CpgBrandStorytellingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -324,7 +324,7 @@ export default function CpgBrandStorytellingPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -342,7 +342,7 @@ export default function CpgBrandStorytellingPost() {
               Building Authentic Connections That Drive Growth
             </h2>
             <p className="text-[#C8C8C8] mb-8">
-              The brands that succeed in this space don&apos;t just tell better stories; they become better brands by staying true to their narratives through every business decision. They understand that authenticity isn&apos;t a marketing tactic—it&apos;s a business strategy that influences everything from product development to customer service.
+              The brands that succeed in this space don&apos;t just tell better stories; they become better brands by staying true to their narratives through every business decision. They understand that authenticity isn&apos;t a marketing tactic. It&apos;s a business strategy that influences everything from product development to customer service.
             </p>
             <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
           </AnimatedSection>

@@ -8,13 +8,13 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "Sustainable CPG Marketing: How Eco-Friendly Positioning Drives Sales in 2025",
   description:
-    "Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn&apos;t just good PR—it&apos;s a profit driver. In 2025,",
+    "Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn&apos;t just good PR. It&apos;s a profit driver. In 2025,",
 };
 
 const faqs = [
   {
     question: "Does sustainable packaging actually influence CPG purchase decisions in 2025?",
-    answer: "Yes, but primarily for shoppers already in the consideration set — sustainability is a tiebreaker, not usually the primary purchase driver. The exception is categories like cleaning products and personal care where environmental claims have become a category norm and absence is a disqualifier for certain consumer segments.",
+    answer: "Yes, but primarily for shoppers already in the consideration set: sustainability is a tiebreaker, not usually the primary purchase driver. The exception is categories like cleaning products and personal care where environmental claims have become a category norm and absence is a disqualifier for certain consumer segments.",
   },
   {
     question: "How do you market sustainability claims without running into greenwashing accusations?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "How should a CPG brand prioritize sustainability investments when budget is limited?",
-    answer: "Start with the claim that most directly affects your target consumer's purchase decision in your category — packaging recyclability for household goods, ingredient sourcing for food and beverage. Do not spread investment across every sustainability dimension; one strong, verifiable claim outperforms five vague ones.",
+    answer: "Start with the claim that most directly affects your target consumer's purchase decision in your category: packaging recyclability for household goods, ingredient sourcing for food and beverage. Do not spread investment across every sustainability dimension; one strong, verifiable claim outperforms five vague ones.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function SustainableCpgMarketingPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Sustainable CPG Marketing: How Eco-Friendly Positioning Drives Sales in 2025",
-            description: "Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn&apos;t just good PR—it&apos;s a profit driver. In 2025,",
+            description: "Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn&apos;t just good PR. It&apos;s a profit driver. In 2025,",
             datePublished: "2026-02-04",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -67,7 +67,7 @@ export default function SustainableCpgMarketingPost() {
               Sustainable CPG Marketing: How Eco-Friendly Positioning Drives Sales in 2025
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn’t just good PR—it’s a profit driver. In 2025, eco-friendly positioning has become the fastest-growing segment in CPG marketing, with sustainable brands capturing 73% more market share than traditional competitors. The question isn’t whether to embrace sustainable marketing, but how to do it authentically and profitably.
+              Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn’t just good PR. It’s a profit driver. In 2025, eco-friendly positioning has become the fastest-growing segment in CPG marketing, with sustainable brands capturing 73% more market share than traditional competitors. The question isn’t whether to embrace sustainable marketing, but how to do it authentically and profitably.
             </p>
           </AnimatedSection>
         </div>
@@ -81,13 +81,13 @@ export default function SustainableCpgMarketingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">The Financial Reality of Sustainable CPG Marketing</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what most CPG marketers miss: sustainable positioning isn’t about appealing to a niche eco-conscious segment anymore. Today’s consumers—across all demographics—are making purchasing decisions based on environmental impact. A 2024 Nielsen study revealed that 81% of global consumers feel strongly that companies should help improve the environment, and they’re putting their money where their values are.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s what most CPG marketers miss: sustainable positioning isn’t about appealing to a niche eco-conscious segment anymore. Today’s consumers, across all demographics, are making purchasing decisions based on environmental impact. A 2024 Nielsen study revealed that 81% of global consumers feel strongly that companies should help improve the environment, and they’re putting their money where their values are.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">This shift creates a massive opportunity for brands that get their sustainable marketing right. Companies with strong environmental, social, and governance (ESG) practices are seeing 2.3x higher revenue growth than their traditional counterparts. But here’s the catch: authenticity matters more than ever. Greenwashing attempts backfire spectacularly in our transparency-driven market.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">The ROI of Authentic Environmental Messaging</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">When Unilever repositioned its “Sustainable Living” brands with authentic environmental messaging, these products delivered 75% of the company’s growth and grew 69% faster than the rest of the business. This isn’t coincidence—it’s the result of strategic, data-driven sustainable positioning that resonates with modern consumer values.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">When Unilever repositioned its “Sustainable Living” brands with authentic environmental messaging, these products delivered 75% of the company’s growth and grew 69% faster than the rest of the business. This isn’t coincidence. It’s the result of strategic, data-driven sustainable positioning that resonates with modern consumer values.</p>
 
             </div>
           </AnimatedSection>
@@ -124,7 +124,7 @@ export default function SustainableCpgMarketingPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Cradle to Cradle for circular design principles</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">These certifications don’t just validate your claims—they become powerful marketing tools that communicate your commitment without requiring lengthy explanations.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">These certifications don’t just validate your claims. They become powerful marketing tools that communicate your commitment without requiring lengthy explanations.</p>
 
             </div>
           </AnimatedSection>
@@ -142,7 +142,7 @@ export default function SustainableCpgMarketingPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">1. Personal Benefit: How does this product make the consumer’s life better? 2. Environmental Impact: What positive change does this purchase create? 3. Social Proof: How does this choice align with their identity and community?</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">For example, instead of just saying “Made with recycled materials,” try “Get professional-grade cleaning power while keeping 12 plastic bottles out of landfills—join the 2 million households making the switch.”</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">For example, instead of just saying “Made with recycled materials,” try “Get professional-grade cleaning power while keeping 12 plastic bottles out of landfills, and join the 2 million households making the switch.”</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Storytelling That Converts</h3>
 
@@ -309,7 +309,7 @@ export default function SustainableCpgMarketingPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion: Your Sustainable Marketing Advantage</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Sustainable CPG marketing isn’t just about doing good—it’s about smart business strategy that aligns with evolving consumer values and market dynamics. The brands that embrace authentic environmental positioning now will capture disproportionate market share as sustainability becomes table stakes rather than differentiation.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Sustainable CPG marketing isn’t just about doing good. It’s about smart business strategy that aligns with evolving consumer values and market dynamics. The brands that embrace authentic environmental positioning now will capture disproportionate market share as sustainability becomes table stakes rather than differentiation.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The key is starting with genuine sustainable practices and building your marketing strategy around authentic environmental benefits. Consumers can spot inauthentic environmental claims instantly, but they reward brands that demonstrate real commitment with exceptional loyalty and advocacy.</p>
 
@@ -345,7 +345,7 @@ export default function SustainableCpgMarketingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>
@@ -369,7 +369,7 @@ export default function SustainableCpgMarketingPost() {
                   <span className="text-xs text-[#717171]">10 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">Influencer Marketing for CPG Products: Finding and Working With Content Creators</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising—a stat</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a stat</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">February 16, 2026</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

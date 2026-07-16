@@ -14,7 +14,7 @@ export default function NotFound() {
           Page Not Found.
         </h1>
         <p className="text-gray-400 text-lg mb-10">
-          This page doesn&apos;t exist. Head back to the work — that&apos;s where the proof is.
+          This page doesn&apos;t exist. Head back to the work, that&apos;s where the proof is.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/" className="btn-primary">Back to Homepage</a>

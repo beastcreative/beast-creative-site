@@ -60,7 +60,7 @@ export default function TradingCard({ front, back, alt, rotation, floatDelay, de
             >
               <Image
                 src={front}
-                alt={`${alt} — front`}
+                alt={`${alt} front`}
                 fill
                 className="object-cover"
               />
@@ -72,7 +72,7 @@ export default function TradingCard({ front, back, alt, rotation, floatDelay, de
             >
               <Image
                 src={back}
-                alt={`${alt} — back`}
+                alt={`${alt} back`}
                 fill
                 className="object-cover"
               />

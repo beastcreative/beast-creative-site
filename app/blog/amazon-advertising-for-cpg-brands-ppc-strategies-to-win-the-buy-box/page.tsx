@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the Amazon Buy Box and why does it matter for CPG?",
-    answer: "The Buy Box is the primary 'Add to Cart' button on an Amazon product page — it drives 82% of all marketplace sales. When multiple sellers offer the same product, Amazon's algorithm determines who wins the Buy Box based on price competitiveness, fulfillment method, seller performance metrics, inventory levels, and customer satisfaction scores.",
+    answer: "The Buy Box is the primary 'Add to Cart' button on an Amazon product page, and it drives 82% of all marketplace sales. When multiple sellers offer the same product, Amazon's algorithm determines who wins the Buy Box based on price competitiveness, fulfillment method, seller performance metrics, inventory levels, and customer satisfaction scores.",
   },
   {
     question: "Does PPC advertising affect Buy Box eligibility?",
-    answer: "Yes — PPC campaigns influence several Buy Box factors through a compound effect. Consistent sales velocity from PPC improves your seller metrics. Better conversion rates signal product relevance. Higher review volume from increased sales strengthens your account health. The impact goes well beyond simple ad visibility.",
+    answer: "Yes, PPC campaigns influence several Buy Box factors through a compound effect. Consistent sales velocity from PPC improves your seller metrics. Better conversion rates signal product relevance. Higher review volume from increased sales strengthens your account health. The impact goes well beyond simple ad visibility.",
   },
   {
     question: "What's the recommended CPG Amazon PPC campaign structure?",
@@ -72,7 +72,7 @@ export default function AmazonAdvertisingPost() {
               <span className="text-beast-pink">PPC Strategies to Win the Buy Box</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              The Buy Box drives 82% of Amazon sales. Winning it isn&amp;apos;t luck — it&amp;apos;s a coordinated PPC and account health strategy. Here&amp;apos;s how to execute it.
+              The Buy Box drives 82% of Amazon sales. Winning it isn&apos;t luck. It&apos;s a coordinated PPC and account health strategy. Here&apos;s how to execute it.
             </p>
           </AnimatedSection>
         </div>
@@ -100,7 +100,7 @@ export default function AmazonAdvertisingPost() {
               </p>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Price competitiveness (not necessarily the lowest — competitive within a range)",
+                  "Price competitiveness (not necessarily the lowest, but competitive within a range)",
                   "Fulfillment method (FBA typically wins over FBM)",
                   "Seller performance metrics: cancellation rate, late shipment rate, order defect rate",
                   "Inventory levels and availability",
@@ -113,7 +113,7 @@ export default function AmazonAdvertisingPost() {
                 ))}
               </ul>
               <p className="text-[#4A4A4A] leading-relaxed mb-8">
-                PPC campaigns directly influence several of these factors through a compound effect — consistent sales velocity, higher review volume, and improved conversion rates all feed back into Buy Box eligibility.
+                PPC campaigns directly influence several of these factors through a compound effect: consistent sales velocity, higher review volume, and improved conversion rates all feed back into Buy Box eligibility.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Strategic PPC Approaches for CPG Brands</h2>
@@ -187,14 +187,14 @@ export default function AmazonAdvertisingPost() {
               </div>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Seasonal Strategy and Inventory Coordination</h2>
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Ramp PPC spend 4–6 weeks before seasonal peaks to build momentum and improve organic rankings. Critical warning: running out of stock during a PPC campaign kills Buy Box eligibility. Coordinate inventory planning with campaign calendars — going out of stock after a strong promotional push can set your rankings back weeks.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Ramp PPC spend 4 to 6 weeks before seasonal peaks to build momentum and improve organic rankings. Critical warning: running out of stock during a PPC campaign kills Buy Box eligibility. Coordinate inventory planning with campaign calendars, since going out of stock after a strong promotional push can set your rankings back weeks.</p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Common Mistakes to Avoid</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Racing to the bottom on price — focus on value differentiation instead",
+                  "Racing to the bottom on price: focus on value differentiation instead",
                   "Ignoring mobile: over 70% of Amazon searches happen on mobile devices",
-                  "Neglecting review management — poor reviews directly impact Buy Box eligibility",
+                  "Neglecting review management: poor reviews directly impact Buy Box eligibility",
                   "Spreading budget across too many campaigns without sufficient data for optimization",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
@@ -206,7 +206,7 @@ export default function AmazonAdvertisingPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We manage Amazon advertising for CPG brands at every stage of distribution — from first-time sellers to brands scaling national catalog presence. Our strategies prioritize long-term Buy Box dominance, not just short-term ROAS.
+                  We manage Amazon advertising for CPG brands at every stage of distribution, from first-time sellers to brands scaling national catalog presence. Our strategies prioritize long-term Buy Box dominance, not just short-term ROAS.
                 </p>
                 <IconButton href="/cpg" icon="arrow">Learn About Our CPG Marketing</IconButton>
               </div>
@@ -251,7 +251,7 @@ export default function AmazonAdvertisingPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

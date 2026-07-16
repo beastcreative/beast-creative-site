@@ -74,7 +74,7 @@ export default function WorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
                       {cs.image ? (
                         <Image
                           src={cs.image}
-                          alt={`${cs.client} — ${cs.campaign}`}
+                          alt={`${cs.client}: ${cs.campaign}`}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"

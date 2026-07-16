@@ -8,13 +8,13 @@ import IconButton from "@/components/ui/IconButton";
 export const metadata: Metadata = {
   title: "Retail Media Networks for CPG: Walmart Connect, Target Roundel, and Instacart Ads",
   description:
-    "A practical guide to advertising on Walmart Connect, Target Roundel, and Instacart Ads — including platform comparisons, budget allocation, and ROAS benchmarks for CPG brands.",
+    "A practical guide to advertising on Walmart Connect, Target Roundel, and Instacart Ads, including platform comparisons, budget allocation, and ROAS benchmarks for CPG brands.",
 };
 
 const faqs = [
   {
     question: "What is a retail media network?",
-    answer: "A retail media network is an advertising platform operated by a retailer — like Walmart Connect, Target Roundel, or Instacart Ads — that lets brands advertise directly to shoppers on the retailer's own properties. These networks are valuable because they offer closed-loop attribution: you can see exactly which ad exposures led to purchases within that retailer.",
+    answer: "A retail media network is an advertising platform operated by a retailer, like Walmart Connect, Target Roundel, or Instacart Ads, that lets brands advertise directly to shoppers on the retailer's own properties. These networks are valuable because they offer closed-loop attribution: you can see exactly which ad exposures led to purchases within that retailer.",
   },
   {
     question: "Which retail media network should CPG brands start with?",
@@ -22,15 +22,15 @@ const faqs = [
   },
   {
     question: "What ROAS should I expect from retail media advertising?",
-    answer: "Major CPG brands report 3–5x ROAS from retail media networks compared to other digital channels, because the intent is so high — shoppers are already on the platform to buy. However, results vary by category, competition level, and campaign type. Sponsored Products typically outperform Display ads in immediate ROAS.",
+    answer: "Major CPG brands report 3 to 5x ROAS from retail media networks compared to other digital channels, because the intent is so high: shoppers are already on the platform to buy. However, results vary by category, competition level, and campaign type. Sponsored Products typically outperform Display ads in immediate ROAS.",
   },
   {
     question: "How is Instacart different from Walmart Connect and Target Roundel?",
-    answer: "Instacart gives you access to shoppers across 80,000+ retail locations from a single platform — you're not limited to one retailer's shoppers. It skews toward high-income, convenience-focused consumers. Walmart Connect has the broadest demographic reach and lowest CPCs. Target Roundel reaches a premium, predominantly female, higher-income audience with strong brand safety standards.",
+    answer: "Instacart gives you access to shoppers across 80,000+ retail locations from a single platform, so you're not limited to one retailer's shoppers. It skews toward high-income, convenience-focused consumers. Walmart Connect has the broadest demographic reach and lowest CPCs. Target Roundel reaches a premium, predominantly female, higher-income audience with strong brand safety standards.",
   },
   {
     question: "How much budget should CPG brands allocate to retail media?",
-    answer: "A recommended starting allocation is 60/30/10: 60% to your primary retail platform, 30% to a secondary platform, and 10% to test a third. Many CPG brands allocate 15–25% of their total paid media budget to retail media networks, scaling up as ROAS data accumulates.",
+    answer: "A recommended starting allocation is 60/30/10: 60% to your primary retail platform, 30% to a secondary platform, and 10% to test a third. Many CPG brands allocate 15% to 25% of their total paid media budget to retail media networks, scaling up as ROAS data accumulates.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function RetailMediaPost() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Retail Media Networks for CPG: Walmart Connect, Target Roundel, and Instacart Ads",
-            description: "A practical guide to advertising on Walmart Connect, Target Roundel, and Instacart Ads — including platform comparisons, budget allocation, and ROAS benchmarks for CPG brands.",
+            description: "A practical guide to advertising on Walmart Connect, Target Roundel, and Instacart Ads, including platform comparisons, budget allocation, and ROAS benchmarks for CPG brands.",
             datePublished: "2025-10-08",
             author: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
             publisher: { "@type": "Organization", name: "Beast Creative Agency", url: "https://beastcreativeagency.com" },
@@ -72,7 +72,7 @@ export default function RetailMediaPost() {
               <span className="text-beast-pink">Walmart Connect, Target Roundel, and Instacart Ads</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Retail media meets shoppers exactly when they&amp;apos;re ready to buy — generating 3–5x higher ROAS than traditional digital channels. Here&amp;apos;s how to build your multi-platform strategy.
+              Retail media meets shoppers exactly when they&apos;re ready to buy, generating 3 to 5x higher ROAS than traditional digital channels. Here&apos;s how to build your multi-platform strategy.
             </p>
           </AnimatedSection>
         </div>
@@ -96,12 +96,12 @@ export default function RetailMediaPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Why Retail Media Networks Matter for CPG Brands</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-6">
-                Retail media represents a fundamental shift in digital advertising — meeting shoppers exactly when they&apos;re ready to buy. Unlike social or display ads that interrupt browsing, retail media reaches consumers who are already in purchase mode. Major CPG companies consistently report 3–5x higher return on ad spend compared to other digital channels.
+                Retail media represents a fundamental shift in digital advertising: meeting shoppers exactly when they&apos;re ready to buy. Unlike social or display ads that interrupt browsing, retail media reaches consumers who are already in purchase mode. Major CPG companies consistently report 3 to 5x higher return on ad spend compared to other digital channels.
               </p>
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Walmart Connect: The Retail Giant&apos;s Advertising Platform</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Walmart Connect reaches over 230 million monthly website visitors and 265 million weekly store customers — the largest omnichannel retail audience in the US. Its closed-loop attribution tracks sales across online and physical stores, making it uniquely powerful for CPG brands selling at Walmart.
+                Walmart Connect reaches over 230 million monthly website visitors and 265 million weekly store customers, the largest omnichannel retail audience in the US. Its closed-loop attribution tracks sales across online and physical stores, making it uniquely powerful for CPG brands selling at Walmart.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Key ad formats available:</p>
               <ul className="space-y-2 mb-6">
@@ -127,7 +127,7 @@ export default function RetailMediaPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Target Roundel: Precision Targeting Meets Premium Brand Safety</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Target Roundel serves 50 million weekly store visitors and 18 million monthly digital users. Its customer base has household incomes 20% higher than the general population, and the audience is 80% female — making it the premier platform for premium CPG categories in food, beauty, and home goods.
+                Target Roundel serves 50 million weekly store visitors and 18 million monthly digital users. Its customer base has household incomes 20% higher than the general population, and the audience is 80% female, making it the premier platform for premium CPG categories in food, beauty, and home goods.
               </p>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Core advertising solutions include:</p>
               <ul className="space-y-2 mb-6">
@@ -143,7 +143,7 @@ export default function RetailMediaPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Instacart Ads: Capturing the Grocery Delivery Revolution</h2>
               <p className="text-[#4A4A4A] leading-relaxed mb-4">
-                Instacart serves 5.5 million weekly orders across 80,000+ retail locations — giving you access to shoppers across multiple retailers from a single platform. Shoppers demonstrate higher household incomes and strong brand consciousness, and real-time cart context enables competitor displacement strategies.
+                Instacart serves 5.5 million weekly orders across 80,000+ retail locations, giving you access to shoppers across multiple retailers from a single platform. Shoppers demonstrate higher household incomes and strong brand consciousness, and real-time cart context enables competitor displacement strategies.
               </p>
               <ul className="space-y-2 mb-8">
                 {["Sponsored Products", "Display Ads", "Brand Pages", "Coupons & Promotions", "Video Ads"].map((item) => (
@@ -182,11 +182,11 @@ export default function RetailMediaPost() {
               <h2 className="font-display text-3xl font-bold text-beast-black mb-4">Key Performance Indicators Across Platforms</h2>
               <ul className="space-y-2 mb-8">
                 {[
-                  "Return on Ad Spend (ROAS) — primary efficiency metric",
-                  "Incremental Sales — true lift beyond organic purchases",
-                  "Share of Voice — competitive positioning within category",
-                  "Customer Acquisition Cost — efficiency of new customer conversion",
-                  "Lifetime Value Impact — whether retail media acquires high-LTV customers",
+                  "Return on Ad Spend (ROAS): primary efficiency metric",
+                  "Incremental Sales: true lift beyond organic purchases",
+                  "Share of Voice: competitive positioning within category",
+                  "Customer Acquisition Cost: efficiency of new customer conversion",
+                  "Lifetime Value Impact: whether retail media acquires high-LTV customers",
                 ].map((item) => (
                   <li key={item} className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed">
                     <span className="text-beast-pink font-bold shrink-0">→</span> {item}
@@ -197,7 +197,7 @@ export default function RetailMediaPost() {
               <div className="bg-beast-black rounded-2xl p-8 mb-8">
                 <p className="font-display font-bold text-beast-pink text-xs uppercase tracking-widest mb-3">Beast Creative Agency</p>
                 <p className="text-[#C8C8C8] text-sm leading-relaxed mb-4">
-                  We&apos;ve run retail media campaigns for CPG brands including Sun-Bird Seasonings and Williams Foods — managing national Walmart rollouts with full retail media integration. We know what it takes to win on shelf and on-platform.
+                  We&apos;ve run retail media campaigns for CPG brands including Sun-Bird Seasonings and Williams Foods, managing national Walmart rollouts with full retail media integration. We know what it takes to win on shelf and on-platform.
                 </p>
                 <IconButton href="/cpg" icon="arrow">Learn About Our CPG Marketing</IconButton>
               </div>
@@ -254,7 +254,7 @@ export default function RetailMediaPost() {
                   <span className="text-xs text-[#717171]">8 min read</span>
                 </div>
                 <h3 className="font-display text-base font-bold text-beast-black mb-2 leading-snug group-hover:text-beast-pink transition-colors">CPG Ad Creative That Converts: Testing, Iteration, and Best Practices</h3>
-                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework — from defining creative buckets to scaling winning eleme</p>
+                <p className="text-[#717171] text-sm leading-relaxed mb-4">Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning eleme</p>
                 <div className="flex items-center justify-between pt-3 border-t border-light-border">
                   <span className="text-xs text-[#717171]">December 15, 2025</span>
                   <span className="text-beast-pink text-sm font-semibold">Read →</span>

@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "What is the most effective way for a CPG brand to reduce supply chain vulnerability?",
-    answer: "Dual-sourcing critical ingredients and components — qualifying a backup supplier before you need one — is the highest-leverage resilience investment a CPG brand can make. Brands that sole-source were the ones that went out of stock for months during COVID and post-pandemic disruptions.",
+    answer: "Dual-sourcing critical ingredients and components, meaning qualifying a backup supplier before you need one, is the highest-leverage resilience investment a CPG brand can make. Brands that sole-source were the ones that went out of stock for months during COVID and post-pandemic disruptions.",
   },
   {
     question: "How much safety stock should a CPG brand carry to buffer against supply disruptions?",
-    answer: "The standard rule of thumb is 30–60 days of finished goods inventory for high-velocity SKUs, but the right number depends on your supplier lead times and how quickly you can airfreight components in an emergency. For seasonal products or those with long production runs, 90 days is more appropriate.",
+    answer: "The standard rule of thumb is 30 to 60 days of finished goods inventory for high-velocity SKUs, but the right number depends on your supplier lead times and how quickly you can airfreight components in an emergency. For seasonal products or those with long production runs, 90 days is more appropriate.",
   },
   {
     question: "How should a CPG brand communicate supply chain delays to retail partners?",
-    answer: "Contact your retail buyer proactively — before they notice an out-of-stock — with a specific restock date and a proposed action plan (priority allocation, substitute SKU). Buyers who find out about supply issues through their replenishment system rather than from you directly lose trust and may replace your shelf space.",
+    answer: "Contact your retail buyer proactively, before they notice an out-of-stock, with a specific restock date and a proposed action plan (priority allocation, substitute SKU). Buyers who find out about supply issues through their replenishment system rather than from you directly lose trust and may replace your shelf space.",
   },
   {
     question: "What supply chain data should CPG brand operators review weekly?",
-    answer: "Track: days of supply on hand for every active SKU, purchase order status vs. expected receipt dates, and out-of-stock rates by retailer and channel. These three numbers give you early warning on the problems that cause the most brand damage — stockouts and missed fill rates.",
+    answer: "Track: days of supply on hand for every active SKU, purchase order status vs. expected receipt dates, and out-of-stock rates by retailer and channel. These three numbers give you early warning on the problems that cause the most brand damage: stockouts and missed fill rates.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
               <span className="text-beast-pink">Building Resilience and Flexibility</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Recent data reveals that 73% of CPG companies experienced at least one major supply chain disruption in the past two years, with recovery times averaging 3-6 months. What separates resilient brands from those still struggling isn’t luck—it’s strategic preparation. Building flexibility into your supply chain operations before disruption strikes determines whether your products stay on shelves or disappear into competitor-filled gaps.
+              Recent data reveals that 73% of CPG companies experienced at least one major supply chain disruption in the past two years, with recovery times averaging 3-6 months. What separates resilient brands from those still struggling isn’t luck. It’s strategic preparation. Building flexibility into your supply chain operations before disruption strikes determines whether your products stay on shelves or disappear into competitor-filled gaps.
             </p>
           </AnimatedSection>
         </div>
@@ -82,7 +82,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Understanding Modern CPG Supply Chain Vulnerabilities</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Today’s consumer packaged goods industry operates in an interconnected web of dependencies that can unravel quickly. A single point of failure—whether it’s a port closure, factory shutdown, or raw material shortage—creates ripple effects across multiple product lines and markets.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Today’s consumer packaged goods industry operates in an interconnected web of dependencies that can unravel quickly. A single point of failure, whether it’s a port closure, factory shutdown, or raw material shortage, creates ripple effects across multiple product lines and markets.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">The complexity of modern CPG supply chains means you’re dealing with:</p>
 
@@ -94,7 +94,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
                 <li className="flex gap-3 text-[#4A4A4A] text-sm leading-relaxed"><span className="text-beast-pink font-bold shrink-0">→</span> Technology dependencies that can create single points of failure</li>
               </ul>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: resilience isn’t about preventing disruptions—it’s about maintaining operations when they inevitably occur. The brands thriving today built flexibility into their systems before they needed it.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Most businesses miss this: resilience isn’t about preventing disruptions. It’s about maintaining operations when they inevitably occur. The brands thriving today built flexibility into their systems before they needed it.</p>
 
             </div>
           </AnimatedSection>
@@ -121,13 +121,13 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Brand Reputation Damage</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing about consumer loyalty—it’s earned slowly but lost instantly. When your products aren’t available, customers don’t wait. They switch to competitors and often don’t return, even after your supply issues resolve.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Here’s the thing about consumer loyalty: it’s earned slowly but lost instantly. When your products aren’t available, customers don’t wait. They switch to competitors and often don’t return, even after your supply issues resolve.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Social media amplifies every stockout situation. One frustrated customer’s post about empty shelves can reach thousands of potential buyers, creating perception problems that outlast the actual supply issue.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Retailer Relationship Strain</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Retailers depend on consistent product availability to maintain their own customer relationships. When you can’t deliver, you’re not just losing current sales—you’re risking shelf space allocation, promotional opportunities, and negotiating power for future contracts.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Retailers depend on consistent product availability to maintain their own customer relationships. When you can’t deliver, you’re not just losing current sales. You’re risking shelf space allocation, promotional opportunities, and negotiating power for future contracts.</p>
 
             </div>
           </AnimatedSection>
@@ -137,7 +137,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Supply Chain Resilience: The Foundation</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Resilient supply chains share common characteristics that help them absorb shocks and recover quickly. These aren’t expensive overhauls—they’re strategic modifications to how you plan, source, and operate.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Resilient supply chains share common characteristics that help them absorb shocks and recover quickly. These aren’t expensive overhauls. They’re strategic modifications to how you plan, source, and operate.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Diversification Strategies</h3>
 
@@ -145,7 +145,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Geographic Diversification: Spread your supplier base across different regions and countries. This protects against localized disruptions like natural disasters, political instability, or regional labor strikes. Aim for no more than 30% of critical supplies from any single geographic area.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Supplier Portfolio Management: Maintain relationships with 2-3 suppliers for critical components, even if you primarily use one. These backup relationships require ongoing investment—small orders, regular communication, and contract maintenance—but they provide immediate alternatives when needed.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Supplier Portfolio Management: Maintain relationships with 2-3 suppliers for critical components, even if you primarily use one. These backup relationships require ongoing investment, including small orders, regular communication, and contract maintenance, but they provide immediate alternatives when needed.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Production Capability Spread: Don’t concentrate all production in mega-facilities. Smaller, distributed production capabilities offer more flexibility and reduce the impact of single-facility shutdowns.</p>
 
@@ -228,7 +228,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Supplier Risk Evaluation</h3>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Regular supplier risk assessments should cover financial stability, operational capabilities, geographic risks, and compliance standards. This isn’t a one-time evaluation—supplier risk profiles change constantly.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Regular supplier risk assessments should cover financial stability, operational capabilities, geographic risks, and compliance standards. This isn’t a one-time evaluation. Supplier risk profiles change constantly.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Key risk indicators to monitor include:</p>
 
@@ -430,7 +430,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Conclusion</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Supply chain disruptions aren’t going away—they’re becoming more frequent and complex. CPG companies that invest in resilience and flexibility now will have significant competitive advantages when the next major disruption hits. The question isn’t whether you’ll face supply chain challenges, but whether you’ll be prepared to handle them effectively.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Supply chain disruptions aren’t going away. They’re becoming more frequent and complex. CPG companies that invest in resilience and flexibility now will have significant competitive advantages when the next major disruption hits. The question isn’t whether you’ll face supply chain challenges, but whether you’ll be prepared to handle them effectively.</p>
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Building resilient supply chains requires strategic thinking, systematic implementation, and ongoing commitment. Start with the biggest risks and quick wins, then gradually build more sophisticated capabilities over time. The investment you make today in supply chain resilience will pay dividends for years to come.</p>
 

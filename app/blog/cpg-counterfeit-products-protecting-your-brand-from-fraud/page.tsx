@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "How do counterfeit CPG products typically enter the market and harm legitimate brands?",
-    answer: "Most CPG counterfeits enter through third-party marketplaces (Amazon, Walmart.com, Alibaba) where unauthorized sellers list fake products under your brand's ASIN or a near-identical listing. The consumer harm is obvious, but the brand harm is equally damaging — fake products that underperform erode your reviews and reputation.",
+    answer: "Most CPG counterfeits enter through third-party marketplaces (Amazon, Walmart.com, Alibaba) where unauthorized sellers list fake products under your brand's ASIN or a near-identical listing. The consumer harm is obvious, but the brand harm is just as damaging: fake products that underperform erode your reviews and reputation.",
   },
   {
     question: "What is the most effective tool for protecting a CPG brand from counterfeits on Amazon?",
-    answer: "Amazon Brand Registry is the baseline requirement — it gives you access to automated IP protection tools and faster takedown of counterfeit listings. Pair it with serialized QR codes or authentication labels on your physical packaging so consumers and Amazon can verify authenticity.",
+    answer: "Amazon Brand Registry is the baseline requirement: it gives you access to automated IP protection tools and faster takedown of counterfeit listings. Pair it with serialized QR codes or authentication labels on your physical packaging so consumers and Amazon can verify authenticity.",
   },
   {
     question: "What legal steps should a CPG brand take before counterfeits appear, not after?",
-    answer: "Register your trademarks in every market you sell in before launch — trademark registration is the legal foundation for all counterfeit enforcement actions. File in the US, EU, and any manufacturing country (especially China) because IP protection does not cross borders automatically.",
+    answer: "Register your trademarks in every market you sell in before launch. Trademark registration is the legal foundation for all counterfeit enforcement actions. File in the US, EU, and any manufacturing country (especially China) because IP protection does not cross borders automatically.",
   },
   {
     question: "How do you alert consumers to watch for counterfeit versions of your product?",
@@ -68,7 +68,7 @@ export default function CpgCounterfeitProductsBrandFraudPost() {
               <span className="text-beast-pink">Protecting Your Brand from Fraud</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
-              Global counterfeit trade reached $509 billion in 2019, with consumer packaged goods representing the largest target category. For CPG brands, fake products don’t just steal revenue—they destroy decades of carefully built consumer trust and brand equity in a matter of months.
+              Global counterfeit trade reached $509 billion in 2019, with consumer packaged goods representing the largest target category. For CPG brands, fake products don’t just steal revenue. They destroy decades of carefully built consumer trust and brand equity in a matter of months.
             </p>
           </AnimatedSection>
         </div>
@@ -84,7 +84,7 @@ export default function CpgCounterfeitProductsBrandFraudPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Counterfeit consumer goods have evolved far beyond the obvious knock-offs sold on street corners. Today’s sophisticated counterfeiters create products so convincing that even trained professionals struggle to identify fakes. This reality hits CPG companies particularly hard because their success depends on consistent quality and consumer trust.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">The numbers tell a sobering story. Beauty products account for 13% of all counterfeit goods seized globally, while food and beverage counterfeits have increased by 70% in the past five years. These aren’t just luxury items—everyday products like baby formula, medications, and household cleaners face regular counterfeiting threats.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">The numbers tell a sobering story. Beauty products account for 13% of all counterfeit goods seized globally, while food and beverage counterfeits have increased by 70% in the past five years. These aren’t just luxury items. Everyday products like baby formula, medications, and household cleaners face regular counterfeiting threats.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Why CPG Brands Are Prime Targets</h3>
 
@@ -159,7 +159,7 @@ export default function CpgCounterfeitProductsBrandFraudPost() {
 
               <h2 className="font-display text-3xl font-bold text-beast-black mt-0 mb-4">Building Your Anti-Counterfeiting Defense Strategy</h2>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective brand protection requires a multi-layered approach that combines technology, legal action, and strategic partnerships. The most successful CPG companies don’t wait for counterfeiting problems to emerge—they build protection into their business model from the start.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Effective brand protection requires a multi-layered approach that combines technology, legal action, and strategic partnerships. The most successful CPG companies don’t wait for counterfeiting problems to emerge. They build protection into their business model from the start.</p>
 
               <h3 className="font-display text-xl font-bold text-beast-black mb-2 mt-6">Product Authentication Technologies</h3>
 
@@ -351,7 +351,7 @@ export default function CpgCounterfeitProductsBrandFraudPost() {
 
               <p className="text-[#4A4A4A] leading-relaxed mb-4">Protecting your CPG brand from counterfeiting requires ongoing commitment and resources, but the investment pays dividends in preserved brand equity, consumer trust, and market stability. The most successful brands treat anti-counterfeiting as an integral part of their business strategy rather than a reactive cost center.</p>
 
-              <p className="text-[#4A4A4A] leading-relaxed mb-4">Building effective protection requires expertise across multiple disciplines—from legal and technology to marketing and operations. The complexity of modern counterfeiting threats means that many businesses benefit from partnering with specialists who understand both the technical and strategic aspects of brand protection.</p>
+              <p className="text-[#4A4A4A] leading-relaxed mb-4">Building effective protection requires expertise across multiple disciplines, from legal and technology to marketing and operations. The complexity of modern counterfeiting threats means that many businesses benefit from partnering with specialists who understand both the technical and strategic aspects of brand protection.</p>
 
             </div>
           </AnimatedSection>

@@ -176,7 +176,7 @@ function Badge({ badge }: { badge: ReviewBadge }) {
     return (
       <div
         className={`${card} opacity-60 shadow-[0_2px_8px_rgba(0,0,0,0.05)]`}
-        aria-label={`${badge.name} — reviews coming soon`}
+        aria-label={`${badge.name}: reviews coming soon`}
       >
         {inner}
       </div>

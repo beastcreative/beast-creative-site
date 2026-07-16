@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 const faqs = [
   { question: "What is CPG marketing and how is it different?", answer: "CPG marketing focuses on building consumer databases, driving retail pull-through, and creating the proof that retail buyers require. Unlike general digital marketing, CPG campaigns are designed to generate first-party data and retail-readiness evidence." },
   { question: "How do you build first-party consumer data?", answer: "Primarily through contest and sweepstakes mechanics that capture consumer name, email, and zip code. We've collected 36,581 emails on a $6,000 budget for Sun-Bird Seasonings." },
-  { question: "How much does a sweepstakes campaign cost?", answer: "Campaign production starts at $2,500–$5,000. Ad spend is client-direct to platforms — we recommend $3,000–$10,000 for meaningful data volume." },
+  { question: "How much does a sweepstakes campaign cost?", answer: "Campaign production starts at $2,500 to $5,000. Ad spend is client-direct to platforms, and we recommend $3,000 to $10,000 for meaningful data volume." },
   { question: "How long before we see results?", answer: "Sweepstakes campaigns deliver data in real-time. Our Williams BTS campaign hit 22,043 entries in the campaign window on $4,000." },
-  { question: "Do you work with brands across the country?", answer: "Absolutely. We work with brands nationally — all our digital services are fully location-agnostic. We've run campaigns for brands across the US." },
+  { question: "Do you work with brands across the country?", answer: "Absolutely. We work with brands nationally, since all our digital services are fully location-agnostic. We've run campaigns for brands across the US." },
 ];
 
 export default function CpgMarketingServicePage() {
@@ -29,13 +29,13 @@ export default function CpgMarketingServicePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-near-black to-beast-black" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-20">
           <AnimatedSection>
-            <p className="section-eyebrow text-beast-pink mb-4">Service — CPG Marketing</p>
+            <p className="section-eyebrow text-beast-pink mb-4">Service: CPG Marketing</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               CPG Marketing Services That Build Brands,{" "}
               <span className="text-beast-pink">Databases, and Retail Proof.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              From emerging founders to multi-brand holding companies — Beast&apos;s CPG playbook has generated over 72,000 campaign entries for food and beverage brands at a fraction of industry cost.
+              From emerging founders to multi-brand holding companies, Beast&apos;s CPG playbook has generated over 72,000 campaign entries for food and beverage brands at a fraction of industry cost.
             </p>
           </AnimatedSection>
         </div>
