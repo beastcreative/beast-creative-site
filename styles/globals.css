@@ -754,8 +754,9 @@ select.form-input option {
 .led-marquee-track:hover { animation-play-state: paused; }
 
 /* Proof-reel flip cards — hover (desktop) or tap (mobile, .is-flipped) reveals
-   the stats on the back. No border; full-bleed image front. */
-.reel-card { perspective: 1200px; cursor: pointer; }
+   the stats on the back. No border; full-bleed image front. Higher perspective
+   = less vertical bulge during the flip (the container also pads to give room). */
+.reel-card { perspective: 1800px; cursor: pointer; }
 .reel-inner {
   position: relative;
   width: 100%;
@@ -774,6 +775,33 @@ select.form-input option {
   backface-visibility: hidden;
 }
 .reel-back { transform: rotateY(180deg); }
+
+/* Cursor-following pink edge glow (design-system border glow), shown while
+   flipped/hovered. Overlay + gradient-border mask so only the edge lights and
+   the front stays borderless. */
+.reel-edge {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  border-radius: 0.75rem;
+  padding: 1.6px;
+  background: radial-gradient(190px circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 17, 152, 0.95) 0%,
+    rgba(255, 17, 152, 0.28) 48%,
+    transparent 74%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease, box-shadow 0.35s ease;
+}
+.reel-card:hover .reel-edge,
+.reel-card.is-flipped .reel-edge {
+  opacity: 1;
+  box-shadow: 0 0 30px rgba(255, 17, 152, 0.22);
+}
 @media (prefers-reduced-motion: reduce) {
   .reel-inner { transition: none; }
 }

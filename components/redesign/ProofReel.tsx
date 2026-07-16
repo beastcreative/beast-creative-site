@@ -65,16 +65,26 @@ export default function ProofReel() {
   const onTap = (e: MouseEvent<HTMLDivElement>) => {
     e.currentTarget.classList.toggle("is-flipped");
   };
+  // Cursor position drives the edge glow (design-system border glow).
+  const onMove = (e: MouseEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--x", `${e.clientX - r.left}px`);
+    el.style.setProperty("--y", `${e.clientY - r.top}px`);
+  };
 
   return (
-    <div className="overflow-hidden">
+    // py-8 gives the 3D flip room so the card isn't clipped top/bottom.
+    <div className="overflow-hidden py-8">
       <div className="led-marquee-track gap-5 px-3">
         {[...reel, ...reel].map((it, i) => (
           <div
             key={i}
             onClick={onTap}
+            onMouseMove={onMove}
             className="reel-card h-52 w-[19rem] shrink-0 lg:h-64 lg:w-[24rem]"
           >
+            <span className="reel-edge" aria-hidden="true" />
             <div className="reel-inner">
               {/* FRONT — campaign visual */}
               <figure className="reel-face group bg-near-black">
