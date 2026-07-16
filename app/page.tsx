@@ -18,11 +18,11 @@ import LogoMarquee from "@/components/redesign/LogoMarquee";
 export const metadata: Metadata = {
   title: "San Antonio SEO & AEO Agency | Beast Creative",
   description:
-    "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
+    "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found and cited by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
   openGraph: {
     title: "San Antonio SEO & AEO Agency | Beast Creative",
     description:
-      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
+      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found and cited by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
     type: "website",
     url: "https://beastcreativeagency.com",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "San Antonio SEO & AEO Agency | Beast Creative",
     description:
-      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found — and cited — by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
+      "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found and cited by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
   },
   alternates: {
     canonical: "https://beastcreativeagency.com",
@@ -46,19 +46,19 @@ const homepageFaqs = [
   },
   {
     q: "Do you work with local San Antonio businesses?",
-    a: "Yes — and it's a big part of what we do. We work with local San Antonio restaurants, service companies, startups, and regional businesses alongside national CPG brands. If you're in San Antonio and need a real agency with documented results, not just a freelancer, we're built for that.",
+    a: "Yes, and it's a big part of what we do. We work with local San Antonio restaurants, service companies, startups, and regional businesses alongside national CPG brands. If you're in San Antonio and need a real agency with documented results, not just a freelancer, we're built for that.",
   },
   {
     q: "How much does web design cost in San Antonio?",
-    a: "Our web design projects typically start at $3,500 for marketing sites and $5,000+ for e-commerce. Every site is built on Next.js or Shopify — mobile-first, performance-optimized, and SEO-ready from day one. We don't use templates; every build is custom to your brand and conversion goals.",
+    a: "Our web design projects typically start at $3,500 for marketing sites and $5,000+ for e-commerce. Every site is built on Next.js or Shopify, so it's mobile-first, performance-optimized, and SEO-ready from day one. We don't use templates; every build is custom to your brand and conversion goals.",
   },
   {
     q: "What's the difference between SEO and AEO?",
-    a: "SEO (Search Engine Optimization) helps your brand rank in Google's traditional search results. AEO (Answer Engine Optimization) goes further — structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews cite your brand when consumers ask questions. Both are essential for modern visibility, and Beast is one of the few San Antonio agencies offering both.",
+    a: "SEO (Search Engine Optimization) helps your brand rank in Google's traditional search results. AEO (Answer Engine Optimization) goes further by structuring your content so AI tools like ChatGPT, Perplexity, and Google AI Overviews cite your brand when consumers ask questions. Both are essential for modern visibility, and Beast is one of the few San Antonio agencies offering both.",
   },
   {
     q: "What makes Beast Creative different from other San Antonio agencies?",
-    a: "We publish our results by name. No anonymous case studies, no inflated projections. Every number on our site — 7.03% CTR, 36,581 entries, 500%+ MRR growth — is attributed to a real client. We also run AI-assisted operations through our proprietary agent Segundo, which lets us move faster and cost less than traditional agencies.",
+    a: "We publish our results by name. No anonymous case studies, no inflated projections. Every number on our site is tied to a real client: 7.03% CTR, 36,581 entries, 500%+ MRR growth. We also run AI-assisted operations through our proprietary agent Segundo, which lets us move faster and cost less than traditional agencies.",
   },
   {
     q: "Do you work outside San Antonio?",
@@ -72,7 +72,7 @@ const caseStudies = [
     campaign: "Idea to Launched SaaS in One Week",
     heroStat: "1 Week",
     heroStatLabel: "idea to launched SaaS",
-    description: "We built and launched our own AI SaaS for teachers — full product, billing, and funnel — in one week, then scaled it state by state.",
+    description: "In one week we built and launched our own AI SaaS for teachers, complete with product, billing, and funnel. Then we scaled it state by state.",
     category: "App & SaaS Dev",
     href: "/work/teksbuilder",
     image: "/assets/teksbuilder-hero.jpg",
@@ -89,10 +89,10 @@ const caseStudies = [
   },
   {
     client: "Sun-Bird Seasonings",
-    campaign: "Bird Herd — Walmart Rollout",
+    campaign: "Bird Herd: Walmart Rollout",
     heroStat: "7.03%",
     heroStatLabel: "CTR vs 0.89% avg",
-    description: "36,581 consumer emails collected on $6,000 — nearly 8x industry benchmark CTR.",
+    description: "36,581 consumer emails collected on $6,000, at nearly 8x the industry benchmark CTR.",
     category: "CPG Marketing",
     href: "/work/sun-bird",
     image: "/assets/sunbird-ad-green.jpg",
@@ -102,7 +102,7 @@ const caseStudies = [
     campaign: "CBD E-Commerce Growth",
     heroStat: "500%+",
     heroStatLabel: "MRR growth",
-    description: "SEO + social combo cracked the code on CBD marketing restrictions — monthly revenue up 500%+.",
+    description: "SEO and social cracked the code on CBD marketing restrictions, and monthly revenue climbed 500%+.",
     category: "SEO + Social",
     href: "/work/sweet-sensi",
     image: "/assets/sweet-sensi-gummies.jpg",
@@ -118,12 +118,12 @@ const services = [
   },
   {
     name: "Web Design & Development",
-    desc: "Custom Next.js and Shopify builds — mobile-first, Lighthouse 90+, conversion-optimized. Built to rank and built to sell.",
+    desc: "Custom Next.js and Shopify builds that are mobile-first, Lighthouse 90+, and conversion-optimized. Built to rank and built to sell.",
     href: "/services/web-design",
   },
   {
     name: "AI App & SaaS Development",
-    desc: "SaaS products, AI apps, and MVPs — from idea to launched product in weeks. We built TEKSBuilder, our own live SaaS, in one.",
+    desc: "SaaS products, AI apps, and MVPs, taken from idea to launched product in weeks. We built TEKSBuilder, our own live SaaS, in one.",
     href: "/services/app-development",
   },
   {
@@ -138,7 +138,7 @@ const services = [
   },
   {
     name: "AI Content Production",
-    desc: "Social content, video, and copy at scale — produced with AI at 90%+ lower cost than traditional production.",
+    desc: "Social content, video, and copy at scale, produced with AI at 90%+ lower cost than traditional production.",
     href: "/services/content-production",
   },
   {
@@ -150,8 +150,8 @@ const services = [
 
 const process = [
   { step: "01", name: "Discover", desc: "Deep-dive audit and competitor gap analysis. We find where your brand is losing ground and where the fastest wins are hiding." },
-  { step: "02", name: "Strategize", desc: "A campaign plan built around your specific goals, audience, and budget — not a template pulled from a drawer." },
-  { step: "03", name: "Execute", desc: "Creative launches. Media runs. Content goes live. We move fast and optimize faster — daily monitoring, real-time pivots." },
+  { step: "02", name: "Strategize", desc: "A campaign plan built around your specific goals, audience, and budget, not a template pulled from a drawer." },
+  { step: "03", name: "Execute", desc: "Creative launches. Media runs. Content goes live. We move fast and optimize faster, with daily monitoring and real-time pivots." },
   { step: "04", name: "Optimize", desc: "Monthly reporting, A/B testing, and continuous refinement. We don't set it and forget it." },
 ];
 
@@ -217,7 +217,7 @@ export default function HomePage() {
               </p>
 
               <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-black/65">
-                The way people search is changing fast — more of your customers now get answers straight from AI instead of clicking to websites. We make sure San Antonio businesses show up in that new layer: cited and recommended by ChatGPT, Google&apos;s AI Overviews, and Perplexity, not left behind by it. It&apos;s the same approach that drove 7x results for national brands, pointed at your market.
+                The way people search is changing fast. More of your customers now get answers straight from AI instead of clicking to websites. We make sure San Antonio businesses show up in that new layer: cited and recommended by ChatGPT, Google&apos;s AI Overviews, and Perplexity, not left behind by it. It&apos;s the same approach that drove 7x results for national brands, pointed at your market.
               </p>
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -274,7 +274,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border led-rule-dark bg-white/[0.07] lg:grid-cols-4">
             {[
-              { node: <StatCounter value={36581} label="Contest Entries" sublabel="vs 10K goal — 3.6x" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "01" },
+              { node: <StatCounter value={36581} label="Contest Entries" sublabel="vs 10K goal · 3.6x" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "01" },
               { node: <StatCounter value={7.03} suffix="%" decimals={2} label="CTR Achieved" sublabel="vs 0.89% industry avg" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "02" },
               { node: <StatCounter value={0.12} prefix="$" decimals={2} label="Cost Per Click" sublabel="vs $0.28 industry avg" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "03" },
               { node: <StatCounter value={500} suffix="%+" label="MRR Growth" sublabel="Sweet Sensi" valueClassName="text-beast-yellow lg:!text-6xl" labelClassName="text-white/70" sublabelClassName="text-white/40" />, idx: "04" },
@@ -312,7 +312,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.10)]">
                 <Image
                   src="/assets/williams-bts-hero.jpg"
-                  alt="Beast Creative campaign work — Williams Foods back-to-school"
+                  alt="Beast Creative campaign work for Williams Foods back-to-school"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover"
@@ -330,10 +330,10 @@ export default function HomePage() {
                 Beast Creative.
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-black/70">
-                At Beast Creative Agency — San Antonio&apos;s SEO, AEO &amp; GEO team — we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results — every single month.
+                At Beast Creative Agency, San Antonio&apos;s SEO, AEO &amp; GEO team, we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results, every single month.
               </p>
               <p className="mt-4 leading-relaxed text-black/60">
-                Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients — the same rigor, the same standards, regardless of size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
+                Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients, holding the same rigor and the same standards no matter the size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
               </p>
 
               <p className="led-label mt-8 text-beast-black">Who We Serve</p>
@@ -341,7 +341,7 @@ export default function HomePage() {
                 {[
                   "San Antonio businesses that need a real agency, not a freelancer",
                   "Restaurants, service companies, and local brands ready to grow",
-                  "Regional brands going national — CPG, retail, e-commerce",
+                  "Regional brands going national in CPG, retail, and e-commerce",
                   "Any ambitious business tired of agencies that talk more than they deliver",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 border-b led-rule py-3">
@@ -414,7 +414,7 @@ export default function HomePage() {
                 </div>
                 <div className="relative z-10 shrink-0 lg:max-w-sm">
                   <p className="leading-relaxed text-white/85">
-                    Rank in Google and get cited by ChatGPT, Gemini, and Perplexity. As AI answers more of every search, we make sure San Antonio businesses are the answer — not an afterthought.
+                    Rank in Google and get cited by ChatGPT, Gemini, and Perplexity. As AI answers more of every search, we make sure San Antonio businesses are the answer, not an afterthought.
                   </p>
                   <span className="led-label mt-6 inline-flex items-center gap-2 text-white transition-all group-hover:gap-3.5">
                     Explore Service →
@@ -472,10 +472,10 @@ export default function HomePage() {
               <span className="text-beast-pink">Get Cited Instead.</span>
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
-              AI now answers your customers before they ever reach a website — Google&apos;s AI Overviews, ChatGPT, Perplexity. The industry calls it &ldquo;Google Zero,&rdquo; and it&apos;s already changing who gets found. Ranking #1 matters a little less every month. Being the source AI cites matters a lot more.
+              AI now answers your customers before they ever reach a website, through Google&apos;s AI Overviews, ChatGPT, and Perplexity. The industry calls it &ldquo;Google Zero,&rdquo; and it&apos;s already changing who gets found. Ranking #1 matters a little less every month. Being the source AI cites matters a lot more.
             </p>
             <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-white/55">
-              We get San Antonio businesses into that answer layer — structured, credible, and recommended — so you stay visible as search gets rewritten. The early movers win this, and most of your competitors haven&apos;t started.
+              We get San Antonio businesses into that answer layer, structured, credible, and recommended, so you stay visible as search gets rewritten. The early movers win this, and most of your competitors haven&apos;t started.
             </p>
             <div className="mt-10">
               <IconButton href="/services/seo-aeo" variant="pink">See How AEO Works</IconButton>
@@ -497,7 +497,7 @@ export default function HomePage() {
                 <span className="text-beast-pink">Local Business Availability.</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-black/65">
-                We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client — whether you&apos;re a San Antonio restaurant or a regional brand going national.
+                We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client, whether you&apos;re a San Antonio restaurant or a regional brand going national.
               </p>
               <div className="mt-8">
                 <IconButton href="/cpg" variant="white">See Our CPG Playbook</IconButton>
@@ -575,7 +575,7 @@ export default function HomePage() {
                 Tell us about your business and we&apos;ll show you exactly where you stand in AI search: what&apos;s working, what&apos;s missing, and what it&apos;d take to own your San Antonio market. No pitch, no pressure.
               </p>
               <div className="mt-8">
-                <InstantContact message="Hi Beast — I saw your site and want to talk about my brand's search visibility." />
+                <InstantContact message="Hi Beast, I saw your site and want to talk about my brand's search visibility." />
               </div>
               <div className="mt-6">
                 <p className="led-label mb-3 text-white/45">Prefer a scheduled call?</p>
