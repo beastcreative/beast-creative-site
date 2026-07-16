@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { MouseEvent } from "react";
+import DragScroll from "@/components/redesign/DragScroll";
 
 /**
  * Trusted-by logos as clickable light "cards" in an auto-scrolling marquee,
@@ -39,32 +40,29 @@ export default function LogoMarquee() {
   };
 
   return (
-    // overflow-x-clip clips the horizontal marquee while leaving vertical
-    // visible, so the hover lift + shadow are never cut off top/bottom.
-    <div className="overflow-x-clip py-4">
-      <div className="led-marquee-track gap-4 px-4">
-        {[...logos, ...logos].map((l, i) => (
-          <Link
-            key={i}
-            href={l.href}
-            onMouseMove={onMove}
-            onMouseLeave={onLeave}
-            aria-label={`View ${l.alt} case study`}
-            className="led-logo-wrap group block h-28 w-56 shrink-0"
-          >
-            <div className="led-logo-inner flex items-center justify-center px-8">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={l.src}
-                alt={l.alt}
-                loading="lazy"
-                className="max-h-9 w-auto max-w-[75%] object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-90"
-                style={{ filter: "brightness(0)" }}
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
+    <DragScroll speed={0.5} gapClass="gap-4" className="py-4" ariaLabel="Trusted brands — drag to explore">
+      {[...logos, ...logos].map((l, i) => (
+        <Link
+          key={i}
+          href={l.href}
+          onMouseMove={onMove}
+          onMouseLeave={onLeave}
+          aria-label={`View ${l.alt} case study`}
+          className="led-logo-wrap group block h-28 w-56 shrink-0"
+        >
+          <div className="led-logo-inner flex items-center justify-center px-8">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={l.src}
+              alt={l.alt}
+              loading="lazy"
+              draggable={false}
+              className="max-h-9 w-auto max-w-[75%] object-contain opacity-55 transition-opacity duration-300 group-hover:opacity-90"
+              style={{ filter: "brightness(0)" }}
+            />
+          </div>
+        </Link>
+      ))}
+    </DragScroll>
   );
 }
