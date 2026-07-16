@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import IconButton from "@/components/ui/IconButton";
-import AnimatedCheckmark from "@/components/ui/AnimatedCheckmark";
 
 const schema = z.object({
   name: z.string().min(2, "Name is required").max(100),
@@ -21,7 +21,8 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function CpgLeadForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
+  const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState("");
 
   const {
@@ -39,25 +40,12 @@ export default function CpgLeadForm() {
         body: JSON.stringify({ ...data, service: "CPG Marketing" }),
       });
       if (!res.ok) throw new Error("Failed");
-      setSubmitted(true);
+      setRedirecting(true);
+      router.push("/thank-you");
     } catch {
       setError("Something went wrong. Text us at (210) 332-0567.");
     }
   };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-center text-center py-12 gap-4">
-        <div className="w-16 h-16 rounded-full bg-beast-pink/20 border border-beast-pink/40 flex items-center justify-center">
-          <AnimatedCheckmark className="w-8 h-8" />
-        </div>
-        <h3 className="font-display text-2xl font-bold text-white">We Got It!</h3>
-        <p className="text-gray-400 text-sm max-w-sm">
-          We&apos;ll review your submission and reach out within 1 business day with a clear picture of what we&apos;d do for your brand.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
@@ -198,8 +186,8 @@ export default function CpgLeadForm() {
       {error && (
         <p role="alert" className="text-red-400 text-sm">{error}</p>
       )}
-      <IconButton type="submit" icon="send" disabled={isSubmitting} className="w-full justify-center">
-        {isSubmitting ? "Sending..." : "Send My Message"}
+      <IconButton type="submit" icon="send" disabled={isSubmitting || redirecting} className="w-full justify-center">
+        {isSubmitting || redirecting ? "Sending..." : "Send My Message"}
       </IconButton>
       <p className="text-xs text-gray-600 text-center">
         No spam. No commitments. We&apos;ll respond within 1 business day.

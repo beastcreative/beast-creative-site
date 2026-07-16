@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import IconButton from "@/components/ui/IconButton";
-import AnimatedCheckmark from "@/components/ui/AnimatedCheckmark";
 
 const services = [
   "CPG Marketing",
@@ -31,7 +31,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
     message: "",
     website: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -45,7 +45,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
     return () => document.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
-  // Focus trap — re-runs when submitted changes (different focusable set after success)
+  // Focus trap
   useEffect(() => {
     const modal = modalRef.current;
     if (!modal) return;
@@ -67,7 +67,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
     };
     document.addEventListener("keydown", handleTab);
     return () => document.removeEventListener("keydown", handleTab);
-  }, [submitted]);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,10 +80,10 @@ export default function GetStartedModal({ selected, onClose }: Props) {
         body: JSON.stringify({ ...form, services: selected }),
       });
       if (!res.ok) throw new Error("Failed to send");
-      setSubmitted(true);
+      router.push("/thank-you");
+      onClose();
     } catch {
       setError("Something went wrong. Please try again or text us at (210) 332-0567.");
-    } finally {
       setLoading(false);
     }
   };
@@ -113,16 +113,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
         </button>
 
         <div className="p-8 lg:p-10">
-          {submitted ? (
-            <div className="text-center py-8">
-              <div className="w-14 h-14 rounded-full bg-beast-pink/10 flex items-center justify-center mx-auto mb-4">
-                <AnimatedCheckmark className="w-7 h-7" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-beast-black mb-2">You&apos;re on our radar.</h3>
-              <p className="text-gray-500">We&apos;ll reach out within one business day.</p>
-            </div>
-          ) : (
-            <>
+          <>
               <div className="text-center mb-8">
                 <h2 ref={titleRef} id="gs-modal-title" tabIndex={-1} className="font-display text-3xl font-bold text-beast-black mb-2 outline-none">
                   Let&apos;s Talk About Better Results.
@@ -228,8 +219,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
                   {loading ? "Sending..." : "See Where You Stand in AI Search"}
                 </IconButton>
               </form>
-            </>
-          )}
+          </>
         </div>
       </div>
     </div>
