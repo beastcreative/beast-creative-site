@@ -20,8 +20,49 @@ const schema = z.object({
   contact: z.string().max(254).optional(),
   sessionId: z.string().max(64).optional(),
   page: z.string().max(200).optional(),
+  first: z.boolean().optional(),
+  threadTs: z
+    .string()
+    .regex(/^\d+\.\d+$/)
+    .optional(),
   website: z.string().max(0).optional(),
 });
+
+const SITE_LABEL = "BEAST";
+const SITE_URL = "https://beastcreativeagency.com";
+
+/** "U123,U456" -> "<@U123> <@U456>" — pings on each NEW conversation. */
+function mentions(): string {
+  return (process.env.SLACK_CHAT_MENTIONS ?? "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean)
+    .map((id) => `<@${id}>`)
+    .join(" ");
+}
+
+async function slackFetch(url: string, body: object, token: string) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10_000);
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+    const json = await res.json();
+    if (!res.ok || !json.ok) {
+      throw new Error(`Slack API error: ${json.error ?? res.status}`);
+    }
+    return json;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
 export async function POST(request: NextRequest) {
   const ip =
@@ -38,6 +79,49 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true }, { status: 200 });
     }
 
+    const session = data.sessionId?.slice(0, 8) ?? "unknown";
+    const botToken = process.env.SLACK_BOT_TOKEN;
+    const channel = process.env.SLACK_CHAT_CHANNEL_ID;
+
+    // Two-way mode: post via the bot into a per-visitor thread. Replies in
+    // that thread are read back by /api/chat/poll and shown in the widget.
+    const pageUrl = data.page ? `${SITE_URL}${data.page}` : SITE_URL;
+    const contactLine = data.contact ? `\n*Reply to:* ${data.contact}` : "";
+    const quoted = `>${data.message.replace(/\n/g, "\n>")}`;
+
+    if (botToken && channel) {
+      if (data.threadTs) {
+        await slackFetch(
+          "https://slack.com/api/chat.postMessage",
+          { channel, thread_ts: data.threadTs, text: `${quoted}${contactLine}` },
+          botToken
+        );
+        return NextResponse.json(
+          { success: true, threadTs: data.threadTs },
+          { status: 200 }
+        );
+      }
+
+      const ping = mentions();
+      const parent = await slackFetch(
+        "https://slack.com/api/chat.postMessage",
+        {
+          channel,
+          text:
+            `${ping ? `${ping} ` : ""}:speech_balloon: *New chat — ${SITE_LABEL} site*\n` +
+            `*Visitor:* \`${session}\`  ·  *Page:* ${pageUrl}` +
+            `${contactLine}\n${quoted}\n` +
+            `_Reply in this thread and the visitor sees it live on the site._`,
+        },
+        botToken
+      );
+      return NextResponse.json(
+        { success: true, threadTs: parent.ts },
+        { status: 200 }
+      );
+    }
+
+    // One-way fallback: incoming webhook (no reading back).
     const webhook = process.env.SLACK_CHAT_WEBHOOK_URL;
     if (!webhook) {
       return NextResponse.json(
@@ -46,12 +130,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const session = data.sessionId?.slice(0, 8) ?? "unknown";
+    const ping = data.first ? mentions() : "";
     const lines = [
-      `:speech_balloon: *Site chat* — visitor \`${session}\``,
-      data.page ? `*Page:* ${data.page}` : null,
+      `${ping ? `${ping} ` : ""}:speech_balloon: *${data.first ? "New chat" : "Follow-up"} — ${SITE_LABEL} site* — visitor \`${session}\``,
+      `*Page:* ${pageUrl}`,
       data.contact ? `*Reply to:* ${data.contact}` : null,
-      `>${data.message.replace(/\n/g, "\n>")}`,
+      quoted,
     ].filter(Boolean);
 
     const controller = new AbortController();

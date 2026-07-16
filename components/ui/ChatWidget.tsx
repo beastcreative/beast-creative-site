@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { PHONE_DISPLAY } from "@/lib/contact";
 
@@ -16,7 +16,7 @@ const GREETING: ChatMessage = {
 
 const ASK_CONTACT: ChatMessage = {
   role: "beast",
-  text: "Got it — a real human just saw that. Drop an email or cell below so we can reply, and keep typing if you've got more to say.",
+  text: "Got it — a real human just saw that. Drop an email or cell below in case we get separated, and keep typing if you've got more to say.",
 };
 
 const spring = { type: "spring" as const, stiffness: 400, damping: 18 };
@@ -42,6 +42,14 @@ function pushDataLayer(event: string) {
   }
 }
 
+function save(key: string, value: string) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch {
+    /* storage unavailable */
+  }
+}
+
 export default function ChatWidget() {
   const [visible, setVisible] = useState(false);
   const [open, setOpen] = useState(false);
@@ -51,8 +59,15 @@ export default function ChatWidget() {
   const [contactSent, setContactSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const [unread, setUnread] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const threadRef = useRef<string | null>(null);
+  const lastTsRef = useRef<string>("");
+  const twoWayRef = useRef(true);
+  const pollingRef = useRef(false);
+  const openRef = useRef(false);
+  openRef.current = open;
 
   // Bounce in after the visitor has had a moment on the page.
   useEffect(() => {
@@ -70,6 +85,8 @@ export default function ChatWidget() {
         setContact(savedContact);
         setContactSent(true);
       }
+      threadRef.current = sessionStorage.getItem("beast-chat-thread");
+      lastTsRef.current = sessionStorage.getItem("beast-chat-lastts") ?? "";
     } catch {
       /* fresh conversation */
     }
@@ -88,6 +105,7 @@ export default function ChatWidget() {
   useEffect(() => {
     if (open) {
       inputRef.current?.focus();
+      setUnread(0);
       pushDataLayer("chat_opened");
     }
   }, [open]);
@@ -96,7 +114,51 @@ export default function ChatWidget() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
   }, [messages, open]);
 
-  const send = async (text: string, contactInfo?: string) => {
+  // Poll the Slack thread for human replies while a conversation exists.
+  const poll = useCallback(async () => {
+    if (
+      pollingRef.current ||
+      !twoWayRef.current ||
+      !threadRef.current ||
+      document.visibilityState !== "visible"
+    ) {
+      return;
+    }
+    pollingRef.current = true;
+    try {
+      const params = new URLSearchParams({ thread: threadRef.current });
+      if (lastTsRef.current) params.set("after", lastTsRef.current);
+      const res = await fetch(`/api/chat/poll?${params}`);
+      if (!res.ok) return;
+      const data: { twoWay: boolean; replies: { ts: string; text: string }[] } =
+        await res.json();
+      if (!data.twoWay) {
+        twoWayRef.current = false;
+        return;
+      }
+      if (data.replies.length) {
+        lastTsRef.current = data.replies[data.replies.length - 1].ts;
+        save("beast-chat-lastts", lastTsRef.current);
+        setMessages((prev) => [
+          ...prev,
+          ...data.replies.map((r) => ({ role: "beast" as const, text: r.text })),
+        ]);
+        if (!openRef.current) setUnread((n) => n + data.replies.length);
+      }
+    } catch {
+      /* transient network error — next tick retries */
+    } finally {
+      pollingRef.current = false;
+    }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(poll, 4000);
+    poll();
+    return () => clearInterval(interval);
+  }, [poll]);
+
+  const send = async (text: string, contactInfo?: string, first?: boolean) => {
     const res = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -105,9 +167,16 @@ export default function ChatWidget() {
         contact: contactInfo || undefined,
         sessionId: getSessionId(),
         page: window.location.pathname,
+        first: first || undefined,
+        threadTs: threadRef.current || undefined,
       }),
     });
     if (!res.ok) throw new Error("Failed to send");
+    const data: { threadTs?: string } = await res.json();
+    if (data.threadTs && !threadRef.current) {
+      threadRef.current = data.threadTs;
+      save("beast-chat-thread", data.threadTs);
+    }
   };
 
   const handleSend = async (e: React.FormEvent) => {
@@ -117,7 +186,11 @@ export default function ChatWidget() {
     setSending(true);
     setError("");
     try {
-      await send(text, contact.trim() || undefined);
+      await send(
+        text,
+        contact.trim() || undefined,
+        !messages.some((m) => m.role === "visitor")
+      );
       pushDataLayer("chat_message_sent");
       setDraft("");
       setMessages((prev) => {
@@ -144,16 +217,12 @@ export default function ChatWidget() {
     try {
       await send(`Visitor left contact info: ${value}`, value);
       setContactSent(true);
-      try {
-        sessionStorage.setItem("beast-chat-contact", value);
-      } catch {
-        /* storage unavailable */
-      }
+      save("beast-chat-contact", value);
       setMessages((prev) => [
         ...prev,
         {
           role: "beast",
-          text: "Perfect. You'll hear from us fast — usually within the hour during business hours.",
+          text: "Perfect. Keep this window open — replies land right here. We're quick during business hours.",
         },
       ]);
     } catch {
@@ -296,8 +365,13 @@ export default function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Tuck chat away" : "Open chat — real human here"}
         aria-expanded={open}
-        className="flex items-center gap-2.5 rounded-full bg-beast-pink text-white font-bold text-sm pl-4 pr-5 py-3 shadow-lg shadow-beast-pink/30 hover:brightness-110 transition"
+        className="relative flex items-center gap-2.5 rounded-full bg-beast-pink text-white font-bold text-sm pl-4 pr-5 py-3 shadow-lg shadow-beast-pink/30 hover:brightness-110 transition"
       >
+        {unread > 0 && !open && (
+          <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 px-1 rounded-full bg-white text-beast-pink text-xs font-extrabold flex items-center justify-center border-2 border-beast-pink">
+            {unread}
+          </span>
+        )}
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path
             strokeLinecap="round"
