@@ -51,7 +51,7 @@ function sendInternalNotification_(d, route, ids) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
   var priority = route === 'priority_qualified';
-  var subject = (priority ? '[PRIORITY] ' : '') + 'New Growth Assessment — ' + route + ' — ' + d.company_name;
+  var subject = (priority ? '[PRIORITY] ' : '') + 'New Growth Assessment - ' + route + ' - ' + d.company_name;
   var sheetUrl = workbook_().getUrl();
 
   var rows = [
@@ -74,7 +74,7 @@ function sendInternalNotification_(d, route, ids) {
     (ids.briefUrl ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief</a>' : '') + '</p>';
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
-    '<h2 style="margin:0 0 4px">' + (priority ? '🔥 Priority ' : '') + 'New Growth Assessment</h2>' +
+    '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +
     '<p style="color:#888;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
     '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
 

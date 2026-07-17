@@ -43,14 +43,14 @@ function sendDailyDigest() {
   };
 
   var html = '<div style="font-family:Arial,sans-serif;max-width:640px;color:#0A0A0A">' +
-    '<h2>Beast Growth — Daily Digest (' + esc_(today) + ')</h2>' +
-    section('Overdue tasks', overdue, function (t) { return t.task_title + ' — due ' + t.due_date; }) +
-    section("Today's meetings", meetings, function (l) { return l.company_name + ' — ' + l.first_name + ' ' + l.last_name; }) +
-    section('New manual-review leads', manualReview, function (l) { return l.company_name + ' — ' + l.work_email; }) +
+    '<h2>Beast Growth - Daily Digest (' + esc_(today) + ')</h2>' +
+    section('Overdue tasks', overdue, function (t) { return t.task_title + ' - due ' + t.due_date; }) +
+    section("Today's meetings", meetings, function (l) { return l.company_name + ' - ' + l.first_name + ' ' + l.last_name; }) +
+    section('New manual-review leads', manualReview, function (l) { return l.company_name + ' - ' + l.work_email; }) +
     section('Tasks due today', dueToday, function (t) { return t.task_title; }) +
     '</div>';
 
-  GmailApp.sendEmail(recipients.join(','), 'Beast Growth — Daily Digest ' + today, 'Open in Gmail to view the digest.',
+  GmailApp.sendEmail(recipients.join(','), 'Beast Growth - Daily Digest ' + today, 'Open in Gmail to view the digest.',
     { htmlBody: html, name: CONFIG.senderName });
 }
 

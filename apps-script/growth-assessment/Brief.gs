@@ -7,6 +7,48 @@
  * subfolder when DRIVE_ROOT_FOLDER_ID is configured. Returns the doc URL.
  */
 
+/**
+ * initDrive() — create the "Beast Growth Operations" folder tree in the Beast
+ * account's Drive, store its ID in Script Properties (so every future brief
+ * auto-files into "Assessment Briefs"), sweep any loose briefs into it, and move
+ * the Pipeline spreadsheet into "Pipeline". Run once from the editor after
+ * setup(). Idempotent — safe to re-run.
+ */
+function initDrive() {
+  var root = getOrCreateSubfolder_(DriveApp.getRootFolder(), 'Beast Growth Operations');
+  var subs = {};
+  ['Pipeline', 'Assessment Briefs', 'Growth Blueprints', 'Proposals', 'Templates', 'Archive'].forEach(function (n) {
+    subs[n] = getOrCreateSubfolder_(root, n);
+  });
+  PropertiesService.getScriptProperties().setProperty('DRIVE_ROOT_FOLDER_ID', root.getId());
+
+  // Sweep any loose "Growth Assessment Brief" docs from My Drive root.
+  var moved = 0;
+  var files = DriveApp.getRootFolder().getFiles();
+  while (files.hasNext()) {
+    var f = files.next();
+    if (f.getName().indexOf('Growth Assessment Brief') === 0) {
+      subs['Assessment Briefs'].addFile(f);
+      DriveApp.getRootFolder().removeFile(f);
+      moved++;
+    }
+  }
+
+  // Move the Pipeline spreadsheet into the Pipeline subfolder (best-effort).
+  var ssMoved = false;
+  try {
+    var ssFile = DriveApp.getFileById(workbook_().getId());
+    if (ssFile.getParents().hasNext()) {
+      subs['Pipeline'].addFile(ssFile);
+      DriveApp.getRootFolder().removeFile(ssFile);
+      ssMoved = true;
+    }
+  } catch (e) {}
+
+  return 'Drive ready. "Beast Growth Operations" created (id ' + root.getId() + '). ' +
+    moved + ' brief(s) filed; pipeline sheet ' + (ssMoved ? 'moved to Pipeline.' : 'left in place.');
+}
+
 function createInternalBrief_(d, route, ids) {
   var title = 'Growth Assessment Brief — ' + d.company_name + ' — ' + ids.leadId;
   var doc;

@@ -76,7 +76,7 @@ function markBooked_(lead, ev) {
 function sendMeetingBookedInternal_(lead, when) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
-  GmailApp.sendEmail(recipients.join(','), 'Meeting booked — ' + lead.company_name + ' — ' + when,
+  GmailApp.sendEmail(recipients.join(','), 'Meeting booked - ' + lead.company_name + ' - ' + when,
     lead.first_name + ' ' + lead.last_name + ' (' + lead.company_name + ') booked a Growth Assessment for ' + when + '.',
     { name: CONFIG.senderName });
 }

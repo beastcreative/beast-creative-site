@@ -679,7 +679,7 @@ function sendInternalNotification_(d, route, ids) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
   var priority = route === 'priority_qualified';
-  var subject = (priority ? '[PRIORITY] ' : '') + 'New Growth Assessment — ' + route + ' — ' + d.company_name;
+  var subject = (priority ? '[PRIORITY] ' : '') + 'New Growth Assessment - ' + route + ' - ' + d.company_name;
   var sheetUrl = workbook_().getUrl();
 
   var rows = [
@@ -702,7 +702,7 @@ function sendInternalNotification_(d, route, ids) {
     (ids.briefUrl ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief</a>' : '') + '</p>';
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
-    '<h2 style="margin:0 0 4px">' + (priority ? '🔥 Priority ' : '') + 'New Growth Assessment</h2>' +
+    '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +
     '<p style="color:#888;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
     '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
 
@@ -733,6 +733,48 @@ function sendScheduledEmail_(d, meetingWhen, meetLink) {
  * structured doc from scratch. The doc is filed in the "Assessment Briefs"
  * subfolder when DRIVE_ROOT_FOLDER_ID is configured. Returns the doc URL.
  */
+
+/**
+ * initDrive() — create the "Beast Growth Operations" folder tree in the Beast
+ * account's Drive, store its ID in Script Properties (so every future brief
+ * auto-files into "Assessment Briefs"), sweep any loose briefs into it, and move
+ * the Pipeline spreadsheet into "Pipeline". Run once from the editor after
+ * setup(). Idempotent — safe to re-run.
+ */
+function initDrive() {
+  var root = getOrCreateSubfolder_(DriveApp.getRootFolder(), 'Beast Growth Operations');
+  var subs = {};
+  ['Pipeline', 'Assessment Briefs', 'Growth Blueprints', 'Proposals', 'Templates', 'Archive'].forEach(function (n) {
+    subs[n] = getOrCreateSubfolder_(root, n);
+  });
+  PropertiesService.getScriptProperties().setProperty('DRIVE_ROOT_FOLDER_ID', root.getId());
+
+  // Sweep any loose "Growth Assessment Brief" docs from My Drive root.
+  var moved = 0;
+  var files = DriveApp.getRootFolder().getFiles();
+  while (files.hasNext()) {
+    var f = files.next();
+    if (f.getName().indexOf('Growth Assessment Brief') === 0) {
+      subs['Assessment Briefs'].addFile(f);
+      DriveApp.getRootFolder().removeFile(f);
+      moved++;
+    }
+  }
+
+  // Move the Pipeline spreadsheet into the Pipeline subfolder (best-effort).
+  var ssMoved = false;
+  try {
+    var ssFile = DriveApp.getFileById(workbook_().getId());
+    if (ssFile.getParents().hasNext()) {
+      subs['Pipeline'].addFile(ssFile);
+      DriveApp.getRootFolder().removeFile(ssFile);
+      ssMoved = true;
+    }
+  } catch (e) {}
+
+  return 'Drive ready. "Beast Growth Operations" created (id ' + root.getId() + '). ' +
+    moved + ' brief(s) filed; pipeline sheet ' + (ssMoved ? 'moved to Pipeline.' : 'left in place.');
+}
 
 function createInternalBrief_(d, route, ids) {
   var title = 'Growth Assessment Brief — ' + d.company_name + ' — ' + ids.leadId;
@@ -875,14 +917,14 @@ function sendDailyDigest() {
   };
 
   var html = '<div style="font-family:Arial,sans-serif;max-width:640px;color:#0A0A0A">' +
-    '<h2>Beast Growth — Daily Digest (' + esc_(today) + ')</h2>' +
-    section('Overdue tasks', overdue, function (t) { return t.task_title + ' — due ' + t.due_date; }) +
-    section("Today's meetings", meetings, function (l) { return l.company_name + ' — ' + l.first_name + ' ' + l.last_name; }) +
-    section('New manual-review leads', manualReview, function (l) { return l.company_name + ' — ' + l.work_email; }) +
+    '<h2>Beast Growth - Daily Digest (' + esc_(today) + ')</h2>' +
+    section('Overdue tasks', overdue, function (t) { return t.task_title + ' - due ' + t.due_date; }) +
+    section("Today's meetings", meetings, function (l) { return l.company_name + ' - ' + l.first_name + ' ' + l.last_name; }) +
+    section('New manual-review leads', manualReview, function (l) { return l.company_name + ' - ' + l.work_email; }) +
     section('Tasks due today', dueToday, function (t) { return t.task_title; }) +
     '</div>';
 
-  GmailApp.sendEmail(recipients.join(','), 'Beast Growth — Daily Digest ' + today, 'Open in Gmail to view the digest.',
+  GmailApp.sendEmail(recipients.join(','), 'Beast Growth - Daily Digest ' + today, 'Open in Gmail to view the digest.',
     { htmlBody: html, name: CONFIG.senderName });
 }
 
@@ -979,7 +1021,7 @@ function markBooked_(lead, ev) {
 function sendMeetingBookedInternal_(lead, when) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
-  GmailApp.sendEmail(recipients.join(','), 'Meeting booked — ' + lead.company_name + ' — ' + when,
+  GmailApp.sendEmail(recipients.join(','), 'Meeting booked - ' + lead.company_name + ' - ' + when,
     lead.first_name + ' ' + lead.last_name + ' (' + lead.company_name + ') booked a Growth Assessment for ' + when + '.',
     { name: CONFIG.senderName });
 }
