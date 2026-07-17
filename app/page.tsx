@@ -25,12 +25,14 @@ export const metadata: Metadata = {
       "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found and cited by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
     type: "website",
     url: "https://beastcreativeagency.com",
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "San Antonio SEO & AEO Agency | Beast Creative",
     description:
       "Beast Creative is a San Antonio SEO, AEO & GEO agency. We get local businesses found and cited by Google, ChatGPT, Perplexity, and AI search. Real results, documented.",
+    images: ["/og/home.jpg"],
   },
   alternates: {
     canonical: "https://beastcreativeagency.com",

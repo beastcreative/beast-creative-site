@@ -19,9 +19,11 @@ export const metadata: Metadata = {
     siteName: "Beast Creative Agency",
     type: "website",
     locale: "en_US",
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og/home.jpg"],
   },
 };
 
