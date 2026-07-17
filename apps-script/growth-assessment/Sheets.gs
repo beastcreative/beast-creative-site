@@ -43,23 +43,155 @@ function workbook_() {
   return WORKBOOK_CACHE;
 }
 
-/** Create/repair every tab and header row. Idempotent — safe to re-run. */
+/* ── Lookup values (drive dropdowns + document allowed values) ─────── */
+var LOOKUPS = {
+  'Lead Status': ['New', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Proposal Sent', 'Closed Won', 'Closed Lost', 'Nurture'],
+  'Qualification Route': ['priority_qualified', 'qualified', 'manual_review', 'nurture', 'spam'],
+  'Company Type': ['Ecommerce / DTC', 'B2B / SaaS', 'CPG / Consumer Brand', 'Local / Regional Business', 'Startup', 'Other'],
+  'Company Stage': ['Just launched', 'Early-stage', 'Growing', 'Established', 'Enterprise'],
+  'Annual Revenue': ['Under $500K', '$500K – $1M', '$1M – $5M', '$5M – $25M', '$25M+', 'Prefer not to say'],
+  'Primary Goals': ['More qualified leads', 'Higher website conversion', 'Better paid media ROI', 'Stronger brand / positioning', 'More organic & AI search visibility', 'Launch a product or market', 'Better measurement & attribution', 'Retention & repeat revenue'],
+  'Marketing Channels': ['SEO', 'Paid search', 'Paid social', 'Email / lifecycle', 'Content', 'Organic social', 'Influencer / UGC', 'Nothing consistent yet'],
+  'Current Investment': ['Under $2K / mo', '$2K – $5K / mo', '$5K – $10K / mo', '$10K – $25K / mo', '$25K – $50K / mo', '$50K+ / mo'],
+  'Potential Investment': ['Under $2K / mo', '$2K – $5K / mo', '$5K – $10K / mo', '$10K – $25K / mo', '$25K – $50K / mo', '$50K+ / mo', 'Not sure yet'],
+  'Timeline': ['ASAP / this month', '1 – 3 months', '3 – 6 months', 'Just exploring'],
+  'Decision Role': ['I make the decision', "I'm part of the decision", 'I influence the decision', "I'm researching for someone else"],
+  'Speaking With Agencies': ['Yes', 'No', 'Not yet'],
+  'Company Status': ['Active', 'Prospect', 'Inactive'],
+  'Opportunity Stage': ['New Growth Assessment', 'Qualification Review', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Growth Blueprint Proposed', 'Proposal Sent', 'Decision', 'Closed Won', 'Closed Lost', 'Nurture'],
+  'Task Type': ['Review new intake', 'Prepare internal brief', 'Conduct assessment', 'Send recap', 'Build Growth Blueprint', 'Create proposal', 'Follow up', 'Nurture check-in'],
+  'Task Status': ['Open', 'In Progress', 'Done', 'Blocked'],
+  'Task Priority': ['High', 'Medium', 'Low']
+};
+
+/* Which tab columns get a dropdown, and from which lookup category. */
+var VALIDATION = {
+  Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies' },
+  Companies: { company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', status: 'Company Status' },
+  Assessments: { qualification_route: 'Qualification Route' },
+  Opportunities: { stage: 'Opportunity Stage' },
+  Tasks: { task_type: 'Task Type', status: 'Task Status', priority: 'Task Priority' }
+};
+
+var VALIDATION_ROWS = 2000; // rows to pre-apply dropdowns to
+var HEADER_BG = '#0A0A0A';
+var HEADER_FG = '#FFFFFF';
+
+/**
+ * Create/repair the entire workbook — tabs, headers, lookup values, dropdown
+ * validation, protected system structure, formatting, and seeded Settings.
+ * Idempotent: safe to re-run any time. This is the ONLY thing needed to build
+ * the spreadsheet; nothing is created by hand.
+ */
 function initWorkbook() {
   var ss = workbook_();
+  buildTabs_(ss);
+  buildLookups_(ss);
+  seedSettings_(ss);
+  applyValidation_(ss);
+  applyFormatting_(ss);
+  applyProtection_(ss);
+  var def = ss.getSheetByName('Sheet1');
+  if (def && def.getLastRow() === 0 && def.getLastColumn() <= 1) { try { ss.deleteSheet(def); } catch (e) {} }
+  SpreadsheetApp.flush();
+  return 'Workbook fully initialized: ' + Object.keys(SCHEMA).join(', ') + ', Lookup Values (validation + protection + formatting applied).';
+}
+
+function buildTabs_(ss) {
   Object.keys(SCHEMA).forEach(function (name) {
     var sh = ss.getSheetByName(name) || ss.insertSheet(name);
     var headers = SCHEMA[name];
-    sh.getRange(1, 1, 1, headers.length).setValues([headers]).setFontWeight('bold');
+    sh.getRange(1, 1, 1, headers.length).setValues([headers]);
     sh.setFrozenRows(1);
   });
-  // Seed Settings if empty.
+}
+
+/** Lookup Values tab: one column per category, values listed beneath. */
+function buildLookups_(ss) {
+  var name = 'Lookup Values';
+  var sh = ss.getSheetByName(name) || ss.insertSheet(name);
+  sh.clearContents();
+  var cats = Object.keys(LOOKUPS);
+  var maxLen = cats.reduce(function (m, c) { return Math.max(m, LOOKUPS[c].length); }, 0);
+  var grid = [cats.slice()];
+  for (var r = 0; r < maxLen; r++) {
+    grid.push(cats.map(function (c) { return LOOKUPS[c][r] || ''; }));
+  }
+  sh.getRange(1, 1, grid.length, cats.length).setValues(grid);
+  sh.setFrozenRows(1);
+}
+
+function seedSettings_(ss) {
   var settings = ss.getSheetByName('Settings');
   if (settings.getLastRow() < 2) {
     settings.getRange(2, 1, DEFAULT_SETTINGS.length, 2).setValues(DEFAULT_SETTINGS);
   }
-  var def = ss.getSheetByName('Sheet1');
-  if (def && def.getLastRow() === 0) ss.deleteSheet(def);
-  return 'Workbook initialized: ' + Object.keys(SCHEMA).join(', ');
+}
+
+/** Attach dropdown validation to the mapped columns, sourced from Lookup Values. */
+function applyValidation_(ss) {
+  var lookup = ss.getSheetByName('Lookup Values');
+  var lookupCats = lookup.getRange(1, 1, 1, lookup.getLastColumn()).getValues()[0];
+  Object.keys(VALIDATION).forEach(function (tab) {
+    var sh = ss.getSheetByName(tab);
+    var cols = SCHEMA[tab];
+    var map = VALIDATION[tab];
+    Object.keys(map).forEach(function (col) {
+      var colIdx = cols.indexOf(col);
+      var catIdx = lookupCats.indexOf(map[col]);
+      if (colIdx < 0 || catIdx < 0) return;
+      var count = LOOKUPS[map[col]].length;
+      var srcRange = lookup.getRange(2, catIdx + 1, count, 1);
+      var rule = SpreadsheetApp.newDataValidation().requireValueInRange(srcRange, true).setAllowInvalid(true).build();
+      sh.getRange(2, colIdx + 1, VALIDATION_ROWS, 1).setDataValidation(rule);
+    });
+  });
+}
+
+function applyFormatting_(ss) {
+  var all = Object.keys(SCHEMA).concat(['Lookup Values']);
+  all.forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    var lastCol = Math.max(1, sh.getLastColumn());
+    sh.getRange(1, 1, 1, lastCol).setBackground(HEADER_BG).setFontColor(HEADER_FG).setFontWeight('bold');
+    // Alternating row banding for readability (skip if already banded).
+    if (!sh.getBandings().length) {
+      try {
+        sh.getRange(1, 1, sh.getMaxRows(), lastCol)
+          .applyRowBanding(SpreadsheetApp.BandingTheme.LIGHT_GREY, true, false);
+      } catch (e) {}
+    }
+    sh.autoResizeColumns(1, lastCol);
+  });
+  var leads = ss.getSheetByName('Leads');
+  if (leads) leads.setTabColor('#FF1198');
+}
+
+/**
+ * Protect system structure with warning-only protection: header rows on every
+ * tab, and the full Lookup Values + Audit Log tabs. Warning-only keeps the owner
+ * able to edit while guarding against accidental structural changes.
+ */
+function applyProtection_(ss) {
+  Object.keys(SCHEMA).forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    dropProtections_(sh);
+    sh.getRange(1, 1, 1, SCHEMA[name].length).protect().setWarningOnly(true)
+      .setDescription(name + ' header (system)');
+  });
+  ['Lookup Values', 'Audit Log'].forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    dropProtections_(sh);
+    sh.protect().setWarningOnly(true).setDescription(name + ' (system — do not edit)');
+  });
+}
+
+function dropProtections_(sh) {
+  sh.getProtections(SpreadsheetApp.ProtectionType.RANGE).forEach(function (p) { p.remove(); });
+  sh.getProtections(SpreadsheetApp.ProtectionType.SHEET).forEach(function (p) { p.remove(); });
 }
 
 function sheet_(name) {

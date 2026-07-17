@@ -25,7 +25,7 @@ CRM/pipeline. Nothing about the public experience changes.
 ## One-time setup
 
 1. **Create the workbook** `Beast Growth Pipeline` (or let the script use a bound sheet).
-2. **Create the Apps Script project** (standalone or bound to the workbook). Paste every `.gs` file and `appsscript.json` (or push with `clasp`).
+2. **Create the Apps Script project** (bound to the workbook via Extensions → Apps Script). Paste the one-file bundle `dist/beast-growth-assessment.gs.txt` into `Code.gs` (replacing its contents), and paste `appsscript.json` into the manifest. (The bundle is a generated concatenation of the individual `.gs` files — regenerate after code changes; see bottom of this file.)
 3. **Set Script Properties** (Project Settings → Script properties):
 
    | Key | Required | Value |

@@ -1,0 +1,1039 @@
+/**
+ * GENERATED PASTE BUNDLE — all Beast Growth Assessment server code in one file.
+ * Source of truth is the individual .gs files in this folder; this is a
+ * concatenation for one-shot pasting into the Apps Script editor.
+ * Regenerate: see README (do not hand-edit this file).
+ */
+
+
+/* ==================== Config.gs ==================== */
+/**
+ * Config.gs — configuration + secrets access.
+ *
+ * All secrets and IDs live in Script Properties (Project Settings → Script
+ * properties). NOTHING is hardcoded. The Settings tab in the workbook can
+ * override operational (non-secret) values at runtime without a redeploy.
+ *
+ * Required Script Properties (set these before deploying — see README):
+ *   SHARED_SECRET        must equal the website's GROWTH_SHARED_SECRET env var
+ *   SPREADSHEET_ID       the Beast Growth Pipeline workbook id (omit if bound)
+ *   NOTIFY_EMAILS        comma-separated internal recipients
+ *   DEFAULT_OWNER        default lead owner (name or email)
+ *   BOOKING_URL          Google Calendar appointment-schedule link
+ * Optional:
+ *   DRIVE_ROOT_FOLDER_ID   "Beast Growth Operations" folder (for briefs)
+ *   BRIEF_TEMPLATE_DOC_ID  a Google Doc template to copy for internal briefs
+ *   CALENDAR_ID            calendar to poll for booking reconciliation
+ *   SENDER_NAME            email sender name (default "Beast Creative")
+ *   PRIVACY_URL            privacy policy URL used in emails
+ *   COMPANY_TIMEZONE       IANA tz (default America/Chicago)
+ */
+
+var SETTINGS_CACHE = null;
+
+/** Read a Script Property. */
+function prop_(key, fallback) {
+  var v = PropertiesService.getScriptProperties().getProperty(key);
+  return v === null || v === undefined || v === '' ? (fallback === undefined ? '' : fallback) : v;
+}
+
+/**
+ * Read a value from the Settings tab (key/value rows), cached per execution.
+ * Falls back to the matching Script Property, then to `fallback`.
+ */
+function setting_(key, fallback) {
+  if (SETTINGS_CACHE === null) {
+    SETTINGS_CACHE = {};
+    try {
+      var sh = workbook_().getSheetByName('Settings');
+      if (sh) {
+        var rows = sh.getDataRange().getValues();
+        for (var i = 1; i < rows.length; i++) {
+          if (rows[i][0]) SETTINGS_CACHE[String(rows[i][0]).trim()] = rows[i][1];
+        }
+      }
+    } catch (err) {
+      // Settings tab may not exist yet on first run.
+    }
+  }
+  if (SETTINGS_CACHE[key] !== undefined && SETTINGS_CACHE[key] !== '') return SETTINGS_CACHE[key];
+  return prop_(key.toUpperCase(), fallback);
+}
+
+var CONFIG = {
+  get sharedSecret() { return prop_('SHARED_SECRET'); },
+  get spreadsheetId() { return prop_('SPREADSHEET_ID'); },
+  get notifyEmails() {
+    return String(setting_('internal_notification_emails', prop_('NOTIFY_EMAILS')))
+      .split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+  },
+  get defaultOwner() { return setting_('default_owner', prop_('DEFAULT_OWNER', 'Beast Team')); },
+  get bookingUrl() { return setting_('booking_page_url', prop_('BOOKING_URL')); },
+  get driveRootId() { return setting_('drive_root_folder_id', prop_('DRIVE_ROOT_FOLDER_ID')); },
+  get briefTemplateId() { return prop_('BRIEF_TEMPLATE_DOC_ID'); },
+  get calendarId() { return setting_('calendar_id', prop_('CALENDAR_ID')); },
+  get senderName() { return setting_('email_sender_name', prop_('SENDER_NAME', 'Beast Creative')); },
+  get privacyUrl() { return setting_('privacy_policy_url', prop_('PRIVACY_URL', 'https://beastcreativeagency.com/privacy')); },
+  get timezone() { return setting_('company_timezone', prop_('COMPANY_TIMEZONE', 'America/Chicago')); },
+  MAX_PAYLOAD_BYTES: 20000,
+  MIN_ELAPSED_MS: 2500
+};
+
+/* ==================== Sheets.gs ==================== */
+/**
+ * Sheets.gs — the workbook is the interim CRM/database.
+ *
+ * SCHEMA is the single source of truth for tab columns (mirrors
+ * docs/beast-growth-assessment-v1-google/02-sheet-data-model.md). Run
+ * initWorkbook() once from the editor to create/repair every tab + headers.
+ *
+ * IDs are immutable, prefixed, and never row numbers. Timestamps are ISO.
+ * Multi-select values are stored as "; "-joined strings.
+ */
+
+var SCHEMA = {
+  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes'],
+  Companies: ['company_id','company_name','website','company_type','company_stage','annual_revenue_range','owner','status','first_seen_at','last_activity_at','primary_goal','likely_constraint','opportunity_value','notes'],
+  Contacts: ['contact_id','company_id','first_name','last_name','email','phone','title','decision_role','primary_contact','created_at','last_activity_at','notes'],
+  Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at'],
+  Opportunities: ['opportunity_id','company_id','primary_contact_id','assessment_id','stage','owner','estimated_value','probability','recommended_engagement','next_step','next_step_due','proposal_url','won_lost_date','lost_reason','notes'],
+  Activities: ['activity_id','related_type','related_id','activity_type','activity_date','owner','subject','detail','source','created_at'],
+  Tasks: ['task_id','related_type','related_id','assigned_to','task_type','task_title','due_date','status','priority','completed_at','notes'],
+  Settings: ['key','value'],
+  'Audit Log': ['timestamp','workflow','record_id','action','result','error_message','execution_id']
+};
+
+var DEFAULT_SETTINGS = [
+  ['internal_notification_emails', ''],
+  ['booking_page_url', ''],
+  ['calendar_id', ''],
+  ['drive_root_folder_id', ''],
+  ['default_owner', 'Beast Team'],
+  ['minimum_investment_route', 'Under $2K / mo'],
+  ['manual_review_email', ''],
+  ['privacy_policy_url', 'https://beastcreativeagency.com/privacy'],
+  ['company_timezone', 'America/Chicago'],
+  ['email_sender_name', 'Beast Creative']
+];
+
+var WORKBOOK_CACHE = null;
+function workbook_() {
+  if (WORKBOOK_CACHE) return WORKBOOK_CACHE;
+  var id = CONFIG.spreadsheetId;
+  WORKBOOK_CACHE = id ? SpreadsheetApp.openById(id) : SpreadsheetApp.getActiveSpreadsheet();
+  if (!WORKBOOK_CACHE) throw new Error('No spreadsheet: set SPREADSHEET_ID or bind the script to the workbook.');
+  return WORKBOOK_CACHE;
+}
+
+/* ── Lookup values (drive dropdowns + document allowed values) ─────── */
+var LOOKUPS = {
+  'Lead Status': ['New', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Proposal Sent', 'Closed Won', 'Closed Lost', 'Nurture'],
+  'Qualification Route': ['priority_qualified', 'qualified', 'manual_review', 'nurture', 'spam'],
+  'Company Type': ['Ecommerce / DTC', 'B2B / SaaS', 'CPG / Consumer Brand', 'Local / Regional Business', 'Startup', 'Other'],
+  'Company Stage': ['Just launched', 'Early-stage', 'Growing', 'Established', 'Enterprise'],
+  'Annual Revenue': ['Under $500K', '$500K – $1M', '$1M – $5M', '$5M – $25M', '$25M+', 'Prefer not to say'],
+  'Primary Goals': ['More qualified leads', 'Higher website conversion', 'Better paid media ROI', 'Stronger brand / positioning', 'More organic & AI search visibility', 'Launch a product or market', 'Better measurement & attribution', 'Retention & repeat revenue'],
+  'Marketing Channels': ['SEO', 'Paid search', 'Paid social', 'Email / lifecycle', 'Content', 'Organic social', 'Influencer / UGC', 'Nothing consistent yet'],
+  'Current Investment': ['Under $2K / mo', '$2K – $5K / mo', '$5K – $10K / mo', '$10K – $25K / mo', '$25K – $50K / mo', '$50K+ / mo'],
+  'Potential Investment': ['Under $2K / mo', '$2K – $5K / mo', '$5K – $10K / mo', '$10K – $25K / mo', '$25K – $50K / mo', '$50K+ / mo', 'Not sure yet'],
+  'Timeline': ['ASAP / this month', '1 – 3 months', '3 – 6 months', 'Just exploring'],
+  'Decision Role': ['I make the decision', "I'm part of the decision", 'I influence the decision', "I'm researching for someone else"],
+  'Speaking With Agencies': ['Yes', 'No', 'Not yet'],
+  'Company Status': ['Active', 'Prospect', 'Inactive'],
+  'Opportunity Stage': ['New Growth Assessment', 'Qualification Review', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Growth Blueprint Proposed', 'Proposal Sent', 'Decision', 'Closed Won', 'Closed Lost', 'Nurture'],
+  'Task Type': ['Review new intake', 'Prepare internal brief', 'Conduct assessment', 'Send recap', 'Build Growth Blueprint', 'Create proposal', 'Follow up', 'Nurture check-in'],
+  'Task Status': ['Open', 'In Progress', 'Done', 'Blocked'],
+  'Task Priority': ['High', 'Medium', 'Low']
+};
+
+/* Which tab columns get a dropdown, and from which lookup category. */
+var VALIDATION = {
+  Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies' },
+  Companies: { company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', status: 'Company Status' },
+  Assessments: { qualification_route: 'Qualification Route' },
+  Opportunities: { stage: 'Opportunity Stage' },
+  Tasks: { task_type: 'Task Type', status: 'Task Status', priority: 'Task Priority' }
+};
+
+var VALIDATION_ROWS = 2000; // rows to pre-apply dropdowns to
+var HEADER_BG = '#0A0A0A';
+var HEADER_FG = '#FFFFFF';
+
+/**
+ * Create/repair the entire workbook — tabs, headers, lookup values, dropdown
+ * validation, protected system structure, formatting, and seeded Settings.
+ * Idempotent: safe to re-run any time. This is the ONLY thing needed to build
+ * the spreadsheet; nothing is created by hand.
+ */
+function initWorkbook() {
+  var ss = workbook_();
+  buildTabs_(ss);
+  buildLookups_(ss);
+  seedSettings_(ss);
+  applyValidation_(ss);
+  applyFormatting_(ss);
+  applyProtection_(ss);
+  var def = ss.getSheetByName('Sheet1');
+  if (def && def.getLastRow() === 0 && def.getLastColumn() <= 1) { try { ss.deleteSheet(def); } catch (e) {} }
+  SpreadsheetApp.flush();
+  return 'Workbook fully initialized: ' + Object.keys(SCHEMA).join(', ') + ', Lookup Values (validation + protection + formatting applied).';
+}
+
+function buildTabs_(ss) {
+  Object.keys(SCHEMA).forEach(function (name) {
+    var sh = ss.getSheetByName(name) || ss.insertSheet(name);
+    var headers = SCHEMA[name];
+    sh.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sh.setFrozenRows(1);
+  });
+}
+
+/** Lookup Values tab: one column per category, values listed beneath. */
+function buildLookups_(ss) {
+  var name = 'Lookup Values';
+  var sh = ss.getSheetByName(name) || ss.insertSheet(name);
+  sh.clearContents();
+  var cats = Object.keys(LOOKUPS);
+  var maxLen = cats.reduce(function (m, c) { return Math.max(m, LOOKUPS[c].length); }, 0);
+  var grid = [cats.slice()];
+  for (var r = 0; r < maxLen; r++) {
+    grid.push(cats.map(function (c) { return LOOKUPS[c][r] || ''; }));
+  }
+  sh.getRange(1, 1, grid.length, cats.length).setValues(grid);
+  sh.setFrozenRows(1);
+}
+
+function seedSettings_(ss) {
+  var settings = ss.getSheetByName('Settings');
+  if (settings.getLastRow() < 2) {
+    settings.getRange(2, 1, DEFAULT_SETTINGS.length, 2).setValues(DEFAULT_SETTINGS);
+  }
+}
+
+/** Attach dropdown validation to the mapped columns, sourced from Lookup Values. */
+function applyValidation_(ss) {
+  var lookup = ss.getSheetByName('Lookup Values');
+  var lookupCats = lookup.getRange(1, 1, 1, lookup.getLastColumn()).getValues()[0];
+  Object.keys(VALIDATION).forEach(function (tab) {
+    var sh = ss.getSheetByName(tab);
+    var cols = SCHEMA[tab];
+    var map = VALIDATION[tab];
+    Object.keys(map).forEach(function (col) {
+      var colIdx = cols.indexOf(col);
+      var catIdx = lookupCats.indexOf(map[col]);
+      if (colIdx < 0 || catIdx < 0) return;
+      var count = LOOKUPS[map[col]].length;
+      var srcRange = lookup.getRange(2, catIdx + 1, count, 1);
+      var rule = SpreadsheetApp.newDataValidation().requireValueInRange(srcRange, true).setAllowInvalid(true).build();
+      sh.getRange(2, colIdx + 1, VALIDATION_ROWS, 1).setDataValidation(rule);
+    });
+  });
+}
+
+function applyFormatting_(ss) {
+  var all = Object.keys(SCHEMA).concat(['Lookup Values']);
+  all.forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    var lastCol = Math.max(1, sh.getLastColumn());
+    sh.getRange(1, 1, 1, lastCol).setBackground(HEADER_BG).setFontColor(HEADER_FG).setFontWeight('bold');
+    // Alternating row banding for readability (skip if already banded).
+    if (!sh.getBandings().length) {
+      try {
+        sh.getRange(1, 1, sh.getMaxRows(), lastCol)
+          .applyRowBanding(SpreadsheetApp.BandingTheme.LIGHT_GREY, true, false);
+      } catch (e) {}
+    }
+    sh.autoResizeColumns(1, lastCol);
+  });
+  var leads = ss.getSheetByName('Leads');
+  if (leads) leads.setTabColor('#FF1198');
+}
+
+/**
+ * Protect system structure with warning-only protection: header rows on every
+ * tab, and the full Lookup Values + Audit Log tabs. Warning-only keeps the owner
+ * able to edit while guarding against accidental structural changes.
+ */
+function applyProtection_(ss) {
+  Object.keys(SCHEMA).forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    dropProtections_(sh);
+    sh.getRange(1, 1, 1, SCHEMA[name].length).protect().setWarningOnly(true)
+      .setDescription(name + ' header (system)');
+  });
+  ['Lookup Values', 'Audit Log'].forEach(function (name) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) return;
+    dropProtections_(sh);
+    sh.protect().setWarningOnly(true).setDescription(name + ' (system — do not edit)');
+  });
+}
+
+function dropProtections_(sh) {
+  sh.getProtections(SpreadsheetApp.ProtectionType.RANGE).forEach(function (p) { p.remove(); });
+  sh.getProtections(SpreadsheetApp.ProtectionType.SHEET).forEach(function (p) { p.remove(); });
+}
+
+function sheet_(name) {
+  var sh = workbook_().getSheetByName(name);
+  if (!sh) throw new Error('Missing tab "' + name + '". Run initWorkbook().');
+  return sh;
+}
+
+function headers_(name) { return SCHEMA[name]; }
+
+/** Append an object as a row, ordered by the tab's schema. Returns the object. */
+function appendRow_(name, obj) {
+  var cols = headers_(name);
+  var row = cols.map(function (c) { return obj[c] === undefined || obj[c] === null ? '' : obj[c]; });
+  sheet_(name).appendRow(row);
+  return obj;
+}
+
+/** Find the 1-based row index where column `col` equals `value` (case-insensitive). */
+function findRow_(name, col, value) {
+  if (!value) return -1;
+  var cols = headers_(name);
+  var idx = cols.indexOf(col);
+  if (idx < 0) return -1;
+  var sh = sheet_(name);
+  var last = sh.getLastRow();
+  if (last < 2) return -1;
+  var values = sh.getRange(2, idx + 1, last - 1, 1).getValues();
+  var target = String(value).trim().toLowerCase();
+  for (var i = 0; i < values.length; i++) {
+    if (String(values[i][0]).trim().toLowerCase() === target) return i + 2;
+  }
+  return -1;
+}
+
+/** Update named columns on a given row. */
+function updateRow_(name, rowIndex, patch) {
+  var cols = headers_(name);
+  var sh = sheet_(name);
+  Object.keys(patch).forEach(function (k) {
+    var idx = cols.indexOf(k);
+    if (idx >= 0) sh.getRange(rowIndex, idx + 1).setValue(patch[k]);
+  });
+}
+
+/* ── IDs, time, serialization ─────────────────────────────────────── */
+function newId_(prefix) {
+  return prefix + '_' + Utilities.getUuid().replace(/-/g, '').slice(0, 20);
+}
+function nowIso_() {
+  return Utilities.formatDate(new Date(), 'UTC', "yyyy-MM-dd'T'HH:mm:ss'Z'");
+}
+function joinMulti_(v) {
+  if (Array.isArray(v)) return v.join('; ');
+  return v === undefined || v === null ? '' : String(v);
+}
+
+/* ── Audit log ────────────────────────────────────────────────────── */
+function logActivity_(workflow, recordId, action, result, errorMessage) {
+  try {
+    appendRow_('Audit Log', {
+      timestamp: nowIso_(),
+      workflow: workflow,
+      record_id: recordId || '',
+      action: action || '',
+      result: result || '',
+      error_message: errorMessage || '',
+      execution_id: Utilities.getUuid().slice(0, 8)
+    });
+  } catch (err) {
+    // Audit logging must never break the main flow.
+  }
+}
+
+/* ==================== Routing.gs ==================== */
+/**
+ * Routing.gs — qualification routing.
+ *
+ * This is the PRODUCTION source of truth for routing. It is a byte-for-byte
+ * behavioral mirror of computeRoute() in lib/growth-assessment.ts (the website
+ * fallback). Keep the two in sync: if you tune thresholds here, tune them there
+ * (or move them into the Settings tab and read them in both places).
+ *
+ * Routes: priority_qualified | qualified | manual_review | nurture | spam
+ */
+
+var HIGH_INVESTMENT = ['$5K – $10K / mo', '$10K – $25K / mo', '$25K – $50K / mo', '$50K+ / mo'];
+var NEAR_TERM = ['ASAP / this month', '1 – 3 months'];
+var ESTABLISHED_STAGE = ['Growing', 'Established', 'Enterprise'];
+
+function inList_(list, v) { return list.indexOf(v) !== -1; }
+
+function computeRoute_(d) {
+  if (d.website) return 'spam';
+
+  var potential = d.potential_monthly_investment || '';
+  var timeline = d.timeline || '';
+  var exploring = timeline === 'Just exploring';
+  var lowBudget = potential === 'Under $2K / mo';
+
+  if (lowBudget || (exploring && !inList_(HIGH_INVESTMENT, potential))) return 'nurture';
+
+  var decides = d.decision_role === 'I make the decision' || d.decision_role === "I'm part of the decision";
+  var nearTerm = inList_(NEAR_TERM, timeline);
+  var goodBudget = inList_(HIGH_INVESTMENT, potential);
+  var established = inList_(ESTABLISHED_STAGE, d.company_stage || '');
+
+  if (decides && nearTerm && goodBudget && established) return 'priority_qualified';
+  if (decides && (nearTerm || goodBudget)) return 'qualified';
+  return 'manual_review';
+}
+
+/** Whether a route should be shown the booking page. */
+function routeGetsBooking_(route) {
+  return route === 'qualified' || route === 'priority_qualified';
+}
+
+/** Opportunity stage seeded from the intake route. */
+function routeToStage_(route) {
+  if (route === 'priority_qualified' || route === 'qualified') return 'Qualification Review';
+  if (route === 'manual_review') return 'Qualification Review';
+  return 'Nurture';
+}
+
+/** Public-safe message per route (no internal scoring). */
+function routeMessage_(route) {
+  switch (route) {
+    case 'priority_qualified':
+    case 'qualified':
+      return 'Your Growth Assessment request is a fit for the next step. Choose a time below.';
+    case 'manual_review':
+      return 'We have your information. A member of the Beast team will review it and follow up with the most useful next step.';
+    default:
+      return 'Thank you for sharing your information. A full Growth Assessment may not be the best next step yet. We will point you toward the most useful resources and keep the door open as your needs change.';
+  }
+}
+
+/* ==================== Code.gs ==================== */
+/**
+ * Code.gs — web app entry point + intake orchestration.
+ *
+ * The Beast website (app/api/growth-assessment/route.ts) POSTs JSON here with a
+ * shared secret. We validate, dedupe, persist to Sheets, route, notify, and
+ * return only a public-safe result. Internal scoring and Sheet URLs are never
+ * returned to the client.
+ *
+ * Request body: all assessment fields + attribution fields + `secret`.
+ * Response: { success, leadId, route, bookingUrl }.
+ */
+
+function doGet() {
+  return json_({ ok: true, service: 'beast-growth-assessment', ts: nowIso_() });
+}
+
+function doPost(e) {
+  var execId = Utilities.getUuid().slice(0, 8);
+  try {
+    if (!e || !e.postData || !e.postData.contents) return json_({ success: false, error: 'Empty request.' });
+    if (e.postData.contents.length > CONFIG.MAX_PAYLOAD_BYTES) {
+      return json_({ success: false, error: 'Payload too large.' });
+    }
+
+    var body;
+    try { body = JSON.parse(e.postData.contents); } catch (err) { return json_({ success: false, error: 'Invalid JSON.' }); }
+
+    // Auth: shared secret (constant-time-ish compare).
+    if (!CONFIG.sharedSecret || !secureEquals_(String(body.secret || ''), CONFIG.sharedSecret)) {
+      logActivity_('intake', '', 'auth', 'rejected', 'bad secret');
+      return json_({ success: false, error: 'Unauthorized.' });
+    }
+
+    // Anti-spam: honeypot + submit-too-fast → accept quietly, persist nothing.
+    if (body.website) {
+      logActivity_('intake', '', 'spam', 'honeypot', '');
+      return json_({ success: true, route: 'nurture' });
+    }
+    if (typeof body.elapsed_ms === 'number' && body.elapsed_ms < CONFIG.MIN_ELAPSED_MS) {
+      logActivity_('intake', '', 'spam', 'too-fast', '');
+      return json_({ success: true, route: 'manual_review' });
+    }
+
+    var missing = requiredMissing_(body);
+    if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
+
+    var d = sanitize_(body);
+    var route = computeRoute_(d);
+    if (route === 'spam') return json_({ success: true, route: 'nurture' });
+
+    var ids = persistIntake_(d, route, execId);
+
+    // Notifications + brief + task are best-effort; a failure here must not
+    // fail the submission (the lead is already saved).
+    safe_(function () { sendProspectConfirmation_(d, route); }, 'confirmation', ids.leadId, execId);
+    safe_(function () { ids.briefUrl = createInternalBrief_(d, route, ids); }, 'brief', ids.leadId, execId);
+    safe_(function () { sendInternalNotification_(d, route, ids); }, 'internal-notify', ids.leadId, execId);
+    safe_(function () { createFollowUpTask_(d, route, ids); }, 'task', ids.leadId, execId);
+
+    logActivity_('intake', ids.leadId, 'created', route, '');
+    return json_({
+      success: true,
+      leadId: ids.leadId,
+      route: route,
+      bookingUrl: routeGetsBooking_(route) ? CONFIG.bookingUrl : undefined
+    });
+  } catch (err) {
+    logActivity_('intake', '', 'error', 'exception', String(err && err.message || err));
+    return json_({ success: false, error: 'We could not process your submission. Please try again.' });
+  }
+}
+
+/* ── persistence: dedupe + write across tabs ──────────────────────── */
+function persistIntake_(d, route, execId) {
+  var now = nowIso_();
+
+  // Company (dedupe by website, then name).
+  var companyRow = findRow_('Companies', 'website', d.company_website);
+  if (companyRow < 0) companyRow = findRow_('Companies', 'company_name', d.company_name);
+  var companyId;
+  if (companyRow < 0) {
+    companyId = newId_('cmp');
+    appendRow_('Companies', {
+      company_id: companyId, company_name: d.company_name, website: d.company_website,
+      company_type: d.company_type, company_stage: d.company_stage, annual_revenue_range: d.annual_revenue_range,
+      owner: CONFIG.defaultOwner, status: 'Active', first_seen_at: now, last_activity_at: now,
+      primary_goal: joinMulti_(d.primary_goals), likely_constraint: '', opportunity_value: '', notes: ''
+    });
+  } else {
+    companyId = sheet_('Companies').getRange(companyRow, headers_('Companies').indexOf('company_id') + 1).getValue();
+    updateRow_('Companies', companyRow, { last_activity_at: now });
+  }
+
+  // Contact (dedupe by email).
+  var contactRow = findRow_('Contacts', 'email', d.work_email);
+  var contactId;
+  if (contactRow < 0) {
+    contactId = newId_('con');
+    appendRow_('Contacts', {
+      contact_id: contactId, company_id: companyId, first_name: d.first_name, last_name: d.last_name,
+      email: d.work_email, phone: d.phone, title: d.job_title, decision_role: d.decision_role,
+      primary_contact: 'Yes', created_at: now, last_activity_at: now, notes: ''
+    });
+  } else {
+    contactId = sheet_('Contacts').getRange(contactRow, headers_('Contacts').indexOf('contact_id') + 1).getValue();
+    updateRow_('Contacts', contactRow, { last_activity_at: now });
+  }
+
+  // Lead (always a new row — each submission is a distinct intake event).
+  var leadId = newId_('lead');
+  appendRow_('Leads', {
+    lead_id: leadId, created_at: now, updated_at: now, status: 'New', qualification_route: route,
+    owner: CONFIG.defaultOwner, first_name: d.first_name, last_name: d.last_name, work_email: d.work_email,
+    phone: d.phone, job_title: d.job_title, company_name: d.company_name, company_website: d.company_website,
+    company_type: d.company_type, company_stage: d.company_stage, annual_revenue_range: d.annual_revenue_range,
+    primary_goals: joinMulti_(d.primary_goals), biggest_challenge: d.biggest_challenge, desired_result: d.desired_result,
+    current_marketing: joinMulti_(d.current_marketing), current_monthly_investment: d.current_monthly_investment,
+    potential_monthly_investment: d.potential_monthly_investment, timeline: d.timeline, decision_role: d.decision_role,
+    other_stakeholders: d.other_stakeholders, speaking_with_agencies: d.speaking_with_agencies,
+    additional_context: d.additional_context, consent: d.consent ? 'TRUE' : 'FALSE', assessment_type: d.assessment_type,
+    source_page: d.source_page, source_section: d.source_section, first_landing_page: d.first_landing_page,
+    referrer: d.referrer, utm_source: d.utm_source, utm_medium: d.utm_medium, utm_campaign: d.utm_campaign,
+    utm_term: d.utm_term, utm_content: d.utm_content, gclid: d.gclid, submission_timestamp: d.submission_timestamp || now,
+    calendar_booking_status: routeGetsBooking_(route) ? 'Awaiting Booking' : 'N/A',
+    calendar_event_id: '', meeting_date: '', next_step: firstNextStep_(route), notes: ''
+  });
+
+  // Assessment.
+  var assessmentId = newId_('asmt');
+  appendRow_('Assessments', {
+    assessment_id: assessmentId, lead_id: leadId, company_id: companyId, contact_id: contactId,
+    assessment_type: d.assessment_type, submitted_at: now, qualification_route: route,
+    scheduled_at: '', meeting_date: '', meeting_status: routeGetsBooking_(route) ? 'Awaiting Booking' : 'N/A',
+    internal_brief_url: '', likely_constraint: '', observations: '', recommended_next_step: '', completed_at: ''
+  });
+
+  // Opportunity.
+  var opportunityId = newId_('opp');
+  appendRow_('Opportunities', {
+    opportunity_id: opportunityId, company_id: companyId, primary_contact_id: contactId, assessment_id: assessmentId,
+    stage: routeToStage_(route), owner: CONFIG.defaultOwner, estimated_value: '', probability: '',
+    recommended_engagement: '', next_step: firstNextStep_(route), next_step_due: dueInDays_(route === 'priority_qualified' ? 1 : 2),
+    proposal_url: '', won_lost_date: '', lost_reason: '', notes: ''
+  });
+
+  // Activity.
+  appendRow_('Activities', {
+    activity_id: newId_('act'), related_type: 'Lead', related_id: leadId, activity_type: 'Intake',
+    activity_date: now, owner: CONFIG.defaultOwner, subject: 'New Growth Assessment (' + route + ')',
+    detail: d.company_name + ' — ' + joinMulti_(d.primary_goals), source: d.utm_source || 'direct', created_at: now
+  });
+
+  return { leadId: leadId, companyId: companyId, contactId: contactId, assessmentId: assessmentId, opportunityId: opportunityId, briefUrl: '' };
+}
+
+/* ── validation + sanitization ────────────────────────────────────── */
+var REQUIRED_FIELDS = ['first_name','last_name','work_email','company_name','company_website','company_type','company_stage','annual_revenue_range','biggest_challenge','desired_result','current_monthly_investment','potential_monthly_investment','timeline','decision_role','speaking_with_agencies'];
+
+function requiredMissing_(b) {
+  var missing = REQUIRED_FIELDS.filter(function (f) { return !b[f] || String(b[f]).trim() === ''; });
+  if (b.consent !== true && String(b.consent) !== 'true') missing.push('consent');
+  if (!Array.isArray(b.primary_goals) || b.primary_goals.length === 0) missing.push('primary_goals');
+  if (!isEmail_(b.work_email)) missing.push('work_email');
+  return missing;
+}
+
+function sanitize_(b) {
+  var clip = function (v, n) { return v === undefined || v === null ? '' : String(v).slice(0, n); };
+  return {
+    first_name: clip(b.first_name, 80), last_name: clip(b.last_name, 80), work_email: clip(b.work_email, 254),
+    phone: clip(b.phone, 40), job_title: clip(b.job_title, 120), company_name: clip(b.company_name, 160),
+    company_website: clip(b.company_website, 200), company_type: clip(b.company_type, 60),
+    company_stage: clip(b.company_stage, 40), annual_revenue_range: clip(b.annual_revenue_range, 40),
+    primary_goals: (Array.isArray(b.primary_goals) ? b.primary_goals : []).slice(0, 3).map(function (g) { return clip(g, 80); }),
+    biggest_challenge: clip(b.biggest_challenge, 600), desired_result: clip(b.desired_result, 600),
+    current_marketing: (Array.isArray(b.current_marketing) ? b.current_marketing : []).map(function (g) { return clip(g, 60); }),
+    current_monthly_investment: clip(b.current_monthly_investment, 40), potential_monthly_investment: clip(b.potential_monthly_investment, 40),
+    timeline: clip(b.timeline, 40), decision_role: clip(b.decision_role, 60), other_stakeholders: clip(b.other_stakeholders, 300),
+    speaking_with_agencies: clip(b.speaking_with_agencies, 20), additional_context: clip(b.additional_context, 1200),
+    consent: b.consent === true || String(b.consent) === 'true', assessment_type: clip(b.assessment_type || 'general', 40),
+    website: clip(b.website, 200),
+    source_page: clip(b.source_page, 200), source_section: clip(b.source_section, 200), first_landing_page: clip(b.first_landing_page, 300),
+    current_page: clip(b.current_page, 300), referrer: clip(b.referrer, 300), utm_source: clip(b.utm_source, 120),
+    utm_medium: clip(b.utm_medium, 120), utm_campaign: clip(b.utm_campaign, 120), utm_term: clip(b.utm_term, 120),
+    utm_content: clip(b.utm_content, 120), gclid: clip(b.gclid, 200), submission_timestamp: clip(b.submission_timestamp, 40)
+  };
+}
+
+/* ── helpers ──────────────────────────────────────────────────────── */
+function firstNextStep_(route) {
+  if (route === 'priority_qualified' || route === 'qualified') return 'Prepare internal brief + confirm booking';
+  if (route === 'manual_review') return 'Review new intake';
+  return 'Nurture check-in';
+}
+function dueInDays_(n) {
+  var dt = new Date(); dt.setDate(dt.getDate() + n);
+  return Utilities.formatDate(dt, CONFIG.timezone, 'yyyy-MM-dd');
+}
+function isEmail_(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(v || '')); }
+function secureEquals_(a, b) {
+  if (a.length !== b.length) return false;
+  var r = 0;
+  for (var i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return r === 0;
+}
+function safe_(fn, workflow, recordId, execId) {
+  try { fn(); } catch (err) { logActivity_(workflow, recordId, 'error', 'caught', String(err && err.message || err)); }
+}
+function json_(obj) {
+  // Strip undefined so the JSON stays clean.
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ==================== Email.gs ==================== */
+/**
+ * Email.gs — prospect confirmations + internal notifications.
+ *
+ * Prospect emails NEVER contain the internal route or score. Internal emails
+ * include the working detail + links. All interpolated values are HTML-escaped.
+ * Uses GmailApp so mail is sent from the deploying Beast account.
+ */
+
+function esc_(v) {
+  return String(v === undefined || v === null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function emailOptions_() {
+  return { name: CONFIG.senderName };
+}
+
+/** Prospect: "We received your Beast Growth Assessment". No internal detail. */
+function sendProspectConfirmation_(d, route) {
+  var scheduling = routeGetsBooking_(route);
+  var subject = 'We received your Beast Growth Assessment';
+  var lead = esc_(d.first_name);
+  var nextLine = scheduling
+    ? 'The next step is a 30-minute Growth Diagnostic. You can choose a time here:<br><a href="' + esc_(CONFIG.bookingUrl) + '">Book your Growth Diagnostic</a>'
+    : (route === 'manual_review'
+      ? 'A member of the Beast team will review your information and follow up with the most useful next step.'
+      : 'We will point you toward the most useful resources and keep the door open as your needs change.');
+
+  var html =
+    '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;color:#0A0A0A">' +
+    '<p>Hi ' + lead + ',</p>' +
+    '<p>Thanks for completing the Beast Growth Assessment. We have your responses and are reviewing them.</p>' +
+    '<p>' + nextLine + '</p>' +
+    '<p>If anything has changed since you submitted, just reply to this email.</p>' +
+    '<p>— The Beast Creative Team</p>' +
+    '<p style="font-size:12px;color:#888">You are receiving this because you submitted a Growth Assessment at beastcreativeagency.com. ' +
+    'See our <a href="' + esc_(CONFIG.privacyUrl) + '">privacy policy</a>.</p>' +
+    '</div>';
+
+  var plain = 'Hi ' + d.first_name + ',\n\nThanks for completing the Beast Growth Assessment. We have your responses and are reviewing them.\n\n' +
+    (scheduling ? 'Book your Growth Diagnostic: ' + CONFIG.bookingUrl : (route === 'manual_review'
+      ? 'A member of the Beast team will review your information and follow up.'
+      : 'We will point you toward the most useful resources.')) +
+    '\n\nIf anything has changed, just reply to this email.\n\n— The Beast Creative Team';
+
+  GmailApp.sendEmail(d.work_email, subject, plain, { htmlBody: html, name: CONFIG.senderName });
+}
+
+/** Internal team notification with full working detail + links. */
+function sendInternalNotification_(d, route, ids) {
+  var recipients = CONFIG.notifyEmails;
+  if (!recipients.length) return;
+  var priority = route === 'priority_qualified';
+  var subject = (priority ? '[PRIORITY] ' : '') + 'New Growth Assessment — ' + route + ' — ' + d.company_name;
+  var sheetUrl = workbook_().getUrl();
+
+  var rows = [
+    ['Route', route], ['Name', d.first_name + ' ' + d.last_name], ['Email', d.work_email], ['Phone', d.phone || '—'],
+    ['Company', d.company_name + ' (' + d.company_website + ')'],
+    ['Type / Stage / Revenue', d.company_type + ' · ' + d.company_stage + ' · ' + d.annual_revenue_range],
+    ['Goals', joinMulti_(d.primary_goals)], ['Challenge', d.biggest_challenge], ['Desired result', d.desired_result],
+    ['Current marketing', joinMulti_(d.current_marketing)],
+    ['Investment (now → potential)', d.current_monthly_investment + ' → ' + d.potential_monthly_investment],
+    ['Timeline', d.timeline], ['Decision role', d.decision_role], ['Other agencies', d.speaking_with_agencies],
+    ['Source / UTM', (d.utm_source || 'direct') + ' / ' + (d.utm_campaign || '') + (d.gclid ? ' · gclid' : '')],
+    ['Booking', routeGetsBooking_(route) ? 'Awaiting booking' : 'N/A']
+  ];
+  var body = rows.map(function (r) {
+    return '<tr><td style="padding:4px 10px;font-weight:bold;vertical-align:top">' + esc_(r[0]) +
+      '</td><td style="padding:4px 10px">' + esc_(r[1] || '—') + '</td></tr>';
+  }).join('');
+
+  var links = '<p><a href="' + esc_(sheetUrl) + '">Open pipeline sheet</a>' +
+    (ids.briefUrl ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief</a>' : '') + '</p>';
+
+  var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
+    '<h2 style="margin:0 0 4px">' + (priority ? '🔥 Priority ' : '') + 'New Growth Assessment</h2>' +
+    '<p style="color:#888;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
+    '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
+
+  GmailApp.sendEmail(recipients.join(','), subject, 'New Growth Assessment (' + route + ') — open in Gmail to view details.',
+    { htmlBody: html, name: CONFIG.senderName });
+}
+
+/** Scheduled confirmation, sent after booking reconciliation matches an event. */
+function sendScheduledEmail_(d, meetingWhen, meetLink) {
+  var subject = 'Your Beast Growth Assessment is scheduled';
+  var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;color:#0A0A0A">' +
+    '<p>Hi ' + esc_(d.first_name) + ',</p>' +
+    '<p>Your Beast Growth Assessment is booked for <strong>' + esc_(meetingWhen) + '</strong>.</p>' +
+    (meetLink ? '<p>Join: <a href="' + esc_(meetLink) + '">' + esc_(meetLink) + '</a></p>' : '') +
+    '<p>We will review your stated goal, your channels, and the most likely constraint on growth. ' +
+    'Come with any recent numbers you have handy. To reschedule, use the link in your calendar invite.</p>' +
+    '<p>— The Beast Creative Team</p></div>';
+  GmailApp.sendEmail(d.work_email, subject, 'Your Beast Growth Assessment is scheduled for ' + meetingWhen + '.',
+    { htmlBody: html, name: CONFIG.senderName });
+}
+
+/* ==================== Brief.gs ==================== */
+/**
+ * Brief.gs — internal assessment brief as a Google Doc.
+ *
+ * Creates a working brief the Beast team fills in before the call. If
+ * BRIEF_TEMPLATE_DOC_ID is set, we copy that template; otherwise we build a
+ * structured doc from scratch. The doc is filed in the "Assessment Briefs"
+ * subfolder when DRIVE_ROOT_FOLDER_ID is configured. Returns the doc URL.
+ */
+
+function createInternalBrief_(d, route, ids) {
+  var title = 'Growth Assessment Brief — ' + d.company_name + ' — ' + ids.leadId;
+  var doc;
+
+  if (CONFIG.briefTemplateId) {
+    var copy = DriveApp.getFileById(CONFIG.briefTemplateId).makeCopy(title);
+    doc = DocumentApp.openById(copy.getId());
+    fillTemplateTokens_(doc, d, route, ids);
+  } else {
+    doc = DocumentApp.create(title);
+    buildBriefBody_(doc.getBody(), d, route, ids);
+    doc.saveAndClose();
+    doc = DocumentApp.openById(doc.getId());
+  }
+
+  var file = DriveApp.getFileById(doc.getId());
+  fileIntoBriefsFolder_(file);
+  var url = doc.getUrl();
+
+  // Link the brief back onto the Assessment record.
+  var row = findRow_('Assessments', 'assessment_id', ids.assessmentId);
+  if (row > 0) updateRow_('Assessments', row, { internal_brief_url: url });
+
+  return url;
+}
+
+function buildBriefBody_(body, d, route, ids) {
+  body.appendParagraph('Growth Assessment Brief').setHeading(DocumentApp.ParagraphHeading.TITLE);
+  body.appendParagraph(d.company_name + '  ·  Route: ' + route + '  ·  ' + ids.leadId)
+    .setForegroundColor('#888888');
+
+  var known = [
+    ['Company', d.company_name + ' (' + d.company_website + ')'],
+    ['Prospect', d.first_name + ' ' + d.last_name + ' — ' + (d.job_title || 'role n/a') + ' — ' + d.work_email + (d.phone ? ' — ' + d.phone : '')],
+    ['Business', d.company_type + ' · ' + d.company_stage + ' · ' + d.annual_revenue_range],
+    ['Source', (d.utm_source || 'direct') + (d.utm_campaign ? ' / ' + d.utm_campaign : '') + (d.source_page ? ' · ' + d.source_page : '')],
+    ['Stated goal', joinMulti_(d.primary_goals)],
+    ['Stated challenge', d.biggest_challenge],
+    ['Desired outcome', d.desired_result],
+    ['Current marketing', joinMulti_(d.current_marketing) || '—'],
+    ['Investment readiness', d.current_monthly_investment + ' now → ' + d.potential_monthly_investment + ' potential · ' + d.timeline],
+    ['Decision role', d.decision_role + (d.other_stakeholders ? ' (also: ' + d.other_stakeholders + ')' : '')],
+    ['Talking to other agencies', d.speaking_with_agencies],
+    ['Additional context', d.additional_context || '—']
+  ];
+  body.appendParagraph('Known facts (from intake)').setHeading(DocumentApp.ParagraphHeading.HEADING1);
+  known.forEach(function (r) {
+    var p = body.appendParagraph('');
+    p.appendText(r[0] + ': ').setBold(true);
+    p.appendText(String(r[1])).setBold(false);
+  });
+
+  body.appendParagraph('Initial fit').setHeading(DocumentApp.ParagraphHeading.HEADING1);
+  body.appendParagraph('Route: ' + route + '. [Add fit rationale — do not fabricate. State assumptions vs. facts.]');
+
+  var toFill = ['Three observations', 'Likely primary constraint', 'Questions to ask', 'Potential quick win',
+    'Strategic opportunity', 'Recommended next step', 'Risks'];
+  toFill.forEach(function (h) {
+    body.appendParagraph(h).setHeading(DocumentApp.ParagraphHeading.HEADING1);
+    body.appendParagraph('[ ]');
+  });
+}
+
+/** Replace {{token}} placeholders when using a Drive template. */
+function fillTemplateTokens_(doc, d, route, ids) {
+  var body = doc.getBody();
+  var map = {
+    '{{company}}': d.company_name, '{{website}}': d.company_website, '{{route}}': route, '{{lead_id}}': ids.leadId,
+    '{{prospect}}': d.first_name + ' ' + d.last_name, '{{email}}': d.work_email, '{{goal}}': joinMulti_(d.primary_goals),
+    '{{challenge}}': d.biggest_challenge, '{{desired_result}}': d.desired_result,
+    '{{investment}}': d.current_monthly_investment + ' → ' + d.potential_monthly_investment, '{{timeline}}': d.timeline
+  };
+  Object.keys(map).forEach(function (k) { body.replaceText(escapeRegex_(k), String(map[k] || '')); });
+  doc.saveAndClose();
+}
+
+function fileIntoBriefsFolder_(file) {
+  if (!CONFIG.driveRootId) return;
+  try {
+    var root = DriveApp.getFolderById(CONFIG.driveRootId);
+    var sub = getOrCreateSubfolder_(root, 'Assessment Briefs');
+    sub.addFile(file);
+    DriveApp.getRootFolder().removeFile(file); // remove from My Drive root
+  } catch (err) {
+    // Filing is best-effort; the doc still exists in Drive.
+  }
+}
+
+function getOrCreateSubfolder_(parent, name) {
+  var it = parent.getFoldersByName(name);
+  return it.hasNext() ? it.next() : parent.createFolder(name);
+}
+
+function escapeRegex_(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+/* ==================== Tasks.gs ==================== */
+/**
+ * Tasks.gs — follow-up tasks live in the Tasks tab (version 1).
+ * A later version can mirror these into the Google Tasks API.
+ */
+
+function createFollowUpTask_(d, route, ids) {
+  var taskType, title, priority, dueDays;
+  switch (route) {
+    case 'priority_qualified':
+      taskType = 'Prepare internal brief'; title = 'PRIORITY: prep + book ' + d.company_name; priority = 'High'; dueDays = 1; break;
+    case 'qualified':
+      taskType = 'Prepare internal brief'; title = 'Prep + confirm booking ' + d.company_name; priority = 'High'; dueDays = 2; break;
+    case 'manual_review':
+      taskType = 'Review new intake'; title = 'Review intake ' + d.company_name; priority = 'Medium'; dueDays = 1; break;
+    default:
+      taskType = 'Nurture check-in'; title = 'Nurture ' + d.company_name; priority = 'Low'; dueDays = 14;
+  }
+  appendRow_('Tasks', {
+    task_id: newId_('task'), related_type: 'Lead', related_id: ids.leadId, assigned_to: CONFIG.defaultOwner,
+    task_type: taskType, task_title: title, due_date: dueInDays_(dueDays), status: 'Open',
+    priority: priority, completed_at: '', notes: ''
+  });
+}
+
+/** Weekday morning digest: overdue tasks, today's meetings, new manual-review leads. */
+function sendDailyDigest() {
+  var recipients = CONFIG.notifyEmails;
+  if (!recipients.length) return;
+  var today = Utilities.formatDate(new Date(), CONFIG.timezone, 'yyyy-MM-dd');
+
+  var tasks = readObjects_('Tasks');
+  var overdue = tasks.filter(function (t) { return t.status !== 'Done' && t.due_date && t.due_date < today; });
+  var dueToday = tasks.filter(function (t) { return t.status !== 'Done' && t.due_date === today; });
+
+  var leads = readObjects_('Leads');
+  var manualReview = leads.filter(function (l) { return l.qualification_route === 'manual_review' && l.status === 'New'; });
+  var meetings = leads.filter(function (l) { return l.meeting_date && String(l.meeting_date).slice(0, 10) === today; });
+
+  var section = function (label, arr, fmt) {
+    if (!arr.length) return '<p><strong>' + esc_(label) + ':</strong> none</p>';
+    return '<p><strong>' + esc_(label) + ' (' + arr.length + ')</strong></p><ul>' +
+      arr.map(function (x) { return '<li>' + esc_(fmt(x)) + '</li>'; }).join('') + '</ul>';
+  };
+
+  var html = '<div style="font-family:Arial,sans-serif;max-width:640px;color:#0A0A0A">' +
+    '<h2>Beast Growth — Daily Digest (' + esc_(today) + ')</h2>' +
+    section('Overdue tasks', overdue, function (t) { return t.task_title + ' — due ' + t.due_date; }) +
+    section("Today's meetings", meetings, function (l) { return l.company_name + ' — ' + l.first_name + ' ' + l.last_name; }) +
+    section('New manual-review leads', manualReview, function (l) { return l.company_name + ' — ' + l.work_email; }) +
+    section('Tasks due today', dueToday, function (t) { return t.task_title; }) +
+    '</div>';
+
+  GmailApp.sendEmail(recipients.join(','), 'Beast Growth — Daily Digest ' + today, 'Open in Gmail to view the digest.',
+    { htmlBody: html, name: CONFIG.senderName });
+}
+
+/** Read a whole tab as an array of {column: value} objects. */
+function readObjects_(name) {
+  var sh = sheet_(name);
+  var last = sh.getLastRow();
+  if (last < 2) return [];
+  var cols = headers_(name);
+  var values = sh.getRange(2, 1, last - 1, cols.length).getValues();
+  return values.map(function (row) {
+    var o = {};
+    cols.forEach(function (c, i) { o[c] = row[i]; });
+    return o;
+  });
+}
+
+/* ==================== Calendar.gs ==================== */
+/**
+ * Calendar.gs — booking reconciliation (Option B from the spec).
+ *
+ * The public flow sends qualified prospects to a Google Calendar appointment
+ * schedule (CONFIG.bookingUrl). This time-driven poller scans the assessment
+ * calendar for recent events and matches them to awaiting leads by attendee
+ * email, then updates Leads / Assessments / Opportunities and emails the
+ * prospect a scheduled confirmation.
+ *
+ * Set CALENDAR_ID to the calendar the appointment schedule writes into (often
+ * the owner's primary calendar). Install the trigger with installTriggers().
+ */
+
+function reconcileBookings() {
+  var calId = CONFIG.calendarId;
+  var cal = calId ? CalendarApp.getCalendarById(calId) : CalendarApp.getDefaultCalendar();
+  if (!cal) { logActivity_('calendar', '', 'reconcile', 'no-calendar', ''); return; }
+
+  // Look at events from now through the next 30 days (booking window).
+  var start = new Date();
+  var end = new Date(); end.setDate(end.getDate() + 30);
+  var events = cal.getEvents(start, end);
+
+  var awaiting = readObjects_('Leads').filter(function (l) {
+    return l.calendar_booking_status === 'Awaiting Booking' && l.work_email;
+  });
+  if (!awaiting.length) return;
+
+  var byEmail = {};
+  awaiting.forEach(function (l) { byEmail[String(l.work_email).toLowerCase()] = l; });
+
+  events.forEach(function (ev) {
+    var guests = ev.getGuestList();
+    for (var i = 0; i < guests.length; i++) {
+      var email = String(guests[i].getEmail()).toLowerCase();
+      var lead = byEmail[email];
+      if (!lead) continue;
+      markBooked_(lead, ev);
+      delete byEmail[email]; // one booking per awaiting lead per run
+      break;
+    }
+  });
+}
+
+function markBooked_(lead, ev) {
+  var when = Utilities.formatDate(ev.getStartTime(), CONFIG.timezone, "EEE MMM d, yyyy 'at' h:mm a z");
+  var meetLink = extractMeetLink_(ev);
+  var meetingIso = Utilities.formatDate(ev.getStartTime(), 'UTC', "yyyy-MM-dd'T'HH:mm:ss'Z'");
+
+  var leadRow = findRow_('Leads', 'lead_id', lead.lead_id);
+  if (leadRow > 0) updateRow_('Leads', leadRow, {
+    status: 'Scheduled', calendar_booking_status: 'Booked', calendar_event_id: ev.getId(),
+    meeting_date: meetingIso, updated_at: nowIso_(), next_step: 'Conduct assessment'
+  });
+
+  var asmtRow = findRow_('Assessments', 'lead_id', lead.lead_id);
+  if (asmtRow > 0) updateRow_('Assessments', asmtRow, {
+    scheduled_at: nowIso_(), meeting_date: meetingIso, meeting_status: 'Scheduled'
+  });
+
+  // Advance the opportunity via its assessment link.
+  var asmt = asmtRow > 0 ? readObjects_('Assessments')[asmtRow - 2] : null;
+  if (asmt) {
+    var oppRow = findRow_('Opportunities', 'assessment_id', asmt.assessment_id);
+    if (oppRow > 0) updateRow_('Opportunities', oppRow, { stage: 'Scheduled', next_step: 'Conduct assessment', next_step_due: meetingIso.slice(0, 10) });
+  }
+
+  safe_(function () {
+    sendScheduledEmail_({ first_name: lead.first_name, work_email: lead.work_email }, when, meetLink);
+  }, 'scheduled-email', lead.lead_id, '');
+
+  safe_(function () { sendMeetingBookedInternal_(lead, when); }, 'meeting-booked-notify', lead.lead_id, '');
+  logActivity_('calendar', lead.lead_id, 'booked', when, '');
+}
+
+function sendMeetingBookedInternal_(lead, when) {
+  var recipients = CONFIG.notifyEmails;
+  if (!recipients.length) return;
+  GmailApp.sendEmail(recipients.join(','), 'Meeting booked — ' + lead.company_name + ' — ' + when,
+    lead.first_name + ' ' + lead.last_name + ' (' + lead.company_name + ') booked a Growth Assessment for ' + when + '.',
+    { name: CONFIG.senderName });
+}
+
+function extractMeetLink_(ev) {
+  var m = String(ev.getDescription() || '').match(/https:\/\/meet\.google\.com\/[a-z0-9-]+/i);
+  return m ? m[0] : '';
+}
+
+/* ==================== Triggers.gs ==================== */
+/**
+ * Triggers.gs — installable time-driven triggers.
+ * Run installTriggers() once from the editor after deploying. Re-running clears
+ * and reinstalls, so it is safe to call again after changing schedules.
+ */
+
+function installTriggers() {
+  removeTriggers();
+  // Reconcile calendar bookings every 15 minutes.
+  ScriptApp.newTrigger('reconcileBookings').timeBased().everyMinutes(15).create();
+  // Weekday morning digest at 8am in the project timezone.
+  ScriptApp.newTrigger('sendDailyDigest').timeBased().atHour(8).everyDays(1).create();
+  return 'Triggers installed: reconcileBookings (15m), sendDailyDigest (daily 8am).';
+}
+
+function removeTriggers() {
+  ScriptApp.getProjectTriggers().forEach(function (t) {
+    var fn = t.getHandlerFunction();
+    if (fn === 'reconcileBookings' || fn === 'sendDailyDigest') ScriptApp.deleteTrigger(t);
+  });
+  return 'Triggers removed.';
+}
+
+/* ── One-shot setup helper ─────────────────────────────────────────
+ * Run setup() once from the editor for a fresh project: builds the workbook,
+ * then installs triggers. Set Script Properties BEFORE running this.
+ */
+function setup() {
+  var a = initWorkbook();
+  var b = installTriggers();
+  return a + '\n' + b;
+}
+
+/* ── Self-test: exercise routing + a fake intake without HTTP ──────── */
+function selfTest() {
+  var sample = {
+    secret: CONFIG.sharedSecret, first_name: 'Test', last_name: 'Lead', work_email: 'test+selftest@example.com',
+    company_name: 'Self Test Co', company_website: 'selftest.example', company_type: 'B2B / SaaS',
+    company_stage: 'Established', annual_revenue_range: '$5M – $25M', primary_goals: ['More qualified leads'],
+    biggest_challenge: 'Testing the pipeline', desired_result: 'A written row', current_marketing: ['SEO'],
+    current_monthly_investment: '$5K – $10K / mo', potential_monthly_investment: '$10K – $25K / mo',
+    timeline: '1 – 3 months', decision_role: 'I make the decision', speaking_with_agencies: 'No',
+    consent: true, website: '', elapsed_ms: 60000, assessment_type: 'selftest'
+  };
+  var res = doPost({ postData: { contents: JSON.stringify(sample) } });
+  return res.getContent();
+}

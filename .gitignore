@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Growth Assessment shared secret (local only)
+apps-script/growth-assessment/SECRET.local.txt
