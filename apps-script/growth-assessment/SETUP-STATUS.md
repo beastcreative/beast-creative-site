@@ -29,13 +29,13 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 | 2.2 | Create the `Beast Growth Pipeline` spreadsheet | Created + open on john@beastcreativeagency.com | 🔧 Configured |
 | 2.3 | Open the bound Apps Script project | Extensions → Apps Script | ⏳ Waiting on John |
 | 2.4 | Paste the code bundle (manifest skipped — scopes auto-detected) | Pasted + saved | 🔧 Configured |
-| 2.5 | Set Script Properties (secret, notify emails, owner, booking URL) | Enter 4 values | ⏳ Waiting on John |
-| 2.6 | Run `setup()` → builds workbook + triggers | Click Run, approve OAuth | ⬜ Not started |
-| 2.7 | Authorize OAuth scopes (Sheets, Gmail, Drive, Calendar) | Click Allow | ⬜ Not started |
-| 2.8 | Run `selfTest()` → confirm a row lands in Leads | Click Run, report result | ⬜ Not started |
+| 2.5 | Set Script Properties (secret, notify emails, owner, booking URL) | 4 values saved (booking URL = dedicated schedule) | 🔧 Configured |
+| 2.6 | Run `setup()` → builds workbook + triggers | All 10 tabs built + triggers installed | ✅ Complete |
+| 2.7 | Authorize OAuth scopes (Sheets, Gmail, Drive, Calendar) | Approved "Allow all" for john@beastcreativeagency.com | 🔐 Authorized |
+| 2.8 | Run `selfTest()` → confirm a row lands in Leads | Click Run, then check row + email + brief | ⏳ Waiting on John |
 | 2.9 | Deploy as Web app → copy `/exec` URL | Deploy + paste URL back | ⬜ Not started |
 | 2.10 | Create Calendar `Beast Growth Assessment` appointment schedule | Created: calendar.app.google/PegvMAhP72Gt2YqZ7 (wired into site + Script Property) | 🔧 Configured |
-| 2.11 | (Optional) Create `Beast Growth Operations` Drive folders | I can auto-create, or you do it | ⬜ Not started |
+| 2.11 | Create `Beast Growth Operations` Drive folders | Automated via `initDrive()` (re-paste bundle → run initDrive) | ⏳ Waiting on John |
 | 2.12 | Set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`) + redeploy | Paste into Vercel | ⬜ Not started |
 | 2.13 | Confirm sender name + internal notification recipients | Confirm | ⬜ Not started |
 | 2.14 | Define GA4 events + mark booking as conversion | Confirm in GA4/GTM | ⬜ Not started |
@@ -49,10 +49,10 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 |---|------|-------------|--------|
 | 3.1 | Website form (all 5 steps, validation, states) | Live submit | ⬜ Not started |
 | 3.2 | Apps Script endpoint receives + authenticates | selfTest + live submit | ⬜ Not started |
-| 3.3 | Google Sheets records written (Leads/Companies/Contacts/Assessments/Opportunities/Activities) | Inspect rows | ⬜ Not started |
-| 3.4 | Qualification routing correct (priority/qualified/manual/nurture) | Test each path | ⬜ Not started |
-| 3.5 | Email notifications (prospect confirmation + internal alert) | Check inboxes | ⬜ Not started |
-| 3.6 | Drive brief generated + filed | Open the doc | ⬜ Not started |
+| 3.3 | Google Sheets records written (Leads/Companies/Contacts/Assessments/Opportunities) | selfTest wrote all rows | 🧪 Tested |
+| 3.4 | Qualification routing correct (priority/qualified/manual/nurture) | selfTest → priority_qualified ✓ (other paths pending live test) | 🧪 Tested (partial) |
+| 3.5 | Email notifications (internal alert received) | Received; cosmetic emoji→"??????" + em-dash cleanup pending | 🧪 Tested (needs polish) |
+| 3.6 | Drive brief generated + filed | Investigating — not visible to John yet | ⏳ Waiting on John |
 | 3.7 | Calendar booking flow + reconciliation back to Sheets | Book a test slot | ⬜ Not started |
 | 3.8 | Analytics events fire | GA4 DebugView | ⬜ Not started |
 | 3.9 | Error handling / fallback | Force failure, confirm safe response | ⬜ Not started |
