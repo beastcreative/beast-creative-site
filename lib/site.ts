@@ -3,10 +3,11 @@
  * (or moving to per-vertical "Growth Diagnostic" schedules) is a one-line change
  * instead of editing every CTA across the site.
  *
- * TODO(John): replace with the dedicated "Growth Diagnostic" appointment
- * schedule link(s) once created in Google Calendar. Optionally split per vertical.
+ * Dedicated "Beast Growth Assessment" 30-min appointment schedule (Google
+ * Calendar). Also stored as BOOKING_URL in the Apps Script properties + used by
+ * the API fallback. Optionally split per vertical later.
  */
-export const BOOKING_URL = "https://calendar.app.google/9q1mcYgEdXNyjK8G6";
+export const BOOKING_URL = "https://calendar.app.google/PegvMAhP72Gt2YqZ7";
 
 // If/when vertical-specific schedules exist, point these at them and update the
 // landing pages. For now they all fall back to the single link above.

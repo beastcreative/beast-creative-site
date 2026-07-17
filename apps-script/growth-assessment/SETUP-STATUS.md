@@ -25,16 +25,16 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 
 | # | Item | What I need from you | Status |
 |---|------|----------------------|--------|
-| 2.1 | Choose the Google account that owns this system | Confirm which Google account to use | ⏳ Waiting on John |
-| 2.2 | Create the `Beast Growth Pipeline` spreadsheet | Create + open a new Google Sheet | ⬜ Not started |
-| 2.3 | Open the bound Apps Script project | Extensions → Apps Script | ⬜ Not started |
-| 2.4 | Paste the code bundle + manifest | Paste 2 things | ⬜ Not started |
-| 2.5 | Set Script Properties (secret, notify emails, owner, booking URL) | Paste 4–5 values | ⬜ Not started |
+| 2.1 | Choose the Google account that owns this system | Beast Workspace account (beastcreativeagency.com domain) | 🔧 Configured |
+| 2.2 | Create the `Beast Growth Pipeline` spreadsheet | Created + open on john@beastcreativeagency.com | 🔧 Configured |
+| 2.3 | Open the bound Apps Script project | Extensions → Apps Script | ⏳ Waiting on John |
+| 2.4 | Paste the code bundle (manifest skipped — scopes auto-detected) | Pasted + saved | 🔧 Configured |
+| 2.5 | Set Script Properties (secret, notify emails, owner, booking URL) | Enter 4 values | ⏳ Waiting on John |
 | 2.6 | Run `setup()` → builds workbook + triggers | Click Run, approve OAuth | ⬜ Not started |
 | 2.7 | Authorize OAuth scopes (Sheets, Gmail, Drive, Calendar) | Click Allow | ⬜ Not started |
 | 2.8 | Run `selfTest()` → confirm a row lands in Leads | Click Run, report result | ⬜ Not started |
 | 2.9 | Deploy as Web app → copy `/exec` URL | Deploy + paste URL back | ⬜ Not started |
-| 2.10 | Create Calendar `Beast Growth Assessment` appointment schedule | Create in Google Calendar, paste link | ⬜ Not started |
+| 2.10 | Create Calendar `Beast Growth Assessment` appointment schedule | Created: calendar.app.google/PegvMAhP72Gt2YqZ7 (wired into site + Script Property) | 🔧 Configured |
 | 2.11 | (Optional) Create `Beast Growth Operations` Drive folders | I can auto-create, or you do it | ⬜ Not started |
 | 2.12 | Set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`) + redeploy | Paste into Vercel | ⬜ Not started |
 | 2.13 | Confirm sender name + internal notification recipients | Confirm | ⬜ Not started |
