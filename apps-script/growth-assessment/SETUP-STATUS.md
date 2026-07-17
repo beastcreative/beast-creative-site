@@ -33,9 +33,9 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 | 2.6 | Run `setup()` → builds workbook + triggers | All 10 tabs built + triggers installed | ✅ Complete |
 | 2.7 | Authorize OAuth scopes (Sheets, Gmail, Drive, Calendar) | Approved "Allow all" for john@beastcreativeagency.com | 🔐 Authorized |
 | 2.8 | Run `selfTest()` → confirm a row lands in Leads | Click Run, then check row + email + brief | ⏳ Waiting on John |
-| 2.9 | Deploy as Web app → copy `/exec` URL | Deploy + paste URL back | ⬜ Not started |
+| 2.9 | Deploy as Web app → copy `/exec` URL | Deployed + verified (valid secret writes, wrong secret rejected) | ✅ Complete |
 | 2.10 | Create Calendar `Beast Growth Assessment` appointment schedule | Created: calendar.app.google/PegvMAhP72Gt2YqZ7 (wired into site + Script Property) | 🔧 Configured |
-| 2.11 | Create `Beast Growth Operations` Drive folders | Automated via `initDrive()` (re-paste bundle → run initDrive) | ⏳ Waiting on John |
+| 2.11 | Create `Beast Growth Operations` Drive folders | Folder tree created; brief + sheet filed via `initDrive()` | ✅ Complete |
 | 2.12 | Set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`) + redeploy | Paste into Vercel | ⬜ Not started |
 | 2.13 | Confirm sender name + internal notification recipients | Confirm | ⬜ Not started |
 | 2.14 | Define GA4 events + mark booking as conversion | Confirm in GA4/GTM | ⬜ Not started |
@@ -48,11 +48,11 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 | # | Area | How verified | Status |
 |---|------|-------------|--------|
 | 3.1 | Website form (all 5 steps, validation, states) | Live submit | ⬜ Not started |
-| 3.2 | Apps Script endpoint receives + authenticates | selfTest + live submit | ⬜ Not started |
+| 3.2 | Apps Script endpoint receives + authenticates | Verified via Node fetch: valid→write, wrong→reject | 🧪 Tested |
 | 3.3 | Google Sheets records written (Leads/Companies/Contacts/Assessments/Opportunities) | selfTest wrote all rows | 🧪 Tested |
 | 3.4 | Qualification routing correct (priority/qualified/manual/nurture) | selfTest → priority_qualified ✓ (other paths pending live test) | 🧪 Tested (partial) |
-| 3.5 | Email notifications (internal alert received) | Received; cosmetic emoji→"??????" + em-dash cleanup pending | 🧪 Tested (needs polish) |
-| 3.6 | Drive brief generated + filed | Investigating — not visible to John yet | ⏳ Waiting on John |
+| 3.5 | Email notifications (internal alert received) | Received; emoji/em-dash cleaned (re-verify wording on next email) | 🧪 Tested |
+| 3.6 | Drive brief generated + filed | Brief created + auto-filed to Assessment Briefs | 🧪 Tested |
 | 3.7 | Calendar booking flow + reconciliation back to Sheets | Book a test slot | ⬜ Not started |
 | 3.8 | Analytics events fire | GA4 DebugView | ⬜ Not started |
 | 3.9 | Error handling / fallback | Force failure, confirm safe response | ⬜ Not started |
