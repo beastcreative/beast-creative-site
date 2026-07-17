@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description:
     "Beast Creative Agency helps CPG food and beverage brands grow from regional to national with AI-powered campaigns. 36,581 entries, 7.03% CTR, $0.12 CPC: real results for real brands.",
   openGraph: {
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
     title: "The CPG Agency That Turns Ad Spend Into Retail Proof",
     description:
       "We helped Sun-Bird collect 36,581 consumer emails on $6,000. We helped Williams get 22,043 sweepstakes entries on $4,000. Now let's talk about your brand.",

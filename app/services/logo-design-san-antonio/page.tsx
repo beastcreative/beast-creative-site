@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "Professional logo design in San Antonio, TX. Custom logos built for real brands, not templates, as part of a full brand identity system. (210) 332-0567",
   alternates: { canonical: "https://beastcreativeagency.com/services/logo-design-san-antonio" },
   openGraph: {
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
     title: "Logo Design San Antonio | Beast Creative Agency",
     description: "Custom logo design for San Antonio businesses. Built as part of a complete brand identity, not just a logo in isolation.",
     url: "https://beastcreativeagency.com/services/logo-design-san-antonio",

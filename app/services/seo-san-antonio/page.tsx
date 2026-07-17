@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "San Antonio SEO agency specializing in Google rankings AND AI search visibility (ChatGPT, Perplexity, Gemini). Real results, named clients. (210) 332-0567",
   alternates: { canonical: "https://beastcreativeagency.com/services/seo-san-antonio" },
   openGraph: {
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
     title: "SEO Agency San Antonio | Beast Creative Agency",
     description: "San Antonio SEO that ranks in Google and gets cited by AI. Traditional SEO + AEO from one team.",
     url: "https://beastcreativeagency.com/services/seo-san-antonio",

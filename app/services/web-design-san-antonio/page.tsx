@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "San Antonio web design agency building custom Next.js and Shopify sites: mobile-first, Lighthouse 90+, conversion-optimized. No templates. Real results. (210) 332-0567",
   alternates: { canonical: "https://beastcreativeagency.com/services/web-design-san-antonio" },
   openGraph: {
+    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
     title: "Web Design San Antonio | Beast Creative Agency",
     description: "Custom websites built for San Antonio businesses: Next.js, Shopify, mobile-first, SEO-ready from day one.",
     url: "https://beastcreativeagency.com/services/web-design-san-antonio",
