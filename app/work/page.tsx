@@ -4,7 +4,8 @@ import IconButton from "@/components/ui/IconButton";
 import WorkGrid from "@/components/ui/WorkGrid";
 
 export const metadata: Metadata = {
-  title: "Our Work | Case Studies | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/work" },
+  title: "Our Work | Case Studies",
   description:
     "Real campaigns. Real numbers. See how Beast Creative Agency delivers 8x industry benchmarks for CPG brands and ambitious businesses nationwide.",
 };

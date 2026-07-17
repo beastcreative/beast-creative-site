@@ -4,7 +4,8 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
-  title: "AI Content Marketing Agency San Antonio | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/services/content-production" },
+  title: "AI Content Marketing Agency San Antonio",
   description:
     "AI-powered content production: recipe videos, product demos, and social content at scale, at 90%+ lower cost than traditional production. Beast Creative Agency.",
 };

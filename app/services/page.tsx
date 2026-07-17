@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/services" },
   title: "Digital Marketing Services | Beast Creative Agency | National",
   description:
     "Full-service digital marketing from Beast Creative Agency: CPG marketing, SEO + AEO, paid social, AI content production, branding, and web design.",

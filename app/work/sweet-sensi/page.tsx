@@ -9,7 +9,8 @@ import SweetSensiHero from "@/components/ui/SweetSensiHero";
 import TradingCard from "@/components/ui/TradingCard";
 
 export const metadata: Metadata = {
-  title: "Sweet Sensi CBD E-Commerce | 500%+ MRR Growth | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/work/sweet-sensi" },
+  title: "Sweet Sensi CBD E-Commerce | 500%+ MRR Growth",
   description:
     "Beast Creative Agency grew Sweet Sensi's monthly recurring revenue by over 500% through a precision SEO and social media strategy in the highly regulated CBD industry, without relying on traditional paid advertising.",
 };

@@ -8,6 +8,7 @@ import RelatedCaseStudies from "@/components/ui/RelatedCaseStudies";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/williams-bts" },
   title: "Williams Foods Back-to-School Campaign | 22,043 Entries on $4,000 | Beast Creative",
   description:
     "Beast Creative Agency helped Williams Foods generate 22,043 sweepstakes entries, 2.2x their goal, on a $4,000 ad budget with 3.89% CTR and $0.18 CPC for the 'Williamize Your Food' back-to-school campaign.",

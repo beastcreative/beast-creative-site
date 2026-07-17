@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/sustainable-cpg-marketing-how-eco-friendly-positioning-drives-sales-in-2025" },
   title: "Sustainable CPG Marketing: How Eco-Friendly Positioning Drives Sales in 2025",
   description:
     "Consumer packaged goods brands are discovering what tech companies learned a decade ago: sustainability isn&apos;t just good PR. It&apos;s a profit driver. In 2025,",

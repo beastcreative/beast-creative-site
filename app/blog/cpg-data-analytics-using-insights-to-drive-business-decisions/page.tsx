@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-data-analytics-using-insights-to-drive-business-decisions" },
   title: "CPG Data Analytics: Using Insights to Drive Business Decisions",
   description:
     "CPG brands drown in data but starve for decisions. Learn the metrics that matter, how to build a single source of truth, and how to turn insight into action.",

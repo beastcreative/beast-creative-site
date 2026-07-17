@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-line-extensions-growing-brands-through-new-variants" },
   title: "CPG Line Extensions: Growing Brands Through New Variants",
   description:
     "Successful CPG brands share one powerful secret: they don&apos;t just create products, they multiply them. Line extensions have driven 76% of new product launches",

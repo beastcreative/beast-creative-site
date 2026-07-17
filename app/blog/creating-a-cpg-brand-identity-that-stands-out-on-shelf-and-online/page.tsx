@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/creating-a-cpg-brand-identity-that-stands-out-on-shelf-and-online" },
   title: "Creating a CPG Brand Identity That Stands Out on Shelf and Online",
   description:
     "Over 40,000 new CPG products launch annually, and yet 95% fail within their first year, often because they blend into the noise rather than breaking through it.",

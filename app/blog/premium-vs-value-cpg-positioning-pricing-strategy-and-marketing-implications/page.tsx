@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/premium-vs-value-cpg-positioning-pricing-strategy-and-marketing-implications" },
   title: "Premium vs. Value CPG Positioning: Pricing Strategy and Marketing Implications",
   description:
     "Coca-Cola commands $4.50 for a premium glass bottle while store brands sell similar cola for $0.89. Both strategies work, but they require fundamentally",

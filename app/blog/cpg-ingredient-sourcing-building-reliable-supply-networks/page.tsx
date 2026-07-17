@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-ingredient-sourcing-building-reliable-supply-networks" },
   title: "CPG Ingredient Sourcing: Building Reliable Supply Networks",
   description:
     "Ingredient sourcing decisions ripple into cost, quality, margin, story, and risk. Here’s how to build a supply network that holds up as your CPG brand scales.",

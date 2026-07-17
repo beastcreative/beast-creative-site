@@ -3,7 +3,8 @@ import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Blog | CPG Marketing & AI Strategy Insights | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/blog" },
+  title: "Blog | CPG Marketing & AI Strategy Insights",
   description:
     "Insights, strategy, and data-driven thinking from the Beast team on CPG marketing, SEO/AEO, paid media, AI marketing, and branding.",
 };

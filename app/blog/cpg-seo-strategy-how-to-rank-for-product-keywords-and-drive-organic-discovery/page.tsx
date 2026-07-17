@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-seo-strategy-how-to-rank-for-product-keywords-and-drive-organic-discovery" },
   title: "CPG SEO Strategy: How to Rank for Product Keywords and Drive Organic Discovery",
   description:
     "87% of product searches start online. Learn the CPG SEO strategy that drives organic discovery: from problem-solution keywords and product page optimization to local SEO and content authority.",

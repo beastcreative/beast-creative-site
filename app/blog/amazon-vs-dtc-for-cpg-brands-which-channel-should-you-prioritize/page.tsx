@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/amazon-vs-dtc-for-cpg-brands-which-channel-should-you-prioritize" },
   title: "Amazon vs. DTC for CPG Brands: Which Channel Should You Prioritize?",
   description:
     "The choice between Amazon and direct-to-consumer (DTC) channels can make or break a CPG brand&apos;s growth trajectory. While 73% of CPG brands sell on Amazon,",

@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-packaging-design-and-marketing-how-your-package-sells-your-product" },
   title: "CPG Packaging Design and Marketing: How Your Package Sells Your Product",
   description:
     "Your product could be revolutionary, but if consumers walk past it on the shelf without a second glance, you&apos;ve already lost the sale. In the consumer packaged goods industry, your package isn&apos;t just protection. It&apos;s your most powerful sales tool.",

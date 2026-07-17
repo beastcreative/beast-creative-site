@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-performance-marketing-attribution-cac-and-roas-optimization" },
   title: "CPG Performance Marketing: Attribution, CAC, and ROAS Optimization",
   description:
     "Master CPG performance marketing with attribution models that bridge digital and in-store, calculate true customer acquisition cost, and optimize blended ROAS.",

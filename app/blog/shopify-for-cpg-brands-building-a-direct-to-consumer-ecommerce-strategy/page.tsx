@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/shopify-for-cpg-brands-building-a-direct-to-consumer-ecommerce-strategy" },
   title: "Shopify for CPG Brands: Building a Direct-to-Consumer Ecommerce Strategy",
   description:
     "Consumer Packaged Goods brands are abandoning traditional retail gatekeepers at record speed, with 73% planning to increase their direct-to-consumer",

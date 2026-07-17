@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/services/paid-media" },
   title: "Paid Social Media Agency San Antonio | AI-Optimized Paid Media | Beast Creative",
   description:
     "AI-optimized Facebook, Instagram, TikTok, and Google ad campaigns with real-time creative testing. $0.12 CPC vs $0.28 industry average.",

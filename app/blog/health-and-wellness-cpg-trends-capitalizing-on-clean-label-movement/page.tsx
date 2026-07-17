@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/health-and-wellness-cpg-trends-capitalizing-on-clean-label-movement" },
   title: "Health and Wellness CPG Trends: Capitalizing on the Clean-Label Movement",
   description:
     "Clean label has moved from niche to baseline expectation across CPG. Here’s what it really means, how it shows up by category, and how to market wellness credibly.",

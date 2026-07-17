@@ -6,6 +6,7 @@ import IconButton from "@/components/ui/IconButton";
 import StatCounter from "@/components/ui/StatCounter";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/pioneer" },
   title: "Pioneer Brand ROAS Campaign | Paid Media & Digital Marketing | Beast Creative",
   description:
     "Beast Creative Agency delivered ROAS-driven paid media campaigns for Pioneer, building audience, driving conversions, and generating measurable return on ad spend through strategic Facebook and Instagram advertising.",

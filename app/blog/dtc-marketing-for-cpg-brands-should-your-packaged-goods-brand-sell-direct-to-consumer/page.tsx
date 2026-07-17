@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/dtc-marketing-for-cpg-brands-should-your-packaged-goods-brand-sell-direct-to-consumer" },
   title: "DTC Marketing for CPG Brands: Should Your Packaged Goods Brand Sell Direct-to-Consumer?",
   description:
     "CPG brands are facing an unprecedented shift: traditional retail partnerships that once guaranteed shelf space and sales are no longer enough. Today&apos;s",

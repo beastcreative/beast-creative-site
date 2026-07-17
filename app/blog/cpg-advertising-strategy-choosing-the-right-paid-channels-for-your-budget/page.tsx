@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-advertising-strategy-choosing-the-right-paid-channels-for-your-budget" },
   title: "CPG Advertising Strategy: Choosing the Right Paid Channels for Your Budget",
   description:
     "Stop burning budget on the wrong channels. Learn how CPG brands should allocate paid media across Google, Meta, Amazon, and emerging platforms, using a proven 70-20-10 framework.",

@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-profitability-analysis-understanding-true-product-margins" },
   title: "CPG Profitability Analysis: Understanding True Product Margins",
   description:
     "Most CPG brands think they know their profit margins, but hidden costs are quietly eroding their bottom line by an average of 15-20%. True profitability",

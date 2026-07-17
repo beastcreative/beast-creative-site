@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-regulatory-compliance-navigating-fda-epa-and-industry-requirements" },
   title: "CPG Regulatory Compliance: Navigating FDA, EPA, and Industry Requirements",
   description:
     "A plain-language guide to CPG regulatory compliance: which agency governs what, labeling and claims rules, GMP, recalls, and advertising law for emerging brands.",

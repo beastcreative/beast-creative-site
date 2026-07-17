@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-manufacturing-excellence-ensuring-quality-and-consistency-at-scale" },
   title: "CPG Manufacturing Excellence: Ensuring Quality and Consistency at Scale",
   description:
     "Global CPG manufacturers lose over $50 billion annually to quality failures and recalls, a staggering figure that underscores why excellence in manufacturing",

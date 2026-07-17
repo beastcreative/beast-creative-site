@@ -10,6 +10,7 @@ import { faqSchema } from "@/lib/schema";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/cpg" },
   title: "CPG Marketing Agency | Beast Creative Agency San Antonio",
   description:
     "Beast Creative Agency helps CPG food and beverage brands grow from regional to national with AI-powered campaigns. 36,581 entries, 7.03% CTR, $0.12 CPC: real results for real brands.",

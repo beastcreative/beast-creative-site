@@ -6,7 +6,8 @@ import StatCounter from "@/components/ui/StatCounter";
 import RelatedCaseStudies from "@/components/ui/RelatedCaseStudies";
 
 export const metadata: Metadata = {
-  title: "TEKSBuilder | Idea to Launched SaaS in One Week | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/work/teksbuilder" },
+  title: "TEKSBuilder | Idea to Launched SaaS in One Week",
   description:
     "Beast Creative built TEKSBuilder, an AI resource generator for teachers, from idea to launched SaaS in one week, then scaled the same codebase into a network of state platforms, each mapped to its own teaching standards.",
 };

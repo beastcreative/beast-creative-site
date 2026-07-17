@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-ad-creative-that-converts-testing-iteration-and-best-practices" },
   title: "CPG Ad Creative That Converts: Testing, Iteration, and Best Practices",
   description:
     "Learn how to build a systematic CPG creative testing framework, from defining creative buckets to scaling winning elements across paid channels.",

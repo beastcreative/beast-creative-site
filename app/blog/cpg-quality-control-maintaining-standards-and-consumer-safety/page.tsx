@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-quality-control-maintaining-standards-and-consumer-safety" },
   title: "CPG Quality Control: Maintaining Standards and Consumer Safety",
   description:
     "One quality failure can erase years of brand equity. Here’s how disciplined CPG quality control protects consumers, satisfies retailers, and earns trust.",

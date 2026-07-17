@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-sales-forecasting-predicting-demand-and-managing-inventory" },
   title: "CPG Sales Forecasting: Predicting Demand and Managing Inventory",
   description:
     "Forecast errors cost CPG brands both ways: stockouts lose sales and shelf space while overstock kills cash and creates waste. Here’s how to forecast demand right.",

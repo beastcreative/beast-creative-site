@@ -6,6 +6,7 @@ import InstantContact from "@/components/ui/InstantContact";
 import ReviewBadges from "@/components/ui/ReviewBadges";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/contact" },
   title: "Contact Beast Creative Agency | San Antonio SEO & AEO",
   description:
     "See where you stand in AI search, or send a message. No pitch deck, no commitments, just an honest conversation. Working with brands nationwide.",

@@ -4,6 +4,7 @@ import AnimatedCheckmark from "@/components/ui/AnimatedCheckmark";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/thank-you" },
   title: "Thank You",
   description: "We got your message and we'll be in touch within one business day.",
   robots: {

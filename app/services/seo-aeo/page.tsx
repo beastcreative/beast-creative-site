@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/services/seo-aeo" },
   title: "SEO Agency San Antonio + Answer Engine Optimization (AEO) | Beast Creative",
   description:
     "Beast Creative offers traditional SEO and Answer Engine Optimization, ensuring your brand appears in Google AND AI search tools like ChatGPT, Gemini, and Perplexity.",

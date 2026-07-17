@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-brand-storytelling-connecting-with-consumers-through-authentic-narratives" },
   title: "CPG Brand Storytelling: Connecting With Consumers Through Authentic Narratives",
   description:
     "Ninety-one percent of consumers say they&apos;re more likely to buy from brands with authentic stories, yet most CPG companies still rely on product features and price points to drive sales.",

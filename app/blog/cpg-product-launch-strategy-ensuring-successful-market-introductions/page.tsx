@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-product-launch-strategy-ensuring-successful-market-introductions" },
   title: "CPG Product Launch Strategy: Ensuring Successful Market Introductions",
   description:
     "Most CPG launches stall in the first 90 days. Learn the pre-launch foundations, go-to-market sequencing, and trial-to-repeat mechanics that make products stick.",

@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-content-marketing-creating-content-that-educates-and-converts-consumers" },
   title: "CPG Content Marketing: Creating Content That Educates and Converts Consumers",
   description:
     "Educated customers become loyal customers. Learn how CPG brands create content that builds authority, drives organic discovery, and converts consumers at every stage of the buying journey.",

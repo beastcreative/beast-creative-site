@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-brand-positioning-how-to-differentiate-in-crowded-markets" },
   title: "CPG Brand Positioning: How to Differentiate in Crowded Markets",
   description:
     "On a crowded shelf, positioning is the lever that decides whether your CPG brand gets chosen or ignored. Here's how to find a defensible point of difference.",

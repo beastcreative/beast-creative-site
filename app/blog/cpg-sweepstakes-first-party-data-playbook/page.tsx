@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-sweepstakes-first-party-data-playbook" },
   title: "The CPG Sweepstakes Playbook: First-Party Data Strategy",
   description:
     "How to design sweepstakes campaigns that build consumer databases retail buyers trust. Includes the exact framework behind 36,581 entries on a $6,000 budget.",

@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-market-research-methods-understanding-your-target-consumer" },
   title: "CPG Market Research Methods: Understanding Your Target Consumer",
   description:
     "A practical guide to CPG market research methods: qualitative and quantitative tools, first-party data, personas, and turning consumer insight into decisions.",

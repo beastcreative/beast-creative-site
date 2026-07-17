@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/services/cpg-marketing" },
   title: "CPG Marketing Agency | Sweepstakes & Consumer Data | Beast Creative",
   description:
     "Specialized CPG marketing: sweepstakes campaigns, first-party data collection, retail readiness decks, and AI-powered content pipelines. Working with brands nationwide.",

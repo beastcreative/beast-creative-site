@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-test-marketing-validating-products-before-national-rollout" },
   title: "CPG Test Marketing: Validating Products Before National Rollout",
   description:
     "Nearly 95% of new consumer packaged goods fail within their first year, yet most of these failures could be prevented with proper test marketing. Smart CPG",

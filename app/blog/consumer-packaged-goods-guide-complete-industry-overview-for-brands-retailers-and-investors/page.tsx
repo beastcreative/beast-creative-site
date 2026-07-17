@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/consumer-packaged-goods-guide-complete-industry-overview-for-brands-retailers-and-investors" },
   title: "Consumer Packaged Goods (CPG): A Complete Industry Overview for Brands, Retailers & Investors",
   description:
     "What CPG is, how the industry works, and what drives growth: a plainspoken guide to categories, channels, margins, marketing, and what investors watch.",

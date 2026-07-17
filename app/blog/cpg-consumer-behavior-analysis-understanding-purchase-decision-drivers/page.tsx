@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-consumer-behavior-analysis-understanding-purchase-decision-drivers" },
   title: "CPG Consumer Behavior Analysis: Understanding Purchase Decision Drivers",
   description:
     "What actually drives a CPG purchase? A plainspoken guide to the psychology, decision drivers, and research methods behind why shoppers buy what they buy.",

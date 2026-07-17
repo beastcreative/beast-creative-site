@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/google-shopping-ads-for-cpg-brands-product-feed-optimization-and-campaign-setup" },
   title: "Google Shopping Ads for CPG Brands: Product Feed Optimization and Campaign Setup",
   description:
     "Google Shopping drives 60 to 80% of retail search ad clicks. Learn how to optimize CPG product feeds, structure campaigns by tier, and achieve 150 to 300% ROAS improvements.",

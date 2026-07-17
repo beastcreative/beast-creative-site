@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-co-packing-vs-in-house-production-making-the-right-choice" },
   title: "CPG Co-Packing vs. In-House Production: Making the Right Choice",
   description:
     "Own the plant or outsource the make? A plainspoken guide to co-packing vs. in-house CPG production: the real cost math, when to switch, and how to vet a co-man.",

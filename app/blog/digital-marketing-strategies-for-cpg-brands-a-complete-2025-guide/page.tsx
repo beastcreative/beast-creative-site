@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/digital-marketing-strategies-for-cpg-brands-a-complete-2025-guide" },
   title: "Digital Marketing Strategies for CPG Brands: A Complete 2025 Guide",
   description:
     "Consumer packaged goods brands face a unique challenge that most other industries don&apos;t: convincing shoppers to choose their product in the three seconds it",

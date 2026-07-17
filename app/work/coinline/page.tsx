@@ -9,6 +9,7 @@ import CoinlineHero from "@/components/ui/CoinlineHero";
 import ExpandingFlexCards from "@/components/ui/ExpandingFlexCards";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/coinline" },
   title: "Coinline Barcade Brand Identity | Beast Creative Agency Case Study",
   description:
     "How Beast Creative Agency named, branded, and launched Coinline Barcade, a retro-modern arcade brand built from zero into a full visual identity system with logo, apparel, signage, and digital presence.",

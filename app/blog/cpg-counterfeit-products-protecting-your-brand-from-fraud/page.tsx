@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-counterfeit-products-protecting-your-brand-from-fraud" },
   title: "CPG Counterfeit Products: Protecting Your Brand from Fraud",
   description:
     "Global counterfeit trade reached $509 billion in 2019, with consumer packaged goods representing the largest target category. For CPG brands, fake products",

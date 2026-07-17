@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/video-marketing-for-cpg-brands-youtube-tiktok-and-short-form-content-strategies" },
   title: "Video Marketing for CPG Brands: YouTube, TikTok, and Short-Form Content Strategies",
   description:
     "Consumers scroll past polished commercials but stop for authentic product demonstrations. Learn the platform-specific video strategy CPG brands use to build authority and drive sales.",

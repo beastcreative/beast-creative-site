@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-distribution-channels-choosing-between-retail-dtc-and-hybrid-models" },
   title: "CPG Distribution Channels: Choosing Between Retail, DTC, and Hybrid Models",
   description:
     "Retail, DTC, or hybrid? Your channel mix decides your margins, brand control, and growth ceiling. Here’s how to choose the right model for your CPG stage.",

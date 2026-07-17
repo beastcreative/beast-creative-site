@@ -9,6 +9,7 @@ import IconButton from "@/components/ui/IconButton";
 import PhoneTilt from "@/components/ui/PhoneTilt";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/williams-allstars" },
   title: "Williams All-Stars March Madness Campaign | 13,660 Entries in 24 Days | Beast Creative",
   description:
     "How Beast Creative Agency designed a digital trading card collection campaign for Williams Foods that generated 13,660 entries, 200,475 reach, and a 9.5% email click rate across a 24-day March Madness window.",

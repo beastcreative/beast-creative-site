@@ -8,6 +8,7 @@ import IconButton from "@/components/ui/IconButton";
 import FlipCard from "@/components/ui/FlipCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/sun-bird" },
   title: "Sun-Bird Seasonings Bird Herd Campaign | 36,581 Entries, 7.03% CTR | Beast Creative",
   description:
     "Beast Creative Agency helped Sun-Bird Seasonings announce their national Walmart rollout with a sweepstakes that generated 36,581 entries, 3.6x their goal, at 7.03% CTR and $0.12 CPC: nearly 8x the industry benchmark.",

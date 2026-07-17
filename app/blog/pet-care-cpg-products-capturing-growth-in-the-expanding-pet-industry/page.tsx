@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/pet-care-cpg-products-capturing-growth-in-the-expanding-pet-industry" },
   title: "Pet Care CPG Products: Capturing Growth in the Expanding Pet Industry",
   description:
     "Pet humanization has turned pet care into one of CPG’s most resilient, premiumizing categories. Here’s how brands win pet parents, channels, and loyalty.",

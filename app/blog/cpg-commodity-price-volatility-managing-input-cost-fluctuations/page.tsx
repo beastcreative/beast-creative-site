@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-commodity-price-volatility-managing-input-cost-fluctuations" },
   title: "CPG Commodity Price Volatility: Managing Input Cost Fluctuations",
   description:
     "Raw material costs for consumer packaged goods jumped 23% in the past year alone, turning profit margins into moving targets for even the most established",

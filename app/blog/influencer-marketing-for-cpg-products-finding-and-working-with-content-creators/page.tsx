@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/influencer-marketing-for-cpg-products-finding-and-working-with-content-creators" },
   title: "Influencer Marketing for CPG Products: Finding and Working With Content Creators",
   description:
     "Nearly 92% of consumers trust recommendations from people they don&apos;t personally know over traditional advertising, a statistic that&apos;s reshaping how CPG brands",

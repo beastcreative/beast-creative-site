@@ -5,6 +5,7 @@ import IconButton from "@/components/ui/IconButton";
 import ReviewBadges from "@/components/ui/ReviewBadges";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/about" },
   title: "About Beast Creative Agency | San Antonio SEO & AEO",
   description:
     "Beast Creative is a San Antonio SEO, AEO & GEO agency. Built on proven results and the kind of transparent, documented reporting most agencies avoid.",

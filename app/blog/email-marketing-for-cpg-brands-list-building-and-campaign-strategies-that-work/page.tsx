@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/email-marketing-for-cpg-brands-list-building-and-campaign-strategies-that-work" },
   title: "Email Marketing for CPG Brands: List Building and Campaign Strategies That Work",
   description:
     "CPG email marketing delivers 42x ROI on every dollar spent. Learn how to build quality lists, create campaigns that drive repeat purchases, and segment for better performance.",

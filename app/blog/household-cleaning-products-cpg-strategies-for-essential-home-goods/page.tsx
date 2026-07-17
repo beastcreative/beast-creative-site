@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/household-cleaning-products-cpg-strategies-for-essential-home-goods" },
   title: "Household Cleaning Products: CPG Strategies for Essential Home Goods",
   description:
     "Home care is one of the largest, most habitual, and most brand-loyal CPG categories. Here’s how challenger brands break in and how incumbents defend.",

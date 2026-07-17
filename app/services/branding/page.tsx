@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/services/branding" },
   title: "Branding Agency | Brand Identity & Naming | Beast Creative",
   description:
     "Brand naming, visual systems, and identities that create instant recognition. Beast Creative Agency, creators of Coinline and other standout brands.",

@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-regulatory-changes-staying-compliant-in-evolving-markets" },
   title: "CPG Regulatory Changes: Staying Compliant in Evolving Markets",
   description:
     "Federal regulatory shifts in the CPG industry have accelerated by 400% over the past three years, leaving many brands scrambling to keep pace with compliance",

@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/social-media-marketing-for-cpg-brands-platform-strategies-that-drive-sales" },
   title: "Social Media Marketing for CPG Brands: Platform Strategies That Drive Sales",
   description:
     "CPG brands face a unique challenge: selling products that consumers often buy on autopilot through platforms designed for engagement and discovery. While a",

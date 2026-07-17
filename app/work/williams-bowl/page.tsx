@@ -8,6 +8,7 @@ import IconButton from "@/components/ui/IconButton";
 import TiltCard from "@/components/ui/TiltCard";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/work/williams-bowl" },
   title: "Williams Bowl 2021 NFL Campaign | 6,020 Entries, $1,500 Budget | Beast Creative",
   description:
     "How Beast Creative Agency launched the Williams Bowl, a 4-week NFL-style bracket sweepstakes for Williams Foods that generated 6,020 entries, 872 new Facebook followers, and proved the CPG sweepstakes model on a $1,500 budget.",

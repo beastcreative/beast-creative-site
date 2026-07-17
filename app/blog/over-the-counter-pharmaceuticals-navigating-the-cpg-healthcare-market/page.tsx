@@ -5,6 +5,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/over-the-counter-pharmaceuticals-navigating-the-cpg-healthcare-market" },
   title: "Over-the-Counter Pharmaceuticals: Navigating the CPG Healthcare Market",
   description:
     "OTC sits where CPG marketing meets strict healthcare regulation. Here's how to build trust, navigate FDA rules, and market consumer health products compliantly.",

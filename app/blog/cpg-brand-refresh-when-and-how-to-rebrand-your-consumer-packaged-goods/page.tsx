@@ -6,6 +6,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import IconButton from "@/components/ui/IconButton";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/blog/cpg-brand-refresh-when-and-how-to-rebrand-your-consumer-packaged-goods" },
   title: "CPG Brand Refresh: When and How to Rebrand Your Consumer Packaged Goods",
   description:
     "Nearly 73% of CPG brands that undergo strategic rebranding see measurable sales growth within 18 months, yet most consumer packaged goods companies hesitate",

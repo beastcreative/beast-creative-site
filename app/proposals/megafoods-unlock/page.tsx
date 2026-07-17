@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://beastcreativeagency.com/proposals/megafoods-unlock" },
   title: "Confidential Proposal · Beast Creative",
   robots: { index: false, follow: false },
 };

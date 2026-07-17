@@ -7,7 +7,8 @@ import StatCounter from "@/components/ui/StatCounter";
 import { faqSchema, serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "AI App & SaaS Development | Idea to Launched Product | Beast Creative Agency",
+  alternates: { canonical: "https://beastcreativeagency.com/services/app-development" },
+  title: "AI App & SaaS Development | Idea to Launched Product",
   description:
     "Beast Creative builds real software (SaaS products, web apps, and AI tools) in weeks, not months. We built and launched our own SaaS, TEKSBuilder, in one week. Now we build for you.",
 };
