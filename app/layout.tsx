@@ -5,6 +5,7 @@ import Nav from "@/components/layout/Nav";
 import ConsoleBranding from "@/components/ui/ConsoleBranding";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/ui/ChatWidget";
+import AssessmentClickTracker from "@/components/AssessmentClickTracker";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -82,6 +83,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <ChatWidget />
+        <AssessmentClickTracker />
       </body>
     </html>
   );

@@ -4,11 +4,11 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 export const metadata = genMeta({
   title: "Privacy Policy",
   description:
-    "How Beast Creative Agency collects, uses, and protects the information you share through our website and contact form.",
+    "How Beast Creative Agency collects, uses, and protects the information you share through our website, contact form, and Growth Assessment.",
   path: "/privacy",
 });
 
-const LAST_UPDATED = "June 2, 2026";
+const LAST_UPDATED = "July 18, 2026";
 
 type Section = {
   heading: string;
@@ -27,18 +27,27 @@ const sections: Section[] = [
   {
     heading: "Information We Collect",
     body: [
-      "Information you provide directly: When you fill out our contact form, you may give us your name, email address, phone number, company name, the services you are interested in, and any message you choose to send.",
-      "Information collected automatically: When you visit the Site, we and our analytics providers may automatically collect your IP address, browser type, device information, pages viewed, referring URLs, and similar usage data through cookies and comparable technologies.",
+      "Information you provide directly: When you fill out our contact form or Growth Assessment, you may give us your name, email address, phone number, company name and website, your role, the services or goals you are interested in, your marketing channels, budget or investment range, timeline, and any message or context you choose to share.",
+      "Information collected automatically: When you visit the Site, we and our analytics providers may automatically collect your IP address, browser type, device information, pages viewed, referring URLs, marketing attribution parameters (such as UTM tags), and similar usage data through cookies and comparable technologies.",
     ],
   },
   {
     heading: "How We Use Your Information",
     list: [
       "Respond to your inquiries and follow up about our services.",
+      "Qualify and route Growth Assessment submissions and schedule Growth Diagnostic meetings.",
       "Provide, operate, and improve the Site and our services.",
       "Understand how visitors use the Site so we can make it better.",
       "Send you information you have requested or that relates to a project we are discussing.",
       "Protect the Site, prevent abuse, and comply with legal obligations.",
+    ],
+  },
+  {
+    heading: "Growth Assessment and Automated Qualification",
+    body: [
+      "When you complete our Growth Assessment, you provide business details such as your company and website, your goals and challenges, your marketing channels, your investment range and timeline, your role in the decision, and your consent to be contacted. We use this to understand your needs and prepare for a potential Growth Diagnostic conversation.",
+      "We use an automated, rules-based system to route each assessment, for example toward scheduling a call, a manual review by our team, or helpful resources. This routing supports our follow-up and does not make any legal or similarly significant decision about you on its own; a member of our team reviews meaningful next steps.",
+      "To help our team prepare, we may generate an internal summary that can include information from your assessment and publicly available information from your company website. This internal summary is for our team only and is not provided to you as a deliverable.",
     ],
   },
   {
@@ -55,7 +64,9 @@ const sections: Section[] = [
     ],
     list: [
       "Hosting and infrastructure (e.g., our website host) to serve the Site.",
-      "Email delivery (e.g., our transactional email provider) to receive and respond to your contact form messages.",
+      "Email delivery (e.g., our transactional email provider) to receive and respond to your messages.",
+      "Google Workspace (Google Sheets, Drive, Gmail, and Calendar) to store assessment records, prepare internal notes, send confirmations, and schedule meetings.",
+      "An AI provider that helps our team prepare internal meeting notes, using only the information described in this policy; it is not used to make decisions about you.",
       "Analytics (e.g., Google Analytics) to measure Site usage.",
       "When required by law, to comply with legal process, or to protect our rights, safety, or property.",
     ],
