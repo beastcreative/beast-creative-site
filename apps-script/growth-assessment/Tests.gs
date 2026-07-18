@@ -104,3 +104,14 @@ function testAIRaw_() {
     return { model: model, http: res.getResponseCode(), body: res.getContentText().slice(0, 400) };
   } catch (e) { return { model: model, error: String(e && e.message || e) }; }
 }
+
+/** Secret-gated status report: recent audit rows + brief-processing counts. */
+function statusReport_() {
+  var audit = readObjects_('Audit Log');
+  var recent = audit.slice(-14).map(function (r) { return r.timestamp + ' | ' + r.workflow + ' | ' + r.action + ' | ' + r.result; });
+  var asmts = readObjects_('Assessments');
+  var pending = asmts.filter(function (a) { return !a.internal_brief_url; }).length;
+  var claimed = asmts.filter(function (a) { return a.internal_brief_url === 'generating' || a.internal_brief_url === 'error'; }).length;
+  var withBrief = asmts.filter(function (a) { return String(a.internal_brief_url).indexOf('http') === 0; }).length;
+  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, recentAudit: recent };
+}
