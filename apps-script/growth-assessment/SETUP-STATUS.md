@@ -36,7 +36,7 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 | 2.9 | Deploy as Web app → copy `/exec` URL | Deployed + verified (valid secret writes, wrong secret rejected) | ✅ Complete |
 | 2.10 | Create Calendar `Beast Growth Assessment` appointment schedule | Created: calendar.app.google/PegvMAhP72Gt2YqZ7 (wired into site + Script Property) | 🔧 Configured |
 | 2.11 | Create `Beast Growth Operations` Drive folders | Folder tree created; brief + sheet filed via `initDrive()` | ✅ Complete |
-| 2.12 | Set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`) + redeploy | Paste into Vercel | ⬜ Not started |
+| 2.12 | Set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`) + redeploy | John lacks Vercel access → friend adds both + redeploys (message sent) | ⏳ Waiting on friend |
 | 2.13 | Confirm sender name + internal notification recipients | Confirm | ⬜ Not started |
 | 2.14 | Define GA4 events + mark booking as conversion | Confirm in GA4/GTM | ⬜ Not started |
 | 2.15 | Confirm `/privacy` covers this collection | Confirm | ⬜ Not started |
