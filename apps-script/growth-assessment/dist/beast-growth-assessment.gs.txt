@@ -736,6 +736,70 @@ function enrichBrief_(d, q, websiteText) {
   }
 }
 
+/**
+ * declinePlan_ — 3-4 honest, generous, do-it-yourself growth tips for a declined
+ * prospect, tailored to their goal/challenge. Prospect-facing, so kept general
+ * and non-fabricated. Falls back to solid deterministic tips if AI is off/fails.
+ */
+function declinePlan_(d) {
+  if (!aiReady_()) return defaultTips_(d);
+  if (aiMock_()) return mockTips_(d);
+  var key = prop_('ANTHROPIC_API_KEY');
+  var model = String(setting_('ai_model', 'claude-opus-4-8'));
+  var system =
+    'You are a senior growth strategist writing a short, generous, honest self-serve plan for a prospect who is not the right fit for a paid engagement right now. ' +
+    'Give 3 to 4 concrete, practical, do-it-yourself growth actions they can start with organic effort and sweat equity, tailored to their stated goal and challenge. ' +
+    'Each tip: one sentence, specific and actionable, no fluff, no fabricated stats or promises, no agency pitch. Respond with ONLY JSON: {"tips":["...","..."]}.';
+  var payload = {
+    goals: d.primary_goals, challenge: d.biggest_challenge, desired_result: d.desired_result,
+    company_type: d.company_type, current_marketing: d.current_marketing
+  };
+  var body = {
+    model: model, max_tokens: 500, system: system,
+    messages: [{ role: 'user', content: 'Business:\n' + JSON.stringify(payload) + '\n\nReturn {"tips":[3-4 one-sentence self-serve growth actions]}.' }]
+  };
+  try {
+    var res = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+      method: 'post', contentType: 'application/json',
+      headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+      payload: JSON.stringify(body), muteHttpExceptions: true
+    });
+    if (res.getResponseCode() !== 200) { logActivity_('ai', d.company_name || '', 'declinePlan', 'http_' + res.getResponseCode(), ''); return defaultTips_(d); }
+    var j = JSON.parse(res.getContentText());
+    var text = (j.content && j.content[0] && j.content[0].text) || '';
+    var parsed = extractJson_(text);
+    if (parsed && Array.isArray(parsed.tips) && parsed.tips.length) return parsed.tips.slice(0, 4).map(String);
+    return defaultTips_(d);
+  } catch (e) {
+    logActivity_('ai', d.company_name || '', 'declinePlan', 'error', String(e && e.message || e));
+    return defaultTips_(d);
+  }
+}
+
+function mockTips_(d) {
+  return [
+    'Set up your core email flows (welcome, abandoned cart, post-purchase) before spending more on ads.',
+    'Pick one channel you can win at organically and post consistently for 90 days.',
+    'Fix your top landing page: one clear promise, one clear call to action, proof above the fold.',
+    'Track revenue per visitor weekly so you can see what is actually working.'
+  ];
+}
+
+function defaultTips_(d) {
+  var goals = Array.isArray(d.primary_goals) ? d.primary_goals : String(d.primary_goals || '').split('; ');
+  var tips = [
+    'Pick one channel you can genuinely win at and post consistently for 90 days before adding more.',
+    'Fix your top landing page: one clear promise, one clear call to action, and proof near the top.',
+    'Track one honest metric each week so you can tell what is actually moving the needle.'
+  ];
+  if (goals.indexOf('Retention & repeat revenue') !== -1 || goals.indexOf('Higher website conversion') !== -1) {
+    tips.push('Set up core lifecycle emails (welcome, abandoned cart, post-purchase) before spending more on acquisition.');
+  } else {
+    tips.push('Write down the single biggest objection customers have, and answer it clearly everywhere you sell.');
+  }
+  return tips;
+}
+
 /** Best-effort JSON extraction from a model response. */
 function extractJson_(text) {
   try { return JSON.parse(text); } catch (e) {}
@@ -800,7 +864,9 @@ function mockEnrichment_(d, q) {
  * Response: { success, leadId, route, bookingUrl }.
  */
 
-function doGet() {
+function doGet(e) {
+  var p = (e && e.parameter) || {};
+  if (p.action && p.lead) return handleAction_(p);   // one-click Approve/Decline from email
   return json_({ ok: true, service: 'beast-growth-assessment', ts: nowIso_() });
 }
 
@@ -1139,8 +1205,21 @@ function sendRecap_(r) {
   send_(r.work_email, 'Your Beast Growth Diagnostic recap', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
 }
 
+/* ── Decline: honest, generous self-serve plan (auto-sent on Decline) ── */
+function sendDeclineEmail_(d, tips) {
+  var items = (tips && tips.length) ? tips : [];
+  var body =
+    '<p>Hi ' + esc_(d.first_name) + ',</p>' +
+    '<p>Thanks for taking the Beast Growth Assessment. Being straight with you: a full Growth Diagnostic may not be the most useful next step for where ' + esc_(d.company_name) + ' is right now. But we do not want to leave you empty-handed.</p>' +
+    '<p>Here are a few moves you can make on your own to build momentum:</p><ul>' +
+    items.map(function (t) { return '<li>' + esc_(t) + '</li>'; }).join('') +
+    '</ul>' +
+    '<p>Put in the sweat equity on these, and when the timing is right, we would love to talk. The door stays open.</p>';
+  send_(d.work_email, 'A few growth moves you can make on your own', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
+}
+
 /* ── Internal team notification ───────────────────────────────────── */
-function sendInternalNotification_(d, route, ids) {
+function sendInternalNotification_(d, route, ids, q) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
   var priority = route === 'priority_qualified';
@@ -1164,11 +1243,33 @@ function sendInternalNotification_(d, route, ids) {
   }).join('');
 
   var links = '<p><a href="' + esc_(sheetUrl) + '">Open pipeline sheet</a>' +
-    (ids.briefUrl ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief</a>' : '') + '</p>';
+    (ids.briefUrl && String(ids.briefUrl).indexOf('http') === 0 ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief (full AI analysis)</a>' : '') + '</p>';
+
+  // Inline "why" so the decision can be made without opening the brief.
+  var why = '';
+  if (q) {
+    var c = q.categoryScores || {};
+    var lastReason = (q.reasons && q.reasons.length) ? q.reasons[q.reasons.length - 1] : '';
+    why = '<div style="margin:14px 0;padding:12px 14px;background:#faf5f8;border-left:3px solid #FF1198">' +
+      '<div style="font-weight:bold">Score ' + q.score + '/100 &middot; ' + esc_(route) + '</div>' +
+      '<div style="font-size:13px;color:#555;margin-top:4px">need ' + (c.strategic_need || 0) + ' &middot; budget ' + (c.investment || 0) +
+      ' &middot; timing ' + (c.timing || 0) + ' &middot; authority ' + (c.decision || 0) + ' &middot; fit ' + (c.business_fit || 0) + '</div>' +
+      '<div style="font-size:13px;color:#555;margin-top:4px">' + esc_(lastReason) + '</div></div>';
+  }
+
+  // One-click decision buttons (signed links to the web app).
+  var approveUrl = actionUrl_(ids.leadId, 'approve');
+  var declineUrl = actionUrl_(ids.leadId, 'decline');
+  var buttons = (approveUrl && declineUrl) ?
+    '<p style="margin:16px 0">' +
+    '<a href="' + approveUrl + '" style="display:inline-block;background:#16a34a;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold;margin-right:8px">Approve + send booking link</a>' +
+    '<a href="' + declineUrl + '" style="display:inline-block;background:#0A0A0A;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold">Decline + send self-serve plan</a>' +
+    '</p><p style="font-size:12px;color:#8a8a8a">One click. Approve books them; Decline auto-sends an AI self-serve plan. Full analysis is in the brief.</p>' : '';
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
     '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +
     '<p style="color:#8a8a8a;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
+    why + buttons +
     '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
 
   send_(recipients.join(','), subject, html, 'New Growth Assessment (' + route + '). Open in Gmail to view details.');
@@ -1679,7 +1780,7 @@ function processPending_() {
 
     safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', a.lead_id, '');
     safe_(function () { sendProspectConfirmation_(d, q.route); }, 'confirmation', a.lead_id, '');
-    safe_(function () { sendInternalNotification_(d, q.route, ids); }, 'internal-notify', a.lead_id, '');
+    safe_(function () { sendInternalNotification_(d, q.route, ids, q); }, 'internal-notify', a.lead_id, '');
     safe_(function () { createFollowUpTask_(d, q.route, ids); }, 'task', a.lead_id, '');
 
     if (!ids.briefUrl) updateRow_('Assessments', arow, { internal_brief_url: 'error' }); // don't loop on failure
@@ -1699,6 +1800,102 @@ function leadRowToQ_(lead) {
     flags: String(lead.qualification_flags || '').split('; ').filter(Boolean),
     version: lead.qualification_version
   };
+}
+
+/* ==================== Decision.gs ==================== */
+/**
+ * Decision.gs — one-click Approve / Decline from the internal alert email.
+ *
+ * The internal email carries signed links to the web app's doGet. Clicking one
+ * approves the lead (prospect gets their booking link) or declines it (prospect
+ * gets an AI-drafted self-serve growth plan). Links are HMAC-signed with the
+ * shared secret so they cannot be guessed or replayed by outsiders.
+ */
+
+function actionToken_(leadId) {
+  var raw = Utilities.computeHmacSha256Signature(String(leadId), CONFIG.sharedSecret);
+  return Utilities.base64EncodeWebSafe(raw).replace(/[^A-Za-z0-9]/g, '').slice(0, 24);
+}
+
+function actionUrl_(leadId, action) {
+  var base;
+  try { base = ScriptApp.getService().getUrl(); } catch (e) { base = ''; }
+  if (!base) return '';
+  return base + '?action=' + action + '&lead=' + encodeURIComponent(leadId) + '&token=' + actionToken_(leadId);
+}
+
+/** Router for doGet when ?action= is present. Returns a branded HTML page. */
+function handleAction_(p) {
+  if (!p.lead || actionToken_(p.lead) !== p.token) {
+    return htmlPage_('Link not valid', 'This decision link is invalid or has expired.');
+  }
+  var lead = leadFor_(p.lead);
+  if (!lead) return htmlPage_('Not found', 'We could not find that lead.');
+  if (lead.manual_override) {
+    return htmlPage_('Already decided', 'This lead was already marked "' + lead.manual_override + '". No change was made.');
+  }
+  if (p.action === 'approve') {
+    approveLead_(lead);
+    return htmlPage_('Approved', lead.company_name + ' is approved. The prospect just received their booking link.');
+  }
+  if (p.action === 'decline') {
+    declineLead_(lead);
+    return htmlPage_('Declined', lead.company_name + ' was declined. The prospect received a helpful, on-brand self-serve plan.');
+  }
+  return htmlPage_('Unknown action', 'That action is not recognized.');
+}
+
+function approveLead_(lead) {
+  var d = lead;
+  var route = 'qualified';
+  var lrow = findRow_('Leads', 'lead_id', lead.lead_id);
+  if (lrow > 0) updateRow_('Leads', lrow, {
+    qualification_route: route, status: 'Approved', calendar_booking_status: 'Awaiting Booking',
+    manual_override: 'Approve', override_owner: 'email-action', override_timestamp: nowIso_(),
+    next_step: 'Confirm booking'
+  });
+  var arow = findRow_('Assessments', 'lead_id', lead.lead_id);
+  if (arow > 0) {
+    updateRow_('Assessments', arow, { qualification_route: route, meeting_status: 'Awaiting Booking' });
+    var asmt = rowObject_('Assessments', arow);
+    var oppRow = findRow_('Opportunities', 'assessment_id', asmt.assessment_id);
+    if (oppRow > 0) updateRow_('Opportunities', oppRow, { stage: 'Scheduled', next_step: 'Confirm booking', next_step_due: dueInDays_(1) });
+  }
+  safe_(function () { sendProspectConfirmation_(d, route); }, 'approve-email', lead.lead_id, '');
+  appendRow_('Tasks', {
+    task_id: newId_('task'), related_type: 'Lead', related_id: lead.lead_id, assigned_to: CONFIG.defaultOwner,
+    task_type: 'Prepare internal brief', task_title: 'Prep (approved): ' + lead.company_name, due_date: dueInDays_(1),
+    status: 'Open', priority: 'High', completed_at: '', notes: 'Manually approved from email.'
+  });
+  logActivity_('decision', lead.lead_id, 'approved', '', '');
+}
+
+function declineLead_(lead) {
+  var d = lead;
+  var lrow = findRow_('Leads', 'lead_id', lead.lead_id);
+  if (lrow > 0) updateRow_('Leads', lrow, {
+    qualification_route: 'nurture', status: 'Declined', calendar_booking_status: 'N/A',
+    manual_override: 'Decline', override_owner: 'email-action', override_timestamp: nowIso_(),
+    next_step: 'Declined - self-serve plan sent'
+  });
+  var arow = findRow_('Assessments', 'lead_id', lead.lead_id);
+  if (arow > 0) {
+    var asmt = rowObject_('Assessments', arow);
+    var oppRow = findRow_('Opportunities', 'assessment_id', asmt.assessment_id);
+    if (oppRow > 0) updateRow_('Opportunities', oppRow, { stage: 'Closed Lost', lost_reason: 'Not a fit (declined)' });
+  }
+  var tips = declinePlan_(d);
+  safe_(function () { sendDeclineEmail_(d, tips); }, 'decline-email', lead.lead_id, '');
+  logActivity_('decision', lead.lead_id, 'declined', '', '');
+}
+
+function htmlPage_(title, msg) {
+  var html =
+    '<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;margin:60px auto;text-align:center;color:#0A0A0A">' +
+    '<div style="font-size:22px;font-weight:bold;color:#FF1198;margin-bottom:10px">' + esc_(title) + '</div>' +
+    '<p style="font-size:15px;line-height:1.5">' + esc_(msg) + '</p>' +
+    '<p style="color:#8a8a8a;font-size:13px;margin-top:24px">Beast Growth Assessment</p></div>';
+  return HtmlService.createHtmlOutput(html).setTitle('Beast Growth Assessment');
 }
 
 /* ==================== Calendar.gs ==================== */
@@ -1963,5 +2160,16 @@ function statusReport_() {
   var pending = asmts.filter(function (a) { return !a.internal_brief_url; }).length;
   var claimed = asmts.filter(function (a) { return a.internal_brief_url === 'generating' || a.internal_brief_url === 'error'; }).length;
   var withBrief = asmts.filter(function (a) { return String(a.internal_brief_url).indexOf('http') === 0; }).length;
-  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, recentAudit: recent };
+  var leads = readObjects_('Leads');
+  var last = leads.length ? leads[leads.length - 1] : null;
+  var lastLead = last ? {
+    company: last.company_name, route: last.qualification_route, score: last.qualification_score,
+    scores: last.qualification_scores, reasons: last.qualification_reasons, flags: last.qualification_flags,
+    decision_role: last.decision_role, timeline: last.timeline,
+    potential_investment: last.potential_monthly_investment, stage: last.company_stage,
+    challenge_len: String(last.biggest_challenge || '').length,
+    lead_id: last.lead_id, override: last.manual_override,
+    approve_url: actionUrl_(last.lead_id, 'approve'), decline_url: actionUrl_(last.lead_id, 'decline')
+  } : null;
+  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, lastLead: lastLead, recentAudit: recent };
 }

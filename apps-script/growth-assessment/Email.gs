@@ -114,8 +114,21 @@ function sendRecap_(r) {
   send_(r.work_email, 'Your Beast Growth Diagnostic recap', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
 }
 
+/* ── Decline: honest, generous self-serve plan (auto-sent on Decline) ── */
+function sendDeclineEmail_(d, tips) {
+  var items = (tips && tips.length) ? tips : [];
+  var body =
+    '<p>Hi ' + esc_(d.first_name) + ',</p>' +
+    '<p>Thanks for taking the Beast Growth Assessment. Being straight with you: a full Growth Diagnostic may not be the most useful next step for where ' + esc_(d.company_name) + ' is right now. But we do not want to leave you empty-handed.</p>' +
+    '<p>Here are a few moves you can make on your own to build momentum:</p><ul>' +
+    items.map(function (t) { return '<li>' + esc_(t) + '</li>'; }).join('') +
+    '</ul>' +
+    '<p>Put in the sweat equity on these, and when the timing is right, we would love to talk. The door stays open.</p>';
+  send_(d.work_email, 'A few growth moves you can make on your own', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
+}
+
 /* ── Internal team notification ───────────────────────────────────── */
-function sendInternalNotification_(d, route, ids) {
+function sendInternalNotification_(d, route, ids, q) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
   var priority = route === 'priority_qualified';
@@ -139,11 +152,33 @@ function sendInternalNotification_(d, route, ids) {
   }).join('');
 
   var links = '<p><a href="' + esc_(sheetUrl) + '">Open pipeline sheet</a>' +
-    (ids.briefUrl ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief</a>' : '') + '</p>';
+    (ids.briefUrl && String(ids.briefUrl).indexOf('http') === 0 ? ' &nbsp;|&nbsp; <a href="' + esc_(ids.briefUrl) + '">Internal brief (full AI analysis)</a>' : '') + '</p>';
+
+  // Inline "why" so the decision can be made without opening the brief.
+  var why = '';
+  if (q) {
+    var c = q.categoryScores || {};
+    var lastReason = (q.reasons && q.reasons.length) ? q.reasons[q.reasons.length - 1] : '';
+    why = '<div style="margin:14px 0;padding:12px 14px;background:#faf5f8;border-left:3px solid #FF1198">' +
+      '<div style="font-weight:bold">Score ' + q.score + '/100 &middot; ' + esc_(route) + '</div>' +
+      '<div style="font-size:13px;color:#555;margin-top:4px">need ' + (c.strategic_need || 0) + ' &middot; budget ' + (c.investment || 0) +
+      ' &middot; timing ' + (c.timing || 0) + ' &middot; authority ' + (c.decision || 0) + ' &middot; fit ' + (c.business_fit || 0) + '</div>' +
+      '<div style="font-size:13px;color:#555;margin-top:4px">' + esc_(lastReason) + '</div></div>';
+  }
+
+  // One-click decision buttons (signed links to the web app).
+  var approveUrl = actionUrl_(ids.leadId, 'approve');
+  var declineUrl = actionUrl_(ids.leadId, 'decline');
+  var buttons = (approveUrl && declineUrl) ?
+    '<p style="margin:16px 0">' +
+    '<a href="' + approveUrl + '" style="display:inline-block;background:#16a34a;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold;margin-right:8px">Approve + send booking link</a>' +
+    '<a href="' + declineUrl + '" style="display:inline-block;background:#0A0A0A;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold">Decline + send self-serve plan</a>' +
+    '</p><p style="font-size:12px;color:#8a8a8a">One click. Approve books them; Decline auto-sends an AI self-serve plan. Full analysis is in the brief.</p>' : '';
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
     '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +
     '<p style="color:#8a8a8a;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
+    why + buttons +
     '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
 
   send_(recipients.join(','), subject, html, 'New Growth Assessment (' + route + '). Open in Gmail to view details.');

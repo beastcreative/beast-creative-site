@@ -119,6 +119,70 @@ function enrichBrief_(d, q, websiteText) {
   }
 }
 
+/**
+ * declinePlan_ — 3-4 honest, generous, do-it-yourself growth tips for a declined
+ * prospect, tailored to their goal/challenge. Prospect-facing, so kept general
+ * and non-fabricated. Falls back to solid deterministic tips if AI is off/fails.
+ */
+function declinePlan_(d) {
+  if (!aiReady_()) return defaultTips_(d);
+  if (aiMock_()) return mockTips_(d);
+  var key = prop_('ANTHROPIC_API_KEY');
+  var model = String(setting_('ai_model', 'claude-opus-4-8'));
+  var system =
+    'You are a senior growth strategist writing a short, generous, honest self-serve plan for a prospect who is not the right fit for a paid engagement right now. ' +
+    'Give 3 to 4 concrete, practical, do-it-yourself growth actions they can start with organic effort and sweat equity, tailored to their stated goal and challenge. ' +
+    'Each tip: one sentence, specific and actionable, no fluff, no fabricated stats or promises, no agency pitch. Respond with ONLY JSON: {"tips":["...","..."]}.';
+  var payload = {
+    goals: d.primary_goals, challenge: d.biggest_challenge, desired_result: d.desired_result,
+    company_type: d.company_type, current_marketing: d.current_marketing
+  };
+  var body = {
+    model: model, max_tokens: 500, system: system,
+    messages: [{ role: 'user', content: 'Business:\n' + JSON.stringify(payload) + '\n\nReturn {"tips":[3-4 one-sentence self-serve growth actions]}.' }]
+  };
+  try {
+    var res = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+      method: 'post', contentType: 'application/json',
+      headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+      payload: JSON.stringify(body), muteHttpExceptions: true
+    });
+    if (res.getResponseCode() !== 200) { logActivity_('ai', d.company_name || '', 'declinePlan', 'http_' + res.getResponseCode(), ''); return defaultTips_(d); }
+    var j = JSON.parse(res.getContentText());
+    var text = (j.content && j.content[0] && j.content[0].text) || '';
+    var parsed = extractJson_(text);
+    if (parsed && Array.isArray(parsed.tips) && parsed.tips.length) return parsed.tips.slice(0, 4).map(String);
+    return defaultTips_(d);
+  } catch (e) {
+    logActivity_('ai', d.company_name || '', 'declinePlan', 'error', String(e && e.message || e));
+    return defaultTips_(d);
+  }
+}
+
+function mockTips_(d) {
+  return [
+    'Set up your core email flows (welcome, abandoned cart, post-purchase) before spending more on ads.',
+    'Pick one channel you can win at organically and post consistently for 90 days.',
+    'Fix your top landing page: one clear promise, one clear call to action, proof above the fold.',
+    'Track revenue per visitor weekly so you can see what is actually working.'
+  ];
+}
+
+function defaultTips_(d) {
+  var goals = Array.isArray(d.primary_goals) ? d.primary_goals : String(d.primary_goals || '').split('; ');
+  var tips = [
+    'Pick one channel you can genuinely win at and post consistently for 90 days before adding more.',
+    'Fix your top landing page: one clear promise, one clear call to action, and proof near the top.',
+    'Track one honest metric each week so you can tell what is actually moving the needle.'
+  ];
+  if (goals.indexOf('Retention & repeat revenue') !== -1 || goals.indexOf('Higher website conversion') !== -1) {
+    tips.push('Set up core lifecycle emails (welcome, abandoned cart, post-purchase) before spending more on acquisition.');
+  } else {
+    tips.push('Write down the single biggest objection customers have, and answer it clearly everywhere you sell.');
+  }
+  return tips;
+}
+
 /** Best-effort JSON extraction from a model response. */
 function extractJson_(text) {
   try { return JSON.parse(text); } catch (e) {}

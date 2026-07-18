@@ -28,7 +28,7 @@ function processPending_() {
 
     safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', a.lead_id, '');
     safe_(function () { sendProspectConfirmation_(d, q.route); }, 'confirmation', a.lead_id, '');
-    safe_(function () { sendInternalNotification_(d, q.route, ids); }, 'internal-notify', a.lead_id, '');
+    safe_(function () { sendInternalNotification_(d, q.route, ids, q); }, 'internal-notify', a.lead_id, '');
     safe_(function () { createFollowUpTask_(d, q.route, ids); }, 'task', a.lead_id, '');
 
     if (!ids.briefUrl) updateRow_('Assessments', arow, { internal_brief_url: 'error' }); // don't loop on failure

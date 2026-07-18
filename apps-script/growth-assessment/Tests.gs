@@ -120,7 +120,9 @@ function statusReport_() {
     scores: last.qualification_scores, reasons: last.qualification_reasons, flags: last.qualification_flags,
     decision_role: last.decision_role, timeline: last.timeline,
     potential_investment: last.potential_monthly_investment, stage: last.company_stage,
-    challenge_len: String(last.biggest_challenge || '').length
+    challenge_len: String(last.biggest_challenge || '').length,
+    lead_id: last.lead_id, override: last.manual_override,
+    approve_url: actionUrl_(last.lead_id, 'approve'), decline_url: actionUrl_(last.lead_id, 'decline')
   } : null;
   return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, lastLead: lastLead, recentAudit: recent };
 }
