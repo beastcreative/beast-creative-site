@@ -112,17 +112,26 @@ export async function POST(req: NextRequest) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, ...attribution, secret }),
-        signal: AbortSignal.timeout(10_000),
+        // The backend persists + returns fast, but a cold start or spreadsheet
+        // contention can add seconds. 20s keeps us from timing out and falling
+        // back to a route that disagrees with the real qualification engine.
+        signal: AbortSignal.timeout(20_000),
       });
       const j = (await r.json()) as { success?: boolean; route?: string; bookingUrl?: string; message?: string };
       if (!r.ok || !j.success) throw new Error("apps script error");
       return NextResponse.json({ success: true, route: j.route || "manual_review", bookingUrl: j.bookingUrl, message: j.message });
     } catch {
-      // fall through to fallback so the lead is never lost
+      // Apps Script is configured but did not respond in time. It persists the
+      // lead BEFORE responding, so it almost certainly captured and is processing
+      // this submission. We must NOT guess a route here: showing a booking screen
+      // to someone the engine did not qualify (or re-emailing) would be wrong.
+      // Show a safe review state; the backend owns the real routing + follow-up.
+      return NextResponse.json({ success: true, route: "manual_review" });
     }
   }
 
-  // Fallback mode (Apps Script not connected yet or errored)
+  // True fallback: the Google backend is not configured at all (e.g. local dev).
+  // Capture the lead by email and use the local approximate routing.
   const route = computeRoute(data);
   await notifyFallback(data, attribution, route).catch(() => {});
   const bookingUrl = route === "qualified" || route === "priority_qualified" ? BOOKING_URL : undefined;
