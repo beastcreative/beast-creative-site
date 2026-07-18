@@ -41,6 +41,9 @@ function doPost(e) {
       return json_({ success: true, route: 'manual_review' });
     }
 
+    // Secret-gated test runner (route coverage + brief placeholder scan).
+    if (body.runTests) return json_(runTests_());
+
     var missing = requiredMissing_(body);
     if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
 

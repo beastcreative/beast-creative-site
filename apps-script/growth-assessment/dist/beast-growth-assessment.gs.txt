@@ -89,10 +89,10 @@ var CONFIG = {
  */
 
 var SCHEMA = {
-  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes','qualification_version','qualification_score','qualification_scores','qualification_reasons','qualification_flags','qualified_at','manual_override','override_owner','override_reason','override_timestamp'],
+  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes','qualification_version','qualification_score','qualification_scores','qualification_reasons','qualification_flags','qualified_at','manual_override','override_owner','override_reason','override_timestamp','reminder_count','last_reminder_at'],
   Companies: ['company_id','company_name','website','company_type','company_stage','annual_revenue_range','owner','status','first_seen_at','last_activity_at','primary_goal','likely_constraint','opportunity_value','notes'],
   Contacts: ['contact_id','company_id','first_name','last_name','email','phone','title','decision_role','primary_contact','created_at','last_activity_at','notes'],
-  Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at'],
+  Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at','meeting_outcome','confirmed_constraint','recap_sent_at'],
   Opportunities: ['opportunity_id','company_id','primary_contact_id','assessment_id','stage','owner','estimated_value','probability','recommended_engagement','next_step','next_step_due','proposal_url','won_lost_date','lost_reason','notes'],
   Activities: ['activity_id','related_type','related_id','activity_type','activity_date','owner','subject','detail','source','created_at'],
   Tasks: ['task_id','related_type','related_id','assigned_to','task_type','task_title','due_date','status','priority','completed_at','notes'],
@@ -155,14 +155,15 @@ var LOOKUPS = {
   'Opportunity Stage': ['New Growth Assessment', 'Qualification Review', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Growth Blueprint Proposed', 'Proposal Sent', 'Decision', 'Closed Won', 'Closed Lost', 'Nurture'],
   'Task Type': ['Review new intake', 'Prepare internal brief', 'Conduct assessment', 'Send recap', 'Build Growth Blueprint', 'Create proposal', 'Follow up', 'Nurture check-in'],
   'Task Status': ['Open', 'In Progress', 'Done', 'Blocked'],
-  'Task Priority': ['High', 'Medium', 'Low']
+  'Task Priority': ['High', 'Medium', 'Low'],
+  'Meeting Outcome': ['Growth Blueprint', 'Proposal', 'Additional discovery', 'Nurture', 'Closed lost']
 };
 
 /* Which tab columns get a dropdown, and from which lookup category. */
 var VALIDATION = {
   Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies' },
   Companies: { company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', status: 'Company Status' },
-  Assessments: { qualification_route: 'Qualification Route' },
+  Assessments: { qualification_route: 'Qualification Route', meeting_outcome: 'Meeting Outcome' },
   Opportunities: { stage: 'Opportunity Stage' },
   Tasks: { task_type: 'Task Type', status: 'Task Status', priority: 'Task Priority' }
 };
@@ -830,6 +831,9 @@ function doPost(e) {
       return json_({ success: true, route: 'manual_review' });
     }
 
+    // Secret-gated test runner (route coverage + brief placeholder scan).
+    if (body.runTests) return json_(runTests_());
+
     var missing = requiredMissing_(body);
     if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
 
@@ -1022,11 +1026,11 @@ function json_(obj) {
 
 /* ==================== Email.gs ==================== */
 /**
- * Email.gs — prospect confirmations + internal notifications.
+ * Email.gs — prospect + internal email.
  *
- * Prospect emails NEVER contain the internal route or score. Internal emails
- * include the working detail + links. All interpolated values are HTML-escaped.
- * Uses GmailApp so mail is sent from the deploying Beast account.
+ * Prospect emails NEVER contain the internal score, route, budget judgment, or
+ * risks. Internal emails carry the working detail + links. All interpolated
+ * values are HTML-escaped. Sent via GmailApp from the deploying Beast account.
  */
 
 function esc_(v) {
@@ -1034,42 +1038,110 @@ function esc_(v) {
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-function emailOptions_() {
-  return { name: CONFIG.senderName };
+var EMAIL_WRAP = 'font-family:Arial,Helvetica,sans-serif;max-width:580px;color:#0A0A0A;line-height:1.5';
+function brandFooter_() {
+  return '<p style="margin-top:22px">The Beast Creative Team</p>' +
+    '<p style="font-size:12px;color:#8a8a8a">You are receiving this because you submitted a Growth Assessment at ' +
+    'beastcreativeagency.com. See our <a href="' + esc_(CONFIG.privacyUrl) + '">privacy policy</a>.</p>';
+}
+function send_(to, subject, html, plain) {
+  GmailApp.sendEmail(to, subject, plain || 'Open this email in a client that supports HTML.',
+    { htmlBody: html, name: CONFIG.senderName });
 }
 
-/** Prospect: "We received your Beast Growth Assessment". No internal detail. */
+/* ── 1. Immediate route-specific confirmation ─────────────────────── */
 function sendProspectConfirmation_(d, route) {
-  var scheduling = routeGetsBooking_(route);
-  var subject = 'We received your Beast Growth Assessment';
-  var lead = esc_(d.first_name);
-  var nextLine = scheduling
-    ? 'The next step is a 30-minute Growth Diagnostic. You can choose a time here:<br><a href="' + esc_(CONFIG.bookingUrl) + '">Book your Growth Diagnostic</a>'
-    : (route === 'manual_review'
-      ? 'A member of the Beast team will review your information and follow up with the most useful next step.'
-      : 'We will point you toward the most useful resources and keep the door open as your needs change.');
+  var first = esc_(d.first_name);
+  var subject, body;
 
-  var html =
-    '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;color:#0A0A0A">' +
-    '<p>Hi ' + lead + ',</p>' +
-    '<p>Thanks for completing the Beast Growth Assessment. We have your responses and are reviewing them.</p>' +
-    '<p>' + nextLine + '</p>' +
-    '<p>If anything has changed since you submitted, just reply to this email.</p>' +
-    '<p>— The Beast Creative Team</p>' +
-    '<p style="font-size:12px;color:#888">You are receiving this because you submitted a Growth Assessment at beastcreativeagency.com. ' +
-    'See our <a href="' + esc_(CONFIG.privacyUrl) + '">privacy policy</a>.</p>' +
-    '</div>';
+  if (routeGetsBooking_(route)) {
+    subject = 'Your next step with Beast';
+    body =
+      '<p>Hi ' + first + ',</p>' +
+      '<p>Thanks for completing the Beast Growth Assessment. Based on what you shared, the next step is a 30-minute Growth Diagnostic.</p>' +
+      '<p><a href="' + esc_(CONFIG.bookingUrl) + '" style="display:inline-block;background:#FF1198;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold">Book your Growth Diagnostic</a></p>' +
+      '<p><strong>What you told us</strong><br>' +
+      'Goal: ' + esc_(joinMulti_(d.primary_goals)) + '<br>' +
+      'Challenge: ' + esc_(d.biggest_challenge) + '</p>' +
+      '<p>On the call we will pressure-test the most likely constraint on that goal and show you where we would start. No pitch, no pressure. If anything has changed, just reply to this email.</p>';
+  } else if (route === 'manual_review') {
+    subject = 'We received your Beast Growth Assessment';
+    body =
+      '<p>Hi ' + first + ',</p>' +
+      '<p>Thanks for completing the Beast Growth Assessment. A Beast strategist will review your responses and follow up within one business day with the most useful next step.</p>' +
+      '<p>If anything has changed since you submitted, just reply to this email.</p>';
+  } else {
+    subject = 'We received your Beast Growth Assessment';
+    body =
+      '<p>Hi ' + first + ',</p>' +
+      '<p>Thanks for sharing where your growth stands. A full Growth Diagnostic may not be the most useful next step for you just yet, but we do not want to leave you empty-handed.</p>' +
+      '<p><a href="https://beastcreativeagency.com/work">See how Beast has driven measurable growth</a>, and keep this thread. As your needs change, we are one reply away.</p>';
+  }
 
-  var plain = 'Hi ' + d.first_name + ',\n\nThanks for completing the Beast Growth Assessment. We have your responses and are reviewing them.\n\n' +
-    (scheduling ? 'Book your Growth Diagnostic: ' + CONFIG.bookingUrl : (route === 'manual_review'
-      ? 'A member of the Beast team will review your information and follow up.'
-      : 'We will point you toward the most useful resources.')) +
-    '\n\nIf anything has changed, just reply to this email.\n\n— The Beast Creative Team';
-
-  GmailApp.sendEmail(d.work_email, subject, plain, { htmlBody: html, name: CONFIG.senderName });
+  send_(d.work_email, subject, '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
 }
 
-/** Internal team notification with full working detail + links. */
+/* ── 2. Post-booking Growth Diagnostic Snapshot ───────────────────── */
+function sendSnapshot_(d, meetingWhen, meetLink) {
+  var examine = examineAreas_(d);
+  var body =
+    '<p>Hi ' + esc_(d.first_name) + ',</p>' +
+    '<p>Your Beast Growth Diagnostic is booked for <strong>' + esc_(meetingWhen) + '</strong>.' +
+    (meetLink ? ' Join here: <a href="' + esc_(meetLink) + '">' + esc_(meetLink) + '</a>.' : '') + '</p>' +
+    '<p><strong>What we heard</strong><br>' +
+    'Goal: ' + esc_(joinMulti_(d.primary_goals)) + '<br>' +
+    'Challenge: ' + esc_(d.biggest_challenge) + '<br>' +
+    'Desired outcome: ' + esc_(d.desired_result) + '</p>' +
+    '<p><strong>What we will examine</strong></p><ul>' +
+    examine.map(function (a) { return '<li>' + esc_(a) + '</li>'; }).join('') + '</ul>' +
+    '<p><strong>What to have ready</strong></p><ul>' +
+    '<li>Any recent performance numbers you can share</li>' +
+    '<li>Your current marketing mix and spend</li>' +
+    '<li>Access to relevant reports, only if you choose</li>' +
+    '<li>Anyone else who should be part of the decision</li></ul>' +
+    '<p><strong>Agenda</strong></p><ul>' +
+    '<li>Confirm your goals and context</li>' +
+    '<li>Identify the primary growth constraint</li>' +
+    '<li>Review the biggest opportunities and tradeoffs</li>' +
+    '<li>Agree on the best next step</li></ul>' +
+    '<p>This is a working diagnostic, not a pre-written sales presentation. To reschedule, use the link in your calendar invite.</p>';
+  send_(d.work_email, 'Your Beast Growth Diagnostic is booked', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
+}
+
+/** Deterministic "what we'll examine" areas from the prospect's stated goals. */
+var EXAMINE_MAP = {
+  'More qualified leads': 'Lead quality and acquisition efficiency',
+  'Higher website conversion': 'Conversion path and landing experience',
+  'Better paid media ROI': 'Paid media efficiency and creative',
+  'Stronger brand / positioning': 'Positioning and messaging clarity',
+  'More organic & AI search visibility': 'Organic and AI search visibility',
+  'Launch a product or market': 'Go-to-market approach',
+  'Better measurement & attribution': 'Measurement and attribution',
+  'Retention & repeat revenue': 'Retention and lifecycle revenue'
+};
+function examineAreas_(d) {
+  var goals = Array.isArray(d.primary_goals) ? d.primary_goals : String(d.primary_goals || '').split('; ').filter(Boolean);
+  var areas = goals.map(function (g) { return EXAMINE_MAP[String(g).trim()]; }).filter(Boolean).slice(0, 3);
+  if (!areas.length) areas = ['The primary constraint on your stated goal', 'Where the fastest, lowest-risk gains are'];
+  return areas;
+}
+
+/* ── 3. Post-meeting Growth Diagnostic Recap ──────────────────────── */
+function sendRecap_(r) {
+  var obs = (r.observations && r.observations.length) ? r.observations : [];
+  var body =
+    '<p>Hi ' + esc_(r.first_name) + ',</p>' +
+    '<p>Thanks for your time on the Growth Diagnostic. Here is a short recap.</p>' +
+    '<p><strong>Your goal</strong><br>' + esc_(r.goal || 'Grow the business') + '</p>' +
+    '<p><strong>The primary constraint we discussed</strong><br>' + esc_(r.constraint || 'See notes below') + '</p>' +
+    (obs.length ? '<p><strong>A few observations</strong></p><ul>' + obs.map(function (o) { return '<li>' + esc_(o) + '</li>'; }).join('') + '</ul>' : '') +
+    '<p><strong>Agreed next step</strong><br>' + esc_(r.next_step || 'We will follow up shortly') + '</p>' +
+    (r.next_detail ? '<p>' + esc_(r.next_detail) + '</p>' : '') +
+    '<p>Reply here with any questions in the meantime.</p>';
+  send_(r.work_email, 'Your Beast Growth Diagnostic recap', '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
+}
+
+/* ── Internal team notification ───────────────────────────────────── */
 function sendInternalNotification_(d, route, ids) {
   var recipients = CONFIG.notifyEmails;
   if (!recipients.length) return;
@@ -1078,19 +1150,19 @@ function sendInternalNotification_(d, route, ids) {
   var sheetUrl = workbook_().getUrl();
 
   var rows = [
-    ['Route', route], ['Name', d.first_name + ' ' + d.last_name], ['Email', d.work_email], ['Phone', d.phone || '—'],
+    ['Route', route], ['Name', d.first_name + ' ' + d.last_name], ['Email', d.work_email], ['Phone', d.phone || '-'],
     ['Company', d.company_name + ' (' + d.company_website + ')'],
-    ['Type / Stage / Revenue', d.company_type + ' · ' + d.company_stage + ' · ' + d.annual_revenue_range],
+    ['Type / Stage / Revenue', d.company_type + ' / ' + d.company_stage + ' / ' + d.annual_revenue_range],
     ['Goals', joinMulti_(d.primary_goals)], ['Challenge', d.biggest_challenge], ['Desired result', d.desired_result],
     ['Current marketing', joinMulti_(d.current_marketing)],
-    ['Investment (now → potential)', d.current_monthly_investment + ' → ' + d.potential_monthly_investment],
+    ['Investment (now to potential)', d.current_monthly_investment + ' to ' + d.potential_monthly_investment],
     ['Timeline', d.timeline], ['Decision role', d.decision_role], ['Other agencies', d.speaking_with_agencies],
-    ['Source / UTM', (d.utm_source || 'direct') + ' / ' + (d.utm_campaign || '') + (d.gclid ? ' · gclid' : '')],
+    ['Source / UTM', (d.utm_source || 'direct') + ' / ' + (d.utm_campaign || '') + (d.gclid ? ' / gclid' : '')],
     ['Booking', routeGetsBooking_(route) ? 'Awaiting booking' : 'N/A']
   ];
   var body = rows.map(function (r) {
     return '<tr><td style="padding:4px 10px;font-weight:bold;vertical-align:top">' + esc_(r[0]) +
-      '</td><td style="padding:4px 10px">' + esc_(r[1] || '—') + '</td></tr>';
+      '</td><td style="padding:4px 10px">' + esc_(r[1] || '-') + '</td></tr>';
   }).join('');
 
   var links = '<p><a href="' + esc_(sheetUrl) + '">Open pipeline sheet</a>' +
@@ -1098,25 +1170,10 @@ function sendInternalNotification_(d, route, ids) {
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
     '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +
-    '<p style="color:#888;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
+    '<p style="color:#8a8a8a;margin:0 0 12px">Lead ' + esc_(ids.leadId) + '</p>' +
     '<table style="border-collapse:collapse;font-size:14px">' + body + '</table>' + links + '</div>';
 
-  GmailApp.sendEmail(recipients.join(','), subject, 'New Growth Assessment (' + route + ') — open in Gmail to view details.',
-    { htmlBody: html, name: CONFIG.senderName });
-}
-
-/** Scheduled confirmation, sent after booking reconciliation matches an event. */
-function sendScheduledEmail_(d, meetingWhen, meetLink) {
-  var subject = 'Your Beast Growth Assessment is scheduled';
-  var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;color:#0A0A0A">' +
-    '<p>Hi ' + esc_(d.first_name) + ',</p>' +
-    '<p>Your Beast Growth Assessment is booked for <strong>' + esc_(meetingWhen) + '</strong>.</p>' +
-    (meetLink ? '<p>Join: <a href="' + esc_(meetLink) + '">' + esc_(meetLink) + '</a></p>' : '') +
-    '<p>We will review your stated goal, your channels, and the most likely constraint on growth. ' +
-    'Come with any recent numbers you have handy. To reschedule, use the link in your calendar invite.</p>' +
-    '<p>— The Beast Creative Team</p></div>';
-  GmailApp.sendEmail(d.work_email, subject, 'Your Beast Growth Assessment is scheduled for ' + meetingWhen + '.',
-    { htmlBody: html, name: CONFIG.senderName });
+  send_(recipients.join(','), subject, html, 'New Growth Assessment (' + route + '). Open in Gmail to view details.');
 }
 
 /* ==================== Brief.gs ==================== */
@@ -1458,6 +1515,141 @@ function readObjects_(name) {
   });
 }
 
+/* ==================== Followups.gs ==================== */
+/**
+ * Followups.gs — booking follow-up reminders + meeting-outcome routing.
+ *
+ * checkBookingFollowups_ (daily trigger): nudges qualified-but-unbooked leads at
+ * ~24h and ~3 days, then stops and hands to a human.
+ * onAssessmentEdit (installable onEdit trigger): when a strategist sets
+ * meeting_outcome on the Assessments tab, sends the Recap and routes the
+ * opportunity + next task. Minimal human input: fill one cell, automation runs.
+ */
+
+/* ── Booking follow-up reminders ──────────────────────────────────── */
+function checkBookingFollowups_() {
+  var leads = readObjects_('Leads');
+  var now = new Date();
+  leads.forEach(function (l) {
+    if (l.calendar_booking_status !== 'Awaiting Booking' || !l.work_email) return;
+    var created = parseIso_(l.qualified_at || l.created_at);
+    if (!created) return;
+    var hours = (now.getTime() - created.getTime()) / 3600000;
+    var count = Number(l.reminder_count) || 0;
+    var row = findRow_('Leads', 'lead_id', l.lead_id);
+    if (row < 0) return;
+
+    if (count === 0 && hours >= 24) {
+      safe_(function () { sendBookingReminder_(l, 'first'); }, 'reminder', l.lead_id, '');
+      updateRow_('Leads', row, { reminder_count: 1, last_reminder_at: nowIso_() });
+    } else if (count === 1 && hours >= 72) {
+      safe_(function () { sendBookingReminder_(l, 'final'); }, 'reminder', l.lead_id, '');
+      updateRow_('Leads', row, { reminder_count: 2, last_reminder_at: nowIso_() });
+    } else if (count >= 2 && hours >= 96) {
+      updateRow_('Leads', row, {
+        calendar_booking_status: 'Qualified - Not Booked',
+        status: 'Follow-Up Required',
+        next_step: 'Manual follow-up (unbooked)'
+      });
+      appendRow_('Tasks', {
+        task_id: newId_('task'), related_type: 'Lead', related_id: l.lead_id, assigned_to: CONFIG.defaultOwner,
+        task_type: 'Follow up', task_title: 'Unbooked qualified: ' + l.company_name, due_date: dueInDays_(0),
+        status: 'Open', priority: 'High', completed_at: '', notes: 'Qualified lead did not book after reminders.'
+      });
+      logActivity_('followup', l.lead_id, 'not_booked', '', '');
+    }
+  });
+}
+
+function sendBookingReminder_(l, kind) {
+  var subject = kind === 'final' ? 'Last chance to book your Growth Diagnostic' : 'Ready to book your Growth Diagnostic?';
+  var body =
+    '<p>Hi ' + esc_(l.first_name) + ',</p>' +
+    '<p>You completed the Beast Growth Assessment and qualified for a Growth Diagnostic, but have not picked a time yet.</p>' +
+    '<p><a href="' + esc_(CONFIG.bookingUrl) + '" style="display:inline-block;background:#FF1198;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold">Book your Growth Diagnostic</a></p>' +
+    (kind === 'final'
+      ? '<p>This is the last reminder we will send automatically. If the timing is not right, just reply and let us know.</p>'
+      : '<p>It takes 30 minutes, and there is no pitch, just a working diagnosis of your biggest growth constraint.</p>');
+  send_(l.work_email, subject, '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
+}
+
+/* ── Meeting-outcome routing (installable onEdit) ─────────────────── */
+function onAssessmentEdit(e) {
+  try {
+    if (!e || !e.range) return;
+    var sh = e.range.getSheet();
+    if (sh.getName() !== 'Assessments') return;
+    var cols = headers_('Assessments');
+    var outcomeCol = cols.indexOf('meeting_outcome') + 1;
+    if (e.range.getColumn() !== outcomeCol || e.range.getRow() < 2) return;
+    var outcome = String(e.value || e.range.getValue() || '').trim();
+    if (outcome) processOutcome_(e.range.getRow(), outcome);
+  } catch (err) {
+    logActivity_('outcome', '', 'edit', 'error', String(err && err.message || err));
+  }
+}
+
+var OUTCOME_MAP = {
+  'Growth Blueprint': { stage: 'Growth Blueprint Proposed', task: 'Build Growth Blueprint', detail: 'We will put together a Growth Blueprint and share it with you.' },
+  'Proposal': { stage: 'Proposal Sent', task: 'Create proposal', detail: 'We will send a proposal with scope and next steps.' },
+  'Additional discovery': { stage: 'Qualification Review', task: 'Conduct assessment', detail: 'We will set up a short follow-up to dig a little deeper.' },
+  'Nurture': { stage: 'Nurture', task: 'Nurture check-in', detail: 'We will stay in touch and share useful resources.' },
+  'Closed lost': { stage: 'Closed Lost', task: '', detail: '' }
+};
+
+function processOutcome_(rowIdx, outcome) {
+  var asmt = rowObject_('Assessments', rowIdx);
+  if (!asmt || asmt.recap_sent_at) return; // idempotent: already handled
+  var lead = leadFor_(asmt.lead_id);
+  var m = OUTCOME_MAP[outcome] || { stage: 'Follow-Up Required', task: 'Follow up', detail: 'We will follow up with the next step.' };
+
+  var oppRow = findRow_('Opportunities', 'assessment_id', asmt.assessment_id);
+  if (oppRow > 0) updateRow_('Opportunities', oppRow, { stage: m.stage, next_step: m.task || 'None', next_step_due: dueInDays_(2) });
+
+  if (m.task) {
+    appendRow_('Tasks', {
+      task_id: newId_('task'), related_type: 'Lead', related_id: asmt.lead_id, assigned_to: CONFIG.defaultOwner,
+      task_type: m.task, task_title: m.task + ': ' + (lead ? lead.company_name : asmt.assessment_id),
+      due_date: dueInDays_(2), status: 'Open', priority: 'Medium', completed_at: '', notes: ''
+    });
+  }
+
+  if (lead && lead.work_email && outcome !== 'Closed lost') {
+    safe_(function () {
+      sendRecap_({
+        first_name: lead.first_name, work_email: lead.work_email,
+        goal: joinMulti_(lead.primary_goals),
+        constraint: asmt.confirmed_constraint || asmt.likely_constraint || 'Discussed on the call',
+        observations: String(asmt.observations || '').split('; ').filter(Boolean),
+        next_step: outcome, next_detail: m.detail
+      });
+    }, 'recap-email', asmt.lead_id, '');
+  }
+
+  updateRow_('Assessments', rowIdx, { meeting_status: 'Completed', completed_at: nowIso_(), recap_sent_at: nowIso_(), recommended_next_step: outcome });
+  var lrow = findRow_('Leads', 'lead_id', asmt.lead_id);
+  if (lrow > 0) updateRow_('Leads', lrow, { status: outcome === 'Closed lost' ? 'Closed Lost' : 'Assessment Completed', next_step: m.task || 'None' });
+  logActivity_('outcome', asmt.lead_id, outcome, 'processed', '');
+}
+
+/* ── small helpers ────────────────────────────────────────────────── */
+function rowObject_(name, rowIdx) {
+  var cols = headers_(name);
+  var vals = sheet_(name).getRange(rowIdx, 1, 1, cols.length).getValues()[0];
+  var o = {};
+  cols.forEach(function (c, i) { o[c] = vals[i]; });
+  return o;
+}
+function leadFor_(leadId) {
+  var row = findRow_('Leads', 'lead_id', leadId);
+  return row > 0 ? rowObject_('Leads', row) : null;
+}
+function parseIso_(s) {
+  if (!s) return null;
+  var d = new Date(s);
+  return isNaN(d.getTime()) ? null : d;
+}
+
 /* ==================== Calendar.gs ==================== */
 /**
  * Calendar.gs — booking reconciliation (Option B from the spec).
@@ -1527,8 +1719,8 @@ function markBooked_(lead, ev) {
   }
 
   safe_(function () {
-    sendScheduledEmail_({ first_name: lead.first_name, work_email: lead.work_email }, when, meetLink);
-  }, 'scheduled-email', lead.lead_id, '');
+    sendSnapshot_(lead, when, meetLink);
+  }, 'snapshot-email', lead.lead_id, '');
 
   safe_(function () { sendMeetingBookedInternal_(lead, when); }, 'meeting-booked-notify', lead.lead_id, '');
   logActivity_('calendar', lead.lead_id, 'booked', when, '');
@@ -1554,19 +1746,25 @@ function extractMeetLink_(ev) {
  * and reinstalls, so it is safe to call again after changing schedules.
  */
 
+var TRIGGER_FNS = ['reconcileBookings', 'sendDailyDigest', 'checkBookingFollowups_', 'onAssessmentEdit'];
+
 function installTriggers() {
   removeTriggers();
   // Reconcile calendar bookings every 15 minutes.
   ScriptApp.newTrigger('reconcileBookings').timeBased().everyMinutes(15).create();
   // Weekday morning digest at 8am in the project timezone.
   ScriptApp.newTrigger('sendDailyDigest').timeBased().atHour(8).everyDays(1).create();
-  return 'Triggers installed: reconcileBookings (15m), sendDailyDigest (daily 8am).';
+  // Booking follow-up reminders, checked hourly (gated to ~24h/72h per lead).
+  ScriptApp.newTrigger('checkBookingFollowups_').timeBased().everyHours(1).create();
+  // Meeting-outcome routing when a strategist sets meeting_outcome.
+  ScriptApp.newTrigger('onAssessmentEdit').forSpreadsheet(workbook_()).onEdit().create();
+  return 'Triggers installed: reconcileBookings (15m), sendDailyDigest (daily 8am), ' +
+    'checkBookingFollowups_ (hourly), onAssessmentEdit (on edit).';
 }
 
 function removeTriggers() {
   ScriptApp.getProjectTriggers().forEach(function (t) {
-    var fn = t.getHandlerFunction();
-    if (fn === 'reconcileBookings' || fn === 'sendDailyDigest') ScriptApp.deleteTrigger(t);
+    if (TRIGGER_FNS.indexOf(t.getHandlerFunction()) !== -1) ScriptApp.deleteTrigger(t);
   });
   return 'Triggers removed.';
 }
@@ -1594,4 +1792,78 @@ function selfTest() {
   };
   var res = doPost({ postData: { contents: JSON.stringify(sample) } });
   return res.getContent();
+}
+
+/* ==================== Tests.gs ==================== */
+/**
+ * Tests.gs — lightweight assertions for qualification routes + brief quality.
+ * Run from the editor (runTests) or via the secret-gated {runTests:true} endpoint.
+ * No external dependencies; generates a mock brief so it never needs an API key.
+ */
+
+function testLead_(over) {
+  var base = {
+    first_name: 'Test', last_name: 'Lead', work_email: 't@example.com',
+    company_name: 'Test Co', company_website: 'example.com', company_type: 'Ecommerce / DTC',
+    company_stage: 'Established', annual_revenue_range: '$1M – $5M',
+    primary_goals: ['More qualified leads'], biggest_challenge: 'Short.', desired_result: 'More.',
+    current_marketing: ['SEO'], current_monthly_investment: '$5K – $10K / mo',
+    potential_monthly_investment: '$10K – $25K / mo', timeline: '1 – 3 months',
+    decision_role: 'I make the decision', speaking_with_agencies: 'No', website: ''
+  };
+  for (var k in over) base[k] = over[k];
+  return base;
+}
+
+var TEST_CASES = [
+  { name: 'priority', expect: 'priority_qualified', lead: {
+    biggest_challenge: 'Meta CAC doubled in 12 months and email revenue is flat; blended ROAS fell 3.1 to 1.8.',
+    desired_result: 'Blended ROAS back above 3 and email to 30% of revenue in two quarters',
+    primary_goals: ['Better paid media ROI', 'Higher website conversion'],
+    potential_monthly_investment: '$25K – $50K / mo', timeline: 'ASAP / this month', decision_role: 'I make the decision'
+  }},
+  { name: 'qualified', expect: 'qualified', lead: {
+    biggest_challenge: 'Our inbound leads are low quality and sales is frustrated with SQL volume every month.',
+    primary_goals: ['More qualified leads'], company_type: 'B2B / SaaS', company_stage: 'Growing',
+    potential_monthly_investment: '$10K – $25K / mo', timeline: '1 – 3 months', decision_role: 'I influence the decision'
+  }},
+  { name: 'manual_review', expect: 'manual_review', lead: {
+    biggest_challenge: 'We need more awareness in our region.', company_type: 'Local / Regional Business',
+    company_stage: 'Early-stage', potential_monthly_investment: '$5K – $10K / mo', timeline: '3 – 6 months',
+    decision_role: 'I influence the decision'
+  }},
+  { name: 'nurture', expect: 'nurture', lead: {
+    potential_monthly_investment: 'Under $2K / mo', timeline: 'Just exploring', company_stage: 'Just launched'
+  }},
+  { name: 'hard_gate', expect: 'manual_review', lead: {
+    company_stage: 'Just launched', annual_revenue_range: '$25M+',
+    potential_monthly_investment: '$25K – $50K / mo', timeline: 'ASAP / this month'
+  }}
+];
+
+function runTests() { return runTests_(); }
+
+function runTests_() {
+  var results = [];
+  var pass = 0, fail = 0;
+
+  TEST_CASES.forEach(function (tc) {
+    var q = qualify_(testLead_(tc.lead));
+    var ok = q.route === tc.expect;
+    if (ok) pass++; else fail++;
+    results.push({ test: 'route:' + tc.name, ok: ok, got: q.route, want: tc.expect, score: q.score });
+  });
+
+  // Brief quality: generate a mock brief and assert no forbidden tokens.
+  FORCE_MOCK = true;
+  var q2 = qualify_(testLead_(TEST_CASES[0].lead));
+  var url = createInternalBrief_(testLead_(TEST_CASES[0].lead), q2, { assessmentId: 'TEST', leadId: 'TEST' });
+  var scan = scanBriefDoc_(url);
+  FORCE_MOCK = false;
+  if (scan.clean) pass++; else fail++;
+  results.push({ test: 'brief:no_placeholders', ok: !!scan.clean, found: scan.found || scan.error || [], url: url });
+
+  var summary = { passed: pass, failed: fail, total: pass + fail, results: results };
+  Logger.log(JSON.stringify(summary, null, 2));
+  return summary;
 }

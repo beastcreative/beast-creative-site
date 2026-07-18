@@ -66,8 +66,8 @@ function markBooked_(lead, ev) {
   }
 
   safe_(function () {
-    sendScheduledEmail_({ first_name: lead.first_name, work_email: lead.work_email }, when, meetLink);
-  }, 'scheduled-email', lead.lead_id, '');
+    sendSnapshot_(lead, when, meetLink);
+  }, 'snapshot-email', lead.lead_id, '');
 
   safe_(function () { sendMeetingBookedInternal_(lead, when); }, 'meeting-booked-notify', lead.lead_id, '');
   logActivity_('calendar', lead.lead_id, 'booked', when, '');

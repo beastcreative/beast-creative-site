@@ -10,10 +10,10 @@
  */
 
 var SCHEMA = {
-  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes','qualification_version','qualification_score','qualification_scores','qualification_reasons','qualification_flags','qualified_at','manual_override','override_owner','override_reason','override_timestamp'],
+  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes','qualification_version','qualification_score','qualification_scores','qualification_reasons','qualification_flags','qualified_at','manual_override','override_owner','override_reason','override_timestamp','reminder_count','last_reminder_at'],
   Companies: ['company_id','company_name','website','company_type','company_stage','annual_revenue_range','owner','status','first_seen_at','last_activity_at','primary_goal','likely_constraint','opportunity_value','notes'],
   Contacts: ['contact_id','company_id','first_name','last_name','email','phone','title','decision_role','primary_contact','created_at','last_activity_at','notes'],
-  Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at'],
+  Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at','meeting_outcome','confirmed_constraint','recap_sent_at'],
   Opportunities: ['opportunity_id','company_id','primary_contact_id','assessment_id','stage','owner','estimated_value','probability','recommended_engagement','next_step','next_step_due','proposal_url','won_lost_date','lost_reason','notes'],
   Activities: ['activity_id','related_type','related_id','activity_type','activity_date','owner','subject','detail','source','created_at'],
   Tasks: ['task_id','related_type','related_id','assigned_to','task_type','task_title','due_date','status','priority','completed_at','notes'],
@@ -76,14 +76,15 @@ var LOOKUPS = {
   'Opportunity Stage': ['New Growth Assessment', 'Qualification Review', 'Scheduled', 'Assessment Completed', 'Follow-Up Required', 'Growth Blueprint Proposed', 'Proposal Sent', 'Decision', 'Closed Won', 'Closed Lost', 'Nurture'],
   'Task Type': ['Review new intake', 'Prepare internal brief', 'Conduct assessment', 'Send recap', 'Build Growth Blueprint', 'Create proposal', 'Follow up', 'Nurture check-in'],
   'Task Status': ['Open', 'In Progress', 'Done', 'Blocked'],
-  'Task Priority': ['High', 'Medium', 'Low']
+  'Task Priority': ['High', 'Medium', 'Low'],
+  'Meeting Outcome': ['Growth Blueprint', 'Proposal', 'Additional discovery', 'Nurture', 'Closed lost']
 };
 
 /* Which tab columns get a dropdown, and from which lookup category. */
 var VALIDATION = {
   Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies' },
   Companies: { company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', status: 'Company Status' },
-  Assessments: { qualification_route: 'Qualification Route' },
+  Assessments: { qualification_route: 'Qualification Route', meeting_outcome: 'Meeting Outcome' },
   Opportunities: { stage: 'Opportunity Stage' },
   Tasks: { task_type: 'Task Type', status: 'Task Status', priority: 'Task Priority' }
 };
