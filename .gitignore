@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Growth Assessment shared secret (local only)
 apps-script/growth-assessment/SECRET.local.txt
+
+# clasp local project config
+.clasp.json
