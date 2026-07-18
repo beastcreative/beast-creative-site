@@ -88,4 +88,17 @@ Deploys now go out via **clasp** (`./apps-script/growth-assessment/deploy.sh`), 
 
 ---
 
-**Overall: 🚧 v1.1 code complete + unit-tested. Pending: Beast Anthropic key (John), one guided `setup()` run, and the live end-to-end test (gated on the friend's 2 Vercel env vars).**
+## Phase 5 — LIVE (2026-07-18)
+
+- ✅ Beast Anthropic key set; AI enrichment live (real Claude verified).
+- ✅ Partner set Vercel env vars (`GROWTH_APPS_SCRIPT_URL`, `GROWTH_SHARED_SECRET`); website→backend connected.
+- ✅ Decoupled architecture: instant response (~4s), background `processPending_` handles AI brief + emails + task.
+- ✅ **Full end-to-end verified live**: form → backend → AI brief → emails → booking reconciliation. Audit log confirms `ai enrich ok` + `process done` + `calendar booked`.
+
+### Remaining before Phase 2
+- ⏳ Purge test data (`Self Test Co`, `Endpoint Test Co`, `Live E2E Test Co`, `TEST-*` briefs) before launch.
+- ⏳ GA4/GTM: forward `growth_assessment_*` events + mark booking as conversion (John's dashboard).
+- ⏳ (Optional) `CONTACT_EMAIL` Vercel var for the rare fallback path.
+- ⏳ (Optional) real solid-yellow footer button if John wants it.
+
+**Overall: ✅ Growth Assessment v1.1 is LIVE and end-to-end verified. Ready for Phase 2 once test data is purged.**
