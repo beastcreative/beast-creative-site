@@ -166,14 +166,16 @@ function sendInternalNotification_(d, route, ids, q) {
       '<div style="font-size:13px;color:#555;margin-top:4px">' + esc_(lastReason) + '</div></div>';
   }
 
-  // One-click decision buttons (signed links to the web app).
-  var approveUrl = actionUrl_(ids.leadId, 'approve');
-  var declineUrl = actionUrl_(ids.leadId, 'decline');
-  var buttons = (approveUrl && declineUrl) ?
-    '<p style="margin:16px 0">' +
-    '<a href="' + approveUrl + '" style="display:inline-block;background:#16a34a;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold;margin-right:8px">Approve + send booking link</a>' +
-    '<a href="' + declineUrl + '" style="display:inline-block;background:#0A0A0A;color:#fff;text-decoration:none;padding:11px 20px;border-radius:8px;font-weight:bold">Decline + send self-serve plan</a>' +
-    '</p><p style="font-size:12px;color:#8a8a8a">One click. Approve books them; Decline auto-sends an AI self-serve plan. Full analysis is in the brief.</p>' : '';
+  // Decision instruction (manual-review leads). Set the Decision cell in the
+  // sheet to Approve to book them; do nothing and a self-serve plan auto-sends.
+  var buttons = '';
+  if (route === 'manual_review') {
+    buttons = '<div style="margin:14px 0;padding:12px 14px;background:#f5f7fa;border-left:3px solid #0A0A0A">' +
+      '<div style="font-weight:bold">Your call on this one</div>' +
+      '<div style="font-size:13px;color:#555;margin-top:4px">In the <a href="' + esc_(sheetUrl) + '">pipeline sheet</a>, set this lead\'s ' +
+      '<strong>Decision</strong> to <strong>Approve</strong> to send their booking link, or <strong>Decline</strong> to send a helpful self-serve plan now. ' +
+      'If left undecided, a self-serve plan auto-sends after the review window.</div></div>';
+  }
 
   var html = '<div style="font-family:Arial,Helvetica,sans-serif;max-width:640px;color:#0A0A0A">' +
     '<h2 style="margin:0 0 4px">' + (priority ? 'Priority: ' : '') + 'New Growth Assessment</h2>' +

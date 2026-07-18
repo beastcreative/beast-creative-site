@@ -46,7 +46,8 @@ var DEFAULT_SETTINGS = [
   ['ai_enrichment_enabled', 'true'],
   ['ai_model', 'claude-opus-4-8'],
   ['ai_fetch_website', 'true'],
-  ['ai_mock', 'false']
+  ['ai_mock', 'false'],
+  ['auto_decline_days', 3]
 ];
 
 var WORKBOOK_CACHE = null;
@@ -77,12 +78,13 @@ var LOOKUPS = {
   'Task Type': ['Review new intake', 'Prepare internal brief', 'Conduct assessment', 'Send recap', 'Build Growth Blueprint', 'Create proposal', 'Follow up', 'Nurture check-in'],
   'Task Status': ['Open', 'In Progress', 'Done', 'Blocked'],
   'Task Priority': ['High', 'Medium', 'Low'],
-  'Meeting Outcome': ['Growth Blueprint', 'Proposal', 'Additional discovery', 'Nurture', 'Closed lost']
+  'Meeting Outcome': ['Growth Blueprint', 'Proposal', 'Additional discovery', 'Nurture', 'Closed lost'],
+  'Decision': ['Approve', 'Decline']
 };
 
 /* Which tab columns get a dropdown, and from which lookup category. */
 var VALIDATION = {
-  Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies' },
+  Leads: { status: 'Lead Status', qualification_route: 'Qualification Route', company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', current_monthly_investment: 'Current Investment', potential_monthly_investment: 'Potential Investment', timeline: 'Timeline', decision_role: 'Decision Role', speaking_with_agencies: 'Speaking With Agencies', manual_override: 'Decision' },
   Companies: { company_type: 'Company Type', company_stage: 'Company Stage', annual_revenue_range: 'Annual Revenue', status: 'Company Status' },
   Assessments: { qualification_route: 'Qualification Route', meeting_outcome: 'Meeting Outcome' },
   Opportunities: { stage: 'Opportunity Stage' },

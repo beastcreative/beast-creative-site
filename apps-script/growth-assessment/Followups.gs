@@ -3,9 +3,10 @@
  *
  * checkBookingFollowups_ (daily trigger): nudges qualified-but-unbooked leads at
  * ~24h and ~3 days, then stops and hands to a human.
- * onAssessmentEdit (installable onEdit trigger): when a strategist sets
- * meeting_outcome on the Assessments tab, sends the Recap and routes the
- * opportunity + next task. Minimal human input: fill one cell, automation runs.
+ * onSheetEdit (installable onEdit trigger): meeting_outcome on Assessments routes
+ * the opportunity + recap; Decision (Approve/Decline) on Leads approves or
+ * declines. Minimal human input: set one cell, automation runs. Plus
+ * autoDeclineStale_: undecided manual-review leads auto-get a self-serve plan.
  */
 
 /* ── Booking follow-up reminders ──────────────────────────────────── */
@@ -41,6 +42,7 @@ function checkBookingFollowups_() {
       logActivity_('followup', l.lead_id, 'not_booked', '', '');
     }
   });
+  autoDeclineStale_();
 }
 
 function sendBookingReminder_(l, kind) {
@@ -55,20 +57,59 @@ function sendBookingReminder_(l, kind) {
   send_(l.work_email, subject, '<div style="' + EMAIL_WRAP + '">' + body + brandFooter_() + '</div>');
 }
 
-/* ── Meeting-outcome routing (installable onEdit) ─────────────────── */
-function onAssessmentEdit(e) {
+/* ── Sheet-edit routing (installable onEdit) ──────────────────────────
+ * Assessments.meeting_outcome → post-meeting routing.
+ * Leads.manual_override (Approve/Decline) → approve or decline the lead.
+ */
+function onSheetEdit(e) {
   try {
     if (!e || !e.range) return;
     var sh = e.range.getSheet();
-    if (sh.getName() !== 'Assessments') return;
-    var cols = headers_('Assessments');
-    var outcomeCol = cols.indexOf('meeting_outcome') + 1;
-    if (e.range.getColumn() !== outcomeCol || e.range.getRow() < 2) return;
-    var outcome = String(e.value || e.range.getValue() || '').trim();
-    if (outcome) processOutcome_(e.range.getRow(), outcome);
+    var name = sh.getName();
+    var row = e.range.getRow();
+    if (row < 2) return;
+
+    if (name === 'Assessments') {
+      var acols = headers_('Assessments');
+      if (e.range.getColumn() === acols.indexOf('meeting_outcome') + 1) {
+        var outcome = String(e.value || e.range.getValue() || '').trim();
+        if (outcome) processOutcome_(row, outcome);
+      }
+    } else if (name === 'Leads') {
+      var lcols = headers_('Leads');
+      if (e.range.getColumn() === lcols.indexOf('manual_override') + 1) {
+        var dec = String(e.value || e.range.getValue() || '').trim();
+        if (dec === 'Approve' || dec === 'Decline') {
+          var lead = rowObject_('Leads', row);
+          if (dec === 'Approve') approveLead_(lead); else declineLead_(lead);
+        }
+      }
+    }
   } catch (err) {
-    logActivity_('outcome', '', 'edit', 'error', String(err && err.message || err));
+    logActivity_('edit', '', 'error', '', String(err && err.message || err));
   }
+}
+
+/**
+ * autoDeclineStale_ — manual-review leads left undecided past the configured
+ * window auto-receive the self-serve plan. Set auto_decline_days to 0 to disable.
+ * Called hourly from checkBookingFollowups_.
+ */
+function autoDeclineStale_() {
+  var days = numSetting_('auto_decline_days', 3);
+  if (days <= 0) return;
+  var leads = readObjects_('Leads');
+  var now = new Date().getTime();
+  var cutoff = days * 24 * 3600000;
+  leads.forEach(function (l) {
+    if (l.qualification_route !== 'manual_review') return;
+    if (l.manual_override) return;
+    if (l.status === 'Declined' || l.status === 'Approved') return;
+    var created = parseIso_(l.qualified_at || l.created_at);
+    if (!created || (now - created.getTime()) < cutoff) return;
+    declineLead_(l);
+    logActivity_('auto-decline', l.lead_id, 'stale', days + 'd', '');
+  });
 }
 
 var OUTCOME_MAP = {

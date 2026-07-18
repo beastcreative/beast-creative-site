@@ -10,9 +10,7 @@
  * Response: { success, leadId, route, bookingUrl }.
  */
 
-function doGet(e) {
-  var p = (e && e.parameter) || {};
-  if (p.action && p.lead) return handleAction_(p);   // one-click Approve/Decline from email
+function doGet() {
   return json_({ ok: true, service: 'beast-growth-assessment', ts: nowIso_() });
 }
 
