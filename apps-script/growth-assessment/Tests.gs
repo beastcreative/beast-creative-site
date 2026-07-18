@@ -70,3 +70,37 @@ function runTests_() {
   Logger.log(JSON.stringify(summary, null, 2));
   return summary;
 }
+
+/**
+ * testAI() — run from the editor to (1) trigger the external-service auth prompt
+ * and (2) confirm live Claude enrichment. Uses a sample lead; logs the result.
+ */
+function testAI() {
+  var d = testLead_(TEST_CASES[0].lead);
+  d.company_name = 'NorthPeak Athletics';
+  var q = qualify_(d);
+  var site = fetchWebsite_(d.company_website);   // UrlFetchApp -> triggers the scope prompt
+  var ai = enrichBrief_(d, q, site);
+  var out = ai
+    ? { model: ai._model, observations: ai.observations, likely_constraint: ai.likely_constraint,
+        question_count: (ai.questions || []).length, research_count: (ai.research || []).length }
+    : { ai: null, note: 'Enrichment returned null. Check ANTHROPIC_API_KEY, ai_model, and the Audit Log tab.' };
+  Logger.log(JSON.stringify(out, null, 2));
+  return out;
+}
+
+/** Raw Anthropic ping to surface the exact HTTP status/body (secret-gated endpoint). */
+function testAIRaw_() {
+  var key = prop_('ANTHROPIC_API_KEY');
+  if (!key) return { error: 'no_key' };
+  var model = String(setting_('ai_model', 'claude-opus-4-8'));
+  try {
+    var res = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+      method: 'post', contentType: 'application/json',
+      headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+      payload: JSON.stringify({ model: model, max_tokens: 50, messages: [{ role: 'user', content: 'Reply with OK.' }] }),
+      muteHttpExceptions: true
+    });
+    return { model: model, http: res.getResponseCode(), body: res.getContentText().slice(0, 400) };
+  } catch (e) { return { model: model, error: String(e && e.message || e) }; }
+}

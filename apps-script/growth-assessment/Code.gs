@@ -43,6 +43,7 @@ function doPost(e) {
 
     // Secret-gated test runner (route coverage + brief placeholder scan).
     if (body.runTests) return json_(runTests_());
+    if (body.testAIRaw) return json_(testAIRaw_());
 
     var missing = requiredMissing_(body);
     if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
