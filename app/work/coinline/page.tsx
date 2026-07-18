@@ -319,7 +319,7 @@ export default function CoinlinePage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to Build Your Brand from Zero?</h2>
             <p className="text-gray-400 mb-8">Whether you have a name or just an idea, Beast builds brand identities designed to last. Let&apos;s talk about where you&apos;re starting and where you want to go.</p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="rocket" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="rocket">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

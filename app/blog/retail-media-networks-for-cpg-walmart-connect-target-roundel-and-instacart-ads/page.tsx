@@ -275,7 +275,7 @@ export default function RetailMediaPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds multi-platform retail media strategies for CPG brands scaling to national distribution.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

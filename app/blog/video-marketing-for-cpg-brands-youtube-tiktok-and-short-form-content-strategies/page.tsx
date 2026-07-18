@@ -288,7 +288,7 @@ export default function VideoMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast creates and distributes video content for CPG brands, platform-native creative built to earn attention and convert viewers into buyers.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

@@ -176,7 +176,7 @@ export default function WorkPage() {
             <p className="text-gray-400 text-lg mb-8">
               Every one of these campaigns started with a simple conversation. Let&apos;s have yours.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

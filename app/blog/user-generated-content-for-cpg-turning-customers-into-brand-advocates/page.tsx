@@ -290,7 +290,7 @@ export default function UgcPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast designs CPG campaigns that generate authentic UGC at scale, building trust, driving conversions, and fueling your content pipeline simultaneously.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

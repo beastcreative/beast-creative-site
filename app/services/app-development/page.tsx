@@ -157,7 +157,7 @@ export default function AppDevelopmentPage() {
               Traditional dev shops quote six months and six figures. We built and launched our own SaaS (TEKSBuilder, an AI resource generator for Texas teachers) from idea to paying-customer-ready in one week, then replicated it state by state. That&apos;s not a pitch. It&apos;s a product you can use right now.
             </p>
             <div className="flex flex-wrap gap-3">
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">
+              <IconButton href="/growth-assessment">
                 Scope My App: Free Call
               </IconButton>
               <IconButton href="/work/teksbuilder" variant="ghost">
@@ -357,7 +357,7 @@ export default function AppDevelopmentPage() {
             <p className="text-gray-400 text-lg mb-8">
               Bring it to a free scoping call. We&apos;ll tell you what the smallest launchable version looks like, what it costs, and how fast it can be live. No pitch deck. No six-month roadmap.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">
+            <IconButton href="/growth-assessment">
               Scope My App: Free Call
             </IconButton>
           </AnimatedSection>

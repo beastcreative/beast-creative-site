@@ -407,7 +407,7 @@ export default function CpgBrandRefreshPost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we’ve guided numerous CPG brands through successful refreshes using our AI-enhanced campaign strategies and data-driven approach. Our certified specialists understand the unique challenges of consumer packaged goods marketing and can help you navigate your brand evolution with radical transparency and measurable results. Ready to explore what a strategic brand refresh could do for your CPG business?
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

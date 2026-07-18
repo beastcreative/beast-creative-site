@@ -272,7 +272,7 @@ export default function WilliamsBtsPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Double Your Entry Goal. On Half the Budget.</h2>
             <p className="text-gray-400 mb-8">That&apos;s not a pitch. That&apos;s what happened. Let&apos;s talk about what Beast&apos;s proven sweepstakes playbook can do for your brand.</p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="chart" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="chart">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

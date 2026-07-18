@@ -72,8 +72,8 @@ export default function ContactPage() {
                   <InstantContact message="Hi Beast, I'd like to talk about my brand's search visibility." />
                   <div className="mt-6">
                     <p className="text-gray-500 text-sm mb-3">Prefer a scheduled call?</p>
-                    <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" variant="ghost" icon="calendar" target="_blank" rel="noopener noreferrer">
-                      See Where You Stand in AI Search
+                    <IconButton href="/growth-assessment" variant="ghost" icon="calendar">
+                      Book a Growth Diagnostic
                     </IconButton>
                   </div>
                 </div>

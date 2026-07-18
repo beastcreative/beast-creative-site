@@ -78,7 +78,7 @@ export default function SEOSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">Get a Free SEO Audit</IconButton>
+              <IconButton href="/growth-assessment">Get a Free SEO Audit</IconButton>
               <IconButton href="/services/seo-aeo" variant="ghost">See Our SEO + AEO Service</IconButton>
             </div>
           </AnimatedSection>
@@ -181,7 +181,7 @@ export default function SEOSanAntonioPage() {
             <p className="text-gray-400 text-lg mb-8">
               Book a free SEO audit. We&apos;ll show you exactly where you&apos;re leaving organic traffic on the table. No pitch, no commitment.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">Get My Free SEO Audit</IconButton>
+            <IconButton href="/growth-assessment">Get My Free SEO Audit</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
           </AnimatedSection>
         </div>

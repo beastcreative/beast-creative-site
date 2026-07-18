@@ -393,7 +393,7 @@ export default function CpgBrandIdentityPost() {
             <p className="text-[#C8C8C8] mb-8">
               Strong CPG brand identity isn&apos;t just about immediate sales. It&apos;s about building lasting equity that supports premium pricing and customer loyalty over time.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

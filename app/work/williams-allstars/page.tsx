@@ -328,7 +328,7 @@ export default function WilliamsAllstarsPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to Turn Your Next Campaign Into a Collector&apos;s Item?</h2>
             <p className="text-gray-400 mb-8">Beast builds campaign mechanics that keep fans coming back. Let&apos;s build something your audience will actually want to collect.</p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="rocket" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="rocket">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

@@ -491,7 +491,7 @@ export default function CpgBrandStrategyPost() {
             <p className="text-[#C8C8C8] mb-8">
               The brands that break through crowded markets aren&apos;t necessarily those with the biggest budgets or the most innovative products. They&apos;re the ones with positioning so clear and compelling that consumers can&apos;t ignore them.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

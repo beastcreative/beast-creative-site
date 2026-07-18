@@ -224,12 +224,10 @@ export default function HomePage() {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <IconButton
-                  href="https://calendar.app.google/9q1mcYgEdXNyjK8G6"
+                  href="/growth-assessment"
                   variant="white"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  See Where You Stand in AI Search
+                  Book a Growth Diagnostic
                 </IconButton>
                 <Link href="/work" className="btn-ghost-pink justify-center text-sm sm:justify-start">
                   See Our Work →
@@ -581,8 +579,8 @@ export default function HomePage() {
               </div>
               <div className="mt-6">
                 <p className="led-label mb-3 text-white/45">Prefer a scheduled call?</p>
-                <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" variant="ghost" target="_blank" rel="noopener noreferrer">
-                  See Where You Stand in AI Search
+                <IconButton href="/growth-assessment" variant="ghost">
+                  Book a Growth Diagnostic
                 </IconButton>
               </div>
             </Reveal>

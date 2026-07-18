@@ -281,7 +281,7 @@ export default function CpgSeoPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds SEO and AEO strategies that position CPG brands as the authoritative answer, both in Google and in AI search tools.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

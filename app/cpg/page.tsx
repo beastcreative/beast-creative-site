@@ -136,7 +136,7 @@ export default function CpgPage() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" icon="chart">Get My Free CPG Marketing Audit</IconButton>
+            <IconButton href="/growth-assessment" icon="chart">Get My Free CPG Marketing Audit</IconButton>
           </AnimatedSection>
         </div>
       </section>
@@ -369,7 +369,7 @@ export default function CpgPage() {
                   → Start with our Starter tier. One sweepstakes campaign. Real data. Real results. Then we&apos;ll talk about what&apos;s next.
                 </p>
                 <div className="mt-auto">
-                  <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" icon="rocket">I&apos;m an Emerging Brand</IconButton>
+                  <IconButton href="/growth-assessment" icon="rocket">I&apos;m an Emerging Brand</IconButton>
                 </div>
               </div>
             </AnimatedSection>
@@ -386,7 +386,7 @@ export default function CpgPage() {
                   → Our Growth and Scale tiers are built for this exact moment.
                 </p>
                 <div className="mt-auto">
-                  <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer" icon="chart">I&apos;m Ready to Scale</IconButton>
+                  <IconButton href="/growth-assessment" icon="chart">I&apos;m Ready to Scale</IconButton>
                 </div>
               </div>
             </AnimatedSection>

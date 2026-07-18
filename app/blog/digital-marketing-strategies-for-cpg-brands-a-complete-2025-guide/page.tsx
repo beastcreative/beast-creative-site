@@ -469,7 +469,7 @@ export default function CpgDigitalMarketingStrategyPost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we’ve helped numerous CPG brands navigate this complex digital landscape using AI-enhanced campaigns and data-driven personalization strategies. Our transparent approach means you’ll always understand what’s working, what isn’t, and why. If you’re ready to transform your CPG brand’s digital marketing strategy, let’s discuss how our certified specialists can help you achieve measurable results in 2025.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

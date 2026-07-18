@@ -125,7 +125,7 @@ export default function AboutPage() {
             <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
               See where you stand in AI search. No pitch, no pressure. Just an honest conversation about what Beast can do for your brand.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

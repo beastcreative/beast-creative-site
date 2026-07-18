@@ -296,7 +296,7 @@ export default function CpgContentMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast creates CPG content strategies that educate your audience, earn organic discovery, and convert readers into repeat customers.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

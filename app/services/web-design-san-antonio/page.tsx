@@ -85,7 +85,7 @@ export default function WebDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+              <IconButton href="/growth-assessment">Book a Growth Diagnostic</IconButton>
               <IconButton href="/work" variant="ghost">See Our Work</IconButton>
             </div>
           </AnimatedSection>
@@ -205,7 +205,7 @@ export default function WebDesignSanAntonioPage() {
             <p className="text-gray-400 text-lg mb-8">
               Book a quick call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back. No pitch, no commitment.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment">Book a Growth Diagnostic</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
           </AnimatedSection>
         </div>

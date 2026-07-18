@@ -60,7 +60,7 @@ export default function WebDesignPage() {
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready for a Website That Works?</h2>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>

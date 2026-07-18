@@ -367,7 +367,7 @@ export default function CpgSocialMediaMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we’ve helped numerous CPG brands develop and execute social media strategies that drive real sales growth. Our AI-enhanced campaigns and commitment to radical transparency ensure that every dollar of your social media budget works harder and delivers measurable results. If you’re ready to transform your social media presence from a cost center into a profit driver, let’s discuss how our certified specialists can help you achieve your goals.
             </p>
-            <IconButton href="https://calendar.app.google/9q1mcYgEdXNyjK8G6" icon="calendar" target="_blank" rel="noopener noreferrer">See Where You Stand in AI Search</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
           </AnimatedSection>
         </div>
       </section>
