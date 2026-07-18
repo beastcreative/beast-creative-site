@@ -407,7 +407,7 @@ export default function CpgPackagingDesignPost() {
             <p className="text-[#C8C8C8] mb-8">
               The brands that treat packaging as a strategic marketing investment rather than a necessary expense consistently outperform competitors who focus solely on product features or price competition.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

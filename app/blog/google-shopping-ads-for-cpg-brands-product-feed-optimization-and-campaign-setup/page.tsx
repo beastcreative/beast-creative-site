@@ -283,7 +283,7 @@ export default function GoogleShoppingPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds and optimizes Google Shopping campaigns that scale with your distribution, from regional to national.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

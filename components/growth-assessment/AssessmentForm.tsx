@@ -209,7 +209,7 @@ export default function AssessmentForm({ assessmentType = "general" }: { assessm
         {showBooking && result.bookingUrl && (
           <a href={result.bookingUrl} target="_blank" rel="noopener noreferrer"
             onClick={() => pushEvent("calendar_open", { cta_location: "assessment_result", route: result.route })}
-            className="btn-primary mt-7 inline-flex">Choose a Time →</a>
+            className="btn-primary mt-7 inline-flex">Book Your Growth Diagnostic →</a>
         )}
         {result.route === "nurture" && (
           <div className="mt-7 flex flex-wrap gap-3">

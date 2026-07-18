@@ -86,7 +86,7 @@ export default function LogoDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <IconButton href="/growth-assessment">Book a Free Brand Call</IconButton>
+              <IconButton href="/growth-assessment?type=branding">Start Your Growth Assessment</IconButton>
               <IconButton href="/work/coinline" variant="ghost">See Coinline Brand Case Study</IconButton>
             </div>
           </AnimatedSection>
@@ -211,7 +211,7 @@ export default function LogoDesignSanAntonioPage() {
             <p className="text-gray-400 text-lg mb-8">
               Book a quick brand call. We&apos;ll tell you what your current brand is missing and what a logo redesign would actually get you.
             </p>
-            <IconButton href="/growth-assessment">Book My Free Brand Call</IconButton>
+            <IconButton href="/growth-assessment?type=branding">Start Your Growth Assessment</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
           </AnimatedSection>
         </div>

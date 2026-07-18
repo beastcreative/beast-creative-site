@@ -125,7 +125,7 @@ export default function AboutPage() {
             <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
               See where you stand in AI search. No pitch, no pressure. Just an honest conversation about what Beast can do for your brand.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

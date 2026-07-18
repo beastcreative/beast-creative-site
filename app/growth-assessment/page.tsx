@@ -3,18 +3,22 @@ import AnalyticsInit from "@/components/landing/AnalyticsInit";
 import AssessmentForm from "@/components/growth-assessment/AssessmentForm";
 
 export const metadata: Metadata = {
-  title: "Book a Growth Diagnostic | Beast Creative",
+  title: "Start Your Growth Assessment | Beast Creative",
   description:
-    "Get a focused Beast Growth Diagnostic. Tell us your goals, channels, and the constraint slowing growth. If we can help, we'll show you the next move.",
+    "Take the Beast Growth Assessment. Tell us your goals, channels, and the constraint slowing growth. If we're a fit, you'll book a Growth Diagnostic; if not, we'll point you to the most useful next step.",
   openGraph: {
-    title: "Book a Growth Diagnostic | Beast Creative",
+    title: "Start Your Growth Assessment | Beast Creative",
     description:
-      "A focused review of your goals, channels, and the constraint slowing growth. If Beast can help, we'll show you the next move.",
+      "A focused review of your goals, channels, and the constraint slowing growth. If Beast is a fit, you'll book a Growth Diagnostic.",
     type: "website",
     url: "https://beastcreativeagency.com/growth-assessment",
   },
   alternates: { canonical: "https://beastcreativeagency.com/growth-assessment" },
 };
+
+// Hidden assessment type passed from vertical/service CTAs (?type=…), recorded
+// with the lead so Beast can see which page/vertical drove each assessment.
+const VALID_TYPES = ["general", "ecommerce", "b2b", "cpg", "app", "seo", "paid", "web", "branding", "content"];
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
@@ -31,7 +35,13 @@ const WHAT_HAPPENS = [
   { t: "You get a next move", d: "If Beast is a fit, you book a 30-minute diagnostic. If not, we point you to the most useful resource." },
 ];
 
-export default function GrowthAssessmentPage() {
+export default async function GrowthAssessmentPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}) {
+  const { type } = await searchParams;
+  const assessmentType = type && VALID_TYPES.includes(type) ? type : "general";
   return (
     <>
       <AnalyticsInit />
@@ -45,7 +55,7 @@ export default function GrowthAssessmentPage() {
           <span className="led-cross text-black/30" style={{ top: 96, left: 24 }} aria-hidden="true" />
           <div className="relative mx-auto w-full max-w-7xl px-6 pt-28 pb-16 lg:px-20 lg:pt-32 lg:pb-24">
             <div className="max-w-2xl">
-              <Label>The Beast Growth Diagnostic</Label>
+              <Label>The Beast Growth Assessment</Label>
               <h1 className="mt-6 font-display text-[2.75rem] font-extrabold uppercase leading-[0.95] tracking-tight text-beast-black sm:text-6xl lg:text-[4.25rem]">
                 Find the Constraint <span className="text-beast-pink">Slowing Your Growth.</span>
               </h1>
@@ -76,7 +86,7 @@ export default function GrowthAssessmentPage() {
 
               {/* the form */}
               <div>
-                <AssessmentForm assessmentType="general" />
+                <AssessmentForm assessmentType={assessmentType} />
               </div>
             </div>
           </div>

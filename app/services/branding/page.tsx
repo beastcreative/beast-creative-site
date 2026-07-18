@@ -60,7 +60,7 @@ export default function BrandingPage() {
         <div className="max-w-2xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to Build a Brand That Sticks?</h2>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

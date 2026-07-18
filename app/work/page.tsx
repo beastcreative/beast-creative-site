@@ -176,7 +176,7 @@ export default function WorkPage() {
             <p className="text-gray-400 text-lg mb-8">
               Every one of these campaigns started with a simple conversation. Let&apos;s have yours.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

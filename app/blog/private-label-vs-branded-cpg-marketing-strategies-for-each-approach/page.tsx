@@ -439,7 +439,7 @@ export default function PrivateLabelVsBrandedCpgPost() {
             <p className="text-[#C8C8C8] mb-8">
               The most successful CPG companies, regardless of their model, share common traits: they understand their customers deeply, use data to drive decisions, and adapt quickly to market changes.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

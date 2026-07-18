@@ -126,7 +126,7 @@ export default function ServicesPage() {
             <p className="text-gray-400 text-lg mb-8">
               Tell us about your business and we&apos;ll show you exactly which service would move the needle most for your brand. No pitch, no commitment.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

@@ -406,7 +406,7 @@ export default function CpgPremiumVsValuePost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we help CPG brands develop positioning strategies that align with their business goals and market realities. Our AI-enhanced campaigns and data-driven approach ensure your positioning translates into measurable business results. Ready to clarify your brand’s market position and develop marketing strategies that drive growth?
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

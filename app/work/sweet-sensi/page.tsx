@@ -312,7 +312,7 @@ export default function SweetSensiPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Ready to Build Revenue That Doesn&apos;t Stop When the Budget Does?</h2>
             <p className="text-gray-400 mb-8">Whether you&apos;re in a restricted industry or just tired of paying for traffic you don&apos;t own, Beast builds marketing assets that compound over time.</p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

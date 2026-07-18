@@ -390,7 +390,7 @@ export default function SustainableCpgMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we help CPG brands develop sustainable marketing strategies that drive measurable sales growth while building authentic environmental credibility. Our AI-enhanced campaigns and transparent reporting ensure your sustainable positioning delivers both positive impact and positive ROI. Ready to turn your environmental commitment into competitive advantage? Let’s talk about how sustainable marketing can accelerate your growth in 2025.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

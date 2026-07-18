@@ -23,8 +23,8 @@ const data: LandingData = {
   h1Pre: "Turn More Ecommerce Traffic Into",
   h1Accent: "Revenue",
   sub: "Most ecommerce brands do not have a traffic problem. They have a system problem. Beast identifies what is limiting growth, from acquisition cost to weak conversion, thin retention, or broken attribution, then builds the connected growth system to fix it.",
-  primaryCta: "Book an Ecommerce Growth Diagnostic",
-  secondaryCta: { label: "See the Revenue Stories", href: "#proof" },
+  primaryCta: "Start Your Ecommerce Growth Assessment",
+  secondaryCta: { label: "See the Proof", href: "#proof" },
   heroVisual: {
     label: "Ecommerce growth composite",
     note: "Revenue/analytics dashboard + product imagery. ~1200×900. Shows acquisition → conversion → retention.",

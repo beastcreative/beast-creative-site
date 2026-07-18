@@ -23,8 +23,8 @@ const data: LandingData = {
   h1Pre: "Build a More Predictable",
   h1Accent: "B2B Growth System",
   sub: "If your traffic, content, paid media, website, and sales process are pulling in different directions, growth becomes expensive and unpredictable. Beast finds the constraint, fixes the handoff points, and builds a measurable demand system around qualified opportunities.",
-  primaryCta: "Book a B2B Growth Diagnostic",
-  secondaryCta: { label: "See How Beast Builds Demand Systems", href: "#proof" },
+  primaryCta: "Start Your B2B Growth Assessment",
+  secondaryCta: { label: "See the Proof", href: "#proof" },
   heroVisual: {
     label: "B2B demand system composite",
     note: "Website + dashboard + strategy-board composite. ~1200×900. Shows positioning → demand → conversion → sales handoff.",

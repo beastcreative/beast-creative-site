@@ -1,20 +1,21 @@
 "use client";
 
 import { pushEvent } from "@/lib/analytics";
-import { BOOKING_URL } from "@/lib/site";
 
 type Variant = "pink" | "white" | "ghost";
 
 /**
- * Primary "Book a … Growth Diagnostic" button. Links to the central booking URL
- * and fires a book_diagnostic_click event (with attribution) to the dataLayer.
+ * Primary "Start Your … Growth Assessment" button. Links to the on-site
+ * assessment form with a hidden ?type= so leads are segmented by page/vertical,
+ * and fires a start_assessment_click event (with attribution) to the dataLayer.
+ * (Booking the actual Growth Diagnostic happens after the visitor qualifies.)
  */
 export default function DiagnosticCTA({
   label,
   location,
   pageType,
   variant = "pink",
-  href = BOOKING_URL,
+  href,
   className = "",
 }: {
   label: string;
@@ -25,13 +26,12 @@ export default function DiagnosticCTA({
   className?: string;
 }) {
   const base = variant === "ghost" ? "btn-ghost" : variant === "white" ? "btn-light" : "btn-primary";
+  const finalHref = href ?? `/growth-assessment?type=${pageType}`;
   return (
     <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={finalHref}
       onClick={() =>
-        pushEvent("book_diagnostic_click", {
+        pushEvent("start_assessment_click", {
           cta_label: label,
           cta_location: location,
           page_type: pageType,

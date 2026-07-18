@@ -73,7 +73,7 @@ export default function ContactPage() {
                   <div className="mt-6">
                     <p className="text-gray-500 text-sm mb-3">Prefer a scheduled call?</p>
                     <IconButton href="/growth-assessment" variant="ghost" icon="calendar">
-                      Book a Growth Diagnostic
+                      Start Your Growth Assessment
                     </IconButton>
                   </div>
                 </div>

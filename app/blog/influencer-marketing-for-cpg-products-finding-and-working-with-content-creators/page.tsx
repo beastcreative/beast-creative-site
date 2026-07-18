@@ -387,7 +387,7 @@ export default function CpgInfluencerMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               At Beast Creative Agency, we help CPG brands develop and execute influencer marketing strategies that deliver measurable results. Our AI-enhanced campaign optimization and radical transparency approach ensures you get the maximum ROI from your content creator partnerships. Ready to transform your influencer marketing approach? Let’s discuss how we can help you find and work with the right content creators for your CPG brand.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

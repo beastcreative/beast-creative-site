@@ -218,7 +218,7 @@ export default function PioneerPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Want Paid Social That Pays Back?</h2>
             <p className="text-gray-400 mb-8">Beast builds performance campaigns around ROAS, not vanity metrics. Let&apos;s look at your numbers and show you what&apos;s possible.</p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

@@ -227,7 +227,7 @@ export default function HomePage() {
                   href="/growth-assessment"
                   variant="white"
                 >
-                  Book a Growth Diagnostic
+                  Start Your Growth Assessment
                 </IconButton>
                 <Link href="/work" className="btn-ghost-pink justify-center text-sm sm:justify-start">
                   See Our Work →
@@ -580,7 +580,7 @@ export default function HomePage() {
               <div className="mt-6">
                 <p className="led-label mb-3 text-white/45">Prefer a scheduled call?</p>
                 <IconButton href="/growth-assessment" variant="ghost">
-                  Book a Growth Diagnostic
+                  Start Your Growth Assessment
                 </IconButton>
               </div>
             </Reveal>

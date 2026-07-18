@@ -258,7 +258,7 @@ export default function MultiBrandSeoPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds multi-brand SEO architectures that stop the cannibalization and start compounding authority across your entire portfolio.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

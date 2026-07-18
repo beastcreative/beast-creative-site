@@ -261,7 +261,7 @@ export default function AeoPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds integrated SEO + AEO strategies for brands that want to win both channels.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Book a Growth Diagnostic</IconButton>
+            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>
