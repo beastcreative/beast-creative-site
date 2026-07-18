@@ -10,7 +10,7 @@
  */
 
 var SCHEMA = {
-  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes'],
+  Leads: ['lead_id','created_at','updated_at','status','qualification_route','owner','first_name','last_name','work_email','phone','job_title','company_name','company_website','company_type','company_stage','annual_revenue_range','primary_goals','biggest_challenge','desired_result','current_marketing','current_monthly_investment','potential_monthly_investment','timeline','decision_role','other_stakeholders','speaking_with_agencies','additional_context','consent','assessment_type','source_page','source_section','first_landing_page','referrer','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','submission_timestamp','calendar_booking_status','calendar_event_id','meeting_date','next_step','notes','qualification_version','qualification_score','qualification_scores','qualification_reasons','qualification_flags','qualified_at','manual_override','override_owner','override_reason','override_timestamp'],
   Companies: ['company_id','company_name','website','company_type','company_stage','annual_revenue_range','owner','status','first_seen_at','last_activity_at','primary_goal','likely_constraint','opportunity_value','notes'],
   Contacts: ['contact_id','company_id','first_name','last_name','email','phone','title','decision_role','primary_contact','created_at','last_activity_at','notes'],
   Assessments: ['assessment_id','lead_id','company_id','contact_id','assessment_type','submitted_at','qualification_route','scheduled_at','meeting_date','meeting_status','internal_brief_url','likely_constraint','observations','recommended_next_step','completed_at'],
@@ -31,7 +31,21 @@ var DEFAULT_SETTINGS = [
   ['manual_review_email', ''],
   ['privacy_policy_url', 'https://beastcreativeagency.com/privacy'],
   ['company_timezone', 'America/Chicago'],
-  ['email_sender_name', 'Beast Creative']
+  ['email_sender_name', 'Beast Creative'],
+  // ── Qualification engine thresholds (tune here, no redeploy needed) ──
+  ['qualification_version', '1.1.0'],
+  ['priority_score_min', 80],
+  ['qualified_score_min', 60],
+  ['manual_review_score_min', 45],
+  ['min_qualified_investment_points', 8],
+  ['min_priority_investment_points', 15],
+  ['min_priority_decision_points', 11],
+  ['min_priority_timing_points', 8],
+  ['min_clear_need_points', 12],
+  // ── AI enrichment (optional; safe fallback if blank/unavailable) ──
+  ['ai_enrichment_enabled', 'true'],
+  ['ai_model', 'claude-opus-4-8'],
+  ['ai_fetch_website', 'true']
 ];
 
 var WORKBOOK_CACHE = null;
@@ -123,8 +137,17 @@ function buildLookups_(ss) {
 
 function seedSettings_(ss) {
   var settings = ss.getSheetByName('Settings');
-  if (settings.getLastRow() < 2) {
-    settings.getRange(2, 1, DEFAULT_SETTINGS.length, 2).setValues(DEFAULT_SETTINGS);
+  var existing = {};
+  var last = settings.getLastRow();
+  if (last >= 2) {
+    settings.getRange(2, 1, last - 1, 1).getValues().forEach(function (r) {
+      if (r[0]) existing[String(r[0]).trim()] = true;
+    });
+  }
+  // Additive + idempotent: append only settings that aren't already present.
+  var toAdd = DEFAULT_SETTINGS.filter(function (kv) { return !existing[kv[0]]; });
+  if (toAdd.length) {
+    settings.getRange(settings.getLastRow() + 1, 1, toAdd.length, 2).setValues(toAdd);
   }
 }
 

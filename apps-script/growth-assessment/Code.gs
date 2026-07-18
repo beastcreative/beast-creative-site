@@ -45,10 +45,17 @@ function doPost(e) {
     if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
 
     var d = sanitize_(body);
-    var route = computeRoute_(d);
-    if (route === 'spam') return json_({ success: true, route: 'nurture' });
+    var q = qualify_(d);
 
-    var ids = persistIntake_(d, route, execId);
+    // Secret-gated scoring preview: returns the full score breakdown WITHOUT
+    // persisting or emailing. Only reachable with a valid shared secret, so it
+    // is internal-only (the website never sends dryRun).
+    if (body.dryRun) {
+      return json_({ success: true, dryRun: true, route: q.route, score: q.score, categoryScores: q.categoryScores, reasons: q.reasons, flags: q.flags });
+    }
+
+    var route = q.route;
+    var ids = persistIntake_(d, q, execId);
 
     // Notifications + brief + task are best-effort; a failure here must not
     // fail the submission (the lead is already saved).
@@ -71,7 +78,8 @@ function doPost(e) {
 }
 
 /* ── persistence: dedupe + write across tabs ──────────────────────── */
-function persistIntake_(d, route, execId) {
+function persistIntake_(d, q, execId) {
+  var route = q.route;
   var now = nowIso_();
 
   // Company (dedupe by website, then name).
@@ -122,7 +130,11 @@ function persistIntake_(d, route, execId) {
     referrer: d.referrer, utm_source: d.utm_source, utm_medium: d.utm_medium, utm_campaign: d.utm_campaign,
     utm_term: d.utm_term, utm_content: d.utm_content, gclid: d.gclid, submission_timestamp: d.submission_timestamp || now,
     calendar_booking_status: routeGetsBooking_(route) ? 'Awaiting Booking' : 'N/A',
-    calendar_event_id: '', meeting_date: '', next_step: firstNextStep_(route), notes: ''
+    calendar_event_id: '', meeting_date: '', next_step: firstNextStep_(route), notes: '',
+    qualification_version: q.version, qualification_score: q.score,
+    qualification_scores: JSON.stringify(q.categoryScores), qualification_reasons: (q.reasons || []).join(' | '),
+    qualification_flags: (q.flags || []).join('; '), qualified_at: now,
+    manual_override: '', override_owner: '', override_reason: '', override_timestamp: ''
   });
 
   // Assessment.
