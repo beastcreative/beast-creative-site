@@ -110,7 +110,13 @@ function Radio({ label, options, value, onChange, error, required }: { label: st
 }
 
 /* ── main form ────────────────────────────────────────────────────── */
-export default function AssessmentForm({ assessmentType = "general" }: { assessmentType?: string }) {
+export default function AssessmentForm({
+  assessmentType = "general",
+  onComplete,
+}: {
+  assessmentType?: string;
+  onComplete?: (r: { route: QualificationRoute; bookingUrl?: string; message?: string; firstName?: string }) => void;
+}) {
   const [step, setStep] = useState(1);
   const [data, setData] = useState<Data>({ primary_goals: [], current_marketing: [] });
   const [errors, setErrors] = useState<Errors>({});
@@ -183,6 +189,7 @@ export default function AssessmentForm({ assessmentType = "general" }: { assessm
       const route: QualificationRoute = json.route || "manual_review";
       setResult({ route, bookingUrl: json.bookingUrl, message: json.message });
       setStatus("done");
+      onComplete?.({ route, bookingUrl: json.bookingUrl, message: json.message, firstName: data.first_name });
       const evt =
         route === "priority_qualified" || route === "qualified"
           ? "growth_assessment_scheduler_open"
@@ -197,8 +204,8 @@ export default function AssessmentForm({ assessmentType = "general" }: { assessm
 
   const progress = useMemo(() => Math.round(((step - 1) / TOTAL) * 100), [step]);
 
-  /* ── result states ── */
-  if (status === "done" && result) {
+  /* ── result states ── (skipped when a parent owns the result screen via onComplete) */
+  if (status === "done" && result && !onComplete) {
     const showBooking = result.route === "qualified" || result.route === "priority_qualified";
     const copy = ROUTE_COPY[result.route as Exclude<QualificationRoute, "spam">] ?? ROUTE_COPY.manual_review;
     return (
