@@ -68,7 +68,7 @@ Deploys now go out via **clasp** (`./apps-script/growth-assessment/deploy.sh`), 
 |---|------|--------|
 | 4.1 | Deterministic qualification engine (100-pt, configurable, audited) | 🧪 Tested (route suite passes) |
 | 4.2 | Brief rewrite — labeled sections, fit rationale, no `[ ]`/prompt leaks, Draft/internal | 🧪 Tested (scan clean) |
-| 4.3 | AI enrichment (homepage fetch + Claude hypotheses), fails safe to deterministic | 🔧 Built (mock-verified; live pending key) |
+| 4.3 | AI enrichment (homepage fetch + Claude hypotheses), fails safe to deterministic | ✅ LIVE (Beast Anthropic key set, real Claude verified editor + web-app) |
 | 4.4 | Route-specific confirmation + post-booking Snapshot + post-meeting Recap | 🔧 Built (live-test pending) |
 | 4.5 | Booking follow-up reminders (24h/72h/stop) | 🔧 Built (live-test pending) |
 | 4.6 | Meeting-outcome routing (onEdit → Recap + opportunity + task) | 🔧 Built (live-test pending) |
