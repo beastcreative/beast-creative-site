@@ -4,10 +4,12 @@
  * and reinstalls, so it is safe to call again after changing schedules.
  */
 
-var TRIGGER_FNS = ['reconcileBookings', 'sendDailyDigest', 'checkBookingFollowups_', 'onAssessmentEdit'];
+var TRIGGER_FNS = ['reconcileBookings', 'sendDailyDigest', 'checkBookingFollowups_', 'onAssessmentEdit', 'processPending_'];
 
 function installTriggers() {
   removeTriggers();
+  // Background processing of new intakes (AI brief + emails + task), every minute.
+  ScriptApp.newTrigger('processPending_').timeBased().everyMinutes(1).create();
   // Reconcile calendar bookings every 15 minutes.
   ScriptApp.newTrigger('reconcileBookings').timeBased().everyMinutes(15).create();
   // Weekday morning digest at 8am in the project timezone.
@@ -16,8 +18,8 @@ function installTriggers() {
   ScriptApp.newTrigger('checkBookingFollowups_').timeBased().everyHours(1).create();
   // Meeting-outcome routing when a strategist sets meeting_outcome.
   ScriptApp.newTrigger('onAssessmentEdit').forSpreadsheet(workbook_()).onEdit().create();
-  return 'Triggers installed: reconcileBookings (15m), sendDailyDigest (daily 8am), ' +
-    'checkBookingFollowups_ (hourly), onAssessmentEdit (on edit).';
+  return 'Triggers installed: processPending_ (1m), reconcileBookings (15m), ' +
+    'sendDailyDigest (daily 8am), checkBookingFollowups_ (hourly), onAssessmentEdit (on edit).';
 }
 
 function removeTriggers() {

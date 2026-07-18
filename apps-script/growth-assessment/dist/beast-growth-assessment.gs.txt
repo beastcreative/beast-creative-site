@@ -859,13 +859,9 @@ function doPost(e) {
     var route = q.route;
     var ids = persistIntake_(d, q, execId);
 
-    // Notifications + brief + task are best-effort; a failure here must not
-    // fail the submission (the lead is already saved).
-    safe_(function () { sendProspectConfirmation_(d, route); }, 'confirmation', ids.leadId, execId);
-    safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', ids.leadId, execId);
-    safe_(function () { sendInternalNotification_(d, route, ids); }, 'internal-notify', ids.leadId, execId);
-    safe_(function () { createFollowUpTask_(d, route, ids); }, 'task', ids.leadId, execId);
-
+    // Respond immediately. The slow side-effects (AI brief, emails, task) run in
+    // the background via processPending_ (a 1-minute trigger), so the visitor is
+    // never left waiting on the AI. The lead is already fully saved.
     logActivity_('intake', ids.leadId, 'created', route, '');
     return json_({
       success: true,
@@ -1651,6 +1647,59 @@ function parseIso_(s) {
   return isNaN(d.getTime()) ? null : d;
 }
 
+/* ==================== Processing.gs ==================== */
+/**
+ * Processing.gs — background side-effects for new intakes.
+ *
+ * doPost persists the lead and returns instantly. This function (a 1-minute
+ * trigger) does the slow work: AI brief, prospect confirmation, internal alert,
+ * and follow-up task. It claims each unprocessed assessment by writing a marker
+ * to internal_brief_url, so work runs exactly once and never blocks the visitor.
+ */
+function processPending_() {
+  var assessments = readObjects_('Assessments');
+  var now = new Date().getTime();
+
+  for (var i = 0; i < assessments.length; i++) {
+    var a = assessments[i];
+    if (a.internal_brief_url) continue;                         // already processed/claimed
+    var submitted = parseIso_(a.submitted_at);
+    if (!submitted || (now - submitted.getTime()) > 2 * 3600000) continue; // only recent intakes
+
+    var arow = findRow_('Assessments', 'assessment_id', a.assessment_id);
+    if (arow < 0) continue;
+    updateRow_('Assessments', arow, { internal_brief_url: 'generating' }); // claim (prevents re-run)
+
+    var lead = leadFor_(a.lead_id);
+    if (!lead) continue;
+    var d = lead;                                               // Leads row carries all intake fields by name
+    var q = leadRowToQ_(lead);
+    var ids = { leadId: a.lead_id, assessmentId: a.assessment_id, companyId: a.company_id, contactId: a.contact_id, briefUrl: '' };
+
+    safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', a.lead_id, '');
+    safe_(function () { sendProspectConfirmation_(d, q.route); }, 'confirmation', a.lead_id, '');
+    safe_(function () { sendInternalNotification_(d, q.route, ids); }, 'internal-notify', a.lead_id, '');
+    safe_(function () { createFollowUpTask_(d, q.route, ids); }, 'task', a.lead_id, '');
+
+    if (!ids.briefUrl) updateRow_('Assessments', arow, { internal_brief_url: 'error' }); // don't loop on failure
+    logActivity_('process', a.lead_id, 'done', q.route, '');
+  }
+}
+
+/** Rebuild the qualification result object from a stored Leads row. */
+function leadRowToQ_(lead) {
+  var cs = {};
+  try { cs = JSON.parse(lead.qualification_scores || '{}'); } catch (e) {}
+  return {
+    route: lead.qualification_route,
+    score: Number(lead.qualification_score) || 0,
+    categoryScores: cs,
+    reasons: String(lead.qualification_reasons || '').split(' | ').filter(Boolean),
+    flags: String(lead.qualification_flags || '').split('; ').filter(Boolean),
+    version: lead.qualification_version
+  };
+}
+
 /* ==================== Calendar.gs ==================== */
 /**
  * Calendar.gs — booking reconciliation (Option B from the spec).
@@ -1747,10 +1796,12 @@ function extractMeetLink_(ev) {
  * and reinstalls, so it is safe to call again after changing schedules.
  */
 
-var TRIGGER_FNS = ['reconcileBookings', 'sendDailyDigest', 'checkBookingFollowups_', 'onAssessmentEdit'];
+var TRIGGER_FNS = ['reconcileBookings', 'sendDailyDigest', 'checkBookingFollowups_', 'onAssessmentEdit', 'processPending_'];
 
 function installTriggers() {
   removeTriggers();
+  // Background processing of new intakes (AI brief + emails + task), every minute.
+  ScriptApp.newTrigger('processPending_').timeBased().everyMinutes(1).create();
   // Reconcile calendar bookings every 15 minutes.
   ScriptApp.newTrigger('reconcileBookings').timeBased().everyMinutes(15).create();
   // Weekday morning digest at 8am in the project timezone.
@@ -1759,8 +1810,8 @@ function installTriggers() {
   ScriptApp.newTrigger('checkBookingFollowups_').timeBased().everyHours(1).create();
   // Meeting-outcome routing when a strategist sets meeting_outcome.
   ScriptApp.newTrigger('onAssessmentEdit').forSpreadsheet(workbook_()).onEdit().create();
-  return 'Triggers installed: reconcileBookings (15m), sendDailyDigest (daily 8am), ' +
-    'checkBookingFollowups_ (hourly), onAssessmentEdit (on edit).';
+  return 'Triggers installed: processPending_ (1m), reconcileBookings (15m), ' +
+    'sendDailyDigest (daily 8am), checkBookingFollowups_ (hourly), onAssessmentEdit (on edit).';
 }
 
 function removeTriggers() {

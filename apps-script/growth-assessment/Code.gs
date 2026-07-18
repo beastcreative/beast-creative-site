@@ -69,13 +69,9 @@ function doPost(e) {
     var route = q.route;
     var ids = persistIntake_(d, q, execId);
 
-    // Notifications + brief + task are best-effort; a failure here must not
-    // fail the submission (the lead is already saved).
-    safe_(function () { sendProspectConfirmation_(d, route); }, 'confirmation', ids.leadId, execId);
-    safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', ids.leadId, execId);
-    safe_(function () { sendInternalNotification_(d, route, ids); }, 'internal-notify', ids.leadId, execId);
-    safe_(function () { createFollowUpTask_(d, route, ids); }, 'task', ids.leadId, execId);
-
+    // Respond immediately. The slow side-effects (AI brief, emails, task) run in
+    // the background via processPending_ (a 1-minute trigger), so the visitor is
+    // never left waiting on the AI. The lead is already fully saved.
     logActivity_('intake', ids.leadId, 'created', route, '');
     return json_({
       success: true,
