@@ -60,4 +60,32 @@ Living checklist for the guided Google Workspace implementation. Updated as we g
 
 ---
 
-**Overall: 🚧 In progress — Phase 1 complete, awaiting Phase 2.1 (account choice).**
+## Phase 4 — v1.1 completion (qualification, briefing, follow-up)
+
+Deploys now go out via **clasp** (`./apps-script/growth-assessment/deploy.sh`), no pasting.
+
+| # | Item | Status |
+|---|------|--------|
+| 4.1 | Deterministic qualification engine (100-pt, configurable, audited) | 🧪 Tested (route suite passes) |
+| 4.2 | Brief rewrite — labeled sections, fit rationale, no `[ ]`/prompt leaks, Draft/internal | 🧪 Tested (scan clean) |
+| 4.3 | AI enrichment (homepage fetch + Claude hypotheses), fails safe to deterministic | 🔧 Built (mock-verified; live pending key) |
+| 4.4 | Route-specific confirmation + post-booking Snapshot + post-meeting Recap | 🔧 Built (live-test pending) |
+| 4.5 | Booking follow-up reminders (24h/72h/stop) | 🔧 Built (live-test pending) |
+| 4.6 | Meeting-outcome routing (onEdit → Recap + opportunity + task) | 🔧 Built (live-test pending) |
+| 4.7 | Tests (route coverage + placeholder scan) | 🧪 Tested (6/6 pass) |
+| 4.8 | clasp deploy pipeline | ✅ Complete |
+
+### Guided setup session (when convenient — enables AI + new fields)
+1. **(AI)** Add Script Property `ANTHROPIC_API_KEY` = the **Beast** Anthropic key (not personal). Never committed to GitHub.
+2. **Run `setup()`** from the editor → click **Allow** on the new "connect to an external service" permission (this is the AI/website fetch). This also adds the new Sheet columns, Settings thresholds, the Meeting Outcome dropdown, and installs the follow-up + outcome triggers.
+3. **(Optional)** Run `runTests()` → confirm 6/6 pass.
+4. **Live end-to-end test** once the friend sets the two Vercel env vars (or test the endpoint directly).
+
+### Cleanup register (re-check each session)
+- Secret-gated dev endpoint modes kept intentionally: `dryRun`, `testBrief`, `runTests` (all require the shared secret; safe, useful for tuning). Remove before public scale if desired.
+- Test data to purge before launch: `Self Test Co`, `Endpoint Test Co`, any `TEST-*` briefs in Drive/Assessments.
+- `ai_mock` Setting defaults to `false`; only the secret-gated test harness forces mock.
+
+---
+
+**Overall: 🚧 v1.1 code complete + unit-tested. Pending: Beast Anthropic key (John), one guided `setup()` run, and the live end-to-end test (gated on the friend's 2 Vercel env vars).**
