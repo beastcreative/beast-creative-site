@@ -113,5 +113,14 @@ function statusReport_() {
   var pending = asmts.filter(function (a) { return !a.internal_brief_url; }).length;
   var claimed = asmts.filter(function (a) { return a.internal_brief_url === 'generating' || a.internal_brief_url === 'error'; }).length;
   var withBrief = asmts.filter(function (a) { return String(a.internal_brief_url).indexOf('http') === 0; }).length;
-  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, recentAudit: recent };
+  var leads = readObjects_('Leads');
+  var last = leads.length ? leads[leads.length - 1] : null;
+  var lastLead = last ? {
+    company: last.company_name, route: last.qualification_route, score: last.qualification_score,
+    scores: last.qualification_scores, reasons: last.qualification_reasons, flags: last.qualification_flags,
+    decision_role: last.decision_role, timeline: last.timeline,
+    potential_investment: last.potential_monthly_investment, stage: last.company_stage,
+    challenge_len: String(last.biggest_challenge || '').length
+  } : null;
+  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, lastLead: lastLead, recentAudit: recent };
 }
