@@ -54,13 +54,20 @@ function doPost(e) {
       return json_({ success: true, dryRun: true, route: q.route, score: q.score, categoryScores: q.categoryScores, reasons: q.reasons, flags: q.flags });
     }
 
+    // Secret-gated brief test: generate a brief for this payload + scan it for
+    // leaks, without writing to the pipeline. Creates a throwaway Drive doc.
+    if (body.testBrief) {
+      var turl = createInternalBrief_(d, q, { assessmentId: 'TEST-' + execId, leadId: 'TEST-' + execId });
+      return json_({ success: true, testBrief: true, url: turl, route: q.route, scan: scanBriefDoc_(turl) });
+    }
+
     var route = q.route;
     var ids = persistIntake_(d, q, execId);
 
     // Notifications + brief + task are best-effort; a failure here must not
     // fail the submission (the lead is already saved).
     safe_(function () { sendProspectConfirmation_(d, route); }, 'confirmation', ids.leadId, execId);
-    safe_(function () { ids.briefUrl = createInternalBrief_(d, route, ids); }, 'brief', ids.leadId, execId);
+    safe_(function () { ids.briefUrl = createInternalBrief_(d, q, ids); }, 'brief', ids.leadId, execId);
     safe_(function () { sendInternalNotification_(d, route, ids); }, 'internal-notify', ids.leadId, execId);
     safe_(function () { createFollowUpTask_(d, route, ids); }, 'task', ids.leadId, execId);
 
