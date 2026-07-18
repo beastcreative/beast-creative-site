@@ -42,6 +42,7 @@ function fetchWebsite_(url) {
  */
 function enrichBrief_(d, q, websiteText) {
   if (String(setting_('ai_enrichment_enabled', 'true')) !== 'true') return null;
+  if (aiMock_()) return mockEnrichment_(d, q);
   var key = prop_('ANTHROPIC_API_KEY');
   if (!key) return null;
   var model = String(setting_('ai_model', 'claude-opus-4-8'));
@@ -127,10 +128,44 @@ function extractJson_(text) {
 }
 
 /**
- * Gate for any external call. Returns true only when enrichment is enabled AND
- * an API key exists. Until then we never touch UrlFetchApp, so the brief builds
- * deterministically with no dependency on the external-request scope.
+ * Per-request mock override (set by the secret-gated testBrief harness). Globals
+ * reset every execution, so this never leaks across requests.
+ */
+var FORCE_MOCK = false;
+function aiMock_() { return FORCE_MOCK || String(setting_('ai_mock', 'false')) === 'true'; }
+
+/**
+ * Gate for enrichment. True when enabled AND (mock mode OR a real key exists).
+ * In mock mode nothing touches the network, so we can build/test the AI-enriched
+ * brief with no key and no external-request scope. Flip ai_mock -> false (and set
+ * ANTHROPIC_API_KEY) to go live.
  */
 function aiReady_() {
-  return String(setting_('ai_enrichment_enabled', 'true')) === 'true' && !!prop_('ANTHROPIC_API_KEY');
+  if (String(setting_('ai_enrichment_enabled', 'true')) !== 'true') return false;
+  return aiMock_() || !!prop_('ANTHROPIC_API_KEY');
+}
+
+/** Realistic canned enrichment (uses the real lead data) for key-free testing. */
+function mockEnrichment_(d, q) {
+  var goal = joinMulti_(d.primary_goals) || 'growth';
+  var hasEmail = (d.current_marketing || []).indexOf('Email / lifecycle') !== -1;
+  return {
+    observations: [
+      'Stated challenge ("' + String(d.biggest_challenge || '').slice(0, 70) + '") reads as an efficiency or measurement gap, not a traffic-volume gap.',
+      'Goal of ' + goal + ' on a ' + (d.timeline || 'near-term') + ' timeline suggests appetite for a structural fix rather than a one-off campaign.',
+      hasEmail ? 'Lifecycle/email exists but may be under-leveraged for retention.' : 'No lifecycle/email program mentioned; likely over-reliant on paid acquisition.'
+    ],
+    likely_constraint: 'Most likely a conversion or retention constraint downstream of acquisition, rather than a top-of-funnel volume problem.',
+    questions: [
+      'What is your current blended CAC and how has it trended over 12 months?',
+      'What does repeat-purchase / retention look like today?',
+      'Which channel is your biggest spend, and what is its standalone return?',
+      'What have you already tried here, and what happened?',
+      'Who signs off on a new engagement, and on what timeline?'
+    ],
+    quick_win: 'If core lifecycle flows are thin, optimizing them could lift revenue without more ad spend (validate live).',
+    strategic_opportunity: 'Move from pure paid acquisition toward a connected acquisition + lifecycle system tied to ' + goal + '.',
+    research: [],
+    _model: 'mock', _at: nowIso_()
+  };
 }

@@ -57,7 +57,7 @@ function createInternalBrief_(d, q, ids) {
   // depends on the external-request scope being authorized.
   var ai = null;
   if (aiReady_()) {
-    ai = enrichBrief_(d, q, fetchWebsite_(d.company_website));
+    ai = enrichBrief_(d, q, aiMock_() ? '' : fetchWebsite_(d.company_website));
   }
 
   var doc = DocumentApp.create(title);

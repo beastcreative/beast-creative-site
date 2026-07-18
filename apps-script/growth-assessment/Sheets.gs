@@ -45,7 +45,8 @@ var DEFAULT_SETTINGS = [
   // ── AI enrichment (optional; safe fallback if blank/unavailable) ──
   ['ai_enrichment_enabled', 'true'],
   ['ai_model', 'claude-opus-4-8'],
-  ['ai_fetch_website', 'true']
+  ['ai_fetch_website', 'true'],
+  ['ai_mock', 'false']
 ];
 
 var WORKBOOK_CACHE = null;

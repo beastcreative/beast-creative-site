@@ -57,8 +57,9 @@ function doPost(e) {
     // Secret-gated brief test: generate a brief for this payload + scan it for
     // leaks, without writing to the pipeline. Creates a throwaway Drive doc.
     if (body.testBrief) {
+      if (body.mock) FORCE_MOCK = true;
       var turl = createInternalBrief_(d, q, { assessmentId: 'TEST-' + execId, leadId: 'TEST-' + execId });
-      return json_({ success: true, testBrief: true, url: turl, route: q.route, scan: scanBriefDoc_(turl) });
+      return json_({ success: true, testBrief: true, mock: !!body.mock, url: turl, route: q.route, scan: scanBriefDoc_(turl) });
     }
 
     var route = q.route;
