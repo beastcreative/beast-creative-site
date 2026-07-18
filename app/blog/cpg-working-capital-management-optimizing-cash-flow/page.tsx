@@ -393,7 +393,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast Creative Agency helps CPG brands build competitive advantages through strategic marketing, content, and brand development. Let&apos;s talk about what&apos;s possible for your brand.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

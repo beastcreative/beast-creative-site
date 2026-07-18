@@ -242,7 +242,7 @@ export default function AiContentProductionPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds AI-powered content pipelines for CPG brands that need to produce more, spend less, and actually rank.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

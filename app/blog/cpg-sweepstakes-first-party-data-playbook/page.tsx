@@ -261,7 +261,7 @@ export default function SweepstakesPlaybookPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast designs sweepstakes campaigns that generate first-party consumer data at scale, built to support your retail pitch.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

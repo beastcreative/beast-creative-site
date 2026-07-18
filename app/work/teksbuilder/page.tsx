@@ -326,7 +326,7 @@ export default function TeksbuilderPage() {
             <p className="text-gray-400 text-lg mb-8">
               Bring your app idea to a free scoping call. We&apos;ll tell you what the smallest launchable version looks like, what it costs, and how fast it can be live.
             </p>
-            <IconButton href="/growth-assessment">
+            <IconButton href="/growth-assessment?type=work">
               Scope My App (Free Call)
             </IconButton>
           </AnimatedSection>

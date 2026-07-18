@@ -299,7 +299,7 @@ export default function EmailMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds email list-building campaigns and automated sequences that turn first-time buyers into loyal CPG customers.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

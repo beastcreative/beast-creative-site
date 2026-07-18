@@ -300,7 +300,7 @@ export default function CpgAdvertisingStrategyPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast helps CPG brands build channel strategies that match where their customers actually are, and their budget to what actually converts.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

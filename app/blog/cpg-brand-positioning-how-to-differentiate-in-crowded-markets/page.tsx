@@ -364,7 +364,7 @@ export default function CpgBrandPositioningPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast creates strategies that build brands and drive measurable results for CPG brands.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

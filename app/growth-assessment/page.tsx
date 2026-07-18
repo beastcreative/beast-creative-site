@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 // Hidden assessment type passed from vertical/service CTAs (?type=…), recorded
 // with the lead so Beast can see which page/vertical drove each assessment.
-const VALID_TYPES = ["general", "ecommerce", "b2b", "cpg", "app", "seo", "paid", "web", "branding", "content"];
+const VALID_TYPES = ["general", "ecommerce", "b2b", "cpg", "app", "seo", "paid", "web", "branding", "content", "work", "blog"];
 
 function Label({ children }: { children: React.ReactNode }) {
   return (

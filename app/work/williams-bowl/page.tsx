@@ -306,7 +306,7 @@ export default function WilliamsBowlPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl font-bold text-white mb-4">Every Great Campaign Series Starts With the First One.</h2>
             <p className="text-gray-400 mb-8">Beast&apos;s CPG sweepstakes playbook is proven across multiple campaigns, multiple clients, and multiple years. Ready to run your first, or your best yet?</p>
-            <IconButton href="/growth-assessment" icon="rocket">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=work" icon="rocket">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

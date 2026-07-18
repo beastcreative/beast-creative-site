@@ -424,7 +424,7 @@ export default function CpgBrandCommunityPost() {
             <p className="text-[#C8C8C8] mb-8">
               Creating a thriving CPG brand community through email, SMS, and loyalty programs isn&apos;t just about technology. It&apos;s about building genuine relationships with customers who love your products. The brands that succeed focus on providing value, maintaining consistency, and treating each channel as part of a connected customer experience.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

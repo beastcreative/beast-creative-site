@@ -302,7 +302,7 @@ export default function CpgPerformanceMarketingPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds performance marketing systems that account for the full CPG customer journey, online and off.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>

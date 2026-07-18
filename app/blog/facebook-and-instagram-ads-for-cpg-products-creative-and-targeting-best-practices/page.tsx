@@ -286,7 +286,7 @@ export default function FacebookInstagramPost() {
             <p className="text-[#C8C8C8] mb-8">
               Beast builds data-driven Facebook and Instagram campaigns for CPG brands: creative that earns attention and targeting that finds buyers.
             </p>
-            <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment?type=blog" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>
         </div>
       </section>
