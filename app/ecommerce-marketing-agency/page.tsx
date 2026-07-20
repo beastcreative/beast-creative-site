@@ -4,7 +4,7 @@ import LandingPage, { type LandingData } from "@/components/landing/LandingPage"
 import AnalyticsInit from "@/components/landing/AnalyticsInit";
 
 export const metadata: Metadata = {
-  title: "Ecommerce Growth Partner for Conversion, Search & Paid Media | Beast Creative",
+  title: "Ecommerce Marketing Agency | Conversion, Search & Paid Media | Beast Creative",
   description:
     "Beast helps ecommerce brands turn more traffic into revenue by connecting search, paid media, product-page conversion, content, and retention into one measurable growth system.",
   openGraph: {
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 const data: LandingData = {
   pageType: "ecommerce",
   eyebrow: "Ecommerce Growth Partner",
-  h1Pre: "Turn More Ecommerce Traffic Into",
-  h1Accent: "Revenue",
+  h1Pre: "The Ecommerce Marketing Agency",
+  h1Accent: "Built to Grow Revenue",
   sub: "Most ecommerce brands do not have a traffic problem. They have a system problem. Beast identifies what is limiting growth, from acquisition cost to weak conversion, thin retention, or broken attribution, then builds the connected growth system to fix it.",
   primaryCta: "Start Your Ecommerce Growth Assessment",
   secondaryCta: { label: "See the Proof", href: "#proof" },
@@ -83,6 +83,26 @@ const data: LandingData = {
   finalHeadingAccent: "Ecommerce Growth System.",
   finalCopy:
     "In one focused call we will look at your goals, your channels, and where revenue is leaking. If Beast can help, we will show you the next move.",
+  seo: {
+    eyebrow: "About Beast",
+    items: [
+      {
+        level: "h2",
+        heading: "The Ecommerce Digital Marketing Agency Built Around Revenue",
+        body: "Beast is an ecommerce digital marketing agency that connects search, paid media, product-page conversion, email, and retention into one system, so growth compounds instead of leaking between disconnected channels.",
+      },
+      {
+        level: "h3",
+        heading: "A Digital Marketing Agency for Ecommerce Brands That Want a System, Not Tactics",
+        body: "As a digital marketing agency for ecommerce, we start with the constraint actually holding growth back, then build the connected plan to fix it, measured against revenue rather than vanity metrics.",
+      },
+      {
+        level: "h2",
+        heading: "What Makes Us the Best Ecommerce Marketing Agency for Growth",
+        body: "The best ecommerce marketing agency for you is the one that proves its work. Every result we publish is a real, named client, and every engagement is built to move the numbers that show up in your P&L.",
+      },
+    ],
+  },
 };
 
 export default function EcommerceLandingPage() {

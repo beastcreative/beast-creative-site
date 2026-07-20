@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 const data: LandingData = {
   pageType: "b2b",
   eyebrow: "B2B Growth Partner",
-  h1Pre: "Build a More Predictable",
-  h1Accent: "B2B Growth System",
+  h1Pre: "The B2B Digital Marketing Agency",
+  h1Accent: "Built for Predictable Pipeline",
   sub: "If your traffic, content, paid media, website, and sales process are pulling in different directions, growth becomes expensive and unpredictable. Beast finds the constraint, fixes the handoff points, and builds a measurable demand system around qualified opportunities.",
   primaryCta: "Start Your B2B Growth Assessment",
   secondaryCta: { label: "See the Proof", href: "#proof" },
@@ -83,6 +83,26 @@ const data: LandingData = {
   finalHeadingAccent: "B2B Growth.",
   finalCopy:
     "In one focused call we will look at your goals, your channels, and the handoff points where growth is being lost. If Beast can help, we will show you the next move.",
+  seo: {
+    eyebrow: "About Beast",
+    items: [
+      {
+        level: "h2",
+        heading: "A Digital Marketing Agency for B2B, Built Around Pipeline",
+        body: "Beast is a digital marketing agency for B2B teams that connects demand generation, content, search, and conversion into one system aimed at qualified pipeline, not just traffic or raw lead counts.",
+      },
+      {
+        level: "h3",
+        heading: "A Digital B2B Marketing Agency That Starts With the Constraint",
+        body: "As a digital B2B marketing agency, we find what is actually limiting growth, whether that is lead quality, sales-cycle friction, or attribution, then build the connected plan to fix it.",
+      },
+      {
+        level: "h3",
+        heading: "The Digital Marketing Agency B2B Teams Trust to Prove It",
+        body: "Being the digital marketing agency B2B teams trust means every channel is accountable to revenue. Every result we publish is a real, named client, measured against pipeline that closes.",
+      },
+    ],
+  },
 };
 
 export default function B2BLandingPage() {

@@ -31,6 +31,9 @@ export interface LandingData {
   finalHeadingPre: string;
   finalHeadingAccent: string;
   finalCopy: string;
+  // Optional keyword-bearing prose block (SEO/Ads message-match). Headings carry
+  // the target phrases at the requested levels; bodies keep it reading naturally.
+  seo?: { eyebrow: string; items: { level: "h2" | "h3"; heading: string; body: string }[] };
 }
 
 function Label({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
@@ -229,6 +232,27 @@ export default function LandingPage({ data }: { data: LandingData }) {
           </div>
         </div>
       </section>
+
+      {/* ═══ SEO / who-we-are (keyword-bearing prose) ═══ */}
+      {data.seo && (
+        <section className="border-t led-rule bg-off-white py-14 lg:py-20">
+          <div className="mx-auto max-w-4xl px-6 lg:px-20">
+            <Reveal><Label>{data.seo.eyebrow}</Label></Reveal>
+            <div className="mt-7 flex flex-col gap-8">
+              {data.seo.items.map((it, i) => (
+                <Reveal key={i} delay={i * 60}>
+                  {it.level === "h2" ? (
+                    <h2 className="font-display text-2xl font-bold uppercase leading-tight tracking-tight text-beast-black lg:text-3xl">{it.heading}</h2>
+                  ) : (
+                    <h3 className="font-display text-xl font-bold uppercase leading-tight tracking-tight text-beast-black">{it.heading}</h3>
+                  )}
+                  <p className="mt-3 max-w-2xl leading-relaxed text-black/65">{it.body}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ═══ FAQ (light) ═══ */}
       <section className="border-t led-rule bg-white py-14 lg:py-20">
