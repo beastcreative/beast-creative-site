@@ -6,6 +6,7 @@ import ConsoleBranding from "@/components/ui/ConsoleBranding";
 import Footer from "@/components/layout/Footer";
 import ChatWidget from "@/components/ui/ChatWidget";
 import AssessmentClickTracker from "@/components/AssessmentClickTracker";
+import HideOnReview from "@/components/util/HideOnReview";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -79,10 +80,10 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         <ConsoleBranding />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-1/2 focus:-translate-x-1/2 focus:z-[200] focus:bg-beast-pink focus:text-white focus:px-6 focus:py-3 focus:rounded-full focus:font-bold focus:text-sm focus:tracking-wide">Skip to main content</a>
-        <Nav />
+        <HideOnReview><Nav /></HideOnReview>
         <main id="main-content">{children}</main>
-        <Footer />
-        <ChatWidget />
+        <HideOnReview><Footer /></HideOnReview>
+        <HideOnReview><ChatWidget /></HideOnReview>
         <AssessmentClickTracker />
       </body>
     </html>

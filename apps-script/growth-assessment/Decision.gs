@@ -7,6 +7,45 @@
  * Decline auto-sends an AI-drafted self-serve growth plan. Both are idempotent.
  */
 
+/**
+ * reviewList_ — pending manual-review leads for the control page. Secret-gated,
+ * called server-to-server by the website (never a browser link).
+ */
+function reviewList_() {
+  var leads = readObjects_('Leads');
+  var out = [];
+  leads.forEach(function (l) {
+    if (l.qualification_route !== 'manual_review' || l.manual_override) return;
+    if (l.status === 'Approved' || l.status === 'Declined') return;
+    var cs = {};
+    try { cs = JSON.parse(l.qualification_scores || '{}'); } catch (e) {}
+    var brow = findRow_('Assessments', 'lead_id', l.lead_id);
+    var brief = brow > 0 ? rowObject_('Assessments', brow).internal_brief_url : '';
+    out.push({
+      lead_id: l.lead_id, company: l.company_name, contact: (l.first_name + ' ' + l.last_name).trim(),
+      email: l.work_email, website: l.company_website, score: Number(l.qualification_score) || 0,
+      cats: { need: cs.strategic_need || 0, budget: cs.investment || 0, timing: cs.timing || 0, authority: cs.decision || 0, fit: cs.business_fit || 0 },
+      why: String(l.qualification_reasons || '').split(' | ').pop() || '',
+      goal: joinMulti_(l.primary_goals), challenge: l.biggest_challenge,
+      brief_url: String(brief).indexOf('http') === 0 ? brief : '',
+      created_at: l.created_at
+    });
+  });
+  out.sort(function (a, b) { return b.score - a.score; });
+  return { success: true, leads: out };
+}
+
+/** reviewDecide_ — approve/decline a lead by id (secret-gated, server-to-server). */
+function reviewDecide_(action, leadId) {
+  var lead = leadFor_(leadId);
+  if (!lead) return { success: false, error: 'Lead not found.' };
+  if (lead.manual_override) return { success: true, already: lead.manual_override };
+  if (action === 'approve') approveLead_(lead);
+  else if (action === 'decline') declineLead_(lead);
+  else return { success: false, error: 'Unknown action.' };
+  return { success: true, action: action };
+}
+
 function approveLead_(lead) {
   if (lead.status === 'Approved') return;
   var d = lead;
