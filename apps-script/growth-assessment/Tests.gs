@@ -105,6 +105,25 @@ function testAIRaw_() {
   } catch (e) { return { model: model, error: String(e && e.message || e) }; }
 }
 
+/**
+ * cleanupTestData_ — wipe all record rows back to empty headers (pre-launch reset).
+ * Everything currently stored is test data, so this clears the whole pipeline.
+ * Requires confirm === 'WIPE'. Keeps Settings + Lookup Values. Does not touch Drive.
+ */
+function cleanupTestData_(confirm) {
+  if (confirm !== 'WIPE') return { success: false, error: "Pass cleanupTest: 'WIPE' to confirm." };
+  var tabs = ['Leads', 'Companies', 'Contacts', 'Assessments', 'Opportunities', 'Activities', 'Tasks', 'Audit Log'];
+  var cleared = {};
+  tabs.forEach(function (name) {
+    var sh = workbook_().getSheetByName(name);
+    if (!sh) { cleared[name] = 'missing'; return; }
+    var last = sh.getLastRow();
+    if (last > 1) { sh.deleteRows(2, last - 1); cleared[name] = last - 1; }
+    else cleared[name] = 0;
+  });
+  return { success: true, cleared: cleared };
+}
+
 /** Secret-gated status report: recent audit rows + brief-processing counts. */
 function statusReport_() {
   var audit = readObjects_('Audit Log');

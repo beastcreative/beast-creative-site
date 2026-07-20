@@ -47,6 +47,7 @@ function doPost(e) {
     if (body.status) return json_(statusReport_());
     if (body.list) return json_(reviewList_());                              // control page: pending review queue
     if (body.decide && body.lead) return json_(reviewDecide_(String(body.decide), String(body.lead)));
+    if (body.cleanupTest) return json_(cleanupTestData_(String(body.cleanupTest)));   // pre-launch wipe (confirm 'WIPE')
 
     var missing = requiredMissing_(body);
     if (missing.length) return json_({ success: false, error: 'Missing required fields.' });
