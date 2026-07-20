@@ -123,5 +123,6 @@ function statusReport_() {
     challenge_len: String(last.biggest_challenge || '').length,
     lead_id: last.lead_id, override: last.manual_override, status: last.status
   } : null;
-  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, lastLead: lastLead, recentAudit: recent };
+  var triggers = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
+  return { totalAssessments: asmts.length, pending: pending, claimed: claimed, withBrief: withBrief, triggers: triggers, lastLead: lastLead, recentAudit: recent };
 }
