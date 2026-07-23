@@ -32,7 +32,7 @@ export default function WilliamsAllstarsPage() {
               <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2022</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 Digital Trading Cards.{" "}
-                <span className="text-beast-pink">Real Fan Frenzy.</span>
+                <span>Real Fan Frenzy.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
                 13,660 entries across 8 card drops in 24 days. 9.5% email click rate, 11x the industry average.

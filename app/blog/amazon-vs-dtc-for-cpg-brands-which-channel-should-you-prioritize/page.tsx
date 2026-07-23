@@ -66,7 +66,7 @@ export default function AmazonDtcCpgBrandsChannelPrioritizePost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Amazon vs. DTC for CPG Brands:{" "}
-              <span className="text-beast-pink">Which Channel Should You Prioritize?</span>
+              <span>Which Channel Should You Prioritize?</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               The choice between Amazon and direct-to-consumer (DTC) channels can make or break a CPG brand’s growth trajectory. While 73% of CPG brands sell on Amazon, those prioritizing DTC channels report 40% higher profit margins. The question isn’t whether both channels matter. It’s about finding the right balance for your specific brand goals and market position.

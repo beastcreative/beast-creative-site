@@ -66,7 +66,7 @@ export default function ShopifyForCpgBrandsBuildingADirectToConsumerEcommerceStr
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Shopify for CPG Brands:{" "}
-              <span className="text-beast-pink">Building a Direct-to-Consumer Ecommerce Strategy</span>
+              <span>Building a Direct-to-Consumer Ecommerce Strategy</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumer Packaged Goods brands are abandoning traditional retail gatekeepers at record speed, with 73% planning to increase their direct-to-consumer investments this year. The shift isn’t just about higher margins. It’s about owning customer relationships and building brands that can adapt quickly to changing consumer demands.

@@ -20,7 +20,7 @@ export default function PaidMediaPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: Paid Media</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Paid Media That Pays{" "}
-              <span className="text-beast-pink">You Back.</span>
+              <span>You Back.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               AI-optimized campaigns on Facebook, Instagram, TikTok, and Google, with real-time creative testing and daily optimization. Our CPG campaigns average $0.12 CPC vs $0.28 industry standard.

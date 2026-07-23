@@ -66,7 +66,7 @@ export default function CpgEcommerceConversionOptimizationBrowsersBuyersPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Ecommerce Conversion Optimization:{" "}
-              <span className="text-beast-pink">Turning Browsers Into Buyers</span>
+              <span>Turning Browsers Into Buyers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               A staggering 97% of CPG ecommerce visitors leave without making a purchase, yet the most successful brands consistently convert 3-5x more browsers than their competitors. The difference isn’t luck or larger budgets. It’s strategic conversion optimization that transforms casual browsing into profitable buying decisions.

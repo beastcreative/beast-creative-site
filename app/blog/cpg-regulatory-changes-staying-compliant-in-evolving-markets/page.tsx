@@ -66,7 +66,7 @@ export default function CpgRegulatoryChangesCompliantEvolvingMarketsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Regulatory Changes:{" "}
-              <span className="text-beast-pink">Staying Compliant in Evolving Markets</span>
+              <span>Staying Compliant in Evolving Markets</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Federal regulatory shifts in the CPG industry have accelerated by 400% over the past three years, leaving many brands scrambling to keep pace with compliance requirements. What separates thriving companies from those facing costly penalties isn’t just awareness of new regulations. It’s building systems that adapt quickly to regulatory evolution.

@@ -70,7 +70,7 @@ export default function FacebookInstagramPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Facebook and Instagram Ads for CPG Products:{" "}
-              <span className="text-beast-pink">Creative and Targeting Best Practices</span>
+              <span>Creative and Targeting Best Practices</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               CPG ads on social must earn attention before they sell. Consumers are scrolling for entertainment, not solutions. Here&apos;s the creative and targeting framework that converts.

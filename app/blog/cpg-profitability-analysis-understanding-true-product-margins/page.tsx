@@ -66,7 +66,7 @@ export default function CpgProfitabilityAnalysisProductMarginsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Profitability Analysis:{" "}
-              <span className="text-beast-pink">Understanding True Product Margins</span>
+              <span>Understanding True Product Margins</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Most CPG brands think they know their profit margins, but hidden costs are quietly eroding their bottom line by an average of 15-20%. True profitability analysis goes far beyond basic cost-of-goods calculations to reveal the real financial health of your product lines.

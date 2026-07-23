@@ -70,7 +70,7 @@ export default function EmailMarketingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Email Marketing for CPG Brands:{" "}
-              <span className="text-beast-pink">List Building and Campaign Strategies That Work</span>
+              <span>List Building and Campaign Strategies That Work</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Email delivers 42x ROI for CPG brands, but only with quality lists and campaigns built around consumer behavior. Here&apos;s the complete playbook.

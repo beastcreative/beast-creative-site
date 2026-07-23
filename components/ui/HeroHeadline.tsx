@@ -17,7 +17,7 @@ export default function HeroHeadline() {
       <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-4">
         San Antonio SEO &amp; AEO
         <br />
-        <span className="text-beast-pink">for the AI Search Era</span>
+        <span>for the AI Search Era</span>
       </h1>
     );
   }

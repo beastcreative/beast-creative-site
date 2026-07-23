@@ -70,7 +70,7 @@ export default function AiContentProductionPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               How CPG Brands Can Create{" "}
-              <span className="text-beast-pink">30x More Content</span>
+              <span>30x More Content</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               900 recipes. 50 SKUs. AI-powered content pipelines. Here&apos;s how Beast processes a client&apos;s entire content library into months of social assets.

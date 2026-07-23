@@ -70,7 +70,7 @@ export default function VideoMarketingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Video Marketing for CPG Brands:{" "}
-              <span className="text-beast-pink">YouTube, TikTok, and Short-Form Content Strategies</span>
+              <span>YouTube, TikTok, and Short-Form Content Strategies</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumers scroll past polished commercials but stop for authentic product demonstrations. Here&apos;s the platform-specific video framework that builds brand authority and drives CPG sales.

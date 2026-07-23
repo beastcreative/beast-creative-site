@@ -70,7 +70,7 @@ export default function CpgAdCreativePost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Ad Creative That Converts:{" "}
-              <span className="text-beast-pink">Testing, Iteration, and Best Practices</span>
+              <span>Testing, Iteration, and Best Practices</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               The brands that win consistently treat creative testing as an ongoing strategic advantage, not a one-time project. Here&apos;s the framework that drives results.

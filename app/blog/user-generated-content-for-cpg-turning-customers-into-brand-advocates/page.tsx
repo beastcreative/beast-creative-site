@@ -70,7 +70,7 @@ export default function UgcPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               User-Generated Content for CPG:{" "}
-              <span className="text-beast-pink">Turning Customers Into Brand Advocates</span>
+              <span>Turning Customers Into Brand Advocates</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               92% of consumers trust UGC over traditional advertising. Here&apos;s how to build a proactive UGC program: not just monitor mentions, but systematically generate content that converts.

@@ -33,7 +33,7 @@ export default function CpgMarketingServicePage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: CPG Marketing</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               CPG Marketing Services That Build Brands,{" "}
-              <span className="text-beast-pink">Databases, and Retail Proof.</span>
+              <span>Databases, and Retail Proof.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               From emerging founders to multi-brand holding companies, Beast&apos;s CPG playbook has generated over 72,000 campaign entries for food and beverage brands at a fraction of industry cost.

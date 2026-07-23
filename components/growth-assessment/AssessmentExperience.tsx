@@ -40,7 +40,7 @@ export default function AssessmentExperience({ assessmentType }: { assessmentTyp
         <div className="max-w-2xl">
           <Label>The Beast Growth Assessment</Label>
           <h1 className="mt-6 font-display text-[2.75rem] font-extrabold uppercase leading-[0.95] tracking-tight text-beast-black sm:text-6xl lg:text-[4.25rem]">
-            Find the Constraint <span className="text-beast-pink">Slowing Your Growth.</span>
+            Find the Constraint <span>Slowing Your Growth.</span>
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-black/65">
             This is not a generic agency intro call. Tell us your goals, your channels, and where growth feels stuck. We review it first, then show you the most useful next step. No pitch, no pressure.
@@ -96,7 +96,7 @@ function ResultScreen({ route, bookingUrl, firstName }: Done) {
       <div className="relative mx-auto w-full max-w-3xl px-6 py-24 text-center">
         <span className="led-label text-beast-pink">Assessment Received</span>
         <h1 className="mt-6 font-display text-4xl font-extrabold uppercase leading-[0.95] tracking-tight text-beast-black sm:text-5xl lg:text-6xl">
-          We're Analyzing <span className="text-beast-pink">Your Growth.</span>
+          We're Analyzing <span>Your Growth.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-black/65">
           Our team is reviewing where growth is really stuck for your business, before we ever get on a call.

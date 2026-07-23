@@ -66,7 +66,7 @@ export default function CpgBrandIdentityPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               {" "}
-              <span className="text-beast-pink">Creating a CPG Brand Identity That Stands Out on Shelf and Online</span>
+              <span>Creating a CPG Brand Identity That Stands Out on Shelf and Online</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Over 40,000 new CPG products launch annually, and yet 95% fail within their first year, often because they blend into the noise rather than breaking through it. The difference between shelf success and retail failure isn&apos;t just product quality; it&apos;s the strategic brand identity that commands attention both in-store and across digital channels.

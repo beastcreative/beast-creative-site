@@ -70,7 +70,7 @@ export default function MultiBrandSeoPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Multi-Brand SEO:{" "}
-              <span className="text-beast-pink">Why Holding Companies Are Hurting Their Own Rankings</span>
+              <span>Why Holding Companies Are Hurting Their Own Rankings</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               If you manage 3+ consumer brands on separate domains, you&apos;re probably cannibalizing your own search authority. Here&apos;s the architecture that fixes it.

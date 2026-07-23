@@ -65,7 +65,7 @@ export default function HouseholdCleaningProductsCpgPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Household Cleaning Products:{" "}
-              <span className="text-beast-pink">CPG Strategies for Essential Home Goods</span>
+              <span>CPG Strategies for Essential Home Goods</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Home care is one of the biggest, stickiest categories in all of consumer packaged goods. People buy cleaning products on autopilot, reach for the same bottle their mom used, and rarely think about it until they run out. That habit is exactly what makes the category so hard to crack, and so valuable when you do. This is how challenger brands break in, and how incumbents defend the shelf.

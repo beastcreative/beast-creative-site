@@ -70,7 +70,7 @@ export default function CpgSeoPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG SEO Strategy:{" "}
-              <span className="text-beast-pink">How to Rank for Product Keywords and Drive Organic Discovery</span>
+              <span>How to Rank for Product Keywords and Drive Organic Discovery</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               87% of product searches start online, yet most CPG companies still treat SEO as an afterthought. Here&apos;s how to build organic discovery that compounds over time.

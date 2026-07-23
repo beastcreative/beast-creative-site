@@ -65,7 +65,7 @@ export default function CpgConsumerBehaviorAnalysisPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Consumer Behavior Analysis:{" "}
-              <span className="text-beast-pink">Understanding Purchase Decision Drivers</span>
+              <span>Understanding Purchase Decision Drivers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Every CPG marketing choice (your packaging, your price, your shelf placement, your ad) is really a bet on why someone reaches for one product over another. Understand the drivers behind that decision and you stop guessing. Misread them and you spend a lot of money pushing on the wrong levers.

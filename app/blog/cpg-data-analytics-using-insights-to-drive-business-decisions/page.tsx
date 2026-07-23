@@ -65,7 +65,7 @@ export default function CpgDataAnalyticsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Data Analytics:{" "}
-              <span className="text-beast-pink">Using Insights to Drive Business Decisions</span>
+              <span>Using Insights to Drive Business Decisions</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Most CPG brands aren’t short on data. They’re drowning in it. Scanner feeds, retailer portals, panel reports, DTC dashboards, media platforms, social listening. Yet when it’s time to decide a price, a promo, or which SKU to cut, the data rarely gives a clear answer. The brands that win don’t collect more; they turn what they already have into decisions.

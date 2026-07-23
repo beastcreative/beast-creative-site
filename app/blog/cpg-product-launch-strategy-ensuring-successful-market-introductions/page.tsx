@@ -65,7 +65,7 @@ export default function CpgProductLaunchStrategyPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Product Launch Strategy:{" "}
-              <span className="text-beast-pink">Ensuring Successful Market Introductions</span>
+              <span>Ensuring Successful Market Introductions</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Most CPG launches don’t fail because the product was bad. They fail because the launch was rushed, unsequenced, and over-distributed before anyone proved the thing could sell twice. The launches that stick share a quiet discipline: nail the foundations, earn each stage of expansion with real velocity, and treat repeat purchase, not the splashy launch week, as the number that decides everything.

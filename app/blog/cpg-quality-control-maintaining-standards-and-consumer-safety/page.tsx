@@ -65,7 +65,7 @@ export default function CpgQualityControlPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Quality Control:{" "}
-              <span className="text-beast-pink">Maintaining Standards and Consumer Safety</span>
+              <span>Maintaining Standards and Consumer Safety</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               You can spend a decade building a brand consumers trust, and lose it in a single afternoon when one bad lot reaches a shelf. Quality control isn’t a back-office cost center; it’s the discipline that protects the people who buy your product and the equity you’ve worked years to build. This is how the brands that last actually keep their standards.

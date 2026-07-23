@@ -65,11 +65,11 @@ export default function LandingPage({ data }: { data: LandingData }) {
             <div>
               <Label>{data.eyebrow}</Label>
               <h1 className="mt-6 font-display text-[3rem] font-extrabold uppercase leading-[0.92] tracking-tight text-beast-black sm:text-6xl lg:text-[4.75rem]">
-                {data.h1Pre} <span className="text-beast-pink">{data.h1Accent}</span>
+                {data.h1Pre} <span>{data.h1Accent}</span>
               </h1>
               <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-black/65">{data.sub}</p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <DiagnosticCTA label={data.primaryCta} location="hero" pageType={data.pageType} variant="white" />
+                <DiagnosticCTA label={data.primaryCta} location="hero" pageType={data.pageType} variant="pink" />
                 <a href={data.secondaryCta.href} className="btn-ghost-pink justify-center text-sm sm:justify-start">
                   {data.secondaryCta.label} →
                 </a>
@@ -126,7 +126,7 @@ export default function LandingPage({ data }: { data: LandingData }) {
           <Reveal className="max-w-3xl">
             <Label>The real problem</Label>
             <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight text-beast-black lg:text-5xl">
-              {data.problem.headingPre} <span className="text-beast-pink">{data.problem.headingAccent}</span>
+              {data.problem.headingPre} <span>{data.problem.headingAccent}</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-black/65">{data.problem.intro}</p>
           </Reveal>
@@ -285,7 +285,7 @@ export default function LandingPage({ data }: { data: LandingData }) {
         <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-20">
           <Reveal>
             <h2 className="font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight lg:text-6xl">
-              {data.finalHeadingPre} <span className="text-beast-pink">{data.finalHeadingAccent}</span>
+              {data.finalHeadingPre} <span>{data.finalHeadingAccent}</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">{data.finalCopy}</p>
             <div className="mt-9 flex justify-center">

@@ -70,7 +70,7 @@ export default function SweepstakesPlaybookPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               The CPG Sweepstakes Playbook:{" "}
-              <span className="text-beast-pink">36,581 Entries on $6,000</span>
+              <span>36,581 Entries on $6,000</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               We&apos;ve run sweepstakes campaigns that generated 36,581 entries on $6,000. Here&apos;s the exact framework, from mechanic design to retail pitch.

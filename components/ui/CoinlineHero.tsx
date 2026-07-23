@@ -482,7 +482,7 @@ export default function CoinlineHero() {
                 </p>
                 <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl leading-tight">
                   From a Concept to a{" "}
-                  <span className="text-beast-pink">Complete Brand Universe.</span>
+                  <span>Complete Brand Universe.</span>
                 </h1>
               </AnimatedSection>
             </div>

@@ -66,7 +66,7 @@ export default function ShippingFulfillmentMarketingCpgBrandsLogisticsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Shipping and Fulfillment Marketing for CPG Brands:{" "}
-              <span className="text-beast-pink">Making Logistics a Competitive Advantage</span>
+              <span>Making Logistics a Competitive Advantage</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               While most CPG brands obsess over product development and advertising spend, the smartest companies are discovering their secret weapon hiding in plain sight: shipping and fulfillment operations. What was once viewed as a necessary cost center is now becoming the differentiator that builds customer loyalty, drives repeat purchases, and creates marketing opportunities that competitors can’t match.

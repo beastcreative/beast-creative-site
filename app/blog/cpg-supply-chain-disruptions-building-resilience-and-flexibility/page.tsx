@@ -66,7 +66,7 @@ export default function CpgSupplyChainDisruptionsResilienceFlexibilityPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Supply Chain Disruptions:{" "}
-              <span className="text-beast-pink">Building Resilience and Flexibility</span>
+              <span>Building Resilience and Flexibility</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Recent data reveals that 73% of CPG companies experienced at least one major supply chain disruption in the past two years, with recovery times averaging 3-6 months. What separates resilient brands from those still struggling isn’t luck. It’s strategic preparation. Building flexibility into your supply chain operations before disruption strikes determines whether your products stay on shelves or disappear into competitor-filled gaps.

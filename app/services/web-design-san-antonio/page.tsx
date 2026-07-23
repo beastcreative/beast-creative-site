@@ -75,7 +75,7 @@ export default function WebDesignSanAntonioPage() {
           <AnimatedSection delay={0.1}>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Websites That Work.{" "}
-              <span className="text-beast-pink">Not Just Look Good.</span>
+              <span>Not Just Look Good.</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>

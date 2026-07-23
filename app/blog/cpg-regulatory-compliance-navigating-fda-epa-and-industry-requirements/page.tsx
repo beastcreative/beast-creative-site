@@ -65,7 +65,7 @@ export default function CpgRegulatoryCompliancePost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Regulatory Compliance:{" "}
-              <span className="text-beast-pink">Navigating FDA, EPA, and Industry Requirements</span>
+              <span>Navigating FDA, EPA, and Industry Requirements</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Compliance isn’t just legal cover. It’s a marketing and trust asset. The same rules that keep regulators off your back also tell consumers your product is real, safe, and exactly what the label says. Get it wrong and you don’t just risk a fine; a single mislabeled claim or missed allergen can pull a product off shelves overnight and take your retailer relationships with it.

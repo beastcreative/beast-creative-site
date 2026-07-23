@@ -66,7 +66,7 @@ export default function CpgBrandStrategyPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Brand Strategy:{" "}
-              <span className="text-beast-pink">How to Position Your Consumer Packaged Goods in a Crowded Market</span>
+              <span>How to Position Your Consumer Packaged Goods in a Crowded Market</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Over 30,000 new consumer packaged goods hit store shelves every year, yet 95% fail within their first 12 months. The difference between brands that break through and those that blend into the background isn&apos;t luck. It&apos;s strategic positioning. Here&apos;s how to make your CPG brand impossible to ignore in an oversaturated marketplace.

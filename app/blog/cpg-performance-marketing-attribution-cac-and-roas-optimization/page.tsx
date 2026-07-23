@@ -70,7 +70,7 @@ export default function CpgPerformanceMarketingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Performance Marketing:{" "}
-              <span className="text-beast-pink">Attribution, CAC, and ROAS Optimization</span>
+              <span>Attribution, CAC, and ROAS Optimization</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               The CPG attribution gap is real: digital ads drive in-store purchases that never show up in your dashboard. Here&apos;s how to measure and optimize across that gap.

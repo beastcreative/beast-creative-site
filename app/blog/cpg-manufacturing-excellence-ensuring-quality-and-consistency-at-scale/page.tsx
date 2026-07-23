@@ -66,7 +66,7 @@ export default function CpgManufacturingExcellenceEnsuringQualityAndConsistencyA
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Manufacturing Excellence:{" "}
-              <span className="text-beast-pink">Ensuring Quality and Consistency at Scale</span>
+              <span>Ensuring Quality and Consistency at Scale</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Global CPG manufacturers lose over $50 billion annually to quality failures and recalls, a staggering figure that underscores why excellence in manufacturing isn’t just about meeting standards, it’s about survival. In an industry where a single contaminated batch can destroy decades of brand equity, achieving quality and consistency at scale becomes the ultimate competitive advantage.

@@ -70,7 +70,7 @@ export default function GoogleShoppingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Google Shopping Ads for CPG Brands:{" "}
-              <span className="text-beast-pink">Product Feed Optimization and Campaign Setup</span>
+              <span>Product Feed Optimization and Campaign Setup</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Google Shopping drives 60 to 80% of retail search ad clicks. Your product feed is your primary advertising strategy: here&apos;s how to build one that wins.

@@ -66,7 +66,7 @@ export default function CpgBrandStorytellingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Brand Storytelling:{" "}
-              <span className="text-beast-pink">Connecting With Consumers Through Authentic Narratives</span>
+              <span>Connecting With Consumers Through Authentic Narratives</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Ninety-one percent of consumers say they&apos;re more likely to buy from brands with authentic stories, yet most CPG companies still rely on product features and price points to drive sales. The brands that break through aren&apos;t just selling products. They&apos;re building emotional connections through narratives that resonate with their audience&apos;s values and experiences.

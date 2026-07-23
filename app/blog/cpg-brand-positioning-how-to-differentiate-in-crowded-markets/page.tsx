@@ -65,7 +65,7 @@ export default function CpgBrandPositioningPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Brand Positioning:{" "}
-              <span className="text-beast-pink">How to Differentiate in Crowded Markets</span>
+              <span>How to Differentiate in Crowded Markets</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               A shopper spends roughly two seconds deciding whether your product is worth a second look. In that moment, the only thing working in your favor is positioning: the answer to “why this one, and not the eleven others next to it?” Most CPG brands lose not because the product is bad, but because they never gave the shopper a reason to choose. Positioning is the lever that fixes that.

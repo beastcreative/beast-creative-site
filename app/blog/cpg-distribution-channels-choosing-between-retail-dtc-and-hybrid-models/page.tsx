@@ -65,7 +65,7 @@ export default function CpgDistributionChannelsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Distribution Channels:{" "}
-              <span className="text-beast-pink">Retail, DTC, and Hybrid Models</span>
+              <span>Retail, DTC, and Hybrid Models</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Your channel choice is the most consequential decision your CPG brand makes after the product itself. It quietly sets your margins, decides who owns the customer relationship, and caps how big you can realistically get. Retail, direct-to-consumer, and hybrid each buy you something different and cost you something different, and the brands that win are the ones who match the model to their stage instead of chasing whatever’s fashionable.

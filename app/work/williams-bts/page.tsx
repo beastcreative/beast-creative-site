@@ -30,7 +30,7 @@ export default function WilliamsBtsPage() {
               <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 They Asked for 10,000 Entries.{" "}
-                <span className="text-beast-pink">We Delivered 22,043.</span>
+                <span>We Delivered 22,043.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
                 2.2x the stated goal. $0.18 CPC on a $4,000 budget. 287,896 people reached in 31 days.

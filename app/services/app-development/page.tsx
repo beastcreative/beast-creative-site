@@ -148,7 +148,7 @@ export default function AppDevelopmentPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: AI App &amp; SaaS Development</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Your App Idea,{" "}
-              <span className="text-beast-pink">Live in Weeks.</span>
+              <span>Live in Weeks.</span>
             </h1>
             <p className="font-display text-2xl font-bold text-gray-300 mb-4 max-w-2xl">
               We don&apos;t just talk about AI-powered development. We ship with it.
@@ -352,7 +352,7 @@ export default function AppDevelopmentPage() {
           <AnimatedSection>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">
               You&apos;ve Had the Idea{" "}
-              <span className="text-beast-pink">Long Enough.</span>
+              <span>Long Enough.</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
               Bring it to a free scoping call. We&apos;ll tell you what the smallest launchable version looks like, what it costs, and how fast it can be live. No pitch deck. No six-month roadmap.

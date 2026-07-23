@@ -56,7 +56,7 @@ function renderTitle(title: string, highlight?: string): ReactNode {
   return (
     <>
       {title.slice(0, idx)}
-      <span className="text-beast-pink">{highlight}</span>
+      <span>{highlight}</span>
       {title.slice(idx + highlight.length)}
     </>
   );

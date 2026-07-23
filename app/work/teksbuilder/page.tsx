@@ -97,7 +97,7 @@ export default function TeksbuilderPage() {
               <p className="section-eyebrow text-beast-yellow mb-3">Case Study: TEKSBuilder · 2026 · In-House Product</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 Idea to Launched SaaS{" "}
-                <span className="text-beast-pink">In One Week.</span>
+                <span>In One Week.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
                 TEKSBuilder turns any teaching standard into a print-ready, differentiated classroom resource in seconds. Beast took it from concept to live, revenue-ready SaaS in one week, then scaled the same codebase into a network of state platforms. This is what AI-assisted development looks like when the team building it also knows how to launch it.
@@ -321,7 +321,7 @@ export default function TeksbuilderPage() {
           <AnimatedSection>
             <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-4">
               We Built Ours in a Week.{" "}
-              <span className="text-beast-pink">What&apos;s Yours Waiting On?</span>
+              <span>What&apos;s Yours Waiting On?</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
               Bring your app idea to a free scoping call. We&apos;ll tell you what the smallest launchable version looks like, what it costs, and how fast it can be live.

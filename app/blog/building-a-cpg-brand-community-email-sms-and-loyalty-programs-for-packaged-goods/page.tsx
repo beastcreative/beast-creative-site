@@ -66,7 +66,7 @@ export default function CpgBrandCommunityPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Building a CPG Brand Community:{" "}
-              <span className="text-beast-pink">Email, SMS, and Loyalty Programs for Packaged Goods</span>
+              <span>Email, SMS, and Loyalty Programs for Packaged Goods</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               CPG brands that rely solely on retail partnerships are missing 73% of potential customer lifetime value, according to recent industry data. The key difference? Direct-to-consumer relationship building through strategic email, SMS, and loyalty programs that transform one-time buyers into brand advocates.

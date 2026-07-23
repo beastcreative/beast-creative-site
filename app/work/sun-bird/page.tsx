@@ -32,7 +32,7 @@ export default function SunBirdPage() {
               <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Sun-Bird Seasonings · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
                 Delivering CPG Brand Awareness{" "}
-                <span className="text-beast-pink">at Scale.</span>
+                <span>at Scale.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-xl">
                 Sun-Bird expanded into Walmart nationwide and drove 36,581 contest entries, 3.6x the goal, on a $6,000 budget. 7.03% CTR. $0.12 CPC. Nearly 8x the industry benchmark.

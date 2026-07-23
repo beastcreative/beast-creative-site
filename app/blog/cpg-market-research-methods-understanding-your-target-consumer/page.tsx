@@ -65,7 +65,7 @@ export default function CpgMarketResearchMethodsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Market Research Methods:{" "}
-              <span className="text-beast-pink">Understanding Your Target Consumer</span>
+              <span>Understanding Your Target Consumer</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Every other decision in your business (the formula, the price, the pack, the claim on the front of the box, the channel you fight for) rests on one thing: how well you actually understand the person you expect to buy it. Most brands skip that work or fake it with assumptions. The ones that win treat consumer understanding as a discipline, not a hunch.

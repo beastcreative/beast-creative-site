@@ -65,7 +65,7 @@ export default function PetCareCpgProductsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Pet Care CPG Products:{" "}
-              <span className="text-beast-pink">Capturing Growth in the Expanding Pet Industry</span>
+              <span>Capturing Growth in the Expanding Pet Industry</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Somewhere along the way, the dog stopped being “the dog” and became a member of the family. That single shift in how people see their animals has turned pet care into one of CPG’s most resilient, fastest-premiumizing growth categories. Pet parents spend like the products are for themselves, because emotionally, they are. For brands willing to earn their trust, that creates one of the most durable opportunities in consumer goods today.

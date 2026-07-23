@@ -70,7 +70,7 @@ export default function AeoPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               What Is AEO? How to Make Your Brand Appear in{" "}
-              <span className="text-beast-pink">ChatGPT, Gemini, and Perplexity</span>
+              <span>ChatGPT, Gemini, and Perplexity</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               AI search tools are answering 30%+ of queries that used to go to Google. Here&apos;s how to structure your content to get cited, not just ranked.

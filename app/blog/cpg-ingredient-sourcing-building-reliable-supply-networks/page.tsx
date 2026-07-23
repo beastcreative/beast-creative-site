@@ -65,7 +65,7 @@ export default function CpgIngredientSourcingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Ingredient Sourcing:{" "}
-              <span className="text-beast-pink">Building Reliable Supply Networks</span>
+              <span>Building Reliable Supply Networks</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Every sourcing decision you make shows up somewhere else on your business: in your cost of goods, in the quality on the shelf, in the margin you have left to spend on marketing, in the story you can honestly tell, and in how exposed you are when something goes wrong upstream. Ingredient sourcing isn’t a back-office procurement task; it’s one of the most consequential strategic choices a CPG brand makes.

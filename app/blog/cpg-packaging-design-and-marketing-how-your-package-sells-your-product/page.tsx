@@ -66,7 +66,7 @@ export default function CpgPackagingDesignPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Packaging Design and Marketing:{" "}
-              <span className="text-beast-pink">How Your Package Sells Your Product</span>
+              <span>How Your Package Sells Your Product</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Your product could be revolutionary, but if consumers walk past it on the shelf without a second glance, you&apos;ve already lost the sale. In the consumer packaged goods (CPG) industry, your package isn&apos;t just protection for your product. It&apos;s your most powerful sales tool, working 24/7 to attract, inform, and convert potential customers in those critical three seconds of shelf attention.

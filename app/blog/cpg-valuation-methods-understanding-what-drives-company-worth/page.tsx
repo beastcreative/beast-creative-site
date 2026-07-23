@@ -66,7 +66,7 @@ export default function CpgValuationMethodsDrivesCompanyWorthPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Valuation Methods:{" "}
-              <span className="text-beast-pink">Understanding What Drives Company Worth</span>
+              <span>Understanding What Drives Company Worth</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumer packaged goods companies command valuations ranging from 1x to 15x revenue, yet most business owners can’t explain why this massive gap exists. The difference lies in understanding which metrics actually drive investor confidence and market perception in the CPG space.

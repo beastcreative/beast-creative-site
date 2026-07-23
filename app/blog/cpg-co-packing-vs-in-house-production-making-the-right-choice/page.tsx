@@ -65,7 +65,7 @@ export default function CpgCoPackingVsInHousePost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Co-Packing vs. In-House Production:{" "}
-              <span className="text-beast-pink">Making the Right Choice</span>
+              <span>Making the Right Choice</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               One of the biggest structural decisions a CPG brand ever makes is deceptively simple to ask and brutally complex to answer: do you own the plant, or do you outsource the make? That single choice shapes your capital requirements, your margins, your speed, and how much control you actually have over the thing customers put in their mouths. Get it right and you scale cleanly. Get it wrong and you either bleed cash on idle equipment or watch your margins evaporate one tolling fee at a time.

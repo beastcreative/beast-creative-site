@@ -28,7 +28,7 @@ export default function PioneerPage() {
             <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Pioneer · Ongoing</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Built to Perform.{" "}
-              <span className="text-beast-pink">Optimized to Convert.</span>
+              <span>Optimized to Convert.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               Performance marketing for Pioneer: paid social campaigns built around measurable return on ad spend, not vanity metrics.

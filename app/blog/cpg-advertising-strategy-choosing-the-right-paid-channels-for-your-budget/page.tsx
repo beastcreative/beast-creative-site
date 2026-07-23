@@ -70,7 +70,7 @@ export default function CpgAdvertisingStrategyPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Advertising Strategy:{" "}
-              <span className="text-beast-pink">Choosing the Right Paid Channels for Your Budget</span>
+              <span>Choosing the Right Paid Channels for Your Budget</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               CPG brands burn through 73% of their advertising budget on channels that deliver minimal returns. The problem isn&apos;t the creative. It&apos;s the allocation. Here&apos;s how to fix it.

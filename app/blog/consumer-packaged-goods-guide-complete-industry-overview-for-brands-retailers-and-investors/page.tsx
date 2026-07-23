@@ -65,7 +65,7 @@ export default function ConsumerPackagedGoodsGuidePost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Consumer Packaged Goods:{" "}
-              <span className="text-beast-pink">A Complete Industry Overview for Brands, Retailers & Investors</span>
+              <span>A Complete Industry Overview for Brands, Retailers & Investors</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumer packaged goods are the everyday products you buy, use up, and buy again: the food, drinks, cleaners, and personal care items that move through stores and carts by the billions. It’s one of the largest sectors in the economy, and one of the least forgiving. This guide breaks down how the industry actually works: the categories, the channels, the unit economics, what drives growth, and what investors look for before they write a check.

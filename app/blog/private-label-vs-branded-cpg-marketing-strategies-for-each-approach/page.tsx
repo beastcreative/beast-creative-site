@@ -66,7 +66,7 @@ export default function PrivateLabelVsBrandedCpgPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Private Label vs. Branded CPG:{" "}
-              <span className="text-beast-pink">Marketing Strategies for Each Approach</span>
+              <span>Marketing Strategies for Each Approach</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumer packaged goods revenue reached $2.2 trillion globally in 2023, yet most CPG companies struggle with one fundamental decision: should they build their own brand or create private label products? This choice shapes every marketing dollar you&apos;ll spend and determines whether you&apos;re competing on brand loyalty or shelf space.

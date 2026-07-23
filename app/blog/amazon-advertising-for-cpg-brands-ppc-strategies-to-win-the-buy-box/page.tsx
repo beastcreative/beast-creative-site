@@ -70,7 +70,7 @@ export default function AmazonAdvertisingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Amazon Advertising for CPG Brands:{" "}
-              <span className="text-beast-pink">PPC Strategies to Win the Buy Box</span>
+              <span>PPC Strategies to Win the Buy Box</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               The Buy Box drives 82% of Amazon sales. Winning it isn&apos;t luck. It&apos;s a coordinated PPC and account health strategy. Here&apos;s how to execute it.

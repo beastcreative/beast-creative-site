@@ -127,7 +127,7 @@ export default function CpgPage() {
           <AnimatedSection delay={0.1}>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               The CPG Agency That Turns{" "}
-              <span className="text-beast-pink">Ad Spend Into Retail Proof.</span>
+              <span>Ad Spend Into Retail Proof.</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
@@ -162,7 +162,7 @@ export default function CpgPage() {
             <p className="section-eyebrow text-beast-pink mb-4">The Problem We Solve</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal max-w-3xl mx-auto">
               Your Brand is Ready to Scale.{" "}
-              <span className="text-beast-pink">Your Marketing Isn&apos;t.</span>
+              <span>Your Marketing Isn&apos;t.</span>
             </h2>
           </AnimatedSection>
 
@@ -260,7 +260,7 @@ export default function CpgPage() {
               <div>
                 <h2 className="font-display text-4xl lg:text-5xl font-bold text-beast-black tracking-normal mb-6">
                   13,660 Entries in 24 Days.{" "}
-                  <span className="text-beast-pink">March Madness. One Seasoning Brand.</span>
+                  <span>March Madness. One Seasoning Brand.</span>
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Williams Foods came to Beast with a seasonal window and a creative challenge: make March Madness feel authentic for a CPG seasoning brand, and build a first-party consumer database while doing it.

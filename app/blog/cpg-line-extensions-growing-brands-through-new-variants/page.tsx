@@ -66,7 +66,7 @@ export default function CpgLineExtensionsGrowingBrandsThroughNewVariantsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Line Extensions:{" "}
-              <span className="text-beast-pink">Growing Brands Through New Variants</span>
+              <span>Growing Brands Through New Variants</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Successful CPG brands share one powerful secret: they don’t just create products, they multiply them. Line extensions have driven 76% of new product launches in the consumer packaged goods industry, turning single-hit products into billion-dollar brand portfolios. The strategy transforms good products into dominant market forces.

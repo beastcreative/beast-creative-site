@@ -70,7 +70,7 @@ export default function CpgContentMarketingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Content Marketing:{" "}
-              <span className="text-beast-pink">Creating Content That Educates and Converts Consumers</span>
+              <span>Creating Content That Educates and Converts Consumers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Educated customers become loyal customers, and loyal customers drive sustainable growth. Here&apos;s how to build a content strategy that earns attention and converts it into revenue.

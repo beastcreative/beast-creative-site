@@ -66,7 +66,7 @@ export default function DtcMarketingForCpgBrandsShouldYourPackagedGoodsBrandSell
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               DTC Marketing for CPG Brands:{" "}
-              <span className="text-beast-pink">Should Your Packaged Goods Brand Sell Direct-to-Consumer?</span>
+              <span>Should Your Packaged Goods Brand Sell Direct-to-Consumer?</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               CPG brands are facing an unprecedented shift: traditional retail partnerships that once guaranteed shelf space and sales are no longer enough. Today’s packaged goods companies are discovering that direct-to-consumer (DTC) channels offer something retail can’t: complete control over customer relationships, brand narrative, and profit margins.

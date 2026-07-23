@@ -65,7 +65,7 @@ export default function CpgSalesForecastingPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Sales Forecasting:{" "}
-              <span className="text-beast-pink">Predicting Demand and Managing Inventory</span>
+              <span>Predicting Demand and Managing Inventory</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               In consumer packaged goods, a wrong forecast costs you both ways. Forecast too low and you stock out: you lose the sale, the shopper buys a competitor, and the retailer notices the empty facing. Forecast too high and the excess inventory ties up cash, fills warehouse slots, and, if the product is perishable, gets thrown away. Good forecasting isn’t about being perfectly right; it’s about being wrong less often, in the right direction, on the SKUs that matter most.

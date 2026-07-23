@@ -20,7 +20,7 @@ export default function ContentProductionPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: AI Content Production</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Content at Scale.{" "}
-              <span className="text-beast-pink">Not at a Premium.</span>
+              <span>Not at a Premium.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               Recipe videos, product demos, and social content at scale, produced with AI at 90%+ lower cost than traditional production. We&apos;ve processed 900+ recipe assets for CPG clients.

@@ -66,7 +66,7 @@ export default function CpgCounterfeitProductsBrandFraudPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Counterfeit Products:{" "}
-              <span className="text-beast-pink">Protecting Your Brand from Fraud</span>
+              <span>Protecting Your Brand from Fraud</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Global counterfeit trade reached $509 billion in 2019, with consumer packaged goods representing the largest target category. For CPG brands, fake products don’t just steal revenue. They destroy decades of carefully built consumer trust and brand equity in a matter of months.

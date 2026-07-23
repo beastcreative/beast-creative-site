@@ -66,7 +66,7 @@ export default function CpgRetailConsolidationCustomersPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Retail Consolidation:{" "}
-              <span className="text-beast-pink">Adapting to Fewer, Larger Customers</span>
+              <span>Adapting to Fewer, Larger Customers</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               The retail landscape has shifted dramatically: Walmart now controls 24% of US grocery sales, while the top ten retailers command over 60% of total market share. This consolidation fundamentally changes how consumer packaged goods (CPG) brands must approach their go-to-market strategies and customer relationships.

@@ -68,7 +68,7 @@ export default function SEOSanAntonioPage() {
           <AnimatedSection delay={0.1}>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Rank in Google.{" "}
-              <span className="text-beast-pink">Get Found by AI.</span>
+              <span>Get Found by AI.</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>

@@ -66,7 +66,7 @@ export default function CpgReformulationImprovingProductsToMeetChangingNeedsPost
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Reformulation:{" "}
-              <span className="text-beast-pink">Improving Products to Meet Changing Needs</span>
+              <span>Improving Products to Meet Changing Needs</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Over 85% of CPG brands will reformulate at least one product in the next 18 months, driven by everything from supply chain disruptions to evolving consumer values. This isn’t just product development. It’s strategic survival. Smart reformulation can revitalize declining brands, capture new market segments, and future-proof your product portfolio against shifting consumer demands.

@@ -65,7 +65,7 @@ export default function OverTheCounterPharmaceuticalsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Over-the-Counter Pharmaceuticals:{" "}
-              <span className="text-beast-pink">Navigating the CPG Healthcare Market</span>
+              <span>Navigating the CPG Healthcare Market</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Over-the-counter medicine lives in a strange and demanding place: it’s sold like a consumer packaged good, merchandised next to toothpaste and vitamins, yet governed like a pharmaceutical. The trust stakes are higher than almost any other aisle, because a shopper is diagnosing and treating themselves. Get it right and you build a brand people reach for instinctively when they feel unwell. Get it wrong and you draw a warning letter, or worse, lose the trust that took years to earn.

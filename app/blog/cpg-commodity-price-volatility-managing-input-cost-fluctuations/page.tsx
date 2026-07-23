@@ -66,7 +66,7 @@ export default function CpgCommodityPriceVolatilityInputCostPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Commodity Price Volatility:{" "}
-              <span className="text-beast-pink">Managing Input Cost Fluctuations</span>
+              <span>Managing Input Cost Fluctuations</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Raw material costs for consumer packaged goods jumped 23% in the past year alone, turning profit margins into moving targets for even the most established brands. While commodity price swings have always existed, today’s volatility reaches unprecedented levels, demanding sophisticated strategies that go far beyond traditional cost management approaches.

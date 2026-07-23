@@ -32,7 +32,7 @@ export default function SeoAeoPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: SEO + AEO</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Rank in Google.{" "}
-              <span className="text-beast-pink">Get Cited by AI.</span>
+              <span>Get Cited by AI.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               Beast is one of the few agencies offering AEO (Answer Engine Optimization), structuring content to be cited by ChatGPT, Gemini, Perplexity, and Claude alongside traditional SEO.

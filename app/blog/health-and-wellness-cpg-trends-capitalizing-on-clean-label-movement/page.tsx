@@ -65,7 +65,7 @@ export default function HealthAndWellnessCpgTrendsPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Health and Wellness CPG Trends:{" "}
-              <span className="text-beast-pink">Capitalizing on the Clean-Label Movement</span>
+              <span>Capitalizing on the Clean-Label Movement</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Health and wellness used to be a niche aisle: a few brands selling to a few shoppers who read every label. That era is over. Across nearly every CPG category, “better for you” has quietly become the baseline expectation rather than the premium upsell. Shoppers now turn the package over and scan the ingredient deck the way they used to check the price, and a product that can’t survive that flip is at a disadvantage before it ever reaches the cart.

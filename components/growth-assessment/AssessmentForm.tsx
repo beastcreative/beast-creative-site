@@ -37,7 +37,7 @@ function FieldWrap({ label, htmlFor, error, required, children }: { label: strin
   return (
     <div>
       <label htmlFor={htmlFor} className="led-label mb-2 block text-beast-black">
-        {label} {required && <span className="text-beast-pink">*</span>}
+        {label} {required && <span>*</span>}
       </label>
       {children}
       {error && <p role="alert" className="mt-1.5 text-xs font-medium text-beast-pink">{error}</p>}

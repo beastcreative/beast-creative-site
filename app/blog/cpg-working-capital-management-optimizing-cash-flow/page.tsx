@@ -66,7 +66,7 @@ export default function CpgWorkingCapitalManagementCashFlowPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Working Capital Management:{" "}
-              <span className="text-beast-pink">Optimizing Cash Flow</span>
+              <span>Optimizing Cash Flow</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Consumer packaged goods companies burn through $1.2 trillion in working capital annually, yet most don’t realize they’re sitting on a goldmine of untapped cash flow opportunities. The difference between CPG winners and strugglers often comes down to how smartly they manage the money tied up in their operations.

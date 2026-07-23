@@ -20,7 +20,7 @@ export default function WebDesignPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: Web Design & CRO</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Websites That{" "}
-              <span className="text-beast-pink">Convert, Not Just Look Good.</span>
+              <span>Convert, Not Just Look Good.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               Mobile-first, performance-optimized, conversion-focused builds. Every page has a purpose and a next step. Lighthouse 90+ scores. Built on proven funnel architecture.

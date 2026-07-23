@@ -30,7 +30,7 @@ export default function WilliamsBowlPage() {
               <p className="section-eyebrow text-beast-yellow mb-3">Case Study: Williams Foods · 2021</p>
               <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
                 The Campaign That Made{" "}
-                <span className="text-beast-pink">CPG Growth Inevitable.</span>
+                <span>CPG Growth Inevitable.</span>
               </h1>
               <p className="text-body-lead text-gray-300 max-w-2xl">
                 The first campaign. The one that proved everything. 6,020 entries on a $1,500 ad budget. $0.16 CPC. The proof-of-concept that launched an entire campaign series.

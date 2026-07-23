@@ -70,7 +70,7 @@ export default function RetailMediaPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               Retail Media Networks for CPG:{" "}
-              <span className="text-beast-pink">Walmart Connect, Target Roundel, and Instacart Ads</span>
+              <span>Walmart Connect, Target Roundel, and Instacart Ads</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Retail media meets shoppers exactly when they&apos;re ready to buy, generating 3 to 5x higher ROAS than traditional digital channels. Here&apos;s how to build your multi-platform strategy.

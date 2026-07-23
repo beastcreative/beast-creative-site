@@ -20,7 +20,7 @@ export default function BrandingPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Service: Branding & Identity</p>
             <h1 className="text-display-hero font-display font-extrabold text-white max-w-4xl mb-6 leading-tight">
               Brands That Don&apos;t Need{" "}
-              <span className="text-beast-pink">An Explanation.</span>
+              <span>An Explanation.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
               Brand naming, visual systems, and identities built for instant recognition and long-term equity. We created Coinline, a name that required zero explanation the moment people heard it.

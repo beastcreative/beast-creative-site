@@ -76,7 +76,7 @@ export default function SweetSensiHero() {
           </p>
           <h1 className="hero-text-item text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
             500% MRR Growth.{" "}
-            <span className="text-beast-pink">
+            <span>
               In the Industry That Bans Most Ads.
             </span>
           </h1>

@@ -66,7 +66,7 @@ export default function CpgFundingOptionsBootstrappingVentureCapitalPost() {
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Funding Options:{" "}
-              <span className="text-beast-pink">From Bootstrapping to Venture Capital</span>
+              <span>From Bootstrapping to Venture Capital</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Nearly 90% of consumer packaged goods startups exhaust their initial capital within the first two years, yet the survivors who master funding diversification grow 3x faster than single-source funded competitors. The difference lies in understanding which funding option matches each growth stage.

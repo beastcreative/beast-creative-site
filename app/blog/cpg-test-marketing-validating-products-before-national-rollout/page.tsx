@@ -66,7 +66,7 @@ export default function CpgTestMarketingValidatingProductsBeforeNationalRolloutP
             </div>
             <h1 className="text-display-hero font-display font-extrabold text-white mb-6 leading-tight">
               CPG Test Marketing:{" "}
-              <span className="text-beast-pink">Validating Products Before National Rollout</span>
+              <span>Validating Products Before National Rollout</span>
             </h1>
             <p className="text-body-lead text-[#C8C8C8] max-w-2xl">
               Nearly 95% of new consumer packaged goods fail within their first year, yet most of these failures could be prevented with proper test marketing. Smart CPG brands don’t gamble with national launches; they validate their products systematically in controlled markets first, saving millions in potential losses.
