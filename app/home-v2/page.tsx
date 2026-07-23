@@ -218,7 +218,7 @@ export default function HomeV2Page() {
 
               <h1 className="mt-6 font-display text-[3.25rem] font-extrabold uppercase leading-[0.92] tracking-tight text-beast-black sm:text-7xl lg:text-[5.25rem]">
                 San Antonio SEO &amp; AEO{" "}
-                <span className="text-beast-pink">for the AI Search Era</span>
+                <span className="text-beast-black">for the AI Search Era</span>
               </h1>
 
               <p className="mt-6 font-display text-2xl font-bold text-black/45 lg:text-3xl">
@@ -378,7 +378,7 @@ export default function HomeV2Page() {
               <Label dark>Proven Results</Label>
               <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-none tracking-tight lg:text-6xl">
                 Work That Speaks{" "}
-                <span className="text-beast-pink">For Itself.</span>
+                <span className="text-white">For Itself.</span>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-white/55">
@@ -476,7 +476,7 @@ export default function HomeV2Page() {
             <div className="flex justify-center"><Label dark>Why Now</Label></div>
             <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight lg:text-6xl">
               Google Is Keeping the Click.{" "}
-              <span className="text-beast-pink">Get Cited Instead.</span>
+              <span className="text-white">Get Cited Instead.</span>
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
               AI now answers your customers before they ever reach a website, through Google&apos;s AI Overviews, ChatGPT, and Perplexity. The industry calls it &ldquo;Google Zero,&rdquo; and it&apos;s already changing who gets found. Ranking #1 matters a little less every month. Being the source AI cites matters a lot more.
@@ -501,7 +501,7 @@ export default function HomeV2Page() {
               <Label>Our Track Record</Label>
               <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight text-beast-black lg:text-5xl">
                 Enterprise-Level Proof.{" "}
-                <span className="text-beast-pink">Local Business Availability.</span>
+                <span className="text-beast-black">Local Business Availability.</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-black/65">
                 We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client, whether you&apos;re a San Antonio restaurant or a regional brand going national.
