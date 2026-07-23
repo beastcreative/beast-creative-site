@@ -4,7 +4,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 import Reveal from "@/components/redesign/Reveal";
 import DiagnosticCTA from "@/components/landing/DiagnosticCTA";
 import TrackedLink from "@/components/landing/TrackedLink";
-import AssetPlaceholder from "@/components/landing/AssetPlaceholder";
+import HeroProofVisual from "@/components/landing/HeroProofVisual";
 
 export interface LandingData {
   pageType: string; // analytics lp_type, e.g. "ecommerce"
@@ -76,7 +76,7 @@ export default function LandingPage({ data }: { data: LandingData }) {
               </div>
             </div>
             <Reveal delay={120} className="hidden lg:block">
-              <AssetPlaceholder label={data.heroVisual.label} note={data.heroVisual.note} />
+              <HeroProofVisual proof={data.proof} />
             </Reveal>
           </div>
         </div>
