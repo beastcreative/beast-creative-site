@@ -576,13 +576,13 @@ select.form-input option {
   color: #FF1198;
   font-weight: 600;
   font-size: 14px;
-  transition: gap 150ms;
+  transition: gap 150ms, color 200ms ease;
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
 }
-.btn-ghost-pink:hover { gap: 10px; }
+.btn-ghost-pink:hover { gap: 10px; color: #0A0A0A; }
 
 /* keep old name as alias for any remaining references */
 .btn-ghost-green { color: #00F763; }
