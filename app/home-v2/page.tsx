@@ -236,7 +236,7 @@ export default function HomeV2Page() {
                 >
                   Start Your Growth Assessment
                 </IconButton>
-                <Link href="/work" className="btn-ghost-pink justify-center text-sm sm:justify-start">
+                <Link href="/work" className="btn-ghost-pink justify-center text-sm transition-colors duration-200 hover:text-beast-black sm:justify-start">
                   See Our Work →
                 </Link>
               </div>
