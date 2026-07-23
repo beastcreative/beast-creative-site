@@ -232,7 +232,7 @@ export default function HomeV2Page() {
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <IconButton
                   href="/growth-assessment"
-                  variant="white"
+                  variant="pink"
                 >
                   Start Your Growth Assessment
                 </IconButton>
@@ -507,7 +507,7 @@ export default function HomeV2Page() {
                 We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client, whether you&apos;re a San Antonio restaurant or a regional brand going national.
               </p>
               <div className="mt-8">
-                <IconButton href="/cpg" variant="white">See Our CPG Playbook</IconButton>
+                <IconButton href="/cpg" variant="pink">See Our CPG Playbook</IconButton>
               </div>
             </Reveal>
 
