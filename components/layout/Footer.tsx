@@ -87,7 +87,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-white font-semibold text-xs tracking-widest uppercase mb-5">Get Started</h4>
             <p className="text-sm text-gray-500 mb-5">No commitments. Just a free strategy conversation.</p>
-            <IconButton href="/growth-assessment" icon="calendar" className="mb-6 w-full justify-center text-center !whitespace-normal !leading-tight !rounded-xl !tracking-[1px] !text-[11px] !px-4 !py-3.5">Start Your Growth Assessment</IconButton>
+            <IconButton href="/growth-assessment" variant="yellow" icon="calendar" className="mb-6 w-full justify-center text-center !whitespace-normal !leading-tight !rounded-xl !tracking-[1px] !text-[11px] !px-4 !py-3.5">Start Your Growth Assessment</IconButton>
             <div className="mt-4 text-sm text-gray-600 space-y-1">
               <div>
                 <a href="sms:+12103320567" className="hover:text-beast-pink transition-colors">

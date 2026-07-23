@@ -508,16 +508,16 @@ select.form-input option {
 .btn-whatsapp:active { transform: translateY(-1px); }
 
 
-/* Pink → Yellow — test variant (dark backgrounds) */
+/* Yellow → Pink — yellow bg + black text; hover pink bg + yellow text */
 .btn-yellow {
-  background-color: #FF1198;
-  color: #FFFFFF;
+  background-color: #FFFF00;
+  color: #000000;
   box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 .btn-yellow:hover {
-  background-color: #FFFF00;
-  color: #FF1198;
-  box-shadow: 0 4px 12px rgba(255,255,0,0.5), 0 1px 3px rgba(255,255,0,0.6);
+  background-color: #FF1198;
+  color: #FFFF00;
+  box-shadow: 0 15px 30px rgba(255,17,152,0.40);
   transform: translateY(-5px);
 }
 .btn-yellow:active { transform: translateY(-1px); }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export type IBtnVariant = "pink" | "dark" | "white" | "ghost";
+export type IBtnVariant = "pink" | "dark" | "white" | "ghost" | "yellow";
 
 interface IconButtonProps {
   children: ReactNode;
@@ -32,6 +32,7 @@ export default function IconButton({
   const base =
     variant === "ghost" ? "btn-ghost"
     : variant === "white" ? "btn-light"
+    : variant === "yellow" ? "btn-yellow"
     : "btn-primary";
   const cls = className ? `${base} ${className}` : base;
 

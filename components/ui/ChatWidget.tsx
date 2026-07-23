@@ -365,7 +365,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Tuck chat away" : "Open chat — real human here"}
         aria-expanded={open}
-        className="relative flex items-center gap-2.5 rounded-full bg-beast-pink text-white font-bold text-sm pl-4 pr-5 py-3 shadow-lg shadow-beast-pink/30 hover:brightness-110 transition"
+        className="relative flex items-center gap-2.5 rounded-full bg-beast-yellow text-beast-black font-bold text-sm pl-4 pr-5 py-3 shadow-lg shadow-beast-yellow/40 hover:bg-beast-pink hover:text-beast-yellow transition-colors"
       >
         {unread > 0 && !open && (
           <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 px-1 rounded-full bg-white text-beast-pink text-xs font-extrabold flex items-center justify-center border-2 border-beast-pink">
