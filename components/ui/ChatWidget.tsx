@@ -71,8 +71,7 @@ export default function ChatWidget() {
 
   // Bounce in after the visitor has had a moment on the page.
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 3500);
-    return () => clearTimeout(t);
+    setVisible(true);
   }, []);
 
   // Restore the conversation across page navigations.
@@ -365,7 +364,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Tuck chat away" : "Open chat — real human here"}
         aria-expanded={open}
-        className="group relative flex h-14 w-14 items-center justify-center gap-0 rounded-full bg-beast-yellow text-beast-black font-bold text-sm shadow-lg shadow-black/30 transition-all duration-300 hover:w-auto hover:gap-2.5 hover:pl-4 hover:pr-5 hover:bg-beast-pink hover:text-beast-yellow"
+        className="group relative flex h-14 items-center justify-center gap-0 rounded-full px-4 bg-beast-yellow text-beast-black font-bold text-sm shadow-lg shadow-black/30 transition-[gap,background-color,color] duration-300 hover:gap-2.5 hover:bg-beast-pink hover:text-beast-yellow"
       >
         {unread > 0 && !open && (
           <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 px-1 rounded-full bg-white text-beast-pink text-xs font-extrabold flex items-center justify-center border-2 border-beast-pink">
