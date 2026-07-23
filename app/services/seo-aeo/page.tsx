@@ -35,7 +35,7 @@ export default function SeoAeoPage() {
               <span>Get Cited by AI.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Beast is one of the few agencies offering AEO (Answer Engine Optimization), structuring content to be cited by ChatGPT, Gemini, Perplexity, and Claude alongside traditional SEO.
+              Search visibility only pays off when it drives revenue. Beast builds SEO and Answer Engine Optimization into one growth system, so the right buyers find you in Google and in AI answers from ChatGPT, Gemini, Perplexity, and Claude, and become qualified demand, not just traffic.
             </p>
           </AnimatedSection>
         </div>
@@ -50,7 +50,7 @@ export default function SeoAeoPage() {
                 Google search is no longer the only discovery channel. An estimated 30%+ of search queries now go to AI tools first. If your brand doesn&apos;t appear in both traditional search AND AI-generated answers, you&apos;re invisible to a growing portion of your market.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Beast builds an integrated SEO + AEO strategy: technical optimization, content authority, and structured data that wins in both environments.
+                But visibility is the means, not the goal. Beast connects SEO and AEO to the rest of your growth system, technical optimization, content authority, and structured data that win in both environments, then ties them to conversion so rankings become qualified demand and revenue, not vanity traffic.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
