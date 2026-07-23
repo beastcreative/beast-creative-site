@@ -32,6 +32,12 @@ const localServices = [
   { name: "Logo Design San Antonio",       href: "/services/logo-design-san-antonio" },
 ];
 
+const industries = [
+  { name: "E-commerce & DTC", href: "/ecommerce-marketing-agency",   desc: "Turn more traffic into revenue" },
+  { name: "B2B & SaaS",       href: "/b2b-digital-marketing-agency", desc: "Build predictable pipeline"     },
+  { name: "CPG & Retail",     href: "/cpg",                          desc: "Demand and data that scale"     },
+];
+
 const aboutLinks = [
   { name: "About",  href: "/about" },
   { name: "Blog",   href: "/blog"  },
@@ -42,11 +48,18 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen]     = useState(false);
   const [workOpen, setWorkOpen]         = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
   const [aboutOpen, setAboutOpen]       = useState(false);
   const pathname = usePathname();
-  const workRef     = useRef<HTMLLIElement>(null);
-  const servicesRef = useRef<HTMLLIElement>(null);
-  const aboutRef    = useRef<HTMLLIElement>(null);
+  const workRef       = useRef<HTMLLIElement>(null);
+  const servicesRef   = useRef<HTMLLIElement>(null);
+  const industriesRef = useRef<HTMLLIElement>(null);
+  const aboutRef      = useRef<HTMLLIElement>(null);
+
+  const industriesActive =
+    pathname === "/cpg" ||
+    pathname.startsWith("/ecommerce-marketing-agency") ||
+    pathname.startsWith("/b2b-digital-marketing-agency");
 
   useEffect(() => { setMobileOpen(false); }, [pathname]);
   useEffect(() => {
@@ -172,14 +185,35 @@ export default function Nav() {
                 )}
               </li>
 
-              {/* CPG plain link */}
-              <li>
-                <Link
-                  href="/cpg"
-                  className={`block px-3.5 py-3 text-sm font-semibold transition-colors rounded-full min-h-[44px] flex items-center focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 ${pathname === "/cpg" ? "text-beast-yellow border border-beast-pink" : "text-white/80 hover:text-beast-yellow hover:bg-white/8"}`}
+              {/* Industries */}
+              <li
+                ref={industriesRef}
+                className="relative"
+                onMouseEnter={() => setIndustriesOpen(true)}
+                onMouseLeave={() => setIndustriesOpen(false)}
+                onKeyDown={(e) => { if (e.key === "Escape") setIndustriesOpen(false); }}
+              >
+                <button
+                  className={`flex items-center gap-1.5 px-3.5 py-3 text-sm font-semibold transition-colors rounded-full min-h-[44px] focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 ${industriesActive ? "text-beast-yellow border border-beast-pink" : "text-white/80 hover:text-beast-yellow hover:bg-white/8"}`}
+                  onClick={() => setIndustriesOpen(!industriesOpen)}
+                  aria-expanded={industriesOpen}
+                  aria-haspopup="true"
                 >
-                  CPG
-                </Link>
+                  Industries
+                  <span className={`nav-chevron${industriesOpen ? " open" : ""}`} aria-hidden="true"><span /></span>
+                </button>
+                {industriesOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72">
+                    <div style={dropdownGlass} className="overflow-hidden">
+                      {industries.map((s) => (
+                        <Link key={s.href} href={s.href} className={`block px-5 py-3 hover:bg-white/8 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-[-2px] ${pathname === s.href ? "bg-white/8" : ""}`}>
+                          <span className={`block text-sm font-semibold ${pathname === s.href ? "text-white" : "text-white"}`}>{s.name}</span>
+                          <span className="block text-xs text-white/50 mt-0.5">{s.desc}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </li>
 
               {/* About dropdown */}
@@ -316,10 +350,27 @@ export default function Nav() {
                 </div>
               </div>
 
-            {/* CPG plain link */}
-            <Link href="/cpg" className="block font-display text-4xl font-bold text-white hover:text-beast-pink transition-colors py-2 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 rounded">
-              CPG
-            </Link>
+            {/* Industries accordion */}
+            <div>
+              <button
+                className="flex items-center justify-between w-full font-display text-4xl font-bold text-white py-2 focus-visible:outline-2 focus-visible:outline-beast-pink focus-visible:outline-offset-2 rounded"
+                onClick={() => setIndustriesOpen(!industriesOpen)}
+                aria-expanded={industriesOpen}
+              >
+                Industries
+                <span className={`nav-chevron scale-150 mr-1 transition-transform duration-300${industriesOpen ? " open" : ""}`} aria-hidden="true"><span /></span>
+              </button>
+              <div className={`overflow-hidden transition-all duration-300 ${industriesOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className="pl-2 pb-3 space-y-0.5 ml-1 mt-1">
+                  {industries.map((s) => (
+                    <Link key={s.href} href={s.href} className="block py-3 px-3 rounded-lg hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink">
+                      <span className="block text-sm text-white transition-colors">{s.name}</span>
+                      <span className="block text-xs text-white/50 mt-0.5">{s.desc}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* About accordion */}
             <div>
