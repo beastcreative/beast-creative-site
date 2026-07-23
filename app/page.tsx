@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 
 const homepageFaqs = [
   {
+    q: "Who does Beast Creative work best with?",
+    a: "Beast works best with growth-stage companies that are serious about scaling: founders and teams who have outgrown DIY marketing and one-off freelancers, and who want one measurable growth system instead of disconnected tactics. We work with San Antonio businesses, regional brands going national, and national CPG clients, holding the same rigor and the same standards no matter the size.",
+  },
+  {
     q: "What services does Beast Creative offer?",
     a: "Beast Creative is a full-service marketing agency based in San Antonio, TX. We offer web design and development, SEO and Answer Engine Optimization (AEO), paid media management, branding and identity, AI content production, and CPG marketing. Most clients start with web design or SEO and expand from there.",
   },
@@ -151,10 +155,10 @@ const services = [
 ];
 
 const process = [
-  { step: "01", name: "Discover", desc: "Deep-dive audit and competitor gap analysis. We find where your brand is losing ground and where the fastest wins are hiding." },
-  { step: "02", name: "Strategize", desc: "A campaign plan built around your specific goals, audience, and budget, not a template pulled from a drawer." },
+  { step: "01", name: "Discover", desc: "We find the one constraint holding your growth back, and where the fastest wins are hiding, through a deep-dive audit and competitor gap analysis." },
+  { step: "02", name: "Strategize", desc: "A connected growth plan built around your goals, audience, and budget, not a template pulled from a drawer. Every channel points at the same outcome." },
   { step: "03", name: "Execute", desc: "Creative launches. Media runs. Content goes live. We move fast and optimize faster, with daily monitoring and real-time pivots." },
-  { step: "04", name: "Optimize", desc: "Monthly reporting, A/B testing, and continuous refinement. We don't set it and forget it." },
+  { step: "04", name: "Optimize", desc: "Monthly reporting, A/B testing, and continuous refinement. We measure what actually moves revenue and scale it. We don't set it and forget it." },
 ];
 
 const heroStats = [
@@ -211,7 +215,7 @@ export default function HomePage() {
 
               <h1 className="mt-6 font-display text-[3.25rem] font-extrabold uppercase leading-[0.92] tracking-tight text-beast-black sm:text-7xl lg:text-[5.25rem]">
                 San Antonio SEO &amp; AEO{" "}
-                <span className="text-beast-pink">for the AI Search Era</span>
+                <span className="text-beast-black">for the AI Search Era</span>
               </h1>
 
               <p className="mt-6 font-display text-2xl font-bold text-black/45 lg:text-3xl">
@@ -219,18 +223,24 @@ export default function HomePage() {
               </p>
 
               <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-black/65">
-                The way people search is changing fast. More of your customers now get answers straight from AI instead of clicking to websites. We make sure San Antonio businesses show up in that new layer: cited and recommended by ChatGPT, Google&apos;s AI Overviews, and Perplexity, not left behind by it. It&apos;s the same approach that drove 7x results for national brands, pointed at your market.
+                Beast is a growth partner for companies serious about scaling. You&apos;ve outgrown DIY marketing and disconnected vendors, and you need one measurable system that actually moves revenue, not more scattered tactics. Part of that system is staying visible as search changes: more of your customers now get answers straight from AI, and we make sure you&apos;re the brand ChatGPT, Google&apos;s AI Overviews, and Perplexity cite. It&apos;s the same approach that drove 7x results for national brands, pointed at your next stage of growth.
               </p>
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <IconButton
                   href="/growth-assessment"
-                  variant="white"
+                  variant="pink"
                 >
                   Start Your Growth Assessment
                 </IconButton>
-                <Link href="/work" className="btn-ghost-pink justify-center text-sm sm:justify-start">
-                  See Our Work →
+                <Link
+                  href="/work"
+                  className="group inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-beast-pink transition-colors duration-200 hover:text-beast-black sm:justify-start"
+                >
+                  See Our Work
+                  <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
+                    →
+                  </span>
                 </Link>
               </div>
             </div>
@@ -330,7 +340,7 @@ export default function HomePage() {
                 Beast Creative.
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-black/70">
-                At Beast Creative Agency, San Antonio&apos;s SEO, AEO &amp; GEO team, we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results, every single month.
+                At Beast Creative Agency, San Antonio&apos;s SEO, AEO &amp; GEO team, we work as a growth partner, not a task vendor. We connect strategy, search, creative, and media into one system, and we don&apos;t hide behind strategy decks and vanity metrics. We show you the numbers, the work, and the results, every single month.
               </p>
               <p className="mt-4 leading-relaxed text-black/60">
                 Founded in 2020 in San Antonio, TX, we&apos;re a team of strategists, creatives, and AI-powered operators. We work with local San Antonio businesses, regional brands, and national CPG clients, holding the same rigor and the same standards no matter the size. Our CPG campaigns have averaged 7x industry-average performance. That&apos;s the bar we hold ourselves to for every client.
@@ -339,10 +349,10 @@ export default function HomePage() {
               <p className="led-label mt-8 text-beast-black">Who We Serve</p>
               <ul className="mt-4 border-t led-rule">
                 {[
-                  "San Antonio businesses that need a real agency, not a freelancer",
-                  "Restaurants, service companies, and local brands ready to grow",
+                  "Growth-stage companies serious about scaling to the next level",
+                  "Founders who've outgrown DIY marketing and one-off freelancers",
                   "Regional brands going national in CPG, retail, and e-commerce",
-                  "Any ambitious business tired of agencies that talk more than they deliver",
+                  "Established businesses that want a measurable system, not more activity",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 border-b led-rule py-3">
                     <span className="led-label mt-0.5 text-beast-pink">[{String(i + 1).padStart(2, "0")}]</span>
@@ -371,7 +381,7 @@ export default function HomePage() {
               <Label dark>Proven Results</Label>
               <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-none tracking-tight lg:text-6xl">
                 Work That Speaks{" "}
-                <span className="text-beast-pink">For Itself.</span>
+                <span className="text-white">For Itself.</span>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-white/55">
@@ -469,7 +479,7 @@ export default function HomePage() {
             <div className="flex justify-center"><Label dark>Why Now</Label></div>
             <h2 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight lg:text-6xl">
               Google Is Keeping the Click.{" "}
-              <span className="text-beast-pink">Get Cited Instead.</span>
+              <span className="text-white">Get Cited Instead.</span>
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/75">
               AI now answers your customers before they ever reach a website, through Google&apos;s AI Overviews, ChatGPT, and Perplexity. The industry calls it &ldquo;Google Zero,&rdquo; and it&apos;s already changing who gets found. Ranking #1 matters a little less every month. Being the source AI cites matters a lot more.
@@ -494,13 +504,13 @@ export default function HomePage() {
               <Label>Our Track Record</Label>
               <h2 className="mt-4 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight text-beast-black lg:text-5xl">
                 Enterprise-Level Proof.{" "}
-                <span className="text-beast-pink">Local Business Availability.</span>
+                <span className="text-beast-black">Local Business Availability.</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-black/65">
                 We ran a 7.03% CTR campaign for a national Walmart rollout on a $6,000 budget. We collected 36,581 consumer emails for a CPG brand in 38 days. That&apos;s the caliber of thinking we bring to every client, whether you&apos;re a San Antonio restaurant or a regional brand going national.
               </p>
               <div className="mt-8">
-                <IconButton href="/cpg" variant="white">See Our CPG Playbook</IconButton>
+                <IconButton href="/cpg" variant="pink">See Our CPG Playbook</IconButton>
               </div>
             </Reveal>
 
@@ -572,7 +582,7 @@ export default function HomePage() {
                 Ready to Stop Guessing and Start Growing?
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-white/70">
-                Tell us about your business and we&apos;ll show you exactly where you stand in AI search: what&apos;s working, what&apos;s missing, and what it&apos;d take to own your San Antonio market. No pitch, no pressure.
+                Tell us where you&apos;re trying to grow, and we&apos;ll show you exactly what&apos;s working, what&apos;s missing, and what it&apos;d take to reach your next stage: from your search visibility to conversion to where revenue is leaking. No pitch, no pressure.
               </p>
               <div className="mt-8">
                 <InstantContact message="Hi Beast, I saw your site and want to talk about my brand's search visibility." />
