@@ -236,8 +236,14 @@ export default function HomeV2Page() {
                 >
                   Start Your Growth Assessment
                 </IconButton>
-                <Link href="/work" className="btn-ghost-pink justify-center text-sm transition-colors duration-200 hover:text-beast-black sm:justify-start">
-                  See Our Work →
+                <Link
+                  href="/work"
+                  className="group inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-beast-pink transition-colors duration-200 hover:text-beast-black sm:justify-start"
+                >
+                  See Our Work
+                  <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
+                    →
+                  </span>
                 </Link>
               </div>
             </div>
