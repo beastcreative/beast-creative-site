@@ -131,7 +131,7 @@ export default function WorkGrid({ caseStudies }: { caseStudies: CaseStudy[] }) 
                         ))}
                       </div>
                       <div className="mt-auto">
-                        <span className="btn-ghost-pink text-sm">View Case Study →</span>
+                        <span className="btn-ghost-pink text-sm">View Case Study<span aria-hidden="true">→</span></span>
                       </div>
                     </div>
                   </article>

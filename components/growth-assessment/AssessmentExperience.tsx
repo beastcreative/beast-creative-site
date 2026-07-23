@@ -134,7 +134,7 @@ function ResultScreen({ route, bookingUrl, firstName }: Done) {
         </div>
 
         <div className="mt-10">
-          <a href="/work" className="btn-ghost-pink text-sm">See the work Beast has done →</a>
+          <a href="/work" className="btn-ghost-pink text-sm">See the work Beast has done<span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>

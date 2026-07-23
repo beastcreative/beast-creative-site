@@ -71,11 +71,11 @@ export default function LandingPage({ data }: { data: LandingData }) {
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <DiagnosticCTA label={data.primaryCta} location="hero" pageType={data.pageType} variant="pink" />
                 <a href={data.secondaryCta.href} className="btn-ghost-pink justify-center text-sm sm:justify-start">
-                  {data.secondaryCta.label} →
+                  {data.secondaryCta.label}<span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
-            <Reveal delay={120} className="hidden lg:block">
+            <Reveal delay={120} className="mt-2 lg:mt-0">
               <HeroProofVisual proof={data.proof} />
             </Reveal>
           </div>

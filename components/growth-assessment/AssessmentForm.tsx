@@ -221,7 +221,7 @@ export default function AssessmentForm({
         {result.route === "nurture" && (
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="/work" className="btn-light">See the Work</a>
-            <a href="/blog" className="btn-ghost-pink text-sm">Read the Insights →</a>
+            <a href="/blog" className="btn-ghost-pink text-sm">Read the Insights<span aria-hidden="true">→</span></a>
           </div>
         )}
       </div>

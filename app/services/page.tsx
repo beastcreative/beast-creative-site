@@ -109,7 +109,7 @@ export default function ServicesPage() {
                     <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">{svc.pitch}</p>
                     <div className="border-t border-gray-100 pt-4 mt-2 flex items-center justify-between">
                       <span className="text-xs font-mono text-beast-pink font-semibold">{svc.stats}</span>
-                      <span className="btn-ghost-pink text-sm group-hover:gap-3 transition-[gap]">Learn More →</span>
+                      <span className="btn-ghost-pink text-sm group-hover:gap-3 transition-[gap]">Learn More<span aria-hidden="true">→</span></span>
                     </div>
                   </div>
                 </Link>

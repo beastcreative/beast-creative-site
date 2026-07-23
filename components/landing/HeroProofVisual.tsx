@@ -34,12 +34,12 @@ export default function HeroProofVisual({ proof }: { proof: Stat[] }) {
       </div>
 
       {/* Dark receipt card — headline stat for this page */}
-      <div className="absolute left-2 top-10 w-60">
-        <div className="led-float-a rounded-2xl border border-white/10 bg-beast-black p-6 shadow-[0_24px_60px_rgba(0,0,0,0.28)]">
+      <div className="absolute left-0 top-8 w-52 sm:left-2 sm:top-10 sm:w-60">
+        <div className="led-float-a rounded-2xl border border-white/10 bg-beast-black p-5 shadow-[0_24px_60px_rgba(0,0,0,0.28)] sm:p-6">
           <p className="led-label text-white/45">
             {primary.sublabel ? `Proof · ${primary.sublabel}` : "Named proof"}
           </p>
-          <p className="mt-4 font-display text-6xl font-black leading-none text-beast-yellow">
+          <p className="mt-4 font-display text-5xl font-black leading-none text-beast-yellow sm:text-6xl">
             {formatStat(primary)}
           </p>
           <p className="mt-2 text-xs text-white/55">{primary.label}</p>
@@ -49,10 +49,10 @@ export default function HeroProofVisual({ proof }: { proof: Stat[] }) {
       </div>
 
       {/* Pink accent card — second stat */}
-      <div className="absolute bottom-8 right-0 w-52">
-        <div className="led-float-b rounded-2xl bg-beast-pink p-6 shadow-[0_24px_60px_rgba(255,17,152,0.30)]">
+      <div className="absolute bottom-6 right-0 w-44 sm:bottom-8 sm:w-52">
+        <div className="led-float-b rounded-2xl bg-beast-pink p-5 shadow-[0_24px_60px_rgba(255,17,152,0.30)] sm:p-6">
           <p className="led-label text-white/70">{secondary.label}</p>
-          <p className="mt-3 font-display text-5xl font-black leading-none text-white">
+          <p className="mt-3 font-display text-4xl font-black leading-none text-white sm:text-5xl">
             {formatStat(secondary)}
           </p>
           {secondary.sublabel ? (

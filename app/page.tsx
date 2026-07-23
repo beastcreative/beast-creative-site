@@ -362,7 +362,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-6">
                 <Link href="/about" className="btn-ghost-pink text-sm">
-                  More About Beast →
+                  More About Beast<span aria-hidden="true">→</span>
                 </Link>
               </div>
             </Reveal>

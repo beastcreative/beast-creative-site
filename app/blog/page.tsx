@@ -544,7 +544,7 @@ export default function BlogPage() {
                     {posts[0].title}
                   </h2>
                   <p className="text-[#4A4A4A] text-lg leading-relaxed mb-6 max-w-3xl">{posts[0].excerpt}</p>
-                  <span className="btn-ghost-pink">Read Article →</span>
+                  <span className="btn-ghost-pink">Read Article<span aria-hidden="true">→</span></span>
                 </div>
               </article>
             </Link>
@@ -573,7 +573,7 @@ export default function BlogPage() {
                       <p className="text-[#717171] text-sm leading-relaxed mb-4">{post.excerpt}</p>
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-light-border">
                         <span className="text-xs text-[#717171]">{post.date}</span>
-                        <span className="btn-ghost-pink text-sm">Read →</span>
+                        <span className="btn-ghost-pink text-sm">Read<span aria-hidden="true">→</span></span>
                       </div>
                     </div>
                   </article>
