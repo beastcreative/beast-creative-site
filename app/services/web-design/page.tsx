@@ -23,7 +23,7 @@ export default function WebDesignPage() {
               <span>Convert, Not Just Look Good.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Mobile-first, performance-optimized, conversion-focused builds. Every page has a purpose and a next step. Lighthouse 90+ scores. Built on proven funnel architecture.
+              Your website is the conversion engine of your growth system, not a brochure. We build mobile-first, performance-optimized pages that turn traffic into qualified demand and revenue. Every page has a purpose and a next step. Lighthouse 90+ scores, built on proven funnel architecture.
             </p>
           </AnimatedSection>
         </div>
@@ -35,10 +35,10 @@ export default function WebDesignPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Built for Business, Not Awards</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Most web agencies optimize for design awards. We optimize for conversions: calls booked, leads submitted, products purchased. Beautiful design is a tool for achieving that goal, not the goal itself.
+                A site that looks great but does not grow the business is a cost, not an asset. We optimize for conversions: calls booked, leads submitted, products purchased. Beautiful design is a tool for achieving that goal, not the goal itself.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Every site we build starts with a question: &quot;What action do we want the visitor to take?&quot; Then we architect every section, headline, and CTA to move them toward it.
+                Every site we build starts with a question: &quot;What action do we want the visitor to take?&quot; Then we architect every section, headline, and CTA to move them toward it, and connect the site to the rest of your funnel so those actions become measurable growth.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

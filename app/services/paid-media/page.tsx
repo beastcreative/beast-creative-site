@@ -23,7 +23,7 @@ export default function PaidMediaPage() {
               <span>You Back.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              AI-optimized campaigns on Facebook, Instagram, TikTok, and Google, with real-time creative testing and daily optimization. Our CPG campaigns average $0.12 CPC vs $0.28 industry standard.
+              Ads are one input in your growth system, not the whole thing. We turn paid spend into profitable, qualified demand across Facebook, Instagram, TikTok, and Google, with real-time creative testing and daily optimization. Our CPG campaigns average $0.12 CPC vs $0.28 industry standard.
             </p>
           </AnimatedSection>
         </div>
@@ -35,7 +35,7 @@ export default function PaidMediaPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Our Approach</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We don&apos;t set up campaigns and check in monthly. We monitor daily, test creative continuously, and optimize based on real-time data, not gut feelings.
+                Spend only pays back when it drives qualified demand, not cheap clicks or vanity reach. We don&apos;t set up campaigns and check in monthly. We monitor daily, test creative continuously, and optimize based on real-time data, not gut feelings.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 AI-assisted audience segmentation finds the pockets of your market that convert at the lowest cost. Dynamic creative testing lets us run 10 variations simultaneously and double down on what works within 48 hours.

@@ -36,7 +36,7 @@ export default function CpgMarketingServicePage() {
               <span>Databases, and Retail Proof.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              From emerging founders to multi-brand holding companies, Beast&apos;s CPG playbook has generated over 72,000 campaign entries for food and beverage brands at a fraction of industry cost.
+              From emerging founders to multi-brand holding companies, Beast turns spend into demand you own and data that scales the brand: over 72,000 campaign entries generated for food and beverage brands at a fraction of industry cost.
             </p>
           </AnimatedSection>
         </div>
@@ -48,7 +48,7 @@ export default function CpgMarketingServicePage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">What We Deliver</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Most CPG brands run digital advertising to &quot;build awareness.&quot; Beast runs campaigns that build first-party consumer databases, generate pull-through data for retail buyers, and create the kind of measurable engagement that turns a regional brand into a national one.
+                Most CPG brands run digital advertising to &quot;build awareness&quot; and end up owning nothing. Beast builds a growth system instead: first-party consumer databases you keep, pull-through data that proves demand to retail buyers, and the measurable engagement that turns a regional brand into a national one.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our CPG campaigns have averaged <strong className="text-beast-black">7.03% CTR</strong> against an industry benchmark of 0.89%. We&apos;ve achieved <strong className="text-beast-black">$0.12 CPC</strong> against an industry average of $0.28. And we&apos;ve hit 2.2x to 3.6x over stated entry goals on every campaign we&apos;ve run.
@@ -90,7 +90,7 @@ export default function CpgMarketingServicePage() {
               Sun-Bird: 36,581 Entries. $6,000 Budget. 7.03% CTR.
             </h2>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              National Walmart rollout campaign. Nearly 8x industry CTR benchmark. Every entry = a consumer email + zip code for retail proof.
+              National Walmart rollout campaign. Nearly 8x industry CTR benchmark. Every entry is a consumer email and zip code the brand owns: demand data that proves the brand to retail buyers and compounds into shelf growth.
             </p>
             <IconButton href="/work/sun-bird" icon="eye">Read the Full Case Study</IconButton>
           </AnimatedSection>

@@ -80,7 +80,7 @@ export default function WebDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative builds custom websites for San Antonio businesses: Next.js, Shopify, mobile-first, Lighthouse 90+. Every site is designed to rank in Google and turn visitors into customers.
+              Your website is the conversion engine of your growth system. Beast Creative builds custom sites for San Antonio businesses on Next.js, Shopify, mobile-first, Lighthouse 90+, engineered to turn local search traffic into leads, calls, and revenue, not just to look good.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -203,7 +203,7 @@ export default function WebDesignSanAntonioPage() {
             <p className="section-eyebrow text-beast-pink mb-4">San Antonio Web Design</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Ready for a Site That Actually Works?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a quick call. We&apos;ll audit your current site and tell you exactly what&apos;s holding it back. No pitch, no commitment.
+              Book a quick call. We&apos;ll audit your current San Antonio site and show you exactly where it&apos;s losing leads and revenue. No pitch, no commitment.
             </p>
             <IconButton href="/growth-assessment?type=web">Start Your Growth Assessment</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

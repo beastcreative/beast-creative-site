@@ -73,7 +73,7 @@ export default function SEOSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative is San Antonio&apos;s only agency offering both traditional SEO and Answer Engine Optimization (AEO), so you show up in Google search results and in AI tools like ChatGPT, Perplexity, and Gemini.
+              Rankings are the means, not the goal. Beast Creative builds your San Antonio SEO to put you in front of the local buyers ready to spend, across Google search results and AI tools like ChatGPT, Perplexity, and Gemini. We are San Antonio&apos;s only agency running both traditional SEO and Answer Engine Optimization (AEO), so you get found wherever your customers search, and that traffic turns into revenue.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -179,7 +179,7 @@ export default function SEOSanAntonioPage() {
             <p className="section-eyebrow text-beast-pink mb-4">San Antonio SEO Agency</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Ready to Rank in Google and AI Search?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a free SEO audit. We&apos;ll show you exactly where you&apos;re leaving organic traffic on the table. No pitch, no commitment.
+              Book a free SEO audit. We&apos;ll show you exactly where your San Antonio business is leaving revenue on the table in Google and AI search. No pitch, no commitment.
             </p>
             <IconButton href="/growth-assessment?type=seo">Get My Free SEO Audit</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

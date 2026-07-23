@@ -63,7 +63,7 @@ export default function ServicesPage() {
               Full-Service. No Excuses.
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl mx-auto">
-              Web design, SEO, paid media, branding, and content: one agency, documented results, no runaround.
+              Web design, SEO, paid media, branding, and content are not six separate services. They are the connected parts of one growth system, built around your outcome: qualified demand, better conversion, and revenue that compounds.
             </p>
           </AnimatedSection>
         </div>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-white tracking-normal mb-4">Not Sure Where to Start?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Tell us about your business and we&apos;ll show you exactly which service would move the needle most for your brand. No pitch, no commitment.
+              Tell us about your business and we&apos;ll map the growth system that moves the needle most for your brand: which parts to build first, and what they do for your revenue. No pitch, no commitment.
             </p>
             <IconButton href="/growth-assessment" icon="calendar">Start Your Growth Assessment</IconButton>
           </AnimatedSection>

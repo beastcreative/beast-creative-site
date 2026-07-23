@@ -81,7 +81,7 @@ export default function LogoDesignSanAntonioPage() {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-10">
-              Beast Creative designs custom logos for San Antonio businesses, built as part of a complete brand identity system, not isolated marks that fall apart in the real world.
+              A brand that makes your business the obvious, memorable choice is what makes every growth channel work harder. Beast Creative designs custom logos for San Antonio businesses as part of a complete brand identity system, not isolated marks that fall apart in the real world.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -209,7 +209,7 @@ export default function LogoDesignSanAntonioPage() {
             <p className="section-eyebrow text-beast-pink mb-4">Logo Design &middot; San Antonio</p>
             <h2 className="font-display text-4xl lg:text-5xl font-bold text-white tracking-normal mb-6">Ready for a Logo That Actually Works?</h2>
             <p className="text-gray-400 text-lg mb-8">
-              Book a quick brand call. We&apos;ll tell you what your current brand is missing and what a logo redesign would actually get you.
+              Book a quick brand call. We&apos;ll show you what your current brand is costing you in recognition and what a logo redesign built for growth would actually get your San Antonio business.
             </p>
             <IconButton href="/growth-assessment?type=branding">Start Your Growth Assessment</IconButton>
             <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>

@@ -23,7 +23,7 @@ export default function ContentProductionPage() {
               <span>Not at a Premium.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Recipe videos, product demos, and social content at scale, produced with AI at 90%+ lower cost than traditional production. We&apos;ve processed 900+ recipe assets for CPG clients.
+              Content is the fuel for your growth system: it feeds demand, powers search and AEO, and drives conversion. We produce recipe videos, product demos, and social content with AI at 90%+ lower cost than traditional production, so you can show up everywhere your buyers are, consistently, without blowing the budget. We&apos;ve processed 900+ recipe assets for CPG clients.
             </p>
           </AnimatedSection>
         </div>
@@ -35,10 +35,10 @@ export default function ContentProductionPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">The Content Problem</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                You have 50 SKUs. 900 recipes. A TikTok account that posts twice a week. The math doesn&apos;t work with traditional production: a single recipe video costs $800 to $2,500. To post daily, you&apos;d need $200K+ per year just in production.
+                Growth stalls when you can&apos;t show up consistently. You have 50 SKUs. 900 recipes. A TikTok account that posts twice a week. The math doesn&apos;t work with traditional production: a single recipe video costs $800 to $2,500. To post daily, you&apos;d need $200K+ per year just in production.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Beast&apos;s AI content pipeline changes the math. We batch-produce assets from your existing content library, turning one photoshoot into 30 social posts and one recipe PDF into 12 short-form videos.
+                Beast&apos;s AI content pipeline changes the math so volume works in your favor. We batch-produce assets from your existing content library, turning one photoshoot into 30 social posts and one recipe PDF into 12 short-form videos. That is enough to feed demand, search, and every channel where your buyers spend time, without content for content&apos;s sake.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

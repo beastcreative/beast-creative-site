@@ -23,7 +23,7 @@ export default function BrandingPage() {
               <span>An Explanation.</span>
             </h1>
             <p className="text-body-lead text-gray-300 max-w-2xl">
-              Brand naming, visual systems, and identities built for instant recognition and long-term equity. We created Coinline, a name that required zero explanation the moment people heard it.
+              Your brand is the reason people choose you before they compare features or price. Recognition that converts lowers what you pay to acquire customers and makes every other growth channel work harder. We created Coinline, a name that required zero explanation the moment people heard it.
             </p>
           </AnimatedSection>
         </div>
@@ -35,10 +35,10 @@ export default function BrandingPage() {
             <AnimatedSection>
               <h2 className="font-display text-3xl font-bold text-beast-black mb-6">Our Approach</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Great branding isn&apos;t decoration. It&apos;s competitive advantage. The right name shortens every conversation. The right visual identity works across every touchpoint without losing power. We do the research to make that happen.
+                Branding isn&apos;t decoration. It&apos;s positioning that makes you the obvious choice in your market. The right name shortens every sales conversation and cuts acquisition cost. The right visual identity holds up across every touchpoint, so recognition compounds instead of resetting. We do the research to make that happen.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                We don&apos;t hand you a mood board and call it a brand. We deliver a system: name rationale, color theory, typography, usage rules, and go-to-market momentum baked in.
+                We don&apos;t hand you a mood board and call it a brand. We deliver a growth system: name rationale, color theory, typography, usage rules, and go-to-market momentum built in so the brand starts driving demand on day one.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>

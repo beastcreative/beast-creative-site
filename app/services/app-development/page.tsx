@@ -154,7 +154,7 @@ export default function AppDevelopmentPage() {
               We don&apos;t just talk about AI-powered development. We ship with it.
             </p>
             <p className="text-body-lead text-gray-300 max-w-2xl mb-8">
-              Traditional dev shops quote six months and six figures. We built and launched our own SaaS (TEKSBuilder, an AI resource generator for Texas teachers) from idea to paying-customer-ready in one week, then replicated it state by state. That&apos;s not a pitch. It&apos;s a product you can use right now.
+              The right product becomes a new revenue line, a moat competitors can&apos;t copy, and a way to scale what you already do. We built and launched our own SaaS (TEKSBuilder, an AI resource generator for Texas teachers) from idea to paying-customer-ready in one week, then replicated it state by state. That&apos;s not a pitch. It&apos;s a product you can use right now.
             </p>
             <div className="flex flex-wrap gap-3">
               <IconButton href="/growth-assessment?type=app">
@@ -189,7 +189,7 @@ export default function AppDevelopmentPage() {
               Software Development Just Changed. Most Agencies Didn&apos;t.
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-2xl mb-12">
-              AI-assisted development collapsed the cost and timeline of building real software. Agencies that adapted can ship a production SaaS in the time it used to take to write a proposal. We&apos;re one of them, and we can prove it, because we did it for ourselves first.
+              A custom product is one of the highest-leverage growth moves a company can make: a new revenue line and a durable moat, not just another line item. AI-assisted development collapsed the cost and timeline enough to actually build one, and agencies that adapted can ship a production SaaS in the time it used to take to write a proposal. We&apos;re one of them, and we can prove it, because we did it for ourselves first.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
