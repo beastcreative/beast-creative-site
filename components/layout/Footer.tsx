@@ -77,6 +77,7 @@ export default function Footer() {
             <div className="mt-6 pt-5 border-t border-gray-800">
               <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold mb-3">Reviews</p>
               <ul className="space-y-2 text-sm">
+                <li><a href="https://www.trustpilot.com/review/beastcreativeagency.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beast-pink transition-colors">Trustpilot ↗</a></li>
                 <li><a href="https://clutch.co/profile/beast-creative-agency" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beast-pink transition-colors">Clutch.co ↗</a></li>
                 <li><a href="https://www.google.com/search?q=Beast+Creative+Agency+San+Antonio" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beast-pink transition-colors">Google Reviews ↗</a></li>
               </ul>
