@@ -59,9 +59,8 @@ const DEFAULT_BADGES: ReviewBadge[] = [
   {
     name: "Trustpilot",
     logo: "trustpilot",
-    href: "#",
+    href: "https://www.trustpilot.com/review/beastcreativeagency.com",
     alt: "Read our reviews on Trustpilot",
-    comingSoon: true,
   },
 ];
 
