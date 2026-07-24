@@ -51,7 +51,7 @@ export default function ContactForm({
       setRedirecting(true);
       router.push("/thank-you");
     } catch {
-      setError("Something went wrong. Please try again or text us at (210) 332-0567.");
+      setError("Something went wrong. Please try again or text us at (210) 350-9560.");
     }
   };
 

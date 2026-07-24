@@ -32,7 +32,7 @@ export default function ThankYouPage() {
           </h1>
           <p className="text-body-lead text-gray-300 max-w-xl mx-auto mb-10">
             We got your message. A real person on our team will read it and reach
-            out within one business day. Need us sooner? Text us at (210) 332-0567.
+            out within one business day. Need us sooner? Text us at (210) 350-9560.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <IconButton href="/">Back to Home</IconButton>

@@ -10,7 +10,7 @@ import { serviceSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "SEO Agency San Antonio | Google Rankings + AI Search | Beast Creative",
   description:
-    "San Antonio SEO agency specializing in Google rankings AND AI search visibility (ChatGPT, Perplexity, Gemini). Real results, named clients. (210) 332-0567",
+    "San Antonio SEO agency specializing in Google rankings AND AI search visibility (ChatGPT, Perplexity, Gemini). Real results, named clients. (210) 350-9560",
   alternates: { canonical: "https://beastcreativeagency.com/services/seo-san-antonio" },
   openGraph: {
     images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
@@ -182,7 +182,7 @@ export default function SEOSanAntonioPage() {
               Book a free SEO audit. We&apos;ll show you exactly where your San Antonio business is leaving revenue on the table in Google and AI search. No pitch, no commitment.
             </p>
             <IconButton href="/growth-assessment?type=seo">Get My Free SEO Audit</IconButton>
-            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
+            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103509560" className="text-beast-pink hover:underline">(210) 350-9560</a></p>
           </AnimatedSection>
         </div>
       </section>

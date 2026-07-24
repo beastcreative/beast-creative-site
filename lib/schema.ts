@@ -13,7 +13,7 @@ export function organizationSchema() {
       addressRegion: "TX",
       addressCountry: "US",
     },
-    telephone: "+12103320567",
+    telephone: "+12103509560",
     email: "hello@beastcreativeagency.com",
     sameAs: [
       "https://www.facebook.com/beastcreativeagency",
@@ -46,7 +46,7 @@ export function localBusinessSchema() {
     "@type": "LocalBusiness",
     name: "Beast Creative Agency",
     url: "https://beastcreativeagency.com",
-    telephone: "+12103320567",
+    telephone: "+12103509560",
     email: "hello@beastcreativeagency.com",
     address: {
       "@type": "PostalAddress",

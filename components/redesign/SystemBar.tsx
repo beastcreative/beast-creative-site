@@ -7,8 +7,23 @@ import { useEffect, useState } from "react";
  * literal. Live San Antonio (Central) time + fixed coordinates + availability dot.
  * Renders a stable placeholder on the server to avoid hydration mismatch.
  */
+const AVAILABLE_FOR = ["new work", "awesome experiences", "a backscratch"];
+
 export default function SystemBar({ dark = false }: { dark?: boolean }) {
   const [time, setTime] = useState<string>("");
+  const [phrase, setPhrase] = useState(0);
+  const [phraseVisible, setPhraseVisible] = useState(true);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPhraseVisible(false);
+      setTimeout(() => {
+        setPhrase((p) => (p + 1) % AVAILABLE_FOR.length);
+        setPhraseVisible(true);
+      }, 200);
+    }, 2000);
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     const fmt = () =>
@@ -34,7 +49,14 @@ export default function SystemBar({ dark = false }: { dark?: boolean }) {
     >
       <span className={`flex items-center gap-2 ${strong}`}>
         <span className="led-dot" aria-hidden="true" />
-        Available for new work
+        Available for{" "}
+        <span
+          className={`inline-block min-w-[19ch] transition-opacity duration-200 ${
+            phraseVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {AVAILABLE_FOR[phrase]}
+        </span>
       </span>
       <span className="hidden sm:inline">San Antonio, TX</span>
       <span className="hidden md:inline">29.42°N&nbsp;98.49°W</span>

@@ -403,7 +403,7 @@ export default function Nav() {
             <Link href="/growth-assessment" className="btn-yellow w-full justify-center !py-4 !px-6 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">
               Start Your Growth Assessment
             </Link>
-            <a href="sms:+12103320567" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">Text or call (210) 332-0567</a>
+            <a href="sms:+12103509560" className="block text-center text-sm text-white hover:text-beast-pink transition-colors focus-visible:outline-2 focus-visible:outline-beast-pink rounded">Text or call (210) 350-9560</a>
           </div>
         </div>
       </div>

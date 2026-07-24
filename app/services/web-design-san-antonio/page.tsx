@@ -10,7 +10,7 @@ import { serviceSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Web Design San Antonio | Custom Websites That Convert | Beast Creative",
   description:
-    "San Antonio web design agency building custom Next.js and Shopify sites: mobile-first, Lighthouse 90+, conversion-optimized. No templates. Real results. (210) 332-0567",
+    "San Antonio web design agency building custom Next.js and Shopify sites: mobile-first, Lighthouse 90+, conversion-optimized. No templates. Real results. (210) 350-9560",
   alternates: { canonical: "https://beastcreativeagency.com/services/web-design-san-antonio" },
   openGraph: {
     images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
@@ -206,7 +206,7 @@ export default function WebDesignSanAntonioPage() {
               Book a quick call. We&apos;ll audit your current San Antonio site and show you exactly where it&apos;s losing leads and revenue. No pitch, no commitment.
             </p>
             <IconButton href="/growth-assessment?type=web">Start Your Growth Assessment</IconButton>
-            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
+            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103509560" className="text-beast-pink hover:underline">(210) 350-9560</a></p>
           </AnimatedSection>
         </div>
       </section>

@@ -43,7 +43,7 @@ export default function CpgLeadForm() {
       setRedirecting(true);
       router.push("/thank-you");
     } catch {
-      setError("Something went wrong. Text us at (210) 332-0567.");
+      setError("Something went wrong. Text us at (210) 350-9560.");
     }
   };
 

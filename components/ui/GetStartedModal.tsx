@@ -83,7 +83,7 @@ export default function GetStartedModal({ selected, onClose }: Props) {
       router.push("/thank-you");
       onClose();
     } catch {
-      setError("Something went wrong. Please try again or text us at (210) 332-0567.");
+      setError("Something went wrong. Please try again or text us at (210) 350-9560.");
       setLoading(false);
     }
   };

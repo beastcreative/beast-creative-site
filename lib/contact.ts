@@ -1,11 +1,11 @@
 // Single source of truth for the business contact number and instant-message deep links.
 
 /** E.164 format, for the sms: protocol. */
-export const PHONE_E164 = "+12103320567";
+export const PHONE_E164 = "+12103509560";
 /** Digits only with country code, for wa.me links. */
-export const PHONE_WA = "12103320567";
+export const PHONE_WA = "12103509560";
 /** Human-readable display format. */
-export const PHONE_DISPLAY = "(210) 332-0567";
+export const PHONE_DISPLAY = "(210) 350-9560";
 
 /** Default pre-filled message used by the Text Us / WhatsApp buttons. */
 export const DEFAULT_MESSAGE =

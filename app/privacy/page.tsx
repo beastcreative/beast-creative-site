@@ -108,7 +108,7 @@ const sections: Section[] = [
       "If you have questions about this Privacy Policy or how we handle your information, reach out:",
       "Beast Creative Agency, San Antonio, TX",
       "Email: hello@beastcreativeagency.com",
-      "Phone: (210) 332-0567",
+      "Phone: (210) 350-9560",
     ],
   },
 ];

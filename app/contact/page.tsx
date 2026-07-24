@@ -81,8 +81,8 @@ export default function ContactPage() {
                 <div className="border-t border-dark-border pt-8 space-y-5">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-1">Phone / SMS</p>
-                    <a href="sms:+12103320567" className="text-white hover:text-beast-pink transition-colors font-medium text-lg">
-                      (210) 332-0567
+                    <a href="sms:+12103509560" className="text-white hover:text-beast-pink transition-colors font-medium text-lg">
+                      (210) 350-9560
                     </a>
                     <p className="text-gray-500 text-sm mt-1">Text or call and we respond fast</p>
                   </div>

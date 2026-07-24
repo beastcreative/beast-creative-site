@@ -91,8 +91,8 @@ export default function Footer() {
             <IconButton href="/growth-assessment" variant="yellow" icon="calendar" className="mb-6 w-full justify-center text-center !whitespace-normal !leading-tight !rounded-xl !tracking-[1px] !text-[11px] !px-4 !py-3.5">Start Your Growth Assessment</IconButton>
             <div className="mt-4 text-sm text-gray-600 space-y-1">
               <div>
-                <a href="sms:+12103320567" className="hover:text-beast-pink transition-colors">
-                  (210) 332-0567
+                <a href="sms:+12103509560" className="hover:text-beast-pink transition-colors">
+                  (210) 350-9560
                 </a>
               </div>
               <div>San Antonio, TX</div>

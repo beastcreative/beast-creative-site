@@ -90,7 +90,7 @@ const sections: Section[] = [
       "Questions about these Terms? Reach out:",
       "Beast Creative Agency, San Antonio, TX",
       "Email: hello@beastcreativeagency.com",
-      "Phone: (210) 332-0567",
+      "Phone: (210) 350-9560",
     ],
   },
 ];

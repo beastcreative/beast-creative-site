@@ -10,7 +10,7 @@ import { serviceSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Logo Design San Antonio | Custom Brand Identity | Beast Creative",
   description:
-    "Professional logo design in San Antonio, TX. Custom logos built for real brands, not templates, as part of a full brand identity system. (210) 332-0567",
+    "Professional logo design in San Antonio, TX. Custom logos built for real brands, not templates, as part of a full brand identity system. (210) 350-9560",
   alternates: { canonical: "https://beastcreativeagency.com/services/logo-design-san-antonio" },
   openGraph: {
     images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
@@ -212,7 +212,7 @@ export default function LogoDesignSanAntonioPage() {
               Book a quick brand call. We&apos;ll show you what your current brand is costing you in recognition and what a logo redesign built for growth would actually get your San Antonio business.
             </p>
             <IconButton href="/growth-assessment?type=branding">Start Your Growth Assessment</IconButton>
-            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103320567" className="text-beast-pink hover:underline">(210) 332-0567</a></p>
+            <p className="text-gray-500 text-sm mt-4">Or call/text: <a href="sms:+12103509560" className="text-beast-pink hover:underline">(210) 350-9560</a></p>
           </AnimatedSection>
         </div>
       </section>
